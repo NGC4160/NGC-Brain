@@ -1,0 +1,82 @@
+[
+  {
+    "id": "club-car-precedent-2015",
+    "title": "Club Car Precedent Service Manual",
+    "category": "service-manual",
+    "description": "Complete service and maintenance guide for Precedent models 2015–2020.",
+    "url": "https://www.clubcar.com/en-us/resource-center",
+    "make": "Club Car",
+    "model": "Precedent",
+    "yearRange": "2015-2020",
+    "tags": ["electrical", "battery", "troubleshooting", "maintenance"],
+    "pinned": true
+  },
+  {
+    "id": "ezgo-rxv-wiring",
+    "title": "EZGO RXV Wiring Diagram",
+    "category": "wiring-diagram",
+    "description": "Full electrical schematic for RXV electric models.",
+    "url": "https://ezgo.txtsv.com/",
+    "make": "EZGO",
+    "model": "RXV",
+    "tags": ["electrical", "wiring", "troubleshooting"],
+    "pinned": true
+  },
+  {
+    "id": "yamaha-drive2-manual",
+    "title": "Yamaha Drive2 Owner & Service Manual",
+    "category": "service-manual",
+    "description": "Drive2 AC and DC model service procedures.",
+    "url": "https://www.yamahagolfcar.com/owner-resources",
+    "make": "Yamaha",
+    "model": "Drive2",
+    "yearRange": "2017-2024",
+    "tags": ["maintenance", "battery", "motor"],
+    "pinned": true
+  },
+  {
+    "id": "trojan-battery-guide",
+    "title": "Trojan Battery Maintenance Guide",
+    "category": "vendor-doc",
+    "description": "Flooded lead-acid battery watering, charging, and testing procedures.",
+    "url": "https://www.trojanbattery.com/support/battery-maintenance",
+    "tags": ["battery", "maintenance", "vendor"],
+    "pinned": true
+  },
+  {
+    "id": "club-car-parts-catalog",
+    "title": "Club Car Parts Catalog (2024)",
+    "category": "parts-catalog",
+    "description": "OEM part numbers and exploded diagrams.",
+    "url": "https://www.clubcar.com/en-us/parts",
+    "make": "Club Car",
+    "tags": ["parts", "ordering"]
+  },
+  {
+    "id": "intake-checklist",
+    "title": "Repair Intake Checklist",
+    "category": "sop",
+    "description": "Standard procedure for new cart intake — photos, VIN, customer sign-off.",
+    "url": "/docs/intake-checklist.pdf",
+    "tags": ["sop", "intake", "checklist"],
+    "pinned": true
+  },
+  {
+    "id": "ezgo-warranty",
+    "title": "EZGO Warranty Policy Summary",
+    "category": "warranty",
+    "description": "Coverage terms for EZGO carts under manufacturer warranty.",
+    "url": "https://ezgo.txtsv.com/warranty",
+    "make": "EZGO",
+    "tags": ["warranty", "policy"]
+  },
+  {
+    "id": "curtis-controller-codes",
+    "title": "Curtis Controller Fault Codes",
+    "category": "vendor-doc",
+    "description": "Diagnostic fault code reference for Curtis 1268 and 1525 controllers.",
+    "url": "https://www.curtisinstruments.com/products",
+    "tags": ["electrical", "controller", "troubleshooting", "diagnostics"],
+    "pinned": true
+  }
+]
