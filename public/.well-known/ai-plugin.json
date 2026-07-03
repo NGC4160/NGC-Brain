@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "NGC Brain",
+  "name_for_model": "NGC_Brain",
+  "description_for_human": "AI-ready knowledge and operations for modern businesses",
+  "description_for_model": "NGC Brain helps businesses become discoverable and operable by AI systems. We publish structured business context, agent-readable documentation, and deployment templates so customers, partners, and AI assistants can understand what you do, who you serve, and how to work with you.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none"
+  },
+  "logo_url": "https://example.com/logo.png",
+  "contact_email": "hello@example.com",
+  "legal_info_url": "https://example.com/legal"
+}

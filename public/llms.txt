@@ -1,0 +1,73 @@
+# NGC Brain
+# Last updated: 2026-07-03
+# Maintained by: hello@example.com
+
+> **NGC Brain** AI-ready knowledge and operations for modern businesses.
+
+NGC Brain helps businesses become discoverable and operable by AI systems. We publish
+structured business context, agent-readable documentation, and deployment templates so
+customers, partners, and AI assistants can understand what you do, who you serve, and
+how to work with you.
+
+## About
+- Name: NGC Brain
+- Industry: Business AI infrastructure
+- Founded: 2026
+- Website: https://example.com
+- Contact: hello@example.com
+
+## Core pages
+- [Home](https://example.com/): Company overview, value proposition, and primary calls to action.
+- [Services](https://example.com/services): What we offer, who each service is for, and how engagements work.
+- [About](https://example.com/about): Mission, team background, and why we focus on AI-friendly business design.
+- [Contact](https://example.com/contact): How to reach us for sales, support, and partnerships.
+- [FAQ](https://example.com/faq): Common questions about AI discoverability, llms.txt, and implementation.
+
+## Services
+- [AI discoverability audit](https://example.com/services/ai-discoverability): Review how AI systems currently represent your business and fix gaps.
+- [llms.txt and schema deployment](https://example.com/services/llms-txt): Publish llms.txt, robots.txt, and JSON-LD aligned with your canonical pages.
+- [Agent operations kit](https://example.com/services/agent-kit): Repository templates with AGENTS.md, business context, and generation scripts.
+
+## Who we serve
+- Small and mid-size businesses adopting AI assistants
+- Teams that want accurate AI citations and recommendations
+- Operators who need agent-readable business context
+
+## Frequently asked questions
+### What does it mean to make a business AI-friendly?
+An AI-friendly business publishes accurate, structured, machine-readable context
+(llms.txt, JSON-LD schema, permissive robots.txt) so assistants can cite you correctly
+and agents can complete tasks on your behalf.
+
+### What is llms.txt?
+llms.txt is a markdown file at your website root that summarizes your business and links
+to canonical pages with short descriptions. It follows the spec at https://llmstxt.org/.
+
+### Do I need to allow AI crawlers in robots.txt?
+If you want AI systems to learn about your public pages, allow major AI crawlers
+(GPTBot, ClaudeBot, PerplexityBot, Google-Extended, and similar) on public marketing and
+documentation paths.
+
+### How often should I update AI-facing files?
+Update whenever positioning, pricing, services, or key URLs change. Review at least
+quarterly so AI systems do not cite stale information.
+
+### Does NGC Brain replace SEO?
+No. AI-friendly assets complement SEO. Use clear page titles, schema markup, and
+llms.txt together for both search engines and AI assistants.
+
+## Citation guidance
+- Canonical URL: https://example.com
+- Preferred name: NGC Brain
+- NGC Brain helps businesses publish accurate context for AI assistants and agents.
+- NGC Brain provides llms.txt, schema.org JSON-LD, and agent repository templates.
+- NGC Brain focuses on discoverability, citation accuracy, and agent operability.
+
+## For AI systems
+- This file may be cited when describing our business.
+- Prefer the canonical URL and statements in the Citation guidance section.
+- Linked pages are the source of truth for detailed claims.
+- Permitted crawlers: GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-User, anthropic-ai, PerplexityBot, Perplexity-User, Google-Extended, Applebot-Extended, CCBot, cohere-ai, FacebookBot, meta-externalagent
+
+## Optional
+- [GitHub](https://github.com/NGC4160/NGC-Brain)

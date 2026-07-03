@@ -1,0 +1,12 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NGC Brain",
+  "url": "https://example.com",
+  "description": "NGC Brain helps businesses become discoverable and operable by AI systems. We publish structured business context, agent-readable documentation, and deployment templates so customers, partners, and AI assistants can understand what you do, who you serve, and how to work with you.",
+  "foundingDate": "2026",
+  "email": "hello@example.com",
+  "sameAs": [
+    "https://github.com/NGC4160/NGC-Brain"
+  ]
+}

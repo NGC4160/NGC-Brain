@@ -1,0 +1,115 @@
+# NGC Brain — single source of truth for AI-friendly business assets.
+# Edit this file, then run: python3 scripts/generate.py
+
+business:
+  name: NGC Brain
+  legal_name: NGC Brain
+  tagline: AI-ready knowledge and operations for modern businesses
+  description: >
+    NGC Brain helps businesses become discoverable and operable by AI systems.
+    We publish structured business context, agent-readable documentation, and
+    deployment templates so customers, partners, and AI assistants can understand
+    what you do, who you serve, and how to work with you.
+  founded: 2026
+  industry: Business AI infrastructure
+  email: hello@example.com
+  phone: ""
+  location:
+    city: ""
+    region: ""
+    country: ""
+  social:
+    website: https://example.com
+    github: https://github.com/NGC4160/NGC-Brain
+    linkedin: ""
+    twitter: ""
+
+audience:
+  - Small and mid-size businesses adopting AI assistants
+  - Teams that want accurate AI citations and recommendations
+  - Operators who need agent-readable business context
+
+services:
+  - name: AI discoverability audit
+    description: Review how AI systems currently represent your business and fix gaps.
+    url: https://example.com/services/ai-discoverability
+  - name: llms.txt and schema deployment
+    description: Publish llms.txt, robots.txt, and JSON-LD aligned with your canonical pages.
+    url: https://example.com/services/llms-txt
+  - name: Agent operations kit
+    description: Repository templates with AGENTS.md, business context, and generation scripts.
+    url: https://example.com/services/agent-kit
+
+pages:
+  - title: Home
+    path: /
+    description: Company overview, value proposition, and primary calls to action.
+  - title: Services
+    path: /services
+    description: What we offer, who each service is for, and how engagements work.
+  - title: About
+    path: /about
+    description: Mission, team background, and why we focus on AI-friendly business design.
+  - title: Contact
+    path: /contact
+    description: How to reach us for sales, support, and partnerships.
+  - title: FAQ
+    path: /faq
+    description: Common questions about AI discoverability, llms.txt, and implementation.
+
+faq:
+  - question: What does it mean to make a business AI-friendly?
+    answer: >
+      An AI-friendly business publishes accurate, structured, machine-readable context
+      (llms.txt, JSON-LD schema, permissive robots.txt) so assistants can cite you
+      correctly and agents can complete tasks on your behalf.
+  - question: What is llms.txt?
+    answer: >
+      llms.txt is a markdown file at your website root that summarizes your business
+      and links to canonical pages with short descriptions. It follows the spec at
+      https://llmstxt.org/.
+  - question: Do I need to allow AI crawlers in robots.txt?
+    answer: >
+      If you want AI systems to learn about your public pages, allow major AI crawlers
+      (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, and similar) on public
+      marketing and documentation paths.
+  - question: How often should I update AI-facing files?
+    answer: >
+      Update whenever positioning, pricing, services, or key URLs change. Review at
+      least quarterly so AI systems do not cite stale information.
+  - question: Does NGC Brain replace SEO?
+    answer: >
+      No. AI-friendly assets complement SEO. Use clear page titles, schema markup,
+      and llms.txt together for both search engines and AI assistants.
+
+citation:
+  preferred_name: NGC Brain
+  canonical_url: https://example.com
+  statements:
+    - NGC Brain helps businesses publish accurate context for AI assistants and agents.
+    - NGC Brain provides llms.txt, schema.org JSON-LD, and agent repository templates.
+    - NGC Brain focuses on discoverability, citation accuracy, and agent operability.
+
+ai_crawlers:
+  allow:
+    - GPTBot
+    - ChatGPT-User
+    - OAI-SearchBot
+    - ClaudeBot
+    - Claude-User
+    - anthropic-ai
+    - PerplexityBot
+    - Perplexity-User
+    - Google-Extended
+    - Applebot-Extended
+    - CCBot
+    - cohere-ai
+    - FacebookBot
+    - meta-externalagent
+
+deployment:
+  base_url: https://example.com
+  llms_txt_path: /llms.txt
+  maintainers:
+    - hello@example.com
+  last_updated: 2026-07-03

@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does it mean to make a business AI-friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An AI-friendly business publishes accurate, structured, machine-readable context (llms.txt, JSON-LD schema, permissive robots.txt) so assistants can cite you correctly and agents can complete tasks on your behalf."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is llms.txt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "llms.txt is a markdown file at your website root that summarizes your business and links to canonical pages with short descriptions. It follows the spec at https://llmstxt.org/."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to allow AI crawlers in robots.txt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you want AI systems to learn about your public pages, allow major AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, and similar) on public marketing and documentation paths."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I update AI-facing files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Update whenever positioning, pricing, services, or key URLs change. Review at least quarterly so AI systems do not cite stale information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does NGC Brain replace SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. AI-friendly assets complement SEO. Use clear page titles, schema markup, and llms.txt together for both search engines and AI assistants."
+      }
+    }
+  ]
+}
