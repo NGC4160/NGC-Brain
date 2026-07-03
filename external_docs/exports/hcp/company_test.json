@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "company_keys": [
+    "id",
+    "phone_number",
+    "support_email",
+    "name",
+    "logo_url",
+    "address",
+    "website",
+    "default_arrival_window",
+    "time_zone",
+    "service_areas_data"
+  ],
+  "company_preview": "{\"id\": \"e7b2039d-9121-494e-9b4a-0c62ad9f508b\", \"phone_number\": \"(985) 402-1206\", \"support_email\": \"Contact@NGCgolfcarts.com\", \"name\": \"Neighborhood Golf Carts\", \"logo_url\": \"https://housecall-attachments-production.s3.us-west-1.amazonaws.com/organizations/logos/000/499/313/original/image_1719321101.png\", \"address\": {\"street\": \"71363 Thelma Ln. Suite E\", \"street_line_2\": null, \"city\": \"Covington\", \"state\": \"LA\", \"country\": \"US\", \"zip\": \"70433\", \"latitude\": \"30.4694118\", \"longitude\": \"-90.0872085\"}, \"website\": \"https://www.ngcgolfcarts.com/\", \"default_arrival_window\": 120, \"time_zone\": \"America/Chicago\", \"service_areas_data\": {\"zip_codes\": [\"70401\", \"70402\", \"70403\", \"70404\", \"70433\", \"70445\", \"70447\", \"70448\", \"70454\", \"70455\", \"70458\", \"70460\", \"70469\", \"70470\", \"70471\"]}}"
+}

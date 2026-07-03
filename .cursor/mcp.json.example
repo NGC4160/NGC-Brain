@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "quickbooks": {
+      "command": "npx",
+      "args": ["-y", "quickbooks-mcp"],
+      "env": {
+        "QBO_INLINE_OUTPUT": "true"
+      }
+    },
+    "housecall-pro": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/Housecall-Pro-MCP/dist/index.js"],
+      "env": {
+        "HOUSECALL_PRO_API_KEY": "SET_IN_ENV_OR_REPLACE",
+        "HOUSECALL_PRO_AUTH_SCHEME": "auto",
+        "HOUSECALL_PRO_BASE_URL": "https://api.housecallpro.com"
+      }
+    }
+  }
+}

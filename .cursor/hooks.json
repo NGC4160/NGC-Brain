@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": ".cursor/hooks/session-ingest.sh",
+        "timeout": 30
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/exports-changed.sh",
+        "matcher": "Write|Edit",
+        "timeout": 30
+      }
+    ]
+  }
+}

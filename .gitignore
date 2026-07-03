@@ -1,0 +1,5 @@
+.venv/
+.DS_Store
+.env
+.cursor/mcp.json
+knowledge/.generated/
