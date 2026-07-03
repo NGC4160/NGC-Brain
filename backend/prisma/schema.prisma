@@ -1,0 +1,377 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  MANAGER
+  TECHNICIAN
+  READONLY
+}
+
+enum PartType {
+  INVENTORY
+  NON_INVENTORY
+}
+
+enum StockMovementType {
+  RECEIVE
+  ISSUE
+  ADJUST
+  TRANSFER
+  RETURN
+  RETAIL_SALE
+  CORE_RETURN
+}
+
+enum WorkOrderStatus {
+  OPEN
+  IN_PROGRESS
+  WAITING_PARTS
+  COMPLETED
+  INVOICED
+  CANCELLED
+}
+
+enum POStatus {
+  DRAFT
+  SENT
+  PARTIAL
+  RECEIVED
+  CLOSED
+  CANCELLED
+}
+
+enum CoreReturnStatus {
+  PENDING
+  SHIPPED
+  CREDITED
+  REJECTED
+}
+
+enum QboSyncStatus {
+  PENDING
+  SYNCED
+  FAILED
+  CONFLICT
+}
+
+enum AlertChannel {
+  EMAIL
+  SMS
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         UserRole @default(TECHNICIAN)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  stockMovements StockMovement[]
+  auditLogs      AuditLog[]
+}
+
+model Location {
+  id        String   @id @default(cuid())
+  name      String
+  code      String   @unique
+  address   String?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  inventoryLevels InventoryLevel[]
+  transfersFrom   StockMovement[]  @relation("TransferFrom")
+  transfersTo     StockMovement[]  @relation("TransferTo")
+  retailSales     RetailSale[]
+}
+
+model Vendor {
+  id        String   @id @default(cuid())
+  name      String
+  email     String?
+  phone     String?
+  terms     String?
+  isActive  Boolean  @default(true)
+  qboId     String?
+  qboSyncToken String?
+  syncStatus QboSyncStatus @default(PENDING)
+  syncError String?
+  lastSyncedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  parts           Part[]
+  purchaseOrders  PurchaseOrder[]
+  coreReturns     CoreReturn[]
+}
+
+model PartCategory {
+  id   String @id @default(cuid())
+  name String @unique
+
+  parts Part[]
+}
+
+model Part {
+  id              String   @id @default(cuid())
+  sku             String   @unique
+  name            String
+  description     String?
+  categoryId      String?
+  brand           String?
+  compatibleModels String?
+  unitOfMeasure   String   @default("each")
+  barcode         String?  @unique
+  partType        PartType @default(INVENTORY)
+  costLast        Decimal  @default(0) @db.Decimal(10, 2)
+  costAverage     Decimal  @default(0) @db.Decimal(10, 2)
+  sellPrice       Decimal? @db.Decimal(10, 2)
+  reorderPoint    Int      @default(0)
+  reorderQty      Int      @default(0)
+  minStock        Int      @default(0)
+  maxStock        Int?
+  primaryVendorId String?
+  isCore          Boolean  @default(false)
+  coreCharge      Decimal? @db.Decimal(10, 2)
+  isActive        Boolean  @default(true)
+  imageUrl        String?
+  qboId           String?
+  qboSyncToken    String?
+  syncStatus      QboSyncStatus @default(PENDING)
+  syncError       String?
+  lastSyncedAt    DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  category        PartCategory? @relation(fields: [categoryId], references: [id])
+  primaryVendor   Vendor?       @relation(fields: [primaryVendorId], references: [id])
+  inventoryLevels InventoryLevel[]
+  stockMovements  StockMovement[]
+  poLines         POLine[]
+  workOrderLines  WorkOrderLine[]
+  retailSaleLines RetailSaleLine[]
+  coreReturns     CoreReturn[]
+}
+
+model InventoryLevel {
+  id         String @id @default(cuid())
+  partId     String
+  locationId String
+  quantity   Int    @default(0)
+  binLocation String?
+
+  part     Part     @relation(fields: [partId], references: [id], onDelete: Cascade)
+  location Location @relation(fields: [locationId], references: [id], onDelete: Cascade)
+
+  @@unique([partId, locationId])
+}
+
+model StockMovement {
+  id             String            @id @default(cuid())
+  partId         String
+  type           StockMovementType
+  quantity       Int
+  quantityBefore Int
+  quantityAfter  Int
+  locationId     String?
+  fromLocationId String?
+  toLocationId   String?
+  reason         String?
+  referenceType  String?
+  referenceId    String?
+  userId         String?
+  createdAt      DateTime          @default(now())
+
+  part         Part      @relation(fields: [partId], references: [id])
+  fromLocation Location? @relation("TransferFrom", fields: [fromLocationId], references: [id])
+  toLocation   Location? @relation("TransferTo", fields: [toLocationId], references: [id])
+  user         User?     @relation(fields: [userId], references: [id])
+}
+
+model Customer {
+  id        String   @id @default(cuid())
+  name      String
+  email     String?
+  phone     String?
+  qboId     String?
+  syncStatus QboSyncStatus @default(PENDING)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  workOrders  WorkOrder[]
+  retailSales RetailSale[]
+}
+
+model WorkOrder {
+  id           String          @id @default(cuid())
+  number       String          @unique
+  customerId   String?
+  cartMake     String?
+  cartModel    String?
+  cartSerial   String?
+  description  String?
+  status       WorkOrderStatus @default(OPEN)
+  technician   String?
+  qboInvoiceId String?
+  invoicedAt   DateTime?
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+
+  customer Customer?       @relation(fields: [customerId], references: [id])
+  lines    WorkOrderLine[]
+}
+
+model WorkOrderLine {
+  id          String  @id @default(cuid())
+  workOrderId String
+  partId      String
+  quantity    Int
+  unitCost    Decimal @db.Decimal(10, 2)
+  issued      Boolean @default(false)
+  returnedQty Int     @default(0)
+
+  workOrder WorkOrder @relation(fields: [workOrderId], references: [id], onDelete: Cascade)
+  part      Part      @relation(fields: [partId], references: [id])
+}
+
+model PurchaseOrder {
+  id           String   @id @default(cuid())
+  number       String   @unique
+  vendorId     String
+  status       POStatus @default(DRAFT)
+  expectedDate DateTime?
+  notes        String?
+  qboId        String?
+  syncStatus   QboSyncStatus @default(PENDING)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  vendor Vendor   @relation(fields: [vendorId], references: [id])
+  lines  POLine[]
+}
+
+model POLine {
+  id              String @id @default(cuid())
+  purchaseOrderId String
+  partId          String
+  quantity        Int
+  receivedQty     Int    @default(0)
+  unitCost        Decimal @db.Decimal(10, 2)
+
+  purchaseOrder PurchaseOrder @relation(fields: [purchaseOrderId], references: [id], onDelete: Cascade)
+  part          Part          @relation(fields: [partId], references: [id])
+}
+
+model RetailSale {
+  id           String   @id @default(cuid())
+  number       String   @unique
+  customerId   String?
+  locationId   String
+  total        Decimal  @db.Decimal(10, 2)
+  qboInvoiceId String?
+  createdAt    DateTime @default(now())
+
+  customer Customer?        @relation(fields: [customerId], references: [id])
+  location Location         @relation(fields: [locationId], references: [id])
+  lines    RetailSaleLine[]
+}
+
+model RetailSaleLine {
+  id           String  @id @default(cuid())
+  retailSaleId String
+  partId       String
+  quantity     Int
+  unitPrice    Decimal @db.Decimal(10, 2)
+
+  retailSale RetailSale @relation(fields: [retailSaleId], references: [id], onDelete: Cascade)
+  part       Part       @relation(fields: [partId], references: [id])
+}
+
+model CoreReturn {
+  id          String           @id @default(cuid())
+  number      String           @unique
+  partId      String
+  vendorId    String
+  quantity    Int
+  coreCharge  Decimal          @db.Decimal(10, 2)
+  status      CoreReturnStatus @default(PENDING)
+  rmaNumber   String?
+  notes       String?
+  shippedAt   DateTime?
+  creditedAt  DateTime?
+  creditAmount Decimal?        @db.Decimal(10, 2)
+  qboCreditId String?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  part   Part   @relation(fields: [partId], references: [id])
+  vendor Vendor @relation(fields: [vendorId], references: [id])
+}
+
+model QboConnection {
+  id             String   @id @default(cuid())
+  realmId        String   @unique
+  accessToken    String
+  refreshToken   String
+  tokenExpiresAt DateTime
+  companyName    String?
+  inventoryAssetAccountId String?
+  cogsAccountId           String?
+  salesIncomeAccountId    String?
+  expenseAccountId        String?
+  apAccountId             String?
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model QboSyncLog {
+  id          String   @id @default(cuid())
+  entityType  String
+  entityId    String
+  direction   String
+  status      QboSyncStatus
+  qboId       String?
+  message     String?
+  payload     Json?
+  createdAt   DateTime @default(now())
+}
+
+model AlertSetting {
+  id        String       @id @default(cuid())
+  channel   AlertChannel
+  recipient String
+  enabled   Boolean      @default(true)
+  createdAt DateTime     @default(now())
+}
+
+model AlertLog {
+  id        String   @id @default(cuid())
+  partId    String?
+  message   String
+  channel   AlertChannel
+  recipient String
+  sent      Boolean  @default(false)
+  error     String?
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  action     String
+  entityType String
+  entityId   String
+  details    Json?
+  createdAt  DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id])
+}

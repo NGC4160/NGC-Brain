@@ -2,7 +2,7 @@ import type { KpiDefinition, NavModule, ResourceCategory } from '@/types'
 
 export const appConfig = {
   businessName: 'GreenLine Golf Cart Repair',
-  tagline: 'Operations Dashboard',
+  tagline: 'Operations & Inventory',
   defaultRole: 'owner' as const,
 }
 
@@ -103,8 +103,8 @@ export const navModules: NavModule[] = [
     label: 'Inventory',
     path: '/inventory',
     icon: 'Package',
-    enabled: false,
-    description: 'Parts inventory (coming soon)',
+    enabled: true,
+    description: 'Parts inventory, retail, QBO sync',
   },
   {
     id: 'customers',
