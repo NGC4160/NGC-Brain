@@ -1,11 +1,17 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "NGC Brain",
-  "url": "https://example.com",
-  "description": "NGC Brain helps businesses become discoverable and operable by AI systems. We publish structured business context, agent-readable documentation, and deployment templates so customers, partners, and AI assistants can understand what you do, who you serve, and how to work with you.",
-  "foundingDate": "2026",
-  "email": "hello@example.com",
+  "name": "Neighborhood Golf Carts",
+  "url": "https://www.ngcgolfcarts.com",
+  "description": "Neighborhood Golf Carts is a Covington, Louisiana golf cart repair shop serving Southeast Louisiana. We provide shop-based diagnostics, maintenance, battery service, LiFePO4 lithium conversions, and custom upgrades with door-to-door pickup and delivery. Free within 40 miles on the Northshore; flat-rate transport for Southshore customers in New Orleans, Kenner, and Metairie.",
+  "foundingDate": "2023",
+  "telephone": "+1-985-402-1206",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Covington",
+    "addressRegion": "Louisiana",
+    "addressCountry": "United States"
+  },
   "sameAs": [
     "https://github.com/NGC4160/NGC-Brain"
   ]

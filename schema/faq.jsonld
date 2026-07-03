@@ -4,42 +4,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What does it mean to make a business AI-friendly?",
+      "name": "What areas does Neighborhood Golf Carts serve?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "An AI-friendly business publishes accurate, structured, machine-readable context (llms.txt, JSON-LD schema, permissive robots.txt) so assistants can cite you correctly and agents can complete tasks on your behalf."
+        "text": "Covington, Madisonville, Mandeville, Hammond, New Orleans, Kenner, Metairie, Slidell, and surrounding Southeast Louisiana. Northshore customers within 40 miles of Covington receive free pickup and delivery. Southshore customers use flat-rate transport."
       }
     },
     {
       "@type": "Question",
-      "name": "What is llms.txt?",
+      "name": "What services does Neighborhood Golf Carts offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "llms.txt is a markdown file at your website root that summarizes your business and links to canonical pages with short descriptions. It follows the spec at https://llmstxt.org/."
+        "text": "Golf cart repair, maintenance, and accessories including battery replacement, tire and brake service, electrical diagnostics, motor troubleshooting, lithium conversions, and fleet maintenance — with pickup and delivery."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I need to allow AI crawlers in robots.txt?",
+      "name": "How do I book service with Neighborhood Golf Carts?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If you want AI systems to learn about your public pages, allow major AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, and similar) on public marketing and documentation paths."
+        "text": "Call (985) 402-1206 or use the contact form at ngcgolfcarts.com/contact-us. NGC schedules pickup, confirms by text and email, repairs at the Covington shop, and returns your cart ready to ride."
       }
     },
     {
       "@type": "Question",
-      "name": "How often should I update AI-facing files?",
+      "name": "Is pickup free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Update whenever positioning, pricing, services, or key URLs change. Review at least quarterly so AI systems do not cite stale information."
+        "text": "Yes for Northshore customers within 40 miles of the Covington shop. Southshore customers in New Orleans, Kenner, and Metairie pay a flat-rate transport fee."
       }
     },
     {
       "@type": "Question",
-      "name": "Does NGC Brain replace SEO?",
+      "name": "What golf cart brands do you service?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. AI-friendly assets complement SEO. Use clear page titles, schema markup, and llms.txt together for both search engines and AI assistants."
+        "text": "Club Car, EZGO, Yamaha, and most major brands. NGC services both gas and electric golf carts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do lithium conversions take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most LiFePO4 conversions are completed in 3–5 business days in shop, or about one week total including pickup and delivery."
       }
     }
   ]

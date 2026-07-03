@@ -1,16 +1,16 @@
 {
   "schema_version": "v1",
-  "name_for_human": "NGC Brain",
-  "name_for_model": "NGC_Brain",
-  "description_for_human": "AI-ready knowledge and operations for modern businesses",
-  "description_for_model": "NGC Brain helps businesses become discoverable and operable by AI systems. We publish structured business context, agent-readable documentation, and deployment templates so customers, partners, and AI assistants can understand what you do, who you serve, and how to work with you.",
+  "name_for_human": "Neighborhood Golf Carts",
+  "name_for_model": "Neighborhood_Golf_Carts",
+  "description_for_human": "Expert golf cart repair with free Northshore pickup and delivery",
+  "description_for_model": "Neighborhood Golf Carts is a Covington, Louisiana golf cart repair shop serving Southeast Louisiana. We provide shop-based diagnostics, maintenance, battery service, LiFePO4 lithium conversions, and custom upgrades with door-to-door pickup and delivery. Free within 40 miles on the Northshore; flat-rate transport for Southshore customers in New Orleans, Kenner, and Metairie.",
   "auth": {
     "type": "none"
   },
   "api": {
     "type": "none"
   },
-  "logo_url": "https://example.com/logo.png",
-  "contact_email": "hello@example.com",
-  "legal_info_url": "https://example.com/legal"
+  "logo_url": "https://www.ngcgolfcarts.com/logo.png",
+  "contact_email": "",
+  "legal_info_url": "https://www.ngcgolfcarts.com/legal"
 }

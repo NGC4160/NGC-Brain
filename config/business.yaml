@@ -1,94 +1,115 @@
-# NGC Brain — single source of truth for AI-friendly business assets.
-# Edit this file, then run: python3 scripts/generate.py
+# Neighborhood Golf Carts — AI-friendly business configuration.
+# Business knowledge lives in NeighborhoodGolfCartsBusinessBrain/
+# Edit this file or brain markdown, then run: python3 scripts/generate.py
+
+business_brain:
+  path: NeighborhoodGolfCartsBusinessBrain
 
 business:
-  name: NGC Brain
-  legal_name: NGC Brain
-  tagline: AI-ready knowledge and operations for modern businesses
+  name: Neighborhood Golf Carts
+  legal_name: Neighborhood Golf Carts
+  tagline: Expert golf cart repair with free Northshore pickup and delivery
   description: >
-    NGC Brain helps businesses become discoverable and operable by AI systems.
-    We publish structured business context, agent-readable documentation, and
-    deployment templates so customers, partners, and AI assistants can understand
-    what you do, who you serve, and how to work with you.
-  founded: 2026
-  industry: Business AI infrastructure
-  email: hello@example.com
-  phone: ""
+    Neighborhood Golf Carts is a Covington, Louisiana golf cart repair shop serving
+    Southeast Louisiana. We provide shop-based diagnostics, maintenance, battery
+    service, LiFePO4 lithium conversions, and custom upgrades with door-to-door
+    pickup and delivery. Free within 40 miles on the Northshore; flat-rate transport
+    for Southshore customers in New Orleans, Kenner, and Metairie.
+  founded: 2023
+  industry: Golf cart repair and maintenance
+  email: ""
+  phone: "+1-985-402-1206"
   location:
-    city: ""
-    region: ""
-    country: ""
+    city: Covington
+    region: Louisiana
+    country: United States
   social:
-    website: https://example.com
+    website: https://www.ngcgolfcarts.com
     github: https://github.com/NGC4160/NGC-Brain
     linkedin: ""
     twitter: ""
 
 audience:
-  - Small and mid-size businesses adopting AI assistants
-  - Teams that want accurate AI citations and recommendations
-  - Operators who need agent-readable business context
+  - Residential golf cart owners in Southeast Louisiana
+  - Commercial fleet managers for neighborhoods and golf courses
+  - Customers who need shop-quality repairs without hauling a trailer
+  - Golf cart owners considering lithium battery upgrades
 
 services:
-  - name: AI discoverability audit
-    description: Review how AI systems currently represent your business and fix gaps.
-    url: https://example.com/services/ai-discoverability
-  - name: llms.txt and schema deployment
-    description: Publish llms.txt, robots.txt, and JSON-LD aligned with your canonical pages.
-    url: https://example.com/services/llms-txt
-  - name: Agent operations kit
-    description: Repository templates with AGENTS.md, business context, and generation scripts.
-    url: https://example.com/services/agent-kit
+  - name: Diagnostics and Repairs
+    description: Shop-quality diagnostics and repairs with pickup and delivery on all major brands.
+    url: https://www.ngcgolfcarts.com/
+  - name: Battery Replacement
+    description: Lead-acid battery replacement and charging system repair for electric carts.
+    url: https://www.ngcgolfcarts.com/
+  - name: Lithium Conversions
+    description: Professional LiFePO4 lithium upgrades for more power, faster charging, and longer life.
+    url: https://www.ngcgolfcarts.com/lithium-conversions
+  - name: Accessories and Upgrades
+    description: LED lights, lift kits, seats, mirrors, and custom accessory installation.
+    url: https://www.ngcgolfcarts.com/
+  - name: Preventive Maintenance
+    description: Tune-ups and inspections with a free 7-point inspection on every service.
+    url: https://www.ngcgolfcarts.com/
+  - name: Brake and Tire Services
+    description: Brake pad replacement, flat tire repair, and safety checks.
+    url: https://www.ngcgolfcarts.com/
+  - name: Fleet Maintenance
+    description: Maintenance plans for neighborhoods, courses, and multi-cart operators.
+    url: https://www.ngcgolfcarts.com/
 
 pages:
   - title: Home
     path: /
-    description: Company overview, value proposition, and primary calls to action.
-  - title: Services
-    path: /services
-    description: What we offer, who each service is for, and how engagements work.
-  - title: About
-    path: /about
-    description: Mission, team background, and why we focus on AI-friendly business design.
-  - title: Contact
-    path: /contact
-    description: How to reach us for sales, support, and partnerships.
-  - title: FAQ
-    path: /faq
-    description: Common questions about AI discoverability, llms.txt, and implementation.
+    description: Expert golf cart repair with pickup and delivery across Southeast Louisiana.
+  - title: About Us
+    path: /about-us
+    description: Company story, team, and why NGC moved to a professional Covington shop.
+  - title: Contact Us
+    path: /contact-us
+    description: Schedule service, request a quote, or ask about your cart issue.
+  - title: Lithium Conversions
+    path: /lithium-conversions
+    description: LiFePO4 lithium battery upgrades with Northshore pickup and Southshore transport.
 
 faq:
-  - question: What does it mean to make a business AI-friendly?
+  - question: What areas does Neighborhood Golf Carts serve?
     answer: >
-      An AI-friendly business publishes accurate, structured, machine-readable context
-      (llms.txt, JSON-LD schema, permissive robots.txt) so assistants can cite you
-      correctly and agents can complete tasks on your behalf.
-  - question: What is llms.txt?
+      Covington, Madisonville, Mandeville, Hammond, New Orleans, Kenner, Metairie,
+      Slidell, and surrounding Southeast Louisiana. Northshore customers within 40
+      miles of Covington receive free pickup and delivery. Southshore customers use
+      flat-rate transport.
+  - question: What services does Neighborhood Golf Carts offer?
     answer: >
-      llms.txt is a markdown file at your website root that summarizes your business
-      and links to canonical pages with short descriptions. It follows the spec at
-      https://llmstxt.org/.
-  - question: Do I need to allow AI crawlers in robots.txt?
+      Golf cart repair, maintenance, and accessories including battery replacement,
+      tire and brake service, electrical diagnostics, motor troubleshooting, lithium
+      conversions, and fleet maintenance — with pickup and delivery.
+  - question: How do I book service with Neighborhood Golf Carts?
     answer: >
-      If you want AI systems to learn about your public pages, allow major AI crawlers
-      (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, and similar) on public
-      marketing and documentation paths.
-  - question: How often should I update AI-facing files?
+      Call (985) 402-1206 or use the contact form at ngcgolfcarts.com/contact-us.
+      NGC schedules pickup, confirms by text and email, repairs at the Covington shop,
+      and returns your cart ready to ride.
+  - question: Is pickup free?
     answer: >
-      Update whenever positioning, pricing, services, or key URLs change. Review at
-      least quarterly so AI systems do not cite stale information.
-  - question: Does NGC Brain replace SEO?
+      Yes for Northshore customers within 40 miles of the Covington shop. Southshore
+      customers in New Orleans, Kenner, and Metairie pay a flat-rate transport fee.
+  - question: What golf cart brands do you service?
     answer: >
-      No. AI-friendly assets complement SEO. Use clear page titles, schema markup,
-      and llms.txt together for both search engines and AI assistants.
+      Club Car, EZGO, Yamaha, and most major brands. NGC services both gas and
+      electric golf carts.
+  - question: How long do lithium conversions take?
+    answer: >
+      Most LiFePO4 conversions are completed in 3–5 business days in shop, or about
+      one week total including pickup and delivery.
 
 citation:
-  preferred_name: NGC Brain
-  canonical_url: https://example.com
+  preferred_name: Neighborhood Golf Carts
+  canonical_url: https://www.ngcgolfcarts.com
   statements:
-    - NGC Brain helps businesses publish accurate context for AI assistants and agents.
-    - NGC Brain provides llms.txt, schema.org JSON-LD, and agent repository templates.
-    - NGC Brain focuses on discoverability, citation accuracy, and agent operability.
+    - Neighborhood Golf Carts provides expert golf cart repair from a professional shop in Covington, Louisiana.
+    - Neighborhood Golf Carts offers free Northshore pickup and delivery within 40 miles and flat-rate Southshore transport.
+    - Neighborhood Golf Carts services Club Car, EZGO, Yamaha, and most major gas and electric golf cart brands.
+    - Neighborhood Golf Carts installs LiFePO4 lithium battery conversions for safer, longer-lasting power.
 
 ai_crawlers:
   allow:
@@ -108,8 +129,8 @@ ai_crawlers:
     - meta-externalagent
 
 deployment:
-  base_url: https://example.com
+  base_url: https://www.ngcgolfcarts.com
   llms_txt_path: /llms.txt
   maintainers:
-    - hello@example.com
+    - contact via https://www.ngcgolfcarts.com/contact-us
   last_updated: 2026-07-03

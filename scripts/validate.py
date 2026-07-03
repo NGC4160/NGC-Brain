@@ -14,10 +14,14 @@ SCHEMA = ROOT / "schema"
 
 REQUIRED_PUBLIC = [
     "llms.txt",
+    "llms-full.txt",
     "robots.txt",
     "sitemap.xml",
     ".well-known/llms.txt",
+    ".well-known/llms-full.txt",
 ]
+
+BRAIN_DIR = ROOT / "NeighborhoodGolfCartsBusinessBrain"
 
 REQUIRED_SCHEMA = [
     "organization.jsonld",
@@ -84,6 +88,13 @@ def main() -> None:
         if "LLMs:" not in robots:
             print("ERROR: robots.txt should declare LLMs: location", file=sys.stderr)
             errors += 1
+
+    if not BRAIN_DIR.is_dir():
+        print(f"ERROR: missing business brain folder: {BRAIN_DIR.relative_to(ROOT)}", file=sys.stderr)
+        errors += 1
+    elif not list(BRAIN_DIR.rglob("*.md")):
+        print("ERROR: business brain folder has no markdown files", file=sys.stderr)
+        errors += 1
 
     if errors:
         sys.exit(1)

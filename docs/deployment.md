@@ -13,7 +13,9 @@ Deploy the generated files in `public/` to your website root.
 | Source | Destination | Content-Type |
 |--------|-------------|--------------|
 | `public/llms.txt` | `https://yourdomain.com/llms.txt` | `text/plain` or `text/markdown` |
+| `public/llms-full.txt` | `https://yourdomain.com/llms-full.txt` | `text/plain` or `text/markdown` |
 | `public/.well-known/llms.txt` | `https://yourdomain.com/.well-known/llms.txt` | same as above |
+| `public/.well-known/llms-full.txt` | `https://yourdomain.com/.well-known/llms-full.txt` | same as above |
 | `public/robots.txt` | `https://yourdomain.com/robots.txt` | `text/plain` |
 | `public/sitemap.xml` | `https://yourdomain.com/sitemap.xml` | `application/xml` |
 

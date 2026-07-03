@@ -1,39 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://www.ngcgolfcarts.com/</loc>
     <lastmod>2026-07-03</lastmod>
   </url>
   <url>
-    <loc>https://example.com/about</loc>
+    <loc>https://www.ngcgolfcarts.com/about-us</loc>
     <lastmod>2026-07-03</lastmod>
   </url>
   <url>
-    <loc>https://example.com/contact</loc>
+    <loc>https://www.ngcgolfcarts.com/contact-us</loc>
     <lastmod>2026-07-03</lastmod>
   </url>
   <url>
-    <loc>https://example.com/faq</loc>
+    <loc>https://www.ngcgolfcarts.com/lithium-conversions</loc>
     <lastmod>2026-07-03</lastmod>
   </url>
   <url>
-    <loc>https://example.com/llms.txt</loc>
+    <loc>https://www.ngcgolfcarts.com/llms-full.txt</loc>
     <lastmod>2026-07-03</lastmod>
   </url>
   <url>
-    <loc>https://example.com/services</loc>
-    <lastmod>2026-07-03</lastmod>
-  </url>
-  <url>
-    <loc>https://example.com/services/agent-kit</loc>
-    <lastmod>2026-07-03</lastmod>
-  </url>
-  <url>
-    <loc>https://example.com/services/ai-discoverability</loc>
-    <lastmod>2026-07-03</lastmod>
-  </url>
-  <url>
-    <loc>https://example.com/services/llms-txt</loc>
+    <loc>https://www.ngcgolfcarts.com/llms.txt</loc>
     <lastmod>2026-07-03</lastmod>
   </url>
 </urlset>

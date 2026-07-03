@@ -1,22 +1,30 @@
-# NGC Brain — AI-friendly business kit
+# NGC Brain — AI-friendly business kit for Neighborhood Golf Carts
 
-Make your business discoverable, citable, and operable by AI assistants and agents.
+Make **Neighborhood Golf Carts** discoverable, citable, and operable by AI assistants and agents.
 
-This repository is a **config-driven starter kit** that generates the files AI systems expect in 2026:
+This repository combines:
 
-| Asset | Purpose |
-|-------|---------|
-| [`llms.txt`](public/llms.txt) | Curated business summary for LLMs ([llmstxt.org](https://llmstxt.org/)) |
-| [`robots.txt`](public/robots.txt) | Allows AI crawlers and points to `llms.txt` |
-| [`sitemap.xml`](public/sitemap.xml) | Canonical URL index |
-| [`schema/*.jsonld`](schema/) | Structured data for Organization and FAQ |
+| Component | Purpose |
+|-----------|---------|
+| [`NeighborhoodGolfCartsBusinessBrain/`](NeighborhoodGolfCartsBusinessBrain/) | Agent-readable business knowledge (services, FAQ, operations) |
+| [`config/business.yaml`](config/business.yaml) | Structured facts that drive generated web assets |
+| [`public/`](public/) | Deployable `llms.txt`, `llms-full.txt`, `robots.txt`, `sitemap.xml` |
+| [`schema/`](schema/) | JSON-LD for Organization and FAQ pages |
 | [`AGENTS.md`](AGENTS.md) | Instructions for AI coding agents in this repo |
 
 ## Quick start
 
-1. **Edit your business details** in [`config/business.yaml`](config/business.yaml) — replace `https://example.com`, email, services, and FAQ with your real information.
+1. **Customize business knowledge** in `NeighborhoodGolfCartsBusinessBrain/` and `config/business.yaml`.
 
-2. **Generate assets:**
+2. **Import from your desktop** (if you maintain a local copy):
+
+```bash
+./scripts/import-desktop-brain.sh
+```
+
+Default source: `~/Desktop/NeighborhoodGolfCartsBusinessBrain`
+
+3. **Generate and validate:**
 
 ```bash
 pip install -r requirements.txt
@@ -24,59 +32,44 @@ python3 scripts/generate.py
 python3 scripts/validate.py
 ```
 
-3. **Deploy** the [`public/`](public/) folder to your website root so these URLs work:
+4. **Deploy** `public/` to https://www.ngcgolfcarts.com so these URLs work:
 
-- `https://yourdomain.com/llms.txt`
-- `https://yourdomain.com/robots.txt`
-- `https://yourdomain.com/sitemap.xml`
+- `/llms.txt`
+- `/llms-full.txt`
+- `/robots.txt`
+- `/sitemap.xml`
 
-4. **Embed schema** from [`schema/`](schema/) in your HTML templates (homepage + FAQ page).
+5. **Embed** `schema/*.jsonld` in your site templates.
 
-See [docs/deployment.md](docs/deployment.md) for server examples and [docs/checklist.md](docs/checklist.md) for a full readiness checklist.
+See [docs/deployment.md](docs/deployment.md) and [docs/checklist.md](docs/checklist.md).
 
-## What “AI-friendly” means
+## Business brain folder
 
-An AI-friendly business publishes accurate context in formats machines can read without scraping your entire site:
+`NeighborhoodGolfCartsBusinessBrain/` is the knowledge base AI agents should read for operational context:
 
-- **Discovery** — `llms.txt` tells assistants what you do and which pages matter
-- **Permission** — `robots.txt` allows GPTBot, ClaudeBot, PerplexityBot, and similar crawlers
-- **Structure** — JSON-LD schema gives knowledge graphs typed facts (name, services, FAQ)
-- **Operability** — `AGENTS.md` helps coding agents work correctly in your repositories
+- `company/` — story, team, positioning
+- `services/` — one markdown file per service line
+- `operations/` — pickup/delivery, service area, workflow
+- `customer/faq.md` — citation-ready FAQ
+- `contact.md` — phone and booking
 
-This complements SEO; it does not replace clear page copy, fast pages, or good information architecture.
+The generator concatenates these into `public/llms-full.txt` for single-fetch agent ingestion.
 
-## Repository layout
+## Syncing your desktop folder
 
+This cloud environment cannot read your local Desktop directly. To merge your desktop copy into the repo:
+
+```bash
+./scripts/import-desktop-brain.sh
+# or specify a path:
+python3 scripts/import-desktop-brain.py --source /path/to/NeighborhoodGolfCartsBusinessBrain --merge
+python3 scripts/generate.py
 ```
-config/business.yaml   # Single source of truth — edit this
-scripts/generate.py    # Regenerates all outputs
-scripts/validate.py    # Checks structure and flags placeholder URLs
-public/                # Deploy to website root
-schema/                # JSON-LD snippets for HTML embedding
-docs/                  # Deployment guide and checklist
-AGENTS.md              # Agent instructions for this repo
-```
 
-## Customization
-
-Update these sections in `config/business.yaml`:
-
-- `business` — name, description, contact, location
-- `services` — what you offer with one-line descriptions
-- `pages` — canonical site pages (paths must exist on your site)
-- `faq` — citation-ready Q&A pairs
-- `citation` — preferred name, canonical URL, statements you want quoted
-- `deployment.base_url` — your production domain
-
-After any change, regenerate and redeploy.
+Use `--merge` to combine desktop files with existing repo content instead of replacing it.
 
 ## Maintenance
 
-- Update when positioning, pricing, services, or URLs change
-- Review at least quarterly
-- Run `python3 scripts/validate.py` before each deploy
-- Test with prompts like “What does [Your Business] do?” in ChatGPT, Claude, or Perplexity
-
-## License
-
-Use and adapt freely for your business. Replace placeholder content before production deploy.
+- Edit brain markdown or `config/business.yaml` when services or policies change
+- Run `python3 scripts/generate.py` after edits
+- Review quarterly and test with prompts like “Who does golf cart repair near Covington LA?”

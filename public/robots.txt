@@ -2,8 +2,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
-LLMs: https://example.com/llms.txt
+Sitemap: https://www.ngcgolfcarts.com/sitemap.xml
+LLMs: https://www.ngcgolfcarts.com/llms.txt
+LLMs-Full: https://www.ngcgolfcarts.com/llms-full.txt
 
 User-agent: GPTBot
 Allow: /

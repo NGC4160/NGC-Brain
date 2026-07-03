@@ -4,39 +4,44 @@ Instructions for AI coding agents working in this repository.
 
 ## Project purpose
 
-This repository maintains AI-friendly business assets for NGC Brain. The single source of truth is `config/business.yaml`. Generated files live in `public/` (website root) and `schema/` (JSON-LD snippets).
+This repository maintains AI-friendly business assets for **Neighborhood Golf Carts** (NGC). Business knowledge lives in `NeighborhoodGolfCartsBusinessBrain/`. Structured web facts live in `config/business.yaml`. Generated deployable files are in `public/` and `schema/`.
 
 ## Commands
 
 ```bash
 pip install -r requirements.txt
+./scripts/import-desktop-brain.sh   # optional: merge desktop folder
 python3 scripts/generate.py
 python3 scripts/validate.py
 ```
 
 ## Workflow
 
-1. Edit `config/business.yaml` with real business details (URLs, email, services, FAQ).
-2. Run `python3 scripts/generate.py` to regenerate outputs.
-3. Run `python3 scripts/validate.py` before committing.
-4. Deploy `public/` to the website root so `/llms.txt` and `/robots.txt` are live.
-5. Embed `schema/*.jsonld` in matching HTML pages or your site template.
+1. Edit `NeighborhoodGolfCartsBusinessBrain/` and/or `config/business.yaml`.
+2. Optionally import from `~/Desktop/NeighborhoodGolfCartsBusinessBrain` with `./scripts/import-desktop-brain.sh --merge`.
+3. Run `python3 scripts/generate.py` to regenerate outputs.
+4. Run `python3 scripts/validate.py` before committing.
+5. Deploy `public/` to https://www.ngcgolfcarts.com.
+6. Embed `schema/*.jsonld` in matching HTML pages.
 
 ## Conventions
 
 - Keep `llms.txt` factual and encyclopedic, not marketing copy.
 - Every URL in generated files must resolve (no 404s).
 - Update `deployment.last_updated` when regenerating for production.
-- Do not hand-edit generated files in `public/` or `schema/`; change the config and regenerate.
+- Do not hand-edit generated files in `public/` or `schema/`; change brain markdown or config and regenerate.
 
 ## File map
 
 | Path | Purpose |
 |------|---------|
-| `config/business.yaml` | Editable business facts and page list |
+| `NeighborhoodGolfCartsBusinessBrain/` | Agent-readable business knowledge base |
+| `config/business.yaml` | Structured facts and page list |
 | `scripts/generate.py` | Generator for all AI-facing assets |
-| `scripts/validate.py` | Basic structure and link checks |
+| `scripts/import-desktop-brain.py` | Import desktop business brain folder |
+| `scripts/validate.py` | Structure and link checks |
 | `public/llms.txt` | Primary AI discovery file (llmstxt.org spec) |
+| `public/llms-full.txt` | Full concatenated business brain for agents |
 | `public/robots.txt` | Crawler rules including AI bots |
 | `public/sitemap.xml` | Canonical URL index |
 | `schema/organization.jsonld` | Organization schema for homepage |

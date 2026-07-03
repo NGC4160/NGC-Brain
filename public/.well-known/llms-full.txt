@@ -1,0 +1,371 @@
+# Neighborhood Golf Carts — Full Business Context
+
+> Expert golf cart repair with free Northshore pickup and delivery
+
+Concatenated business brain knowledge for AI agents.
+
+---
+## Source: company/overview.md
+
+# Company Overview
+
+**Neighborhood Golf Carts** provides expert golf cart repair, maintenance, battery service, lithium conversions, and custom upgrades from a professional shop in Covington, Louisiana.
+
+## Value proposition
+
+- Shop-level diagnostics and repairs (not driveway-limited mobile work)
+- Door-to-door pickup and delivery so customers never need a trailer
+- Free Northshore pickup and delivery within 40 miles of Covington
+- Flat-rate transport for Southshore customers
+- Certified technicians on all major brands
+- Transparent pricing and clear communication
+- Typical turnaround about one week from pickup to return
+
+## Customers
+
+- Residential golf cart owners
+- Commercial fleet managers
+- Neighborhoods, golf courses, and properties with multiple carts
+
+## Differentiators
+
+- Locally owned in Covington, LA
+- LiFePO4 lithium conversions (non-combustible chemistry suited to Louisiana heat)
+- Free 7-point inspection included with any service
+- Customers do not need to be home for pickup if the cart is accessible
+
+---
+## Source: company/story.md
+
+# Company Story
+
+## Origins (2018)
+
+After moving to a Madisonville neighborhood and buying a golf cart, the founders began fixing carts for neighbors out of their garage. Local owners struggled to find reliable, professional service.
+
+## Launch (2023)
+
+Neighborhood Golf Carts launched as a formal business in 2023 to fill the service gap across Southeast Louisiana.
+
+## Evolution to shop-based service
+
+As demand grew, the business moved from mobile-only repairs to a fully equipped professional facility in Covington. Shop-based work enables deeper diagnostics, lithium conversions, and heavy-duty repairs that are not practical in a driveway.
+
+Pickup and delivery were retained so customers still get door-to-door convenience without hauling carts themselves.
+
+---
+## Source: company/team.md
+
+# Team
+
+| Name | Role |
+|------|------|
+| Ryan | Sales / Service Manager |
+| Christine | Office Coordinator |
+| Marlon | NGC Technician |
+| Taylor | NGC Technician |
+| Roy | NGC Driver |
+
+The team handles scheduling, shop repairs, diagnostics, lithium conversions, and pickup/delivery logistics across the Northshore and Greater New Orleans area.
+
+---
+## Source: contact.md
+
+# Contact and Booking
+
+## Phone
+
+**(985) 402-1206** — call to schedule pickup or ask about service.
+
+## Website
+
+- Home: https://www.ngcgolfcarts.com/
+- Contact form: https://www.ngcgolfcarts.com/contact-us
+- About: https://www.ngcgolfcarts.com/about-us
+
+## Shop location
+
+Professional service facility in **Covington, Louisiana** (St. Tammany Parish).
+
+## SMS notifications
+
+Customers who submit the contact form may receive appointment and service text messages from 985-402-1206. Reply STOP to opt out.
+
+## Privacy and terms
+
+- https://www.ngcgolfcarts.com/privacy-policy
+- https://www.ngcgolfcarts.com/terms-of-service
+
+---
+## Source: customer/faq.md
+
+# Customer FAQ
+
+## What areas do you serve?
+
+Covington, Madisonville, Mandeville, Hammond, New Orleans, Kenner, Metairie, Slidell, Abita Springs, Ponchatoula, Lacombe, and surrounding Southeast Louisiana communities. Northshore customers within 40 miles of Covington get free pickup and delivery. Southshore customers use flat-rate transport.
+
+## What services do you offer?
+
+Golf cart repair, maintenance, and accessories including battery replacement, tire repair, brake service, electrical diagnostics, motor troubleshooting, lithium conversions, and routine maintenance — with pickup and delivery.
+
+## How do I book an appointment?
+
+Call **(985) 402-1206** or use the contact form at https://www.ngcgolfcarts.com/contact-us
+
+## Do you charge for pickup?
+
+Free within 40 miles of the Covington shop for Northshore customers. Flat-rate professional transport fee for Southshore customers in New Orleans, Kenner, and Metairie.
+
+## What if I do not know what is wrong with my cart?
+
+NGC offers diagnostic services to identify the issue and recommend the best repair path.
+
+## Do you work on all golf cart brands?
+
+Yes — Club Car, EZGO, Yamaha, and most major brands. Call to confirm if unsure.
+
+## Do you work on gas and electric carts?
+
+Yes. Technicians service both gas-powered and electric golf carts.
+
+## How long do lithium conversions take?
+
+Typically 3–5 business days in shop, about one week total with pickup and delivery.
+
+## Is lithium safe for neighborhood use?
+
+Yes. NGC installs LiFePO4 (Lithium Iron Phosphate), designed for stability and safety in golf cart applications.
+
+---
+## Source: index.md
+
+# Neighborhood Golf Carts — Business Brain Index
+
+> **Neighborhood Golf Carts** is a Covington, Louisiana golf cart repair shop serving Southeast Louisiana with professional shop-based service and door-to-door pickup and delivery.
+
+## Quick facts
+
+- **Phone:** (985) 402-1206
+- **Website:** https://www.ngcgolfcarts.com
+- **Shop:** Professional facility in Covington, LA (St. Tammany Parish)
+- **Founded:** 2023 (roots in neighborhood garage repairs since 2018)
+- **Brands serviced:** Club Car, EZGO, Yamaha, and most major brands
+- **Power types:** Gas and electric golf carts
+
+## Service model
+
+Shop-based repairs with valet logistics. Northshore customers within 40 miles of Covington receive free pickup and delivery. Southshore customers (New Orleans, Kenner, Metairie) use flat-rate transport.
+
+## Where to look
+
+- Company background → `company/`
+- Service details → `services/`
+- Pickup, delivery, scheduling → `operations/`
+- Customer FAQ → `customer/faq.md`
+- Contact and booking → `contact.md`
+
+---
+## Source: operations/how-service-works.md
+
+# How Service Works
+
+## Step 1: Request service
+
+Call **(985) 402-1206** or use the website contact form. Describe the cart issue or service needed.
+
+## Step 2: Schedule and confirm
+
+NGC schedules the earliest available pickup slot and sends confirmation by text and email. Customers can reschedule if the time does not work.
+
+## Step 3: Pickup, repair, return
+
+The team picks up the cart, transports it to the Covington facility, completes expert service, and returns it ready to ride.
+
+## Typical timeline
+
+Most jobs are completed within about one week from pickup to return, depending on parts and repair complexity.
+
+---
+## Source: operations/pickup-and-delivery.md
+
+# Pickup and Delivery
+
+## Northshore
+
+Free pickup and delivery for maintenance and repair within 40 miles of the Covington shop. Includes Mandeville, Madisonville, and Slidell.
+
+## Southshore
+
+Affordable flat-rate transport for New Orleans, Kenner, Metairie, and beyond. Same shop-quality service without the customer hauling a trailer.
+
+## Customer presence
+
+Customers do not need to be home for pickup as long as the team can access the cart.
+
+## Goal
+
+Eliminate transport hassle while delivering shop-level precision that driveway repairs cannot match.
+
+---
+## Source: operations/service-area.md
+
+# Service Area
+
+Neighborhood Golf Carts serves the Northshore and Greater New Orleans area from Covington, LA.
+
+## Northshore (free pickup and delivery within 40 miles)
+
+- Covington
+- Madisonville
+- Mandeville
+- Slidell
+- Abita Springs
+- Hammond
+- Ponchatoula
+- Lacombe
+
+## Southshore (flat-rate transport)
+
+- New Orleans
+- Kenner
+- Metairie
+- River Parishes and surrounding areas
+
+Customers outside the standard radius should still contact NGC — the team often travels further when needed.
+
+---
+## Source: services/accessories-and-upgrades.md
+
+# Accessories and Upgrades
+
+Custom golf cart accessories and upgrade installation.
+
+## Examples
+
+- LED lights
+- Lift kits
+- Seats and upholstery
+- Mirrors
+- Other custom accessories
+
+All installation is handled at the shop with pickup and delivery available.
+
+---
+## Source: services/battery-replacement.md
+
+# Battery Replacement
+
+Battery replacement and charging system repair for electric golf carts.
+
+## Includes
+
+- Lead-acid battery replacement
+- Charging system diagnosis and repair
+- Power restoration for carts that will not hold charge
+
+## Related service
+
+For long-term upgrades, see lithium conversions (`services/lithium-conversions.md`).
+
+---
+## Source: services/brake-and-tire-services.md
+
+# Brake and Tire Services
+
+Brake and tire repair for safe, smooth operation on roads and courses.
+
+## Includes
+
+- Worn brake pad replacement
+- Flat tire repair
+- Tire and brake safety checks
+
+Pickup and delivery available through the standard NGC service model.
+
+---
+## Source: services/diagnostics-and-repairs.md
+
+# Diagnostics and Repairs
+
+Shop-quality golf cart diagnostics and repairs with free Northshore pickup and delivery.
+
+## Includes
+
+- Computerized and electrical diagnostics
+- Motor troubleshooting
+- Complex system repairs
+- Shop equipment not available for driveway/mobile work
+
+## Process
+
+NGC transports the cart to the Covington facility, performs repairs, and returns the cart in peak condition. Customers do not need to be home if the cart is accessible for pickup.
+
+## Brands
+
+Club Car, EZGO, Yamaha, and most major golf cart brands. Both gas and electric carts.
+
+---
+## Source: services/fleet-maintenance.md
+
+# Fleet Maintenance
+
+Maintenance programs for neighborhoods, golf courses, and commercial fleets with multiple carts.
+
+## Includes
+
+- Flexible maintenance plans
+- Fast turnaround for fleet operators
+- Same shop-quality service as residential customers
+
+Ideal for property managers and course operators who need reliable uptime across multiple vehicles.
+
+---
+## Source: services/lithium-conversions.md
+
+# Lithium Conversions
+
+Professional LiFePO4 (Lithium Iron Phosphate) battery upgrades for golf carts.
+
+## Why LiFePO4
+
+- Non-combustible chemistry designed for golf cart use
+- Suited to Louisiana heat and humidity
+- Faster charging, more power, lighter weight than lead-acid
+- Longer lifespan and lower maintenance
+
+## Timeline
+
+Most conversions complete in 3–5 business days once the cart is at the shop. End-to-end with pickup and delivery is typically about one week.
+
+## Logistics
+
+- Free Northshore pickup and delivery within 40 miles of Covington
+- Flat-rate transport for Southshore (New Orleans, Metairie, Kenner)
+
+## Website
+
+https://www.ngcgolfcarts.com/lithium-conversions
+
+---
+## Source: services/preventive-maintenance.md
+
+# Preventive Maintenance
+
+Routine tune-ups, inspections, and scheduled maintenance to keep carts reliable.
+
+## Includes
+
+- Regular tune-ups
+- Inspections
+- Routine maintenance for residential and commercial carts
+
+## Free 7-point inspection (included with any service)
+
+1. Wires, cables, and terminals
+2. Battery distilled water levels (where applicable)
+3. Lights and horn (if applicable)
+4. Tire inflation, tread, and uneven wear
+5. Steering and suspension
+6. Wheel and steering wheel alignment
+7. Brake operation

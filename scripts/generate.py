@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "config" / "business.yaml"
 PUBLIC_DIR = ROOT / "public"
 SCHEMA_DIR = ROOT / "schema"
+DEFAULT_BRAIN_DIR = ROOT / "NeighborhoodGolfCartsBusinessBrain"
 
 
 def load_config() -> dict[str, Any]:
@@ -35,7 +36,47 @@ def full_url(base_url: str, path: str) -> str:
     return f"{base}/{path.lstrip('/')}"
 
 
-def write_file(path: Path, content: str) -> None:
+def business_brain_dir(config: dict[str, Any]) -> Path:
+    brain = config.get("business_brain", {})
+    configured = brain.get("path")
+    if configured:
+        path = Path(configured)
+        return path if path.is_absolute() else ROOT / path
+    return DEFAULT_BRAIN_DIR
+
+
+def collect_brain_markdown(brain_dir: Path) -> list[tuple[str, str]]:
+    if not brain_dir.is_dir():
+        return []
+
+    files: list[tuple[str, str]] = []
+    for path in sorted(brain_dir.rglob("*.md")):
+        if path.name == "README.md":
+            continue
+        relative = path.relative_to(brain_dir).as_posix()
+        files.append((relative, path.read_text(encoding="utf-8").strip()))
+    return files
+
+
+def generate_llms_full_txt(config: dict[str, Any], brain_dir: Path) -> str | None:
+    sections = collect_brain_markdown(brain_dir)
+    if not sections:
+        return None
+
+    business = config["business"]
+    lines = [
+        f"# {business['name']} — Full Business Context",
+        "",
+        f"> {business['tagline']}",
+        "",
+        "Concatenated business brain knowledge for AI agents.",
+        "",
+    ]
+
+    for relative, content in sections:
+        lines.extend([f"---", f"## Source: {relative}", "", content, ""])
+
+    return "\n".join(lines).rstrip() + "\n"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content.rstrip() + "\n", encoding="utf-8")
     print(f"wrote {path.relative_to(ROOT)}")
@@ -72,6 +113,8 @@ def generate_llms_txt(config: dict[str, Any]) -> str:
 
     if business.get("email"):
         lines.append(f"- Contact: {business['email']}")
+    if business.get("phone"):
+        lines.append(f"- Phone: {business['phone']}")
 
     location = business.get("location", {})
     location_parts = [
@@ -127,6 +170,20 @@ def generate_llms_txt(config: dict[str, Any]) -> str:
     if allowed:
         lines.append(f"- Permitted crawlers: {', '.join(allowed)}")
 
+    brain_dir = business_brain_dir(config)
+    brain_files = collect_brain_markdown(brain_dir)
+    if brain_files:
+        lines.extend(
+            [
+                "",
+                "## Business brain",
+                f"- Full context file: {full_url(base_url, '/llms-full.txt')}",
+                "- Repository knowledge base:",
+            ]
+        )
+        for relative, _ in brain_files:
+            lines.append(f"  - `{relative}`")
+
     social = business.get("social", {})
     optional_links = [
         ("GitHub", social.get("github")),
@@ -139,7 +196,13 @@ def generate_llms_txt(config: dict[str, Any]) -> str:
         for label, url in optional_links:
             lines.append(f"- [{label}]({url})")
 
-    return "\n".join(lines)
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def write_file(path: Path, content: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content.rstrip() + "\n", encoding="utf-8")
+    print(f"wrote {path.relative_to(ROOT)}")
 
 
 def generate_robots_txt(config: dict[str, Any]) -> str:
@@ -153,6 +216,7 @@ def generate_robots_txt(config: dict[str, Any]) -> str:
         "",
         "Sitemap: " + full_url(base_url, "/sitemap.xml"),
         "LLMs: " + full_url(base_url, "/llms.txt"),
+        "LLMs-Full: " + full_url(base_url, "/llms-full.txt"),
         "",
     ]
 
@@ -169,6 +233,7 @@ def generate_sitemap_xml(config: dict[str, Any]) -> str:
     urls = [full_url(base_url, page["path"]) for page in config["pages"]]
     urls.extend(service["url"] for service in config["services"])
     urls.append(full_url(base_url, "/llms.txt"))
+    urls.append(full_url(base_url, "/llms-full.txt"))
 
     entries = []
     for url in sorted(set(urls)):
@@ -269,10 +334,17 @@ def generate_ai_plugin_manifest(config: dict[str, Any]) -> str:
 
 def main() -> None:
     config = load_config()
+    brain_dir = business_brain_dir(config)
     llms_txt = generate_llms_txt(config)
 
     write_file(PUBLIC_DIR / "llms.txt", llms_txt)
     write_file(PUBLIC_DIR / ".well-known" / "llms.txt", llms_txt)
+
+    llms_full = generate_llms_full_txt(config, brain_dir)
+    if llms_full:
+        write_file(PUBLIC_DIR / "llms-full.txt", llms_full)
+        write_file(PUBLIC_DIR / ".well-known" / "llms-full.txt", llms_full)
+
     write_file(PUBLIC_DIR / "robots.txt", generate_robots_txt(config))
     write_file(PUBLIC_DIR / "sitemap.xml", generate_sitemap_xml(config))
     write_file(SCHEMA_DIR / "organization.jsonld", generate_organization_schema(config))
