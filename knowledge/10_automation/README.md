@@ -57,11 +57,13 @@ Run manually anytime:
 
 **Template:** [`../../.cursor/mcp.json.example`](../../.cursor/mcp.json.example)
 
-### 2. Google Drive — **setup ready**
+### 2. Google Drive — **run connect script**
 
-**Guide:** [`google_drive_setup.md`](google_drive_setup.md)  
-**Current:** Google Drive for Desktop → `external_docs/My Drive/` (Mac sync only)  
-**Upgrade:** Google Drive MCP — run `./scripts/setup/print_google_drive_mcp.sh` after OAuth
+```bash
+./scripts/setup/connect_google_drive.sh
+```
+
+Prompts for OAuth credentials → syncs to `external_docs/drive/`. Guide: [`google_drive_setup.md`](google_drive_setup.md)
 
 ### 3. Housecall Pro
 

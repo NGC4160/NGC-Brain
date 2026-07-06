@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "query": "name = 'PNG Transparent 3.png' and trashed = false",
+      "dest": "external_docs/assets/ngc-logo-transparent.png"
+    }
+  ],
+  "folders": [
+    {
+      "query": "name = 'Visual Content' and mimeType = 'application/vnd.google-apps.folder' and trashed = false",
+      "dest": "external_docs/drive/Visual Content",
+      "max_files": 200
+    },
+    {
+      "query": "name = 'NGC Document Repository' and mimeType = 'application/vnd.google-apps.folder' and trashed = false",
+      "dest": "external_docs/drive/NGC Document Repository",
+      "max_files": 100,
+      "note": "Top-level files only; subfolders synced one level deep"
+    }
+  ]
+}

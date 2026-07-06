@@ -79,24 +79,13 @@ Keep CSV export to `external_docs/exports/pricebook/` — hooks still sync.
 
 ## Google Drive
 
-**Full walkthrough:** [`google_drive_setup.md`](google_drive_setup.md)
+**Connect:** `./scripts/setup/connect_google_drive.sh` (prompts for credentials, syncs into repo)
 
-### Current (no API)
+**Full reference:** [`google_drive_setup.md`](google_drive_setup.md)
 
-Google Drive for Desktop syncs to `external_docs/My Drive/` (Mac only — symlink breaks in Cloud Agents)
+Credentials live in `.env`. Synced files: `external_docs/drive/`, `external_docs/assets/`.
 
-**Limitation:** `.gsheet` / `.gdoc` files are stubs — export to xlsx/pdf for AI reading.
-
-### Google Drive MCP (recommended)
-
-1. Google Cloud Console → enable Drive API (+ Docs/Sheets optional)
-2. OAuth Desktop credentials → refresh token via OAuth Playground
-3. Add to `.env` → run `./scripts/setup/print_google_drive_mcp.sh` → paste into Cursor MCP settings
-4. Verify: `./scripts/setup/run_google_drive_test.sh`
-
-Scope: `drive.readonly` unless you need write access.
-
-**Automate (future):** Nightly export of key sheets (Tech Performance, HOA, Outreach) to `external_docs/exports/drive/`
+Re-sync: `./scripts/sync/run_google_drive_sync.sh` · Optional MCP: `./scripts/setup/print_google_drive_mcp.sh`
 
 ---
 

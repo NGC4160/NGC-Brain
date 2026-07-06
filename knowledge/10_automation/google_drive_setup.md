@@ -1,185 +1,64 @@
-# Google Drive Setup (MCP + API)
+# Google Drive Setup
 
-**Last verified:** 2026-07-06  
-**Goal:** Let Cursor read NGC logos, SOPs, Visual Content, and Google Docs/Sheets without relying on Desktop sync.
-
-**Time:** ~15 minutes (one-time)
-
----
-
-## Why MCP instead of Desktop sync?
-
-| Method | Works in Cloud Agent? | Reads `.gdoc` / `.gsheet`? |
-|--------|----------------------|----------------------------|
-| Google Drive Desktop → `external_docs/My Drive/` | Only on your Mac when sync is running | No (stub files only) |
-| **Google Drive MCP** | Yes | Yes |
-
-Desktop sync symlink in this repo points to your Mac path. Cloud Agents cannot see it. MCP fixes that.
-
----
-
-## Part 1 — Google Cloud (you do this once)
-
-### 1.1 Open Google Cloud Console
-
-Go to: https://console.cloud.google.com/
-
-Sign in as the account that owns NGC Drive (`neighborhoodgolfcarts985@gmail.com` or your Workspace admin).
-
-### 1.2 Create or select a project
-
-- Click the project dropdown (top bar) → **New Project**
-- Name: `NGC Business Brain`
-- Click **Create**, then select that project
-
-### 1.3 Enable APIs
-
-Go to **APIs & Services → Library** and enable:
-
-1. **Google Drive API**
-2. **Google Docs API** (optional — for reading `.gdoc`)
-3. **Google Sheets API** (optional — for reading `.gsheet`)
-
-### 1.4 Configure OAuth consent screen
-
-**APIs & Services → OAuth consent screen**
-
-| Field | Value |
-|-------|-------|
-| User type | **External** (unless you have Google Workspace org-only) |
-| App name | `NGC Business Brain` |
-| User support email | Your email |
-| Developer contact | Your email |
-
-**Scopes → Add or remove scopes:**
-
-- `https://www.googleapis.com/auth/drive.readonly` — **recommended** (read-only)
-- Or `https://www.googleapis.com/auth/drive` if you want the AI to create/edit files later
-
-**Test users → Add users:**
-
-- Add the Google account that owns your Drive files
-
-Click **Save**.
-
-### 1.5 Create OAuth credentials
-
-**APIs & Services → Credentials → Create Credentials → OAuth client ID**
-
-| Field | Value |
-|-------|-------|
-| Application type | **Desktop app** |
-| Name | `NGC Cursor MCP` |
-
-Click **Create**. Copy:
-
-- **Client ID** (ends in `.apps.googleusercontent.com`)
-- **Client secret**
-
-Keep this tab open — you need both in Part 2.
-
----
-
-## Part 2 — Get a refresh token (5 minutes)
-
-### Option A — OAuth Playground (easiest)
-
-1. Open https://developers.google.com/oauthplayground
-2. Click the **gear icon** (top right)
-3. Check **Use your own OAuth credentials**
-4. Paste your **Client ID** and **Client secret**
-5. In the left panel, find **Drive API v3**
-6. Select: `https://www.googleapis.com/auth/drive.readonly`
-7. Click **Authorize APIs** → sign in → **Allow**
-8. Click **Exchange authorization code for tokens**
-9. Copy the **Refresh token** (long string starting with `1//...`)
-
-### Option B — Script on your Mac
-
-From repo root (after Part 3 `.env` has Client ID + Secret only):
+**Connect in one command:**
 
 ```bash
-./scripts/setup/google_drive_auth.py --authorize
+./scripts/setup/connect_google_drive.sh
 ```
 
-Opens a browser locally, saves refresh token to `.env`.
+The script asks only for credentials you haven't saved yet, tests the connection, and syncs files into this repo.
 
 ---
 
-## Part 3 — Save credentials locally
+## What you need (one-time, ~10 min)
 
-```bash
-cp .env.example .env
-```
+Google Cloud OAuth credentials for the account that owns NGC Drive.
 
-Edit `.env` and add:
+| Credential | Where to get it |
+|------------|-----------------|
+| **Client ID** | [Google Cloud Console](https://console.cloud.google.com/) → APIs & Services → Credentials → OAuth client (Desktop) |
+| **Client Secret** | Same screen |
+| **Refresh token** | [OAuth Playground](https://developers.google.com/oauthplayground) with your own credentials → Drive API v3 → `drive.readonly` |
 
-```bash
-GOOGLE_DRIVE_CLIENT_ID=your-client-id.apps.googleusercontent.com
-GOOGLE_DRIVE_CLIENT_SECRET=your-client-secret
-GOOGLE_DRIVE_REFRESH_TOKEN=1//your-refresh-token
-```
+### Quick Cloud Console checklist
 
-**Never commit `.env`.** It is already in `.gitignore`.
+1. Create project **NGC Business Brain**
+2. Enable **Google Drive API** (+ Docs/Sheets optional)
+3. OAuth consent screen → External → add yourself as **test user**
+4. Scope: `https://www.googleapis.com/auth/drive.readonly`
+5. Credentials → OAuth client ID → **Desktop app**
+
+### Quick OAuth Playground
+
+1. Gear icon → **Use your own OAuth credentials**
+2. Drive API v3 → `https://www.googleapis.com/auth/drive.readonly`
+3. Authorize → Exchange → copy **refresh token**
 
 ---
 
-## Part 4 — Add MCP to Cursor
+## After connect
 
-### 4.1 Generate config from `.env`
+| What | Where |
+|------|-------|
+| Credentials (gitignored) | `.env` |
+| Synced Drive files | `external_docs/drive/` |
+| Logo copy | `external_docs/assets/` |
+| Sync manifest | `external_docs/exports/drive/sync_manifest.json` |
+| Re-sync anytime | `./scripts/sync/run_google_drive_sync.sh` |
+
+Edit `config/google_drive_sync.json` to add folders or files.
+
+---
+
+## Optional: live Drive in Cursor chat
 
 ```bash
 ./scripts/setup/print_google_drive_mcp.sh
 ```
 
-Copy the JSON output.
+Paste into **Cursor → Settings → Tools & MCP** (user-level). Restart MCP / new agent session.
 
-### 4.2 Paste into Cursor
-
-**Cursor → Settings → Tools & MCP → New MCP Server**
-
-Or edit user-level `~/.cursor/mcp.json` (recommended for secrets — not committed to git).
-
-Paste the `google-drive` block from the script output.
-
-### 4.3 Restart MCP / new agent session
-
-- Toggle the `google-drive` server off and on, or restart Cursor
-- Start a **new Cloud Agent** chat (MCP loads at session start)
-
----
-
-## Part 5 — Verify connection
-
-```bash
-./scripts/setup/run_google_drive_test.sh
-```
-
-Expected:
-
-```
-OK — Google Drive API reachable
-Found N files (sample):
-  PNG Transparent 3.png
-  ...
-```
-
-In Cursor, ask:
-
-> List files in my Google Drive matching "logo" or "PNG Transparent"
-
----
-
-## What Ryan should see in Drive (quick reference)
-
-| Path | Contents |
-|------|----------|
-| `PNG Transparent 3.png` | Master logo (transparent) |
-| `Visual Content/` | Marketing photos, lithium before/after, video |
-| `NGC Document Repository/` | SOPs, manuals, procedures |
-| `Management/` | Personnel forms, internal docs |
-
-Local copy of logo (fallback): `external_docs/templates/personnel_counseling/assets/ngc-logo.png`
+Repo sync works without MCP — MCP adds live search and Google Docs reading in chat.
 
 ---
 
@@ -187,25 +66,15 @@ Local copy of logo (fallback): `external_docs/templates/personnel_counseling/ass
 
 | Error | Fix |
 |-------|-----|
-| `access_denied` | Add yourself as **Test user** on OAuth consent screen |
-| `invalid_grant` / refresh token expired | Re-run OAuth Playground (Part 2) |
-| `redirect_uri_mismatch` | Use OAuth Playground with gear → own credentials |
-| MCP shows no tools | Node 18+ required; restart Cursor |
-| Cloud Agent can't see Drive | MCP must be in **user** Cursor settings, not only project |
-| `.gdoc` won't open via sync | Use MCP — Desktop sync only gives stub files |
+| `access_denied` | Add yourself as OAuth **test user** |
+| `invalid_grant` | Re-run OAuth Playground for a new refresh token |
+| `not configured` | Run `./scripts/setup/connect_google_drive.sh` |
+| Cloud Agent can't see Mac sync | Use repo sync (`run_google_drive_sync.sh`) — Desktop symlink doesn't work in cloud |
 
 ---
 
 ## Security
 
+- Credentials stay in `.env` (never commit)
 - Use `drive.readonly` unless you need write access
-- Keep Client Secret and Refresh Token in `.env` or Cursor MCP env — never in git
-- Do not ask the AI to output customer PII from Drive personnel folders
-
----
-
-## Next steps after connect
-
-1. Ask agent to pull logo variants into `external_docs/assets/`
-2. Export key sheets nightly to `external_docs/exports/drive/` (future automation)
-3. Log completion in `knowledge/09_daily_ops/decision_log.md` if you want it tracked
+- Don't sync confidential personnel records into shared knowledge files

@@ -1,46 +1,51 @@
 ---
 name: ngc-google-drive
-description: Read NGC files from Google Drive via MCP or API test scripts — logos, Visual Content, SOPs, Docs/Sheets. Use when user says connect Drive, pull logo from Drive, list Drive files, or sync brand assets.
+description: Access NGC Google Drive through this repo — sync files, read logos and SOPs, list Drive content. Use when user says connect Drive, sync Drive, pull logo, or access Google Drive files.
 ---
 
 # NGC Google Drive
 
-## Prerequisites
-
-- Google Drive MCP configured in Cursor **user** MCP settings
-- Or `.env` with `GOOGLE_DRIVE_CLIENT_ID`, `GOOGLE_DRIVE_CLIENT_SECRET`, `GOOGLE_DRIVE_REFRESH_TOKEN`
-
-Setup guide: `knowledge/10_automation/google_drive_setup.md`
-
-## Test API connection (no MCP)
+## Connect (first time)
 
 ```bash
-./scripts/setup/run_google_drive_test.sh
+./scripts/setup/connect_google_drive.sh
 ```
 
-## MCP (preferred in chat)
+Prompts for missing `GOOGLE_DRIVE_*` credentials → saves to `.env` → syncs into repo.
 
-If `google-drive` MCP tools are available, use them to:
+Guide if stuck: `knowledge/10_automation/google_drive_setup.md`
 
-- Search/list files (logos, Visual Content, Document Repository)
-- Read Google Docs and Sheets content
-- Download brand assets to `external_docs/assets/`
+## Sync Drive into repo
 
-## Key Drive paths
+```bash
+./scripts/sync/run_google_drive_sync.sh
+```
 
-| Path | Contents |
-|------|----------|
-| `PNG Transparent 3.png` | Master logo |
-| `Visual Content/` | Marketing media |
-| `NGC Document Repository/` | SOPs, manuals |
-| `Management/` | Internal forms (confidential — no PII in knowledge/) |
+Writes to:
 
-## Local fallbacks
+- `external_docs/drive/` — folders from `config/google_drive_sync.json`
+- `external_docs/assets/` — logo and small brand files
+- `external_docs/exports/drive/sync_manifest.json` — index
 
-- Logo copy: `external_docs/templates/personnel_counseling/assets/ngc-logo.png`
-- Brand cache folder: `external_docs/assets/`
+## Read synced files
+
+After sync, read directly from `external_docs/drive/` and `external_docs/assets/` — works in Cloud Agents without MCP.
+
+## MCP (optional)
+
+For live search / Google Docs in chat: `./scripts/setup/print_google_drive_mcp.sh` → Cursor MCP settings.
+
+## Credentials
+
+Stored in `.env` (gitignored):
+
+- `GOOGLE_DRIVE_CLIENT_ID`
+- `GOOGLE_DRIVE_CLIENT_SECRET`
+- `GOOGLE_DRIVE_REFRESH_TOKEN`
+
+Ask the user to supply any missing values — do not invent credentials.
 
 ## Never
 
-- Commit OAuth secrets to git
+- Commit OAuth secrets
 - Store customer PII from personnel folders in `knowledge/`

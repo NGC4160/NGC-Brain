@@ -1,15 +1,12 @@
-# NGC Brand Assets (local cache)
+# NGC Brand Assets
 
-Synced copies of Drive files for offline use and Cloud Agents when MCP is unavailable.
+Logos and small brand files synced from Google Drive.
 
-| File | Source (Google Drive) | Purpose |
-|------|----------------------|---------|
-| *(pending sync)* | `PNG Transparent 3.png` | Master transparent logo |
+| File | Source (Google Drive) |
+|------|----------------------|
+| `ngc-logo-transparent.png` | `PNG Transparent 3.png` |
 
-**Current logo in repo:** `external_docs/templates/personnel_counseling/assets/ngc-logo.png`
+**Connect Drive:** `./scripts/setup/connect_google_drive.sh`  
+**Re-sync:** `./scripts/sync/run_google_drive_sync.sh`
 
-After Google Drive MCP is connected, ask the agent:
-
-> Pull logo files from Drive into external_docs/assets/
-
-Do not commit customer-facing personnel records or confidential Management folder files here.
+Fallback logo (checked into repo): `external_docs/templates/personnel_counseling/assets/ngc-logo.png`
