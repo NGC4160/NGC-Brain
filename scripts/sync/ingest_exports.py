@@ -160,6 +160,40 @@ def ingest_hcp_api() -> dict:
     return out
 
 
+def ingest_google_drive() -> dict:
+    manifest_path = ROOT / "external_docs" / "exports" / "drive" / "sync_manifest.json"
+    drive_dir = ROOT / "external_docs" / "drive"
+    assets_dir = ROOT / "external_docs" / "assets"
+    if not manifest_path.exists():
+        return {
+            "exists": False,
+            "configured": (ROOT / ".env").exists(),
+            "note": "Run ./scripts/setup/connect_google_drive.sh after setting GOOGLE_DRIVE_* in .env",
+        }
+
+    data = json.loads(manifest_path.read_text())
+    local_files = []
+    for base in (drive_dir, assets_dir):
+        if base.exists():
+            for p in sorted(base.rglob("*")):
+                if p.is_file() and p.name != "README.md":
+                    local_files.append(
+                        {
+                            "path": str(p.relative_to(ROOT)),
+                            "modified": datetime.fromtimestamp(
+                                p.stat().st_mtime, tz=timezone.utc
+                            ).isoformat(),
+                        }
+                    )
+    return {
+        "exists": True,
+        "modified": data.get("synced_at"),
+        "synced_items": len(data.get("items", [])),
+        "local_file_count": len(local_files),
+        "local_sample": [f["path"] for f in local_files[:10]],
+    }
+
+
 def main() -> int:
     GENERATED.mkdir(parents=True, exist_ok=True)
 
@@ -168,6 +202,7 @@ def main() -> int:
         "pricebook": ingest_pricebook(),
         "qbo_pl": ingest_qbo_pl(),
         "hcp_api": ingest_hcp_api(),
+        "google_drive": ingest_google_drive(),
         "qbo_files": [
             {
                 "name": p.name,
