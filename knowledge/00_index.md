@@ -19,6 +19,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **WIP limits, daily rhythm, lithium SLA, shop board** |
 | [04_operations/shop_whiteboard_layout.md](04_operations/shop_whiteboard_layout.md) | **Physical whiteboard — columns, cards, colors, daily use** |
 | [05_team/roles.md](05_team/roles.md) | Team roster and responsibilities |
+| [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, future DMS |
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |

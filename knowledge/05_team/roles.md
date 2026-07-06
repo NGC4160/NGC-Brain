@@ -53,6 +53,11 @@ Reference: `external_docs/My Drive/Hiring quiz evaluation - Technician.docx`
 - Sales and rentals planned after service operations are solid
 - DMS migration may add shop-specific roles (service writer, parts counter)
 
+## Personnel counseling
+
+Documented coaching and warnings: [personnel_counseling.md](personnel_counseling.md)  
+Template: `external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html`
+
 ## Privacy note
 
 This document intentionally excludes pay rates, personal contact info, and home addresses.
