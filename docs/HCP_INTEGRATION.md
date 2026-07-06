@@ -10,6 +10,7 @@ The dashboard pulls jobs, KPIs, and company info from **Housecall Pro** (HCP).
 | **Fleet accounts** | Customers with company/commercial flag |
 | **Parts on order** | Active jobs mentioning parts/orders in notes |
 | **Jobs table** | All open jobs + recent completed |
+| **Invoicing** | AR, deposit gates, payment status, revenue by job type |
 | **Dashboard active jobs list** | Same job feed |
 | **Revenue chart** | Completed jobs with `total_amount` |
 | **Company name / logo** | `/company` endpoint (when live) |

@@ -3,6 +3,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { HCPJobsExport } from './hcpClient.js'
 import { computeHCPExtras, mapHCPJobsExport, trimJobsExport } from './hcpMapper.js'
+import { buildInvoicingPayload } from './hcpInvoicing.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -23,6 +24,8 @@ function main() {
     company = null
   }
 
+  const invoicing = buildInvoicingPayload(exportData)
+
   const payload = {
     source: 'cache' as const,
     syncedAt: exportData.synced_at ?? new Date().toISOString(),
@@ -30,11 +33,16 @@ function main() {
     jobs,
     extras,
     company,
+    invoicing,
   }
 
   mkdirSync(dirname(OUT), { recursive: true })
   writeFileSync(OUT, JSON.stringify(payload, null, 2))
-  console.log(`Built ${OUT} — ${jobs.length} jobs`)
+  writeFileSync(
+    join(ROOT, 'public/data/hcp-invoicing.json'),
+    JSON.stringify(invoicing, null, 2),
+  )
+  console.log(`Built ${OUT} — ${jobs.length} jobs, ${invoicing.invoices.length} invoices`)
 }
 
 main()

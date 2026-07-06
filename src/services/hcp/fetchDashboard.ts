@@ -1,4 +1,5 @@
 import type { RepairJob } from '@/types'
+import type { InvoicingPayload } from '@/types/invoicing'
 
 export interface HCPDashboardExtras {
   fleetAccounts: number
@@ -18,6 +19,7 @@ export interface HCPDashboardPayload {
     website?: string
     logo_url?: string
   } | null
+  invoicing?: InvoicingPayload
 }
 
 const API_BASE = import.meta.env.VITE_HCP_API_URL ?? ''
@@ -52,4 +54,26 @@ export async function refreshHCPSync(): Promise<{ ok: boolean; syncedAt?: string
 
 export function formatSyncSource(source: HCPDashboardPayload['source']): string {
   return source === 'live' ? 'Housecall Pro (live)' : 'Housecall Pro (cached)'
+}
+
+export async function fetchInvoicing(): Promise<InvoicingPayload> {
+  const urls = [
+    `${API_BASE}/api/hcp/invoicing`,
+    `${import.meta.env.BASE_URL}data/hcp-invoicing.json`,
+  ]
+
+  for (const url of urls) {
+    try {
+      const res = await fetch(url)
+      if (!res.ok) continue
+      return (await res.json()) as InvoicingPayload
+    } catch {
+      continue
+    }
+  }
+
+  const dashboard = await fetchHCPDashboard()
+  if (dashboard.invoicing) return dashboard.invoicing
+
+  throw new Error('Could not load invoicing data')
 }

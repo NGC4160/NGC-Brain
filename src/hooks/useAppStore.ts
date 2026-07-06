@@ -284,6 +284,7 @@ export function useAppStore() {
     hcpError,
     hcpConnected,
     refreshHcp: loadHcp,
+    invoicing: hcpMeta?.invoicing ?? null,
   }
 }
 

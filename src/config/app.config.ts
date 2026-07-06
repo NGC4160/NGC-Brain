@@ -137,8 +137,8 @@ export const navModules: NavModule[] = [
     label: 'Invoicing',
     path: '/invoicing',
     icon: 'Receipt',
-    enabled: false,
-    description: 'Billing (coming soon)',
+    enabled: true,
+    description: 'AR, deposits, and payment collection from HCP',
   },
 ]
 

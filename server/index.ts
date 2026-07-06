@@ -10,6 +10,7 @@ import {
   mapHCPJobsExport,
   trimJobsExport,
 } from './hcpMapper.js'
+import { buildInvoicingPayload } from './hcpInvoicing.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -49,6 +50,7 @@ function buildDashboardPayload(exportData: HCPJobsExport, source: 'live' | 'cach
     jobs,
     extras,
     company,
+    invoicing: buildInvoicingPayload(exportData),
   }
 }
 
@@ -146,7 +148,32 @@ app.post('/api/hcp/sync', async (_req, res) => {
   }
 })
 
-app.listen(PORT, () => {
+app.get('/api/hcp/invoicing', async (_req, res) => {
+  const client = createHCPClientFromEnv()
+
+  if (client) {
+    try {
+      const liveJobs = await client.listAllJobs(10)
+      const exportData: HCPJobsExport = {
+        synced_at: new Date().toISOString(),
+        count: liveJobs.length,
+        jobs: liveJobs,
+      }
+      res.json(buildInvoicingPayload(exportData))
+      return
+    } catch (err) {
+      console.error('Live HCP invoicing fetch failed:', err)
+    }
+  }
+
+  const cache = loadCache()
+  if (!cache) {
+    res.status(503).json({ error: 'No HCP data available' })
+    return
+  }
+
+  res.json(buildInvoicingPayload(cache))
+})
   console.log(`HCP API proxy listening on http://localhost:${PORT}`)
   console.log(
     createHCPClientFromEnv()

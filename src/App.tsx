@@ -5,6 +5,7 @@ import { DashboardPage } from '@/pages/DashboardPage'
 import { AgentInputPage } from '@/pages/AgentInputPage'
 import { ResourcesPage } from '@/pages/ResourcesPage'
 import { JobsPage } from '@/pages/JobsPage'
+import { InvoicingPage } from '@/pages/InvoicingPage'
 import { ComingSoonPage } from '@/pages/ComingSoonPage'
 
 function AppRoutes() {
@@ -23,7 +24,7 @@ function AppRoutes() {
         <Route path="/inventory" element={<ComingSoonPage />} />
         <Route path="/customers" element={<ComingSoonPage />} />
         <Route path="/scheduling" element={<ComingSoonPage />} />
-        <Route path="/invoicing" element={<ComingSoonPage />} />
+        <Route path="/invoicing" element={<InvoicingPage />} />
       </Routes>
     </Layout>
   )
