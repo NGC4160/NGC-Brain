@@ -4,5 +4,7 @@ dist
 *.local
 .env
 .env.*
+!.env.example
 tsconfig.tsbuildinfo
+public/data/hcp-cache.json
 .netlify/

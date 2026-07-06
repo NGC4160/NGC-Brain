@@ -63,6 +63,18 @@ Jobs, agent submissions, and pin preferences are stored in **localStorage** unde
 - Recharts
 - Lucide icons
 
+## Housecall Pro
+
+Jobs and KPIs sync from **Housecall Pro** when the API proxy is running or from cached export on GitHub Pages.
+
+```bash
+cp .env.example .env   # add HCP_API_KEY
+npm run dev:all        # dashboard + API proxy
+npm run sync:hcp       # refresh cached data
+```
+
+See [docs/HCP_INTEGRATION.md](docs/HCP_INTEGRATION.md).
+
 ## Docs
 
 - [Architecture & extending the app](docs/ARCHITECTURE.md)

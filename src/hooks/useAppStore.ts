@@ -8,27 +8,36 @@ import type {
   RepairJob,
 } from '@/types'
 import { mockStaticKpis } from '@/data/mockData'
+import {
+  fetchHCPDashboard,
+  type HCPDashboardExtras,
+  type HCPDashboardPayload,
+} from '@/services/hcp/fetchDashboard'
 
 const STORAGE_KEY = 'golf-cart-dashboard-state'
 
-function loadState(): AppState {
+interface PersistedState {
+  submissions: AgentSubmission[]
+  resources: typeof mockResources
+}
+
+function loadPersisted(): PersistedState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (raw) {
       const parsed = JSON.parse(raw) as AppState
       return {
-        jobs: parsed.jobs?.length ? parsed.jobs : mockJobs,
         submissions: parsed.submissions ?? [],
         resources: parsed.resources?.length ? parsed.resources : mockResources,
       }
     }
   } catch {
-    // fall through to defaults
+    // fall through
   }
-  return { jobs: mockJobs, submissions: [], resources: mockResources }
+  return { submissions: [], resources: mockResources }
 }
 
-function saveState(state: AppState) {
+function savePersisted(state: PersistedState) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
 }
 
@@ -59,7 +68,11 @@ function daysBetween(a: string, b: string): number {
   return ms / (1000 * 60 * 60 * 24)
 }
 
-function computeKpis(jobs: RepairJob[], preset: DateRangePreset): KpiValue[] {
+function computeKpis(
+  jobs: RepairJob[],
+  preset: DateRangePreset,
+  extras?: HCPDashboardExtras | null,
+): KpiValue[] {
   const rangeStart = getRangeStart(preset)
   const now = new Date()
   const monthStart = new Date(now.getFullYear(), now.getMonth(), 1)
@@ -69,7 +82,7 @@ function computeKpis(jobs: RepairJob[], preset: DateRangePreset): KpiValue[] {
   twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14)
 
   const activeJobs = jobs.filter(
-    (j) => j.status !== 'picked-up' && j.status !== 'ready',
+    (j) => !['picked-up', 'ready'].includes(j.status),
   ).length
 
   const completedThisWeek = jobs.filter(
@@ -121,8 +134,9 @@ function computeKpis(jobs: RepairJob[], preset: DateRangePreset): KpiValue[] {
       : 0
 
   const waitlist = jobs.filter((j) => j.status === 'received').length
-
   const inRangeJobs = jobs.filter((j) => new Date(j.createdAt) >= rangeStart)
+
+  const staticExtras = extras ?? mockStaticKpis
 
   return [
     {
@@ -148,13 +162,13 @@ function computeKpis(jobs: RepairJob[], preset: DateRangePreset): KpiValue[] {
     },
     {
       id: 'parts-on-order',
-      value: mockStaticKpis.partsOnOrder,
-      previousValue: mockStaticKpis.partsOnOrder + 2,
+      value: staticExtras.partsOnOrder,
+      previousValue: Math.max(staticExtras.partsOnOrder - 1, 0),
     },
     {
       id: 'low-stock-alerts',
-      value: mockStaticKpis.lowStockAlerts,
-      previousValue: mockStaticKpis.lowStockAlerts - 1,
+      value: staticExtras.lowStockAlerts,
+      previousValue: staticExtras.lowStockAlerts,
     },
     {
       id: 'customer-waitlist',
@@ -163,22 +177,48 @@ function computeKpis(jobs: RepairJob[], preset: DateRangePreset): KpiValue[] {
     },
     {
       id: 'fleet-accounts',
-      value: mockStaticKpis.fleetAccounts,
-      previousValue: mockStaticKpis.fleetAccounts,
+      value: staticExtras.fleetAccounts,
+      previousValue: staticExtras.fleetAccounts,
     },
   ]
 }
 
 export function useAppStore() {
-  const [state, setState] = useState<AppState>(loadState)
+  const [persisted, setPersisted] = useState<PersistedState>(loadPersisted)
+  const [fallbackJobs, setFallbackJobs] = useState<RepairJob[]>(mockJobs)
+  const [hcpJobs, setHcpJobs] = useState<RepairJob[]>([])
+  const [hcpMeta, setHcpMeta] = useState<HCPDashboardPayload | null>(null)
+  const [hcpLoading, setHcpLoading] = useState(true)
+  const [hcpError, setHcpError] = useState<string | null>(null)
   const [dateRange, setDateRange] = useState<DateRangePreset>('week')
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem('golf-cart-dark-mode') === 'true'
   })
 
+  const jobs = hcpJobs.length > 0 ? hcpJobs : fallbackJobs
+  const hcpConnected = hcpJobs.length > 0
+
+  const loadHcp = useCallback(async () => {
+    setHcpLoading(true)
+    setHcpError(null)
+    try {
+      const data = await fetchHCPDashboard()
+      setHcpJobs(data.jobs)
+      setHcpMeta(data)
+    } catch (err) {
+      setHcpError(err instanceof Error ? err.message : 'Failed to load HCP data')
+    } finally {
+      setHcpLoading(false)
+    }
+  }, [])
+
   useEffect(() => {
-    saveState(state)
-  }, [state])
+    void loadHcp()
+  }, [loadHcp])
+
+  useEffect(() => {
+    savePersisted(persisted)
+  }, [persisted])
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode)
@@ -186,34 +226,33 @@ export function useAppStore() {
   }, [darkMode])
 
   const kpis = useMemo(
-    () => computeKpis(state.jobs, dateRange),
-    [state.jobs, dateRange],
+    () => computeKpis(jobs, dateRange, hcpMeta?.extras),
+    [jobs, dateRange, hcpMeta?.extras],
   )
 
   const addSubmission = useCallback((submission: AgentSubmission) => {
-    setState((prev) => ({
+    setPersisted((prev) => ({
       ...prev,
       submissions: [submission, ...prev.submissions],
     }))
   }, [])
 
   const addJob = useCallback((job: RepairJob) => {
-    setState((prev) => ({ ...prev, jobs: [job, ...prev.jobs] }))
-  }, [])
+    if (hcpConnected) return
+    setFallbackJobs((prev) => [job, ...prev])
+  }, [hcpConnected])
 
   const updateJob = useCallback((jobId: string, updates: Partial<RepairJob>) => {
-    setState((prev) => ({
-      ...prev,
-      jobs: prev.jobs.map((j) =>
-        j.id === jobId
-          ? { ...j, ...updates, updatedAt: new Date().toISOString() }
-          : j,
+    if (hcpConnected) return
+    setFallbackJobs((prev) =>
+      prev.map((j) =>
+        j.id === jobId ? { ...j, ...updates, updatedAt: new Date().toISOString() } : j,
       ),
-    }))
-  }, [])
+    )
+  }, [hcpConnected])
 
   const toggleResourcePin = useCallback((resourceId: string) => {
-    setState((prev) => ({
+    setPersisted((prev) => ({
       ...prev,
       resources: prev.resources.map((r) =>
         r.id === resourceId ? { ...r, pinned: !r.pinned } : r,
@@ -222,12 +261,14 @@ export function useAppStore() {
   }, [])
 
   const pinnedResources = useMemo(
-    () => state.resources.filter((r) => r.pinned),
-    [state.resources],
+    () => persisted.resources.filter((r) => r.pinned),
+    [persisted.resources],
   )
 
   return {
-    ...state,
+    jobs,
+    submissions: persisted.submissions,
+    resources: persisted.resources,
     kpis,
     dateRange,
     setDateRange,
@@ -238,6 +279,11 @@ export function useAppStore() {
     updateJob,
     toggleResourcePin,
     pinnedResources,
+    hcpMeta,
+    hcpLoading,
+    hcpError,
+    hcpConnected,
+    refreshHcp: loadHcp,
   }
 }
 

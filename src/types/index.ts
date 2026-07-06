@@ -79,6 +79,8 @@ export interface RepairJob {
   partsCost?: number
   laborHours?: number
   completedAt?: string
+  hcpId?: string
+  outstandingBalance?: number
 }
 
 export interface AgentSubmission {

@@ -27,7 +27,7 @@ const TABS: { id: FormTab; label: string }[] = [
 ]
 
 export function AgentInputPage() {
-  const { jobs, addJob, updateJob, addSubmission } = useApp()
+  const { jobs, addJob, updateJob, addSubmission, hcpConnected } = useApp()
   const [activeTab, setActiveTab] = useState<FormTab>('repair-intake')
   const [submittedBy, setSubmittedBy] = useState('Mike T.')
   const [success, setSuccess] = useState<string | null>(null)
@@ -185,6 +185,13 @@ export function AgentInputPage() {
           Log repairs, status changes, parts, time, and shop notes
         </p>
       </div>
+
+      {hcpConnected && (
+        <div className="rounded-lg border border-ngc-200 bg-ngc-50 px-4 py-3 text-sm text-ngc-700 dark:border-ngc-800 dark:bg-ngc-950 dark:text-ngc-200">
+          Jobs are synced from <strong>Housecall Pro</strong>. Create or update repair orders in
+          HCP. Notes and time logs here are saved locally on this device.
+        </div>
+      )}
 
       <div className="card">
         <label className="label" htmlFor="submittedBy">

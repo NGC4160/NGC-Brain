@@ -3,10 +3,10 @@ import { kpiDefinitions } from '@/config/app.config'
 import { KpiCard } from '@/components/dashboard/KpiCard'
 import { RevenueChart } from '@/components/dashboard/RevenueChart'
 import { ResourceCard } from '@/components/resources/ResourceCard'
-import { SUBMISSION_TYPE_LABELS, JOB_STATUS_LABELS } from '@/types'
+import { SUBMISSION_TYPE_LABELS, JOB_STATUS_LABELS, type DateRangePreset } from '@/types'
 import { formatRelativeDate } from '@/lib/utils'
 import { Link } from 'react-router-dom'
-import type { DateRangePreset } from '@/types'
+import { HcpSyncBanner } from '@/components/dashboard/HcpSyncBanner'
 
 const DATE_RANGE_OPTIONS: { value: DateRangePreset; label: string }[] = [
   { value: 'today', label: 'Today' },
@@ -23,6 +23,10 @@ export function DashboardPage() {
     submissions,
     pinnedResources,
     toggleResourcePin,
+    hcpMeta,
+    hcpLoading,
+    hcpError,
+    refreshHcp,
   } = useApp()
 
   const activeJobs = jobs.filter((j) => !['picked-up', 'ready'].includes(j.status))
@@ -55,6 +59,13 @@ export function DashboardPage() {
           ))}
         </div>
       </div>
+
+      <HcpSyncBanner
+        meta={hcpMeta}
+        loading={hcpLoading}
+        error={hcpError}
+        onRefresh={() => void refreshHcp()}
+      />
 
       <section>
         <h2 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">
