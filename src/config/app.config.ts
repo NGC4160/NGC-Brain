@@ -1,10 +1,20 @@
 import type { KpiDefinition, NavModule, ResourceCategory } from '@/types'
 
 export const appConfig = {
-  businessName: 'GreenLine Golf Cart Repair',
+  businessName: 'Neighborhood Golf Carts',
   tagline: 'Operations Dashboard',
+  shortName: 'NGC',
+  website: 'https://www.ngcgolfcarts.com',
+  logoSrc: `${import.meta.env.BASE_URL}assets/ngc-logo.png`,
   defaultRole: 'owner' as const,
 }
+
+export const brandColors = {
+  green: '#6faa2d',
+  greenDark: '#3d6b12',
+  blue: '#1a4d7a',
+  blueLight: '#2d6ba3',
+} as const
 
 export const kpiDefinitions: KpiDefinition[] = [
   {

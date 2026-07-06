@@ -1,6 +1,6 @@
 # Golf Cart Repair Dashboard
 
-Operations dashboard for **GreenLine Golf Cart Repair** — KPIs, agent/shop inputs, service manuals, and an expandable module architecture.
+Operations dashboard for **Neighborhood Golf Carts** — KPIs, agent/shop inputs, service manuals, and an expandable module architecture.
 
 ## Quick start
 

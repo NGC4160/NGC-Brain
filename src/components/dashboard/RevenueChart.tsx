@@ -7,6 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
+import { brandColors } from '@/config/app.config'
 import type { RepairJob } from '@/types'
 
 interface RevenueChartProps {
@@ -55,7 +56,7 @@ export function RevenueChart({ jobs }: RevenueChartProps) {
             fontSize: '13px',
           }}
         />
-        <Bar dataKey="revenue" fill="#16a34a" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="revenue" fill={brandColors.green} radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   )

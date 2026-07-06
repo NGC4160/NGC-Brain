@@ -33,21 +33,16 @@ interface SidebarProps {
 
 export function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
   return (
-    <aside className="flex w-64 shrink-0 flex-col border-r border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
-      <div className="border-b border-slate-200 px-5 py-5 dark:border-slate-800">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600 text-white">
-            <Wrench className="h-5 w-5" />
-          </div>
-          <div>
-            <h1 className="text-sm font-bold leading-tight text-slate-900 dark:text-white">
-              {appConfig.businessName}
-            </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              {appConfig.tagline}
-            </p>
-          </div>
-        </div>
+    <aside className="flex w-64 shrink-0 flex-col border-r border-ngc-200 bg-white dark:border-ngc-800 dark:bg-slate-900">
+      <div className="border-b border-ngc-200 bg-gradient-to-br from-ngc-50 to-brand-50 px-4 py-4 dark:border-ngc-800 dark:from-ngc-950 dark:to-slate-900">
+        <img
+          src={appConfig.logoSrc}
+          alt={appConfig.businessName}
+          className="h-14 w-full object-contain object-left"
+        />
+        <p className="mt-2 text-xs font-medium text-ngc-500 dark:text-ngc-300">
+          {appConfig.tagline}
+        </p>
       </div>
 
       <nav className="flex-1 space-y-1 overflow-y-auto p-3">
@@ -77,8 +72,8 @@ export function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
                 cn(
                   'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition',
                   isActive
-                    ? 'bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-400'
-                    : 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800',
+                    ? 'bg-brand-100 text-brand-800 ring-1 ring-brand-300 dark:bg-brand-950 dark:text-brand-300 dark:ring-brand-800'
+                    : 'text-ngc-600 hover:bg-ngc-50 dark:text-ngc-300 dark:hover:bg-ngc-950',
                 )
               }
               title={mod.description}
@@ -90,11 +85,11 @@ export function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
         })}
       </nav>
 
-      <div className="border-t border-slate-200 p-3 dark:border-slate-800">
+      <div className="border-t border-ngc-200 p-3 dark:border-ngc-800">
         <button
           type="button"
           onClick={onToggleDarkMode}
-          className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800"
+          className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ngc-600 transition hover:bg-ngc-50 dark:text-ngc-300 dark:hover:bg-ngc-950"
         >
           {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           {darkMode ? 'Light Mode' : 'Dark Mode'}

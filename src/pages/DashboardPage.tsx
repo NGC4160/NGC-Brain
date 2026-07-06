@@ -46,7 +46,7 @@ export function DashboardPage() {
               onClick={() => setDateRange(opt.value)}
               className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
                 dateRange === opt.value
-                  ? 'bg-brand-600 text-white'
+                  ? 'bg-brand-600 text-white shadow-sm ring-1 ring-brand-700'
                   : 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'
               }`}
             >
