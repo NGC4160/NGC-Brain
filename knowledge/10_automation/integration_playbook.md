@@ -79,19 +79,24 @@ Keep CSV export to `external_docs/exports/pricebook/` — hooks still sync.
 
 ## Google Drive
 
+**Full walkthrough:** [`google_drive_setup.md`](google_drive_setup.md)
+
 ### Current (no API)
 
-Google Drive for Desktop syncs to `external_docs/My Drive/`
+Google Drive for Desktop syncs to `external_docs/My Drive/` (Mac only — symlink breaks in Cloud Agents)
 
 **Limitation:** `.gsheet` / `.gdoc` files are stubs — export to xlsx/pdf for AI reading.
 
-### Upgrade: Google Drive MCP
+### Google Drive MCP (recommended)
 
-1. Google Cloud Console → enable Drive API
-2. OAuth credentials → install a Drive MCP server from Cursor MCP directory
-3. Scope: `drive.readonly` on NGC shared drive folder
+1. Google Cloud Console → enable Drive API (+ Docs/Sheets optional)
+2. OAuth Desktop credentials → refresh token via OAuth Playground
+3. Add to `.env` → run `./scripts/setup/print_google_drive_mcp.sh` → paste into Cursor MCP settings
+4. Verify: `./scripts/setup/run_google_drive_test.sh`
 
-**Automate:** Nightly export of key sheets (Tech Performance, HOA, Outreach) to `external_docs/exports/drive/`
+Scope: `drive.readonly` unless you need write access.
+
+**Automate (future):** Nightly export of key sheets (Tech Performance, HOA, Outreach) to `external_docs/exports/drive/`
 
 ---
 

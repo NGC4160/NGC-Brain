@@ -57,10 +57,11 @@ Run manually anytime:
 
 **Template:** [`../../.cursor/mcp.json.example`](../../.cursor/mcp.json.example)
 
-### 2. Google Drive — **already partial**
+### 2. Google Drive — **setup ready**
 
-**Current:** Google Drive for Desktop → `external_docs/My Drive/`  
-**Upgrade:** Google Drive API MCP for reading `.gsheet`/`.gdoc` content without manual export
+**Guide:** [`google_drive_setup.md`](google_drive_setup.md)  
+**Current:** Google Drive for Desktop → `external_docs/My Drive/` (Mac sync only)  
+**Upgrade:** Google Drive MCP — run `./scripts/setup/print_google_drive_mcp.sh` after OAuth
 
 ### 3. Housecall Pro
 
