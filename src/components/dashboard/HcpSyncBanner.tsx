@@ -1,10 +1,10 @@
-import { RefreshCw, Wifi, WifiOff } from 'lucide-react'
+import { RefreshCw, Wifi, WifiOff, Database } from 'lucide-react'
 import { formatRelativeDate } from '@/lib/utils'
 import { formatSyncSource } from '@/services/hcp/fetchDashboard'
 import type { HCPDashboardPayload } from '@/services/hcp/fetchDashboard'
 
 interface HcpSyncBannerProps {
-  meta: Pick<HCPDashboardPayload, 'source' | 'syncedAt' | 'jobCount'> | null
+  meta: Pick<HCPDashboardPayload, 'source' | 'syncedAt' | 'jobCount' | 'bookkeeper'> | null
   loading: boolean
   error: string | null
   onRefresh: () => void
@@ -16,6 +16,8 @@ export function HcpSyncBanner({ meta, loading, error, onRefresh }: HcpSyncBanner
       <div className="flex items-start gap-3">
         {meta?.source === 'live' ? (
           <Wifi className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
+        ) : meta?.source === 'dms' ? (
+          <Database className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
         ) : (
           <WifiOff className="mt-0.5 h-5 w-5 shrink-0 text-ngc-400" />
         )}
@@ -31,6 +33,9 @@ export function HcpSyncBanner({ meta, loading, error, onRefresh }: HcpSyncBanner
             <p className="text-xs text-slate-500">
               Last updated {formatRelativeDate(meta.syncedAt)}
             </p>
+          )}
+          {meta?.bookkeeper && !loading && (
+            <p className="text-xs text-slate-500">Bookkeeper: {meta.bookkeeper}</p>
           )}
           {error && (
             <p className="mt-1 text-xs text-red-600 dark:text-red-400">{error}</p>

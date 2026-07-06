@@ -1,0 +1,172 @@
+{
+  "object": "list",
+  "page": 1,
+  "page_size": 200,
+  "total_pages_count": 1,
+  "total_count": 18,
+  "data": [
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_0a947e3e15a84b2e9e3ba8a571f195f0",
+      "parent_uuid": null,
+      "name": "Uncategorized",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2026-03-08T22:58:43Z",
+      "updated_at": "2026-03-08T22:58:44Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_fd44fa32e4844e1284b6b0a5f1abf681",
+      "parent_uuid": null,
+      "name": "Bushings",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2026-01-04T21:01:54Z",
+      "updated_at": "2026-01-04T21:02:51Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_044df58e270b4ce490e07978426ce99a",
+      "parent_uuid": null,
+      "name": "Lift Kits",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2026-01-04T21:01:46Z",
+      "updated_at": "2026-01-04T21:03:32Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_a4c5e8e6dd404a9c9477369685742829",
+      "parent_uuid": null,
+      "name": "Steering & Suspension",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2026-01-04T20:49:00Z",
+      "updated_at": "2026-01-04T20:59:38Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_a1145abe9ddc4e288c0437d55b3243a3",
+      "parent_uuid": null,
+      "name": "Batteries, Chargers & Cables",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2026-01-04T19:30:43Z",
+      "updated_at": "2026-01-04T20:56:31Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_e1e3075eb6cc495494479419ae14afa3",
+      "parent_uuid": null,
+      "name": "Gas Tune Ups & Belts",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2026-01-04T19:24:02Z",
+      "updated_at": "2026-01-04T21:10:03Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_be2efc9c4b2b4c82bbf47deb0bbd0552",
+      "parent_uuid": null,
+      "name": "Controllers & Motors",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2026-01-04T19:20:50Z",
+      "updated_at": "2026-01-04T19:30:17Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_9f6deebbdc674087a61e43445173873d",
+      "parent_uuid": null,
+      "name": "Controls",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2026-01-04T19:20:34Z",
+      "updated_at": "2026-01-04T20:26:22Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_7787994d2567446088588c26b30fbc0a",
+      "parent_uuid": null,
+      "name": "Lighting",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2026-01-04T19:20:20Z",
+      "updated_at": "2026-01-04T19:27:31Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_9dba87fd2423475aaed342788bb02575",
+      "parent_uuid": null,
+      "name": "Lithium Battery Conversion Kit (Complete)",
+      "image": "https://housecall-web-pricebook-production-us-west-2.s3.us-west-2.amazonaws.com/pricebook/material_categories/images/005/670/235/original/Improve%20Fleet.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVMA7AXAHR33GQVBG%2F20260628%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260628T234054Z&X-Amz-Expires=900&X-Amz-Security-Token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCICarQu%2BJr2dYtQxAo%2F5TtI7YCeGvEygkbkIVLOdw0286AiEAlCFb%2B9dkGrd%2B5ILIsQqJYLFua76D8JwShjSwTeRsbUcquwUIof%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAEGgwzNjk0MzIyNDYyODciDNxOFnd%2Ftp0%2FRMJ8oyqPBRk%2F3NFFhNV1sbxllaRPdsHA6JzQrLMc3eRHD4qBN0zNKrF6FrU%2FDflo8l7S4HzHuJzd5FL4MGIl%2Bp6UfvBnntllGfQuv41BF%2F%2FnnGY3rt8RQlSITLvzOUWNg5gACvPdcmhIs8S%2B0ad1Vy6kmtlxDSI3X1eztkfNm5Mv3jORjjxDjTk3kAeSz1Nz3XeJs3NShXWxgpsLOKJ4y%2BUM9wbP0UGw6Fl5mXa8LLlMcRJKCiL9RrgvWrbN3zjQF%2FpoigyU%2BZaYgd0pB9NtbAxVeAHp%2BcXjGxNzK%2Bdodavyb8z3pb32wwsMvl5c7FEWTIrRRCb%2FaW7RD7gptUmAhzC2%2FYNIO69lTetjh9bH4FokNzDliY4eodYgBhuAt9hhqXaJcdGazzKI6oDNU0LKs%2FxFoxmlSc2SWI8mypToWx07YB1x03GnFnkkgXzUp612taiP8VmsW9H3zaskIE%2BCeuC9ONbZcs9jF%2BRfDc4JPXZINyqFbMkMEja6hB96UJSyAbLK9GScvUnSYz1gx98IFW4zD2bxN%2FlXYgI6GKbfHulGbkKTDojJCyXw8Roiy2bTvWIWpvqowpfbVulEIjW1Jas2hOobA5prDsw%2B8nMesk2rnmcs2%2B6GFNO5NUo90vjk5y%2FWB4OTBLvFeGWW33mjCp1bjNOUX0S6%2B%2BvNA2bOs%2F0pCCD8Zmx1%2BUhh79%2BpbA2P21EChuKH65B3%2BOsEsfaKAMsyPFGpsAjKzqb6O%2FWa2lwvAPJThUhbUbyTtp39pMU9kwQreNYjCfzFZiE4kMiW%2B315gP9vFxU%2BrXoleR22zLFCkQ4L6AHXq6e9ATW1MuGYGi3j%2B04HY6Xf2PzA5W90ggx6PT%2FcAFa%2F9AnnHe9RIILB%2B4v7GngwhOKG0gY6mQEb7d7HURmPiW3OQrY%2Fe%2BfGebmxL2A4YOPDPP1%2B15tetdUAPhqxiVd%2B8Iv%2BDc7Q4w5bIK73ubM44H9mTjJzEex42%2Fk6zcfurjyUZD8%2FAoracGEoGQWGzLuHubvOQtbggzRADdH34xF7lB18ILRqwePiL06wW2jd4FcZ9vUgmZaBNYtoJsDwqjicwSyVhV%2Bu%2B3hl2tZAPv0RJas%3D&X-Amz-SignedHeaders=host&X-Amz-Signature=1f57d28700c86aa41c3c35ad3157ccd361f829f7b4ae1537ed2b24975b3289c2",
+      "created_at": "2025-12-18T15:44:26Z",
+      "updated_at": "2025-12-18T15:59:03Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_c2793487c3cb4bfdab76c60942136e0e",
+      "parent_uuid": null,
+      "name": "Upgrades",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2025-09-15T20:30:46Z",
+      "updated_at": "2026-01-04T20:56:31Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_e0d7d336485540678ccbad025beda661",
+      "parent_uuid": null,
+      "name": "Drivetrain",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2023-10-31T17:01:05Z",
+      "updated_at": "2026-01-04T20:56:31Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_0fa1d3101e0b43e9b4836145a0a56926",
+      "parent_uuid": null,
+      "name": "Accessories ",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2023-10-19T02:10:29Z",
+      "updated_at": "2024-04-17T19:47:25Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_f57cc3a6942e4a9ead0722c44c0deec1",
+      "parent_uuid": null,
+      "name": "Brakes ",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2023-10-19T02:06:35Z",
+      "updated_at": "2026-01-04T20:56:31Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_c8a91749c6b54ea5871640f74354b54e",
+      "parent_uuid": null,
+      "name": "Body",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2023-09-24T21:01:09Z",
+      "updated_at": "2026-01-04T20:56:31Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_90c568e283bc4cd88acc9746d933f1a9",
+      "parent_uuid": null,
+      "name": "Wheels & Tires",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2023-09-15T18:44:06Z",
+      "updated_at": "2026-01-04T20:59:51Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_03951525159c487aa0674563e84ff354",
+      "parent_uuid": null,
+      "name": "Shop",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2023-09-15T18:37:39Z",
+      "updated_at": "2024-01-16T23:06:50Z"
+    },
+    {
+      "object": "material_category",
+      "uuid": "pbmcat_b4b85ec6fd0b4f79adfecad4ddb5d59e",
+      "parent_uuid": null,
+      "name": "Electrical",
+      "image": "https://static-assets.housecallpro.com/images/default_pricebook_material_image_high_res.png",
+      "created_at": "2023-09-14T19:39:54Z",
+      "updated_at": "2024-04-17T19:47:25Z"
+    }
+  ],
+  "url": "/pricebook/material_categories"
+}
