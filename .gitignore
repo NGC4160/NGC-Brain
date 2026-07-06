@@ -7,4 +7,8 @@ dist
 !.env.example
 tsconfig.tsbuildinfo
 public/data/hcp-cache.json
+data/ngc.db
+data/ngc.db-*
+data/*.db
+data/*.db-*
 .netlify/

@@ -6,6 +6,7 @@ import {
   Moon,
   Package,
   Receipt,
+  Settings,
   Sun,
   Users,
   Wrench,
@@ -24,6 +25,7 @@ const iconMap: Record<string, LucideIcon> = {
   Users,
   Calendar,
   Receipt,
+  Settings,
 }
 
 interface SidebarProps {
