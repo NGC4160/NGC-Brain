@@ -29,3 +29,4 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | Paid pickup flat rate | $99 (pricebook) vs new rate | TBD |
 | Southshore / >40mi boundary | Map or zip list | TBD |
 | Customer-supplied lithium install | Offer at $549 or discontinue | TBD |
+| Southshore 2nd location | Kenner-first vs wait; free ≤40 mi Southshore P&D if/when open | See feasibility study 2026-07-09 — pending Ryan |

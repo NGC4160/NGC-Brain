@@ -66,3 +66,11 @@ For customer-specific questions, staff must look up records in Housecall Pro or 
 - **Rentals** — planned after service operations mature
 
 Bill of sale forms exist in Drive for future use.
+
+## Expansion analysis
+
+Southshore second-location study (Metairie / Jefferson / Kenner, free ≤40 mi P&D concept):
+
+→ [southshore_second_location_feasibility.md](southshore_second_location_feasibility.md)
+
+**Study verdict (2026-07-09):** Market is real; prefer **Kenner** over Metairie; **do not lease** until Covington throughput gates pass and a 90-day Southshore demand pilot proves volume.

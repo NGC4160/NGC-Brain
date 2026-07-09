@@ -30,6 +30,8 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | Open |
 | P3 | Fleet maintenance program — package for HOAs/commercial | Doc exists in Drive | Ryan | Open |
 | P3 | Prep cart sales playbook (bill of sale, deposits) for future launch | Strategic defer, but prep now | Ryan | Open |
+| P2 | Southshore expansion Phase A — 90-day demand pilot (see feasibility study) | Prove Jefferson volume before lease; Kenner-first | Ryan | Open — study ready |
+| P3 | Kenner / Elmwood flex site shortlist (2.5–4.5k SF) after Phase A go | Second shop real estate | Ryan | Blocked on Phase A |
 
 ## Finance & admin
 

@@ -22,6 +22,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, future DMS |
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
+| [07_customers_marketing/southshore_second_location_feasibility.md](07_customers_marketing/southshore_second_location_feasibility.md) | **Southshore 2nd location** — Metairie/Jefferson/Kenner market & feasibility |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |
 | [archive/legacy_mobile.md](archive/legacy_mobile.md) | Discontinued mobile service items — do not quote |
 | [09_daily_ops/README.md](09_daily_ops/README.md) | **Daily operating guide** — rhythms, roles, data to feed AI |
