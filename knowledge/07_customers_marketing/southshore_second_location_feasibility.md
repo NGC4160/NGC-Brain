@@ -322,13 +322,21 @@ Then: Kenner/Elmwood LOI on 2.5–4.5k SF flex; hire or assign **1 tech + shared
 
 ---
 
+## Slide deck (PDF)
+
+Landscape 12-slide executive deck:
+
+→ [decks/NGC_Southshore_Second_Location_Feasibility_Deck.pdf](decks/NGC_Southshore_Second_Location_Feasibility_Deck.pdf)
+
+Rebuild: `python3 scripts/build_southshore_feasibility_deck.py`
+
 ## Related knowledge
 
-- [market.md](market.md) — current service area  
-- [shop_services.md](../03_services/shop_services.md) — P&D policy  
-- [shop_throughput.md](../04_operations/shop_throughput.md) — capacity gates  
-- [improvement_backlog.md](../09_daily_ops/improvement_backlog.md) — P1 zone map + lithium funnel  
-- [finance/overview.md](../08_finance/overview.md) — baseline P&L  
+- [market.md](market.md) — current service area
+- [shop_services.md](../03_services/shop_services.md) — P&D policy
+- [shop_throughput.md](../04_operations/shop_throughput.md) — capacity gates
+- [improvement_backlog.md](../09_daily_ops/improvement_backlog.md) — P1 zone map + lithium funnel
+- [finance/overview.md](../08_finance/overview.md) — baseline P&L
 
 ---
 
