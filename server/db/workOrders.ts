@@ -73,6 +73,11 @@ function rowToJob(r: Record<string, unknown>): RepairJob {
     paidAmount: paid || undefined,
     completedAt: r.completed_at ? String(r.completed_at) : undefined,
     hcpId: r.hcp_job_id ? String(r.hcp_job_id) : undefined,
+    invoiceNumber: r.invoice_number
+      ? String(r.invoice_number)
+      : String(r.id).startsWith('HCP-')
+        ? String(r.id).slice(4)
+        : undefined,
     outstandingBalance: r.outstanding_cents
       ? Math.round(Number(r.outstanding_cents) / 100)
       : Math.max(0, total - paid) || undefined,
@@ -117,6 +122,27 @@ export function getWorkOrder(id: string): RepairJob | null {
   `,
     )
     .get(id) as Record<string, unknown> | undefined
+  return row ? rowToJob(row) : null
+}
+
+export function getWorkOrderByInvoice(invoiceNumber: string): RepairJob | null {
+  const db = getDb()
+  const normalized = invoiceNumber.trim()
+  const hcpId = normalized.startsWith('HCP-') ? normalized : `HCP-${normalized}`
+  const row = db
+    .prepare(
+      `
+    SELECT wo.*,
+           c.first_name, c.last_name, c.company,
+           v.make as veh_make, v.model as veh_model, v.year as veh_year
+    FROM work_orders wo
+    LEFT JOIN customers c ON c.id = wo.customer_id
+    LEFT JOIN vehicles v ON v.id = wo.vehicle_id
+    WHERE wo.invoice_number = ? OR wo.id = ? OR wo.hcp_job_id = ?
+    LIMIT 1
+  `,
+    )
+    .get(normalized, hcpId, normalized) as Record<string, unknown> | undefined
   return row ? rowToJob(row) : null
 }
 

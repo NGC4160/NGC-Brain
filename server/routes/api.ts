@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import multer from 'multer'
 import { randomUUID } from 'node:crypto'
 import {
   exchangeCodeForTokens,
@@ -21,8 +22,15 @@ import {
   updateWorkOrder,
   type WorkOrderInput,
 } from '../db/workOrders.js'
+import { buildQcContext, saveQcSubmission } from '../qc/qcService.js'
+import { getLatestQcForJob, listQcSubmissions } from '../db/qcSubmissions.js'
 
 export const apiRouter = Router()
+
+const qcUpload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 100 * 1024 * 1024, files: 100 },
+})
 
 function computeDmsExtras() {
   const db = getDb()
@@ -130,6 +138,68 @@ apiRouter.get('/dms/dashboard', (_req, res) => {
     bookkeeper: NGC_BOOKKEEPER,
     writable: true,
   })
+})
+
+// --- Shop QC forms ---
+
+apiRouter.get('/qc/context', (req, res) => {
+  const jobNumber = String(req.query.job ?? req.query.invoice ?? '').trim()
+  const workOrderId = String(req.query.workOrderId ?? '').trim()
+  const context = buildQcContext(jobNumber || undefined, workOrderId || undefined)
+  if (!context) {
+    res.status(404).json({ error: 'Job not found' })
+    return
+  }
+  res.json(context)
+})
+
+apiRouter.get('/qc/submissions', (_req, res) => {
+  res.json({ submissions: listQcSubmissions() })
+})
+
+apiRouter.get('/qc/submissions/:jobNumber/latest', (req, res) => {
+  const submission = getLatestQcForJob(req.params.jobNumber)
+  if (!submission) {
+    res.status(404).json({ error: 'No QC submission for this job' })
+    return
+  }
+  res.json({ submission })
+})
+
+apiRouter.post('/qc/save', qcUpload.array('media'), async (req, res) => {
+  try {
+    const payloadRaw = req.body?.payload
+    if (!payloadRaw) {
+      res.status(400).json({ ok: false, error: 'Missing form payload.' })
+      return
+    }
+    const payload = JSON.parse(String(payloadRaw)) as Record<string, unknown>
+    const files = (req.files as Express.Multer.File[] | undefined) ?? []
+    const moveToReady = req.body?.moveToReady !== 'false'
+
+    const result = await saveQcSubmission({
+      payload,
+      media: files.map((f) => ({
+        originalName: f.originalname,
+        buffer: f.buffer,
+        mimeType: f.mimetype,
+      })),
+      moveToReady,
+    })
+
+    res.json({
+      ok: true,
+      fileName: result.fileName,
+      file: `QC forms/${result.fileName}`,
+      mediaCount: result.mediaCount,
+      workOrderId: result.workOrderId,
+      movedToReady: result.movedToReady,
+      message: `Saved to QC forms/${result.fileName}`,
+    })
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+    res.status(400).json({ ok: false, error: message })
+  }
 })
 
 // --- QuickBooks Online ---

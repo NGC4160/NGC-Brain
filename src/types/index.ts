@@ -83,6 +83,7 @@ export interface RepairJob {
   hcpId?: string
   outstandingBalance?: number
   jobType?: import('./invoicing').InvoiceJobType
+  invoiceNumber?: string
   requiredDeposit?: number
   depositGap?: number
   depositBlocked?: boolean
