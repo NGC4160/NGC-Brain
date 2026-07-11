@@ -4,6 +4,12 @@
 
 **https://ngc4160.github.io/NGC-Brain/**
 
+Capitalization matters: `NGC-Brain` (not `ngc-brain`).
+
+After the latest fix, the app uses hash routes, so Settings looks like:
+
+**https://ngc4160.github.io/NGC-Brain/#/settings**
+
 Full setup steps: [GITHUB_PAGES.md](./GITHUB_PAGES.md)
 
 ---

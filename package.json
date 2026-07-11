@@ -8,7 +8,7 @@
     "server": "tsx server/index.ts",
     "dev:all": "concurrently -n web,api -c green,blue \"npm run dev\" \"npm run server\"",
     "build": "tsc -b && vite build",
-    "build:pages": "npm run build:hcp-cache && tsc -b && vite build && cp dist/index.html dist/404.html && touch dist/.nojekyll && rm -f dist/_redirects",
+    "build:pages": "npm run build:hcp-cache && tsc -b && vite build && cp dist/index.html dist/404.html && touch dist/.nojekyll && rm -f dist/_redirects && node scripts/prepare-pages-routes.mjs",
     "build:hcp-cache": "tsx server/build-dashboard-cache.ts",
     "sync:hcp": "tsx server/sync-hcp.ts",
     "import:hcp": "tsx server/import-hcp.ts",
