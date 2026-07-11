@@ -16,7 +16,7 @@ const BATTERY_KEYWORDS = [
 ]
 
 export function classifyJobType(description: string): InvoiceJobType {
-  const text = description.toLowerCase()
+  const text = (description ?? '').toLowerCase()
   if (LITHIUM_KEYWORDS.some((k) => text.includes(k))) return 'lithium'
   if (BATTERY_KEYWORDS.some((k) => text.includes(k))) return 'battery'
   if (

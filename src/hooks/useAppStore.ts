@@ -295,6 +295,7 @@ export function useAppStore() {
   }, [])
 
   const updateJob = useCallback(async (jobId: string, updates: Partial<RepairJob> & { force?: boolean }) => {
+    const existing = jobs.find((j) => j.id === jobId)
     const patch: Partial<WorkOrderInput> = {
       customerName: updates.customerName,
       make: updates.make,
@@ -309,10 +310,10 @@ export function useAppStore() {
       paidAmount: updates.paidAmount,
       force: updates.force,
     }
-    const job = await updateWritableJob(jobId, patch)
+    const job = await updateWritableJob(jobId, patch, existing)
     setJobs((prev) => prev.map((j) => (j.id === jobId ? job : j)))
     return job
-  }, [])
+  }, [jobs])
 
   const toggleResourcePin = useCallback((resourceId: string) => {
     setPersisted((prev) => {

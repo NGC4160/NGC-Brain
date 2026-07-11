@@ -4,6 +4,7 @@ import { generateId } from '@/lib/utils'
 
 const API_BASE = import.meta.env.VITE_HCP_API_URL ?? ''
 const LOCAL_KEY = 'ngc-writable-work-orders-v1'
+const hasWritableApi = Boolean(API_BASE)
 
 export interface WorkOrderInput {
   customerName: string
@@ -20,9 +21,16 @@ export interface WorkOrderInput {
   force?: boolean
 }
 
+/** Drop undefined keys so partial updates do not wipe fields. */
+function definedOnly<T extends object>(obj: T): Partial<T> {
+  return Object.fromEntries(
+    Object.entries(obj).filter(([, v]) => v !== undefined),
+  ) as Partial<T>
+}
+
 function enrich(job: RepairJob): RepairJob {
   const gate = evaluateDepositGate({
-    description: job.issueDescription,
+    description: job.issueDescription ?? '',
     totalAmount: job.estimatedRevenue ?? 0,
     paidAmount: job.paidAmount ?? 0,
     status: job.status,
@@ -52,19 +60,42 @@ function loadLocal(): RepairJob[] {
 }
 
 function saveLocal(jobs: RepairJob[]) {
-  localStorage.setItem(LOCAL_KEY, JSON.stringify(jobs))
+  try {
+    localStorage.setItem(LOCAL_KEY, JSON.stringify(jobs))
+  } catch (err) {
+    console.warn('Could not persist work orders to localStorage', err)
+  }
+}
+
+/** Prefer the newer copy by updatedAt; local edits win ties. */
+function pickNewer(a: RepairJob, b: RepairJob): RepairJob {
+  const aTime = new Date(a.updatedAt).getTime()
+  const bTime = new Date(b.updatedAt).getTime()
+  if (bTime > aTime) return enrich(b)
+  if (aTime > bTime) return enrich(a)
+  return enrich(b)
 }
 
 function mergeJobs(remote: RepairJob[], local: RepairJob[]): RepairJob[] {
   const map = new Map<string, RepairJob>()
   for (const job of remote) map.set(job.id, enrich(job))
-  for (const job of local) map.set(job.id, enrich(job))
+  for (const job of local) {
+    const existing = map.get(job.id)
+    map.set(job.id, existing ? pickNewer(existing, job) : enrich(job))
+  }
   return Array.from(map.values()).sort(
     (a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
   )
 }
 
+function upsertLocal(job: RepairJob) {
+  const next = enrich(job)
+  saveLocal([next, ...loadLocal().filter((j) => j.id !== next.id)])
+  return next
+}
+
 export async function probeWritableApi(): Promise<boolean> {
+  if (!hasWritableApi) return false
   try {
     const res = await fetch(`${API_BASE}/api/health`)
     return res.ok
@@ -77,30 +108,28 @@ export async function fetchWritableJobs(remoteJobs: RepairJob[] = []): Promise<{
   jobs: RepairJob[]
   mode: 'api' | 'local'
 }> {
-  try {
-    const res = await fetch(`${API_BASE}/api/dms/jobs`)
-    if (res.ok) {
-      const data = (await res.json()) as { jobs: RepairJob[] }
-      const apiJobs = (data.jobs ?? []).map(enrich)
-      // Keep any purely-local drafts that aren't on the server yet
-      const localOnly = loadLocal().filter(
-        (j) => !apiJobs.some((a) => a.id === j.id) && j.id.startsWith('wo_local'),
-      )
-      const merged = [...localOnly, ...apiJobs]
-      saveLocal(merged)
-      return { jobs: merged, mode: 'api' }
+  if (hasWritableApi) {
+    try {
+      const res = await fetch(`${API_BASE}/api/dms/jobs`)
+      if (res.ok) {
+        const data = (await res.json()) as { jobs: RepairJob[] }
+        const apiJobs = (data.jobs ?? []).map(enrich)
+        const local = loadLocal()
+        // Keep device-only drafts and any newer local edits (status moves, etc.)
+        const merged = mergeJobs(apiJobs, local)
+        saveLocal(merged)
+        return { jobs: merged, mode: 'api' }
+      }
+    } catch {
+      // fall through to local
     }
-  } catch {
-    // fall through to local
   }
 
   const local = loadLocal()
-  if (local.length === 0 && remoteJobs.length > 0) {
-    const seeded = remoteJobs.map(enrich)
-    saveLocal(seeded)
-    return { jobs: seeded, mode: 'local' }
-  }
-  return { jobs: mergeJobs(remoteJobs, local), mode: 'local' }
+  const merged = mergeJobs(remoteJobs, local)
+  // Always persist the merge so later status edits find the job in localStorage
+  saveLocal(merged)
+  return { jobs: merged, mode: 'local' }
 }
 
 export async function createWritableJob(input: WorkOrderInput): Promise<RepairJob> {
@@ -115,27 +144,26 @@ export async function createWritableJob(input: WorkOrderInput): Promise<RepairJo
     throw new Error(gate.message ?? 'Deposit gate blocked this action')
   }
 
-  try {
-    const res = await fetch(`${API_BASE}/api/dms/jobs`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(input),
-    })
-    const data = (await res.json()) as { ok?: boolean; job?: RepairJob; error?: string }
-    if (res.ok && data.job) {
-      const job = enrich(data.job)
-      const local = loadLocal().filter((j) => j.id !== job.id)
-      saveLocal([job, ...local])
-      return job
+  if (hasWritableApi) {
+    try {
+      const res = await fetch(`${API_BASE}/api/dms/jobs`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(input),
+      })
+      const data = (await res.json()) as { ok?: boolean; job?: RepairJob; error?: string }
+      if (res.ok && data.job) {
+        return upsertLocal(data.job)
+      }
+      if (res.status !== 404 && data.error) throw new Error(data.error)
+    } catch (err) {
+      if (err instanceof Error && err.message.includes('Deposit gate')) throw err
+      // local fallback
     }
-    if (res.status !== 404 && data.error) throw new Error(data.error)
-  } catch (err) {
-    if (err instanceof Error && err.message.includes('Deposit gate')) throw err
-    // local fallback
   }
 
   const ts = new Date().toISOString()
-  const job = enrich({
+  return upsertLocal({
     id: generateId('wo_local'),
     customerName: input.customerName,
     make: input.make,
@@ -152,56 +180,61 @@ export async function createWritableJob(input: WorkOrderInput): Promise<RepairJo
     paidAmount: input.paidAmount,
     completedAt: status === 'picked-up' ? ts : undefined,
   })
-  saveLocal([job, ...loadLocal().filter((j) => j.id !== job.id)])
-  return job
 }
 
 export async function updateWritableJob(
   id: string,
   patch: Partial<WorkOrderInput>,
+  fallback?: RepairJob,
 ): Promise<RepairJob> {
-  const current = loadLocal().find((j) => j.id === id)
+  const cleaned = definedOnly(patch)
+  let current = loadLocal().find((j) => j.id === id) ?? fallback
+  if (!current) {
+    throw new Error(`Work order ${id} not found`)
+  }
+
+  // Make sure HCP/cache jobs exist in localStorage before we edit them
+  if (!loadLocal().some((j) => j.id === id)) {
+    current = upsertLocal(current)
+  }
+
   const mergedForGate = {
-    description: patch.issueDescription ?? current?.issueDescription ?? '',
-    totalAmount: patch.estimatedRevenue ?? current?.estimatedRevenue ?? 0,
-    paidAmount: patch.paidAmount ?? current?.paidAmount ?? 0,
-    status: patch.status ?? current?.status ?? 'received',
+    description: cleaned.issueDescription ?? current.issueDescription ?? '',
+    totalAmount: cleaned.estimatedRevenue ?? current.estimatedRevenue ?? 0,
+    paidAmount: cleaned.paidAmount ?? current.paidAmount ?? 0,
+    status: cleaned.status ?? current.status ?? 'received',
   }
   const gate = evaluateDepositGate(mergedForGate)
-  if (gate.blocked && !patch.force) {
+  if (gate.blocked && !cleaned.force) {
     throw new Error(gate.message ?? 'Deposit gate blocked this status change')
   }
 
-  try {
-    const res = await fetch(`${API_BASE}/api/dms/jobs/${encodeURIComponent(id)}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(patch),
-    })
-    const data = (await res.json()) as { ok?: boolean; job?: RepairJob; error?: string }
-    if (res.ok && data.job) {
-      const job = enrich(data.job)
-      saveLocal([job, ...loadLocal().filter((j) => j.id !== job.id)])
-      return job
+  if (hasWritableApi) {
+    try {
+      const res = await fetch(`${API_BASE}/api/dms/jobs/${encodeURIComponent(id)}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(cleaned),
+      })
+      const data = (await res.json()) as { ok?: boolean; job?: RepairJob; error?: string }
+      if (res.ok && data.job) {
+        return upsertLocal(data.job)
+      }
+      if (data.error && !data.error.includes('not found')) throw new Error(data.error)
+    } catch (err) {
+      if (err instanceof Error && err.message.includes('Deposit gate')) throw err
     }
-    if (data.error && !data.error.includes('not found')) throw new Error(data.error)
-  } catch (err) {
-    if (err instanceof Error && err.message.includes('Deposit gate')) throw err
   }
 
-  if (!current) throw new Error(`Work order ${id} not found`)
   const ts = new Date().toISOString()
-  const next = enrich({
+  const nextStatus = cleaned.status ?? current.status
+  return upsertLocal({
     ...current,
-    ...patch,
-    priority: patch.priority ?? current.priority,
-    status: patch.status ?? current.status,
+    ...cleaned,
+    priority: cleaned.priority ?? current.priority,
+    status: nextStatus,
     updatedAt: ts,
     completedAt:
-      (patch.status ?? current.status) === 'picked-up'
-        ? current.completedAt ?? ts
-        : current.completedAt,
+      nextStatus === 'picked-up' ? current.completedAt ?? ts : current.completedAt,
   })
-  saveLocal([next, ...loadLocal().filter((j) => j.id !== id)])
-  return next
 }
