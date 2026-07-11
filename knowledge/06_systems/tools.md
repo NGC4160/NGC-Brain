@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-06-28
+**Last verified:** 2026-07-11
 
 ## Current stack
 
@@ -10,7 +10,18 @@
 | **QuickBooks Online** | Accounting, inventory, sales tax, P&L | Active — books clean |
 | **Google Drive** | SOPs, document repository, internal docs | Active (`external_docs/My Drive/`) |
 | **Website** | [NGCGolfCarts.com](https://www.NGCGolfCarts.com) | Active |
+| **GitHub Pages** | Open all NGC internal projects/tools | Active — [ngc4160.github.io/NGC-Brain](https://ngc4160.github.io/NGC-Brain/) |
 | **Google Business Profile** | Local presence, reviews | Active |
+
+## GitHub Pages (project open links)
+
+**Policy:** Always open projects via GitHub Pages — not localhost.
+
+| Item | Detail |
+|------|--------|
+| **Home** | https://ngc4160.github.io/NGC-Brain/ |
+| **Route list** | [`github_pages_projects.md`](github_pages_projects.md) |
+| **Agent rule** | `.cursor/rules/ngc-github-pages.mdc` |
 
 ## Housecall Pro
 

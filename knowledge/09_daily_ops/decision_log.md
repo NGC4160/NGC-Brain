@@ -19,6 +19,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-06-28 | No cart sales/rentals until service shop is solid | Ryan | |
 | 2026-06-28 | HCP MAX plan — API sync scripts + MCP path documented | Ryan | See hcp_api_setup.md |
 | 2026-06-28 | Diagnostic fee $179 — not waived; applies toward repair on known-issue jobs | Ryan | |
+| 2026-07-11 | Always use GitHub Pages for opening any projects | Ryan | Canonical: https://ngc4160.github.io/NGC-Brain/ — see `knowledge/06_systems/github_pages_projects.md` + `.cursor/rules/ngc-github-pages.mdc` |
 
 ---
 

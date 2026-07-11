@@ -1,0 +1,50 @@
+---
+description: Always open and ship NGC projects via GitHub Pages — never localhost-only handoffs
+globs:
+alwaysApply: true
+---
+
+# NGC — GitHub Pages for all projects
+
+**Policy (Ryan, 2026-07-11):** Always use **GitHub Pages** for opening any project.
+
+## Canonical site
+
+| Item | Value |
+|------|-------|
+| **Open here** | https://ngc4160.github.io/NGC-Brain/ |
+| **Repo** | `NGC4160/NGC-Brain` |
+| **Deploy branch / env** | GitHub Pages (`gh-pages` / `github-pages` environment) |
+| **Base path** | `/NGC-Brain/` |
+
+## Required behavior
+
+When building, updating, or handing off any **openable** project (dashboard, form, checklist, tool, landing page, preview):
+
+1. **Ship to GitHub Pages** — deploy so it is reachable under `https://ngc4160.github.io/NGC-Brain/…`
+2. **Give Ryan the Pages URL** as the primary way to open it — not `localhost`, not `file://`, not a Cursor-only preview link
+3. **Reuse the existing deploy path** when one exists (e.g. `.github/workflows/deploy-pages.yml`, `npm run build:pages`, `VITE_BASE_PATH=/NGC-Brain/`)
+4. For **static HTML** tools, publish under a stable path (e.g. `/NGC-Brain/docs/…`) and confirm the live URL returns 200
+5. After deploy, **verify** the live link before telling Ryan it is ready
+
+## Do not
+
+- Tell Ryan to “open localhost” or a local file as the main access method
+- Host NGC shop tools on a different public host unless Ryan explicitly asks
+- Leave a web project only in a PR branch without a Pages URL when the ask was to open/use it
+
+Local `npm run dev` is fine for agent development. Handoff to Ryan/Christine/techs = **Pages URL**.
+
+## Known live routes (extend as you ship)
+
+| Path | Project |
+|------|---------|
+| `/NGC-Brain/` | Ops dashboard home |
+| `/NGC-Brain/jobs/` | Jobs |
+| `/NGC-Brain/invoicing/` | Invoicing |
+| `/NGC-Brain/inventory/` | Inventory |
+| `/NGC-Brain/resources/` | Resources / manuals |
+| `/NGC-Brain/agent-input/` | Agent input |
+| `/NGC-Brain/docs/intake-checklist.html` | Intake checklist |
+
+Keep [`knowledge/06_systems/github_pages_projects.md`](knowledge/06_systems/github_pages_projects.md) updated when routes change.

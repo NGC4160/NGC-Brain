@@ -21,6 +21,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [05_team/roles.md](05_team/roles.md) | Team roster and responsibilities |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, future DMS |
+| [06_systems/github_pages_projects.md](06_systems/github_pages_projects.md) | **Open projects here** — GitHub Pages links |
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |
 | [archive/legacy_mobile.md](archive/legacy_mobile.md) | Discontinued mobile service items — do not quote |
