@@ -1,4 +1,4 @@
-name: Deploy Golf Cart Dashboard
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -12,30 +12,28 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '22'
           cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build for GitHub Pages
+      - name: Build static site for GitHub Pages
         run: npm run build:pages
         env:
           VITE_BASE_PATH: /NGC-Brain/
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -47,6 +45,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
