@@ -49,7 +49,9 @@ npm run deploy:pages
 
 That builds the static dashboard (with cached Housecall Pro data) and pushes to the `gh-pages` branch.
 
-Or push to `main` / this feature branch and let the **Deploy to GitHub Pages** workflow publish it.
+Or push to `main` / the Phase 2 branch — the **Deploy to GitHub Pages** workflow builds and pushes to the `gh-pages` branch (same as `npm run deploy:pages`).
+
+> **Note:** Repo Pages source is **gh-pages** branch, not the GitHub Actions environment artifact. If an older workflow failed with “branch is not allowed to deploy to github-pages,” that was environment protection — the updated workflow publishes directly to `gh-pages`.
 
 ---
 
