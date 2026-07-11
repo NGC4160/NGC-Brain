@@ -17,18 +17,18 @@ export function JobsPage() {
   )
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-wrap items-start justify-between gap-4">
+    <div className="space-y-5 sm:space-y-6">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+          <h1 className="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
             Repair Jobs
           </h1>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-            {jobs.length} total jobs · {filtered.length} shown
+            {jobs.length} total · {filtered.length} shown
           </p>
         </div>
         <select
-          className="input-field w-auto"
+          className="input-field sm:w-auto"
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
         >
@@ -41,7 +41,42 @@ export function JobsPage() {
         </select>
       </div>
 
-      <div className="card overflow-x-auto p-0">
+      {/* Mobile cards */}
+      <div className="space-y-3 md:hidden">
+        {sorted.map((job) => (
+          <article key={job.id} className="card space-y-2">
+            <div className="flex items-start justify-between gap-2">
+              <div className="min-w-0">
+                <p className="font-semibold text-slate-900 dark:text-white">{job.customerName}</p>
+                <p className="text-xs text-slate-500">{job.id}</p>
+              </div>
+              <span className="shrink-0 rounded-full bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700 dark:bg-brand-950 dark:text-brand-400">
+                {JOB_STATUS_LABELS[job.status]}
+              </span>
+            </div>
+            <p className="text-sm text-slate-600 dark:text-slate-300">
+              {job.make} {job.model}
+              {job.year ? ` (${job.year})` : ''}
+            </p>
+            {job.issueDescription && (
+              <p className="line-clamp-2 text-sm text-slate-500">{job.issueDescription}</p>
+            )}
+            <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-slate-100 pt-2 text-xs text-slate-500 dark:border-slate-800">
+              <span>{JOB_PRIORITY_LABELS[job.priority]}</span>
+              <span>{job.assignedTech ?? 'Unassigned'}</span>
+              <span className="ml-auto font-medium text-slate-700 dark:text-slate-200">
+                {job.estimatedRevenue ? formatCurrency(job.estimatedRevenue) : '—'}
+              </span>
+            </div>
+          </article>
+        ))}
+        {sorted.length === 0 && (
+          <p className="card py-8 text-center text-sm text-slate-400">No jobs match this filter.</p>
+        )}
+      </div>
+
+      {/* Desktop table */}
+      <div className="card hidden overflow-x-auto p-0 md:block">
         <table className="w-full text-left text-sm">
           <thead>
             <tr className="border-b border-slate-200 dark:border-slate-800">

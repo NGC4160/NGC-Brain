@@ -47,8 +47,8 @@ export function ResourcesPage() {
         </p>
       </div>
 
-      <div className="card flex flex-wrap gap-4">
-        <div className="relative min-w-[200px] flex-1">
+      <div className="card flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <div className="relative w-full flex-1 sm:min-w-[200px]">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
           <input
             type="search"
@@ -59,7 +59,7 @@ export function ResourcesPage() {
           />
         </div>
         <select
-          className="input-field w-auto min-w-[160px]"
+          className="input-field w-full sm:w-auto sm:min-w-[160px]"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
@@ -71,7 +71,7 @@ export function ResourcesPage() {
           ))}
         </select>
         <select
-          className="input-field w-auto min-w-[140px]"
+          className="input-field w-full sm:w-auto sm:min-w-[140px]"
           value={makeFilter}
           onChange={(e) => setMakeFilter(e.target.value)}
         >

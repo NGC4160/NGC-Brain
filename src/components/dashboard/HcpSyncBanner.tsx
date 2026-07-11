@@ -19,8 +19,8 @@ export function HcpSyncBanner({ meta, loading, error, onRefresh }: HcpSyncBanner
   const canLiveRefresh = isLive || Boolean(import.meta.env.VITE_HCP_API_URL)
 
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-ngc-200 bg-ngc-50 px-4 py-3 dark:border-ngc-800 dark:bg-ngc-950">
-      <div className="flex items-start gap-3">
+    <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-ngc-200 bg-ngc-50 px-3 py-3 sm:px-4 dark:border-ngc-800 dark:bg-ngc-950">
+      <div className="flex min-w-0 items-start gap-3">
         {isLive ? (
           <Wifi className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
         ) : isDms ? (
@@ -28,7 +28,7 @@ export function HcpSyncBanner({ meta, loading, error, onRefresh }: HcpSyncBanner
         ) : (
           <WifiOff className="mt-0.5 h-5 w-5 shrink-0 text-ngc-400" />
         )}
-        <div>
+        <div className="min-w-0">
           <p className="text-sm font-medium text-ngc-700 dark:text-ngc-200">
             {loading
               ? 'Loading shop data…'
@@ -62,7 +62,7 @@ export function HcpSyncBanner({ meta, loading, error, onRefresh }: HcpSyncBanner
         type="button"
         onClick={onRefresh}
         disabled={loading}
-        className="btn-secondary shrink-0 py-2"
+        className="btn-secondary w-full shrink-0 py-2 sm:w-auto"
         title={
           canLiveRefresh
             ? 'Reload dashboard data'
