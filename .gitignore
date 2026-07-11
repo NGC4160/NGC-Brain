@@ -11,4 +11,6 @@ public/data/hcp-cache.json
 data/ngc.db
 data/ngc.db-*
 data/imports/
+QC forms/*
+!QC forms/.gitkeep
 

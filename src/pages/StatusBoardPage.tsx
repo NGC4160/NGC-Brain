@@ -145,6 +145,14 @@ export function StatusBoardPage() {
                       <option value="picked-up">{JOB_STATUS_LABELS['picked-up']}</option>
                     </select>
                   </label>
+                  {(job.status === 'qa' || job.status === 'in-repair') && (
+                    <Link
+                      to={`/qc?workOrderId=${encodeURIComponent(job.id)}`}
+                      className="mt-2 block rounded-lg bg-brand-600 px-2 py-2 text-center text-[11px] font-semibold text-white hover:bg-brand-700"
+                    >
+                      Complete QC form
+                    </Link>
+                  )}
                 </li>
               ))}
               {columns[status].length === 0 && (

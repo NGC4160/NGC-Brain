@@ -92,6 +92,7 @@ export function mapHCPJobToRepairJob(job: HCPJob): RepairJob | null {
 
   return {
     id: job.invoice_number ? `HCP-${job.invoice_number}` : job.id,
+    invoiceNumber: job.invoice_number ?? undefined,
     customerName: customerName(job),
     make,
     model,

@@ -6,6 +6,7 @@ import { AgentInputPage } from '@/pages/AgentInputPage'
 import { ResourcesPage } from '@/pages/ResourcesPage'
 import { JobsPage } from '@/pages/JobsPage'
 import { StatusBoardPage } from '@/pages/StatusBoardPage'
+import { QcFormPage } from '@/pages/QcFormPage'
 import { InvoicingPage } from '@/pages/InvoicingPage'
 import { SettingsPage } from '@/pages/SettingsPage'
 import { ComingSoonPage } from '@/pages/ComingSoonPage'
@@ -24,6 +25,7 @@ function AppRoutes() {
         <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/board" element={<StatusBoardPage />} />
+        <Route path="/qc" element={<QcFormPage />} />
         <Route path="/inventory" element={<ComingSoonPage />} />
         <Route path="/customers" element={<ComingSoonPage />} />
         <Route path="/scheduling" element={<ComingSoonPage />} />

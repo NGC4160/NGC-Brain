@@ -132,3 +132,21 @@ CREATE INDEX IF NOT EXISTS idx_pricebook_hcp ON pricebook_items(hcp_uuid);
 INSERT OR IGNORE INTO app_settings (key, value, updated_at) VALUES
   ('bookkeeper', 'Griffin & Furman, LLC', datetime('now')),
   ('accounting_basis', 'cash', datetime('now'));
+
+-- Shop QC submissions (see server/db/qcSubmissions.ts)
+CREATE TABLE IF NOT EXISTS qc_submissions (
+  id TEXT PRIMARY KEY,
+  work_order_id TEXT REFERENCES work_orders(id),
+  job_number TEXT NOT NULL,
+  customer_last_name TEXT NOT NULL,
+  file_name TEXT NOT NULL,
+  file_path TEXT NOT NULL,
+  media_count INTEGER NOT NULL DEFAULT 0,
+  certified INTEGER NOT NULL DEFAULT 0,
+  technician TEXT,
+  saved_at TEXT NOT NULL,
+  form_json TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_qc_submissions_job ON qc_submissions(job_number);
+CREATE INDEX IF NOT EXISTS idx_qc_submissions_work_order ON qc_submissions(work_order_id);

@@ -1,0 +1,48 @@
+# Shop QC Form — DMS Integration
+
+The Shop QC completion form is built into the NGC DMS (React + Express + SQLite).
+
+## Where to find it
+
+| Surface | Path |
+|---------|------|
+| DMS nav | **QC Form** (`#/qc`) |
+| Status board | **Complete QC form** button on QA / In Repair cards |
+| Deep link | `#/qc?workOrderId=HCP-17342` or `#/qc?job=17342` |
+
+## Run locally (required for save)
+
+```bash
+npm install
+npm run dev:all
+```
+
+- Dashboard: http://localhost:5173
+- API: http://localhost:3001
+
+GitHub Pages is **read-only** — QC save needs the local API.
+
+## Save behavior
+
+1. Tech completes checklist and uploads photos/videos (no limit)
+2. **Job #** and **customer last name** are required
+3. Click **Save QC Form**
+4. Creates `QC forms/{job#}_{LastName}.zip` at the repo root containing:
+   - `form.json` — full checklist
+   - `summary.txt` — quick summary
+   - `media/` — all uploads
+5. Records submission in SQLite (`qc_submissions` table)
+6. If certified and job is in **QA**, status moves to **READY** on the board
+
+## API endpoints
+
+| Method | Path | Purpose |
+|--------|------|---------|
+| GET | `/api/qc/context?job=` or `?workOrderId=` | Pre-fill from work order |
+| POST | `/api/qc/save` | Multipart: `payload` JSON + `media` files |
+| GET | `/api/qc/submissions` | Recent QC saves |
+| GET | `/api/qc/submissions/:jobNumber/latest` | Latest QC for a job |
+
+## Privacy
+
+`QC forms/` is gitignored — contains customer last names and job media. Back up via Google Drive or shop file server, not git.
