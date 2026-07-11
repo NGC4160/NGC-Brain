@@ -138,7 +138,15 @@ export const navModules: NavModule[] = [
     path: '/invoicing',
     icon: 'Receipt',
     enabled: true,
-    description: 'AR, deposits, and payment collection from HCP',
+    description: 'AR, deposits, and payment collection',
+  },
+  {
+    id: 'settings',
+    label: 'Settings',
+    path: '/settings',
+    icon: 'Settings',
+    enabled: true,
+    description: 'Import, QBO, bookkeeper, and manuals setup',
   },
 ]
 

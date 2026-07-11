@@ -40,6 +40,11 @@ export function ResourcesPage() {
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
           Service manuals, wiring diagrams, parts catalogs, and shop SOPs
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          To add a Google Drive file: Share → Anyone with the link → copy the link → add it in{' '}
+          <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">src/data/resources.json</code>
+          {' '}→ redeploy. Details in Settings.
+        </p>
       </div>
 
       <div className="card flex flex-wrap gap-4">

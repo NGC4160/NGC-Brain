@@ -11,6 +11,7 @@ import {
   trimJobsExport,
 } from './hcpMapper.js'
 import { buildInvoicingPayload } from './hcpInvoicing.js'
+import { apiRouter } from './routes/api.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -91,7 +92,6 @@ app.get('/api/hcp/dashboard', async (_req, res) => {
         // company fetch optional
       }
 
-      const trimmed = trimJobsExport(exportData)
       mkdirSync(join(ROOT, 'public/data'), { recursive: true })
       writeFileSync(
         join(ROOT, 'public/data/hcp-dashboard.json'),
@@ -174,10 +174,14 @@ app.get('/api/hcp/invoicing', async (_req, res) => {
 
   res.json(buildInvoicingPayload(cache))
 })
-  console.log(`HCP API proxy listening on http://localhost:${PORT}`)
+
+app.use('/api', apiRouter)
+
+app.listen(PORT, () => {
+  console.log(`NGC DMS API listening on http://localhost:${PORT}`)
   console.log(
     createHCPClientFromEnv()
-      ? 'Mode: live (HCP_API_KEY configured)'
-      : 'Mode: cache (set HCP_API_KEY in .env for live data)',
+      ? 'HCP mode: live (HCP_API_KEY configured)'
+      : 'HCP mode: cache (set HCP_API_KEY in .env for live data)',
   )
 })
