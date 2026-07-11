@@ -20,6 +20,7 @@
 4. More → Settings shows Griffin & Furman, LLC
 5. Manuals open (Precedent PDFs)
 6. Forms are usable with the on-screen keyboard
+7. **Pull down** on any page (or tap the refresh icon in the header) to reload shop data — no need to clear browser history
 
 ## Out of scope (later phases)
 

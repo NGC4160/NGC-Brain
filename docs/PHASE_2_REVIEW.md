@@ -26,6 +26,7 @@
 4. Move a job with unpaid lithium/battery deposit into **Waiting Parts** or **In Repair** — expect a block (or use override)
 5. Jobs list → tap a job → edit and save
 6. Refresh the page — your new/edited jobs should still be there on that phone
+7. **Pull down** on Board/Jobs (or tap the header refresh icon) to update shop data without clearing browser history
 
 ## Notes
 

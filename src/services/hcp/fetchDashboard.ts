@@ -25,16 +25,26 @@ export interface HCPDashboardPayload {
 
 const API_BASE = import.meta.env.VITE_HCP_API_URL ?? ''
 
-export async function fetchHCPDashboard(): Promise<HCPDashboardPayload> {
+export async function fetchHCPDashboard(options?: {
+  bustCache?: boolean
+}): Promise<HCPDashboardPayload> {
+  const bust = options?.bustCache ? `t=${Date.now()}` : ''
+  const withBust = (url: string) => {
+    if (!bust) return url
+    return url.includes('?') ? `${url}&${bust}` : `${url}?${bust}`
+  }
+
   const urls = [
-    `${API_BASE}/api/dms/dashboard`,
-    `${API_BASE}/api/hcp/dashboard`,
-    `${import.meta.env.BASE_URL}data/hcp-dashboard.json`,
+    withBust(`${API_BASE}/api/dms/dashboard`),
+    withBust(`${API_BASE}/api/hcp/dashboard`),
+    withBust(`${import.meta.env.BASE_URL}data/hcp-dashboard.json`),
   ]
 
   for (const url of urls) {
     try {
-      const res = await fetch(url)
+      const res = await fetch(url, {
+        cache: options?.bustCache ? 'no-store' : 'default',
+      })
       if (!res.ok) continue
       const data = (await res.json()) as HCPDashboardPayload
       if (data.jobs?.length) return data
@@ -73,7 +83,7 @@ export function describeDataMode(source: HCPDashboardPayload['source'] | undefin
     case 'dms':
       return 'Local DMS database — imported HCP exports. Writable jobs come in Phase 2.'
     default:
-      return 'Static cache on GitHub Pages — not live. Run npm run sync:hcp + deploy:pages to refresh, or npm run dev:all for live data.'
+      return 'Static cache on GitHub Pages — pull down to reload the latest published data (keeps jobs you created on this phone).'
   }
 }
 

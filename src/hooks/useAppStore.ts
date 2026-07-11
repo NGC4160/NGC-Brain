@@ -217,11 +217,11 @@ export function useAppStore() {
     return localStorage.getItem('golf-cart-dark-mode') === 'true'
   })
 
-  const loadHcp = useCallback(async () => {
+  const loadHcp = useCallback(async (opts?: { bustCache?: boolean }) => {
     setHcpLoading(true)
     setHcpError(null)
     try {
-      const data = await fetchHCPDashboard()
+      const data = await fetchHCPDashboard({ bustCache: opts?.bustCache })
       setHcpMeta(data)
       const writable = await fetchWritableJobs(data.jobs)
       setJobs(writable.jobs.length ? writable.jobs : data.jobs)
@@ -352,7 +352,7 @@ export function useAppStore() {
     hcpConnected: true,
     jobsWritable: true,
     writeMode,
-    refreshHcp: loadHcp,
+    refreshHcp: () => loadHcp({ bustCache: true }),
     invoicing: hcpMeta?.invoicing ?? null,
   }
 }
