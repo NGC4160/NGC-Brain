@@ -13,12 +13,16 @@ The Shop QC completion form is built into the NGC DMS (React + Express + SQLite)
 ## Run locally (required for save)
 
 ```bash
-npm install
-npm run dev:all
+npm run shop
 ```
 
-- Dashboard: http://localhost:5173
-- API: http://localhost:3001
+(`npm run dev:all` works too — `shop` also opens the QC form and ensures `QC forms/` exists.)
+
+- **QC Form (pin this):** http://127.0.0.1:5173/#/qc
+- Status board: http://127.0.0.1:5173/#/board
+- API: http://127.0.0.1:3001
+
+See [SHOP_DMS_SETUP.md](SHOP_DMS_SETUP.md) for office PC bookmark instructions.
 
 GitHub Pages is **read-only** — QC save needs the local API.
 
