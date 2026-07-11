@@ -14,10 +14,12 @@ The Shop QC completion form is built into the NGC DMS (React + Express + SQLite)
 
 Open **https://ngc4160.github.io/NGC-Brain/#/qc** — no local server required.
 
-1. Complete the checklist and upload photos/videos
-2. Click **Save QC Form**
-3. Browser saves `{job#}_{LastName}.zip` (download, or direct to a folder on Chrome — tap **QC forms folder** once)
-4. Certified QC on a job in **QA** moves it to **READY** on the status board (saved on that device)
+1. Select a job from the dropdown (or filter by customer last name) — fields autofill from the board
+2. Complete the checklist and upload photos/videos
+3. Add notes under any of the 7 safety inspection points as needed
+4. Click **Save QC Form**
+5. Browser saves `{job#}_{LastName}.zip` (download, or direct to a folder on Chrome — tap **QC forms folder** once)
+6. Certified QC on a job in **QA** moves it to **READY** on the status board (saved on that device)
 
 ## Run locally (optional — server archive)
 

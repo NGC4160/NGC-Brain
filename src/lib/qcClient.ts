@@ -130,15 +130,26 @@ export async function buildQcZip(
     media: savedMedia,
   }
 
+  const inspectionLines = Array.isArray(payload.inspection)
+    ? (payload.inspection as Array<{ label?: string; checked?: boolean; notes?: string }>)
+        .filter((row) => row.notes?.trim())
+        .map((row) => `  ${row.label ?? ''}: ${row.notes?.trim()}`)
+    : []
+
   const summary = [
     'NGC Shop QC Completion Form',
     `Saved: ${savedAt}`,
     `Job #: ${jobNumber}`,
+    `Customer: ${payload.customerName ?? ''}`,
     `Customer last name: ${lastName}`,
     `Technician: ${payload.technician ?? ''}`,
     `Cart: ${payload.cartMakeModel ?? ''}`,
+    `Service: ${payload.serviceType ?? ''}`,
     `Media files: ${savedMedia.length}`,
     '',
+    ...(inspectionLines.length
+      ? ['Safety inspection notes:', ...inspectionLines, '']
+      : []),
     'Certification:',
     payload.certification ? 'YES' : 'NO',
   ].join('\n')
