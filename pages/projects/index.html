@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGC Projects — GitHub Pages</title>
+  <meta name="theme-color" content="#6faa2d" />
+  <style>
+    :root {
+      --blue: #1a4d7a;
+      --green: #6faa2d;
+      --ink: #142033;
+      --muted: #5b6b7c;
+      --line: #d7e2ec;
+      --bg: #eef3f8;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #d9ecbf 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #cfe0f0 0%, transparent 50%),
+        var(--bg);
+      min-height: 100vh;
+    }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.25rem 1.25rem 3.5rem;
+    }
+    .brand {
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 700;
+      margin: 0 0 0.35rem;
+    }
+    h1 {
+      margin: 0 0 0.4rem;
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+      color: var(--blue);
+      line-height: 1.15;
+    }
+    .sub {
+      margin: 0 0 1.75rem;
+      color: var(--muted);
+      max-width: 38rem;
+    }
+    .grid {
+      display: grid;
+      gap: 0.85rem;
+    }
+    a.project {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem 1.15rem;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    a.project:hover {
+      border-color: var(--green);
+      transform: translateY(-1px);
+    }
+    a.project strong {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--blue);
+      margin-bottom: 0.2rem;
+    }
+    a.project span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    a.project code {
+      display: inline-block;
+      margin-top: 0.55rem;
+      font-size: 0.78rem;
+      color: #3d5a73;
+      background: #f3f7fb;
+      padding: 0.2rem 0.45rem;
+      border-radius: 6px;
+    }
+    footer {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="brand">Neighborhood Golf Carts</p>
+    <h1>Projects</h1>
+    <p class="sub">Each project has its own GitHub Pages link. Open the one you need — bookmark individual tools on your phone.</p>
+    <div class="grid">
+      <a class="project" href="./ops-dashboard/">
+        <strong>Ops Dashboard</strong>
+        <span>Jobs, invoicing, inventory, resources, agent input</span>
+        <code>/projects/ops-dashboard/</code>
+      </a>
+      <a class="project" href="./shop-board/">
+        <strong>Shop Board</strong>
+        <span>Whiteboard / WIP board view</span>
+        <code>/projects/shop-board/</code>
+      </a>
+      <a class="project" href="./shop-qc/">
+        <strong>Shop QC Form</strong>
+        <span>Post-repair QC completion form for techs</span>
+        <code>/projects/shop-qc/</code>
+      </a>
+      <a class="project" href="./pickup-delivery/">
+        <strong>Pickup / Delivery Inspection</strong>
+        <span>Driver condition record — pickup top, drop-off bottom</span>
+        <code>/projects/pickup-delivery/</code>
+      </a>
+      <a class="project" href="./personnel-counseling/">
+        <strong>Personnel Counseling Form</strong>
+        <span>Branded counseling write-up template</span>
+        <code>/projects/personnel-counseling/</code>
+      </a>
+      <a class="project" href="./intake-checklist/">
+        <strong>Repair Intake Checklist</strong>
+        <span>Front-desk / intake checklist</span>
+        <code>/projects/intake-checklist/</code>
+      </a>
+    </div>
+    <footer>Source of truth: <code>pages/projects/</code> in NGC-Brain · Policy: one Pages URL per project</footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "baseUrl": "https://ngc4160.github.io/NGC-Brain/projects",
+  "policy": "Each project must have its own GitHub Pages link under /projects/<slug>/",
+  "updated": "2026-07-11",
+  "projects": [
+    {
+      "slug": "ops-dashboard",
+      "name": "Ops Dashboard",
+      "url": "https://ngc4160.github.io/NGC-Brain/projects/ops-dashboard/",
+      "opens": "https://ngc4160.github.io/NGC-Brain/"
+    },
+    {
+      "slug": "shop-board",
+      "name": "Shop Board",
+      "url": "https://ngc4160.github.io/NGC-Brain/projects/shop-board/",
+      "opens": "https://ngc4160.github.io/NGC-Brain/board/"
+    },
+    {
+      "slug": "shop-qc",
+      "name": "Shop QC Form",
+      "url": "https://ngc4160.github.io/NGC-Brain/projects/shop-qc/"
+    },
+    {
+      "slug": "pickup-delivery",
+      "name": "Pickup / Delivery Inspection",
+      "url": "https://ngc4160.github.io/NGC-Brain/projects/pickup-delivery/"
+    },
+    {
+      "slug": "personnel-counseling",
+      "name": "Personnel Counseling Form",
+      "url": "https://ngc4160.github.io/NGC-Brain/projects/personnel-counseling/"
+    },
+    {
+      "slug": "intake-checklist",
+      "name": "Repair Intake Checklist",
+      "url": "https://ngc4160.github.io/NGC-Brain/projects/intake-checklist/"
+    }
+  ]
+}

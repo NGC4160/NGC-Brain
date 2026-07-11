@@ -1,0 +1,54 @@
+---
+description: Always open NGC projects via per-project GitHub Pages links
+globs:
+alwaysApply: true
+---
+
+# NGC — GitHub Pages for all projects
+
+**Policy (Ryan, 2026-07-11):** Always use **GitHub Pages** for opening any project.  
+**Clarification:** **Each project must have its own Pages link** — do not hand Ryan only the site root or bury a standalone tool inside another app’s nav.
+
+## Canonical URLs
+
+| Item | Value |
+|------|-------|
+| **Projects hub** | https://ngc4160.github.io/NGC-Brain/projects/ |
+| **Per-project pattern** | `https://ngc4160.github.io/NGC-Brain/projects/<slug>/` |
+| **Repo** | `NGC4160/NGC-Brain` |
+| **Pages source** | `gh-pages` branch |
+| **Source files** | `pages/projects/<slug>/` |
+
+## Required behavior
+
+When building, updating, or handing off any **openable** project (dashboard, form, checklist, tool, landing page, preview):
+
+1. **Give it a dedicated slug** under `/projects/<slug>/` (stable, kebab-case)
+2. **Ship that URL** as the primary open link — not `localhost`, not `file://`, not “open the dashboard and click …”
+3. Add/update `pages/projects/<slug>/index.html` (+ assets), hub `pages/projects/index.html`, and `pages/projects/projects.json`
+4. Publish with `./scripts/pages/publish_projects.sh` (or equivalent) and **verify HTTP 200**
+5. Update [`knowledge/06_systems/github_pages_projects.md`](knowledge/06_systems/github_pages_projects.md)
+6. Tell Ryan the **project-specific** URL
+
+Dashboard **modules** (jobs, invoicing, inventory routes inside the SPA) can stay as app routes. **Standalone projects** (forms, boards, separate tools) get their own `/projects/<slug>/` link.
+
+## Do not
+
+- Share only `https://ngc4160.github.io/NGC-Brain/` when the ask was for a specific tool
+- Leave a project only in a PR branch / local HTML without a `/projects/<slug>/` URL
+- Host NGC shop tools on a different public host unless Ryan explicitly asks
+- Reuse another project’s URL for a new tool
+
+Local `npm run dev` is fine for agent development. Handoff = **that project’s Pages URL**.
+
+## Current project links
+
+| Project | Open link |
+|---------|-----------|
+| Hub | https://ngc4160.github.io/NGC-Brain/projects/ |
+| Ops Dashboard | https://ngc4160.github.io/NGC-Brain/projects/ops-dashboard/ |
+| Shop Board | https://ngc4160.github.io/NGC-Brain/projects/shop-board/ |
+| Shop QC Form | https://ngc4160.github.io/NGC-Brain/projects/shop-qc/ |
+| Pickup / Delivery | https://ngc4160.github.io/NGC-Brain/projects/pickup-delivery/ |
+| Personnel Counseling | https://ngc4160.github.io/NGC-Brain/projects/personnel-counseling/ |
+| Intake Checklist | https://ngc4160.github.io/NGC-Brain/projects/intake-checklist/ |
