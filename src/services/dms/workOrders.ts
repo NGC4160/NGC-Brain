@@ -21,7 +21,7 @@ export interface WorkOrderInput {
   force?: boolean
 }
 
-/** Drop undefined keys so partial updates do not wipe fields. */
+/** Drop undefined keys so partial updates do not wipe fields. Empty string clears assignedTech. */
 function definedOnly<T extends object>(obj: T): Partial<T> {
   return Object.fromEntries(
     Object.entries(obj).filter(([, v]) => v !== undefined),
@@ -228,9 +228,14 @@ export async function updateWritableJob(
 
   const ts = new Date().toISOString()
   const nextStatus = cleaned.status ?? current.status
+  const nextAssigned =
+    'assignedTech' in cleaned
+      ? cleaned.assignedTech?.trim() || undefined
+      : current.assignedTech
   return upsertLocal({
     ...current,
     ...cleaned,
+    assignedTech: nextAssigned,
     priority: cleaned.priority ?? current.priority,
     status: nextStatus,
     updatedAt: ts,

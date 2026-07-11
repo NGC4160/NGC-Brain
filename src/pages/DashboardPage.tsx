@@ -1,4 +1,7 @@
+import { useMemo } from 'react'
 import { useApp } from '@/context/AppContext'
+import { useAuthContext } from '@/context/AuthContext'
+import { filterJobsForSession } from '@/lib/jobAccess'
 import { kpiDefinitions } from '@/config/app.config'
 import { KpiCard } from '@/components/dashboard/KpiCard'
 import { RevenueChart } from '@/components/dashboard/RevenueChart'
@@ -28,8 +31,13 @@ export function DashboardPage() {
     hcpError,
     refreshHcp,
   } = useApp()
+  const { session, isTechnician } = useAuthContext()
+  const visibleJobs = useMemo(
+    () => filterJobsForSession(jobs, session),
+    [jobs, session],
+  )
 
-  const activeJobs = jobs.filter((j) => !['picked-up', 'ready'].includes(j.status))
+  const activeJobs = visibleJobs.filter((j) => !['picked-up', 'ready'].includes(j.status))
 
   return (
     <div className="space-y-8">
@@ -39,7 +47,9 @@ export function DashboardPage() {
             Dashboard
           </h1>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-            Shop overview — KPIs, activity, and quick links
+            {isTechnician
+              ? `Your assigned work — ${session?.name}`
+              : 'Shop overview — KPIs, activity, and quick links'}
           </p>
         </div>
         <div className="flex w-full rounded-lg border border-slate-200 p-1 dark:border-slate-700 sm:w-auto">

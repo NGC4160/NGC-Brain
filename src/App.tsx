@@ -1,17 +1,39 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Navigate, Routes, Route } from 'react-router-dom'
 import { AppProvider, useApp } from '@/context/AppContext'
+import { AuthProvider, useAuthContext } from '@/context/AuthContext'
 import { Layout } from '@/components/layout/Layout'
 import { DashboardPage } from '@/pages/DashboardPage'
 import { AgentInputPage } from '@/pages/AgentInputPage'
 import { ResourcesPage } from '@/pages/ResourcesPage'
 import { JobsPage } from '@/pages/JobsPage'
 import { StatusBoardPage } from '@/pages/StatusBoardPage'
+import { QcFormPage } from '@/pages/QcFormPage'
 import { InvoicingPage } from '@/pages/InvoicingPage'
 import { SettingsPage } from '@/pages/SettingsPage'
 import { ComingSoonPage } from '@/pages/ComingSoonPage'
+import { LoginPage } from '@/pages/LoginPage'
+
+function RequireModule({
+  moduleId,
+  children,
+}: {
+  moduleId: string
+  children: React.ReactNode
+}) {
+  const { canAccessModule } = useAuthContext()
+  if (!canAccessModule(moduleId)) {
+    return <Navigate to="/" replace />
+  }
+  return children
+}
 
 function AppRoutes() {
   const { darkMode, setDarkMode } = useApp()
+  const { isAuthenticated } = useAuthContext()
+
+  if (!isAuthenticated) {
+    return <LoginPage />
+  }
 
   return (
     <Layout
@@ -20,27 +42,83 @@ function AppRoutes() {
     >
       <Routes>
         <Route path="/" element={<DashboardPage />} />
-        <Route path="/agent-input" element={<AgentInputPage />} />
-        <Route path="/resources" element={<ResourcesPage />} />
-        <Route path="/jobs" element={<JobsPage />} />
-        <Route path="/board" element={<StatusBoardPage />} />
+        <Route
+          path="/agent-input"
+          element={
+            <RequireModule moduleId="agent-input">
+              <AgentInputPage />
+            </RequireModule>
+          }
+        />
+        <Route
+          path="/resources"
+          element={
+            <RequireModule moduleId="resources">
+              <ResourcesPage />
+            </RequireModule>
+          }
+        />
+        <Route
+          path="/jobs"
+          element={
+            <RequireModule moduleId="jobs">
+              <JobsPage />
+            </RequireModule>
+          }
+        />
+        <Route
+          path="/board"
+          element={
+            <RequireModule moduleId="board">
+              <StatusBoardPage />
+            </RequireModule>
+          }
+        />
+        <Route
+          path="/qc"
+          element={
+            <RequireModule moduleId="qc">
+              <QcFormPage />
+            </RequireModule>
+          }
+        />
+        <Route path="/qc/:jobId" element={
+          <RequireModule moduleId="qc">
+            <QcFormPage />
+          </RequireModule>
+        } />
         <Route path="/inventory" element={<ComingSoonPage />} />
         <Route path="/customers" element={<ComingSoonPage />} />
         <Route path="/scheduling" element={<ComingSoonPage />} />
-        <Route path="/invoicing" element={<InvoicingPage />} />
-        <Route path="/settings" element={<SettingsPage />} />
+        <Route
+          path="/invoicing"
+          element={
+            <RequireModule moduleId="invoicing">
+              <InvoicingPage />
+            </RequireModule>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <RequireModule moduleId="settings">
+              <SettingsPage />
+            </RequireModule>
+          }
+        />
       </Routes>
     </Layout>
   )
 }
 
 export default function App() {
-  // HashRouter avoids GitHub Pages 404s on deep links / iPhone Safari refreshes
   return (
     <HashRouter>
-      <AppProvider>
-        <AppRoutes />
-      </AppProvider>
+      <AuthProvider>
+        <AppProvider>
+          <AppRoutes />
+        </AppProvider>
+      </AuthProvider>
     </HashRouter>
   )
 }

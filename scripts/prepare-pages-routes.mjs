@@ -7,6 +7,7 @@ const routes = [
   'resources',
   'jobs',
   'board',
+  'qc',
   'inventory',
   'customers',
   'scheduling',

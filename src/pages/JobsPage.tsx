@@ -1,21 +1,28 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Plus } from 'lucide-react'
 import { useApp } from '@/context/AppContext'
+import { useAuthContext } from '@/context/AuthContext'
 import { WorkOrderForm } from '@/components/jobs/WorkOrderForm'
+import { filterJobsForSession } from '@/lib/jobAccess'
 import { JOB_PRIORITY_LABELS, JOB_STATUS_LABELS, type RepairJob } from '@/types'
 import { formatCurrency } from '@/lib/utils'
 
 export function JobsPage() {
   const { jobs, createJob, updateJob, writeMode } = useApp()
+  const { session, canAssignJobs, isTechnician } = useAuthContext()
+  const visibleJobs = useMemo(
+    () => filterJobsForSession(jobs, session),
+    [jobs, session],
+  )
   const [statusFilter, setStatusFilter] = useState('all')
   const [showNew, setShowNew] = useState(false)
   const [editing, setEditing] = useState<RepairJob | null>(null)
 
   const filtered =
     statusFilter === 'all'
-      ? jobs
-      : jobs.filter((j) => j.status === statusFilter)
+      ? visibleJobs
+      : visibleJobs.filter((j) => j.status === statusFilter)
 
   const sorted = [...filtered].sort(
     (a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
@@ -29,7 +36,10 @@ export function JobsPage() {
             Repair Jobs
           </h1>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-            {jobs.length} total · {filtered.length} shown · writable ({writeMode})
+            {isTechnician
+              ? `Assigned to you · ${visibleJobs.length} jobs · ${writeMode}`
+              : `${visibleJobs.length} total · ${filtered.length} shown · ${writeMode}`}
+            {canAssignJobs ? ' · assign techs below' : ''}
           </p>
         </div>
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
@@ -48,10 +58,12 @@ export function JobsPage() {
           <Link to="/board" className="btn-secondary">
             Status board
           </Link>
-          <button type="button" className="btn-primary" onClick={() => setShowNew(true)}>
-            <Plus className="h-4 w-4" />
-            New job
-          </button>
+          {!isTechnician && (
+            <button type="button" className="btn-primary" onClick={() => setShowNew(true)}>
+              <Plus className="h-4 w-4" />
+              New job
+            </button>
+          )}
         </div>
       </div>
 

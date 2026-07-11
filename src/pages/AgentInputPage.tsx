@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useApp } from '@/context/AppContext'
+import { useAuthContext } from '@/context/AuthContext'
+import { filterJobsForSession } from '@/lib/jobAccess'
 import { generateId } from '@/lib/utils'
 import {
   JOB_PRIORITY_LABELS,
@@ -13,7 +15,6 @@ import {
 } from '@/types'
 import { CheckCircle2 } from 'lucide-react'
 
-const TECHS = ['Mike T.', 'Carlos R.', 'Front Desk']
 const MAKES = ['Club Car', 'EZGO', 'Yamaha', 'Other']
 
 type FormTab = SubmissionType
@@ -28,11 +29,23 @@ const TABS: { id: FormTab; label: string }[] = [
 
 export function AgentInputPage() {
   const { jobs, addJob, updateJob, addSubmission, writeMode } = useApp()
+  const { session, techNames, canAssignJobs, isTechnician } = useAuthContext()
   const [activeTab, setActiveTab] = useState<FormTab>('repair-intake')
-  const [submittedBy, setSubmittedBy] = useState('Mike T.')
+  const [submittedBy, setSubmittedBy] = useState(session?.name ?? techNames[0] ?? 'Tech')
   const [success, setSuccess] = useState<string | null>(null)
 
-  const openJobs = jobs.filter((j) => j.status !== 'picked-up')
+  const visibleJobs = useMemo(
+    () => filterJobsForSession(jobs, session),
+    [jobs, session],
+  )
+  const openJobs = visibleJobs.filter((j) => j.status !== 'picked-up')
+  const submitters = useMemo(() => {
+    if (isTechnician && session) return [session.name]
+    return [...techNames, 'Front Desk', session?.name].filter(
+      (n, i, arr): n is string => Boolean(n) && arr.indexOf(n) === i,
+    )
+  }, [isTechnician, session, techNames])
+  const assignOptions = techNames
 
   function showSuccess(msg: string) {
     setSuccess(msg)
@@ -207,7 +220,7 @@ export function AgentInputPage() {
           value={submittedBy}
           onChange={(e) => setSubmittedBy(e.target.value)}
         >
-          {TECHS.map((t) => (
+          {submitters.map((t) => (
             <option key={t} value={t}>
               {t}
             </option>
@@ -305,9 +318,15 @@ export function AgentInputPage() {
               <label className="label" htmlFor="assignedTech">
                 Assigned Tech
               </label>
-              <select id="assignedTech" name="assignedTech" className="input-field">
+              <select
+                id="assignedTech"
+                name="assignedTech"
+                className="input-field"
+                disabled={!canAssignJobs}
+                defaultValue={isTechnician ? session?.name : ''}
+              >
                 <option value="">Unassigned</option>
-                {TECHS.filter((t) => t !== 'Front Desk').map((t) => (
+                {assignOptions.map((t) => (
                   <option key={t} value={t}>
                     {t}
                   </option>
@@ -428,7 +447,7 @@ export function AgentInputPage() {
                 Tech Name *
               </label>
               <select id="techName" name="techName" required defaultValue={submittedBy} className="input-field">
-                {TECHS.filter((t) => t !== 'Front Desk').map((t) => (
+                {assignOptions.map((t) => (
                   <option key={t} value={t}>
                     {t}
                   </option>

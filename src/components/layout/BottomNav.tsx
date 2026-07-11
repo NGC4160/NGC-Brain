@@ -1,4 +1,5 @@
 import {
+  ClipboardCheck,
   ClipboardEdit,
   Kanban,
   LayoutDashboard,
@@ -8,14 +9,24 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
+import { useAuthContext } from '@/context/AuthContext'
 import { cn } from '@/lib/utils'
 
-const tabs: { to: string; label: string; icon: LucideIcon; end?: boolean }[] = [
-  { to: '/', label: 'Home', icon: LayoutDashboard, end: true },
-  { to: '/board', label: 'Board', icon: Kanban },
-  { to: '/jobs', label: 'Jobs', icon: Wrench },
-  { to: '/agent-input', label: 'Input', icon: ClipboardEdit },
-  { to: '/invoicing', label: 'AR', icon: Receipt },
+interface Tab {
+  to: string
+  label: string
+  icon: LucideIcon
+  end?: boolean
+  moduleId: string
+}
+
+const allTabs: Tab[] = [
+  { to: '/', label: 'Home', icon: LayoutDashboard, end: true, moduleId: 'dashboard' },
+  { to: '/board', label: 'Board', icon: Kanban, moduleId: 'board' },
+  { to: '/jobs', label: 'Jobs', icon: Wrench, moduleId: 'jobs' },
+  { to: '/qc', label: 'QC', icon: ClipboardCheck, moduleId: 'qc' },
+  { to: '/agent-input', label: 'Input', icon: ClipboardEdit, moduleId: 'agent-input' },
+  { to: '/invoicing', label: 'AR', icon: Receipt, moduleId: 'invoicing' },
 ]
 
 interface BottomNavProps {
@@ -23,9 +34,25 @@ interface BottomNavProps {
 }
 
 export function BottomNav({ onOpenMore }: BottomNavProps) {
+  const { canAccessModule, isTechnician } = useAuthContext()
+
+  // Prefer QC in the bar for technicians; AR for office/manager roles
+  const preferred = allTabs.filter((t) => {
+    if (!canAccessModule(t.moduleId)) return false
+    if (isTechnician && t.moduleId === 'invoicing') return false
+    if (!isTechnician && t.moduleId === 'qc') return false
+    return true
+  })
+
+  // Cap at 5 primary tabs + More
+  const tabs = preferred.slice(0, 5)
+
   return (
     <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-ngc-200 bg-white/95 backdrop-blur safe-bottom dark:border-ngc-800 dark:bg-slate-900/95 md:hidden">
-      <div className="grid grid-cols-6 gap-0.5 px-1 py-1">
+      <div
+        className="grid gap-0.5 px-1 py-1"
+        style={{ gridTemplateColumns: `repeat(${tabs.length + 1}, minmax(0, 1fr))` }}
+      >
         {tabs.map((tab) => {
           const Icon = tab.icon
           return (

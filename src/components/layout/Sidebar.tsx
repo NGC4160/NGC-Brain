@@ -1,9 +1,11 @@
 import {
   BookOpen,
   Calendar,
+  ClipboardCheck,
   ClipboardEdit,
   Kanban,
   LayoutDashboard,
+  LogOut,
   Moon,
   Package,
   Receipt,
@@ -14,12 +16,15 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { navModules, appConfig } from '@/config/app.config'
+import { ROLE_LABELS } from '@/config/staff'
+import { useAuthContext } from '@/context/AuthContext'
 import { cn } from '@/lib/utils'
 import { NavLink } from 'react-router-dom'
 
 const iconMap: Record<string, LucideIcon> = {
   LayoutDashboard,
   ClipboardEdit,
+  ClipboardCheck,
   BookOpen,
   Wrench,
   Kanban,
@@ -36,6 +41,11 @@ interface SidebarProps {
 }
 
 export function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
+  const { session, canAccessModule, signOut } = useAuthContext()
+  const modules = navModules.filter(
+    (m) => m.enabled && canAccessModule(m.id),
+  )
+
   return (
     <aside className="flex h-dvh w-64 shrink-0 flex-col border-r border-ngc-200 bg-white dark:border-ngc-800 dark:bg-slate-900">
       <div className="border-b border-ngc-200 bg-gradient-to-br from-ngc-50 to-brand-50 px-4 py-4 dark:border-ngc-800 dark:from-ngc-950 dark:to-slate-900">
@@ -47,26 +57,17 @@ export function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
         <p className="mt-2 text-xs font-medium text-ngc-500 dark:text-ngc-300">
           {appConfig.tagline}
         </p>
+        {session && (
+          <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
+            <span className="font-semibold">{session.name}</span>
+            <span className="text-slate-400"> · {ROLE_LABELS[session.role]}</span>
+          </p>
+        )}
       </div>
 
       <nav className="flex-1 space-y-1 overflow-y-auto p-3">
-        {navModules.map((mod) => {
+        {modules.map((mod) => {
           const Icon = iconMap[mod.icon] ?? LayoutDashboard
-          if (!mod.enabled) {
-            return (
-              <div
-                key={mod.id}
-                className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-slate-400 dark:text-slate-600"
-                title={mod.description}
-              >
-                <Icon className="h-5 w-5 shrink-0 opacity-50" />
-                <span>{mod.label}</span>
-                <span className="ml-auto rounded bg-slate-100 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide dark:bg-slate-800">
-                  Soon
-                </span>
-              </div>
-            )
-          }
           return (
             <NavLink
               key={mod.id}
@@ -80,23 +81,30 @@ export function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
                     : 'text-ngc-600 hover:bg-ngc-50 dark:text-ngc-300 dark:hover:bg-ngc-950',
                 )
               }
-              title={mod.description}
             >
               <Icon className="h-5 w-5 shrink-0" />
-              {mod.label}
+              <span>{mod.label}</span>
             </NavLink>
           )
         })}
       </nav>
 
-      <div className="border-t border-ngc-200 p-3 dark:border-ngc-800">
+      <div className="space-y-1 border-t border-ngc-200 p-3 dark:border-ngc-800">
         <button
           type="button"
           onClick={onToggleDarkMode}
-          className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ngc-600 transition hover:bg-ngc-50 dark:text-ngc-300 dark:hover:bg-ngc-950"
+          className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-ngc-600 hover:bg-ngc-50 dark:text-ngc-300 dark:hover:bg-ngc-950"
         >
           {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          {darkMode ? 'Light Mode' : 'Dark Mode'}
+          {darkMode ? 'Light mode' : 'Dark mode'}
+        </button>
+        <button
+          type="button"
+          onClick={signOut}
+          className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-ngc-600 hover:bg-ngc-50 dark:text-ngc-300 dark:hover:bg-ngc-950"
+        >
+          <LogOut className="h-5 w-5" />
+          Sign out
         </button>
       </div>
     </aside>

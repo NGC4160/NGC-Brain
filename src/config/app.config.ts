@@ -117,6 +117,14 @@ export const navModules: NavModule[] = [
     description: 'Shop status board',
   },
   {
+    id: 'qc',
+    label: 'QC Form',
+    path: '/qc',
+    icon: 'ClipboardCheck',
+    enabled: true,
+    description: 'Shop QC completion for assigned jobs',
+  },
+  {
     id: 'inventory',
     label: 'Inventory',
     path: '/inventory',

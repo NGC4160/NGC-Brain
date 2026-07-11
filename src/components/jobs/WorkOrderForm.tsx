@@ -4,8 +4,8 @@ import { JOB_PRIORITY_LABELS, JOB_STATUS_LABELS } from '@/types'
 import { evaluateDepositGate } from '@/lib/depositGates'
 import { DEPOSIT_BATTERY, DEPOSIT_LITHIUM, DIAGNOSTIC_MIN } from '@/lib/depositGates'
 import type { WorkOrderInput } from '@/services/dms/workOrders'
+import { useAuthContext } from '@/context/AuthContext'
 
-const TECHS = ['Mike T.', 'Carlos R.', 'Roy', 'Front Desk', 'Unassigned']
 const MAKES = ['Club Car', 'EZGO', 'Yamaha', 'Star EV', 'Icon', 'Other']
 const STATUSES = Object.keys(JOB_STATUS_LABELS) as JobStatus[]
 
@@ -22,6 +22,16 @@ export function WorkOrderForm({
   onSubmit,
   onCancel,
 }: WorkOrderFormProps) {
+  const { techNames, canAssignJobs, canOverrideDeposit, session, isTechnician } =
+    useAuthContext()
+  const techOptions = useMemo(() => {
+    const names = [...techNames]
+    if (initial?.assignedTech && !names.includes(initial.assignedTech)) {
+      names.push(initial.assignedTech)
+    }
+    return names
+  }, [techNames, initial?.assignedTech])
+
   const [customerName, setCustomerName] = useState(initial?.customerName ?? '')
   const [make, setMake] = useState(initial?.make ?? 'Club Car')
   const [model, setModel] = useState(initial?.model ?? '')
@@ -29,7 +39,9 @@ export function WorkOrderForm({
   const [serialVin, setSerialVin] = useState(initial?.serialVin ?? '')
   const [issueDescription, setIssueDescription] = useState(initial?.issueDescription ?? '')
   const [priority, setPriority] = useState<JobPriority>(initial?.priority ?? 'normal')
-  const [assignedTech, setAssignedTech] = useState(initial?.assignedTech ?? '')
+  const [assignedTech, setAssignedTech] = useState(
+    initial?.assignedTech ?? (isTechnician ? session?.name ?? '' : ''),
+  )
   const [status, setStatus] = useState<JobStatus>(initial?.status ?? 'received')
   const [estimatedRevenue, setEstimatedRevenue] = useState(
     initial?.estimatedRevenue?.toString() ?? '',
@@ -63,11 +75,11 @@ export function WorkOrderForm({
         serialVin: serialVin.trim() || undefined,
         issueDescription: issueDescription.trim(),
         priority,
-        assignedTech: assignedTech && assignedTech !== 'Unassigned' ? assignedTech : undefined,
+        assignedTech: assignedTech && assignedTech !== 'Unassigned' ? assignedTech : '',
         status,
         estimatedRevenue: estimatedRevenue ? Number(estimatedRevenue) : 0,
         paidAmount: paidAmount ? Number(paidAmount) : 0,
-        force,
+        force: force && canOverrideDeposit,
       })
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not save work order')
@@ -81,6 +93,7 @@ export function WorkOrderForm({
       <div className="sm:col-span-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
         Deposit gates: Lithium ${DEPOSIT_LITHIUM.toLocaleString()} · Battery $
         {DEPOSIT_BATTERY.toLocaleString()} · Diagnostic ${DIAGNOSTIC_MIN}
+        {canAssignJobs ? ' · Service manager can assign technicians' : ''}
       </div>
 
       <div className="sm:col-span-2">
@@ -91,12 +104,19 @@ export function WorkOrderForm({
           className="input-field"
           value={customerName}
           onChange={(e) => setCustomerName(e.target.value)}
+          disabled={isTechnician && Boolean(initial?.id)}
         />
       </div>
 
       <div>
         <label className="label" htmlFor="make">Make *</label>
-        <select id="make" className="input-field" value={make} onChange={(e) => setMake(e.target.value)}>
+        <select
+          id="make"
+          className="input-field"
+          value={make}
+          onChange={(e) => setMake(e.target.value)}
+          disabled={isTechnician && Boolean(initial?.id)}
+        >
           {MAKES.map((m) => (
             <option key={m} value={m}>{m}</option>
           ))}
@@ -110,6 +130,7 @@ export function WorkOrderForm({
           className="input-field"
           value={model}
           onChange={(e) => setModel(e.target.value)}
+          disabled={isTechnician && Boolean(initial?.id)}
         />
       </div>
       <div>
@@ -180,11 +201,18 @@ export function WorkOrderForm({
           className="input-field"
           value={assignedTech || 'Unassigned'}
           onChange={(e) => setAssignedTech(e.target.value)}
+          disabled={!canAssignJobs}
         >
-          {TECHS.map((t) => (
+          <option value="Unassigned">Unassigned</option>
+          {techOptions.map((t) => (
             <option key={t} value={t}>{t}</option>
           ))}
         </select>
+        {!canAssignJobs && (
+          <p className="mt-1 text-xs text-slate-500">
+            Only the service manager can assign jobs
+          </p>
+        )}
       </div>
       <div>
         <label className="label" htmlFor="estimatedRevenue">Job total ($)</label>
@@ -196,6 +224,7 @@ export function WorkOrderForm({
           className="input-field"
           value={estimatedRevenue}
           onChange={(e) => setEstimatedRevenue(e.target.value)}
+          disabled={isTechnician}
         />
       </div>
       <div>
@@ -208,6 +237,7 @@ export function WorkOrderForm({
           className="input-field"
           value={paidAmount}
           onChange={(e) => setPaidAmount(e.target.value)}
+          disabled={isTechnician}
         />
       </div>
 
@@ -221,14 +251,10 @@ export function WorkOrderForm({
         >
           <p className="font-medium">{gate.code}</p>
           <p className="mt-1">{gate.message}</p>
-          <p className="mt-1 text-xs opacity-80">
-            Type: {gate.jobType} · Required deposit ${gate.requiredDeposit.toLocaleString()} · Paid $
-            {gate.paidAmount.toLocaleString()}
-          </p>
         </div>
       )}
 
-      {gate.blocked && (
+      {gate.blocked && canOverrideDeposit && (
         <label className="sm:col-span-2 flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300">
           <input
             type="checkbox"
@@ -236,7 +262,7 @@ export function WorkOrderForm({
             checked={force}
             onChange={(e) => setForce(e.target.checked)}
           />
-          Override deposit gate (manager only — still records the warning)
+          Override deposit gate (service manager / owner)
         </label>
       )}
 
@@ -250,7 +276,11 @@ export function WorkOrderForm({
             Cancel
           </button>
         )}
-        <button type="submit" className="btn-primary" disabled={saving || (gate.blocked && !force)}>
+        <button
+          type="submit"
+          className="btn-primary"
+          disabled={saving || (gate.blocked && !(force && canOverrideDeposit))}
+        >
           {saving ? 'Saving…' : submitLabel}
         </button>
       </div>

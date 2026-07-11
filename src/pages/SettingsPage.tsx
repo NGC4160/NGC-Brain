@@ -8,6 +8,7 @@ import {
   ExternalLink,
   BookOpen,
   Globe,
+  KeyRound,
 } from 'lucide-react'
 import {
   fetchImportStatus,
@@ -19,11 +20,14 @@ import {
   type QboStatus,
 } from '@/services/dms/api'
 import { NGC_BOOKKEEPER } from '@/config/business'
+import { ROLE_LABELS, MAX_TECHNICIANS } from '@/config/staff'
+import { useAuthContext } from '@/context/AuthContext'
 import { Link } from 'react-router-dom'
 
 type ApiMode = 'checking' | 'live' | 'pages'
 
 export function SettingsPage() {
+  const { staff, updateStaffMember, canManageStaff, resetStaffDefaults } = useAuthContext()
   const [apiMode, setApiMode] = useState<ApiMode>('checking')
   const [importStatus, setImportStatus] = useState<ImportStatus | null>(null)
   const [qboStatus, setQboStatus] = useState<QboStatus | null>(null)
@@ -169,6 +173,86 @@ export function SettingsPage() {
           </div>
         </dl>
       </section>
+
+      {canManageStaff && (
+        <section className="card space-y-4 p-6">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="flex items-start gap-2">
+              <KeyRound className="mt-0.5 h-5 w-5 text-brand-600" />
+              <div>
+                <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+                  Staff passcodes
+                </h2>
+                <p className="text-sm text-slate-500">
+                  Up to {MAX_TECHNICIANS} technicians + service manager. Passcodes are 4–6 digits
+                  (shop-floor PINs on this device).
+                </p>
+              </div>
+            </div>
+            <button type="button" className="btn-secondary" onClick={resetStaffDefaults}>
+              Reset defaults
+            </button>
+          </div>
+          <ul className="space-y-3">
+            {staff.map((member) => (
+              <li
+                key={member.id}
+                className="grid gap-2 rounded-lg border border-slate-200 p-3 dark:border-slate-800 sm:grid-cols-[1fr_1fr_7rem]"
+              >
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                    {ROLE_LABELS[member.role]}
+                    {member.techSlot ? ` · slot ${member.techSlot}` : ''}
+                  </p>
+                  <input
+                    className="input-field mt-1"
+                    value={member.name}
+                    placeholder={member.role === 'technician' ? 'Technician name' : 'Name'}
+                    onChange={(e) => updateStaffMember(member.id, { name: e.target.value })}
+                    disabled={member.role !== 'technician' && member.id === 'owner-ngc'}
+                  />
+                </div>
+                <div>
+                  <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                    Passcode
+                  </p>
+                  <input
+                    className="input-field mt-1 tracking-widest"
+                    inputMode="numeric"
+                    value={member.passcode}
+                    placeholder="4–6 digits"
+                    onChange={(e) =>
+                      updateStaffMember(member.id, {
+                        passcode: e.target.value.replace(/\D/g, '').slice(0, 6),
+                      })
+                    }
+                  />
+                </div>
+                <div className="flex items-end">
+                  {member.role === 'technician' ? (
+                    <label className="flex min-h-11 items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+                      <input
+                        type="checkbox"
+                        checked={member.active && Boolean(member.name.trim() && member.passcode)}
+                        onChange={(e) =>
+                          updateStaffMember(member.id, {
+                            active: e.target.checked,
+                          })
+                        }
+                      />
+                      Active
+                    </label>
+                  ) : (
+                    <p className="pb-3 text-xs text-slate-400">
+                      {member.active ? 'Active' : 'Inactive'}
+                    </p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="card p-6">
         <div className="flex items-center gap-2">

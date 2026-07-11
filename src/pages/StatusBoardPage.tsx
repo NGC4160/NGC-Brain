@@ -2,7 +2,9 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AlertTriangle, Plus } from 'lucide-react'
 import { useApp } from '@/context/AppContext'
+import { useAuthContext } from '@/context/AuthContext'
 import { WorkOrderForm } from '@/components/jobs/WorkOrderForm'
+import { filterJobsForSession } from '@/lib/jobAccess'
 import {
   JOB_PRIORITY_LABELS,
   JOB_STATUS_LABELS,
@@ -23,6 +25,11 @@ const BOARD_COLUMNS: JobStatus[] = [
 
 export function StatusBoardPage() {
   const { jobs, createJob, updateJob, writeMode } = useApp()
+  const { session, canAssignJobs, isTechnician, techNames } = useAuthContext()
+  const visibleJobs = useMemo(
+    () => filterJobsForSession(jobs, session),
+    [jobs, session],
+  )
   const [showNew, setShowNew] = useState(false)
   const [editing, setEditing] = useState<RepairJob | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -32,14 +39,14 @@ export function StatusBoardPage() {
       JobStatus,
       RepairJob[]
     >
-    for (const job of jobs) {
+    for (const job of visibleJobs) {
       if (BOARD_COLUMNS.includes(job.status)) map[job.status].push(job)
     }
     for (const status of BOARD_COLUMNS) {
       map[status].sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
     }
     return map
-  }, [jobs])
+  }, [visibleJobs])
 
   async function moveJob(job: RepairJob, status: JobStatus) {
     setError(null)
@@ -47,6 +54,17 @@ export function StatusBoardPage() {
       await updateJob(job.id, { status })
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not update status')
+    }
+  }
+
+  async function assignJob(job: RepairJob, tech: string) {
+    setError(null)
+    try {
+      await updateJob(job.id, {
+        assignedTech: tech === 'Unassigned' ? '' : tech,
+      } as Partial<RepairJob>)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Could not assign tech')
     }
   }
 
@@ -58,7 +76,12 @@ export function StatusBoardPage() {
             Shop Status Board
           </h1>
           <p className="mt-1 text-sm text-slate-500">
-            Drag-free board — tap a status to move carts through the shop · storage:{' '}
+            {isTechnician
+              ? `Your assigned carts - ${session?.name}`
+              : canAssignJobs
+                ? 'Assign technicians, then move carts through the shop'
+                : 'Move carts through the shop'}
+            {' · '}
             {writeMode === 'api' ? 'SQLite API' : 'this device'}
           </p>
         </div>
@@ -66,10 +89,12 @@ export function StatusBoardPage() {
           <Link to="/jobs" className="btn-secondary">
             List view
           </Link>
-          <button type="button" className="btn-primary" onClick={() => setShowNew(true)}>
-            <Plus className="h-4 w-4" />
-            New job
-          </button>
+          {!isTechnician && (
+            <button type="button" className="btn-primary" onClick={() => setShowNew(true)}>
+              <Plus className="h-4 w-4" />
+              New job
+            </button>
+          )}
         </div>
       </div>
 
@@ -96,7 +121,10 @@ export function StatusBoardPage() {
             </header>
             <ul className="space-y-2 p-2">
               {columns[status].map((job) => (
-                <li key={job.id} className="rounded-lg border border-slate-200 bg-white p-3 dark:border-slate-700 dark:bg-slate-950">
+                <li
+                  key={job.id}
+                  className="rounded-lg border border-slate-200 bg-white p-3 dark:border-slate-700 dark:bg-slate-950"
+                >
                   <button
                     type="button"
                     className="w-full text-left"
@@ -130,6 +158,23 @@ export function StatusBoardPage() {
                       {job.estimatedRevenue ? formatCurrency(job.estimatedRevenue) : '—'}
                     </span>
                   </div>
+                  {canAssignJobs && (
+                    <label className="mt-2 block text-[11px] font-medium text-slate-500">
+                      Assign tech
+                      <select
+                        className="input-field mt-1 py-2 text-sm"
+                        value={job.assignedTech ?? 'Unassigned'}
+                        onChange={(e) => void assignJob(job, e.target.value)}
+                      >
+                        <option value="Unassigned">Unassigned</option>
+                        {techNames.map((t) => (
+                          <option key={t} value={t}>
+                            {t}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                  )}
                   <label className="mt-2 block text-[11px] font-medium text-slate-500">
                     Move to
                     <select
@@ -145,6 +190,14 @@ export function StatusBoardPage() {
                       <option value="picked-up">{JOB_STATUS_LABELS['picked-up']}</option>
                     </select>
                   </label>
+                  {['in-repair', 'qa', 'ready'].includes(job.status) && (
+                    <Link
+                      to={`/qc/${encodeURIComponent(job.id)}`}
+                      className="mt-2 inline-block text-xs font-medium text-brand-600 hover:underline"
+                    >
+                      Open QC form
+                    </Link>
+                  )}
                 </li>
               ))}
               {columns[status].length === 0 && (
