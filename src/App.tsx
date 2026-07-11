@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { AppProvider, useApp } from '@/context/AppContext'
 import { Layout } from '@/components/layout/Layout'
 import { DashboardPage } from '@/pages/DashboardPage'
@@ -6,6 +6,7 @@ import { AgentInputPage } from '@/pages/AgentInputPage'
 import { ResourcesPage } from '@/pages/ResourcesPage'
 import { JobsPage } from '@/pages/JobsPage'
 import { InvoicingPage } from '@/pages/InvoicingPage'
+import { SettingsPage } from '@/pages/SettingsPage'
 import { ComingSoonPage } from '@/pages/ComingSoonPage'
 
 function AppRoutes() {
@@ -25,19 +26,19 @@ function AppRoutes() {
         <Route path="/customers" element={<ComingSoonPage />} />
         <Route path="/scheduling" element={<ComingSoonPage />} />
         <Route path="/invoicing" element={<InvoicingPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
       </Routes>
     </Layout>
   )
 }
 
 export default function App() {
-  const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
-
+  // HashRouter avoids GitHub Pages 404s on deep links / iPhone Safari refreshes
   return (
-    <BrowserRouter basename={basename || undefined}>
+    <HashRouter>
       <AppProvider>
         <AppRoutes />
       </AppProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }

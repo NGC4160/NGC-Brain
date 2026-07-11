@@ -40,10 +40,15 @@ export function ResourcesPage() {
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
           Service manuals, wiring diagrams, parts catalogs, and shop SOPs
         </p>
+        <p className="mt-2 text-xs text-slate-500">
+          To add a Google Drive file: Share → Anyone with the link → copy the link → add it in{' '}
+          <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">src/data/resources.json</code>
+          {' '}→ redeploy. Details in Settings.
+        </p>
       </div>
 
-      <div className="card flex flex-wrap gap-4">
-        <div className="relative min-w-[200px] flex-1">
+      <div className="card flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <div className="relative w-full flex-1 sm:min-w-[200px]">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
           <input
             type="search"
@@ -54,7 +59,7 @@ export function ResourcesPage() {
           />
         </div>
         <select
-          className="input-field w-auto min-w-[160px]"
+          className="input-field w-full sm:w-auto sm:min-w-[160px]"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
@@ -66,7 +71,7 @@ export function ResourcesPage() {
           ))}
         </select>
         <select
-          className="input-field w-auto min-w-[140px]"
+          className="input-field w-full sm:w-auto sm:min-w-[140px]"
           value={makeFilter}
           onChange={(e) => setMakeFilter(e.target.value)}
         >

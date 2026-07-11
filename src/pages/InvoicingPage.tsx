@@ -226,50 +226,92 @@ function InvoiceTable({ invoices }: { invoices: InvoiceRecord[] }) {
   }
 
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full text-left text-sm">
-        <thead>
-          <tr className="border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/50">
-            <th className="px-5 py-3 font-medium text-slate-500">Invoice #</th>
-            <th className="px-5 py-3 font-medium text-slate-500">Customer</th>
-            <th className="px-5 py-3 font-medium text-slate-500">Type</th>
-            <th className="px-5 py-3 font-medium text-slate-500">Total</th>
-            <th className="px-5 py-3 font-medium text-slate-500">Paid</th>
-            <th className="px-5 py-3 font-medium text-slate-500">Outstanding</th>
-            <th className="px-5 py-3 font-medium text-slate-500">Status</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-          {invoices.map((inv) => (
-            <tr key={inv.id} className="hover:bg-slate-50 dark:hover:bg-slate-900/50">
-              <td className="px-5 py-3 font-medium text-slate-900 dark:text-white">
-                {inv.invoiceNumber}
-              </td>
-              <td className="px-5 py-3">{inv.customerName}</td>
-              <td className="px-5 py-3 text-slate-600 dark:text-slate-400">
-                {JOB_TYPE_LABELS[inv.jobType]}
-              </td>
-              <td className="px-5 py-3">{formatCurrency(inv.totalAmount)}</td>
-              <td className="px-5 py-3 text-brand-700 dark:text-brand-400">
-                {formatCurrency(inv.paidAmount)}
-              </td>
-              <td className="px-5 py-3 font-medium text-red-600 dark:text-red-400">
-                {inv.outstandingBalance > 0 ? formatCurrency(inv.outstandingBalance) : '—'}
-              </td>
-              <td className="px-5 py-3">
-                <span
-                  className={cn(
-                    'rounded-full px-2.5 py-0.5 text-xs font-medium',
-                    PAYMENT_BADGE[inv.paymentStatus],
-                  )}
-                >
-                  {PAYMENT_STATUS_LABELS[inv.paymentStatus]}
-                </span>
-              </td>
+    <>
+      <div className="space-y-3 p-3 md:hidden">
+        {invoices.map((inv) => (
+          <article key={inv.id} className="rounded-xl border border-slate-200 p-4 dark:border-slate-800">
+            <div className="flex items-start justify-between gap-2">
+              <div className="min-w-0">
+                <p className="font-semibold text-slate-900 dark:text-white">#{inv.invoiceNumber}</p>
+                <p className="truncate text-sm text-slate-600 dark:text-slate-300">{inv.customerName}</p>
+              </div>
+              <span
+                className={cn(
+                  'shrink-0 rounded-full px-2.5 py-1 text-xs font-medium',
+                  PAYMENT_BADGE[inv.paymentStatus],
+                )}
+              >
+                {PAYMENT_STATUS_LABELS[inv.paymentStatus]}
+              </span>
+            </div>
+            <p className="mt-2 text-xs text-slate-500">{JOB_TYPE_LABELS[inv.jobType]}</p>
+            <div className="mt-3 grid grid-cols-3 gap-2 border-t border-slate-100 pt-3 text-center dark:border-slate-800">
+              <div>
+                <p className="text-[11px] text-slate-400">Total</p>
+                <p className="text-sm font-medium">{formatCurrency(inv.totalAmount)}</p>
+              </div>
+              <div>
+                <p className="text-[11px] text-slate-400">Paid</p>
+                <p className="text-sm font-medium text-brand-700 dark:text-brand-400">
+                  {formatCurrency(inv.paidAmount)}
+                </p>
+              </div>
+              <div>
+                <p className="text-[11px] text-slate-400">Due</p>
+                <p className="text-sm font-medium text-red-600 dark:text-red-400">
+                  {inv.outstandingBalance > 0 ? formatCurrency(inv.outstandingBalance) : '—'}
+                </p>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="hidden overflow-x-auto md:block">
+        <table className="w-full text-left text-sm">
+          <thead>
+            <tr className="border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/50">
+              <th className="px-5 py-3 font-medium text-slate-500">Invoice #</th>
+              <th className="px-5 py-3 font-medium text-slate-500">Customer</th>
+              <th className="px-5 py-3 font-medium text-slate-500">Type</th>
+              <th className="px-5 py-3 font-medium text-slate-500">Total</th>
+              <th className="px-5 py-3 font-medium text-slate-500">Paid</th>
+              <th className="px-5 py-3 font-medium text-slate-500">Outstanding</th>
+              <th className="px-5 py-3 font-medium text-slate-500">Status</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+            {invoices.map((inv) => (
+              <tr key={inv.id} className="hover:bg-slate-50 dark:hover:bg-slate-900/50">
+                <td className="px-5 py-3 font-medium text-slate-900 dark:text-white">
+                  {inv.invoiceNumber}
+                </td>
+                <td className="px-5 py-3">{inv.customerName}</td>
+                <td className="px-5 py-3 text-slate-600 dark:text-slate-400">
+                  {JOB_TYPE_LABELS[inv.jobType]}
+                </td>
+                <td className="px-5 py-3">{formatCurrency(inv.totalAmount)}</td>
+                <td className="px-5 py-3 text-brand-700 dark:text-brand-400">
+                  {formatCurrency(inv.paidAmount)}
+                </td>
+                <td className="px-5 py-3 font-medium text-red-600 dark:text-red-400">
+                  {inv.outstandingBalance > 0 ? formatCurrency(inv.outstandingBalance) : '—'}
+                </td>
+                <td className="px-5 py-3">
+                  <span
+                    className={cn(
+                      'rounded-full px-2.5 py-0.5 text-xs font-medium',
+                      PAYMENT_BADGE[inv.paymentStatus],
+                    )}
+                  >
+                    {PAYMENT_STATUS_LABELS[inv.paymentStatus]}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   )
 }

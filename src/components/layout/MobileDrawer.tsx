@@ -12,9 +12,9 @@ import {
   Wrench,
   type LucideIcon,
 } from 'lucide-react'
+import { NavLink } from 'react-router-dom'
 import { navModules, appConfig } from '@/config/app.config'
 import { cn } from '@/lib/utils'
-import { NavLink } from 'react-router-dom'
 
 const iconMap: Record<string, LucideIcon> = {
   LayoutDashboard,
@@ -28,34 +28,33 @@ const iconMap: Record<string, LucideIcon> = {
   Settings,
 }
 
-interface SidebarProps {
+interface MobileDrawerProps {
   darkMode: boolean
   onToggleDarkMode: () => void
 }
 
-export function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
+export function MobileDrawer({ darkMode, onToggleDarkMode }: MobileDrawerProps) {
   return (
-    <aside className="flex h-dvh w-64 shrink-0 flex-col border-r border-ngc-200 bg-white dark:border-ngc-800 dark:bg-slate-900">
+    <div className="flex flex-1 flex-col overflow-y-auto">
       <div className="border-b border-ngc-200 bg-gradient-to-br from-ngc-50 to-brand-50 px-4 py-4 dark:border-ngc-800 dark:from-ngc-950 dark:to-slate-900">
         <img
           src={appConfig.logoSrc}
           alt={appConfig.businessName}
-          className="h-14 w-full object-contain object-left"
+          className="h-12 w-full object-contain object-left"
         />
         <p className="mt-2 text-xs font-medium text-ngc-500 dark:text-ngc-300">
           {appConfig.tagline}
         </p>
       </div>
 
-      <nav className="flex-1 space-y-1 overflow-y-auto p-3">
+      <nav className="flex-1 space-y-1 p-3">
         {navModules.map((mod) => {
           const Icon = iconMap[mod.icon] ?? LayoutDashboard
           if (!mod.enabled) {
             return (
               <div
                 key={mod.id}
-                className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-slate-400 dark:text-slate-600"
-                title={mod.description}
+                className="flex min-h-12 items-center gap-3 rounded-lg px-3 py-3 text-sm text-slate-400 dark:text-slate-600"
               >
                 <Icon className="h-5 w-5 shrink-0 opacity-50" />
                 <span>{mod.label}</span>
@@ -72,13 +71,12 @@ export function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
               end={mod.path === '/'}
               className={({ isActive }) =>
                 cn(
-                  'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition',
+                  'flex min-h-12 items-center gap-3 rounded-lg px-3 py-3 text-sm font-medium transition',
                   isActive
                     ? 'bg-brand-100 text-brand-800 ring-1 ring-brand-300 dark:bg-brand-950 dark:text-brand-300 dark:ring-brand-800'
                     : 'text-ngc-600 hover:bg-ngc-50 dark:text-ngc-300 dark:hover:bg-ngc-950',
                 )
               }
-              title={mod.description}
             >
               <Icon className="h-5 w-5 shrink-0" />
               {mod.label}
@@ -91,12 +89,12 @@ export function Sidebar({ darkMode, onToggleDarkMode }: SidebarProps) {
         <button
           type="button"
           onClick={onToggleDarkMode}
-          className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ngc-600 transition hover:bg-ngc-50 dark:text-ngc-300 dark:hover:bg-ngc-950"
+          className="flex min-h-12 w-full items-center gap-3 rounded-lg px-3 py-3 text-sm font-medium text-ngc-600 transition hover:bg-ngc-50 dark:text-ngc-300 dark:hover:bg-ngc-950"
         >
           {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           {darkMode ? 'Light Mode' : 'Dark Mode'}
         </button>
       </div>
-    </aside>
+    </div>
   )
 }

@@ -18,23 +18,39 @@ const STORAGE_KEY = 'golf-cart-dashboard-state'
 
 interface PersistedState {
   submissions: AgentSubmission[]
-  resources: typeof mockResources
+  pinnedResourceIds: string[]
 }
 
 function loadPersisted(): PersistedState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (raw) {
-      const parsed = JSON.parse(raw) as AppState
+      const parsed = JSON.parse(raw) as AppState & { pinnedResourceIds?: string[] }
+      const pinnedResourceIds =
+        parsed.pinnedResourceIds ??
+        (parsed.resources ?? [])
+          .filter((r) => r.pinned)
+          .map((r) => r.id)
       return {
         submissions: parsed.submissions ?? [],
-        resources: parsed.resources?.length ? parsed.resources : mockResources,
+        pinnedResourceIds,
       }
     }
   } catch {
     // fall through
   }
-  return { submissions: [], resources: mockResources }
+  return {
+    submissions: [],
+    pinnedResourceIds: mockResources.filter((r) => r.pinned).map((r) => r.id),
+  }
+}
+
+function mergeResources(pinnedIds: string[]): typeof mockResources {
+  const pinned = new Set(pinnedIds)
+  return mockResources.map((r) => ({
+    ...r,
+    pinned: pinned.has(r.id),
+  }))
 }
 
 function savePersisted(state: PersistedState) {
@@ -230,6 +246,11 @@ export function useAppStore() {
     [jobs, dateRange, hcpMeta?.extras],
   )
 
+  const resources = useMemo(
+    () => mergeResources(persisted.pinnedResourceIds),
+    [persisted.pinnedResourceIds],
+  )
+
   const addSubmission = useCallback((submission: AgentSubmission) => {
     setPersisted((prev) => ({
       ...prev,
@@ -252,23 +273,26 @@ export function useAppStore() {
   }, [hcpConnected])
 
   const toggleResourcePin = useCallback((resourceId: string) => {
-    setPersisted((prev) => ({
-      ...prev,
-      resources: prev.resources.map((r) =>
-        r.id === resourceId ? { ...r, pinned: !r.pinned } : r,
-      ),
-    }))
+    setPersisted((prev) => {
+      const has = prev.pinnedResourceIds.includes(resourceId)
+      return {
+        ...prev,
+        pinnedResourceIds: has
+          ? prev.pinnedResourceIds.filter((id) => id !== resourceId)
+          : [...prev.pinnedResourceIds, resourceId],
+      }
+    })
   }, [])
 
   const pinnedResources = useMemo(
-    () => persisted.resources.filter((r) => r.pinned),
-    [persisted.resources],
+    () => resources.filter((r) => r.pinned),
+    [resources],
   )
 
   return {
     jobs,
     submissions: persisted.submissions,
-    resources: persisted.resources,
+    resources,
     kpis,
     dateRange,
     setDateRange,

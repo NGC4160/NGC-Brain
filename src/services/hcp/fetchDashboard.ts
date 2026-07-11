@@ -8,7 +8,7 @@ export interface HCPDashboardExtras {
 }
 
 export interface HCPDashboardPayload {
-  source: 'live' | 'cache'
+  source: 'live' | 'cache' | 'dms'
   syncedAt: string
   jobCount: number
   jobs: RepairJob[]
@@ -20,12 +20,14 @@ export interface HCPDashboardPayload {
     logo_url?: string
   } | null
   invoicing?: InvoicingPayload
+  bookkeeper?: string
 }
 
 const API_BASE = import.meta.env.VITE_HCP_API_URL ?? ''
 
 export async function fetchHCPDashboard(): Promise<HCPDashboardPayload> {
   const urls = [
+    `${API_BASE}/api/dms/dashboard`,
     `${API_BASE}/api/hcp/dashboard`,
     `${import.meta.env.BASE_URL}data/hcp-dashboard.json`,
   ]
@@ -34,13 +36,14 @@ export async function fetchHCPDashboard(): Promise<HCPDashboardPayload> {
     try {
       const res = await fetch(url)
       if (!res.ok) continue
-      return (await res.json()) as HCPDashboardPayload
+      const data = (await res.json()) as HCPDashboardPayload
+      if (data.jobs?.length) return data
     } catch {
       continue
     }
   }
 
-  throw new Error('Could not load Housecall Pro data')
+  throw new Error('Could not load shop data')
 }
 
 export async function refreshHCPSync(): Promise<{ ok: boolean; syncedAt?: string }> {
@@ -53,7 +56,25 @@ export async function refreshHCPSync(): Promise<{ ok: boolean; syncedAt?: string
 }
 
 export function formatSyncSource(source: HCPDashboardPayload['source']): string {
-  return source === 'live' ? 'Housecall Pro (live)' : 'Housecall Pro (cached)'
+  switch (source) {
+    case 'live':
+      return 'Housecall Pro (live)'
+    case 'dms':
+      return 'NGC DMS (imported)'
+    default:
+      return 'GitHub Pages cache'
+  }
+}
+
+export function describeDataMode(source: HCPDashboardPayload['source'] | undefined): string {
+  switch (source) {
+    case 'live':
+      return 'Live API — refresh pulls the latest jobs from Housecall Pro.'
+    case 'dms':
+      return 'Local DMS database — imported HCP exports. Writable jobs come in Phase 2.'
+    default:
+      return 'Static cache on GitHub Pages — not live. Run npm run sync:hcp + deploy:pages to refresh, or npm run dev:all for live data.'
+  }
 }
 
 export async function fetchInvoicing(): Promise<InvoicingPayload> {

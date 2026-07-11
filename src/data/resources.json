@@ -1,15 +1,39 @@
 [
   {
     "id": "club-car-precedent-2015",
-    "title": "Club Car Precedent Service Manual",
+    "title": "Club Car Precedent Service Manual (2015)",
     "category": "service-manual",
-    "description": "Complete service and maintenance guide for Precedent models 2015–2020.",
-    "url": "https://www.clubcar.com/en-us/resource-center",
+    "description": "Official maintenance and service manual for 2015 Precedent electric and gasoline vehicles (PDF).",
+    "url": "https://www.dropbox.com/s/ps5cdsleynrjy0x/2015%20Precedent%20M%26S%20Electric%20and%20Gasoline%20Vehicles%20-105157201.pdf?dl=1",
     "make": "Club Car",
     "model": "Precedent",
-    "yearRange": "2015-2020",
-    "tags": ["electrical", "battery", "troubleshooting", "maintenance"],
+    "yearRange": "2015",
+    "tags": ["electrical", "battery", "troubleshooting", "maintenance", "pdf"],
     "pinned": true
+  },
+  {
+    "id": "club-car-precedent-2019",
+    "title": "Club Car Precedent Service Manual (2019)",
+    "category": "service-manual",
+    "description": "2019 Precedent ERIC and ECH440 electric and gasoline maintenance and service manual (PDF).",
+    "url": "https://www.dropbox.com/s/bqgrvbcd8hvqzzt/2019%20Precedent%2C%20%28ERIC%20And%20ECH440%29%20Electric%20And%20Gasoline%20Maintenance%20And%20Service%20Manual.pdf?dl=1",
+    "make": "Club Car",
+    "model": "Precedent",
+    "yearRange": "2019",
+    "tags": ["electrical", "battery", "troubleshooting", "maintenance", "pdf", "eric"],
+    "pinned": true
+  },
+  {
+    "id": "club-car-precedent-index",
+    "title": "Club Car Precedent Manuals (all years)",
+    "category": "service-manual",
+    "description": "Index of Precedent maintenance manuals from 2005–2019.",
+    "url": "https://islegolfcars.com/service-manuals/#Precedent",
+    "make": "Club Car",
+    "model": "Precedent",
+    "yearRange": "2005-2019",
+    "tags": ["maintenance", "index"],
+    "pinned": false
   },
   {
     "id": "ezgo-rxv-wiring",
@@ -26,8 +50,8 @@
     "id": "yamaha-drive2-manual",
     "title": "Yamaha Drive2 Owner & Service Manual",
     "category": "service-manual",
-    "description": "Drive2 AC and DC model service procedures.",
-    "url": "https://www.yamahagolfcar.com/owner-resources",
+    "description": "Drive2 AC and DC model owner resources and manuals.",
+    "url": "https://www.yamahagolfcar.com/",
     "make": "Yamaha",
     "model": "Drive2",
     "yearRange": "2017-2024",
@@ -45,28 +69,28 @@
   },
   {
     "id": "club-car-parts-catalog",
-    "title": "Club Car Parts Catalog (2024)",
+    "title": "Club Car Official Manuals Portal",
     "category": "parts-catalog",
-    "description": "OEM part numbers and exploded diagrams.",
-    "url": "https://www.clubcar.com/en-us/parts",
+    "description": "Official Club Car operator manuals and warranty publications.",
+    "url": "https://manuals.clubcar.com/",
     "make": "Club Car",
-    "tags": ["parts", "ordering"]
+    "tags": ["parts", "ordering", "manuals"]
   },
   {
     "id": "intake-checklist",
     "title": "Repair Intake Checklist",
     "category": "sop",
     "description": "Standard procedure for new cart intake — photos, VIN, customer sign-off.",
-    "url": "/docs/intake-checklist.pdf",
+    "url": "docs/intake-checklist.html",
     "tags": ["sop", "intake", "checklist"],
     "pinned": true
   },
   {
     "id": "ezgo-warranty",
-    "title": "EZGO Warranty Policy Summary",
+    "title": "EZGO Warranty & Support",
     "category": "warranty",
-    "description": "Coverage terms for EZGO carts under manufacturer warranty.",
-    "url": "https://ezgo.txtsv.com/warranty",
+    "description": "EZGO owner support portal for warranty and product info.",
+    "url": "https://ezgo.txtsv.com/",
     "make": "EZGO",
     "tags": ["warranty", "policy"]
   },

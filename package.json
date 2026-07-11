@@ -8,13 +8,16 @@
     "server": "tsx server/index.ts",
     "dev:all": "concurrently -n web,api -c green,blue \"npm run dev\" \"npm run server\"",
     "build": "tsc -b && vite build",
-    "build:pages": "npm run build:hcp-cache && tsc -b && vite build && cp dist/index.html dist/404.html",
+    "build:pages": "npm run build:hcp-cache && tsc -b && vite build && cp dist/index.html dist/404.html && touch dist/.nojekyll && rm -f dist/_redirects && node scripts/prepare-pages-routes.mjs",
     "build:hcp-cache": "tsx server/build-dashboard-cache.ts",
     "sync:hcp": "tsx server/sync-hcp.ts",
+    "import:hcp": "tsx server/import-hcp.ts",
     "preview": "vite preview",
-    "deploy:pages": "VITE_BASE_PATH=/NGC-Brain/ npm run build:pages && gh-pages -d dist"
+    "deploy:pages": "VITE_BASE_PATH=/NGC-Brain/ npm run build:pages && gh-pages -d dist --dotfiles --nojekyll -m 'Deploy NGC dashboard to GitHub Pages'",
+    "deploy:pages:root": "VITE_BASE_PATH=/ npm run build:pages && echo 'Built for root URL (https://ngc4160.github.io/). Copy dist/ into your ngc4160.github.io repo.'"
   },
   "dependencies": {
+    "better-sqlite3": "^12.11.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
     "react": "^19.0.0",
@@ -24,6 +27,7 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/react": "^19.0.2",

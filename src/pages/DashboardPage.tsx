@@ -33,22 +33,22 @@ export function DashboardPage() {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-wrap items-start justify-between gap-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+          <h1 className="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
             Dashboard
           </h1>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
             Shop overview — KPIs, activity, and quick links
           </p>
         </div>
-        <div className="flex rounded-lg border border-slate-200 p-1 dark:border-slate-700">
+        <div className="flex w-full rounded-lg border border-slate-200 p-1 dark:border-slate-700 sm:w-auto">
           {DATE_RANGE_OPTIONS.map((opt) => (
             <button
               key={opt.value}
               type="button"
               onClick={() => setDateRange(opt.value)}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
+              className={`min-h-10 flex-1 rounded-md px-3 py-2 text-sm font-medium transition sm:flex-none ${
                 dateRange === opt.value
                   ? 'bg-brand-600 text-white shadow-sm ring-1 ring-brand-700'
                   : 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'
@@ -81,7 +81,7 @@ export function DashboardPage() {
                 data={data}
                 onClick={() => {
                   if (def.id === 'active-jobs' || def.id === 'customer-waitlist') {
-                    window.location.hash = ''
+                    window.location.hash = '#/jobs'
                   }
                 }}
               />
