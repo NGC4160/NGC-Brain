@@ -13,6 +13,16 @@ function getCategoryLabel(categoryId: string): string {
   return resourceCategories.find((c) => c.id === categoryId)?.label ?? categoryId
 }
 
+function resolveResourceUrl(url: string): string {
+  if (/^https?:\/\//i.test(url) || url.startsWith('mailto:') || url.startsWith('tel:')) {
+    return url
+  }
+  const base = import.meta.env.BASE_URL || '/'
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`
+  const path = url.replace(/^\//, '')
+  return `${normalizedBase}${path}`
+}
+
 export function ResourceCard({ resource, onTogglePin, compact }: ResourceCardProps) {
   return (
     <div
@@ -71,7 +81,7 @@ export function ResourceCard({ resource, onTogglePin, compact }: ResourceCardPro
       )}
 
       <a
-        href={resource.url}
+        href={resolveResourceUrl(resource.url)}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-brand-600 hover:text-brand-700 dark:text-brand-400"
