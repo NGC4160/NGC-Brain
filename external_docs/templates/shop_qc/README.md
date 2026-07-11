@@ -1,16 +1,39 @@
 # NGC Shop QC Completion Form
 
-**PDF:** [NGC_Shop_QC_Form.pdf](NGC_Shop_QC_Form.pdf)  
-**Source:** [NGC_Shop_QC_Form.html](NGC_Shop_QC_Form.html)
+**Interactive app:** [NGC_Shop_QC_App.html](NGC_Shop_QC_App.html) — photos, videos, and save  
+**Print PDF:** [NGC_Shop_QC_Form.pdf](NGC_Shop_QC_Form.pdf)  
+**Print-only HTML:** [NGC_Shop_QC_Form.html](NGC_Shop_QC_Form.html)
 
 ## Purpose
 
-Technicians complete this form **after every cart** is finished in the shop. It adapts the legacy NGC service-call procedure checklist for in-shop work and matches the **QC / TEST DRIVE** lane in [shop throughput](../../../knowledge/04_operations/shop_throughput.md).
+Technicians complete this form **after every cart** is finished in the shop. The interactive app lets techs upload unlimited photos and videos, then saves everything locally in the **`QC forms`** folder as `{job #}_{customer last name}`.
+
+## Start the app (shop computer)
+
+```bash
+pip install -r scripts/requirements-shop-qc.txt
+python3 scripts/shop_qc_server.py
+```
+
+Open **http://127.0.0.1:8765** in Chrome or Edge.
+
+## Save workflow
+
+1. Enter **HCP invoice / job #** and **customer last name** (required for file naming)
+2. Complete the checklist and upload photos/videos (no limit)
+3. Click **Save QC Form**
+4. A folder is created at `QC forms/{job#}_{LastName}/` containing:
+   - `form.json` — full form data
+   - `{job#}_{LastName}.txt` — quick summary
+   - `media/` — all uploaded photos and videos
+5. Turn in printed copy or confirm save with Ryan/Christine; move whiteboard card to **READY**
+
+If the same job # and last name are saved twice, a timestamp is appended to avoid overwriting.
 
 ## When to use
 
 1. All authorized repair work is complete
-2. Required photos are uploaded to Housecall Pro
+2. Required photos are uploaded to Housecall Pro **and** attached in this app for local archive
 3. 7-point safety inspection is done
 4. Test drive is complete
 5. Cart is ready to move from **QC** → **READY** on the whiteboard
@@ -23,23 +46,14 @@ Technicians complete this form **after every cart** is finished in the shop. It 
 | Notable inspection findings | As needed | During diagnosis / 7-point inspection |
 | Work performed | As needed | After repairs (before & after on repaired areas) |
 
-## Quick start
+Use the upload section for **as many additional photos and videos as needed** — test drive clips, fault codes, lithium install, etc.
 
-1. Open `NGC_Shop_QC_Form.pdf` (or print from the HTML file)
-2. Fill out both pages
-3. Turn in to the office tray
-4. Move the job card to **READY**; Christine notifies the customer
-
-## Regenerate PDF
+## Regenerate print PDF
 
 ```bash
 python3 scripts/generate_shop_qc_pdf.py
 ```
 
-Or from HTML via Chrome:
+## Privacy
 
-```bash
-google-chrome-stable --headless --disable-gpu --no-sandbox --no-pdf-header-footer \
-  --print-to-pdf=external_docs/templates/shop_qc/NGC_Shop_QC_Form.pdf \
-  file://$PWD/external_docs/templates/shop_qc/NGC_Shop_QC_Form.html
-```
+Completed saves live in `QC forms/` and are **gitignored** — they contain customer last names and job media. Do not commit them to the repo.
