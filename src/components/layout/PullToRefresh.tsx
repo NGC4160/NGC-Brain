@@ -19,6 +19,27 @@ interface PullToRefreshProps {
   contentClassName?: string
 }
 
+function isScrollableY(el: Element): boolean {
+  if (!(el instanceof HTMLElement)) return false
+  const style = window.getComputedStyle(el)
+  const overflowY = style.overflowY
+  if (overflowY !== 'auto' && overflowY !== 'scroll' && overflowY !== 'overlay') {
+    return false
+  }
+  return el.scrollHeight > el.clientHeight + 1
+}
+
+/** Nearest vertical scroller between target and the page pull-to-refresh root. */
+function nestedScrollParent(target: EventTarget | null, root: HTMLElement): HTMLElement | null {
+  if (!(target instanceof Element)) return null
+  let node: Element | null = target
+  while (node && node !== root) {
+    if (isScrollableY(node)) return node as HTMLElement
+    node = node.parentElement
+  }
+  return null
+}
+
 export function PullToRefresh({
   children,
   onRefresh,
@@ -50,9 +71,23 @@ export function PullToRefresh({
     const el = scrollRef.current
     if (!el) return
 
+    const canStartPull = (e: TouchEvent) => {
+      if (refreshingRef.current) return false
+      if (el.scrollTop > 0) return false
+      const target = e.target
+      if (target instanceof Element && target.closest('[data-no-pull-refresh]')) {
+        return false
+      }
+      // Job sheets / nested overflow areas own their own scroll — never steal it
+      if (nestedScrollParent(target, el)) return false
+      return true
+    }
+
     const onStart = (e: TouchEvent) => {
-      if (refreshingRef.current) return
-      if (el.scrollTop > 0) return
+      if (!canStartPull(e)) {
+        pulling.current = false
+        return
+      }
       startY.current = e.touches[0].clientY
       pulling.current = true
     }
@@ -60,6 +95,15 @@ export function PullToRefresh({
     const onMove = (e: TouchEvent) => {
       if (!pulling.current || refreshingRef.current) return
       if (el.scrollTop > 0) {
+        reset()
+        return
+      }
+      // If finger moved into a sheet/nested scroller mid-gesture, abort
+      if (e.target instanceof Element && e.target.closest('[data-no-pull-refresh]')) {
+        reset()
+        return
+      }
+      if (nestedScrollParent(e.target, el)) {
         reset()
         return
       }

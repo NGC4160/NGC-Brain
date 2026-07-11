@@ -156,7 +156,12 @@ export function StatusBoardPage() {
       </div>
 
       {(showNew || editing) && (
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/50 p-0 sm:items-center sm:p-4">
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/50 p-0 sm:items-center sm:p-4"
+          data-no-pull-refresh
+          role="dialog"
+          aria-modal="true"
+        >
           <div className="max-h-[92dvh] w-full overflow-y-auto rounded-t-2xl bg-white p-4 shadow-xl dark:bg-slate-900 sm:max-w-2xl sm:rounded-2xl sm:p-6">
             <h2 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">
               {editing ? `Edit ${editing.id}` : 'New work order'}
