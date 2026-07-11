@@ -106,7 +106,15 @@ export const navModules: NavModule[] = [
     path: '/jobs',
     icon: 'Wrench',
     enabled: true,
-    description: 'All repair orders',
+    description: 'Writable repair orders',
+  },
+  {
+    id: 'board',
+    label: 'Status Board',
+    path: '/board',
+    icon: 'Kanban',
+    enabled: true,
+    description: 'Shop status board',
   },
   {
     id: 'inventory',

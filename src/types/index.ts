@@ -76,11 +76,17 @@ export interface RepairJob {
   createdAt: string
   updatedAt: string
   estimatedRevenue?: number
+  paidAmount?: number
   partsCost?: number
   laborHours?: number
   completedAt?: string
   hcpId?: string
   outstandingBalance?: number
+  jobType?: import('./invoicing').InvoiceJobType
+  requiredDeposit?: number
+  depositGap?: number
+  depositBlocked?: boolean
+  depositMessage?: string
 }
 
 export interface AgentSubmission {

@@ -13,6 +13,12 @@ import {
   type HCPDashboardExtras,
   type HCPDashboardPayload,
 } from '@/services/hcp/fetchDashboard'
+import {
+  createWritableJob,
+  fetchWritableJobs,
+  updateWritableJob,
+  type WorkOrderInput,
+} from '@/services/dms/workOrders'
 
 const STORAGE_KEY = 'golf-cart-dashboard-state'
 
@@ -201,8 +207,8 @@ function computeKpis(
 
 export function useAppStore() {
   const [persisted, setPersisted] = useState<PersistedState>(loadPersisted)
-  const [fallbackJobs, setFallbackJobs] = useState<RepairJob[]>(mockJobs)
-  const [hcpJobs, setHcpJobs] = useState<RepairJob[]>([])
+  const [jobs, setJobs] = useState<RepairJob[]>(mockJobs)
+  const [writeMode, setWriteMode] = useState<'api' | 'local'>('local')
   const [hcpMeta, setHcpMeta] = useState<HCPDashboardPayload | null>(null)
   const [hcpLoading, setHcpLoading] = useState(true)
   const [hcpError, setHcpError] = useState<string | null>(null)
@@ -211,18 +217,24 @@ export function useAppStore() {
     return localStorage.getItem('golf-cart-dark-mode') === 'true'
   })
 
-  const jobs = hcpJobs.length > 0 ? hcpJobs : fallbackJobs
-  const hcpConnected = hcpJobs.length > 0
-
   const loadHcp = useCallback(async () => {
     setHcpLoading(true)
     setHcpError(null)
     try {
       const data = await fetchHCPDashboard()
-      setHcpJobs(data.jobs)
       setHcpMeta(data)
+      const writable = await fetchWritableJobs(data.jobs)
+      setJobs(writable.jobs.length ? writable.jobs : data.jobs)
+      setWriteMode(writable.mode)
     } catch (err) {
-      setHcpError(err instanceof Error ? err.message : 'Failed to load HCP data')
+      setHcpError(err instanceof Error ? err.message : 'Failed to load shop data')
+      try {
+        const writable = await fetchWritableJobs(mockJobs)
+        setJobs(writable.jobs)
+        setWriteMode(writable.mode)
+      } catch {
+        setJobs(mockJobs)
+      }
     } finally {
       setHcpLoading(false)
     }
@@ -258,19 +270,49 @@ export function useAppStore() {
     }))
   }, [])
 
-  const addJob = useCallback((job: RepairJob) => {
-    if (hcpConnected) return
-    setFallbackJobs((prev) => [job, ...prev])
-  }, [hcpConnected])
+  const createJob = useCallback(async (input: WorkOrderInput) => {
+    const job = await createWritableJob(input)
+    setJobs((prev) => [job, ...prev.filter((j) => j.id !== job.id)])
+    return job
+  }, [])
 
-  const updateJob = useCallback((jobId: string, updates: Partial<RepairJob>) => {
-    if (hcpConnected) return
-    setFallbackJobs((prev) =>
-      prev.map((j) =>
-        j.id === jobId ? { ...j, ...updates, updatedAt: new Date().toISOString() } : j,
-      ),
-    )
-  }, [hcpConnected])
+  const addJob = useCallback((job: RepairJob) => {
+    void createWritableJob({
+      customerName: job.customerName,
+      make: job.make,
+      model: job.model,
+      year: job.year,
+      serialVin: job.serialVin,
+      issueDescription: job.issueDescription,
+      priority: job.priority,
+      assignedTech: job.assignedTech,
+      status: job.status,
+      estimatedRevenue: job.estimatedRevenue,
+      paidAmount: job.paidAmount,
+    }).then((created) => {
+      setJobs((prev) => [created, ...prev.filter((j) => j.id !== created.id)])
+    })
+  }, [])
+
+  const updateJob = useCallback(async (jobId: string, updates: Partial<RepairJob> & { force?: boolean }) => {
+    const patch: Partial<WorkOrderInput> = {
+      customerName: updates.customerName,
+      make: updates.make,
+      model: updates.model,
+      year: updates.year,
+      serialVin: updates.serialVin,
+      issueDescription: updates.issueDescription,
+      priority: updates.priority,
+      assignedTech: updates.assignedTech,
+      status: updates.status,
+      estimatedRevenue: updates.estimatedRevenue,
+      paidAmount: updates.paidAmount,
+      force: updates.force,
+    }
+    const job = await updateWritableJob(jobId, patch)
+    setJobs((prev) => prev.map((j) => (j.id === jobId ? job : j)))
+    return job
+  }, [])
 
   const toggleResourcePin = useCallback((resourceId: string) => {
     setPersisted((prev) => {
@@ -300,13 +342,16 @@ export function useAppStore() {
     setDarkMode,
     addSubmission,
     addJob,
+    createJob,
     updateJob,
     toggleResourcePin,
     pinnedResources,
     hcpMeta,
     hcpLoading,
     hcpError,
-    hcpConnected,
+    hcpConnected: true,
+    jobsWritable: true,
+    writeMode,
     refreshHcp: loadHcp,
     invoicing: hcpMeta?.invoicing ?? null,
   }

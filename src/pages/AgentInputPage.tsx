@@ -27,7 +27,7 @@ const TABS: { id: FormTab; label: string }[] = [
 ]
 
 export function AgentInputPage() {
-  const { jobs, addJob, updateJob, addSubmission, hcpConnected } = useApp()
+  const { jobs, addJob, updateJob, addSubmission, writeMode } = useApp()
   const [activeTab, setActiveTab] = useState<FormTab>('repair-intake')
   const [submittedBy, setSubmittedBy] = useState('Mike T.')
   const [success, setSuccess] = useState<string | null>(null)
@@ -85,7 +85,7 @@ export function AgentInputPage() {
       updates.completedAt = new Date().toISOString()
     }
 
-    updateJob(jobId, updates)
+    void updateJob(jobId, updates)
     addSubmission({
       id: generateId('sub'),
       type: 'status-update',
@@ -107,7 +107,7 @@ export function AgentInputPage() {
 
     const job = jobs.find((j) => j.id === jobId)
     if (job) {
-      updateJob(jobId, {
+      void updateJob(jobId, {
         partsCost: (job.partsCost ?? 0) + cost * quantity,
       })
     }
@@ -138,7 +138,7 @@ export function AgentInputPage() {
 
     const job = jobs.find((j) => j.id === jobId)
     if (job) {
-      updateJob(jobId, { laborHours: (job.laborHours ?? 0) + hours })
+      void updateJob(jobId, { laborHours: (job.laborHours ?? 0) + hours })
     }
 
     addSubmission({
@@ -186,10 +186,14 @@ export function AgentInputPage() {
         </p>
       </div>
 
-      {hcpConnected && (
-        <div className="rounded-lg border border-ngc-200 bg-ngc-50 px-4 py-3 text-sm text-ngc-700 dark:border-ngc-800 dark:bg-ngc-950 dark:text-ngc-200">
-          Jobs are synced from <strong>Housecall Pro</strong>. Create or update repair orders in
-          HCP. Notes and time logs here are saved locally on this device.
+      {writeMode === 'local' ? (
+        <div className="rounded-lg border border-brand-200 bg-brand-50 px-4 py-3 text-sm text-brand-800 dark:border-brand-900 dark:bg-brand-950 dark:text-brand-200">
+          Work orders are writable on this device (saved in browser). Status changes and new jobs
+          update the Jobs board immediately.
+        </div>
+      ) : (
+        <div className="rounded-lg border border-brand-200 bg-brand-50 px-4 py-3 text-sm text-brand-800 dark:border-brand-900 dark:bg-brand-950 dark:text-brand-200">
+          Connected to local NGC DMS API — work orders persist in SQLite.
         </div>
       )}
 

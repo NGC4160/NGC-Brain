@@ -83,7 +83,14 @@ CREATE TABLE IF NOT EXISTS work_orders (
   updated_at TEXT NOT NULL,
   completed_at TEXT,
   canceled_at TEXT,
-  source TEXT NOT NULL DEFAULT 'manual'
+  source TEXT NOT NULL DEFAULT 'manual',
+  priority TEXT NOT NULL DEFAULT 'normal',
+  paid_cents INTEGER NOT NULL DEFAULT 0,
+  customer_name TEXT,
+  make TEXT,
+  model TEXT,
+  year INTEGER,
+  serial_vin TEXT
 );
 
 CREATE TABLE IF NOT EXISTS import_runs (
