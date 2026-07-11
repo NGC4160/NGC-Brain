@@ -15,11 +15,11 @@
 ## Please verify on your phone
 
 1. Open https://ngc4160.github.io/NGC-Brain/
-2. Dashboard loads with KPIs and the data-mode banner (“GitHub Pages cache”)
-3. **Jobs** and **Invoicing** show cached HCP data
-4. **Manuals & Files** → Club Car Precedent 2015/2019 PDFs open
-5. **Settings** shows bookkeeper Griffin & Furman, LLC and “Running on GitHub Pages (static)”
-6. Sidebar includes Settings
+2. Bottom nav shows Home · Jobs · Input · AR · More
+3. Jobs and Invoicing show card layouts (not a sideways table)
+4. More → Settings shows Griffin & Furman, LLC
+5. Manuals open (Precedent PDFs)
+6. Forms are usable with the on-screen keyboard
 
 ## Out of scope (later phases)
 
