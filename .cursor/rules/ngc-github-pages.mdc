@@ -1,50 +1,54 @@
 ---
-description: Always open and ship NGC projects via GitHub Pages — never localhost-only handoffs
+description: Always open NGC projects via per-project GitHub Pages links
 globs:
 alwaysApply: true
 ---
 
 # NGC — GitHub Pages for all projects
 
-**Policy (Ryan, 2026-07-11):** Always use **GitHub Pages** for opening any project.
+**Policy (Ryan, 2026-07-11):** Always use **GitHub Pages** for opening any project.  
+**Clarification:** **Each project must have its own Pages link** — do not hand Ryan only the site root or bury a standalone tool inside another app’s nav.
 
-## Canonical site
+## Canonical URLs
 
 | Item | Value |
 |------|-------|
-| **Open here** | https://ngc4160.github.io/NGC-Brain/ |
+| **Projects hub** | https://ngc4160.github.io/NGC-Brain/projects/ |
+| **Per-project pattern** | `https://ngc4160.github.io/NGC-Brain/projects/<slug>/` |
 | **Repo** | `NGC4160/NGC-Brain` |
-| **Deploy branch / env** | GitHub Pages (`gh-pages` / `github-pages` environment) |
-| **Base path** | `/NGC-Brain/` |
+| **Pages source** | `gh-pages` branch |
+| **Source files** | `pages/projects/<slug>/` |
 
 ## Required behavior
 
 When building, updating, or handing off any **openable** project (dashboard, form, checklist, tool, landing page, preview):
 
-1. **Ship to GitHub Pages** — deploy so it is reachable under `https://ngc4160.github.io/NGC-Brain/…`
-2. **Give Ryan the Pages URL** as the primary way to open it — not `localhost`, not `file://`, not a Cursor-only preview link
-3. **Reuse the existing deploy path** when one exists (e.g. `.github/workflows/deploy-pages.yml`, `npm run build:pages`, `VITE_BASE_PATH=/NGC-Brain/`)
-4. For **static HTML** tools, publish under a stable path (e.g. `/NGC-Brain/docs/…`) and confirm the live URL returns 200
-5. After deploy, **verify** the live link before telling Ryan it is ready
+1. **Give it a dedicated slug** under `/projects/<slug>/` (stable, kebab-case)
+2. **Ship that URL** as the primary open link — not `localhost`, not `file://`, not “open the dashboard and click …”
+3. Add/update `pages/projects/<slug>/index.html` (+ assets), hub `pages/projects/index.html`, and `pages/projects/projects.json`
+4. Publish with `./scripts/pages/publish_projects.sh` (or equivalent) and **verify HTTP 200**
+5. Update [`knowledge/06_systems/github_pages_projects.md`](knowledge/06_systems/github_pages_projects.md)
+6. Tell Ryan the **project-specific** URL
+
+Dashboard **modules** (jobs, invoicing, inventory routes inside the SPA) can stay as app routes. **Standalone projects** (forms, boards, separate tools) get their own `/projects/<slug>/` link.
 
 ## Do not
 
-- Tell Ryan to “open localhost” or a local file as the main access method
+- Share only `https://ngc4160.github.io/NGC-Brain/` when the ask was for a specific tool
+- Leave a project only in a PR branch / local HTML without a `/projects/<slug>/` URL
 - Host NGC shop tools on a different public host unless Ryan explicitly asks
-- Leave a web project only in a PR branch without a Pages URL when the ask was to open/use it
+- Reuse another project’s URL for a new tool
 
-Local `npm run dev` is fine for agent development. Handoff to Ryan/Christine/techs = **Pages URL**.
+Local `npm run dev` is fine for agent development. Handoff = **that project’s Pages URL**.
 
-## Known live routes (extend as you ship)
+## Current project links
 
-| Path | Project |
-|------|---------|
-| `/NGC-Brain/` | Ops dashboard home |
-| `/NGC-Brain/jobs/` | Jobs |
-| `/NGC-Brain/invoicing/` | Invoicing |
-| `/NGC-Brain/inventory/` | Inventory |
-| `/NGC-Brain/resources/` | Resources / manuals |
-| `/NGC-Brain/agent-input/` | Agent input |
-| `/NGC-Brain/docs/intake-checklist.html` | Intake checklist |
-
-Keep [`knowledge/06_systems/github_pages_projects.md`](knowledge/06_systems/github_pages_projects.md) updated when routes change.
+| Project | Open link |
+|---------|-----------|
+| Hub | https://ngc4160.github.io/NGC-Brain/projects/ |
+| Ops Dashboard | https://ngc4160.github.io/NGC-Brain/projects/ops-dashboard/ |
+| Shop Board | https://ngc4160.github.io/NGC-Brain/projects/shop-board/ |
+| Shop QC Form | https://ngc4160.github.io/NGC-Brain/projects/shop-qc/ |
+| Pickup / Delivery | https://ngc4160.github.io/NGC-Brain/projects/pickup-delivery/ |
+| Personnel Counseling | https://ngc4160.github.io/NGC-Brain/projects/personnel-counseling/ |
+| Intake Checklist | https://ngc4160.github.io/NGC-Brain/projects/intake-checklist/ |

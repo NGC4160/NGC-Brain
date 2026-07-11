@@ -15,13 +15,15 @@
 
 ## GitHub Pages (project open links)
 
-**Policy:** Always open projects via GitHub Pages — not localhost.
+**Policy:** Always open projects via GitHub Pages. **Each project has its own link.**
 
 | Item | Detail |
 |------|--------|
-| **Home** | https://ngc4160.github.io/NGC-Brain/ |
+| **Hub** | https://ngc4160.github.io/NGC-Brain/projects/ |
+| **Pattern** | `https://ngc4160.github.io/NGC-Brain/projects/<slug>/` |
 | **Route list** | [`github_pages_projects.md`](github_pages_projects.md) |
 | **Agent rule** | `.cursor/rules/ngc-github-pages.mdc` |
+| **Publish** | `./scripts/pages/publish_projects.sh` |
 
 ## Housecall Pro
 
