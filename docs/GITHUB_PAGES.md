@@ -77,7 +77,16 @@ Use root base path (`/`) only for that user-site repo — not for the NGC-Brain 
 
 ## If you see a 404
 
-- Wait 2–5 minutes after enabling Pages
-- Confirm the repo is public (or your plan allows private Pages)
-- Confirm Source is **GitHub Actions** or branch **gh-pages**
-- Hard-refresh Safari / Chrome
+- Wait 2–5 minutes after enabling Pages or redeploying
+- Confirm the repo is **public**
+- Confirm Source is branch **gh-pages** / folder **/ (root)** (or GitHub Actions)
+- Hard-refresh Safari / Chrome (old 404 pages are cached briefly)
+- In **Settings → Pages**, status should say **Your site is live**, not “errored”
+
+If Pages shows **errored**, redeploy a clean site:
+
+```bash
+npm run deploy:pages
+```
+
+That publish includes a `.nojekyll` file so GitHub does not run Jekyll on the Vite build.
