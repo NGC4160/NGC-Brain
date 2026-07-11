@@ -57,7 +57,8 @@ Or push to `main` / this feature branch and let the **Deploy to GitHub Pages** w
 
 | Feature | On Pages |
 |---------|----------|
-| Dashboard, Jobs, Invoicing, Manuals | Yes (static + cached HCP JSON) |
+| Dashboard, Jobs, Status Board, Invoicing, Manuals | Yes (static + cached HCP JSON) |
+| Create / edit work orders | Yes (saved in browser localStorage on that device) |
 | Agent Input notes | Yes (saved in browser localStorage) |
 | Live HCP API / SQLite DMS / QBO | No — those need the local API (`npm run dev:all`) |
 
