@@ -1,11 +1,16 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Plus } from 'lucide-react'
 import { useApp } from '@/context/AppContext'
-import { JOB_PRIORITY_LABELS, JOB_STATUS_LABELS } from '@/types'
+import { WorkOrderForm } from '@/components/jobs/WorkOrderForm'
+import { JOB_PRIORITY_LABELS, JOB_STATUS_LABELS, type RepairJob } from '@/types'
 import { formatCurrency } from '@/lib/utils'
 
 export function JobsPage() {
-  const { jobs } = useApp()
+  const { jobs, createJob, updateJob, writeMode } = useApp()
   const [statusFilter, setStatusFilter] = useState('all')
+  const [showNew, setShowNew] = useState(false)
+  const [editing, setEditing] = useState<RepairJob | null>(null)
 
   const filtered =
     statusFilter === 'all'
@@ -24,27 +29,40 @@ export function JobsPage() {
             Repair Jobs
           </h1>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-            {jobs.length} total · {filtered.length} shown
+            {jobs.length} total · {filtered.length} shown · writable ({writeMode})
           </p>
         </div>
-        <select
-          className="input-field sm:w-auto"
-          value={statusFilter}
-          onChange={(e) => setStatusFilter(e.target.value)}
-        >
-          <option value="all">All statuses</option>
-          {Object.entries(JOB_STATUS_LABELS).map(([k, v]) => (
-            <option key={k} value={k}>
-              {v}
-            </option>
-          ))}
-        </select>
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+          <select
+            className="input-field sm:w-auto"
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
+          >
+            <option value="all">All statuses</option>
+            {Object.entries(JOB_STATUS_LABELS).map(([k, v]) => (
+              <option key={k} value={k}>
+                {v}
+              </option>
+            ))}
+          </select>
+          <Link to="/board" className="btn-secondary">
+            Status board
+          </Link>
+          <button type="button" className="btn-primary" onClick={() => setShowNew(true)}>
+            <Plus className="h-4 w-4" />
+            New job
+          </button>
+        </div>
       </div>
 
-      {/* Mobile cards */}
       <div className="space-y-3 md:hidden">
         {sorted.map((job) => (
-          <article key={job.id} className="card space-y-2">
+          <button
+            key={job.id}
+            type="button"
+            className="card w-full space-y-2 text-left"
+            onClick={() => setEditing(job)}
+          >
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0">
                 <p className="font-semibold text-slate-900 dark:text-white">{job.customerName}</p>
@@ -58,8 +76,8 @@ export function JobsPage() {
               {job.make} {job.model}
               {job.year ? ` (${job.year})` : ''}
             </p>
-            {job.issueDescription && (
-              <p className="line-clamp-2 text-sm text-slate-500">{job.issueDescription}</p>
+            {job.depositMessage && (
+              <p className="text-xs text-amber-700 dark:text-amber-300">{job.depositMessage}</p>
             )}
             <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-slate-100 pt-2 text-xs text-slate-500 dark:border-slate-800">
               <span>{JOB_PRIORITY_LABELS[job.priority]}</span>
@@ -68,14 +86,13 @@ export function JobsPage() {
                 {job.estimatedRevenue ? formatCurrency(job.estimatedRevenue) : '—'}
               </span>
             </div>
-          </article>
+          </button>
         ))}
         {sorted.length === 0 && (
           <p className="card py-8 text-center text-sm text-slate-400">No jobs match this filter.</p>
         )}
       </div>
 
-      {/* Desktop table */}
       <div className="card hidden overflow-x-auto p-0 md:block">
         <table className="w-full text-left text-sm">
           <thead>
@@ -91,7 +108,11 @@ export function JobsPage() {
           </thead>
           <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
             {sorted.map((job) => (
-              <tr key={job.id} className="hover:bg-slate-50 dark:hover:bg-slate-900/50">
+              <tr
+                key={job.id}
+                className="cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-900/50"
+                onClick={() => setEditing(job)}
+              >
                 <td className="px-5 py-3 font-medium text-slate-900 dark:text-white">
                   {job.id}
                 </td>
@@ -120,6 +141,38 @@ export function JobsPage() {
           </p>
         )}
       </div>
+
+      {(showNew || editing) && (
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/50 p-0 sm:items-center sm:p-4"
+          data-no-pull-refresh
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="max-h-[92dvh] w-full overflow-y-auto rounded-t-2xl bg-white p-4 shadow-xl dark:bg-slate-900 sm:max-w-2xl sm:rounded-2xl sm:p-6">
+            <h2 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">
+              {editing ? `Edit ${editing.id}` : 'New work order'}
+            </h2>
+            <WorkOrderForm
+              initial={editing ?? undefined}
+              submitLabel={editing ? 'Update job' : 'Create job'}
+              onCancel={() => {
+                setShowNew(false)
+                setEditing(null)
+              }}
+              onSubmit={async (input) => {
+                if (editing) {
+                  await updateJob(editing.id, input)
+                  setEditing(null)
+                } else {
+                  await createJob(input)
+                  setShowNew(false)
+                }
+              }}
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

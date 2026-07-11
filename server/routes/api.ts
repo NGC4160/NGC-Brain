@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import multer from 'multer'
 import { randomUUID } from 'node:crypto'
 import {
   exchangeCodeForTokens,
@@ -14,9 +15,22 @@ import {
   importFromDirectory,
 } from '../import/hcpImportService.js'
 import { getDb } from '../db/client.js'
-import type { RepairJob } from '../../src/types/index.js'
+import {
+  createWorkOrder,
+  getWorkOrder,
+  listWorkOrders,
+  updateWorkOrder,
+  type WorkOrderInput,
+} from '../db/workOrders.js'
+import { buildQcContext, saveQcSubmission } from '../qc/qcService.js'
+import { getLatestQcForJob, listQcSubmissions } from '../db/qcSubmissions.js'
 
 export const apiRouter = Router()
+
+const qcUpload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 100 * 1024 * 1024, files: 100 },
+})
 
 function computeDmsExtras() {
   const db = getDb()
@@ -51,38 +65,44 @@ apiRouter.post('/import/hcp', (req, res) => {
 
 // --- DMS data (from SQLite) ---
 
-function workOrdersToRepairJobs(): RepairJob[] {
-  const db = getDb()
-  const rows = db.prepare(`
-    SELECT wo.*, c.first_name, c.last_name, c.company, v.make, v.model, v.year
-    FROM work_orders wo
-    LEFT JOIN customers c ON c.id = wo.customer_id
-    LEFT JOIN vehicles v ON v.id = wo.vehicle_id
-    ORDER BY wo.updated_at DESC
-  `).all() as Array<Record<string, unknown>>
-
-  return rows.map((r) => ({
-    id: String(r.id),
-    customerName: String(r.company || [r.first_name, r.last_name].filter(Boolean).join(' ') || 'Unknown'),
-    make: String(r.make || 'Other'),
-    model: String(r.model || 'Golf Cart'),
-    year: r.year ? Number(r.year) : undefined,
-    issueDescription: String(r.description || ''),
-    priority: 'normal' as const,
-    assignedTech: r.assigned_tech ? String(r.assigned_tech) : undefined,
-    status: (r.internal_status || 'received') as RepairJob['status'],
-    createdAt: String(r.created_at),
-    updatedAt: String(r.updated_at),
-    estimatedRevenue: r.total_cents ? Math.round(Number(r.total_cents) / 100) : undefined,
-    completedAt: r.completed_at ? String(r.completed_at) : undefined,
-    hcpId: r.hcp_job_id ? String(r.hcp_job_id) : undefined,
-    outstandingBalance: r.outstanding_cents ? Math.round(Number(r.outstanding_cents) / 100) : undefined,
-  }))
-}
-
 apiRouter.get('/dms/jobs', (_req, res) => {
-  const jobs = workOrdersToRepairJobs()
-  res.json({ count: jobs.length, jobs })
+  const jobs = listWorkOrders()
+  res.json({ count: jobs.length, jobs, writable: true })
+})
+
+apiRouter.get('/dms/jobs/:id', (req, res) => {
+  const job = getWorkOrder(req.params.id)
+  if (!job) {
+    res.status(404).json({ error: 'Work order not found' })
+    return
+  }
+  res.json({ job })
+})
+
+apiRouter.post('/dms/jobs', (req, res) => {
+  try {
+    const body = req.body as WorkOrderInput
+    if (!body?.customerName || !body?.make || !body?.model || !body?.issueDescription) {
+      res.status(400).json({ error: 'customerName, make, model, and issueDescription are required' })
+      return
+    }
+    const job = createWorkOrder(body)
+    res.status(201).json({ ok: true, job })
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+    res.status(400).json({ ok: false, error: message })
+  }
+})
+
+apiRouter.patch('/dms/jobs/:id', (req, res) => {
+  try {
+    const job = updateWorkOrder(req.params.id, req.body as Partial<WorkOrderInput>)
+    res.json({ ok: true, job })
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+    const status = message.includes('not found') ? 404 : 400
+    res.status(status).json({ ok: false, error: message })
+  }
 })
 
 apiRouter.get('/dms/customers', (_req, res) => {
@@ -99,7 +119,7 @@ apiRouter.get('/dms/pricebook', (_req, res) => {
 
 apiRouter.get('/dms/dashboard', (_req, res) => {
   const db = getDb()
-  const jobs = workOrdersToRepairJobs()
+  const jobs = listWorkOrders()
   const lastImport = db.prepare('SELECT completed_at FROM import_runs WHERE status LIKE \'completed%\' ORDER BY completed_at DESC LIMIT 1').get() as { completed_at: string } | undefined
 
   let company: Record<string, unknown> | null = null
@@ -116,7 +136,70 @@ apiRouter.get('/dms/dashboard', (_req, res) => {
     extras: computeDmsExtras(),
     company,
     bookkeeper: NGC_BOOKKEEPER,
+    writable: true,
   })
+})
+
+// --- Shop QC forms ---
+
+apiRouter.get('/qc/context', (req, res) => {
+  const jobNumber = String(req.query.job ?? req.query.invoice ?? '').trim()
+  const workOrderId = String(req.query.workOrderId ?? '').trim()
+  const context = buildQcContext(jobNumber || undefined, workOrderId || undefined)
+  if (!context) {
+    res.status(404).json({ error: 'Job not found' })
+    return
+  }
+  res.json(context)
+})
+
+apiRouter.get('/qc/submissions', (_req, res) => {
+  res.json({ submissions: listQcSubmissions() })
+})
+
+apiRouter.get('/qc/submissions/:jobNumber/latest', (req, res) => {
+  const submission = getLatestQcForJob(req.params.jobNumber)
+  if (!submission) {
+    res.status(404).json({ error: 'No QC submission for this job' })
+    return
+  }
+  res.json({ submission })
+})
+
+apiRouter.post('/qc/save', qcUpload.array('media'), async (req, res) => {
+  try {
+    const payloadRaw = req.body?.payload
+    if (!payloadRaw) {
+      res.status(400).json({ ok: false, error: 'Missing form payload.' })
+      return
+    }
+    const payload = JSON.parse(String(payloadRaw)) as Record<string, unknown>
+    const files = (req.files as Express.Multer.File[] | undefined) ?? []
+    const moveToReady = req.body?.moveToReady !== 'false'
+
+    const result = await saveQcSubmission({
+      payload,
+      media: files.map((f) => ({
+        originalName: f.originalname,
+        buffer: f.buffer,
+        mimeType: f.mimetype,
+      })),
+      moveToReady,
+    })
+
+    res.json({
+      ok: true,
+      fileName: result.fileName,
+      file: `QC forms/${result.fileName}`,
+      mediaCount: result.mediaCount,
+      workOrderId: result.workOrderId,
+      movedToReady: result.movedToReady,
+      message: `Saved to QC forms/${result.fileName}`,
+    })
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err)
+    res.status(400).json({ ok: false, error: message })
+  }
 })
 
 // --- QuickBooks Online ---

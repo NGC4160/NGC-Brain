@@ -2,7 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, cursor/golf-cart-dashboard-af92]
+    branches:
+      - main
+      - cursor/golf-cart-dashboard-af92
+      - cursor/phase-2-writable-work-orders-af92
   workflow_dispatch:
 
 permissions:

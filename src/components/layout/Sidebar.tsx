@@ -1,7 +1,9 @@
 import {
   BookOpen,
   Calendar,
+  ClipboardCheck,
   ClipboardEdit,
+  Kanban,
   LayoutDashboard,
   Moon,
   Package,
@@ -21,6 +23,8 @@ const iconMap: Record<string, LucideIcon> = {
   ClipboardEdit,
   BookOpen,
   Wrench,
+  Kanban,
+  ClipboardCheck,
   Package,
   Users,
   Calendar,
