@@ -12,7 +12,8 @@
     "build:hcp-cache": "tsx server/build-dashboard-cache.ts",
     "sync:hcp": "tsx server/sync-hcp.ts",
     "preview": "vite preview",
-    "deploy:pages": "VITE_BASE_PATH=/NGC-Brain/ npm run build:pages && gh-pages -d dist"
+    "deploy:pages": "VITE_BASE_PATH=/NGC-Brain/ npm run build:pages && gh-pages -d dist -m 'Deploy NGC dashboard to GitHub Pages'",
+    "deploy:pages:root": "VITE_BASE_PATH=/ npm run build:pages && echo 'Built for root URL (https://ngc4160.github.io/). Copy dist/ into your ngc4160.github.io repo.'"
   },
   "dependencies": {
     "clsx": "^2.1.1",

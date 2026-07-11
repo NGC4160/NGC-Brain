@@ -8,3 +8,7 @@ dist
 tsconfig.tsbuildinfo
 public/data/hcp-cache.json
 .netlify/
+data/ngc.db
+data/ngc.db-*
+data/imports/
+

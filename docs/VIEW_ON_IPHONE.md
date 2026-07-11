@@ -1,60 +1,44 @@
 # View the dashboard on your iPhone
 
-Your dashboard is built and uploaded to GitHub. You need **one quick setting change** to turn on the public link.
-
-## Your link (works after Step 2 below)
+## Your link
 
 **https://ngc4160.github.io/NGC-Brain/**
 
-Bookmark this in Safari. You can also tap **Share → Add to Home Screen** so it opens like an app.
+Full setup steps: [GITHUB_PAGES.md](./GITHUB_PAGES.md)
 
 ---
 
-## Step 1 — Open your repo on GitHub (iPhone)
+## One-time setup (if the link is 404)
 
-1. Install the **GitHub** app from the App Store (if you don’t have it).
-2. Sign in to your GitHub account.
-3. Open the repo: **NGC4160 / NGC-Brain**
+1. Open https://github.com/NGC4160/NGC-Brain/settings  
+2. Make the repo **Public** (Danger Zone → Change visibility), unless your plan supports private Pages.  
+3. Go to **Settings → Pages**:
+   - Source: **GitHub Actions**, **or**
+   - Branch: **gh-pages** / folder **/ (root)**
+4. Wait 1–2 minutes, then open the link above in Safari.
 
-   Or in Safari: https://github.com/NGC4160/NGC-Brain
-
----
-
-## Step 2 — Turn on GitHub Pages (one time, ~1 minute)
-
-1. On the repo page, tap **⋯** (more) or find **Settings** (gear icon).
-2. Scroll to **Pages** (under “Code and automation”).
-3. Under **Build and deployment** → **Source**, choose **Deploy from a branch**.
-4. Under **Branch**:
-   - Branch: **gh-pages**
-   - Folder: **/ (root)**
-5. Tap **Save**.
-
-Wait 1–2 minutes, then open:
-
-**https://ngc4160.github.io/NGC-Brain/**
+Bookmark it, or tap **Share → Add to Home Screen**.
 
 ---
 
-## Step 3 — Use it on your phone
+## What you can do on your phone
 
 - **Dashboard** — shop numbers and overview  
 - **Agent Input** — log repairs from the shop  
 - **Manuals & Files** — open service docs  
 - **Jobs** — see all repair orders  
+- **Invoicing** — AR and deposit alerts from cached HCP data  
 
-Data saves in your phone’s browser (localStorage) per device.
-
----
-
-## If the link shows “404”
-
-- Wait 2–5 minutes after enabling Pages.
-- Confirm **gh-pages** branch is selected in Settings → Pages.
-- Hard refresh Safari (close the tab and open the link again).
+Notes save in your phone’s browser (localStorage) on that device.
 
 ---
 
-## Optional: nicer URL later
+## Refresh the published site
 
-You can connect a custom domain (e.g. `shop.yourbusiness.com`) in GitHub Pages settings, or claim a free Netlify site and connect the repo for auto-deploys.
+On a computer:
+
+```bash
+npm run deploy:pages
+```
+
+Or push to `main` and let the GitHub Actions Pages workflow deploy.
