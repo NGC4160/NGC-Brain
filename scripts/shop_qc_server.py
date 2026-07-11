@@ -7,6 +7,7 @@ import json
 import mimetypes
 import re
 import sys
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -35,15 +36,16 @@ def sanitize_segment(value: str) -> str:
     return cleaned or "unknown"
 
 
-def folder_name(job_number: str, last_name: str) -> str:
+def file_base_name(job_number: str, last_name: str) -> str:
     return f"{sanitize_segment(job_number)}_{sanitize_segment(last_name)}"
 
 
-def unique_destination(base: Path) -> Path:
-    if not base.exists():
-        return base
+def unique_file_path(base_name: str, suffix: str = ".zip") -> Path:
+    candidate = QC_FORMS_DIR / f"{base_name}{suffix}"
+    if not candidate.exists():
+        return candidate
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    return base.parent / f"{base.name}_{stamp}"
+    return QC_FORMS_DIR / f"{base_name}_{stamp}{suffix}"
 
 
 @app.get("/")
@@ -75,14 +77,12 @@ def save_qc_form():
     if not last_name:
         return jsonify({"ok": False, "error": "Customer last name is required to save."}), 400
 
-    name = folder_name(job_number, last_name)
-    dest = unique_destination(QC_FORMS_DIR / name)
-    media_dir = dest / "media"
-    dest.mkdir(parents=True, exist_ok=True)
-    media_dir.mkdir(parents=True, exist_ok=True)
+    base_name = file_base_name(job_number, last_name)
+    dest_file = unique_file_path(base_name)
 
-    saved_media: list[dict[str, str]] = []
+    saved_media: list[dict[str, str | int]] = []
     files = request.files.getlist("media")
+    media_buffers: list[tuple[str, bytes]] = []
 
     for index, upload in enumerate(files, start=1):
         if not upload or not upload.filename:
@@ -98,28 +98,24 @@ def save_qc_form():
 
         stem = sanitize_segment(original.stem) or "file"
         filename = f"{index:03d}_{stem}{ext or ''}"
-        target = media_dir / filename
-
-        upload.save(target)
+        data = upload.read()
+        media_buffers.append((f"media/{filename}", data))
         saved_media.append({
             "filename": filename,
             "originalName": original.name,
             "mimeType": upload.mimetype or mimetypes.guess_type(filename)[0] or "application/octet-stream",
-            "sizeBytes": target.stat().st_size,
+            "sizeBytes": len(data),
         })
 
     record = {
         "savedAt": datetime.now(timezone.utc).isoformat(),
-        "folderName": dest.name,
+        "fileName": dest_file.name,
         "jobNumber": job_number,
         "customerLastName": last_name,
         "form": payload,
         "media": saved_media,
     }
 
-    (dest / "form.json").write_text(json.dumps(record, indent=2), encoding="utf-8")
-
-    summary_name = f"{dest.name}.txt"
     summary_lines = [
         "NGC Shop QC Completion Form",
         f"Saved: {record['savedAt']}",
@@ -132,14 +128,19 @@ def save_qc_form():
         "Certification:",
         "YES" if payload.get("certification") else "NO",
     ]
-    (dest / summary_name).write_text("\n".join(summary_lines), encoding="utf-8")
+
+    with zipfile.ZipFile(dest_file, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        archive.writestr("form.json", json.dumps(record, indent=2))
+        archive.writestr("summary.txt", "\n".join(summary_lines))
+        for arcname, data in media_buffers:
+            archive.writestr(arcname, data)
 
     return jsonify({
         "ok": True,
-        "folder": str(dest.relative_to(ROOT)),
-        "folderName": dest.name,
+        "file": str(dest_file.relative_to(ROOT)),
+        "fileName": dest_file.name,
         "mediaCount": len(saved_media),
-        "message": f"Saved to QC forms/{dest.name}/",
+        "message": f"Saved to QC forms/{dest_file.name}",
     })
 
 

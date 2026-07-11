@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Technicians complete this form **after every cart** is finished in the shop. The interactive app lets techs upload unlimited photos and videos, then saves everything locally in the **`QC forms`** folder as `{job #}_{customer last name}`.
+Technicians complete this form **after every cart** is finished in the shop. The interactive app lets techs upload unlimited photos and videos, then saves one file per job in the **`QC forms`** folder named `{job #}_{customer last name}.zip`.
 
 ## Start the app (shop computer)
 
@@ -22,13 +22,13 @@ Open **http://127.0.0.1:8765** in Chrome or Edge.
 1. Enter **HCP invoice / job #** and **customer last name** (required for file naming)
 2. Complete the checklist and upload photos/videos (no limit)
 3. Click **Save QC Form**
-4. A folder is created at `QC forms/{job#}_{LastName}/` containing:
+4. One file is created: `QC forms/{job#}_{LastName}.zip` containing:
    - `form.json` — full form data
-   - `{job#}_{LastName}.txt` — quick summary
+   - `summary.txt` — quick summary
    - `media/` — all uploaded photos and videos
 5. Turn in printed copy or confirm save with Ryan/Christine; move whiteboard card to **READY**
 
-If the same job # and last name are saved twice, a timestamp is appended to avoid overwriting.
+If the same job # and last name are saved twice, a timestamp is appended to the filename (e.g. `12345_Smith_20260711T181600Z.zip`) to avoid overwriting.
 
 ## When to use
 

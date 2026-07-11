@@ -80,7 +80,7 @@ Historical mobile SOPs referenced Housecall Pro photos, checklists, and NGC stic
 | Procedure checklist (legacy HCP flow) | `NGC Document Repository /Checklists/NGC Mobile Golf Cart Repair Services Procedure Checklist.docx` |
 | Technician hiring test | `My Drive/Hiring quiz evaluation - Technician.docx` |
 | Shop QC completion form (print) | `external_docs/templates/shop_qc/NGC_Shop_QC_Form.pdf` |
-| Shop QC app (photos + save) | `python3 scripts/shop_qc_server.py` → `QC forms/{job#}_{LastName}/` |
+| Shop QC app (photos + save) | `python3 scripts/shop_qc_server.py` → `QC forms/{job#}_{LastName}.zip` |
 
 ## Future: DMS migration
 

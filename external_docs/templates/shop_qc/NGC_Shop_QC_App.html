@@ -330,8 +330,8 @@
     <p class="intro">
       Complete this form when a cart is finished and ready to move to <strong>READY</strong>.
       Upload photos and videos below, then click <strong>Save QC Form</strong>.
-      Files are saved locally in the <strong>QC forms</strong> folder as
-      <em>{job #}_{customer last name}</em>. Also upload documentation to Housecall Pro.
+      Files are saved in the <strong>QC forms</strong> folder as a single file named
+      <em>{job #}_{customer last name}.zip</em> (form data + all photos/videos inside).
     </p>
 
     <div class="section">
@@ -703,8 +703,8 @@
         throw new Error(result.error || "Save failed.");
       }
       showStatus(
-        "Saved to " + result.folder + " (" + result.mediaCount + " photo/video file" +
-        (result.mediaCount === 1 ? "" : "s") + "). Move whiteboard card to READY.",
+        "Saved " + result.fileName + " (" + result.mediaCount + " photo/video file" +
+        (result.mediaCount === 1 ? "" : "s") + " inside). Move whiteboard card to READY.",
         "success"
       );
     } catch (error) {
