@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { AlertTriangle, CheckCircle2, ClipboardCheck, Save } from 'lucide-react'
+import { CheckCircle2, ClipboardCheck, FolderOpen, Save } from 'lucide-react'
 import { QcMediaUpload, type MediaItem } from '@/components/qc/QcMediaUpload'
 import { useApp } from '@/context/AppContext'
-import { fetchQcContext, saveQcForm } from '@/services/dms/qc'
+import { fetchQcContext, pickQcFormsFolder, saveQcForm } from '@/services/dms/qc'
 
 const BEFORE_PHOTOS = [
   'Front of cart (full view)',
@@ -42,16 +42,17 @@ const TEST_DRIVE_CHECKS = [
   'Brakes stop smoothly',
   'Steering tracks straight',
   'Speed / acceleration normal; no fault codes',
-  'Customer complaint resolved',
+  'Customer complaint verified resolved',
   'Cart charged / SOC appropriate',
 ]
 
 export function QcFormPage() {
   const [params] = useSearchParams()
-  const { writeMode, refreshHcp } = useApp()
+  const { jobs, updateJob, writeMode } = useApp()
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState<string | null>(null)
+  const [folderMsg, setFolderMsg] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
   const [media, setMedia] = useState<MediaItem[]>([])
 
@@ -70,23 +71,23 @@ export function QcFormPage() {
   const [certification, setCertification] = useState(false)
   const [testDriveNotes, setTestDriveNotes] = useState('')
 
-  const apiAvailable = writeMode === 'api'
+  const canPickFolder = typeof window !== 'undefined' && 'showDirectoryPicker' in window
 
   useEffect(() => {
     const job = params.get('job') ?? params.get('invoice') ?? ''
     const wo = params.get('workOrderId') ?? ''
-    if (!apiAvailable) {
-      setJobNumber(job)
-      setLoading(false)
-      return
-    }
+
     void (async () => {
       if (!job && !wo) {
         setLoading(false)
         return
       }
       try {
-        const ctx = await fetchQcContext({ job: job || undefined, workOrderId: wo || undefined })
+        const ctx = await fetchQcContext({
+          job: job || undefined,
+          workOrderId: wo || undefined,
+          jobs,
+        })
         setJobNumber(ctx.jobNumber)
         setCustomerLastName(ctx.customerLastName)
         setTechnician(ctx.technician ?? '')
@@ -101,11 +102,11 @@ export function QcFormPage() {
         setLoading(false)
       }
     })()
-  }, [params, apiAvailable])
+  }, [params, jobs])
 
   const canSave = useMemo(
-    () => jobNumber.trim() && customerLastName.trim() && certification && apiAvailable,
-    [jobNumber, customerLastName, certification, apiAvailable],
+    () => Boolean(jobNumber.trim() && customerLastName.trim() && certification),
+    [jobNumber, customerLastName, certification],
   )
 
   async function handleSave() {
@@ -128,18 +129,39 @@ export function QcFormPage() {
         testDrive: TEST_DRIVE_CHECKS.map((label, i) => ({ label, checked: testDrive[i] })),
         testDriveNotes,
         certification,
-        savedFrom: 'ngc-dms',
+        savedFrom: writeMode === 'api' ? 'ngc-dms-api' : 'ngc-dms-pages',
       }
       const result = await saveQcForm(payload, media.map((m) => m.file))
+
+      let movedToReady = result.movedToReady
+      if (
+        !movedToReady &&
+        certification &&
+        workOrderId &&
+        jobs.find((j) => j.id === workOrderId)?.status === 'qa'
+      ) {
+        await updateJob(workOrderId, { status: 'ready', force: true })
+        movedToReady = true
+      }
+
       setSuccess(
-        `${result.message}${result.movedToReady ? ' · Job moved to READY on the status board.' : ''}`,
+        `${result.message}${movedToReady ? ' · Job moved to READY on the status board.' : ''}`,
       )
-      if (result.movedToReady) await refreshHcp()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Save failed')
     } finally {
       setSaving(false)
     }
+  }
+
+  async function handlePickFolder() {
+    setFolderMsg(null)
+    const ok = await pickQcFormsFolder()
+    setFolderMsg(
+      ok
+        ? 'QC forms folder selected — future saves will write there automatically.'
+        : 'Could not access folder. Saves will download as zip files instead.',
+    )
   }
 
   function toggle(setter: React.Dispatch<React.SetStateAction<boolean[]>>, index: number) {
@@ -159,21 +181,25 @@ export function QcFormPage() {
             Shop QC Form
           </h1>
           <p className="mt-1 text-sm text-slate-500">
-            Complete QC, upload photos/videos, and save to{' '}
-            <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">QC forms/{'{job#}_{LastName}'}.zip</code>
+            Saves <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">{'{job#}_{LastName}'}.zip</code>{' '}
+            with checklist + all photos/videos. Works on GitHub Pages and local DMS.
           </p>
         </div>
-        <Link to="/board" className="btn-secondary self-start">
-          Back to board
-        </Link>
+        <div className="flex flex-wrap gap-2">
+          {canPickFolder && (
+            <button type="button" className="btn-secondary" onClick={() => void handlePickFolder()}>
+              <FolderOpen className="h-4 w-4" />
+              QC forms folder
+            </button>
+          )}
+          <Link to="/board" className="btn-secondary">
+            Back to board
+          </Link>
+        </div>
       </div>
 
-      {!apiAvailable && (
-        <div className="flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-100">
-          <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
-          QC save requires the local DMS API. Run <code className="mx-1">npm run dev:all</code> on the shop computer —
-          GitHub Pages view is read-only.
-        </div>
+      {folderMsg && (
+        <p className="text-sm text-brand-700 dark:text-brand-300">{folderMsg}</p>
       )}
 
       {error && (

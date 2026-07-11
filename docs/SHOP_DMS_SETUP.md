@@ -1,6 +1,14 @@
 # Shop DMS — Office PC Setup
 
-One-time setup so Taylor, Marlon, and Christine can run the DMS locally for **QC forms**, the **status board**, and writable work orders.
+The DMS and **QC form work on GitHub Pages** with no install:
+
+**https://ngc4160.github.io/NGC-Brain/#/qc**
+
+On Chrome, tap **QC forms folder** once to save zips directly to your shop folder instead of Downloads.
+
+---
+
+Optional: run locally for server-side QC archive in the repo `QC forms/` folder.
 
 ## Requirements
 

@@ -10,33 +10,37 @@ The Shop QC completion form is built into the NGC DMS (React + Express + SQLite)
 | Status board | **Complete QC form** button on QA / In Repair cards |
 | Deep link | `#/qc?workOrderId=HCP-17342` or `#/qc?job=17342` |
 
-## Run locally (required for save)
+## Run on GitHub Pages (default)
+
+Open **https://ngc4160.github.io/NGC-Brain/#/qc** — no local server required.
+
+1. Complete the checklist and upload photos/videos
+2. Click **Save QC Form**
+3. Browser saves `{job#}_{LastName}.zip` (download, or direct to a folder on Chrome — tap **QC forms folder** once)
+4. Certified QC on a job in **QA** moves it to **READY** on the status board (saved on that device)
+
+## Run locally (optional — server archive)
 
 ```bash
 npm run shop
 ```
 
-(`npm run dev:all` works too — `shop` also opens the QC form and ensures `QC forms/` exists.)
+When the local API is running, saves also go to the repo `QC forms/` folder and SQLite.
 
-- **QC Form (pin this):** http://127.0.0.1:5173/#/qc
+- **QC Form:** http://127.0.0.1:5173/#/qc
 - Status board: http://127.0.0.1:5173/#/board
-- API: http://127.0.0.1:3001
 
-See [SHOP_DMS_SETUP.md](SHOP_DMS_SETUP.md) for office PC bookmark instructions.
-
-GitHub Pages is **read-only** — QC save needs the local API.
+See [SHOP_DMS_SETUP.md](SHOP_DMS_SETUP.md) for office PC setup.
 
 ## Save behavior
 
 1. Tech completes checklist and uploads photos/videos (no limit)
 2. **Job #** and **customer last name** are required
 3. Click **Save QC Form**
-4. Creates `QC forms/{job#}_{LastName}.zip` at the repo root containing:
-   - `form.json` — full checklist
-   - `summary.txt` — quick summary
-   - `media/` — all uploads
-5. Records submission in SQLite (`qc_submissions` table)
-6. If certified and job is in **QA**, status moves to **READY** on the board
+4. Creates `{job#}_{LastName}.zip` with `form.json`, `summary.txt`, and `media/*`
+5. **Pages:** downloads zip (or saves to a folder you pick in Chrome)
+6. **Local API:** also writes to repo `QC forms/` and SQLite
+7. If certified and job is in **QA**, status moves to **READY** on the board
 
 ## API endpoints
 
