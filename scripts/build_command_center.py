@@ -33,16 +33,24 @@ def sha256_hex(value: str) -> str:
 
 def build_auth_config() -> None:
     password = os.environ.get("NGC_COMMAND_CENTER_PASSWORD", "").strip()
+    existing_path = ASSETS / "auth-config.js"
+
+    if not password and existing_path.exists():
+        existing = existing_path.read_text(encoding="utf-8")
+        if '"configured": true' in existing:
+            print("Keeping existing auth-config.js (configured)")
+            return
+
     if not password:
-        # Placeholder hash — site prompts owners to set GitHub Actions secret.
         password = "__UNCONFIGURED__"
+
     config = {
         "passwordHash": sha256_hex(password),
         "sessionHours": 24,
         "allowedUsers": ["Ryan", "Christine"],
         "configured": password != "__UNCONFIGURED__",
     }
-    (ASSETS / "auth-config.js").write_text(
+    existing_path.write_text(
         f"window.NGC_AUTH = {json.dumps(config, indent=2)};\n",
         encoding="utf-8",
     )
