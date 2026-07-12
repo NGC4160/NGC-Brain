@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-07-12T23:18:09.478571+00:00",
+  "jobs_synced_at": "2026-06-28T23:40:51.293876+00:00",
+  "has_live_data": true,
+  "metrics": {
+    "in_progress": 14,
+    "scheduled": 13,
+    "needs_scheduling": 11,
+    "active_pipeline": 38,
+    "wip_target": 6,
+    "wip_over": 8,
+    "stale_15_plus": 14,
+    "lithium_at_risk": 2,
+    "deposit_alerts": 0
+  },
+  "alerts": {
+    "lithium_at_risk": [
+      {
+        "invoice": "17248",
+        "description": "48V Professional Lithium Battery Conversion Kit Installed",
+        "days": 69,
+        "lithium": true,
+        "status": "in progress"
+      },
+      {
+        "invoice": "17266",
+        "description": "72V Professional Lithium Battery Conversion Kit Installed",
+        "days": 64,
+        "lithium": true,
+        "status": "in progress"
+      }
+    ],
+    "stale_wip": [
+      {
+        "invoice": "17190",
+        "description": "Electrical - 1.5-Replace charger",
+        "days": 94,
+        "lithium": false,
+        "status": "in progress"
+      },
+      {
+        "invoice": "17248",
+        "description": "48V Professional Lithium Battery Conversion Kit Installed",
+        "days": 69,
+        "lithium": true,
+        "status": "in progress"
+      },
+      {
+        "invoice": "17260",
+        "description": "Accessories - 1.0-Seat belt kit installation",
+        "days": 68,
+        "lithium": false,
+        "status": "in progress"
+      },
+      {
+        "invoice": "17266",
+        "description": "72V Professional Lithium Battery Conversion Kit Installed",
+        "days": 64,
+        "lithium": true,
+        "status": "in progress"
+      },
+      {
+        "invoice": "17109-2",
+        "description": "Brakes - 1.0-Brake Inspection & Adjustment",
+        "days": 47,
+        "lithium": false,
+        "status": "in progress"
+      },
+      {
+        "invoice": "17306",
+        "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+        "days": 38,
+        "lithium": false,
+        "status": "in progress"
+      },
+      {
+        "invoice": "17315",
+        "description": "General - ***SEE NOTES***",
+        "days": 32,
+        "lithium": false,
+        "status": "in progress"
+      },
+      {
+        "invoice": "17321",
+        "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+        "days": 30,
+        "lithium": false,
+        "status": "in progress"
+      }
+    ]
+  },
+  "sync": {
+    "exists": false
+  },
+  "live_files": {
+    "shop_board": "live/shop_board.md",
+    "deposit_alerts": "live/deposit_alerts.md",
+    "sync_manifest": null
+  }
+}

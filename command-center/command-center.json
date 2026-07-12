@@ -1,0 +1,620 @@
+{
+  "generated_at": "2026-07-12T23:18:09.489492+00:00",
+  "site_name": "NGC Command Center",
+  "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
+  "repo": "NGC4160/NGC-Brain",
+  "branch": "main",
+  "owners": [
+    "Ryan White",
+    "Christine White"
+  ],
+  "ops": {
+    "generated_at": "2026-07-12T23:18:09.478571+00:00",
+    "jobs_synced_at": "2026-06-28T23:40:51.293876+00:00",
+    "has_live_data": true,
+    "metrics": {
+      "in_progress": 14,
+      "scheduled": 13,
+      "needs_scheduling": 11,
+      "active_pipeline": 38,
+      "wip_target": 6,
+      "wip_over": 8,
+      "stale_15_plus": 14,
+      "lithium_at_risk": 2,
+      "deposit_alerts": 0
+    },
+    "alerts": {
+      "lithium_at_risk": [
+        {
+          "invoice": "17248",
+          "description": "48V Professional Lithium Battery Conversion Kit Installed",
+          "days": 69,
+          "lithium": true,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17266",
+          "description": "72V Professional Lithium Battery Conversion Kit Installed",
+          "days": 64,
+          "lithium": true,
+          "status": "in progress"
+        }
+      ],
+      "stale_wip": [
+        {
+          "invoice": "17190",
+          "description": "Electrical - 1.5-Replace charger",
+          "days": 94,
+          "lithium": false,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17248",
+          "description": "48V Professional Lithium Battery Conversion Kit Installed",
+          "days": 69,
+          "lithium": true,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17260",
+          "description": "Accessories - 1.0-Seat belt kit installation",
+          "days": 68,
+          "lithium": false,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17266",
+          "description": "72V Professional Lithium Battery Conversion Kit Installed",
+          "days": 64,
+          "lithium": true,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17109-2",
+          "description": "Brakes - 1.0-Brake Inspection & Adjustment",
+          "days": 47,
+          "lithium": false,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17306",
+          "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+          "days": 38,
+          "lithium": false,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17315",
+          "description": "General - ***SEE NOTES***",
+          "days": 32,
+          "lithium": false,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17321",
+          "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+          "days": 30,
+          "lithium": false,
+          "status": "in progress"
+        }
+      ]
+    },
+    "sync": {
+      "exists": false
+    },
+    "live_files": {
+      "shop_board": "live/shop_board.md",
+      "deposit_alerts": "live/deposit_alerts.md",
+      "sync_manifest": null
+    }
+  },
+  "systems": [
+    {
+      "id": "hcp",
+      "name": "Housecall Pro",
+      "role": "Jobs \u00b7 Pricebook \u00b7 Invoicing",
+      "url": "https://pro.housecallpro.com/pro/login",
+      "status": "online",
+      "icon": "\ud83d\udccb"
+    },
+    {
+      "id": "qbo",
+      "name": "QuickBooks Online",
+      "role": "Accounting \u00b7 P&L \u00b7 Inventory",
+      "url": "https://qbo.intuit.com/",
+      "status": "online",
+      "icon": "\ud83d\udcb0"
+    },
+    {
+      "id": "website",
+      "name": "NGCGolfCarts.com",
+      "role": "Public website",
+      "url": "https://www.NGCGolfCarts.com",
+      "status": "online",
+      "icon": "\ud83c\udf10"
+    },
+    {
+      "id": "gbp",
+      "name": "Google Business",
+      "role": "Reviews \u00b7 Local SEO",
+      "url": "https://www.google.com/maps/place/Neighborhood+Golf+Carts/@30.4693929,-90.0870885,17z",
+      "status": "online",
+      "icon": "\ud83d\udccd"
+    },
+    {
+      "id": "drive",
+      "name": "Google Drive",
+      "role": "SOPs \u00b7 Document repository",
+      "url": "https://drive.google.com/",
+      "status": "online",
+      "icon": "\ud83d\udcc1"
+    },
+    {
+      "id": "cursor",
+      "name": "NGC Business Brain",
+      "role": "Cursor AI workspace",
+      "url": "https://github.com/NGC4160/NGC-Brain",
+      "status": "online",
+      "icon": "\ud83e\udde0"
+    }
+  ],
+  "pipeline": [
+    {
+      "priority": "P1",
+      "name": "Deactivate legacy HCP/QBO items (mobile, NGC Conversion, trip charges)",
+      "why": "Prevents wrong quotes & booking",
+      "owner": "Ryan / Christine",
+      "status": "**Checklist ready** \u2014 see legacy_pricebook_cleanup.md",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P1",
+      "name": "Finalize pickup/delivery zone map (free vs $99)",
+      "why": "Roy + Christine need consistent answers",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P1",
+      "name": "HCP WIP hygiene \u2014 audit stale \"in progress\" (15+ days), correct statuses",
+      "why": "14 IP jobs, most aged; board can't lie",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P1",
+      "name": "Lithium job tracker (day 0/1/2, deposit received, parts ordered)",
+      "why": "Protect 2\u20133 day promise; 2 Li jobs 50+ days in HCP",
+      "owner": "Ryan",
+      "status": "In progress",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P2",
+      "name": "Shop-floor SOP refresh \u2014 strip mobile steps from active checklists",
+      "why": "Techs get wrong instructions today",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P2",
+      "name": "Deposit collection checklist for Christine",
+      "why": "Batteries/motors/controllers",
+      "owner": "Christine",
+      "status": "Open",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P3",
+      "name": "Everlogic evaluation demo + migration plan",
+      "why": "HCP is wrong tool for shop-only",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P1",
+      "name": "Lithium conversion funnel \u2014 landing page / GBP posts / before-afters",
+      "why": "~$81k/yr dedicated line + more in Services",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Revenue & growth"
+    },
+    {
+      "priority": "P2",
+      "name": "Review $64k marketing spend ROI (QBO)",
+      "why": "Largest expense after payroll",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Revenue & growth"
+    },
+    {
+      "priority": "P2",
+      "name": "HOA outreach \u2014 revive or kill the tracker",
+      "why": "Sheet in Drive, status unknown",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Revenue & growth"
+    },
+    {
+      "priority": "P2",
+      "name": "Standardize \"Professional Kit\" quote template for Christine",
+      "why": "Faster, consistent quotes",
+      "owner": "Christine",
+      "status": "Open",
+      "category": "Revenue & growth"
+    },
+    {
+      "priority": "P3",
+      "name": "Accessory upsell script (charger port, reducer, fuse box)",
+      "why": "Built into lithium descriptions, not sold consistently",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Revenue & growth"
+    },
+    {
+      "priority": "P3",
+      "name": "Fleet maintenance program \u2014 package for HOAs/commercial",
+      "why": "Doc exists in Drive",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Revenue & growth"
+    },
+    {
+      "priority": "P3",
+      "name": "Prep cart sales playbook (bill of sale, deposits) for future launch",
+      "why": "Strategic defer, but prep now",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Revenue & growth"
+    },
+    {
+      "priority": "P2",
+      "name": "Wind down `Mobile Trip Income` in QBO to $0",
+      "why": "Legacy revenue still posting",
+      "owner": "Jill",
+      "status": "Open",
+      "category": "Finance & admin"
+    },
+    {
+      "priority": "P2",
+      "name": "Review Unapplied Cash / Undeposited Funds monthly",
+      "why": "QBO flags from exports",
+      "owner": "Jill",
+      "status": "Open",
+      "category": "Finance & admin"
+    },
+    {
+      "priority": "P3",
+      "name": "Monthly export ritual \u2192 refresh `knowledge/08_finance/`",
+      "why": "AI gives stale answers without it",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Finance & admin"
+    },
+    {
+      "priority": "P2",
+      "name": "NGC Admin Bot \u2014 Phase 1 deposit gate alerts",
+      "why": "Spec + script live; Phase 2 review requests next",
+      "owner": "Ryan",
+      "status": "In progress",
+      "category": "Team & systems"
+    },
+    {
+      "priority": "P2",
+      "name": "Peyton diagnostics \u2014 when to loop in (clear trigger)",
+      "why": "Avoid bottleneck or underuse",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Team & systems"
+    },
+    {
+      "priority": "P3",
+      "name": "Technician skills matrix (Taylor vs Marlon vs Peyton)",
+      "why": "Better job assignment",
+      "owner": "Ryan",
+      "status": "Open",
+      "category": "Team & systems"
+    }
+  ],
+  "zones": [
+    {
+      "id": "apps",
+      "title": "Dashboard & Apps",
+      "icon": "\u25c8",
+      "color": "#00f0ff",
+      "description": "NGC operational apps \u2014 shop, finance, intake, QC",
+      "cards": [
+        {
+          "title": "Main Dashboard",
+          "desc": "Shop overview \u00b7 React app",
+          "href": "../",
+          "external": true,
+          "primary": true
+        },
+        {
+          "title": "KPI Hub",
+          "desc": "Finance & performance reporting",
+          "href": "../kpi-hub/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Shop Board",
+          "desc": "Visual WIP board",
+          "href": "../board/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Jobs",
+          "desc": "Job tracking & work orders",
+          "href": "../jobs/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Scheduling",
+          "desc": "Calendar & appointments",
+          "href": "../scheduling/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Intake",
+          "desc": "Customer intake forms",
+          "href": "../intake/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "QC",
+          "desc": "Quality control forms",
+          "href": "../qc/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Inventory",
+          "desc": "Parts & stock",
+          "href": "../inventory/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Invoicing",
+          "desc": "Billing workflow",
+          "href": "../invoicing/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Customers",
+          "desc": "Customer records",
+          "href": "../customers/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "SOPs",
+          "desc": "Standard operating procedures",
+          "href": "../sops/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Resources",
+          "desc": "Docs & reference library",
+          "href": "../resources/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Settings",
+          "desc": "App configuration",
+          "href": "../settings/",
+          "external": true,
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "live-ops",
+      "title": "Live Ops",
+      "icon": "\u25c9",
+      "color": "#00f0ff",
+      "description": "Real-time shop floor intelligence",
+      "cards": [
+        {
+          "title": "Operations Dashboard",
+          "desc": "WIP, lithium lane, deposit alerts, sync status",
+          "href": "dashboard.html",
+          "badge": "14 in shop",
+          "primary": true
+        },
+        {
+          "title": "Shop Board",
+          "desc": "Auto-generated WIP board from HCP",
+          "href": "view.html?path=live/shop_board.md"
+        },
+        {
+          "title": "Deposit Alerts",
+          "desc": "Christine's deposit gate queue",
+          "href": "view.html?path=live/deposit_alerts.md"
+        }
+      ]
+    },
+    {
+      "id": "systems",
+      "title": "Systems",
+      "icon": "\u2b21",
+      "color": "#6faa2d",
+      "description": "External platforms NGC runs on",
+      "cards": [
+        {
+          "title": "Housecall Pro",
+          "desc": "Jobs \u00b7 Pricebook \u00b7 Invoicing",
+          "href": "https://pro.housecallpro.com/pro/login",
+          "external": true
+        },
+        {
+          "title": "QuickBooks Online",
+          "desc": "Accounting \u00b7 P&L \u00b7 Inventory",
+          "href": "https://qbo.intuit.com/",
+          "external": true
+        },
+        {
+          "title": "NGCGolfCarts.com",
+          "desc": "Public website",
+          "href": "https://www.NGCGolfCarts.com",
+          "external": true
+        },
+        {
+          "title": "Google Business",
+          "desc": "Reviews \u00b7 Local SEO",
+          "href": "https://www.google.com/maps/place/Neighborhood+Golf+Carts/@30.4693929,-90.0870885,17z",
+          "external": true
+        },
+        {
+          "title": "Google Drive",
+          "desc": "SOPs \u00b7 Document repository",
+          "href": "https://drive.google.com/",
+          "external": true
+        },
+        {
+          "title": "NGC Business Brain",
+          "desc": "Cursor AI workspace",
+          "href": "https://github.com/NGC4160/NGC-Brain",
+          "external": true
+        }
+      ]
+    },
+    {
+      "id": "daily",
+      "title": "Daily Rhythm",
+      "icon": "\u25f7",
+      "color": "#a78bfa",
+      "description": "Owner and service manager rituals",
+      "cards": [
+        {
+          "title": "Morning Briefing",
+          "desc": "8:00 AM \u2014 priorities & capacity",
+          "href": "view.html?path=prompts/morning_briefing.md"
+        },
+        {
+          "title": "End of Day",
+          "desc": "5:00 PM recap & tomorrow prep",
+          "href": "view.html?path=prompts/end_of_day.md"
+        },
+        {
+          "title": "Weekly Review",
+          "desc": "Friday scorecard & KPIs",
+          "href": "view.html?path=prompts/weekly_review.md"
+        },
+        {
+          "title": "Shop Throughput",
+          "desc": "WIP limits & lithium SLA",
+          "href": "view.html?path=knowledge/04_operations/shop_throughput.md"
+        },
+        {
+          "title": "Whiteboard Layout",
+          "desc": "Physical board for 8:15 huddle",
+          "href": "view.html?path=knowledge/04_operations/shop_whiteboard_layout.md"
+        }
+      ]
+    },
+    {
+      "id": "pipeline",
+      "title": "Build Pipeline",
+      "icon": "\u25b2",
+      "color": "#f59e0b",
+      "description": "Everything being built \u2014 ops, automation, growth",
+      "cards": [
+        {
+          "title": "Improvement Backlog",
+          "desc": "20 tracked projects \u00b7 P1\u2013P3",
+          "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
+          "primary": true
+        },
+        {
+          "title": "Admin Bot Spec",
+          "desc": "Deposit alerts \u00b7 review requests \u00b7 webhooks",
+          "href": "view.html?path=knowledge/10_automation/ngc_admin_bot_spec.md"
+        },
+        {
+          "title": "Automation Catalog",
+          "desc": "Tier 1\u20133 automation roadmap",
+          "href": "view.html?path=knowledge/10_automation/automations_catalog.md"
+        },
+        {
+          "title": "Decision Log",
+          "desc": "Policy changes with dates",
+          "href": "view.html?path=knowledge/09_daily_ops/decision_log.md"
+        }
+      ]
+    },
+    {
+      "id": "knowledge",
+      "title": "Knowledge Base",
+      "icon": "\u25eb",
+      "color": "#38bdf8",
+      "description": "Business brain \u2014 policies, pricing, team",
+      "cards": [
+        {
+          "title": "Browse All Docs",
+          "desc": "60 indexed deliverables",
+          "href": "explore.html",
+          "primary": true
+        },
+        {
+          "title": "Lithium Conversions",
+          "desc": "Professional Kits, warranty, deposits",
+          "href": "view.html?path=knowledge/02_products/lithium_conversions.md"
+        },
+        {
+          "title": "Shop Services",
+          "desc": "Diagnostics, pickup, fees",
+          "href": "view.html?path=knowledge/03_services/shop_services.md"
+        },
+        {
+          "title": "Pricebook Reference",
+          "desc": "Key HCP line items",
+          "href": "view.html?path=knowledge/03_services/pricebook_reference.md"
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools & Forms",
+      "icon": "\u2699",
+      "color": "#34d399",
+      "description": "Templates, scripts, Cursor skills",
+      "cards": [
+        {
+          "title": "Personnel Counseling",
+          "desc": "Fillable HR form \u2014 print/PDF",
+          "href": "templates/personnel-counseling.html"
+        },
+        {
+          "title": "Start Here (Cursor)",
+          "desc": "How to run the business brain",
+          "href": "view.html?path=START_HERE.md"
+        },
+        {
+          "title": "HCP API Setup",
+          "desc": "Live sync & MCP configuration",
+          "href": "view.html?path=knowledge/10_automation/hcp_api_setup.md"
+        },
+        {
+          "title": "Integration Playbook",
+          "desc": "QBO MCP, Zapier, Everlogic",
+          "href": "view.html?path=knowledge/10_automation/integration_playbook.md"
+        }
+      ]
+    }
+  ],
+  "manifest_total": 60
+}
