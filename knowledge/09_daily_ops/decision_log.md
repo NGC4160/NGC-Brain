@@ -22,6 +22,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-07-12 | P&D: free within 40 mi North Shore only; **South Shore = $99**; outside 40 mi = $99 | Ryan | Corrects mistaken “South Shore free” draft in intake SOP |
 | 2026-07-12 | Build SOPs in waves (catalog) — Core SOPs + Location Profile for multi-site transfer | Ryan | See `04_operations/sop_catalog.md`; Wave 1 = intake/deposits/lanes/driver |
 | 2026-07-12 | Customer Intake SOP-01 live — 1 lead text, 24h one follow-up then stop; photo standards; diag terms → waitlist | Ryan / Christine | `sops/SOP-01_customer_intake.md` |
+| 2026-07-12 | SOP-05 Deposit collection drafted — no parts order without deposit; $1800 Li / $800 battery | Ryan | `sops/SOP-05_deposit_collection.md` — pilot with Christine |
 
 ---
 
