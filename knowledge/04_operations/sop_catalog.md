@@ -220,7 +220,7 @@ Ship in this order so Covington stops depending on memory:
 1. ~~**SOP-01** Intake~~ **Done** — [sops/SOP-01_customer_intake.md](sops/SOP-01_customer_intake.md)
 2. ~~**SOP-05** Deposit collection & order release~~ **Draft** — [sops/SOP-05_deposit_collection.md](sops/SOP-05_deposit_collection.md)
 3. ~~**SOP-04** Lithium quote (Professional Kits only)~~ **Draft** — [sops/SOP-04_lithium_quote.md](sops/SOP-04_lithium_quote.md)
-4. **SOP-03** Repair quote / $179 diagnostic  
+4. ~~**SOP-03** Repair quote / $179 diagnostic~~ **Draft** — [sops/SOP-03_repair_diagnostic_quote.md](sops/SOP-03_repair_diagnostic_quote.md)
 5. **SOP-11** Job lane lifecycle  
 6. **SOP-10** Morning huddle  
 7. **SOP-12** WIP / stop-scheduling  
