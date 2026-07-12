@@ -108,6 +108,7 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
     'dashboard',
     'intake',
     'sops',
+    'kpi-hub',
     'board',
     'jobs',
     'agent-input',
@@ -120,6 +121,7 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
     'dashboard',
     'intake',
     'sops',
+    'kpi-hub',
     'board',
     'jobs',
     'agent-input',
@@ -128,18 +130,19 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
     'invoicing',
     'settings',
   ],
-  technician: ['dashboard', 'board', 'jobs', 'agent-input', 'qc', 'sops', 'resources'],
+  technician: ['dashboard', 'board', 'jobs', 'agent-input', 'qc', 'sops', 'kpi-hub', 'resources'],
   'front-desk': [
     'dashboard',
     'intake',
     'sops',
+    'kpi-hub',
     'board',
     'jobs',
     'agent-input',
     'resources',
     'invoicing',
   ],
-  driver: ['dashboard', 'sops', 'board', 'resources'],
+  driver: ['dashboard', 'sops', 'kpi-hub', 'board', 'resources'],
 }
 
 export function canAssignJobs(role: StaffRole): boolean {

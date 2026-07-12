@@ -6,6 +6,7 @@ import { DashboardPage } from '@/pages/DashboardPage'
 import { AgentInputPage } from '@/pages/AgentInputPage'
 import { CustomerIntakePage } from '@/pages/CustomerIntakePage'
 import { SopsHubPage, SopDetailPage } from '@/pages/SopsPages'
+import { KpiHubPage } from '@/pages/KpiHubPage'
 import { ResourcesPage } from '@/pages/ResourcesPage'
 import { JobsPage } from '@/pages/JobsPage'
 import { StatusBoardPage } from '@/pages/StatusBoardPage'
@@ -73,6 +74,14 @@ function AppRoutes() {
           element={
             <RequireModule moduleId="sops">
               <SopDetailPage />
+            </RequireModule>
+          }
+        />
+        <Route
+          path="/kpi-hub"
+          element={
+            <RequireModule moduleId="kpi-hub">
+              <KpiHubPage />
             </RequireModule>
           }
         />

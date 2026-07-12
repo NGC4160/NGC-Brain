@@ -109,6 +109,14 @@ export const navModules: NavModule[] = [
     description: 'SOP library — Ryan & Christine full access; role-filtered for shop & drivers',
   },
   {
+    id: 'kpi-hub',
+    label: 'KPI Hub',
+    path: '/kpi-hub',
+    icon: 'BarChart3',
+    enabled: true,
+    description: 'All accessible KPIs — targets, trends, and status by role',
+  },
+  {
     id: 'resources',
     label: 'Manuals & Files',
     path: '/resources',

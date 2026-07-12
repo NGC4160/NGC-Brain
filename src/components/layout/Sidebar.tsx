@@ -1,4 +1,5 @@
 import {
+  BarChart3,
   BookOpen,
   Calendar,
   ClipboardCheck,
@@ -25,6 +26,7 @@ import { NavLink } from 'react-router-dom'
 
 const iconMap: Record<string, LucideIcon> = {
   LayoutDashboard,
+  BarChart3,
   ClipboardEdit,
   ClipboardCheck,
   ClipboardList,

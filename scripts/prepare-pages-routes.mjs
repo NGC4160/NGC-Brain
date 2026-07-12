@@ -6,6 +6,7 @@ const routes = [
   'agent-input',
   'intake',
   'sops',
+  'kpi-hub',
   'resources',
   'jobs',
   'board',
