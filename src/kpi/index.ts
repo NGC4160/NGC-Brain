@@ -17,3 +17,5 @@ export {
   downloadCsv,
   printKpisPdf,
 } from './format'
+export { loadCfoPacks, cfoMetricToMeta } from './cfo/loadPacks'
+export type { CfoPack, CfoManifest, CfoPackMetric } from './cfo/loadPacks'

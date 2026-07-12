@@ -7,9 +7,10 @@
     "dev": "vite",
     "server": "tsx server/index.ts",
     "dev:all": "concurrently -n web,api -c green,blue \"npm run dev\" \"npm run server\"",
-    "build": "tsc -b && vite build",
-    "build:pages": "npm run build:hcp-cache && tsc -b && vite build && cp dist/index.html dist/404.html && touch dist/.nojekyll && rm -f dist/_redirects && node scripts/prepare-pages-routes.mjs",
+    "build": "npm run build:cfo-packs && tsc -b && vite build",
+    "build:pages": "npm run build:hcp-cache && npm run build:cfo-packs && tsc -b && vite build && cp dist/index.html dist/404.html && touch dist/.nojekyll && rm -f dist/_redirects && node scripts/prepare-pages-routes.mjs",
     "build:hcp-cache": "tsx server/build-dashboard-cache.ts",
+    "build:cfo-packs": "node scripts/build-cfo-packs.mjs",
     "sync:hcp": "tsx server/sync-hcp.ts",
     "import:hcp": "tsx server/import-hcp.ts",
     "preview": "vite preview",
@@ -35,14 +36,15 @@
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "cors": "^2.8.5",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.19.2",
     "typescript": "~5.6.2",
     "vite": "^6.0.5",
-    "gh-pages": "^6.3.0"
+    "xlsx": "^0.18.5"
   }
 }

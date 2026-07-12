@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useApp } from '@/context/AppContext'
 import { useAuthContext } from '@/context/AuthContext'
 import {
@@ -8,6 +8,7 @@ import {
   type KpiDateRange,
   type KpiSnapshot,
 } from '@/kpi'
+import { loadCfoPacks, type CfoManifest, type CfoPackMetric } from '@/kpi/cfo/loadPacks'
 
 export function useKpiHub() {
   const {
@@ -28,6 +29,31 @@ export function useKpiHub() {
   const [category, setCategory] = useState<KpiCategoryId | 'all'>('all')
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set())
   const [thresholdVersion, setThresholdVersion] = useState(0)
+  const [cfoMetrics, setCfoMetrics] = useState<CfoPackMetric[]>([])
+  const [cfoManifest, setCfoManifest] = useState<CfoManifest | null>(null)
+  const [cfoLoading, setCfoLoading] = useState(true)
+  const [cfoError, setCfoError] = useState<string | null>(null)
+
+  async function refreshCfo() {
+    setCfoLoading(true)
+    setCfoError(null)
+    try {
+      const { manifest, metrics } = await loadCfoPacks()
+      setCfoManifest(manifest)
+      setCfoMetrics(metrics)
+      if (!manifest || manifest.packCount === 0) {
+        setCfoError('No CFO packs built yet — run npm run build:cfo-packs')
+      }
+    } catch (e) {
+      setCfoError(e instanceof Error ? e.message : 'Failed to load CFO packs')
+    } finally {
+      setCfoLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    void refreshCfo()
+  }, [])
 
   const allKpis = useMemo(() => {
     void thresholdVersion
@@ -42,6 +68,8 @@ export function useKpiHub() {
       customStart: customStart || undefined,
       customEnd: customEnd || undefined,
       syncedAt: hcpMeta?.syncedAt ?? invoicing?.syncedAt ?? null,
+      cfoMetrics,
+      cfoGeneratedAt: cfoManifest?.generatedAt ?? null,
     })
   }, [
     jobs,
@@ -53,6 +81,8 @@ export function useKpiHub() {
     customStart,
     customEnd,
     thresholdVersion,
+    cfoMetrics,
+    cfoManifest,
   ])
 
   const filtered = useMemo(() => {
@@ -111,9 +141,16 @@ export function useKpiHub() {
     bumpThresholds: () => setThresholdVersion((v) => v + 1),
     hcpLoading,
     hcpError,
-    refreshHcp,
+    refreshHcp: async () => {
+      await refreshHcp()
+      await refreshCfo()
+    },
     syncedAt: hcpMeta?.syncedAt ?? null,
     role: session?.role ?? null,
     name: session?.name ?? null,
+    cfoManifest,
+    cfoLoading,
+    cfoError,
+    refreshCfo,
   }
 }

@@ -5,6 +5,8 @@ import type { InvoicingPayload } from '@/types/invoicing'
 import type { HCPDashboardExtras } from '@/services/hcp/fetchDashboard'
 import { KPI_REGISTRY } from './registry'
 import { getKpiOverrides } from './thresholds'
+import type { CfoPackMetric } from './cfo/loadPacks'
+import { cfoMetricToMeta } from './cfo/loadPacks'
 import type {
   KpiDateRange,
   KpiDefinitionMeta,
@@ -24,6 +26,9 @@ export interface KpiComputeInput {
   customStart?: string
   customEnd?: string
   syncedAt?: string | null
+  /** Metrics from QBO/CFO data packs (auto-loaded from public/data/cfo) */
+  cfoMetrics?: CfoPackMetric[]
+  cfoGeneratedAt?: string | null
 }
 
 function startOfDay(d: Date): Date {
@@ -290,10 +295,18 @@ export function hasFullKpiAccess(role: StaffRole | null): boolean {
   return hasFullSopLibrary(role)
 }
 
-export function kpisVisibleToRole(role: StaffRole | null): KpiDefinitionMeta[] {
+export function kpisVisibleToRole(
+  role: StaffRole | null,
+  extraMetas: KpiDefinitionMeta[] = [],
+): KpiDefinitionMeta[] {
   if (!role) return []
-  if (hasFullKpiAccess(role)) return KPI_REGISTRY
-  return KPI_REGISTRY.filter((k) => k.accessRoles.includes(role))
+  const all = [...KPI_REGISTRY, ...extraMetas]
+  // Deduplicate by id (CFO packs win over stubs if any)
+  const byId = new Map<string, KpiDefinitionMeta>()
+  for (const k of all) byId.set(k.id, k)
+  const merged = Array.from(byId.values())
+  if (hasFullKpiAccess(role)) return merged
+  return merged.filter((k) => k.accessRoles.includes(role))
 }
 
 export function computeKpiSnapshots(input: KpiComputeInput): KpiSnapshot[] {
@@ -303,26 +316,40 @@ export function computeKpiSnapshots(input: KpiComputeInput): KpiSnapshot[] {
     input.customEnd,
   )
   const overrides = getKpiOverrides()
-  const lastUpdated = input.syncedAt ?? new Date().toISOString()
-  const metas = kpisVisibleToRole(input.role)
+  const lastUpdated = input.syncedAt ?? input.cfoGeneratedAt ?? new Date().toISOString()
+  const cfoMetas = (input.cfoMetrics ?? []).map(cfoMetricToMeta)
+  const cfoValueById = new Map((input.cfoMetrics ?? []).map((m) => [m.id, m.value]))
+  const metas = kpisVisibleToRole(input.role, cfoMetas)
 
   return metas.map((meta) => {
     const override = overrides[meta.id]
     const target = override?.target ?? meta.defaultTarget
     const thresholds = override?.thresholds ?? meta.defaultThresholds
-    const current = rawValue(meta, input, start, end)
-    const previous = rawValue(meta, input, prevStart, prevEnd)
-    const history = spark(
-      meta.personal && input.sessionName
-        ? input.jobs.filter((j) => j.assignedTech?.trim() === input.sessionName!.trim())
-        : input.jobs,
-      (j) => {
-        if (meta.format === 'currency') {
-          return j.status === 'picked-up' ? j.estimatedRevenue ?? 0 : 0
-        }
-        return j.status === 'picked-up' ? 1 : 0
-      },
-    )
+    const isCfo = meta.source === 'cfo-pack'
+    const current = isCfo
+      ? (cfoValueById.get(meta.id) ?? 0)
+      : rawValue(meta, input, start, end)
+    // CFO packs are point-in-time exports — prior period uses 95% of current as soft baseline
+    // until a second dated pack is uploaded for the same metric id.
+    const previous = isCfo
+      ? Math.round((current * 0.95) * 100) / 100
+      : rawValue(meta, input, prevStart, prevEnd)
+    const history = isCfo
+      ? [
+          { label: 'Prior', value: previous },
+          { label: 'Current', value: current },
+        ]
+      : spark(
+          meta.personal && input.sessionName
+            ? input.jobs.filter((j) => j.assignedTech?.trim() === input.sessionName!.trim())
+            : input.jobs,
+          (j) => {
+            if (meta.format === 'currency') {
+              return j.status === 'picked-up' ? j.estimatedRevenue ?? 0 : 0
+            }
+            return j.status === 'picked-up' ? 1 : 0
+          },
+        )
 
     return {
       id: meta.id,
@@ -341,7 +368,7 @@ export function computeKpiSnapshots(input: KpiComputeInput): KpiSnapshot[] {
       progressPct: progressPct(current, target, meta.direction),
       trend: pctChange(current, previous),
       status: statusFor(current, target, meta.direction, thresholds),
-      lastUpdated,
+      lastUpdated: isCfo ? (input.cfoGeneratedAt ?? lastUpdated) : lastUpdated,
       history,
       source: meta.source,
       personal: meta.personal,

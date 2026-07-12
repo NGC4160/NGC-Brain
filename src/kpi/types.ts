@@ -16,6 +16,7 @@ export type KpiCategoryId =
   | 'fleet'
   | 'growth'
   | 'compliance'
+  | 'cfo'
 
 /** Higher is better unless direction === 'lower-better' */
 export type KpiDirection = 'higher-better' | 'lower-better'
@@ -45,7 +46,7 @@ export interface KpiDefinitionMeta {
   accessRoles: StaffRole[]
   /** Prefer personal (session-scoped) computation when true */
   personal?: boolean
-  source: 'jobs' | 'invoicing' | 'extras' | 'submissions' | 'derived' | 'mock'
+  source: 'jobs' | 'invoicing' | 'extras' | 'submissions' | 'derived' | 'mock' | 'cfo-pack'
 }
 
 export interface KpiSnapshot {
@@ -90,10 +91,12 @@ export const KPI_CATEGORY_LABELS: Record<KpiCategoryId, string> = {
   fleet: 'Fleet & Driver',
   growth: 'Sales & Growth',
   compliance: 'Compliance & Safety',
+  cfo: 'CFO / QuickBooks Packs',
 }
 
 export const KPI_CATEGORY_ORDER: KpiCategoryId[] = [
   'executive',
+  'cfo',
   'financial',
   'operations',
   'customer',

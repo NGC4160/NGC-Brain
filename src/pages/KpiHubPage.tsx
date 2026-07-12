@@ -33,7 +33,7 @@ const RANGE_OPTIONS: { value: KpiDateRange; label: string }[] = [
 ]
 
 export function KpiHubPage() {
-  const { hcpMeta, hcpLoading, hcpError, refreshHcp } = useApp()
+  const { hcpMeta, hcpLoading, hcpError } = useApp()
   const hub = useKpiHub()
   const [detail, setDetail] = useState<KpiSnapshot | null>(null)
 
@@ -87,7 +87,7 @@ export function KpiHubPage() {
           type="button"
           className="btn-secondary inline-flex"
           disabled={hcpLoading}
-          onClick={() => void refreshHcp()}
+          onClick={() => void hub.refreshHcp()}
         >
           <RefreshCw className={`h-4 w-4 ${hcpLoading ? 'animate-spin' : ''}`} />
           Refresh data
@@ -98,8 +98,47 @@ export function KpiHubPage() {
         meta={hcpMeta}
         loading={hcpLoading}
         error={hcpError}
-        onRefresh={() => void refreshHcp()}
+        onRefresh={() => void hub.refreshHcp()}
       />
+
+      {(hub.cfoManifest || hub.cfoLoading || hub.cfoError) && (
+        <div className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm dark:border-slate-800 dark:bg-slate-900">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <p className="font-medium text-slate-900 dark:text-white">CFO / QuickBooks data packs</p>
+              <p className="mt-0.5 text-xs text-slate-500">
+                {hub.cfoLoading
+                  ? 'Loading packs…'
+                  : hub.cfoManifest
+                    ? `${hub.cfoManifest.packCount} packs · ${hub.cfoManifest.metricCount} metrics · built ${new Date(hub.cfoManifest.generatedAt).toLocaleString()}`
+                    : hub.cfoError ?? 'No packs'}
+              </p>
+              {hub.cfoManifest && hub.cfoManifest.packs.length > 0 && (
+                <ul className="mt-2 flex flex-wrap gap-2 text-[11px] text-slate-500">
+                  {hub.cfoManifest.packs.map((p) => (
+                    <li
+                      key={p.id}
+                      className="rounded-full bg-slate-100 px-2 py-0.5 dark:bg-slate-800"
+                    >
+                      {p.sourceFile} ({p.metricCount})
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            <button
+              type="button"
+              className="btn-secondary py-2 text-xs"
+              onClick={() => {
+                hub.setCategory('cfo')
+                void hub.refreshCfo()
+              }}
+            >
+              View CFO KPIs
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Status strip */}
       <div className="grid grid-cols-3 gap-2 sm:max-w-md">
@@ -244,9 +283,12 @@ export function KpiHubPage() {
       ))}
 
       <p className="text-xs text-slate-400">
-        Data-driven registry in <code className="text-[10px]">src/kpi/registry.ts</code> — add a
-        definition + compute case to surface new KPIs automatically. Targets editable by Ryan /
-        Christine on each card detail.
+        Ops KPIs from jobs/HCP · CFO KPIs from QBO data packs in{' '}
+        <code className="text-[10px]">external_docs/exports/qbo/</code> (or{' '}
+        <code className="text-[10px]">exports/cfo/</code>,{' '}
+        <code className="text-[10px]">data/cfo-packs/</code>). Drop a new .xlsx/.csv and run{' '}
+        <code className="text-[10px]">npm run build:cfo-packs</code> — metrics appear here
+        automatically. Docs: <code className="text-[10px]">docs/KPI_HUB.md</code>.
       </p>
 
       {detail && (

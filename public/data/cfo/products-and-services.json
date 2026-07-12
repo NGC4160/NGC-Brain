@@ -1,0 +1,133 @@
+{
+  "id": "products-and-services",
+  "title": "Product/Service List",
+  "kind": "products_and_services",
+  "periodLabel": "Product/Service List",
+  "sourceFile": "products_and_services.xlsx",
+  "sourcePath": "external_docs/exports/qbo/products_and_services.xlsx",
+  "asOf": "Product/Service List",
+  "generatedAt": "2026-07-12T14:40:34.459Z",
+  "metricCount": 5,
+  "metrics": [
+    {
+      "id": "cfo-ps-item-count",
+      "name": "Pricebook Items (QBO)",
+      "value": 494,
+      "format": "number",
+      "unit": "items",
+      "direction": "higher-better",
+      "defaultTarget": 494,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Products & services on file",
+      "description": "Rows in the Product/Service List pack.",
+      "formula": "COUNT(products_and_services)",
+      "historicalContext": "Catalog breadth for estimating and invoicing.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-ps-service-count",
+      "name": "Service SKUs",
+      "value": 356,
+      "format": "number",
+      "unit": "services",
+      "direction": "higher-better",
+      "defaultTarget": 356,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Service-type items",
+      "description": "Count of Type = Service.",
+      "formula": "COUNT WHERE type='Service'",
+      "historicalContext": "Labor/service catalog size.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-ps-avg-sales-price",
+      "name": "Avg Sales Price",
+      "value": 400.38,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 420,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Mean sales price across priced items",
+      "description": "Average of sales price where > 0.",
+      "formula": "AVG(sales price WHERE > 0)",
+      "historicalContext": "Rough mix signal — lithium skews high.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-ps-lithium-skus",
+      "name": "Lithium-Related SKUs",
+      "value": 41,
+      "format": "number",
+      "unit": "items",
+      "direction": "higher-better",
+      "defaultTarget": 41,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Items mentioning lithium/LFP",
+      "description": "Product/service names containing lithium or LFP.",
+      "formula": "COUNT WHERE name ~ lithium|lfp",
+      "historicalContext": "Supports lithium conversion program tracking.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-ps-noninventory",
+      "name": "Product / Non-Inventory SKUs",
+      "value": 136,
+      "format": "number",
+      "unit": "items",
+      "direction": "higher-better",
+      "defaultTarget": 136,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Non-service catalog items",
+      "description": "Non-inventory / product type rows.",
+      "formula": "COUNT non-service types",
+      "historicalContext": "Parts & product catalog depth.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    }
+  ]
+}
