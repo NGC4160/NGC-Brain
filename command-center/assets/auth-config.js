@@ -1,9 +1,9 @@
 window.NGC_AUTH = {
-  "passwordHash": "8bb6c058b89ca5107bcf5b2b9a121215776c93fc6d380daa1ed85e89a027e1c3",
+  "passwordHash": "23e2c21019bd22649075958f75d16fbf4d72454f93afcd839eb27675e4359f2a",
   "sessionHours": 24,
   "allowedUsers": [
     "Ryan",
     "Christine"
   ],
-  "configured": false
+  "configured": true
 };
