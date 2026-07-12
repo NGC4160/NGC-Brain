@@ -96,9 +96,16 @@ export function DashboardPage() {
                       : 'Operate from registered shop procedures.'}
               </p>
             </div>
-            <Link to="/sops" className="btn-primary py-2 text-sm">
-              Open SOPs
-            </Link>
+            <div className="flex flex-wrap gap-2">
+              <Link to="/sops" className="btn-primary py-2 text-sm">
+                Open SOPs
+              </Link>
+              {canAccessModule('kpi-hub') && (
+                <Link to="/kpi-hub" className="btn-secondary py-2 text-sm">
+                  KPI Hub
+                </Link>
+              )}
+            </div>
           </div>
           <div className="mt-3 flex flex-wrap gap-2 text-sm">
             {canAccessModule('intake') && (

@@ -1,4 +1,5 @@
 import {
+  BarChart3,
   ClipboardCheck,
   ClipboardEdit,
   ClipboardList,
@@ -25,6 +26,7 @@ interface Tab {
 const allTabs: Tab[] = [
   { to: '/', label: 'Home', icon: LayoutDashboard, end: true, moduleId: 'dashboard' },
   { to: '/intake', label: 'Intake', icon: ClipboardList, moduleId: 'intake' },
+  { to: '/kpi-hub', label: 'KPIs', icon: BarChart3, moduleId: 'kpi-hub' },
   { to: '/sops', label: 'SOPs', icon: Library, moduleId: 'sops' },
   { to: '/board', label: 'Board', icon: Kanban, moduleId: 'board' },
   { to: '/jobs', label: 'Jobs', icon: Wrench, moduleId: 'jobs' },
@@ -52,8 +54,10 @@ export function BottomNav({ onOpenMore }: BottomNavProps) {
     if (isOffice && t.moduleId === 'agent-input') return false
     // Ryan / Christine / Owner: keep SOPs in the primary bar (drop AR if needed)
     if (isOffice && t.moduleId === 'invoicing') return false
-    // Drivers: Home, SOPs, Board
-    if (isDriver && !['dashboard', 'sops', 'board'].includes(t.moduleId)) return false
+    // Drivers: Home, KPIs, SOPs, Board
+    if (isDriver && !['dashboard', 'kpi-hub', 'sops', 'board'].includes(t.moduleId)) return false
+    // Office: prefer KPIs; drop SOPs from primary if over capacity (slice handles)
+    if (isOffice && t.moduleId === 'sops') return false
     // Techs: prefer SOPs over agent-input in the bar
     if (isTechnician && t.moduleId === 'agent-input') return false
     return true
