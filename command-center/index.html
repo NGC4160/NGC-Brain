@@ -38,33 +38,40 @@
         <img src="assets/ngc-logo.png" alt="" />
         <div>
           <h1>NGC Command Center</h1>
-          <span>Neighborhood Golf Carts · Covington, LA</span>
+          <span>Neighborhood Golf Carts</span>
         </div>
       </div>
       <div class="topbar-status" id="status-bar"></div>
       <div class="topbar-actions">
         <span class="clock" id="clock"></span>
-        <span id="session-user" style="color:var(--muted);font-size:0.82rem"></span>
+        <span id="session-user" class="session-user"></span>
         <button class="btn-ghost" id="logout-btn" type="button">Logout</button>
       </div>
     </header>
 
-    <section class="hero">
-      <h2 class="hero-title">Mission Control</h2>
-      <p class="hero-sub">Visualize everything NGC is building — live ops, systems, automation, and growth pipeline.</p>
-      <div class="metrics-row" id="metrics-row">
-        <div class="metric-tile"><div class="value">—</div><div class="label">Loading</div></div>
-      </div>
-    </section>
+    <div class="command-layout">
+      <nav class="nav-panel" id="nav-panel" aria-label="Sections">
+        <p class="nav-label">Sections</p>
+        <ul class="nav-list" id="nav-list"></ul>
+        <div class="nav-footer">
+          <a href="dashboard.html">Ops Dashboard</a>
+          <a href="explore.html">Full Index</a>
+          <span class="nav-updated">Updated <span id="generated-at">—</span></span>
+        </div>
+      </nav>
 
-    <div class="zones" id="zones">
-      <p style="color:var(--muted);padding:2rem">Authenticating…</p>
+      <main class="main-panel" id="main-panel">
+        <div id="overview-view" class="panel-view">
+          <div class="metrics-strip" id="metrics-row"></div>
+          <div class="overview-grid" id="overview-grid"></div>
+          <div class="overview-pipeline" id="overview-pipeline"></div>
+        </div>
+        <div id="section-view" class="panel-view hidden">
+          <header class="section-header" id="section-header"></header>
+          <div class="section-cards" id="section-cards"></div>
+        </div>
+      </main>
     </div>
-
-    <footer class="footer-bar">
-      <span class="classified">◆ OWNERS ONLY ◆</span>
-      <p>NGC Command Center · Updated <span id="generated-at">—</span> · <a href="dashboard.html">Dashboard</a> · <a href="explore.html">Full Index</a></p>
-    </footer>
   </div>
 
   <script src="assets/auth-config.js"></script>
