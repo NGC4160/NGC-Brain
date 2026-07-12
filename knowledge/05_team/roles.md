@@ -1,6 +1,7 @@
 # Team & Roles
 
-**Last verified:** 2026-06-28
+**Last verified:** 2026-07-12  
+**Sources:** Ops knowledge + June 2026 CFO/CEO boardroom staff section
 
 ## Ownership
 
@@ -13,18 +14,26 @@
 
 | Name | Role | Responsibilities |
 |------|------|------------------|
-| **Ryan** | Service manager | Shop operations, service workflow, technician oversight |
+| **Ryan** | Service manager | Shop operations, service workflow, technician oversight; keep production hours low for management/sales focus |
 | **Christine** | Office manager | Phones, customer intake, front office |
-| **Roy** | Driver | Pickups and deliveries |
-| **Taylor** | Golf cart technician | In-shop repair and service |
-| **Marlon** | Golf cart technician | In-shop repair and service |
-| **Peyton** | Diagnostics (part-time) | Advanced diagnostics as needed |
+| **Roy Gautreaux** | Driver / shop support | Pickups and deliveries; travel-heavy support role |
+| **Taylor Couvillion** | Golf cart technician | In-shop repair and service |
+| **Marlon Gray** | Golf cart technician | In-shop repair and service; high on-job hour producer |
+| **Peyton (Payton) Elkins** | Diagnostics (part-time / Monday senior) | Advanced diagnostics; high-value limited-hour contribution |
+
+## Former (2026 — for attribution context only)
+
+| Name | Notes |
+|------|-------|
+| Daniel Champagne | Hired Mar 2026; released end of March — standards / training fit |
+| Dylan Silvan | Released Jun 2026 — culture and initiative (not a pure production decision) |
 
 ## External
 
 | Name | Role |
 |------|------|
 | **Jill Stoltz** | Bookkeeper (QBO) |
+| **PA Golf Cart World** | Business consulting / monthly CFO packs |
 
 ## RACI summary
 

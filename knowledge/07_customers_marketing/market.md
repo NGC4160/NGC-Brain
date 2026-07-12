@@ -1,6 +1,6 @@
 # Customers & Marketing
 
-**Last verified:** 2026-06-28
+**Last verified:** 2026-07-12
 
 ## Service area
 
@@ -11,6 +11,19 @@
 | **Market positioning** | **Greater New Orleans metro** |
 
 Shop address: 71363 Thelma Ln, Suite E, Covington, LA 70433
+
+## Priority ZIP clusters (from 2026 CFO packs)
+
+Grow depth before breadth. Full series: `knowledge/08_finance/datasets/zip_performance.json`
+
+| Priority | ZIPs | Use |
+|----------|------|-----|
+| Primary density | **70433**, **70471** | Routing, reviews, repeat customers, lithium/premium marketing first |
+| Secondary fill | 70447, 70435, 70454 | Schedule fill when density stacks |
+| Selective premium | 70058 (and similar high-ticket singles) | High-value work without overbuilding travel |
+| Caution / low yield | e.g. 70070 historically | Trip fee + minimum diagnostic discipline |
+
+June 2026: top two ZIPs (70471 + 70433) ≈ 39% of ZIP-tracked revenue.
 
 ## Customer segments
 

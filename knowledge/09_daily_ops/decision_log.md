@@ -19,6 +19,12 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-06-28 | No cart sales/rentals until service shop is solid | Ryan | |
 | 2026-06-28 | HCP MAX plan — API sync scripts + MCP path documented | Ryan | See hcp_api_setup.md |
 | 2026-06-28 | Diagnostic fee $179 — not waived; applies toward repair on known-issue jobs | Ryan | |
+| 2026-06 | Shop Workflow & Scheduling SOP live (whiteboard, aging, deposits before elective pickup) | Ryan | Documented in June CFO/CEO RevB |
+| 2026-06 | Pickup/Delivery Visual Inspection Form required (photos + sign-off) | Ryan | Custody / damage-claim control |
+| 2026-06 | Revised Service T&Cs for shop, storage, warranty, disputes | Ryan | Garage-keeper exposure with in-shop model |
+| 2026-06 | Dylan Silvan released — culture/initiative standard enforced | Ryan | Keep recruiting pipeline warm |
+| 2026-03 | Daniel Champagne released end of March — standards fit after training/OJT | Ryan | March CFO Rev2 |
+| 2026-07-12 | CFO packs (Jan/Mar/Apr forecast/Jun RevB) ingested into `knowledge/08_finance/datasets/` | Ryan / AI | Source PDFs in `external_docs/exports/cfo_reports/` |
 
 ---
 
