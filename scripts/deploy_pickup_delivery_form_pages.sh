@@ -4,7 +4,9 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$ROOT/external_docs/templates/pickup_delivery/NGC_Cart_Pickup_Delivery_Visual_Inspection_Form.html"
+LOGO_SRC="$ROOT/external_docs/templates/pickup_delivery/assets/ngc-logo.png"
 DEST_REL="docs/pickup-delivery-inspection.html"
+LOGO_DEST_REL="docs/assets/ngc-logo.png"
 WORKTREE="/tmp/gh-pages-pickup-form"
 
 if [[ ! -f "$SRC" ]]; then
