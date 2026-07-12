@@ -12,7 +12,7 @@ The dashboard is driven by registered **Standard Operating Procedures**.
 | **Ryan** (service manager) | Full SOP library anytime — Office, Shop, Driver, Shared |
 | **Christine** (office) | Full SOP library anytime — same as Ryan |
 | **Owner** | Full SOP library |
-| **Technicians** | QC, deposit gates, shop workflow, whiteboard |
+| **Technicians** | QC, shop workflow, whiteboard |
 | **Drivers (Roy)** | Pickup zones, driver route checklist, workflow & whiteboard |
 | **Office staff** | Same full library as Christine when signed in as front-desk/office |
 

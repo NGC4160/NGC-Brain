@@ -90,7 +90,7 @@ export function SopsHubPage() {
         <p className="font-medium text-slate-900 dark:text-white">Who sees what</p>
         <ul className="mt-2 list-disc space-y-1 pl-5">
           <li>Office & service manager — full library (read anytime)</li>
-          <li>Technicians — QC, deposits, shop workflow & whiteboard</li>
+          <li>Technicians — QC, shop workflow & whiteboard</li>
           <li>Drivers — zones, route checklist, board / workflow context</li>
         </ul>
       </div>

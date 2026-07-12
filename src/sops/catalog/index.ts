@@ -163,7 +163,7 @@ export const depositGatesSop: SopDefinition = {
   description:
     'Block parts/bay work until required deposits are collected — lithium $1,800, battery $800, diagnostic $179.',
   ownerRoles: ['service-manager', 'front-desk'],
-  accessRoles: ['front-desk', 'service-manager', 'owner', 'technician'],
+  accessRoles: ['front-desk', 'service-manager', 'owner'],
   status: 'active',
   runtime: 'policy',
   modulePath: '/jobs',

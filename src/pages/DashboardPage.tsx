@@ -92,7 +92,7 @@ export function DashboardPage() {
                   : session?.role === 'driver'
                     ? 'Pickup zones, route checklist, and board context.'
                     : session?.role === 'technician'
-                      ? 'QC, deposits, and shop workflow for your bay.'
+                      ? 'QC and shop workflow for your bay.'
                       : 'Operate from registered shop procedures.'}
               </p>
             </div>

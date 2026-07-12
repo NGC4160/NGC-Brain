@@ -23,7 +23,7 @@ Sign-in uses **4–6 digit passcodes** (shop-floor PINs stored on the device). T
 | Assign technicians | ✓ | ✓ | — | — | — |
 | QC form | ✓ | ✓ | — | assigned jobs | — |
 | Customer Intake | ✓ | ✓ | ✓ | — | — |
-| **SOPs hub** | full | full | full | shop SOPs | driver SOPs |
+| **SOPs hub** | full | full | full | QC / workflow / board | driver SOPs |
 | Agent Input | ✓ | ✓ | ✓ | assigned jobs | — |
 | Manuals | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Invoicing | ✓ | ✓ | ✓ | — | — |
