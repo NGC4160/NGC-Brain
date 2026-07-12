@@ -73,8 +73,9 @@ export function LoginPage() {
             ))}
           </ul>
           <p className="mt-3 text-xs text-slate-400">
-            Service manager assigns jobs. Technicians see their assigned work and QC forms.
-            Passcodes can be changed in Settings after sign-in.
+            Ryan and Christine have the full SOP library. Technicians see assigned work and QC.
+            Roy (driver) has route SOPs and the board. Passcodes can be changed in Settings after
+            sign-in.
           </p>
         </div>
       </div>

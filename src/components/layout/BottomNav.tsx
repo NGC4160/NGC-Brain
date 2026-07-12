@@ -4,6 +4,7 @@ import {
   ClipboardList,
   Kanban,
   LayoutDashboard,
+  Library,
   MoreHorizontal,
   Receipt,
   Wrench,
@@ -24,6 +25,7 @@ interface Tab {
 const allTabs: Tab[] = [
   { to: '/', label: 'Home', icon: LayoutDashboard, end: true, moduleId: 'dashboard' },
   { to: '/intake', label: 'Intake', icon: ClipboardList, moduleId: 'intake' },
+  { to: '/sops', label: 'SOPs', icon: Library, moduleId: 'sops' },
   { to: '/board', label: 'Board', icon: Kanban, moduleId: 'board' },
   { to: '/jobs', label: 'Jobs', icon: Wrench, moduleId: 'jobs' },
   { to: '/qc', label: 'QC', icon: ClipboardCheck, moduleId: 'qc' },
@@ -41,12 +43,19 @@ export function BottomNav({ onOpenMore }: BottomNavProps) {
     session?.role === 'front-desk' ||
     session?.role === 'service-manager' ||
     session?.role === 'owner'
+  const isDriver = session?.role === 'driver'
 
   const preferred = allTabs.filter((t) => {
     if (!canAccessModule(t.moduleId)) return false
     if (isTechnician && (t.moduleId === 'invoicing' || t.moduleId === 'intake')) return false
     if (!isTechnician && t.moduleId === 'qc') return false
     if (isOffice && t.moduleId === 'agent-input') return false
+    // Ryan / Christine / Owner: keep SOPs in the primary bar (drop AR if needed)
+    if (isOffice && t.moduleId === 'invoicing') return false
+    // Drivers: Home, SOPs, Board
+    if (isDriver && !['dashboard', 'sops', 'board'].includes(t.moduleId)) return false
+    // Techs: prefer SOPs over agent-input in the bar
+    if (isTechnician && t.moduleId === 'agent-input') return false
     return true
   })
 

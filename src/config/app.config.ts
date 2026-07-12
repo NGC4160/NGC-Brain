@@ -106,7 +106,7 @@ export const navModules: NavModule[] = [
     path: '/sops',
     icon: 'Library',
     enabled: true,
-    description: 'All shop operating procedures — run checklists and open workflows',
+    description: 'SOP library — Ryan & Christine full access; role-filtered for shop & drivers',
   },
   {
     id: 'resources',

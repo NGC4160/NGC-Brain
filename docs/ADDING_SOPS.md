@@ -42,6 +42,7 @@ export const myNewSop: SopDefinition = {
   runtime: 'checklist',
   modulePath: '/sops/battery-watering',
   tags: ['battery', 'maintenance'],
+  section: 'shop',
   lastVerified: '2026-07-12',
   steps: [{ id: 'prep', title: 'Prep', summary: 'PPE and distilled water ready.' }],
   checklist: [
@@ -59,16 +60,25 @@ export const myNewSop: SopDefinition = {
 
 ## SOPs on file today
 
-| ID | Runtime | Screen |
-|----|---------|--------|
-| `customer-intake` | module | `#/intake` |
-| `repair-intake-checklist` | checklist | `#/sops/repair-intake-checklist` |
-| `pickup-delivery` | policy | Intake |
-| `deposit-gates` | policy | Jobs / Board |
-| `job-assignment` | module | Board |
-| `shop-qc` | module | `#/qc` |
-| `shop-workflow` | reference | `#/sops/shop-workflow` |
-| `shop-whiteboard` | reference | Board + knowledge doc |
+| ID | Runtime | Screen | Section |
+|----|---------|--------|---------|
+| `customer-intake` | module | `#/intake` | office |
+| `repair-intake-checklist` | checklist | `#/sops/repair-intake-checklist` | office |
+| `pickup-delivery` | policy | Intake | driver |
+| `driver-route` | checklist | `#/sops/driver-route` | driver |
+| `deposit-gates` | policy | Jobs / Board | shared |
+| `job-assignment` | module | Board | shop |
+| `shop-qc` | module | `#/qc` | shop |
+| `shop-workflow` | reference | `#/sops/shop-workflow` | shared |
+| `shop-whiteboard` | reference | Board + knowledge doc | shared |
+
+## Access rules
+
+- **Ryan / Christine / Owner** — full library (every active SOP), readable anytime  
+- **Technicians** — SOPs whose `accessRoles` include `technician`  
+- **Drivers** — SOPs whose `accessRoles` include `driver`  
+
+Always set `section` (`office` | `shop` | `driver` | `shared`) so the hub groups correctly for management.
 
 ## Add on-device (no deploy)
 

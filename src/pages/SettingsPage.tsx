@@ -190,8 +190,8 @@ export function SettingsPage() {
                   Staff passcodes
                 </h2>
                 <p className="text-sm text-slate-500">
-                  Up to {MAX_TECHNICIANS} technicians + service manager. Passcodes are 4–6 digits
-                  (shop-floor PINs on this device).
+                  Up to {MAX_TECHNICIANS} technicians, office, driver, and service manager.
+                  Passcodes are 4–6 digits (shop-floor PINs on this device).
                 </p>
               </div>
             </div>
@@ -300,8 +300,9 @@ export function SettingsPage() {
                 description: customDesc.trim() || 'Custom shop checklist.',
                 status: 'active',
                 runtime: 'checklist',
-                accessRoles: ['front-desk', 'service-manager', 'owner', 'technician'],
+                accessRoles: ['front-desk', 'service-manager', 'owner', 'technician', 'driver'],
                 ownerRoles: ['service-manager'],
+                section: 'shared',
                 steps: [
                   {
                     id: 'run',

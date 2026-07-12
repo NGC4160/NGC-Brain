@@ -3,18 +3,19 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import {
   BookOpen,
   CheckCircle2,
-  ChevronRight,
   ClipboardList,
   ExternalLink,
   Play,
   RotateCcw,
 } from 'lucide-react'
 import { useAuthContext } from '@/context/AuthContext'
+import { hasFullSopLibrary, ROLE_LABELS } from '@/config/staff'
 import {
   checklistProgress,
   completeSopRun,
   getSop,
   getSopRun,
+  groupSopsBySection,
   listAllSops,
   resetSopRun,
   saveSopRun,
@@ -23,7 +24,6 @@ import {
   toggleRunItem,
 } from '@/sops/registry'
 import type { SopDefinition, SopRuntime } from '@/sops/types'
-import { ROLE_LABELS } from '@/config/staff'
 
 const RUNTIME_LABELS: Record<SopRuntime, string> = {
   module: 'Live module',
@@ -35,7 +35,9 @@ const RUNTIME_LABELS: Record<SopRuntime, string> = {
 export function SopsHubPage() {
   const { session } = useAuthContext()
   const role = session?.role ?? null
+  const fullLibrary = hasFullSopLibrary(role)
   const sops = useMemo(() => sopsForRole(role, { status: ['active', 'draft'] }), [role])
+  const sections = useMemo(() => groupSopsBySection(sops), [sops])
   const allCount = listAllSops().length
 
   return (
@@ -46,16 +48,37 @@ export function SopsHubPage() {
           Shop SOPs
         </h1>
         <p className="mt-1 text-sm text-slate-500">
-          Operating procedures on file ({sops.length} for your role · {allCount} total). Open a live
-          module or run a checklist — new SOPs added to the registry appear here automatically.
+          {fullLibrary
+            ? `Full procedure library for ${session?.name ?? 'management'} — read any SOP anytime (${sops.length} on file).`
+            : `Procedures for your role (${sops.length} shown · ${allCount} on file).`}
         </p>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-        {sops.map((sop) => (
-          <SopCard key={sop.id} sop={sop} />
-        ))}
-      </div>
+      {fullLibrary && (
+        <div className="rounded-xl border border-ngc-200 bg-ngc-50/80 px-4 py-3 text-sm text-ngc-900 dark:border-ngc-800 dark:bg-ngc-950/50 dark:text-ngc-100">
+          <p className="font-medium">Ryan & Christine — always-on SOP library</p>
+          <p className="mt-1 text-ngc-800/90 dark:text-ngc-200/90">
+            Office, shop floor, driver, and shared procedures are listed below. Open a live workflow
+            or read the full steps whenever you need them.
+          </p>
+        </div>
+      )}
+
+      {sections.map((group) => (
+        <section key={group.section} className="space-y-3">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+            {group.label}
+            <span className="ml-2 font-normal normal-case text-slate-400">
+              ({group.sops.length})
+            </span>
+          </h2>
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+            {group.sops.map((sop) => (
+              <SopCard key={sop.id} sop={sop} />
+            ))}
+          </div>
+        </section>
+      ))}
 
       {sops.length === 0 && (
         <div className="card py-10 text-center text-sm text-slate-400">
@@ -64,21 +87,24 @@ export function SopsHubPage() {
       )}
 
       <div className="card text-sm text-slate-600 dark:text-slate-300">
-        <p className="font-medium text-slate-900 dark:text-white">Adding future SOPs</p>
-        <p className="mt-1">
-          Drop a definition into <code className="text-xs">src/sops/catalog/</code> (or save a custom
-          SOP from Settings) following <code className="text-xs">docs/ADDING_SOPS.md</code>. Checklist
-          SOPs become runnable immediately; module SOPs link to their DMS screen.
-        </p>
+        <p className="font-medium text-slate-900 dark:text-white">Who sees what</p>
+        <ul className="mt-2 list-disc space-y-1 pl-5">
+          <li>Office & service manager — full library (read anytime)</li>
+          <li>Technicians — QC, deposits, shop workflow & whiteboard</li>
+          <li>Drivers — zones, route checklist, board / workflow context</li>
+        </ul>
       </div>
     </div>
   )
 }
 
 function SopCard({ sop }: { sop: SopDefinition }) {
+  const { canAccessModule } = useAuthContext()
   const run = getSopRun(sop.id)
-  const progress =
-    sop.runtime === 'checklist' ? checklistProgress(sop, run) : null
+  const progress = sop.runtime === 'checklist' ? checklistProgress(sop, run) : null
+  const pathModule = sop.modulePath?.replace(/^\//, '').split('/')[0] ?? ''
+  const canOpenModule =
+    Boolean(sop.modulePath) && (pathModule === 'sops' || canAccessModule(pathModule))
 
   return (
     <article className="card flex flex-col gap-3">
@@ -92,8 +118,7 @@ function SopCard({ sop }: { sop: SopDefinition }) {
         </span>
       </div>
       <p className="text-[11px] text-slate-400">
-        Owners:{' '}
-        {sop.ownerRoles.map((r) => ROLE_LABELS[r]).join(', ')}
+        Owners: {sop.ownerRoles.map((r) => ROLE_LABELS[r]).join(', ')}
         {sop.lastVerified ? ` · verified ${sop.lastVerified}` : ''}
       </p>
       {progress && progress.total > 0 && (
@@ -103,21 +128,24 @@ function SopCard({ sop }: { sop: SopDefinition }) {
         </p>
       )}
       <div className="mt-auto flex flex-wrap gap-2">
-        {sop.runtime === 'module' && sop.modulePath && (
+        {sop.runtime === 'module' && sop.modulePath && canOpenModule && (
           <Link to={sop.modulePath} className="btn-primary py-2 text-xs">
             <Play className="h-3.5 w-3.5" /> Open workflow
           </Link>
         )}
-        {(sop.runtime === 'checklist' || sop.runtime === 'reference' || sop.runtime === 'policy') && (
-          <Link to={`/sops/${sop.id}`} className="btn-primary py-2 text-xs">
+        {(sop.runtime === 'checklist' ||
+          sop.runtime === 'reference' ||
+          sop.runtime === 'policy' ||
+          sop.runtime === 'module') && (
+          <Link
+            to={`/sops/${sop.id}`}
+            className={
+              sop.runtime === 'module' && canOpenModule ? 'btn-secondary py-2 text-xs' : 'btn-primary py-2 text-xs'
+            }
+          >
             <ClipboardList className="h-3.5 w-3.5" />
-            {sop.runtime === 'checklist' ? 'Run checklist' : 'View SOP'}
+            {sop.runtime === 'checklist' ? 'Run checklist' : 'Read SOP'}
           </Link>
-        )}
-        {sop.relatedSopIds && sop.relatedSopIds.length > 0 && (
-          <span className="self-center text-[11px] text-slate-400">
-            {sop.relatedSopIds.length} related
-          </span>
         )}
       </div>
     </article>
@@ -148,7 +176,11 @@ export function SopDetailPage() {
     )
   }
 
-  if (session && !sop.accessRoles.includes(session.role)) {
+  const canRead =
+    session &&
+    (hasFullSopLibrary(session.role) || sop.accessRoles.includes(session.role))
+
+  if (session && !canRead) {
     return (
       <div className="card text-sm text-slate-600">
         Your role does not have access to this SOP.
@@ -183,7 +215,10 @@ export function SopDetailPage() {
             {RUNTIME_LABELS[sop.runtime]}
           </span>
           {sop.tags.map((t) => (
-            <span key={t} className="rounded-full bg-ngc-50 px-2 py-0.5 text-ngc-700 dark:bg-ngc-950 dark:text-ngc-200">
+            <span
+              key={t}
+              className="rounded-full bg-ngc-50 px-2 py-0.5 text-ngc-700 dark:bg-ngc-950 dark:text-ngc-200"
+            >
               {t}
             </span>
           ))}
@@ -202,11 +237,14 @@ export function SopDetailPage() {
         </Link>
       )}
 
-      {sop.modulePath && sop.runtime !== 'module' && sop.runtime !== 'policy' && !sop.modulePath.startsWith('/sops/') && (
-        <Link to={sop.modulePath} className="btn-secondary inline-flex">
-          <ExternalLink className="h-4 w-4" /> Related screen
-        </Link>
-      )}
+      {sop.modulePath &&
+        sop.runtime !== 'module' &&
+        sop.runtime !== 'policy' &&
+        !sop.modulePath.startsWith('/sops/') && (
+          <Link to={sop.modulePath} className="btn-secondary inline-flex">
+            <ExternalLink className="h-4 w-4" /> Related screen
+          </Link>
+        )}
 
       <section className="card space-y-3">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-ngc-700 dark:text-ngc-200">
@@ -222,10 +260,12 @@ export function SopDetailPage() {
               {step.scripts?.map((script) => (
                 <div key={script.id} className="mt-2 rounded bg-slate-50 p-2 text-xs dark:bg-slate-950">
                   <p className="font-medium text-slate-700 dark:text-slate-200">{script.label}</p>
-                  <p className="mt-1 whitespace-pre-wrap text-slate-600 dark:text-slate-300">{script.text}</p>
+                  <p className="mt-1 whitespace-pre-wrap text-slate-600 dark:text-slate-300">
+                    {script.text}
+                  </p>
                   <button
                     type="button"
-                    className="btn-secondary mt-2 py-1.5 text-xs"
+                    className="mt-2 text-brand-600 hover:underline"
                     onClick={() => void navigator.clipboard.writeText(script.text)}
                   >
                     Copy script
@@ -241,115 +281,113 @@ export function SopDetailPage() {
         <section className="card space-y-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-ngc-700 dark:text-ngc-200">
-              Checklist ({progress.requiredDone}/{progress.requiredTotal} required)
+              Checklist
             </h2>
-            <div className="flex gap-2">
-              <button
-                type="button"
-                className="btn-secondary py-2 text-xs"
-                onClick={() => {
-                  ensureRun()
-                }}
-              >
-                <Play className="h-3.5 w-3.5" /> Start / resume
-              </button>
-              <button
-                type="button"
-                className="btn-secondary py-2 text-xs"
-                onClick={() => {
-                  if (!session) return
-                  resetSopRun(sop.id, session.name)
-                  setRun(getSopRun(sop.id))
-                  setNotes('')
-                }}
-              >
-                <RotateCcw className="h-3.5 w-3.5" /> Reset
-              </button>
-            </div>
-          </div>
-          <ul className="space-y-2">
-            {sop.checklist.map((item) => (
-              <li key={item.id}>
-                <label className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-200">
-                  <input
-                    type="checkbox"
-                    className="mt-1"
-                    checked={Boolean(run?.checked[item.id])}
-                    onChange={(e) => {
-                      ensureRun()
-                      toggleRunItem(sop.id, item.id, e.target.checked)
-                      setRun(getSopRun(sop.id))
-                    }}
-                  />
-                  <span>
-                    {item.label}
-                    {item.required !== false ? ' *' : ''}
-                  </span>
-                </label>
-              </li>
-            ))}
-          </ul>
-          <div>
-            <label className="label" htmlFor="sopNotes">Notes</label>
-            <textarea
-              id="sopNotes"
-              className="input-field"
-              rows={3}
-              value={notes}
-              onChange={(e) => {
-                setNotes(e.target.value)
-                const current = ensureRun()
-                if (current) {
-                  saveSopRun({ ...current, notes: e.target.value })
-                  setRun(getSopRun(sop.id))
-                }
-              }}
-            />
-          </div>
-          <button
-            type="button"
-            className="btn-primary"
-            disabled={progress.requiredDone < progress.requiredTotal}
-            onClick={() => {
-              completeSopRun(sop.id)
-              setRun(getSopRun(sop.id))
-            }}
-          >
-            <CheckCircle2 className="h-4 w-4" /> Mark SOP complete
-          </button>
-          {run?.completedAt && (
-            <p className="text-sm text-emerald-700 dark:text-emerald-300">
-              Completed {new Date(run.completedAt).toLocaleString()} by {run.runBy}
+            <p className="text-xs text-slate-500">
+              {progress.requiredDone}/{progress.requiredTotal} required
             </p>
+          </div>
+          {!run && (
+            <button type="button" className="btn-primary" onClick={() => ensureRun()}>
+              Start checklist
+            </button>
+          )}
+          {run && (
+            <>
+              <ul className="space-y-2">
+                {sop.checklist.map((item) => (
+                  <li key={item.id}>
+                    <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-slate-200 p-3 dark:border-slate-800">
+                      <input
+                        type="checkbox"
+                        className="mt-1"
+                        checked={Boolean(run.checked[item.id])}
+                        onChange={(e) => {
+                          ensureRun()
+                          toggleRunItem(sop.id, item.id, e.target.checked)
+                          setRun(getSopRun(sop.id))
+                        }}
+                      />
+                      <span className="text-sm text-slate-700 dark:text-slate-200">
+                        {item.label}
+                        {item.required === false ? (
+                          <span className="ml-1 text-xs text-slate-400">(optional)</span>
+                        ) : null}
+                      </span>
+                    </label>
+                  </li>
+                ))}
+              </ul>
+              <textarea
+                className="input-field"
+                rows={3}
+                placeholder="Notes for this run"
+                value={notes}
+                onChange={(e) => {
+                  setNotes(e.target.value)
+                  const current = getSopRun(sop.id)
+                  if (current) saveSopRun({ ...current, notes: e.target.value })
+                }}
+              />
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  className="btn-primary"
+                  disabled={progress.requiredDone < progress.requiredTotal}
+                  onClick={() => {
+                    completeSopRun(sop.id)
+                    setRun(getSopRun(sop.id))
+                  }}
+                >
+                  <CheckCircle2 className="h-4 w-4" /> Mark complete
+                </button>
+                <button
+                  type="button"
+                  className="btn-secondary"
+                  onClick={() => {
+                    if (!session) return
+                    resetSopRun(sop.id, session.name)
+                    setNotes('')
+                    setRun(getSopRun(sop.id))
+                  }}
+                >
+                  <RotateCcw className="h-4 w-4" /> Reset
+                </button>
+              </div>
+              {run.completedAt && (
+                <p className="text-xs text-emerald-700 dark:text-emerald-300">
+                  Completed {new Date(run.completedAt).toLocaleString()}
+                </p>
+              )}
+            </>
           )}
         </section>
       )}
 
       {sop.relatedSopIds && sop.relatedSopIds.length > 0 && (
         <section className="card space-y-2">
-          <h2 className="text-sm font-semibold text-slate-900 dark:text-white">Related SOPs</h2>
-          <ul className="space-y-1">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">Related</h2>
+          <ul className="flex flex-wrap gap-2">
             {sop.relatedSopIds.map((id) => {
               const related = getSop(id)
               if (!related) return null
               return (
                 <li key={id}>
                   <Link
-                    to={related.runtime === 'module' && related.modulePath ? related.modulePath : `/sops/${id}`}
-                    className="flex items-center gap-1 text-sm text-brand-600 hover:underline"
+                    to={
+                      related.runtime === 'module' && related.modulePath
+                        ? related.modulePath
+                        : `/sops/${id}`
+                    }
+                    className="rounded-lg bg-slate-100 px-3 py-1.5 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-200"
                   >
-                    {related.title}
-                    <ChevronRight className="h-3.5 w-3.5" />
+                    {related.shortTitle}
                   </Link>
                 </li>
               )
             })}
           </ul>
         </section>
-      )}
-
-      {sop.sourceDoc && (
-        <p className="text-xs text-slate-400">Source: {sop.sourceDoc}</p>
       )}
     </div>
   )

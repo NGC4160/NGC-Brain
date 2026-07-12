@@ -19,6 +19,7 @@ export const customerIntakeSop: SopDefinition = {
   modulePath: '/intake',
   sourceDoc: 'docs/CUSTOMER_INTAKE.md',
   tags: ['intake', 'leads', 'office', 'diagnostics', 'estimates'],
+  section: 'office',
   lastVerified: '2026-07-12',
   relatedSopIds: ['repair-intake-checklist', 'pickup-delivery', 'shop-workflow'],
   steps: [
@@ -65,12 +66,13 @@ export const shopQcSop: SopDefinition = {
   description:
     'Technicians complete QC after every cart — photos, 7-point safety inspection, test drive, then move to Ready.',
   ownerRoles: ['technician'],
-  accessRoles: ['technician', 'service-manager', 'owner'],
+  accessRoles: ['technician', 'service-manager', 'owner', 'front-desk'],
   status: 'active',
   runtime: 'module',
   modulePath: '/qc',
   sourceDoc: 'docs/SHOP_ACCESS.md',
   tags: ['qc', 'technician', 'safety', 'ready'],
+  section: 'shop',
   lastVerified: '2026-07-11',
   relatedSopIds: ['shop-workflow', 'job-assignment'],
   steps: [
@@ -110,6 +112,7 @@ export const repairIntakeChecklistSop: SopDefinition = {
   modulePath: '/sops/repair-intake-checklist',
   sourceDoc: 'docs/intake-checklist.html',
   tags: ['intake', 'checklist', 'scheduling'],
+  section: 'office',
   lastVerified: '2026-07-12',
   relatedSopIds: ['customer-intake', 'deposit-gates'],
   steps: [
@@ -165,6 +168,7 @@ export const depositGatesSop: SopDefinition = {
   runtime: 'policy',
   modulePath: '/jobs',
   tags: ['deposits', 'lithium', 'battery', 'policy'],
+  section: 'shared',
   lastVerified: '2026-07-11',
   relatedSopIds: ['customer-intake', 'shop-workflow'],
   steps: [
@@ -193,11 +197,12 @@ export const jobAssignmentSop: SopDefinition = {
   description:
     'Service manager assigns carts to technicians. Techs only see and QC jobs assigned to them.',
   ownerRoles: ['service-manager'],
-  accessRoles: ['service-manager', 'owner'],
+  accessRoles: ['service-manager', 'owner', 'front-desk'],
   status: 'active',
   runtime: 'module',
   modulePath: '/board',
   tags: ['assignment', 'technician', 'board'],
+  section: 'shop',
   lastVerified: '2026-07-11',
   relatedSopIds: ['shop-qc', 'shop-workflow'],
   steps: [
@@ -224,14 +229,15 @@ export const pickupDeliverySop: SopDefinition = {
   title: 'Pickup & Delivery Zone SOP',
   shortTitle: 'Pickup zones',
   description: `Free pickup & delivery inside 40 miles of the North Shore shop or anywhere on the South Shore. $${PICKUP_FEE_OUTSIDE} outside that area.`,
-  ownerRoles: ['front-desk'],
-  accessRoles: ['front-desk', 'service-manager', 'owner'],
+  ownerRoles: ['front-desk', 'driver'],
+  accessRoles: ['front-desk', 'service-manager', 'owner', 'driver'],
   status: 'active',
   runtime: 'policy',
   modulePath: '/intake',
   tags: ['pickup', 'delivery', 'roy', 'zones'],
+  section: 'driver',
   lastVerified: '2026-07-12',
-  relatedSopIds: ['customer-intake', 'shop-workflow'],
+  relatedSopIds: ['customer-intake', 'driver-route', 'shop-workflow'],
   steps: [
     {
       id: 'ask-location',
@@ -251,6 +257,51 @@ export const pickupDeliverySop: SopDefinition = {
   ],
 }
 
+export const driverRouteSop: SopDefinition = {
+  id: 'driver-route',
+  title: 'Driver Route & Cart Handling SOP',
+  shortTitle: 'Driver route',
+  description:
+    'Roy’s daily pickup/delivery checklist — confirm addresses, secure carts, collect signatures, and sync Out Today with the shop board.',
+  ownerRoles: ['driver'],
+  accessRoles: ['driver', 'service-manager', 'owner', 'front-desk'],
+  status: 'active',
+  runtime: 'checklist',
+  modulePath: '/sops/driver-route',
+  tags: ['driver', 'roy', 'pickup', 'delivery', 'route'],
+  section: 'driver',
+  lastVerified: '2026-07-12',
+  relatedSopIds: ['pickup-delivery', 'shop-whiteboard', 'shop-workflow'],
+  steps: [
+    {
+      id: 'morning',
+      title: 'Before leaving the shop',
+      summary: 'Pull Out Today list from the board; confirm addresses, keys, and payment notes with office.',
+    },
+    {
+      id: 'on-route',
+      title: 'On each stop',
+      summary: 'Secure cart, verify customer ID/name, note damage, collect signature or photo proof.',
+    },
+    {
+      id: 'return',
+      title: 'Back at the shop',
+      summary: 'Drop off pickups in Intake, update statuses, hand paperwork/keys to Christine or Ryan.',
+    },
+  ],
+  checklist: [
+    { id: 'board', label: 'Out Today / route list confirmed with Ryan or Christine', required: true },
+    { id: 'keys', label: 'Keys tagged and matched to each cart on the truck', required: true },
+    { id: 'zones', label: 'Stops ordered by zone (North Shore / South Shore / paid)', required: true },
+    { id: 'secure', label: 'Each cart secured before rolling', required: true },
+    { id: 'customer', label: 'Customer name / address verified at every stop', required: true },
+    { id: 'condition', label: 'Pre-existing damage noted (photo if needed)', required: true },
+    { id: 'proof', label: 'Signature or delivery proof captured', required: true },
+    { id: 'intake-drop', label: 'Shop pickups placed in Intake lane with notes', required: true },
+    { id: 'handoff', label: 'Paperwork / payment notes handed to office', required: true },
+  ],
+}
+
 export const shopWorkflowSop: SopDefinition = {
   id: 'shop-workflow',
   title: 'Shop Workflow SOP',
@@ -258,12 +309,13 @@ export const shopWorkflowSop: SopDefinition = {
   description:
     'End-to-end shop journey: contact → intake → arrival → repair → QC → payment → pickup/delivery.',
   ownerRoles: ['service-manager'],
-  accessRoles: ['front-desk', 'service-manager', 'owner', 'technician'],
+  accessRoles: ['front-desk', 'service-manager', 'owner', 'technician', 'driver'],
   status: 'active',
   runtime: 'reference',
   modulePath: '/sops/shop-workflow',
   sourceDoc: 'knowledge/04_operations/shop_workflow.md',
   tags: ['workflow', 'shop', 'overview'],
+  section: 'shared',
   lastVerified: '2026-06-28',
   relatedSopIds: [
     'customer-intake',
@@ -272,6 +324,7 @@ export const shopWorkflowSop: SopDefinition = {
     'shop-qc',
     'deposit-gates',
     'pickup-delivery',
+    'driver-route',
     'shop-whiteboard',
   ],
   steps: [
@@ -310,14 +363,15 @@ export const shopWhiteboardSop: SopDefinition = {
   description:
     'Physical board is floor truth — 7 lanes from Intake through Out Today, WIP caps, and morning huddle finish list.',
   ownerRoles: ['service-manager'],
-  accessRoles: ['front-desk', 'service-manager', 'owner', 'technician'],
+  accessRoles: ['front-desk', 'service-manager', 'owner', 'technician', 'driver'],
   status: 'active',
   runtime: 'reference',
   modulePath: '/board',
   sourceDoc: 'knowledge/04_operations/shop_whiteboard_layout.md',
   tags: ['whiteboard', 'board', 'wip', 'huddle'],
+  section: 'shared',
   lastVerified: '2026-06-28',
-  relatedSopIds: ['shop-workflow', 'job-assignment'],
+  relatedSopIds: ['shop-workflow', 'job-assignment', 'driver-route'],
   steps: [
     {
       id: 'lanes',
@@ -347,6 +401,7 @@ export const SOP_CATALOG: SopDefinition[] = [
   customerIntakeSop,
   repairIntakeChecklistSop,
   pickupDeliverySop,
+  driverRouteSop,
   depositGatesSop,
   jobAssignmentSop,
   shopQcSop,

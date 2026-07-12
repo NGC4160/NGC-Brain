@@ -13,6 +13,9 @@ export type SopRuntime =
 
 export type SopStatus = 'active' | 'draft' | 'legacy'
 
+/** Who the SOP is written for — used to group the hub for Ryan / Christine */
+export type SopSection = 'office' | 'shop' | 'driver' | 'shared'
+
 export interface SopChecklistItem {
   id: string
   label: string
@@ -45,6 +48,8 @@ export interface SopDefinition {
   /** Markdown / HTML knowledge file path under public or repo */
   sourceDoc?: string
   tags: string[]
+  /** Hub grouping (Office / Shop / Driver / Shared) */
+  section: SopSection
   /** Ordered workflow steps */
   steps: SopStep[]
   /** Flat checklist for runtime === 'checklist' */

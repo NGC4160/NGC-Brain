@@ -1,4 +1,4 @@
-export type UserRole = 'owner' | 'service-manager' | 'technician' | 'front-desk'
+export type UserRole = 'owner' | 'service-manager' | 'technician' | 'front-desk' | 'driver'
 
 export type JobStatus =
   | 'received'

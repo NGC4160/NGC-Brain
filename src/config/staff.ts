@@ -2,7 +2,7 @@ import type { UserRole } from '@/types'
 
 export type StaffRole = Extract<
   UserRole,
-  'owner' | 'service-manager' | 'technician' | 'front-desk'
+  'owner' | 'service-manager' | 'technician' | 'front-desk' | 'driver'
 >
 
 export interface StaffMember {
@@ -40,6 +40,13 @@ export const DEFAULT_STAFF: StaffMember[] = [
     name: 'Owner',
     role: 'owner',
     passcode: '0416',
+    active: true,
+  },
+  {
+    id: 'driver-roy',
+    name: 'Roy',
+    role: 'driver',
+    passcode: '4444',
     active: true,
   },
   {
@@ -88,8 +95,12 @@ export const ROLE_LABELS: Record<StaffRole, string> = {
   owner: 'Owner',
   'service-manager': 'Service manager',
   technician: 'Technician',
-  'front-desk': 'Front desk',
+  'front-desk': 'Office',
+  driver: 'Driver',
 }
+
+/** Roles that can open the full SOP library any time (Ryan, Christine, Owner) */
+export const SOP_LIBRARY_ROLES: StaffRole[] = ['owner', 'service-manager', 'front-desk']
 
 /** Modules each role can open */
 export const ROLE_MODULES: Record<StaffRole, string[]> = {
@@ -128,6 +139,7 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
     'resources',
     'invoicing',
   ],
+  driver: ['dashboard', 'sops', 'board', 'resources'],
 }
 
 export function canAssignJobs(role: StaffRole): boolean {
@@ -144,6 +156,10 @@ export function canOverrideDeposit(role: StaffRole): boolean {
 
 export function canAccessModule(role: StaffRole, moduleId: string): boolean {
   return ROLE_MODULES[role]?.includes(moduleId) ?? false
+}
+
+export function hasFullSopLibrary(role: StaffRole | null): boolean {
+  return role != null && SOP_LIBRARY_ROLES.includes(role)
 }
 
 /** Technician display names used for assignment dropdowns */

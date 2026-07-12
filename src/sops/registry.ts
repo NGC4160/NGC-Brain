@@ -1,6 +1,15 @@
-import type { StaffRole } from '@/config/staff'
+import { hasFullSopLibrary, type StaffRole } from '@/config/staff'
 import { SOP_CATALOG } from './catalog'
-import type { SopDefinition, SopRunRecord, SopStatus } from './types'
+import type { SopDefinition, SopRunRecord, SopSection, SopStatus } from './types'
+
+export const SOP_SECTION_LABELS: Record<SopSection, string> = {
+  office: 'Office',
+  shop: 'Shop floor',
+  driver: 'Pickup & delivery',
+  shared: 'Shop-wide',
+}
+
+export const SOP_SECTION_ORDER: SopSection[] = ['office', 'shop', 'driver', 'shared']
 
 const CUSTOM_KEY = 'ngc-custom-sops-v1'
 const RUNS_KEY = 'ngc-sop-runs-v1'
@@ -10,7 +19,8 @@ function loadCustomSops(): SopDefinition[] {
     const raw = localStorage.getItem(CUSTOM_KEY)
     if (!raw) return []
     const parsed = JSON.parse(raw) as SopDefinition[]
-    return Array.isArray(parsed) ? parsed : []
+    if (!Array.isArray(parsed)) return []
+    return parsed.map((s) => ({ ...s, section: s.section ?? 'shared' }))
   } catch {
     return []
   }
@@ -45,8 +55,18 @@ export function sopsForRole(
   return listAllSops().filter((sop) => {
     if (!statuses.includes(sop.status)) return false
     if (!role) return false
+    // Ryan (SM), Christine (office), and Owner can read the full library any time
+    if (hasFullSopLibrary(role)) return true
     return sop.accessRoles.includes(role)
   })
+}
+
+export function groupSopsBySection(sops: SopDefinition[]): { section: SopSection; label: string; sops: SopDefinition[] }[] {
+  return SOP_SECTION_ORDER.map((section) => ({
+    section,
+    label: SOP_SECTION_LABELS[section],
+    sops: sops.filter((s) => (s.section ?? 'shared') === section),
+  })).filter((g) => g.sops.length > 0)
 }
 
 export function loadSopRuns(): Record<string, SopRunRecord> {
@@ -142,6 +162,7 @@ export function createDraftSop(partial: Partial<SopDefinition> & Pick<SopDefinit
     runtime: partial.runtime ?? 'checklist',
     modulePath: partial.modulePath ?? `/sops/${partial.id}`,
     tags: partial.tags ?? ['custom'],
+    section: partial.section ?? 'shared',
     steps: partial.steps ?? [],
     checklist: partial.checklist ?? [],
     lastVerified: new Date().toISOString().slice(0, 10),
