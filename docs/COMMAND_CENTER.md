@@ -64,3 +64,4 @@ Or say **"sync HCP"** in Cursor — then commit and push the generated files.
 | "Password not configured" | Add `NGC_COMMAND_CENTER_PASSWORD` secret and re-run deploy |
 | Dashboard shows zeros | Run HCP sync and push generated files |
 | Access denied | Check access code; redeploy after changing secret |
+
