@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-12T23:04:10Z",
-  "repo": "ngc4160/ngc-brain",
+  "generated_at": "2026-07-12T23:04:40Z",
+  "repo": "NGC4160/NGC-Brain",
   "branch": "main",
-  "site_url": "https://ngc4160.github.io/ngc-brain/",
+  "site_url": "https://NGC4160.github.io/NGC-Brain/",
   "total_items": 60,
   "sections": [
     {
@@ -17,8 +17,8 @@
           "path": "START_HERE.md",
           "type": "markdown",
           "view": "view.html?path=START_HERE.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/START_HERE.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/START_HERE.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/START_HERE.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/START_HERE.md",
           "tags": [
             "cursor",
             "guide"
@@ -30,8 +30,8 @@
           "path": "README.md",
           "type": "markdown",
           "view": "view.html?path=README.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/README.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/README.md",
           "tags": [
             "meta"
           ]
@@ -50,8 +50,8 @@
           "path": "knowledge/00_index.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/00_index.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/00_index.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/00_index.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/00_index.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/00_index.md",
           "tags": [
             "knowledge"
           ]
@@ -62,8 +62,8 @@
           "path": "knowledge/01_company/profile.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/01_company/profile.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/01_company/profile.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/01_company/profile.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/01_company/profile.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/01_company/profile.md",
           "tags": [
             "knowledge"
           ]
@@ -74,8 +74,8 @@
           "path": "knowledge/02_products/lithium_conversions.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/02_products/lithium_conversions.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/02_products/lithium_conversions.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/02_products/lithium_conversions.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/02_products/lithium_conversions.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/02_products/lithium_conversions.md",
           "tags": [
             "knowledge"
           ]
@@ -86,8 +86,8 @@
           "path": "knowledge/03_services/shop_services.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/03_services/shop_services.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/03_services/shop_services.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/03_services/shop_services.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/03_services/shop_services.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/03_services/shop_services.md",
           "tags": [
             "knowledge"
           ]
@@ -98,8 +98,8 @@
           "path": "knowledge/03_services/pricebook_reference.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/03_services/pricebook_reference.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/03_services/pricebook_reference.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/03_services/pricebook_reference.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/03_services/pricebook_reference.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/03_services/pricebook_reference.md",
           "tags": [
             "knowledge"
           ]
@@ -110,8 +110,8 @@
           "path": "knowledge/04_operations/shop_workflow.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/04_operations/shop_workflow.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/04_operations/shop_workflow.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/04_operations/shop_workflow.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/04_operations/shop_workflow.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/04_operations/shop_workflow.md",
           "tags": [
             "knowledge"
           ]
@@ -122,8 +122,8 @@
           "path": "knowledge/04_operations/shop_throughput.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/04_operations/shop_throughput.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/04_operations/shop_throughput.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/04_operations/shop_throughput.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/04_operations/shop_throughput.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/04_operations/shop_throughput.md",
           "tags": [
             "knowledge"
           ]
@@ -134,8 +134,8 @@
           "path": "knowledge/04_operations/shop_whiteboard_layout.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/04_operations/shop_whiteboard_layout.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/04_operations/shop_whiteboard_layout.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/04_operations/shop_whiteboard_layout.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/04_operations/shop_whiteboard_layout.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/04_operations/shop_whiteboard_layout.md",
           "tags": [
             "knowledge"
           ]
@@ -146,8 +146,8 @@
           "path": "knowledge/05_team/roles.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/05_team/roles.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/05_team/roles.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/05_team/roles.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/05_team/roles.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/05_team/roles.md",
           "tags": [
             "knowledge"
           ]
@@ -158,8 +158,8 @@
           "path": "knowledge/05_team/personnel_counseling.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/05_team/personnel_counseling.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/05_team/personnel_counseling.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/05_team/personnel_counseling.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/05_team/personnel_counseling.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/05_team/personnel_counseling.md",
           "tags": [
             "knowledge"
           ]
@@ -170,8 +170,8 @@
           "path": "knowledge/06_systems/tools.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/06_systems/tools.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/06_systems/tools.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/06_systems/tools.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/06_systems/tools.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/06_systems/tools.md",
           "tags": [
             "knowledge"
           ]
@@ -182,8 +182,8 @@
           "path": "knowledge/07_customers_marketing/market.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/07_customers_marketing/market.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/07_customers_marketing/market.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/07_customers_marketing/market.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/07_customers_marketing/market.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/07_customers_marketing/market.md",
           "tags": [
             "knowledge"
           ]
@@ -194,8 +194,8 @@
           "path": "knowledge/08_finance/overview.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/08_finance/overview.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/08_finance/overview.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/08_finance/overview.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/08_finance/overview.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/08_finance/overview.md",
           "tags": [
             "knowledge"
           ]
@@ -206,8 +206,8 @@
           "path": "knowledge/09_daily_ops/README.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/09_daily_ops/README.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/09_daily_ops/README.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/09_daily_ops/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/09_daily_ops/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/09_daily_ops/README.md",
           "tags": [
             "knowledge"
           ]
@@ -218,8 +218,8 @@
           "path": "knowledge/09_daily_ops/improvement_backlog.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/09_daily_ops/improvement_backlog.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/09_daily_ops/improvement_backlog.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/09_daily_ops/improvement_backlog.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/09_daily_ops/improvement_backlog.md",
           "tags": [
             "knowledge"
           ]
@@ -230,8 +230,8 @@
           "path": "knowledge/09_daily_ops/decision_log.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/09_daily_ops/decision_log.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/09_daily_ops/decision_log.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/09_daily_ops/decision_log.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/09_daily_ops/decision_log.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/09_daily_ops/decision_log.md",
           "tags": [
             "knowledge"
           ]
@@ -242,8 +242,8 @@
           "path": "knowledge/09_daily_ops/weekly_review_template.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/09_daily_ops/weekly_review_template.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/09_daily_ops/weekly_review_template.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/09_daily_ops/weekly_review_template.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/09_daily_ops/weekly_review_template.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/09_daily_ops/weekly_review_template.md",
           "tags": [
             "knowledge"
           ]
@@ -254,8 +254,8 @@
           "path": "knowledge/10_automation/README.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/10_automation/README.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/10_automation/README.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/10_automation/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/README.md",
           "tags": [
             "knowledge"
           ]
@@ -266,8 +266,8 @@
           "path": "knowledge/10_automation/integration_playbook.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/10_automation/integration_playbook.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/10_automation/integration_playbook.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/10_automation/integration_playbook.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/integration_playbook.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/integration_playbook.md",
           "tags": [
             "knowledge"
           ]
@@ -278,8 +278,8 @@
           "path": "knowledge/10_automation/automations_catalog.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/10_automation/automations_catalog.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/10_automation/automations_catalog.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/10_automation/automations_catalog.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/automations_catalog.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/automations_catalog.md",
           "tags": [
             "knowledge"
           ]
@@ -290,8 +290,8 @@
           "path": "knowledge/10_automation/hcp_api_setup.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/10_automation/hcp_api_setup.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/10_automation/hcp_api_setup.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/10_automation/hcp_api_setup.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/hcp_api_setup.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/hcp_api_setup.md",
           "tags": [
             "knowledge"
           ]
@@ -302,8 +302,8 @@
           "path": "knowledge/10_automation/ngc_admin_bot_spec.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/10_automation/ngc_admin_bot_spec.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/10_automation/ngc_admin_bot_spec.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/10_automation/ngc_admin_bot_spec.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/ngc_admin_bot_spec.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/ngc_admin_bot_spec.md",
           "tags": [
             "knowledge"
           ]
@@ -314,8 +314,8 @@
           "path": "knowledge/10_automation/legacy_pricebook_cleanup.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/10_automation/legacy_pricebook_cleanup.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/10_automation/legacy_pricebook_cleanup.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/10_automation/legacy_pricebook_cleanup.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/legacy_pricebook_cleanup.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/legacy_pricebook_cleanup.md",
           "tags": [
             "knowledge"
           ]
@@ -326,8 +326,8 @@
           "path": "knowledge/archive/legacy_mobile.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/archive/legacy_mobile.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/knowledge/archive/legacy_mobile.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/knowledge/archive/legacy_mobile.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/archive/legacy_mobile.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/archive/legacy_mobile.md",
           "tags": [
             "knowledge"
           ]
@@ -346,8 +346,8 @@
           "path": "prompts/morning_briefing.md",
           "type": "markdown",
           "view": "view.html?path=prompts/morning_briefing.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/prompts/morning_briefing.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/prompts/morning_briefing.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/morning_briefing.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/morning_briefing.md",
           "tags": [
             "prompt",
             "cursor"
@@ -359,8 +359,8 @@
           "path": "prompts/end_of_day.md",
           "type": "markdown",
           "view": "view.html?path=prompts/end_of_day.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/prompts/end_of_day.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/prompts/end_of_day.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/end_of_day.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/end_of_day.md",
           "tags": [
             "prompt",
             "cursor"
@@ -372,8 +372,8 @@
           "path": "prompts/weekly_review.md",
           "type": "markdown",
           "view": "view.html?path=prompts/weekly_review.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/prompts/weekly_review.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/prompts/weekly_review.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/weekly_review.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/weekly_review.md",
           "tags": [
             "prompt",
             "cursor"
@@ -385,8 +385,8 @@
           "path": "prompts/monthly_refresh.md",
           "type": "markdown",
           "view": "view.html?path=prompts/monthly_refresh.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/prompts/monthly_refresh.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/prompts/monthly_refresh.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/monthly_refresh.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/monthly_refresh.md",
           "tags": [
             "prompt",
             "cursor"
@@ -398,8 +398,8 @@
           "path": "prompts/quote_and_customer.md",
           "type": "markdown",
           "view": "view.html?path=prompts/quote_and_customer.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/prompts/quote_and_customer.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/prompts/quote_and_customer.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/quote_and_customer.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/quote_and_customer.md",
           "tags": [
             "prompt",
             "cursor"
@@ -411,8 +411,8 @@
           "path": "prompts/growth_and_strategy.md",
           "type": "markdown",
           "view": "view.html?path=prompts/growth_and_strategy.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/prompts/growth_and_strategy.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/prompts/growth_and_strategy.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/growth_and_strategy.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/growth_and_strategy.md",
           "tags": [
             "prompt",
             "cursor"
@@ -432,7 +432,7 @@
           "path": "docs/templates/personnel-counseling.html",
           "type": "html",
           "view": "templates/personnel-counseling.html",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html",
           "tags": [
             "form",
             "hr",
@@ -445,8 +445,8 @@
           "path": "external_docs/templates/personnel_counseling/README.md",
           "type": "markdown",
           "view": "view.html?path=external_docs/templates/personnel_counseling/README.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/external_docs/templates/personnel_counseling/README.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/external_docs/templates/personnel_counseling/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/templates/personnel_counseling/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/external_docs/templates/personnel_counseling/README.md",
           "tags": [
             "form",
             "hr"
@@ -466,7 +466,7 @@
           "path": "scripts/sync/run_ingest.sh",
           "type": "shell",
           "view": "scripts/sync/run_ingest.sh",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/sync/run_ingest.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/run_ingest.sh",
           "tags": [
             "script",
             "shell"
@@ -478,7 +478,7 @@
           "path": "scripts/sync/ingest_exports.py",
           "type": "python",
           "view": "scripts/sync/ingest_exports.py",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/sync/ingest_exports.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/ingest_exports.py",
           "tags": [
             "script",
             "python"
@@ -490,7 +490,7 @@
           "path": "scripts/sync/sync_hcp_api.py",
           "type": "python",
           "view": "scripts/sync/sync_hcp_api.py",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/sync/sync_hcp_api.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/sync_hcp_api.py",
           "tags": [
             "script",
             "python"
@@ -502,7 +502,7 @@
           "path": "scripts/sync/run_hcp_sync.sh",
           "type": "shell",
           "view": "scripts/sync/run_hcp_sync.sh",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/sync/run_hcp_sync.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/run_hcp_sync.sh",
           "tags": [
             "script",
             "shell"
@@ -514,7 +514,7 @@
           "path": "scripts/sync/generate_shop_board.py",
           "type": "python",
           "view": "scripts/sync/generate_shop_board.py",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/sync/generate_shop_board.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/generate_shop_board.py",
           "tags": [
             "script",
             "python"
@@ -526,7 +526,7 @@
           "path": "scripts/sync/run_shop_board.sh",
           "type": "shell",
           "view": "scripts/sync/run_shop_board.sh",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/sync/run_shop_board.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/run_shop_board.sh",
           "tags": [
             "script",
             "shell"
@@ -538,7 +538,7 @@
           "path": "scripts/connectors/hcp_client.py",
           "type": "python",
           "view": "scripts/connectors/hcp_client.py",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/connectors/hcp_client.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/connectors/hcp_client.py",
           "tags": [
             "script",
             "python"
@@ -550,7 +550,7 @@
           "path": "scripts/admin_bot/deposit_gate_alerts.py",
           "type": "python",
           "view": "scripts/admin_bot/deposit_gate_alerts.py",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/admin_bot/deposit_gate_alerts.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/admin_bot/deposit_gate_alerts.py",
           "tags": [
             "script",
             "python"
@@ -562,7 +562,7 @@
           "path": "scripts/admin_bot/legacy_pricebook_audit.py",
           "type": "python",
           "view": "scripts/admin_bot/legacy_pricebook_audit.py",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/admin_bot/legacy_pricebook_audit.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/admin_bot/legacy_pricebook_audit.py",
           "tags": [
             "script",
             "python"
@@ -574,7 +574,7 @@
           "path": "scripts/admin_bot/run_deposit_alerts.sh",
           "type": "shell",
           "view": "scripts/admin_bot/run_deposit_alerts.sh",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/admin_bot/run_deposit_alerts.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/admin_bot/run_deposit_alerts.sh",
           "tags": [
             "script",
             "shell"
@@ -586,7 +586,7 @@
           "path": "scripts/admin_bot/run_legacy_audit.sh",
           "type": "shell",
           "view": "scripts/admin_bot/run_legacy_audit.sh",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/admin_bot/run_legacy_audit.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/admin_bot/run_legacy_audit.sh",
           "tags": [
             "script",
             "shell"
@@ -598,7 +598,7 @@
           "path": "scripts/generate_personnel_counseling_docx.py",
           "type": "python",
           "view": "scripts/generate_personnel_counseling_docx.py",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/generate_personnel_counseling_docx.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/generate_personnel_counseling_docx.py",
           "tags": [
             "script",
             "python"
@@ -610,7 +610,7 @@
           "path": "scripts/build_pages_manifest.py",
           "type": "python",
           "view": "scripts/build_pages_manifest.py",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/scripts/build_pages_manifest.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/build_pages_manifest.py",
           "tags": [
             "script",
             "python"
@@ -630,8 +630,8 @@
           "path": ".cursor/skills/ngc-hcp-api/SKILL.md",
           "type": "markdown",
           "view": "view.html?path=.cursor/skills/ngc-hcp-api/SKILL.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/.cursor/skills/ngc-hcp-api/SKILL.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/.cursor/skills/ngc-hcp-api/SKILL.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/skills/ngc-hcp-api/SKILL.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/.cursor/skills/ngc-hcp-api/SKILL.md",
           "tags": [
             "skill",
             "cursor"
@@ -643,8 +643,8 @@
           "path": ".cursor/skills/ngc-morning-briefing/SKILL.md",
           "type": "markdown",
           "view": "view.html?path=.cursor/skills/ngc-morning-briefing/SKILL.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/.cursor/skills/ngc-morning-briefing/SKILL.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/.cursor/skills/ngc-morning-briefing/SKILL.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/skills/ngc-morning-briefing/SKILL.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/.cursor/skills/ngc-morning-briefing/SKILL.md",
           "tags": [
             "skill",
             "cursor"
@@ -656,8 +656,8 @@
           "path": ".cursor/skills/ngc-sync-exports/SKILL.md",
           "type": "markdown",
           "view": "view.html?path=.cursor/skills/ngc-sync-exports/SKILL.md",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/.cursor/skills/ngc-sync-exports/SKILL.md",
-          "raw": "https://raw.githubusercontent.com/ngc4160/ngc-brain/main/.cursor/skills/ngc-sync-exports/SKILL.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/skills/ngc-sync-exports/SKILL.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/.cursor/skills/ngc-sync-exports/SKILL.md",
           "tags": [
             "skill",
             "cursor"
@@ -677,7 +677,7 @@
           "path": ".cursor/rules/ngc-business-brain.mdc",
           "type": "config",
           "view": ".cursor/rules/ngc-business-brain.mdc",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/.cursor/rules/ngc-business-brain.mdc",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/rules/ngc-business-brain.mdc",
           "tags": [
             "cursor",
             "rules"
@@ -689,7 +689,7 @@
           "path": ".cursor/rules/ngc-daily-operator.mdc",
           "type": "config",
           "view": ".cursor/rules/ngc-daily-operator.mdc",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/.cursor/rules/ngc-daily-operator.mdc",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/rules/ngc-daily-operator.mdc",
           "tags": [
             "cursor",
             "rules"
@@ -701,7 +701,7 @@
           "path": ".cursor/mcp.json.example",
           "type": "config",
           "view": ".cursor/mcp.json.example",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/.cursor/mcp.json.example",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/mcp.json.example",
           "tags": [
             "cursor",
             "mcp"
@@ -713,7 +713,7 @@
           "path": ".cursor/hooks.json",
           "type": "config",
           "view": ".cursor/hooks.json",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/.cursor/hooks.json",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/hooks.json",
           "tags": [
             "cursor",
             "hooks"
@@ -725,7 +725,7 @@
           "path": ".env.example",
           "type": "config",
           "view": ".env.example",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/.env.example",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.env.example",
           "tags": [
             "config"
           ]
@@ -744,7 +744,7 @@
           "path": "external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
           "type": "data",
           "view": "external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
           "tags": [
             "export",
             "data"
@@ -756,7 +756,7 @@
           "path": "external_docs/exports/qbo/chart_of_accounts.xlsx",
           "type": "data",
           "view": "external_docs/exports/qbo/chart_of_accounts.xlsx",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/external_docs/exports/qbo/chart_of_accounts.xlsx",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/qbo/chart_of_accounts.xlsx",
           "tags": [
             "export",
             "data"
@@ -768,7 +768,7 @@
           "path": "external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
           "type": "data",
           "view": "external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
           "tags": [
             "export",
             "data"
@@ -780,7 +780,7 @@
           "path": "external_docs/exports/qbo/balance_sheet_current.xlsx",
           "type": "data",
           "view": "external_docs/exports/qbo/balance_sheet_current.xlsx",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/external_docs/exports/qbo/balance_sheet_current.xlsx",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/qbo/balance_sheet_current.xlsx",
           "tags": [
             "export",
             "data"
@@ -792,7 +792,7 @@
           "path": "external_docs/exports/qbo/products_and_services.xlsx",
           "type": "data",
           "view": "external_docs/exports/qbo/products_and_services.xlsx",
-          "github": "https://github.com/ngc4160/ngc-brain/blob/main/external_docs/exports/qbo/products_and_services.xlsx",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/qbo/products_and_services.xlsx",
           "tags": [
             "export",
             "data"

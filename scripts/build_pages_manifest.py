@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 OUT = DOCS / "deliverables.json"
 
-REPO = "ngc4160/ngc-brain"
+REPO = "NGC4160/NGC-Brain"
 BRANCH = "main"
 
 
