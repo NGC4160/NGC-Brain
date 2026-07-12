@@ -4,6 +4,7 @@ import { AuthProvider, useAuthContext } from '@/context/AuthContext'
 import { Layout } from '@/components/layout/Layout'
 import { DashboardPage } from '@/pages/DashboardPage'
 import { AgentInputPage } from '@/pages/AgentInputPage'
+import { CustomerIntakePage } from '@/pages/CustomerIntakePage'
 import { ResourcesPage } from '@/pages/ResourcesPage'
 import { JobsPage } from '@/pages/JobsPage'
 import { StatusBoardPage } from '@/pages/StatusBoardPage'
@@ -47,6 +48,14 @@ function AppRoutes() {
           element={
             <RequireModule moduleId="agent-input">
               <AgentInputPage />
+            </RequireModule>
+          }
+        />
+        <Route
+          path="/intake"
+          element={
+            <RequireModule moduleId="intake">
+              <CustomerIntakePage />
             </RequireModule>
           }
         />

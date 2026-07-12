@@ -1,6 +1,7 @@
 import {
   ClipboardCheck,
   ClipboardEdit,
+  ClipboardList,
   Kanban,
   LayoutDashboard,
   MoreHorizontal,
@@ -22,6 +23,7 @@ interface Tab {
 
 const allTabs: Tab[] = [
   { to: '/', label: 'Home', icon: LayoutDashboard, end: true, moduleId: 'dashboard' },
+  { to: '/intake', label: 'Intake', icon: ClipboardList, moduleId: 'intake' },
   { to: '/board', label: 'Board', icon: Kanban, moduleId: 'board' },
   { to: '/jobs', label: 'Jobs', icon: Wrench, moduleId: 'jobs' },
   { to: '/qc', label: 'QC', icon: ClipboardCheck, moduleId: 'qc' },
@@ -34,17 +36,20 @@ interface BottomNavProps {
 }
 
 export function BottomNav({ onOpenMore }: BottomNavProps) {
-  const { canAccessModule, isTechnician } = useAuthContext()
+  const { canAccessModule, isTechnician, session } = useAuthContext()
+  const isOffice =
+    session?.role === 'front-desk' ||
+    session?.role === 'service-manager' ||
+    session?.role === 'owner'
 
-  // Prefer QC in the bar for technicians; AR for office/manager roles
   const preferred = allTabs.filter((t) => {
     if (!canAccessModule(t.moduleId)) return false
-    if (isTechnician && t.moduleId === 'invoicing') return false
+    if (isTechnician && (t.moduleId === 'invoicing' || t.moduleId === 'intake')) return false
     if (!isTechnician && t.moduleId === 'qc') return false
+    if (isOffice && t.moduleId === 'agent-input') return false
     return true
   })
 
-  // Cap at 5 primary tabs + More
   const tabs = preferred.slice(0, 5)
 
   return (

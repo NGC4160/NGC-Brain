@@ -93,6 +93,14 @@ export const navModules: NavModule[] = [
     description: 'Log repairs, updates, and shop notes',
   },
   {
+    id: 'intake',
+    label: 'Customer Intake',
+    path: '/intake',
+    icon: 'ClipboardList',
+    enabled: true,
+    description: 'Lead response SOP, photos, waitlist & estimates',
+  },
+  {
     id: 'resources',
     label: 'Manuals & Files',
     path: '/resources',
@@ -138,7 +146,7 @@ export const navModules: NavModule[] = [
     path: '/customers',
     icon: 'Users',
     enabled: false,
-    description: 'CRM (coming soon)',
+    description: 'CRM (use Customer Intake for leads)',
   },
   {
     id: 'scheduling',

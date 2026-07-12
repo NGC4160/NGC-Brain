@@ -4,6 +4,7 @@ import { join } from 'node:path'
 /** Extra static copies so direct /path hits return 200 even without HashRouter */
 const routes = [
   'agent-input',
+  'intake',
   'resources',
   'jobs',
   'board',
