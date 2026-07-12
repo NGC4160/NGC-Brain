@@ -101,6 +101,14 @@ export const navModules: NavModule[] = [
     description: 'Lead response SOP, photos, waitlist & estimates',
   },
   {
+    id: 'sops',
+    label: 'SOPs',
+    path: '/sops',
+    icon: 'Library',
+    enabled: true,
+    description: 'SOP library — Ryan & Christine full access; role-filtered for shop & drivers',
+  },
+  {
     id: 'resources',
     label: 'Manuals & Files',
     path: '/resources',

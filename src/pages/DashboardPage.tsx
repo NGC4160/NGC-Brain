@@ -31,7 +31,7 @@ export function DashboardPage() {
     hcpError,
     refreshHcp,
   } = useApp()
-  const { session, isTechnician } = useAuthContext()
+  const { session, isTechnician, canAccessModule } = useAuthContext()
   const visibleJobs = useMemo(
     () => filterJobsForSession(jobs, session),
     [jobs, session],
@@ -76,6 +76,64 @@ export function DashboardPage() {
         error={hcpError}
         onRefresh={() => void refreshHcp()}
       />
+
+      {canAccessModule('sops') && (
+        <section className="rounded-xl border border-ngc-200 bg-white p-4 dark:border-ngc-800 dark:bg-slate-900">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h2 className="text-base font-semibold text-ngc-800 dark:text-ngc-100">
+                {session?.role === 'front-desk' || session?.role === 'service-manager'
+                  ? 'SOP library'
+                  : 'Your SOPs'}
+              </h2>
+              <p className="mt-1 text-sm text-slate-500">
+                {session?.role === 'front-desk' || session?.role === 'service-manager'
+                  ? 'Read office, shop, and driver procedures anytime.'
+                  : session?.role === 'driver'
+                    ? 'Pickup zones, route checklist, and board context.'
+                    : session?.role === 'technician'
+                      ? 'QC and shop workflow for your bay.'
+                      : 'Operate from registered shop procedures.'}
+              </p>
+            </div>
+            <Link to="/sops" className="btn-primary py-2 text-sm">
+              Open SOPs
+            </Link>
+          </div>
+          <div className="mt-3 flex flex-wrap gap-2 text-sm">
+            {canAccessModule('intake') && (
+              <Link
+                to="/intake"
+                className="rounded-lg bg-brand-50 px-3 py-1.5 text-brand-800 dark:bg-brand-950 dark:text-brand-200"
+              >
+                Intake
+              </Link>
+            )}
+            {canAccessModule('qc') && (
+              <Link
+                to="/qc"
+                className="rounded-lg bg-slate-100 px-3 py-1.5 text-slate-700 dark:bg-slate-800 dark:text-slate-200"
+              >
+                QC
+              </Link>
+            )}
+            {session?.role === 'driver' && (
+              <Link
+                to="/sops/driver-route"
+                className="rounded-lg bg-ngc-50 px-3 py-1.5 text-ngc-800 dark:bg-ngc-950 dark:text-ngc-200"
+              >
+                Driver route
+              </Link>
+            )}
+            <Link
+              to="/board"
+              className="rounded-lg bg-slate-100 px-3 py-1.5 text-slate-700 dark:bg-slate-800 dark:text-slate-200"
+            >
+              Board
+            </Link>
+          </div>
+        </section>
+      )}
 
       <section>
         <h2 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">

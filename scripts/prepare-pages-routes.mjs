@@ -5,6 +5,7 @@ import { join } from 'node:path'
 const routes = [
   'agent-input',
   'intake',
+  'sops',
   'resources',
   'jobs',
   'board',

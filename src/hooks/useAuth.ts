@@ -141,6 +141,8 @@ export function useAuth() {
     canAccessModule: (moduleId: string) => (role ? canAccessModule(role, moduleId) : false),
     isTechnician: role === 'technician',
     isServiceManager: role === 'service-manager',
+    isDriver: role === 'driver',
+    isOffice: role === 'front-desk' || role === 'service-manager' || role === 'owner',
   }
 }
 
