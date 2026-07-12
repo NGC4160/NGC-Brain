@@ -161,36 +161,43 @@ async function initViewer() {
   pathEl.textContent = path;
 
   try {
-    const manifest = await loadManifest();
-    let rawUrl = `https://raw.githubusercontent.com/${manifest.repo}/${manifest.branch}/${path}`;
+    let fetchUrl = `${BASE}${path}`;
+    let title = path.split('/').pop();
 
-    for (const section of manifest.sections) {
-      const match = section.items.find((i) => i.path === path);
-      if (match?.raw) {
-        rawUrl = match.raw;
-        if (match.title) titleEl.textContent = match.title;
-        break;
+    if (!path.startsWith('live/')) {
+      const manifest = await loadManifest();
+      fetchUrl = `https://raw.githubusercontent.com/${manifest.repo}/${manifest.branch}/${path}`;
+      for (const section of manifest.sections) {
+        const match = section.items.find((i) => i.path === path);
+        if (match?.raw) {
+          fetchUrl = match.raw;
+          if (match.title) title = match.title;
+          break;
+        }
       }
     }
 
-    const res = await fetch(rawUrl);
+    titleEl.textContent = title;
+    const res = await fetch(fetchUrl);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const md = await res.text();
+    const text = await res.text();
 
-    if (typeof marked !== 'undefined') {
-      contentEl.innerHTML = marked.parse(md, { gfm: true, breaks: false });
+    if (path.endsWith('.json')) {
+      contentEl.innerHTML = `<pre><code>${escapeHtml(JSON.stringify(JSON.parse(text), null, 2))}</code></pre>`;
+    } else if (typeof marked !== 'undefined') {
+      contentEl.innerHTML = marked.parse(text, { gfm: true, breaks: false });
     } else {
-      contentEl.innerHTML = `<pre>${escapeHtml(md)}</pre>`;
+      contentEl.innerHTML = `<pre>${escapeHtml(text)}</pre>`;
     }
   } catch (err) {
-    contentEl.innerHTML = `<div class="viewer-error"><p>Failed to load document: ${escapeHtml(err.message)}</p><p><a href="${BASE}index.html">Back to hub</a></p></div>`;
+    contentEl.innerHTML = `<div class="viewer-error"><p>Failed to load document: ${escapeHtml(err.message)}</p><p><a href="${BASE}index.html">Back to Command Center</a></p></div>`;
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.body.dataset.page === 'viewer') {
-    initViewer();
-  } else {
-    initHub();
-  }
+  if (document.body.dataset.page === 'viewer') return;
+  if (!document.getElementById('login-gate')) initHub();
 });
+
+window.initHub = initHub;
+window.initViewer = initViewer;

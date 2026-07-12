@@ -2,6 +2,7 @@
 
 Making my business AI friendly.
 
-**Live hub (GitHub Pages):** [https://ngc4160.github.io/NGC-Brain/](https://ngc4160.github.io/NGC-Brain/)
+**NGC Command Center (Ryan & Christine only):** [https://ngc4160.github.io/NGC-Brain/](https://ngc4160.github.io/NGC-Brain/)  
+Setup: [`docs/COMMAND_CENTER.md`](docs/COMMAND_CENTER.md)
 
 Open in Cursor → see [`START_HERE.md`](START_HERE.md).

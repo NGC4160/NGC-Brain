@@ -3,73 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Neighborhood Golf Carts Business Brain — all Cursor deliverables in one place." />
+  <meta name="robots" content="noindex, nofollow" />
   <meta name="ngc-base" content="./" />
-  <title>NGC Business Brain — Cursor Deliverables</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <title>NGC Command Center</title>
+  <link rel="stylesheet" href="assets/command.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <img class="header-logo" src="assets/ngc-logo.png" alt="Neighborhood Golf Carts logo" />
-      <div class="header-text">
-        <h1>NGC Business Brain</h1>
-        <p>Everything built in Cursor for Neighborhood Golf Carts — knowledge, prompts, scripts, templates, and automation.</p>
-        <div class="header-meta">
-          <span>71363 Thelma Ln, Suite E · Covington, LA</span>
-          <span>985-402-1206</span>
-          <a href="https://github.com/NGC4160/NGC-Brain" target="_blank" rel="noopener">GitHub repo</a>
-        </div>
-      </div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <div id="login-gate" class="login-gate hidden">
+    <div class="login-panel">
+      <img class="login-logo" src="assets/ngc-logo.png" alt="NGC" />
+      <h1>NGC Command Center</h1>
+      <p class="subtitle">Authorized access only · Ryan &amp; Christine</p>
+      <form id="login-form">
+        <label for="login-user">Operator</label>
+        <select id="login-user" name="user">
+          <option value="Ryan">Ryan White</option>
+          <option value="Christine">Christine White</option>
+        </select>
+        <label for="login-password">Access Code</label>
+        <input id="login-password" type="password" autocomplete="current-password" placeholder="Enter access code" required />
+        <button type="submit">Initialize Session</button>
+        <p id="login-error" class="login-error" role="alert"></p>
+        <p id="login-notice" class="login-notice"></p>
+      </form>
     </div>
-  </header>
-
-  <div class="layout">
-    <aside class="sidebar">
-      <label for="search">Search deliverables</label>
-      <input id="search" type="search" placeholder="lithium, prompts, HCP…" autocomplete="off" />
-
-      <nav aria-label="Sections">
-        <ul class="nav-sections" id="nav-sections"></ul>
-      </nav>
-
-      <div class="sidebar-stats" id="stats">Loading…</div>
-    </aside>
-
-    <main class="main-content">
-      <div class="quick-links">
-        <a class="quick-link" href="view.html?path=START_HERE.md">
-          Start Here
-          <span>Open the Cursor quick-start guide</span>
-        </a>
-        <a class="quick-link" href="view.html?path=knowledge/09_daily_ops/improvement_backlog.md">
-          Improvement Backlog
-          <span>P1–P3 ops and growth projects</span>
-        </a>
-        <a class="quick-link" href="templates/personnel-counseling.html">
-          Personnel Form
-          <span>Fillable HR counseling template</span>
-        </a>
-        <a class="quick-link" href="view.html?path=prompts/morning_briefing.md">
-          Morning Briefing
-          <span>Daily service manager prompt</span>
-        </a>
-      </div>
-
-      <div id="sections">
-        <p class="viewer-loading">Loading deliverables…</p>
-      </div>
-    </main>
   </div>
 
-  <footer class="site-footer">
-    <p>
-      Neighborhood Golf Carts · Built with Cursor ·
-      <a href="https://github.com/NGC4160/NGC-Brain">NGC-Brain</a> ·
-      Last indexed <span id="generated-at">—</span>
-    </p>
-  </footer>
+  <div class="shell">
+    <header class="topbar">
+      <div class="topbar-brand">
+        <img src="assets/ngc-logo.png" alt="" />
+        <div>
+          <h1>NGC Command Center</h1>
+          <span>Neighborhood Golf Carts · Covington, LA</span>
+        </div>
+      </div>
+      <div class="topbar-status" id="status-bar"></div>
+      <div class="topbar-actions">
+        <span class="clock" id="clock"></span>
+        <span id="session-user" style="color:var(--muted);font-size:0.82rem"></span>
+        <button class="btn-ghost" id="logout-btn" type="button">Logout</button>
+      </div>
+    </header>
 
-  <script src="assets/app.js"></script>
+    <section class="hero">
+      <h2 class="hero-title">Mission Control</h2>
+      <p class="hero-sub">Visualize everything NGC is building — live ops, systems, automation, and growth pipeline.</p>
+      <div class="metrics-row" id="metrics-row">
+        <div class="metric-tile"><div class="value">—</div><div class="label">Loading</div></div>
+      </div>
+    </section>
+
+    <div class="zones" id="zones">
+      <p style="color:var(--muted);padding:2rem">Authenticating…</p>
+    </div>
+
+    <footer class="footer-bar">
+      <span class="classified">◆ OWNERS ONLY ◆</span>
+      <p>NGC Command Center · Updated <span id="generated-at">—</span> · <a href="dashboard.html">Dashboard</a> · <a href="explore.html">Full Index</a></p>
+    </footer>
+  </div>
+
+  <script src="assets/auth-config.js"></script>
+  <script src="assets/auth.js"></script>
+  <script src="assets/command.js"></script>
 </body>
 </html>
