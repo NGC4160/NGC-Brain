@@ -2,6 +2,8 @@
 
 Open this project in **Cursor** and chat with the AI to run and improve Neighborhood Golf Carts daily.
 
+**Browse all deliverables:** [ngc4160.github.io/ngc-brain](https://ngc4160.github.io/ngc-brain/) (GitHub Pages hub)
+
 ## Quick start (60 seconds)
 
 1. Open **Cursor** → open this folder as your workspace
