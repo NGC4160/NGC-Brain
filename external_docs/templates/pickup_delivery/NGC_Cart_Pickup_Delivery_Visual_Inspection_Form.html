@@ -16,62 +16,63 @@
 
     @page {
       size: letter;
-      margin: 0.28in 0.38in;
+      margin: 0.25in 0.35in;
     }
 
     * { box-sizing: border-box; }
 
     body {
       font-family: "Segoe UI", Calibri, Arial, sans-serif;
-      font-size: 6pt;
+      font-size: 5.5pt;
       color: var(--text);
-      line-height: 1.15;
+      line-height: 1.1;
       margin: 0;
       padding: 0;
     }
 
     .page {
       width: 100%;
-      height: 10.44in;
+      height: 10.5in;
+      max-height: 10.5in;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
 
     .page-header {
       text-align: center;
       border-bottom: 1.5px solid var(--ngc-blue);
-      padding-bottom: 2px;
-      margin-bottom: 2px;
+      padding-bottom: 1px;
+      margin-bottom: 1px;
       flex-shrink: 0;
     }
 
     .page-header .company {
-      font-size: 9.5pt;
+      font-size: 8.5pt;
       font-weight: 700;
       color: var(--ngc-blue);
       letter-spacing: 0.04em;
-      line-height: 1.1;
+      line-height: 1.05;
     }
 
     .page-header .doc-title {
-      font-size: 7.5pt;
+      font-size: 7pt;
       font-weight: 700;
       color: var(--ngc-blue);
     }
 
     .page-header .sub {
-      font-size: 5.5pt;
+      font-size: 5pt;
       color: var(--muted);
-      margin-top: 1px;
     }
 
     .half {
-      flex: 0 0 4.95in;
-      height: 4.95in;
+      flex: 1 1 0;
+      min-height: 0;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      padding: 2px 3px;
+      padding: 1px 2px;
     }
 
     .half.pickup {
@@ -90,22 +91,23 @@
     .divider {
       flex: 0 0 auto;
       text-align: center;
-      font-size: 5pt;
-      color: #888;
+      font-size: 4.8pt;
+      font-weight: 600;
+      color: #666;
       border-top: 1px dashed #999;
       border-bottom: 1px dashed #999;
       padding: 1px 0;
       background: #fff;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
     }
 
     .section-banner {
-      font-size: 7pt;
+      font-size: 6.5pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 2px 6px;
-      margin: 0 0 2px;
+      letter-spacing: 0.04em;
+      padding: 1px 5px;
+      margin: 0 0 1px;
       color: #fff;
     }
 
@@ -115,15 +117,15 @@
     .fields {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 1px 6px;
-      margin-bottom: 2px;
-      font-size: 5.8pt;
+      gap: 0 5px;
+      margin-bottom: 1px;
+      font-size: 5.5pt;
     }
 
     .field {
       display: flex;
       align-items: baseline;
-      gap: 3px;
+      gap: 2px;
       white-space: nowrap;
     }
 
@@ -132,28 +134,42 @@
     .field .line {
       flex: 1;
       border-bottom: 1px solid #666;
-      min-width: 16px;
-      height: 8px;
+      min-width: 14px;
+      height: 7px;
     }
 
     .field.wide { grid-column: span 2; }
 
     .section-label {
-      font-size: 5.8pt;
+      font-size: 5.5pt;
       font-weight: 700;
       color: var(--ngc-blue);
       text-transform: uppercase;
-      margin: 1px 0;
+      margin: 0;
       letter-spacing: 0.02em;
     }
 
     .dropoff .section-label { color: #3d6b12; }
 
+    .callout {
+      font-size: 5pt;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 1px;
+      line-height: 1.1;
+    }
+
+    .callout.strong {
+      font-style: normal;
+      font-weight: 600;
+      color: #3d6b12;
+    }
+
     table.data {
       width: 100%;
       border-collapse: collapse;
-      font-size: 5.8pt;
-      margin-bottom: 2px;
+      font-size: 5.5pt;
+      margin-bottom: 1px;
     }
 
     table.data th,
@@ -161,92 +177,89 @@
       border: 1px solid var(--border);
       padding: 0 2px;
       vertical-align: middle;
-      line-height: 1.1;
+      line-height: 1.05;
     }
 
     table.data th {
       background: #e8eef4;
       font-weight: 700;
       text-align: left;
-      font-size: 5.5pt;
+      font-size: 5pt;
     }
 
     .dropoff table.data th { background: #e8f0e4; }
 
     .cb {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border: 1px solid #555;
       display: inline-block;
       vertical-align: middle;
     }
 
-    .cb-col { width: 22px; text-align: center; }
+    .cb-col { width: 20px; text-align: center; }
 
     .two-col-tables {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3px;
+      gap: 2px;
     }
 
     .notes-box {
       border: 1px solid var(--border);
-      min-height: 18px;
-      padding: 1px 3px;
-      margin-bottom: 2px;
+      min-height: 14px;
+      padding: 1px 2px;
+      margin-bottom: 1px;
       background: #fff;
       flex-shrink: 0;
     }
 
     .notes-box .notes-title {
-      font-size: 5.5pt;
+      font-size: 5pt;
       font-weight: 700;
       color: var(--muted);
-      margin-bottom: 1px;
-      line-height: 1.1;
+      line-height: 1.05;
     }
 
     .notes-lines {
-      height: 12px;
+      height: 9px;
       background: repeating-linear-gradient(
         transparent,
-        transparent 5px,
-        #ccc 5px,
-        #ccc 6px
+        transparent 4px,
+        #ccc 4px,
+        #ccc 5px
       );
     }
 
     .sig-row {
       display: grid;
       grid-template-columns: 2fr 1fr;
-      gap: 4px;
-      font-size: 5.8pt;
+      gap: 3px;
+      font-size: 5.5pt;
       margin-top: auto;
-      padding-top: 1px;
       flex-shrink: 0;
     }
 
     .sig-row.wide {
-      grid-template-columns: 1.6fr 0.8fr 1.6fr;
+      grid-template-columns: 1.5fr 0.75fr 1.5fr;
     }
 
     .sig {
       display: flex;
       align-items: baseline;
-      gap: 3px;
+      gap: 2px;
     }
 
     .sig label { font-weight: 600; color: var(--muted); white-space: nowrap; }
-    .sig .line { flex: 1; border-bottom: 1px solid #666; height: 8px; }
+    .sig .line { flex: 1; border-bottom: 1px solid #666; height: 7px; }
 
     .accept {
       display: flex;
       align-items: center;
       gap: 3px;
-      font-size: 5.8pt;
+      font-size: 5.5pt;
       grid-column: 1 / -1;
       justify-content: flex-end;
-      margin-top: 1px;
     }
   </style>
 </head>
@@ -255,7 +268,7 @@
     <div class="page-header">
       <div class="company">NEIGHBORHOOD GOLF CARTS</div>
       <div class="doc-title">CART PICKUP / DELIVERY VISUAL INSPECTION FORM</div>
-      <div class="sub">One-page driver condition record — top: pickup before loading · bottom: drop-off at final return</div>
+      <div class="sub">One page — complete pickup (top) before loading; complete drop-off (bottom) at final return. Keep entire form with the job.</div>
     </div>
 
     <div class="half pickup">
@@ -269,11 +282,11 @@
         <div class="field"><label>Cart Make/Model:</label><span class="line"></span></div>
         <div class="field"><label>Serial/VIN:</label><span class="line"></span></div>
         <div class="field"><label>Color:</label><span class="line"></span></div>
-        <div class="field"><label>Miles/Hrs:</label><span class="line"></span></div>
-        <div class="field wide"><label>Pickup Location:</label><span class="line"></span></div>
+        <div class="field"><label>Pickup Location:</label><span class="line"></span></div>
       </div>
 
-      <div class="section-label">Required Photos — Must Be Taken Before Loading</div>
+      <div class="section-label">Required Photos — Before Loading</div>
+      <p class="callout">Each photo must show the <strong>entire subject in frame</strong> — step back so nothing is cropped or cut off.</p>
       <div class="two-col-tables">
         <table class="data">
           <thead><tr><th>Required Photo</th><th class="cb-col">Done</th></tr></thead>
@@ -281,7 +294,7 @@
             <tr><td>Driver Side</td><td class="cb-col"><span class="cb"></span></td></tr>
             <tr><td>Front</td><td class="cb-col"><span class="cb"></span></td></tr>
             <tr><td>Instrument Panel / Dash</td><td class="cb-col"><span class="cb"></span></td></tr>
-            <tr><td>Roof / Canopy</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Data Tag(s)</td><td class="cb-col"><span class="cb"></span></td></tr>
           </tbody>
         </table>
         <table class="data">
@@ -289,7 +302,7 @@
           <tbody>
             <tr><td>Passenger Side</td><td class="cb-col"><span class="cb"></span></td></tr>
             <tr><td>Rear</td><td class="cb-col"><span class="cb"></span></td></tr>
-            <tr><td>Seats / Seat Bases</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Battery Compartment</td><td class="cb-col"><span class="cb"></span></td></tr>
             <tr><td>Charger / Keys / Loose Items</td><td class="cb-col"><span class="cb"></span></td></tr>
           </tbody>
         </table>
@@ -326,7 +339,7 @@
       </div>
 
       <div class="notes-box">
-        <div class="notes-title">Before Loading Discrepancies / Pre-Existing Conditions — Detail location, condition, and photo reference</div>
+        <div class="notes-title">Before Loading Discrepancies / Pre-Existing Conditions — location, condition, photo reference</div>
         <div class="notes-lines"></div>
       </div>
 
@@ -336,7 +349,7 @@
       </div>
     </div>
 
-    <div class="divider">— FOLD / CUT HERE — DROP-OFF SECTION BELOW —</div>
+    <div class="divider">— DROP-OFF BELOW — COMPLETE AT FINAL RETURN (KEEP WITH FORM) —</div>
 
     <div class="half dropoff">
       <div class="section-banner">Drop-Off — Final Return</div>
@@ -349,11 +362,11 @@
         <div class="field"><label>Cart Make/Model:</label><span class="line"></span></div>
         <div class="field"><label>Serial/VIN:</label><span class="line"></span></div>
         <div class="field"><label>Color:</label><span class="line"></span></div>
-        <div class="field"><label>Miles/Hrs:</label><span class="line"></span></div>
-        <div class="field wide"><label>Return Location:</label><span class="line"></span></div>
+        <div class="field"><label>Return Location:</label><span class="line"></span></div>
       </div>
 
-      <div class="section-label">Required Photos — Must Be Taken at Final Return</div>
+      <div class="section-label">Required Photos — At Final Return</div>
+      <p class="callout">Each photo must show the <strong>entire subject in frame</strong> — step back so nothing is cropped or cut off.</p>
       <div class="two-col-tables">
         <table class="data">
           <thead><tr><th>Required Photo</th><th class="cb-col">Done</th></tr></thead>
@@ -361,7 +374,7 @@
             <tr><td>Driver Side</td><td class="cb-col"><span class="cb"></span></td></tr>
             <tr><td>Front</td><td class="cb-col"><span class="cb"></span></td></tr>
             <tr><td>Instrument Panel / Dash</td><td class="cb-col"><span class="cb"></span></td></tr>
-            <tr><td>Roof / Canopy</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Data Tag(s)</td><td class="cb-col"><span class="cb"></span></td></tr>
           </tbody>
         </table>
         <table class="data">
@@ -369,7 +382,7 @@
           <tbody>
             <tr><td>Passenger Side</td><td class="cb-col"><span class="cb"></span></td></tr>
             <tr><td>Rear</td><td class="cb-col"><span class="cb"></span></td></tr>
-            <tr><td>Seats / Seat Bases</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Battery Compartment</td><td class="cb-col"><span class="cb"></span></td></tr>
             <tr><td>Charger / Keys / Loose Items</td><td class="cb-col"><span class="cb"></span></td></tr>
           </tbody>
         </table>
@@ -406,9 +419,11 @@
       </div>
 
       <div class="notes-box">
-        <div class="notes-title">Final Return Discrepancies / Delivery Condition — Detail location, condition, and photo reference</div>
+        <div class="notes-title">Final Return Discrepancies / Delivery Condition — location, condition, photo reference</div>
         <div class="notes-lines"></div>
       </div>
+
+      <p class="callout strong">Obtain customer/receiver signature at drop-off whenever possible.</p>
 
       <div class="sig-row wide">
         <div class="sig"><label>Driver Drop-Off Signature:</label><span class="line"></span></div>

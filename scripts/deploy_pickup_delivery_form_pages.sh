@@ -76,7 +76,7 @@ toolbar = """
       <a href="/NGC-Brain/">← NGC Dashboard</a>
       <a href="/NGC-Brain/docs/intake-checklist.html">Intake Checklist</a>
     </div>
-    <span class="hint">Top: Pickup · Bottom: Drop-off</span>
+    <span class="hint">Top: Pickup · Bottom: Drop-off (complete later)</span>
     <button type="button" onclick="window.print()">Print Form</button>
   </div>
   <div class="pages-wrap">

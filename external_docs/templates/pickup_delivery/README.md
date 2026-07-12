@@ -11,7 +11,13 @@ Single letter-size page:
 | **Pickup** | Top half | Photos, checklist, notes, and signature **before loading** |
 | **Drop-off** | Bottom half | Photos, checklist, notes, and signatures **at final return** |
 
-Dashed fold/cut line between halves.
+Dashed divider between halves. Bottom section is completed at final return — do not remove from form.
+
+**Driver instructions (Rev I):**
+- Photos must show the **entire subject in frame** (nothing cropped)
+- Required photo items: Data Tag(s) and Battery Compartment (not roof/seats)
+- Obtain **customer/receiver signature** at drop-off whenever possible
+- No Miles/Hrs field
 
 ## GitHub Pages
 
