@@ -7,7 +7,6 @@
   <style>
     :root {
       --ngc-blue: #1a4d7a;
-      --ngc-blue-light: #2d6ba3;
       --ngc-green: #6faa2d;
       --border: #b8c9d9;
       --text: #1a1a1a;
@@ -34,43 +33,9 @@
 
     .page {
       width: 100%;
-      min-height: 10.44in;
+      height: 10.44in;
       display: flex;
       flex-direction: column;
-      page-break-after: always;
-    }
-
-    .page:last-child {
-      page-break-after: auto;
-    }
-
-    .page-sheet {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      padding: 4px 6px;
-      min-height: 9.8in;
-    }
-
-    .page-sheet.pickup {
-      background: var(--pickup-bg);
-      border: 2px solid var(--ngc-blue);
-      border-radius: 4px;
-    }
-
-    .page-sheet.dropoff {
-      background: var(--dropoff-bg);
-      border: 2px solid var(--ngc-green);
-      border-radius: 4px;
-    }
-
-    .page-num {
-      text-align: right;
-      font-size: 6pt;
-      color: var(--muted);
-      margin-top: 2px;
-      flex-shrink: 0;
     }
 
     .page-header {
@@ -93,7 +58,6 @@
       font-size: 7.5pt;
       font-weight: 700;
       color: var(--ngc-blue);
-      margin-top: 0;
     }
 
     .page-header .sub {
@@ -103,22 +67,38 @@
     }
 
     .half {
-      flex: 1;
+      flex: 0 0 4.95in;
+      height: 4.95in;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      padding: 0;
-      min-height: 0;
+      padding: 2px 3px;
     }
 
-    .half.pickup,
+    .half.pickup {
+      background: var(--pickup-bg);
+      border: 1.5px solid var(--ngc-blue);
+      border-radius: 3px 3px 0 0;
+    }
+
     .half.dropoff {
-      background: transparent;
-      border: none;
-      border-radius: 0;
+      background: var(--dropoff-bg);
+      border: 1.5px solid var(--ngc-green);
+      border-top: none;
+      border-radius: 0 0 3px 3px;
     }
 
-    .divider { display: none; }
+    .divider {
+      flex: 0 0 auto;
+      text-align: center;
+      font-size: 5pt;
+      color: #888;
+      border-top: 1px dashed #999;
+      border-bottom: 1px dashed #999;
+      padding: 1px 0;
+      background: #fff;
+      letter-spacing: 0.06em;
+    }
 
     .section-banner {
       font-size: 7pt;
@@ -148,10 +128,7 @@
       white-space: nowrap;
     }
 
-    .field label {
-      font-weight: 600;
-      color: var(--muted);
-    }
+    .field label { font-weight: 600; color: var(--muted); }
 
     .field .line {
       flex: 1;
@@ -167,7 +144,7 @@
       font-weight: 700;
       color: var(--ngc-blue);
       text-transform: uppercase;
-      margin: 1px 0 1px;
+      margin: 1px 0;
       letter-spacing: 0.02em;
     }
 
@@ -205,10 +182,7 @@
       vertical-align: middle;
     }
 
-    .cb-col {
-      width: 22px;
-      text-align: center;
-    }
+    .cb-col { width: 22px; text-align: center; }
 
     .two-col-tables {
       display: grid;
@@ -218,9 +192,9 @@
 
     .notes-box {
       border: 1px solid var(--border);
-      min-height: 48px;
-      padding: 2px 4px;
-      margin-bottom: 4px;
+      min-height: 18px;
+      padding: 1px 3px;
+      margin-bottom: 2px;
       background: #fff;
       flex-shrink: 0;
     }
@@ -234,7 +208,7 @@
     }
 
     .notes-lines {
-      height: 40px;
+      height: 12px;
       background: repeating-linear-gradient(
         transparent,
         transparent 5px,
@@ -254,7 +228,7 @@
     }
 
     .sig-row.wide {
-      grid-template-columns: 1.6fr 0.8fr 1.6fr 0.9fr;
+      grid-template-columns: 1.6fr 0.8fr 1.6fr;
     }
 
     .sig {
@@ -277,97 +251,52 @@
     }
 
     @media screen {
-      body {
-        background: #e8edf2;
-        padding: 1rem 0 2rem;
-      }
-
+      body { background: #e8edf2; padding: 1rem 0 2rem; }
       .toolbar {
-        max-width: 8.5in;
-        margin: 0 auto 1rem;
-        padding: 0 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        align-items: center;
-        justify-content: space-between;
-        font-family: "Segoe UI", system-ui, sans-serif;
-        font-size: 14px;
+        max-width: 8.5in; margin: 0 auto 1rem; padding: 0 1rem;
+        display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+        justify-content: space-between; font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px;
       }
-
-      .toolbar a,
-      .toolbar button {
-        color: #1a4d7a;
-        text-decoration: none;
-        background: #fff;
-        border: 1px solid #b8c9d9;
-        border-radius: 8px;
-        padding: 0.45rem 0.85rem;
-        cursor: pointer;
-        font-size: 14px;
+      .toolbar a, .toolbar button {
+        color: #1a4d7a; text-decoration: none; background: #fff; border: 1px solid #b8c9d9;
+        border-radius: 8px; padding: 0.45rem 0.85rem; cursor: pointer; font-size: 14px;
       }
-
-      .toolbar button {
-        background: #1a4d7a;
-        color: #fff;
-        border-color: #1a4d7a;
-        font-weight: 600;
-      }
-
-      .toolbar .hint {
-        color: #64748b;
-        font-size: 13px;
-      }
-
+      .toolbar button { background: #1a4d7a; color: #fff; border-color: #1a4d7a; font-weight: 600; }
+      .toolbar .hint { color: #64748b; font-size: 13px; }
       .pages-wrap {
-        max-width: 8.5in;
-        margin: 0 auto;
-        padding: 0 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+        max-width: 8.5in; margin: 0 auto; padding: 0 1rem;
       }
-
       .page {
-        background: #fff;
-        box-shadow: 0 4px 24px rgba(26, 77, 122, 0.12);
-        border-radius: 6px;
-        padding: 0.35in 0.38in;
-        min-height: 11in;
+        background: #fff; box-shadow: 0 4px 24px rgba(26, 77, 122, 0.12);
+        border-radius: 6px; padding: 0.35in 0.38in;
       }
     }
-
     @media print {
       .toolbar { display: none !important; }
       body { background: #fff; padding: 0; }
-      .pages-wrap { padding: 0; gap: 0; }
-      .page {
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0;
-      }
+      .pages-wrap { padding: 0; }
+      .page { box-shadow: none; border-radius: 0; padding: 0; }
     }
   </style>
 </head>
 <body>
+
   <div class="toolbar">
     <div>
       <a href="/NGC-Brain/">← NGC Dashboard</a>
       <a href="/NGC-Brain/docs/intake-checklist.html">Intake Checklist</a>
     </div>
-    <span class="hint">Page 1: Pickup · Page 2: Drop-off</span>
+    <span class="hint">Top: Pickup · Bottom: Drop-off</span>
     <button type="button" onclick="window.print()">Print Form</button>
   </div>
   <div class="pages-wrap">
-  <!-- PAGE 1: PICKUP -->
   <div class="page">
     <div class="page-header">
       <div class="company">NEIGHBORHOOD GOLF CARTS</div>
       <div class="doc-title">CART PICKUP / DELIVERY VISUAL INSPECTION FORM</div>
-      <div class="sub">Page 1 of 2 — Pickup before loading</div>
+      <div class="sub">One-page driver condition record — top: pickup before loading · bottom: drop-off at final return</div>
     </div>
 
-    <div class="page-sheet pickup">
     <div class="half pickup">
       <div class="section-banner">Pickup — Before Loading</div>
 
@@ -445,19 +374,9 @@
         <div class="sig"><label>Date/Time:</label><span class="line"></span></div>
       </div>
     </div>
-    </div>
-    <div class="page-num">Page 1 of 2 — Pickup</div>
-  </div>
 
-  <!-- PAGE 2: DROP-OFF -->
-  <div class="page">
-    <div class="page-header">
-      <div class="company">NEIGHBORHOOD GOLF CARTS</div>
-      <div class="doc-title">CART PICKUP / DELIVERY VISUAL INSPECTION FORM</div>
-      <div class="sub">Page 2 of 2 — Drop-off at final return</div>
-    </div>
+    <div class="divider">— FOLD / CUT HERE — DROP-OFF SECTION BELOW —</div>
 
-    <div class="page-sheet dropoff">
     <div class="half dropoff">
       <div class="section-banner">Drop-Off — Final Return</div>
 
@@ -541,8 +460,6 @@
         </div>
       </div>
     </div>
-    </div>
-    <div class="page-num">Page 2 of 2 — Drop-Off</div>
   </div>
   </div>
 </body>
