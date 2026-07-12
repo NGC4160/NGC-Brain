@@ -15,8 +15,8 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P1 | Pickup/delivery zone map for Roy (40 mi North Shore free; South Shore / outside = $99) | Policy confirmed; need visual/zip list | Ryan | **Policy set** — map still open |
 | P1 | HCP WIP hygiene — audit stale "in progress" (15+ days), correct statuses | 14 IP jobs, most aged; board can't lie | Ryan | Open |
 | P1 | Lithium job tracker (day 0/1/2, deposit received, parts ordered) | Protect 2–3 day promise; 2 Li jobs 50+ days in HCP | Ryan | In progress |
-| P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open — master list in [sop_catalog.md](../04_operations/sop_catalog.md) |
-| P1 | **SOP Wave 1** — lithium tracker, driver P&D | Transferable OS; stop tribal knowledge | Ryan / Christine | **SOP-01 Live**; SOP-03/04/05/10/11 **Draft** — next SOP-12 |
+| P1 | **SOP Wave 1** — pilot & mark Live | All Core SOPs drafted; review + pilot | Ryan / Christine | **Review** — [sops/README_REVIEW.md](../04_operations/sops/README_REVIEW.md) |
+| P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | **Superseded by full SOP draft set** — pilot SOP-20–29 |
 | P2 | Deposit collection checklist for Christine | Batteries/motors/controllers | Christine | **Drafted as SOP-05** — pilot then mark Live |
 | P2 | Standardize "Professional Kit" quote template for Christine | Faster, consistent quotes | Christine | **Drafted as SOP-04** — pilot then mark Live |
 | P3 | Everlogic evaluation demo + migration plan | HCP is wrong tool for shop-only | Ryan | Open |

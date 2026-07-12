@@ -1,6 +1,7 @@
 # NGC SOP Catalog — Build the Operating System
 
 **Last verified:** 2026-07-12  
+**Catalog status:** All Core SOPs drafted — [review index](sops/README_REVIEW.md)  
 **Owner:** Ryan (service manager)  
 **Purpose:** Complete list of SOPs to write so Covington runs without tribal knowledge — and so a second shop in a new service area can open from the same playbook.
 
@@ -97,14 +98,14 @@ Status: **Todo** · **Draft** · **Live** · **Needs refresh**
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
 | **SOP-01** | Phone & walk-in intake | Same questions every time; correct job type; no wrong promises | Wave 1 | **Live** — [sops/SOP-01_customer_intake.md](sops/SOP-01_customer_intake.md) |
-| **SOP-02** | Scheduling & capacity gate | Enforce WIP limits before booking drop-offs / lithium | Wave 1 | Todo |
+| **SOP-02** | Scheduling & capacity gate | Enforce WIP limits before booking drop-offs / lithium | Wave 1 | **Draft** — [sops/SOP-02_scheduling_capacity_gate.md](sops/SOP-02_scheduling_capacity_gate.md) |
 | **SOP-03** | Quote & estimate (repair) | $179 diagnostic rule; known-issue vs full diag; Christine script | Wave 1 | **Draft** — [sops/SOP-03_repair_diagnostic_quote.md](sops/SOP-03_repair_diagnostic_quote.md) |
 | **SOP-04** | Quote & estimate (Professional lithium) | SKU pick, add-ons, deposit $1,800, 2–3 day SLA language | Wave 1 | **Draft** — [sops/SOP-04_lithium_quote.md](sops/SOP-04_lithium_quote.md) |
 | **SOP-05** | Deposit collection & order release | Batteries/motors/controllers never ordered without deposit | Wave 1 | **Draft** — [sops/SOP-05_deposit_collection.md](sops/SOP-05_deposit_collection.md) |
-| **SOP-06** | Customer notification (status / ready / delay) | Text/email templates; no PII in shared sheets | Wave 2 | Todo |
-| **SOP-07** | Payment collection & closeout | Balance, methods, invoice send, HCP close | Wave 1 | Todo |
-| **SOP-08** | Complaint / comeback intake | Log, schedule, no free rework without Ryan rule | Wave 2 | Todo |
-| **SOP-09** | Fleet / HOA intake | Multi-cart jobs, billing contact vs site contact | Wave 3 | Todo |
+| **SOP-06** | Customer notification (status / ready / delay) | Text/email templates; no PII in shared sheets | Wave 2 | **Draft** — [sops/SOP-06_customer_notification.md](sops/SOP-06_customer_notification.md) |
+| **SOP-07** | Payment collection & closeout | Balance, methods, invoice send, HCP close | Wave 1 | **Draft** — [sops/SOP-07_payment_closeout.md](sops/SOP-07_payment_closeout.md) |
+| **SOP-08** | Complaint / comeback intake | Log, schedule, no free rework without Ryan rule | Wave 2 | **Draft** — [sops/SOP-08_complaint_comeback.md](sops/SOP-08_complaint_comeback.md) |
+| **SOP-09** | Fleet / HOA intake | Multi-cart jobs, billing contact vs site contact | Wave 3 | **Draft** — [sops/SOP-09_fleet_hoa_intake.md](sops/SOP-09_fleet_hoa_intake.md) |
 
 ### B. Shop workflow control (Ryan primary)
 
@@ -112,96 +113,96 @@ Status: **Todo** · **Draft** · **Live** · **Needs refresh**
 |----|-----|----------------|----------|--------|
 | **SOP-10** | Morning huddle & board update | Assign every cart by 8:30; finish list; Peyton flags | Wave 1 | **Draft** — [sops/SOP-10_morning_huddle.md](sops/SOP-10_morning_huddle.md) |
 | **SOP-11** | Job lane lifecycle (HCP + whiteboard) | INTAKE → … → CLOSED; status hygiene; no stale IP | Wave 1 | **Draft** — [sops/SOP-11_job_lane_lifecycle.md](sops/SOP-11_job_lane_lifecycle.md) |
-| **SOP-12** | WIP limits & stop-scheduling rule | Protect lithium SLA; pause intake when over limit | Wave 1 | Todo |
-| **SOP-13** | End-of-day lane audit | Correct statuses; blockers logged | Wave 1 | Todo |
-| **SOP-14** | Parts special-order process | Deposit → order → receive → release to bay | Wave 2 | Todo |
-| **SOP-15** | Job prioritization (lithium vs repair) | Day-aged lithium first; comebacks; waiters | Wave 2 | Todo |
+| **SOP-12** | WIP limits & stop-scheduling rule | Protect lithium SLA; pause intake when over limit | Wave 1 | **Draft** — [sops/SOP-12_wip_stop_scheduling.md](sops/SOP-12_wip_stop_scheduling.md) |
+| **SOP-13** | End-of-day lane audit | Correct statuses; blockers logged | Wave 1 | **Draft** — [sops/SOP-13_end_of_day_lane_audit.md](sops/SOP-13_end_of_day_lane_audit.md) |
+| **SOP-14** | Parts special-order process | Deposit → order → receive → release to bay | Wave 2 | **Draft** — [sops/SOP-14_parts_special_order.md](sops/SOP-14_parts_special_order.md) |
+| **SOP-15** | Job prioritization (lithium vs repair) | Day-aged lithium first; comebacks; waiters | Wave 2 | **Draft** — [sops/SOP-15_job_prioritization.md](sops/SOP-15_job_prioritization.md) |
 
 ### C. Technician workflows (Taylor / Marlon; Peyton where noted)
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-20** | Cart receive & bay setup | Tag cart, photos, complaint restated, HCP note | Wave 2 | Todo |
-| **SOP-21** | 7-point safety inspection | Free with every job; checklist on cart | Wave 2 | Todo |
-| **SOP-22** | Standard electric diagnostic path | Existing Drive diag SOP → shop-only rewrite | Wave 2 | Todo |
-| **SOP-23** | Gas cart diagnostic path | Separate from electric; same photo/log rules | Wave 3 | Todo |
-| **SOP-24** | Estimate handoff to front office | Findings → Christine quote; no parts order yet | Wave 2 | Todo |
-| **SOP-25** | General repair execution | Work to estimate; change-order path | Wave 2 | Todo |
-| **SOP-26** | Lead-acid battery replacement | Deposit $800, cores, warranty notes | Wave 2 | Todo |
-| **SOP-27** | Peyton escalation triggers | Intermittent, controller programming, comebacks, fleet pattern | Wave 2 | Todo |
-| **SOP-28** | QC, test drive & ready tag | Fault codes cleared; .CPF saved; ready lane | Wave 2 | Todo |
-| **SOP-29** | Documentation & photo standard | Before/after, fault codes, parts used — transfer-critical | Wave 2 | Todo |
+| **SOP-20** | Cart receive & bay setup | Tag cart, photos, complaint restated, HCP note | Wave 2 | **Draft** — [sops/SOP-20_cart_receive_bay_setup.md](sops/SOP-20_cart_receive_bay_setup.md) |
+| **SOP-21** | 7-point safety inspection | Free with every job; checklist on cart | Wave 2 | **Draft** — [sops/SOP-21_seven_point_safety.md](sops/SOP-21_seven_point_safety.md) |
+| **SOP-22** | Standard electric diagnostic path | Existing Drive diag SOP → shop-only rewrite | Wave 2 | **Draft** — [sops/SOP-22_electric_diagnostic_path.md](sops/SOP-22_electric_diagnostic_path.md) |
+| **SOP-23** | Gas cart diagnostic path | Separate from electric; same photo/log rules | Wave 3 | **Draft** — [sops/SOP-23_gas_diagnostic_path.md](sops/SOP-23_gas_diagnostic_path.md) |
+| **SOP-24** | Estimate handoff to front office | Findings → Christine quote; no parts order yet | Wave 2 | **Draft** — [sops/SOP-24_estimate_handoff.md](sops/SOP-24_estimate_handoff.md) |
+| **SOP-25** | General repair execution | Work to estimate; change-order path | Wave 2 | **Draft** — [sops/SOP-25_general_repair_execution.md](sops/SOP-25_general_repair_execution.md) |
+| **SOP-26** | Lead-acid battery replacement | Deposit $800, cores, warranty notes | Wave 2 | **Draft** — [sops/SOP-26_lead_acid_battery_replacement.md](sops/SOP-26_lead_acid_battery_replacement.md) |
+| **SOP-27** | Peyton escalation triggers | Intermittent, controller programming, comebacks, fleet pattern | Wave 2 | **Draft** — [sops/SOP-27_peyton_escalation.md](sops/SOP-27_peyton_escalation.md) |
+| **SOP-28** | QC, test drive & ready tag | Fault codes cleared; .CPF saved; ready lane | Wave 2 | **Draft** — [sops/SOP-28_qc_test_drive_ready.md](sops/SOP-28_qc_test_drive_ready.md) |
+| **SOP-29** | Documentation & photo standard | Before/after, fault codes, parts used — transfer-critical | Wave 2 | **Draft** — [sops/SOP-29_documentation_photo_standard.md](sops/SOP-29_documentation_photo_standard.md) |
 
 ### D. Lithium conversion (product line)
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-30** | Lithium pre-install checklist | Deposit, kit SKU, charger, DC-DC, monitor on hand | Wave 2 | Todo |
-| **SOP-31** | Professional Kit install (36/48/MINI/150AH/72V) | ~6 hr sequence; voltage-specific notes | Wave 2 | Todo |
-| **SOP-32** | Lithium day 0/1/2 tracker | Protect 2–3 day promise | Wave 1 | Todo |
-| **SOP-33** | Lithium QC + customer care handoff | Care guide, charger-only rule, SOC guidance | Wave 2 | Todo |
-| **SOP-34** | Lithium add-on installs | Charger port, reducer, fuse box — sold with quote | Wave 3 | Todo |
-| **SOP-35** | Core return & disposal | Core fees; lead-acid handling | Wave 3 | Todo |
+| **SOP-30** | Lithium pre-install checklist | Deposit, kit SKU, charger, DC-DC, monitor on hand | Wave 2 | **Draft** — [sops/SOP-30_lithium_preinstall.md](sops/SOP-30_lithium_preinstall.md) |
+| **SOP-31** | Professional Kit install (36/48/MINI/150AH/72V) | ~6 hr sequence; voltage-specific notes | Wave 2 | **Draft** — [sops/SOP-31_professional_kit_install.md](sops/SOP-31_professional_kit_install.md) |
+| **SOP-32** | Lithium day 0/1/2 tracker | Protect 2–3 day promise | Wave 1 | **Draft** — [sops/SOP-32_lithium_day_tracker.md](sops/SOP-32_lithium_day_tracker.md) |
+| **SOP-33** | Lithium QC + customer care handoff | Care guide, charger-only rule, SOC guidance | Wave 2 | **Draft** — [sops/SOP-33_lithium_qc_care_handoff.md](sops/SOP-33_lithium_qc_care_handoff.md) |
+| **SOP-34** | Lithium add-on installs | Charger port, reducer, fuse box — sold with quote | Wave 3 | **Draft** — [sops/SOP-34_lithium_addons.md](sops/SOP-34_lithium_addons.md) |
+| **SOP-35** | Core return & disposal | Core fees; lead-acid handling | Wave 3 | **Draft** — [sops/SOP-35_core_return_disposal.md](sops/SOP-35_core_return_disposal.md) |
 
 ### E. Driver / pickup & delivery (Roy primary)
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-40** | Daily route build & zone batching | Free: 40 mi North Shore; $99 South Shore / outside | Wave 1 | Todo |
-| **SOP-41** | Pickup from customer | Condition notes, photos, keys, intake form to Christine | Wave 1 | Todo |
-| **SOP-42** | Delivery to customer | Payment confirm, care guide if lithium, signature/photo | Wave 1 | Todo |
-| **SOP-43** | Vehicle & trailer safety | Load/secure, road check — liability | Wave 2 | Todo |
-| **SOP-44** | Failed pickup / customer not home | Retry rules; communicate Christine | Wave 3 | Todo |
-| **SOP-45** | Zone map & fee exception log | Until zones finalized — document every exception | Wave 1 | Todo |
+| **SOP-40** | Daily route build & zone batching | Free: 40 mi North Shore; $99 South Shore / outside | Wave 1 | **Draft** — [sops/SOP-40_daily_route_zone_batching.md](sops/SOP-40_daily_route_zone_batching.md) |
+| **SOP-41** | Pickup from customer | Condition notes, photos, keys, intake form to Christine | Wave 1 | **Draft** — [sops/SOP-41_pickup_from_customer.md](sops/SOP-41_pickup_from_customer.md) |
+| **SOP-42** | Delivery to customer | Payment confirm, care guide if lithium, signature/photo | Wave 1 | **Draft** — [sops/SOP-42_delivery_to_customer.md](sops/SOP-42_delivery_to_customer.md) |
+| **SOP-43** | Vehicle & trailer safety | Load/secure, road check — liability | Wave 2 | **Draft** — [sops/SOP-43_vehicle_trailer_safety.md](sops/SOP-43_vehicle_trailer_safety.md) |
+| **SOP-44** | Failed pickup / customer not home | Retry rules; communicate Christine | Wave 3 | **Draft** — [sops/SOP-44_failed_pickup.md](sops/SOP-44_failed_pickup.md) |
+| **SOP-45** | Zone map & fee exception log | Until zones finalized — document every exception | Wave 1 | **Draft** — [sops/SOP-45_zone_fee_exception_log.md](sops/SOP-45_zone_fee_exception_log.md) |
 
 ### F. Parts, inventory & vendors
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-50** | Receiving & put-away | Match PO/job; QBO inventory touch | Wave 3 | Todo |
-| **SOP-51** | Bay parts pull & return | Shrink control | Wave 3 | Todo |
-| **SOP-52** | Vendor order (kits, batteries, controllers) | Who orders; net of fees after deposit | Wave 2 | Todo |
-| **SOP-53** | Min/max stocking (fast movers) | Location Profile vendors + core list | Wave 4 | Todo |
+| **SOP-50** | Receiving & put-away | Match PO/job; QBO inventory touch | Wave 3 | **Draft** — [sops/SOP-50_receiving_putaway.md](sops/SOP-50_receiving_putaway.md) |
+| **SOP-51** | Bay parts pull & return | Shrink control | Wave 3 | **Draft** — [sops/SOP-51_bay_parts_pull_return.md](sops/SOP-51_bay_parts_pull_return.md) |
+| **SOP-52** | Vendor order (kits, batteries, controllers) | Who orders; net of fees after deposit | Wave 2 | **Draft** — [sops/SOP-52_vendor_order.md](sops/SOP-52_vendor_order.md) |
+| **SOP-53** | Min/max stocking (fast movers) | Location Profile vendors + core list | Wave 4 | **Draft** — [sops/SOP-53_minmax_stocking.md](sops/SOP-53_minmax_stocking.md) |
 
 ### G. Safety, quality & facilities
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-60** | Shop safety & PPE | Daily open/close hazards | Wave 2 | Todo |
-| **SOP-61** | Battery handling & spill / fire response | Lead-acid + LiFePO4 | Wave 2 | Todo |
-| **SOP-62** | Tool / equipment care | Chargers, programmers, DVOM | Wave 3 | Todo |
-| **SOP-63** | Shop open & close checklist | Lights, doors, keys, WIP board photo optional | Wave 2 | Todo |
-| **SOP-64** | Warranty claim (battery / BMS / parts) | 5yr lithium; lead-acid warranty paths | Wave 3 | Todo |
+| **SOP-60** | Shop safety & PPE | Daily open/close hazards | Wave 2 | **Draft** — [sops/SOP-60_shop_safety_ppe.md](sops/SOP-60_shop_safety_ppe.md) |
+| **SOP-61** | Battery handling & spill / fire response | Lead-acid + LiFePO4 | Wave 2 | **Draft** — [sops/SOP-61_battery_spill_fire.md](sops/SOP-61_battery_spill_fire.md) |
+| **SOP-62** | Tool / equipment care | Chargers, programmers, DVOM | Wave 3 | **Draft** — [sops/SOP-62_tool_equipment_care.md](sops/SOP-62_tool_equipment_care.md) |
+| **SOP-63** | Shop open & close checklist | Lights, doors, keys, WIP board photo optional | Wave 2 | **Draft** — [sops/SOP-63_shop_open_close.md](sops/SOP-63_shop_open_close.md) |
+| **SOP-64** | Warranty claim (battery / BMS / parts) | 5yr lithium; lead-acid warranty paths | Wave 3 | **Draft** — [sops/SOP-64_warranty_claim.md](sops/SOP-64_warranty_claim.md) |
 
 ### H. Finance & admin handoffs
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-70** | Daily cash/card reconciliation | Christine → Jill | Wave 3 | Todo |
-| **SOP-71** | Deposit accounting | Lithium $1,800 / battery $800 posted correctly | Wave 2 | Todo |
-| **SOP-72** | Month-end export ritual | Pricebook + QBO → knowledge sync | Wave 3 | Todo |
-| **SOP-73** | Pricebook change control | Who edits HCP; deactivate legacy; no inventing prices | Wave 2 | Todo |
-| **SOP-74** | Sales tax by parish (jobs vs location) | Multi-parish LA — Location Profile | Wave 4 | Todo |
+| **SOP-70** | Daily cash/card reconciliation | Christine → Jill | Wave 3 | **Draft** — [sops/SOP-70_daily_cash_card_reconciliation.md](sops/SOP-70_daily_cash_card_reconciliation.md) |
+| **SOP-71** | Deposit accounting | Lithium $1,800 / battery $800 posted correctly | Wave 2 | **Draft** — [sops/SOP-71_deposit_accounting.md](sops/SOP-71_deposit_accounting.md) |
+| **SOP-72** | Month-end export ritual | Pricebook + QBO → knowledge sync | Wave 3 | **Draft** — [sops/SOP-72_month_end_export_ritual.md](sops/SOP-72_month_end_export_ritual.md) |
+| **SOP-73** | Pricebook change control | Who edits HCP; deactivate legacy; no inventing prices | Wave 2 | **Draft** — [sops/SOP-73_pricebook_change_control.md](sops/SOP-73_pricebook_change_control.md) |
+| **SOP-74** | Sales tax by parish (jobs vs location) | Multi-parish LA — Location Profile | Wave 4 | **Draft** — [sops/SOP-74_sales_tax_parish.md](sops/SOP-74_sales_tax_parish.md) |
 
 ### I. People & training
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-80** | New hire onboarding (tech) | Hiring quiz → shadow days → solo lanes | Wave 3 | Todo |
-| **SOP-81** | New hire onboarding (office / driver) | Intake scripts / route SOPs | Wave 3 | Todo |
-| **SOP-82** | Skills matrix & job assignment | Taylor vs Marlon vs Peyton | Wave 3 | Todo |
-| **SOP-83** | Personnel counseling | Already live — [personnel_counseling.md](../05_team/personnel_counseling.md) | — | Live |
-| **SOP-84** | Cross-training checklist | Second-site resilience | Wave 4 | Todo |
+| **SOP-80** | New hire onboarding (tech) | Hiring quiz → shadow days → solo lanes | Wave 3 | **Draft** — [sops/SOP-80_onboarding_tech.md](sops/SOP-80_onboarding_tech.md) |
+| **SOP-81** | New hire onboarding (office / driver) | Intake scripts / route SOPs | Wave 3 | **Draft** — [sops/SOP-81_onboarding_office_driver.md](sops/SOP-81_onboarding_office_driver.md) |
+| **SOP-82** | Skills matrix & job assignment | Taylor vs Marlon vs Peyton | Wave 3 | **Draft** — [sops/SOP-82_skills_matrix.md](sops/SOP-82_skills_matrix.md) |
+| **SOP-83** | Personnel counseling | Already live — [personnel_counseling.md](../05_team/personnel_counseling.md) | — | **Live** — [../05_team/personnel_counseling.md](../05_team/personnel_counseling.md) |
+| **SOP-84** | Cross-training checklist | Second-site resilience | Wave 4 | **Draft** — [sops/SOP-84_cross_training.md](sops/SOP-84_cross_training.md) |
 
 ### J. Multi-site transfer (new service area)
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-90** | Location Profile template | All variables for a second shop on one page | Wave 5 | Todo |
-| **SOP-91** | New location open checklist | Lease, utilities, insurance, tools, inventory kit, HCP/QBO setup | Wave 5 | Todo |
-| **SOP-92** | Soft open & first-30-days operating rhythm | Same lanes/WIP; local zone map; staffing | Wave 5 | Todo |
-| **SOP-93** | Brand & GBP setup for new market | Phone, hours, photos, lithium offer | Wave 5 | Todo |
-| **SOP-94** | Knowledge / pricebook clone | Copy Core SOPs; swap Location Profile only | Wave 5 | Todo |
+| **SOP-90** | Location Profile template | All variables for a second shop on one page | Wave 5 | **Draft** — [sops/SOP-90_location_profile.md](sops/SOP-90_location_profile.md) |
+| **SOP-91** | New location open checklist | Lease, utilities, insurance, tools, inventory kit, HCP/QBO setup | Wave 5 | **Draft** — [sops/SOP-91_new_location_open.md](sops/SOP-91_new_location_open.md) |
+| **SOP-92** | Soft open & first-30-days operating rhythm | Same lanes/WIP; local zone map; staffing | Wave 5 | **Draft** — [sops/SOP-92_soft_open_30_days.md](sops/SOP-92_soft_open_30_days.md) |
+| **SOP-93** | Brand & GBP setup for new market | Phone, hours, photos, lithium offer | Wave 5 | **Draft** — [sops/SOP-93_brand_gbp_new_market.md](sops/SOP-93_brand_gbp_new_market.md) |
+| **SOP-94** | Knowledge / pricebook clone | Copy Core SOPs; swap Location Profile only | Wave 5 | **Draft** — [sops/SOP-94_knowledge_pricebook_clone.md](sops/SOP-94_knowledge_pricebook_clone.md) |
 
 ### K. Future (do not build until service is solid)
 
@@ -213,40 +214,22 @@ Status: **Todo** · **Draft** · **Live** · **Needs refresh**
 
 ---
 
-## Wave 1 — write these first (money + flow)
+## Wave 1 — status
 
-Ship in this order so Covington stops depending on memory:
+All Wave 1 SOPs are drafted (SOP-01 Live). See [sops/README_REVIEW.md](sops/README_REVIEW.md) to review.
 
-1. ~~**SOP-01** Intake~~ **Done** — [sops/SOP-01_customer_intake.md](sops/SOP-01_customer_intake.md)
-2. ~~**SOP-05** Deposit collection & order release~~ **Draft** — [sops/SOP-05_deposit_collection.md](sops/SOP-05_deposit_collection.md)
-3. ~~**SOP-04** Lithium quote (Professional Kits only)~~ **Draft** — [sops/SOP-04_lithium_quote.md](sops/SOP-04_lithium_quote.md)
-4. ~~**SOP-03** Repair quote / $179 diagnostic~~ **Draft** — [sops/SOP-03_repair_diagnostic_quote.md](sops/SOP-03_repair_diagnostic_quote.md)
-5. ~~**SOP-11** Job lane lifecycle~~ **Draft** — [sops/SOP-11_job_lane_lifecycle.md](sops/SOP-11_job_lane_lifecycle.md)
-6. **SOP-10** Morning huddle  
-7. **SOP-12** WIP / stop-scheduling  
-8. **SOP-32** Lithium day tracker  
-9. **SOP-40 / 41 / 42** Driver route + pickup + delivery  
-10. **SOP-07** Payment & closeout  
-11. **SOP-45** Zone/fee exception log (edge cases outside free zone)
-
-**Already documented in knowledge (convert to staff SOPs, don’t rewrite from scratch):**
-
-| Knowledge file | Feeds SOPs |
-|----------------|------------|
-| `shop_throughput.md` | SOP-10, 11, 12, 13, 15, 27, 32 |
-| `shop_whiteboard_layout.md` | SOP-11 |
-| `shop_workflow.md` | SOP-01, 20–22, 28 |
-| `shop_services.md` / `lithium_conversions.md` | SOP-03–05, 30–33 |
-| `roles.md` | All owner fields |
-| `personnel_counseling.md` | SOP-83 (done) |
-
-**Legacy Drive docs to refresh (strip mobile):**
-
-- Technician diagnosing test process → **SOP-22**
-- Mobile repair SOP / checklist → do **not** reactivate; harvest photos/HCP steps only into shop SOPs
-- Lithium care guide → attach to **SOP-33**
-
----
+1. ~~SOP-01~~ Live
+2. ~~SOP-02~~ Draft
+3. ~~SOP-03~~ Draft
+4. ~~SOP-04~~ Draft
+5. ~~SOP-05~~ Draft
+6. ~~SOP-07~~ Draft
+7. ~~SOP-10~~ Draft
+8. ~~SOP-11~~ Draft
+9. ~~SOP-12~~ Draft
+10. ~~SOP-13~~ Draft
+11. ~~SOP-32~~ Draft
+12. ~~SOP-40 / 41 / 42 / 45~~ Draft
 
 ## Transfer playbook (second location)
 
