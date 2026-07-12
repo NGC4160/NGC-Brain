@@ -24,7 +24,7 @@ Shop diagnosis/repair → Payment → Pickup/delivery OR customer pickup
 Options:
 
 - Customer drops cart at shop
-- **Roy** picks up cart (free within 40 mi Northshore; flat fee outside zone / Southshore)
+- **Roy** picks up cart (free within 40 mi North Shore; **$99** for South Shore or outside 40 mi)
 
 ### 3. Service execution
 
@@ -71,6 +71,13 @@ Historical mobile SOPs referenced Housecall Pro photos, checklists, and NGC stic
 - Diagnostic notes and fault codes
 - Parts used / ordered
 - Customer-facing summary of work performed
+
+## SOP program
+
+Full list of SOPs to create (intake, shop lanes, tech, lithium, driver, multi-site): **[sop_catalog.md](sop_catalog.md)**.  
+**Live SOPs:** [SOP-01](sops/SOP-01_customer_intake.md) · [SOP-83](../05_team/personnel_counseling.md)  
+**All drafts + review index:** [sops/README_REVIEW.md](sops/README_REVIEW.md)  
+Per-location variables: **[../01_company/location_profile_template.md](../01_company/location_profile_template.md)**.
 
 ## Internal reference documents
 

@@ -59,6 +59,8 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 
 ### 8:15 — Ryan shop huddle (10 min)
 
+Full procedure: [sops/SOP-10_morning_huddle.md](sops/SOP-10_morning_huddle.md)
+
 - Read `knowledge/.generated/shop_board.md`
 - Assign every in-progress cart to **Taylor or Marlon**
 - Name **today’s finish list** (max 2 lithium + 2–4 repairs per tech)
@@ -126,6 +128,7 @@ See [shop_whiteboard_layout.md](shop_whiteboard_layout.md) — 7-column layout, 
 ## Related docs
 
 - [shop_workflow.md](shop_workflow.md) — customer journey
+- [sops/SOP-11_job_lane_lifecycle.md](sops/SOP-11_job_lane_lifecycle.md) — **lane moves, HCP sync, who moves cards**
 - [../02_products/lithium_conversions.md](../02_products/lithium_conversions.md) — SLA and deposits
 - [../05_team/roles.md](../05_team/roles.md) — RACI
 - [../09_daily_ops/improvement_backlog.md](../09_daily_ops/improvement_backlog.md) — backlog

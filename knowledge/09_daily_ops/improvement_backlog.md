@@ -1,6 +1,6 @@
 # Improvement & Growth Backlog
 
-**Last reviewed:** 2026-06-28  
+**Last reviewed:** 2026-07-12  
 Ask the AI: **"What's the highest-impact item on the backlog this week?"**
 
 Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
@@ -12,12 +12,15 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P | Item | Why | Owner | Status |
 |---|------|-----|-------|--------|
 | P1 | Deactivate legacy HCP/QBO items (mobile, NGC Conversion, trip charges) | Prevents wrong quotes & booking | Ryan / Christine | **Checklist ready** — see legacy_pricebook_cleanup.md |
-| P1 | Finalize pickup/delivery zone map (free vs $99) | Roy + Christine need consistent answers | Ryan | Open |
+| P1 | Pickup/delivery zone map for Roy (40 mi North Shore free; South Shore / outside = $99) | Policy confirmed; need visual/zip list | Ryan | **Policy set** — map still open |
 | P1 | HCP WIP hygiene — audit stale "in progress" (15+ days), correct statuses | 14 IP jobs, most aged; board can't lie | Ryan | Open |
 | P1 | Lithium job tracker (day 0/1/2, deposit received, parts ordered) | Protect 2–3 day promise; 2 Li jobs 50+ days in HCP | Ryan | In progress |
-| P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open |
-| P2 | Deposit collection checklist for Christine | Batteries/motors/controllers | Christine | Open |
+| P1 | **SOP Wave 1** — pilot & mark Live | All Core SOPs drafted; review + pilot | Ryan / Christine | **Review** — [sops/README_REVIEW.md](../04_operations/sops/README_REVIEW.md) |
+| P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | **Superseded by full SOP draft set** — pilot SOP-20–29 |
+| P2 | Deposit collection checklist for Christine | Batteries/motors/controllers | Christine | **Drafted as SOP-05** — pilot then mark Live |
+| P2 | Standardize "Professional Kit" quote template for Christine | Faster, consistent quotes | Christine | **Drafted as SOP-04** — pilot then mark Live |
 | P3 | Everlogic evaluation demo + migration plan | HCP is wrong tool for shop-only | Ryan | Open |
+| P3 | Location Profile + new-site checklist (SOP-90/91) | Second service area without reinventing process | Ryan | Open — template started |
 
 ## Revenue & growth
 
@@ -26,8 +29,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P1 | Lithium conversion funnel — landing page / GBP posts / before-afters | ~$81k/yr dedicated line + more in Services | Ryan | Open |
 | P2 | Review $64k marketing spend ROI (QBO) | Largest expense after payroll | Ryan | Open |
 | P2 | HOA outreach — revive or kill the tracker | Sheet in Drive, status unknown | Ryan | Open |
-| P2 | Standardize "Professional Kit" quote template for Christine | Faster, consistent quotes | Christine | Open |
-| P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | Open |
+| P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | Open — covered in SOP-04 add-ons |
 | P3 | Fleet maintenance program — package for HOAs/commercial | Doc exists in Drive | Ryan | Open |
 | P3 | Prep cart sales playbook (bill of sale, deposits) for future launch | Strategic defer, but prep now | Ryan | Open |
 
