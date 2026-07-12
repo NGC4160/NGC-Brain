@@ -14,10 +14,12 @@ Single letter-size page:
 Dashed divider between halves. Bottom section is completed at final return — do not remove from form.
 
 **Driver instructions (Rev I):**
+- Base text **10pt** for legibility
 - Photos must show the **entire subject in frame** (nothing cropped)
-- Required photo items: Data Tag(s) and Battery Compartment (not roof/seats)
+- Check **Photos uploaded to job file** after uploading
+- Required photo items: Data Tag(s) and Battery Compartment
 - Obtain **customer/receiver signature** at drop-off whenever possible
-- No Miles/Hrs field
+- Drop-off section: Date, Driver, Return Location only (cart info on pickup half)
 
 ## GitHub Pages
 
