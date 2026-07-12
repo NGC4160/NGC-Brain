@@ -25,6 +25,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [04_operations/sops/SOP-04_lithium_quote.md](04_operations/sops/SOP-04_lithium_quote.md) | **Draft** — Professional Kit lithium quotes |
 | [04_operations/sops/SOP-03_repair_diagnostic_quote.md](04_operations/sops/SOP-03_repair_diagnostic_quote.md) | **Draft** — repair / $179 diagnostic quotes |
 | [04_operations/sops/SOP-11_job_lane_lifecycle.md](04_operations/sops/SOP-11_job_lane_lifecycle.md) | **Draft** — HCP + whiteboard job lanes |
+| [04_operations/sops/SOP-10_morning_huddle.md](04_operations/sops/SOP-10_morning_huddle.md) | **Draft** — 8:15 shop huddle & finish list |
 | [05_team/roles.md](05_team/roles.md) | Team roster and responsibilities |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, future DMS |

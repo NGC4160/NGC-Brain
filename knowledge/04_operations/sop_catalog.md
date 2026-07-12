@@ -110,7 +110,7 @@ Status: **Todo** · **Draft** · **Live** · **Needs refresh**
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-10** | Morning huddle & board update | Assign every cart by 8:30; finish list; Peyton flags | Wave 1 | Todo |
+| **SOP-10** | Morning huddle & board update | Assign every cart by 8:30; finish list; Peyton flags | Wave 1 | **Draft** — [sops/SOP-10_morning_huddle.md](sops/SOP-10_morning_huddle.md) |
 | **SOP-11** | Job lane lifecycle (HCP + whiteboard) | INTAKE → … → CLOSED; status hygiene; no stale IP | Wave 1 | **Draft** — [sops/SOP-11_job_lane_lifecycle.md](sops/SOP-11_job_lane_lifecycle.md) |
 | **SOP-12** | WIP limits & stop-scheduling rule | Protect lithium SLA; pause intake when over limit | Wave 1 | Todo |
 | **SOP-13** | End-of-day lane audit | Correct statuses; blockers logged | Wave 1 | Todo |
@@ -221,7 +221,7 @@ Ship in this order so Covington stops depending on memory:
 2. ~~**SOP-05** Deposit collection & order release~~ **Draft** — [sops/SOP-05_deposit_collection.md](sops/SOP-05_deposit_collection.md)
 3. ~~**SOP-04** Lithium quote (Professional Kits only)~~ **Draft** — [sops/SOP-04_lithium_quote.md](sops/SOP-04_lithium_quote.md)
 4. ~~**SOP-03** Repair quote / $179 diagnostic~~ **Draft** — [sops/SOP-03_repair_diagnostic_quote.md](sops/SOP-03_repair_diagnostic_quote.md)
-5. **SOP-11** Job lane lifecycle  
+5. ~~**SOP-11** Job lane lifecycle~~ **Draft** — [sops/SOP-11_job_lane_lifecycle.md](sops/SOP-11_job_lane_lifecycle.md)
 6. **SOP-10** Morning huddle  
 7. **SOP-12** WIP / stop-scheduling  
 8. **SOP-32** Lithium day tracker  

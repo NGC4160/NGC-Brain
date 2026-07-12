@@ -76,7 +76,7 @@ Historical mobile SOPs referenced Housecall Pro photos, checklists, and NGC stic
 
 Full list of SOPs to create (intake, shop lanes, tech, lithium, driver, multi-site): **[sop_catalog.md](sop_catalog.md)**.  
 **Live SOPs:** [SOP-01 Customer Intake](sops/SOP-01_customer_intake.md)  
-**Draft SOPs:** [SOP-03](sops/SOP-03_repair_diagnostic_quote.md) · [SOP-04](sops/SOP-04_lithium_quote.md) · [SOP-05](sops/SOP-05_deposit_collection.md) · [SOP-11 Job Lanes](sops/SOP-11_job_lane_lifecycle.md)  
+**Draft SOPs:** [SOP-03](sops/SOP-03_repair_diagnostic_quote.md) · [SOP-04](sops/SOP-04_lithium_quote.md) · [SOP-05](sops/SOP-05_deposit_collection.md) · [SOP-10 Morning Huddle](sops/SOP-10_morning_huddle.md) · [SOP-11 Job Lanes](sops/SOP-11_job_lane_lifecycle.md)  
 Per-location variables for a second shop: **[../01_company/location_profile_template.md](../01_company/location_profile_template.md)**.
 
 ## Internal reference documents

@@ -59,6 +59,8 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 
 ### 8:15 — Ryan shop huddle (10 min)
 
+Full procedure: [sops/SOP-10_morning_huddle.md](sops/SOP-10_morning_huddle.md)
+
 - Read `knowledge/.generated/shop_board.md`
 - Assign every in-progress cart to **Taylor or Marlon**
 - Name **today’s finish list** (max 2 lithium + 2–4 repairs per tech)
