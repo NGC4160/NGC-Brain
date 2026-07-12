@@ -1,27 +1,29 @@
-name: Deploy GitHub Pages
+name: Deploy Command Center
 
 on:
   push:
     branches: [main]
+    paths:
+      - "docs/**"
+      - "scripts/build_command_center.py"
+      - "scripts/build_pages_manifest.py"
+      - "knowledge/**"
+      - "external_docs/exports/**"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: gh-pages-deploy
+  cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
 
       - name: Build Command Center
@@ -29,14 +31,11 @@ jobs:
           NGC_COMMAND_CENTER_PASSWORD: ${{ secrets.NGC_COMMAND_CENTER_PASSWORD }}
         run: python3 scripts/build_command_center.py
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: docs
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          folder: docs
+          target-folder: command-center
+          branch: gh-pages
+          clean: false
+          commit-message: "Deploy Command Center from main @ ${{ github.sha }}"

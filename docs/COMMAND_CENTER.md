@@ -1,6 +1,6 @@
 # NGC Command Center — Setup
 
-**URL:** https://ngc4160.github.io/NGC-Brain/  
+**URL:** https://ngc4160.github.io/NGC-Brain/command-center/  
 **Access:** Ryan White & Christine White only
 
 ## First-time setup (Ryan — 5 minutes)

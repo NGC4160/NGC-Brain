@@ -226,8 +226,39 @@ def build_systems() -> list[dict]:
     ]
 
 
+def build_app_links() -> list[dict]:
+    """NGC dashboard apps deployed on gh-pages (sibling paths under /NGC-Brain/)."""
+    apps = [
+        ("Main Dashboard", "Shop overview · React app", "../"),
+        ("KPI Hub", "Finance & performance reporting", "../kpi-hub/"),
+        ("Shop Board", "Visual WIP board", "../board/"),
+        ("Jobs", "Job tracking & work orders", "../jobs/"),
+        ("Scheduling", "Calendar & appointments", "../scheduling/"),
+        ("Intake", "Customer intake forms", "../intake/"),
+        ("QC", "Quality control forms", "../qc/"),
+        ("Inventory", "Parts & stock", "../inventory/"),
+        ("Invoicing", "Billing workflow", "../invoicing/"),
+        ("Customers", "Customer records", "../customers/"),
+        ("SOPs", "Standard operating procedures", "../sops/"),
+        ("Resources", "Docs & reference library", "../resources/"),
+        ("Settings", "App configuration", "../settings/"),
+    ]
+    return [
+        {"title": title, "desc": desc, "href": href, "external": True, "primary": i == 0}
+        for i, (title, desc, href) in enumerate(apps)
+    ]
+
+
 def build_zones(manifest: dict, ops: dict, pipeline: list[dict]) -> list[dict]:
     return [
+        {
+            "id": "apps",
+            "title": "Dashboard & Apps",
+            "icon": "◈",
+            "color": "#00f0ff",
+            "description": "NGC operational apps — shop, finance, intake, QC",
+            "cards": build_app_links(),
+        },
         {
             "id": "live-ops",
             "title": "Live Ops",
@@ -367,7 +398,7 @@ def main() -> None:
     command_center = {
         "generated_at": datetime.now(tz=timezone.utc).isoformat(),
         "site_name": "NGC Command Center",
-        "site_url": f"https://{REPO.split('/')[0].lower()}.github.io/{REPO.split('/')[1]}/",
+        "site_url": f"https://{REPO.split('/')[0].lower()}.github.io/{REPO.split('/')[1]}/command-center/",
         "repo": REPO,
         "branch": BRANCH,
         "owners": ["Ryan White", "Christine White"],

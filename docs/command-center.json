@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-12T23:12:33.407421+00:00",
+  "generated_at": "2026-07-12T23:18:09.489492+00:00",
   "site_name": "NGC Command Center",
-  "site_url": "https://ngc4160.github.io/NGC-Brain/",
+  "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "owners": [
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-12T23:12:33.397004+00:00",
+    "generated_at": "2026-07-12T23:18:09.478571+00:00",
     "jobs_synced_at": "2026-06-28T23:40:51.293876+00:00",
     "has_live_data": true,
     "metrics": {
@@ -321,6 +321,106 @@
     }
   ],
   "zones": [
+    {
+      "id": "apps",
+      "title": "Dashboard & Apps",
+      "icon": "\u25c8",
+      "color": "#00f0ff",
+      "description": "NGC operational apps \u2014 shop, finance, intake, QC",
+      "cards": [
+        {
+          "title": "Main Dashboard",
+          "desc": "Shop overview \u00b7 React app",
+          "href": "../",
+          "external": true,
+          "primary": true
+        },
+        {
+          "title": "KPI Hub",
+          "desc": "Finance & performance reporting",
+          "href": "../kpi-hub/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Shop Board",
+          "desc": "Visual WIP board",
+          "href": "../board/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Jobs",
+          "desc": "Job tracking & work orders",
+          "href": "../jobs/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Scheduling",
+          "desc": "Calendar & appointments",
+          "href": "../scheduling/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Intake",
+          "desc": "Customer intake forms",
+          "href": "../intake/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "QC",
+          "desc": "Quality control forms",
+          "href": "../qc/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Inventory",
+          "desc": "Parts & stock",
+          "href": "../inventory/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Invoicing",
+          "desc": "Billing workflow",
+          "href": "../invoicing/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Customers",
+          "desc": "Customer records",
+          "href": "../customers/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "SOPs",
+          "desc": "Standard operating procedures",
+          "href": "../sops/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Resources",
+          "desc": "Docs & reference library",
+          "href": "../resources/",
+          "external": true,
+          "primary": false
+        },
+        {
+          "title": "Settings",
+          "desc": "App configuration",
+          "href": "../settings/",
+          "external": true,
+          "primary": false
+        }
+      ]
+    },
     {
       "id": "live-ops",
       "title": "Live Ops",
