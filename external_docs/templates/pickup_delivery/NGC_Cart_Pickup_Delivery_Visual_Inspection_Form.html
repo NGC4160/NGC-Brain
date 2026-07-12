@@ -263,15 +263,6 @@
 
     .sig label { font-weight: 700; color: var(--text); white-space: nowrap; }
     .sig .line { flex: 1; border-bottom: 1px solid var(--line); height: 12px; }
-
-    .accept {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 10pt;
-      grid-column: 1 / -1;
-      justify-content: flex-end;
-    }
   </style>
 </head>
 <body>
@@ -318,7 +309,6 @@
           </tbody>
         </table>
       </div>
-      <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
 
       <div class="section-label">Visual Inspection Checklist — C/W = Complied With</div>
       <div class="two-col-tables">
@@ -354,6 +344,8 @@
         <div class="notes-title">Before Loading Discrepancies / Pre-Existing Conditions — location, condition, photo reference</div>
         <div class="notes-lines"></div>
       </div>
+
+      <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
 
       <div class="sig-row">
         <div class="sig"><label>Driver Pickup Signature:</label><span class="line"></span></div>
@@ -394,7 +386,6 @@
           </tbody>
         </table>
       </div>
-      <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
 
       <div class="section-label">Visual Inspection Checklist — C/W = Complied With</div>
       <div class="two-col-tables">
@@ -433,15 +424,12 @@
 
       <p class="callout strong">Obtain customer/receiver signature at drop-off whenever possible.</p>
 
+      <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
+
       <div class="sig-row wide">
         <div class="sig"><label>Driver Drop-Off Signature:</label><span class="line"></span></div>
         <div class="sig"><label>Date/Time:</label><span class="line"></span></div>
         <div class="sig"><label>Customer/Receiver Signature:</label><span class="line"></span></div>
-        <div class="accept">
-          <span>Return Accepted:</span>
-          <span><span class="cb"></span> Yes</span>
-          <span><span class="cb"></span> No</span>
-        </div>
       </div>
     </div>
   </div>
