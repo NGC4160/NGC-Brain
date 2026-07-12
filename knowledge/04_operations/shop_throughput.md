@@ -126,6 +126,7 @@ See [shop_whiteboard_layout.md](shop_whiteboard_layout.md) — 7-column layout, 
 ## Related docs
 
 - [shop_workflow.md](shop_workflow.md) — customer journey
+- [sops/SOP-11_job_lane_lifecycle.md](sops/SOP-11_job_lane_lifecycle.md) — **lane moves, HCP sync, who moves cards**
 - [../02_products/lithium_conversions.md](../02_products/lithium_conversions.md) — SLA and deposits
 - [../05_team/roles.md](../05_team/roles.md) — RACI
 - [../09_daily_ops/improvement_backlog.md](../09_daily_ops/improvement_backlog.md) — backlog

@@ -25,6 +25,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-07-12 | SOP-05 Deposit collection drafted — no parts order without deposit; $1800 Li / $800 battery | Ryan | `sops/SOP-05_deposit_collection.md` — pilot with Christine |
 | 2026-07-12 | SOP-04 Professional lithium quote drafted — kits only, $1800 dep, 2–3 day SLA language | Ryan | `sops/SOP-04_lithium_quote.md` — pilot with Christine |
 | 2026-07-12 | SOP-03 Repair/diagnostic quote drafted — $179 never waived; Path A vs known-issue Path B | Ryan | `sops/SOP-03_repair_diagnostic_quote.md` — pilot with Christine |
+| 2026-07-12 | SOP-11 Job lane lifecycle drafted — 7 lanes, HCP sync, WIP stoplight, who moves cards | Ryan | `sops/SOP-11_job_lane_lifecycle.md` — pilot on shop board |
 
 ---
 
