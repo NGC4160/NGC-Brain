@@ -51,12 +51,12 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 | Zone | Fee |
 |------|-----|
 | **Within 40 miles of the North Shore shop** | **Free** |
-| **Anywhere on the South Shore of Lake Pontchartrain** | **Free** |
-| **Outside the free zone** | **$99** flat (Standard Pick-up/Drop-off) |
+| **South Shore of Lake Pontchartrain** | **$99** |
+| **Outside 40 miles (North Shore or otherwise)** | **$99** flat (Standard Pick-up/Drop-off) |
 
 **Driver:** Roy handles pickups and deliveries.  
 **Intake script:** [SOP-01 Customer Intake](../04_operations/sops/SOP-01_customer_intake.md)  
-**Last policy update:** 2026-07-12 — South Shore is free (was previously treated as paid).
+**Last policy update:** 2026-07-12 — South Shore is **$99** (not free). Confirmed by owner.
 
 ## Deposits
 

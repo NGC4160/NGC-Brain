@@ -47,8 +47,8 @@ Mark the lead/job accordingly (e.g. no response / closed lost) so it does not cl
 
 | Zone | Fee |
 |------|-----|
-| Inside **40 miles** of the North Shore shop **or anywhere on the South Shore of Lake Pontchartrain** | **Free** |
-| Outside that free zone | **$99** pickup & delivery |
+| Inside **40 miles** of the North Shore shop | **Free** |
+| **South Shore** of Lake Pontchartrain **or** outside the 40-mile North Shore free zone | **$99** pickup & delivery |
 
 4. Confirm drop-off vs Roy pickup preference once zone/fee is clear.
 5. Do **not** book a lithium start or firm drop-off date if shop WIP is over limit — park on waitlist for Service Manager (see SOP-02 / [shop_throughput.md](shop_throughput.md)).
@@ -103,7 +103,7 @@ Enough detail that the Service Manager can estimate without another discovery ca
 |-----------|--------|
 | Walk-in with cart already on trailer | Same info + photo standards; may skip “quick call” text; still collect form fields and zone |
 | Customer only wants lithium package price | Use Professional Kit quote path (SOP-04); still collect location, photos, deposit language |
-| Outside free P&D zone and customer refuses $99 | Offer customer drop-off/pickup at shop; do not waive fee without Service Manager approval |
+| South Shore / outside 40 mi and customer refuses $99 | Offer customer drop-off/pickup at shop; do not waive fee without Service Manager approval |
 | Capacity full / WIP over limit | Do not promise a start date; waitlist for Service Manager |
 | Comeback / warranty | Use complaint path (SOP-08) — do not re-quote full diagnostic as a new lead without checking history |
 
@@ -123,11 +123,11 @@ Enough detail that the Service Manager can estimate without another discovery ca
 
 **Free P&D**
 
-> Pickup and delivery is free if you’re within 40 miles of our North Shore shop, or anywhere on the South Shore of Lake Pontchartrain.
+> Pickup and delivery is free if you’re within 40 miles of our North Shore shop.
 
-**Paid P&D**
+**Paid P&D (South Shore or outside 40 mi)**
 
-> Outside that area, pickup and delivery is a flat $99.
+> If you’re on the South Shore, or outside our 40-mile North Shore area, pickup and delivery is a flat $99.
 
 ## Location variables
 

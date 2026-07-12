@@ -12,7 +12,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P | Item | Why | Owner | Status |
 |---|------|-----|-------|--------|
 | P1 | Deactivate legacy HCP/QBO items (mobile, NGC Conversion, trip charges) | Prevents wrong quotes & booking | Ryan / Christine | **Checklist ready** — see legacy_pricebook_cleanup.md |
-| P1 | Pickup/delivery zone map for Roy (40 mi + South Shore free; $99 outside) | Policy set in SOP-01; need visual/zip list | Ryan | **Policy set** — map still open |
+| P1 | Pickup/delivery zone map for Roy (40 mi North Shore free; South Shore / outside = $99) | Policy confirmed; need visual/zip list | Ryan | **Policy set** — map still open |
 | P1 | HCP WIP hygiene — audit stale "in progress" (15+ days), correct statuses | 14 IP jobs, most aged; board can't lie | Ryan | Open |
 | P1 | Lithium job tracker (day 0/1/2, deposit received, parts ordered) | Protect 2–3 day promise; 2 Li jobs 50+ days in HCP | Ryan | In progress |
 | P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open — master list in [sop_catalog.md](../04_operations/sop_catalog.md) |

@@ -6,8 +6,8 @@
 
 | Zone | Coverage |
 |------|----------|
-| **Core (free pickup/delivery)** | Within **40 miles** of the North Shore shop **or anywhere on the South Shore of Lake Pontchartrain** |
-| **Extended (paid flat rate)** | Outside that free zone — **$99** (pricebook Standard Pick-up/Drop-off) |
+| **Core (free pickup/delivery)** | Within **40 miles** of the North Shore shop |
+| **Extended (paid flat rate)** | **South Shore** of Lake Pontchartrain **or** outside 40 miles — **$99** (pricebook Standard Pick-up/Drop-off) |
 | **Market positioning** | **Greater New Orleans metro** |
 
 Shop address: 71363 Thelma Ln, Suite E, Covington, LA 70433
@@ -41,7 +41,7 @@ Confirm current marketing spend mix with Ryan — QBO shows ~$64k advertising/ma
 - LiFePO4 lithium conversions (Professional Kits, 5-year battery + BMS warranty)
 - Advanced diagnostics capability
 - Free 7-point inspection with every service
-- Free pickup/delivery (North Shore 40 mi + South Shore of Lake Pontchartrain)
+- Free pickup/delivery within 40 mi of North Shore shop; South Shore / outside zone = $99
 - All makes and models
 
 ## Reviews

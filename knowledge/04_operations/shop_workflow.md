@@ -24,7 +24,7 @@ Shop diagnosis/repair → Payment → Pickup/delivery OR customer pickup
 Options:
 
 - Customer drops cart at shop
-- **Roy** picks up cart (free within 40 mi North Shore **or** anywhere on South Shore of Lake Pontchartrain; **$99** outside that zone)
+- **Roy** picks up cart (free within 40 mi North Shore; **$99** for South Shore or outside 40 mi)
 
 ### 3. Service execution
 

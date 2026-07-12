@@ -147,7 +147,7 @@ Status: **Todo** · **Draft** · **Live** · **Needs refresh**
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-40** | Daily route build & zone batching | Free: 40 mi North Shore + South Shore; $99 outside | Wave 1 | Todo |
+| **SOP-40** | Daily route build & zone batching | Free: 40 mi North Shore; $99 South Shore / outside | Wave 1 | Todo |
 | **SOP-41** | Pickup from customer | Condition notes, photos, keys, intake form to Christine | Wave 1 | Todo |
 | **SOP-42** | Delivery to customer | Payment confirm, care guide if lithium, signature/photo | Wave 1 | Todo |
 | **SOP-43** | Vehicle & trailer safety | Load/secure, road check — liability | Wave 2 | Todo |
