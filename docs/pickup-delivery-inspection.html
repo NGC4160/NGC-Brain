@@ -6,13 +6,10 @@
   <title>NGC Cart Pickup / Delivery Visual Inspection Form</title>
   <style>
     :root {
-      --ngc-blue: #1a4d7a;
-      --ngc-green: #6faa2d;
-      --border: #b8c9d9;
-      --text: #1a1a1a;
-      --muted: #444;
-      --pickup-bg: #f4f8fc;
-      --dropoff-bg: #f6faf4;
+      --border: #333;
+      --text: #000;
+      --muted: #333;
+      --line: #666;
     }
 
     @page {
@@ -24,9 +21,9 @@
 
     body {
       font-family: "Segoe UI", Calibri, Arial, sans-serif;
-      font-size: 5.5pt;
+      font-size: 7pt;
       color: var(--text);
-      line-height: 1.1;
+      line-height: 1.15;
       margin: 0;
       padding: 0;
     }
@@ -42,28 +39,26 @@
 
     .page-header {
       text-align: center;
-      border-bottom: 1.5px solid var(--ngc-blue);
-      padding-bottom: 1px;
-      margin-bottom: 1px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 2px;
+      margin-bottom: 3px;
       flex-shrink: 0;
     }
 
     .page-header .company {
-      font-size: 8.5pt;
+      font-size: 10pt;
       font-weight: 700;
-      color: var(--ngc-blue);
       letter-spacing: 0.04em;
-      line-height: 1.05;
+      line-height: 1.1;
     }
 
     .page-header .doc-title {
-      font-size: 7pt;
+      font-size: 8.5pt;
       font-weight: 700;
-      color: var(--ngc-blue);
     }
 
     .page-header .sub {
-      font-size: 5pt;
+      font-size: 6.5pt;
       color: var(--muted);
     }
 
@@ -73,172 +68,172 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      padding: 1px 2px;
+      padding: 2px 3px;
+      border: 1px solid var(--border);
+      background: #fff;
     }
 
     .half.pickup {
-      background: var(--pickup-bg);
-      border: 1.5px solid var(--ngc-blue);
-      border-radius: 3px 3px 0 0;
+      border-radius: 2px 2px 0 0;
+      border-bottom: none;
     }
 
     .half.dropoff {
-      background: var(--dropoff-bg);
-      border: 1.5px solid var(--ngc-green);
+      border-radius: 0 0 2px 2px;
       border-top: none;
-      border-radius: 0 0 3px 3px;
     }
 
     .divider {
       flex: 0 0 auto;
       text-align: center;
-      font-size: 4.8pt;
-      font-weight: 600;
-      color: #666;
-      border-top: 1px dashed #999;
-      border-bottom: 1px dashed #999;
-      padding: 1px 0;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: var(--text);
+      border-top: 1px dashed var(--line);
+      border-bottom: 1px dashed var(--line);
+      padding: 2px 0;
       background: #fff;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
     }
 
     .section-banner {
-      font-size: 6.5pt;
+      font-size: 8pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      padding: 1px 5px;
-      margin: 0 0 1px;
-      color: #fff;
+      padding: 1px 0;
+      margin: 0 0 2px;
+      border-bottom: 2px solid var(--border);
     }
-
-    .pickup .section-banner { background: var(--ngc-blue); }
-    .dropoff .section-banner { background: var(--ngc-green); }
 
     .fields {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 0 5px;
-      margin-bottom: 1px;
-      font-size: 5.5pt;
+      gap: 1px 6px;
+      margin-bottom: 2px;
+      font-size: 7pt;
+      flex-shrink: 0;
     }
 
     .field {
       display: flex;
       align-items: baseline;
-      gap: 2px;
+      gap: 3px;
       white-space: nowrap;
     }
 
-    .field label { font-weight: 600; color: var(--muted); }
+    .field label { font-weight: 700; color: var(--text); }
 
     .field .line {
       flex: 1;
-      border-bottom: 1px solid #666;
-      min-width: 14px;
-      height: 7px;
+      border-bottom: 1px solid var(--line);
+      min-width: 16px;
+      height: 10px;
     }
-
-    .field.wide { grid-column: span 2; }
 
     .section-label {
-      font-size: 5.5pt;
+      font-size: 7pt;
       font-weight: 700;
-      color: var(--ngc-blue);
       text-transform: uppercase;
-      margin: 0;
+      margin: 1px 0;
       letter-spacing: 0.02em;
+      flex-shrink: 0;
     }
 
-    .dropoff .section-label { color: #3d6b12; }
-
     .callout {
-      font-size: 5pt;
+      font-size: 6.5pt;
       color: var(--muted);
       font-style: italic;
-      margin: 0 0 1px;
-      line-height: 1.1;
+      margin: 0 0 2px;
+      line-height: 1.15;
+      flex-shrink: 0;
     }
 
     .callout.strong {
       font-style: normal;
-      font-weight: 600;
-      color: #3d6b12;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin: 2px 0;
     }
 
     table.data {
       width: 100%;
       border-collapse: collapse;
-      font-size: 5.5pt;
-      margin-bottom: 1px;
+      font-size: 6.5pt;
+      margin-bottom: 2px;
+      flex-shrink: 0;
     }
 
     table.data th,
     table.data td {
       border: 1px solid var(--border);
-      padding: 0 2px;
+      padding: 0 3px;
       vertical-align: middle;
-      line-height: 1.05;
+      line-height: 1.1;
     }
 
     table.data th {
-      background: #e8eef4;
+      background: #eee;
       font-weight: 700;
       text-align: left;
-      font-size: 5pt;
+      font-size: 6.5pt;
     }
 
-    .dropoff table.data th { background: #e8f0e4; }
-
     .cb {
-      width: 7px;
-      height: 7px;
-      border: 1px solid #555;
+      width: 9px;
+      height: 9px;
+      border: 1px solid var(--border);
       display: inline-block;
       vertical-align: middle;
     }
 
-    .cb-col { width: 20px; text-align: center; }
+    .cb-col { width: 26px; text-align: center; }
 
     .two-col-tables {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2px;
+      gap: 4px;
+      flex-shrink: 0;
     }
 
     .notes-box {
       border: 1px solid var(--border);
-      min-height: 14px;
-      padding: 1px 2px;
-      margin-bottom: 1px;
+      padding: 2px 4px;
+      margin-bottom: 2px;
       background: #fff;
-      flex-shrink: 0;
+      flex: 1 1 auto;
+      min-height: 0.95in;
+      display: flex;
+      flex-direction: column;
     }
 
     .notes-box .notes-title {
-      font-size: 5pt;
+      font-size: 7pt;
       font-weight: 700;
-      color: var(--muted);
-      line-height: 1.05;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 2px;
+      flex-shrink: 0;
     }
 
     .notes-lines {
-      height: 9px;
+      flex: 1 1 auto;
+      min-height: 0.75in;
       background: repeating-linear-gradient(
         transparent,
-        transparent 4px,
-        #ccc 4px,
-        #ccc 5px
+        transparent 12px,
+        #999 12px,
+        #999 13px
       );
     }
 
     .sig-row {
       display: grid;
       grid-template-columns: 2fr 1fr;
-      gap: 3px;
-      font-size: 5.5pt;
-      margin-top: auto;
+      gap: 4px;
+      font-size: 7pt;
       flex-shrink: 0;
+      padding-top: 2px;
     }
 
     .sig-row.wide {
@@ -248,17 +243,17 @@
     .sig {
       display: flex;
       align-items: baseline;
-      gap: 2px;
+      gap: 3px;
     }
 
-    .sig label { font-weight: 600; color: var(--muted); white-space: nowrap; }
-    .sig .line { flex: 1; border-bottom: 1px solid #666; height: 7px; }
+    .sig label { font-weight: 700; color: var(--text); white-space: nowrap; }
+    .sig .line { flex: 1; border-bottom: 1px solid var(--line); height: 10px; }
 
     .accept {
       display: flex;
       align-items: center;
-      gap: 3px;
-      font-size: 5.5pt;
+      gap: 6px;
+      font-size: 7pt;
       grid-column: 1 / -1;
       justify-content: flex-end;
     }
@@ -271,13 +266,13 @@
         justify-content: space-between; font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px;
       }
       .toolbar a, .toolbar button {
-        color: #1a4d7a; text-decoration: none; background: #fff; border: 1px solid #b8c9d9;
+        color: #000; text-decoration: none; background: #fff; border: 1px solid #333;
         border-radius: 8px; padding: 0.45rem 0.85rem; cursor: pointer; font-size: 14px;
       }
-      .toolbar button { background: #1a4d7a; color: #fff; border-color: #1a4d7a; font-weight: 600; }
-      .toolbar .hint { color: #64748b; font-size: 13px; }
+      .toolbar button { background: #000; color: #fff; border-color: #000; font-weight: 600; }
+      .toolbar .hint { color: #444; font-size: 13px; }
       .pages-wrap { max-width: 8.5in; margin: 0 auto; padding: 0 1rem; }
-      .page { background: #fff; box-shadow: 0 4px 24px rgba(26, 77, 122, 0.12); border-radius: 6px; padding: 0.25in 0.35in; }
+      .page { background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.12); border-radius: 6px; padding: 0.25in 0.35in; }
     }
     @media print {
       .toolbar { display: none !important; }
