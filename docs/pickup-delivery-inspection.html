@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGC Cart Pickup / Delivery Visual Inspection Form</title>
+  <style>
+    :root {
+      --ngc-blue: #1a4d7a;
+      --ngc-blue-light: #2d6ba3;
+      --ngc-green: #6faa2d;
+      --border: #b8c9d9;
+      --text: #1a1a1a;
+      --muted: #444;
+      --pickup-bg: #f4f8fc;
+      --dropoff-bg: #f6faf4;
+    }
+
+    @page {
+      size: letter;
+      margin: 0.28in 0.38in;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Calibri, Arial, sans-serif;
+      font-size: 6pt;
+      color: var(--text);
+      line-height: 1.15;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 10.44in;
+      display: flex;
+      flex-direction: column;
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    .page-sheet {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 4px 6px;
+      min-height: 9.8in;
+    }
+
+    .page-sheet.pickup {
+      background: var(--pickup-bg);
+      border: 2px solid var(--ngc-blue);
+      border-radius: 4px;
+    }
+
+    .page-sheet.dropoff {
+      background: var(--dropoff-bg);
+      border: 2px solid var(--ngc-green);
+      border-radius: 4px;
+    }
+
+    .page-num {
+      text-align: right;
+      font-size: 6pt;
+      color: var(--muted);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .page-header {
+      text-align: center;
+      border-bottom: 1.5px solid var(--ngc-blue);
+      padding-bottom: 2px;
+      margin-bottom: 2px;
+      flex-shrink: 0;
+    }
+
+    .page-header .company {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--ngc-blue);
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+    }
+
+    .page-header .doc-title {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--ngc-blue);
+      margin-top: 0;
+    }
+
+    .page-header .sub {
+      font-size: 5.5pt;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    .half {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 0;
+      min-height: 0;
+    }
+
+    .half.pickup,
+    .half.dropoff {
+      background: transparent;
+      border: none;
+      border-radius: 0;
+    }
+
+    .divider { display: none; }
+
+    .section-banner {
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 6px;
+      margin: 0 0 2px;
+      color: #fff;
+    }
+
+    .pickup .section-banner { background: var(--ngc-blue); }
+    .dropoff .section-banner { background: var(--ngc-green); }
+
+    .fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 1px 6px;
+      margin-bottom: 2px;
+      font-size: 5.8pt;
+    }
+
+    .field {
+      display: flex;
+      align-items: baseline;
+      gap: 3px;
+      white-space: nowrap;
+    }
+
+    .field label {
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .field .line {
+      flex: 1;
+      border-bottom: 1px solid #666;
+      min-width: 16px;
+      height: 8px;
+    }
+
+    .field.wide { grid-column: span 2; }
+
+    .section-label {
+      font-size: 5.8pt;
+      font-weight: 700;
+      color: var(--ngc-blue);
+      text-transform: uppercase;
+      margin: 1px 0 1px;
+      letter-spacing: 0.02em;
+    }
+
+    .dropoff .section-label { color: #3d6b12; }
+
+    table.data {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 5.8pt;
+      margin-bottom: 2px;
+    }
+
+    table.data th,
+    table.data td {
+      border: 1px solid var(--border);
+      padding: 0 2px;
+      vertical-align: middle;
+      line-height: 1.1;
+    }
+
+    table.data th {
+      background: #e8eef4;
+      font-weight: 700;
+      text-align: left;
+      font-size: 5.5pt;
+    }
+
+    .dropoff table.data th { background: #e8f0e4; }
+
+    .cb {
+      width: 8px;
+      height: 8px;
+      border: 1px solid #555;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .cb-col {
+      width: 22px;
+      text-align: center;
+    }
+
+    .two-col-tables {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+    }
+
+    .notes-box {
+      border: 1px solid var(--border);
+      min-height: 48px;
+      padding: 2px 4px;
+      margin-bottom: 4px;
+      background: #fff;
+      flex-shrink: 0;
+    }
+
+    .notes-box .notes-title {
+      font-size: 5.5pt;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 1px;
+      line-height: 1.1;
+    }
+
+    .notes-lines {
+      height: 40px;
+      background: repeating-linear-gradient(
+        transparent,
+        transparent 5px,
+        #ccc 5px,
+        #ccc 6px
+      );
+    }
+
+    .sig-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4px;
+      font-size: 5.8pt;
+      margin-top: auto;
+      padding-top: 1px;
+      flex-shrink: 0;
+    }
+
+    .sig-row.wide {
+      grid-template-columns: 1.6fr 0.8fr 1.6fr 0.9fr;
+    }
+
+    .sig {
+      display: flex;
+      align-items: baseline;
+      gap: 3px;
+    }
+
+    .sig label { font-weight: 600; color: var(--muted); white-space: nowrap; }
+    .sig .line { flex: 1; border-bottom: 1px solid #666; height: 8px; }
+
+    .accept {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 5.8pt;
+      grid-column: 1 / -1;
+      justify-content: flex-end;
+      margin-top: 1px;
+    }
+
+    @media screen {
+      body {
+        background: #e8edf2;
+        padding: 1rem 0 2rem;
+      }
+
+      .toolbar {
+        max-width: 8.5in;
+        margin: 0 auto 1rem;
+        padding: 0 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        font-size: 14px;
+      }
+
+      .toolbar a,
+      .toolbar button {
+        color: #1a4d7a;
+        text-decoration: none;
+        background: #fff;
+        border: 1px solid #b8c9d9;
+        border-radius: 8px;
+        padding: 0.45rem 0.85rem;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .toolbar button {
+        background: #1a4d7a;
+        color: #fff;
+        border-color: #1a4d7a;
+        font-weight: 600;
+      }
+
+      .toolbar .hint {
+        color: #64748b;
+        font-size: 13px;
+      }
+
+      .pages-wrap {
+        max-width: 8.5in;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .page {
+        background: #fff;
+        box-shadow: 0 4px 24px rgba(26, 77, 122, 0.12);
+        border-radius: 6px;
+        padding: 0.35in 0.38in;
+        min-height: 11in;
+      }
+    }
+
+    @media print {
+      .toolbar { display: none !important; }
+      body { background: #fff; padding: 0; }
+      .pages-wrap { padding: 0; gap: 0; }
+      .page {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <div>
+      <a href="/NGC-Brain/">← NGC Dashboard</a>
+      <a href="/NGC-Brain/docs/intake-checklist.html">Intake Checklist</a>
+    </div>
+    <span class="hint">Page 1: Pickup · Page 2: Drop-off</span>
+    <button type="button" onclick="window.print()">Print Form</button>
+  </div>
+  <div class="pages-wrap">
+  <!-- PAGE 1: PICKUP -->
+  <div class="page">
+    <div class="page-header">
+      <div class="company">NEIGHBORHOOD GOLF CARTS</div>
+      <div class="doc-title">CART PICKUP / DELIVERY VISUAL INSPECTION FORM</div>
+      <div class="sub">Page 1 of 2 — Pickup before loading</div>
+    </div>
+
+    <div class="page-sheet pickup">
+    <div class="half pickup">
+      <div class="section-banner">Pickup — Before Loading</div>
+
+      <div class="fields">
+        <div class="field"><label>Customer:</label><span class="line"></span></div>
+        <div class="field"><label>Job #:</label><span class="line"></span></div>
+        <div class="field"><label>Date:</label><span class="line"></span></div>
+        <div class="field"><label>Driver:</label><span class="line"></span></div>
+        <div class="field"><label>Cart Make/Model:</label><span class="line"></span></div>
+        <div class="field"><label>Serial/VIN:</label><span class="line"></span></div>
+        <div class="field"><label>Color:</label><span class="line"></span></div>
+        <div class="field"><label>Miles/Hrs:</label><span class="line"></span></div>
+        <div class="field wide"><label>Pickup Location:</label><span class="line"></span></div>
+      </div>
+
+      <div class="section-label">Required Photos — Must Be Taken Before Loading</div>
+      <div class="two-col-tables">
+        <table class="data">
+          <thead><tr><th>Required Photo</th><th class="cb-col">Done</th></tr></thead>
+          <tbody>
+            <tr><td>Driver Side</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Front</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Instrument Panel / Dash</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Roof / Canopy</td><td class="cb-col"><span class="cb"></span></td></tr>
+          </tbody>
+        </table>
+        <table class="data">
+          <thead><tr><th>Required Photo</th><th class="cb-col">Done</th></tr></thead>
+          <tbody>
+            <tr><td>Passenger Side</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Rear</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Seats / Seat Bases</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Charger / Keys / Loose Items</td><td class="cb-col"><span class="cb"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-label">Visual Inspection Checklist — C/W = Complied With</div>
+      <div class="two-col-tables">
+        <table class="data">
+          <thead><tr><th>Item Inspected</th><th class="cb-col">C/W</th></tr></thead>
+          <tbody>
+            <tr><td>Front body / bumper</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Driver-side body panels</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Roof / canopy / struts</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Seats / armrests</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Steering wheel / column</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Lights / mirrors / accessories</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Charger / keys / loose items</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>No loose panels observed</td><td class="cb-col"><span class="cb"></span></td></tr>
+          </tbody>
+        </table>
+        <table class="data">
+          <thead><tr><th>Item Inspected</th><th class="cb-col">C/W</th></tr></thead>
+          <tbody>
+            <tr><td>Rear body / bumper</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Passenger-side body panels</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Windshield / hinges / clips</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Dash / switches / IP area</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Tires / wheels / hub caps</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Battery compartment secure</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Brake / parking brake check</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>No hanging wires observed</td><td class="cb-col"><span class="cb"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="notes-box">
+        <div class="notes-title">Before Loading Discrepancies / Pre-Existing Conditions — Detail location, condition, and photo reference</div>
+        <div class="notes-lines"></div>
+      </div>
+
+      <div class="sig-row">
+        <div class="sig"><label>Driver Pickup Signature:</label><span class="line"></span></div>
+        <div class="sig"><label>Date/Time:</label><span class="line"></span></div>
+      </div>
+    </div>
+    </div>
+    <div class="page-num">Page 1 of 2 — Pickup</div>
+  </div>
+
+  <!-- PAGE 2: DROP-OFF -->
+  <div class="page">
+    <div class="page-header">
+      <div class="company">NEIGHBORHOOD GOLF CARTS</div>
+      <div class="doc-title">CART PICKUP / DELIVERY VISUAL INSPECTION FORM</div>
+      <div class="sub">Page 2 of 2 — Drop-off at final return</div>
+    </div>
+
+    <div class="page-sheet dropoff">
+    <div class="half dropoff">
+      <div class="section-banner">Drop-Off — Final Return</div>
+
+      <div class="fields">
+        <div class="field"><label>Customer:</label><span class="line"></span></div>
+        <div class="field"><label>Job #:</label><span class="line"></span></div>
+        <div class="field"><label>Date:</label><span class="line"></span></div>
+        <div class="field"><label>Driver:</label><span class="line"></span></div>
+        <div class="field"><label>Cart Make/Model:</label><span class="line"></span></div>
+        <div class="field"><label>Serial/VIN:</label><span class="line"></span></div>
+        <div class="field"><label>Color:</label><span class="line"></span></div>
+        <div class="field"><label>Miles/Hrs:</label><span class="line"></span></div>
+        <div class="field wide"><label>Return Location:</label><span class="line"></span></div>
+      </div>
+
+      <div class="section-label">Required Photos — Must Be Taken at Final Return</div>
+      <div class="two-col-tables">
+        <table class="data">
+          <thead><tr><th>Required Photo</th><th class="cb-col">Done</th></tr></thead>
+          <tbody>
+            <tr><td>Driver Side</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Front</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Instrument Panel / Dash</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Roof / Canopy</td><td class="cb-col"><span class="cb"></span></td></tr>
+          </tbody>
+        </table>
+        <table class="data">
+          <thead><tr><th>Required Photo</th><th class="cb-col">Done</th></tr></thead>
+          <tbody>
+            <tr><td>Passenger Side</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Rear</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Seats / Seat Bases</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Charger / Keys / Loose Items</td><td class="cb-col"><span class="cb"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-label">Visual Inspection Checklist — C/W = Complied With</div>
+      <div class="two-col-tables">
+        <table class="data">
+          <thead><tr><th>Item Inspected</th><th class="cb-col">C/W</th></tr></thead>
+          <tbody>
+            <tr><td>Front body / bumper</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Driver-side body panels</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Roof / canopy / struts</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Seats / armrests</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Steering wheel / column</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Lights / mirrors / accessories</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Charger / keys / loose items</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>No loose panels observed</td><td class="cb-col"><span class="cb"></span></td></tr>
+          </tbody>
+        </table>
+        <table class="data">
+          <thead><tr><th>Item Inspected</th><th class="cb-col">C/W</th></tr></thead>
+          <tbody>
+            <tr><td>Rear body / bumper</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Passenger-side body panels</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Windshield / hinges / clips</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Dash / switches / IP area</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Tires / wheels / hub caps</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Battery compartment secure</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>Brake / parking brake check</td><td class="cb-col"><span class="cb"></span></td></tr>
+            <tr><td>No hanging wires observed</td><td class="cb-col"><span class="cb"></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="notes-box">
+        <div class="notes-title">Final Return Discrepancies / Delivery Condition — Detail location, condition, and photo reference</div>
+        <div class="notes-lines"></div>
+      </div>
+
+      <div class="sig-row wide">
+        <div class="sig"><label>Driver Drop-Off Signature:</label><span class="line"></span></div>
+        <div class="sig"><label>Date/Time:</label><span class="line"></span></div>
+        <div class="sig"><label>Customer/Receiver Signature:</label><span class="line"></span></div>
+        <div class="accept">
+          <span>Return Accepted:</span>
+          <span><span class="cb"></span> Yes</span>
+          <span><span class="cb"></span> No</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="page-num">Page 2 of 2 — Drop-Off</div>
+  </div>
+  </div>
+</body>
+</html>
