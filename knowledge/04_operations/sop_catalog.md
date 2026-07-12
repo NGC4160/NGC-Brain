@@ -96,7 +96,7 @@ Status: **Todo** · **Draft** · **Live** · **Needs refresh**
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-01** | Phone & walk-in intake | Same questions every time; correct job type; no wrong promises | Wave 1 | Todo |
+| **SOP-01** | Phone & walk-in intake | Same questions every time; correct job type; no wrong promises | Wave 1 | **Live** — [sops/SOP-01_customer_intake.md](sops/SOP-01_customer_intake.md) |
 | **SOP-02** | Scheduling & capacity gate | Enforce WIP limits before booking drop-offs / lithium | Wave 1 | Todo |
 | **SOP-03** | Quote & estimate (repair) | $179 diagnostic rule; known-issue vs full diag; Christine script | Wave 1 | Todo |
 | **SOP-04** | Quote & estimate (Professional lithium) | SKU pick, add-ons, deposit $1,800, 2–3 day SLA language | Wave 1 | Todo |
@@ -147,7 +147,7 @@ Status: **Todo** · **Draft** · **Live** · **Needs refresh**
 
 | ID | SOP | Why it matters | Priority | Status |
 |----|-----|----------------|----------|--------|
-| **SOP-40** | Daily route build & zone batching | Northshore free / outside + Southshore flat fee | Wave 1 | Todo |
+| **SOP-40** | Daily route build & zone batching | Free: 40 mi North Shore + South Shore; $99 outside | Wave 1 | Todo |
 | **SOP-41** | Pickup from customer | Condition notes, photos, keys, intake form to Christine | Wave 1 | Todo |
 | **SOP-42** | Delivery to customer | Payment confirm, care guide if lithium, signature/photo | Wave 1 | Todo |
 | **SOP-43** | Vehicle & trailer safety | Load/secure, road check — liability | Wave 2 | Todo |
@@ -217,7 +217,7 @@ Status: **Todo** · **Draft** · **Live** · **Needs refresh**
 
 Ship in this order so Covington stops depending on memory:
 
-1. **SOP-01** Intake  
+1. ~~**SOP-01** Intake~~ **Done** — [sops/SOP-01_customer_intake.md](sops/SOP-01_customer_intake.md)
 2. **SOP-05** Deposit collection & order release  
 3. **SOP-04** Lithium quote (Professional Kits only)  
 4. **SOP-03** Repair quote / $179 diagnostic  
@@ -227,7 +227,7 @@ Ship in this order so Covington stops depending on memory:
 8. **SOP-32** Lithium day tracker  
 9. **SOP-40 / 41 / 42** Driver route + pickup + delivery  
 10. **SOP-07** Payment & closeout  
-11. **SOP-45** Zone/fee exception log (until zones finalized)
+11. **SOP-45** Zone/fee exception log (edge cases outside free zone)
 
 **Already documented in knowledge (convert to staff SOPs, don’t rewrite from scratch):**
 

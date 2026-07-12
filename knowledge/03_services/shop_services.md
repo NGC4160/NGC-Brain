@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-06-28  
+**Last verified:** 2026-07-12  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -50,10 +50,13 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 
 | Zone | Fee |
 |------|-----|
-| **Within 40 miles of shop on the Northshore** | **Free** (marketed as "free locally") |
-| **Outside 40 miles OR Southshore** | **Reasonable flat rate** — pricebook lists **$99** as Standard Pick-up/Drop-off; exact boundary **TBD** |
+| **Within 40 miles of the North Shore shop** | **Free** |
+| **Anywhere on the South Shore of Lake Pontchartrain** | **Free** |
+| **Outside the free zone** | **$99** flat (Standard Pick-up/Drop-off) |
 
-**Driver:** Roy handles pickups and deliveries.
+**Driver:** Roy handles pickups and deliveries.  
+**Intake script:** [SOP-01 Customer Intake](../04_operations/sops/SOP-01_customer_intake.md)  
+**Last policy update:** 2026-07-12 — South Shore is free (was previously treated as paid).
 
 ## Deposits
 

@@ -36,8 +36,8 @@ Copy this file to `knowledge/01_company/locations/<slug>_profile.md` (e.g. `covi
 | Zone | Fee | Notes |
 |------|-----|-------|
 | Free zone | | Define radius / parish / map link |
-| Paid zone A | | e.g. Southshore flat |
-| Paid zone B | | Outside radius |
+| Paid zone | | Outside free zone (flat fee) |
+| Free — South Shore | | Anywhere on South Shore of Lake Pontchartrain (Covington policy) |
 | Exception rule | | Who may override (Ryan) |
 
 **Map link / file:**  
@@ -94,6 +94,6 @@ Use [sop_catalog.md](../04_operations/sop_catalog.md) **SOP-91** when standing u
 | Phone | 985-402-1206 |
 | Email | contact@ngcgolfcarts.com |
 | Hours | Mon–Fri 8 AM – 5 PM |
-| Free P&D | Within 40 mi Northshore |
-| Paid P&D | Outside 40 mi or Southshore — pricebook $99 (boundary TBD) |
+| Free P&D | Within 40 mi of North Shore shop **or** anywhere on South Shore of Lake Pontchartrain |
+| Paid P&D | Outside free zone — **$99** |
 | Primary | Greater New Orleans metro / Northshore |
