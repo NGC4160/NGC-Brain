@@ -1,6 +1,6 @@
 # Improvement & Growth Backlog
 
-**Last reviewed:** 2026-06-28  
+**Last reviewed:** 2026-07-12  
 Ask the AI: **"What's the highest-impact item on the backlog this week?"**
 
 Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
@@ -35,9 +35,13 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | P | Item | Why | Owner | Status |
 |---|------|-----|-------|--------|
+| P1 | Clear Undeposited Funds weekly (June close $7,069) | Cash-control; decision-grade books | Jill / Christine | **Open — July control** |
+| P1 | Resolve Suspense ($785 June) to $0 | Clean MoM interpretation | Jill | Open |
+| P1 | Hold July ≥$75k income / ≥20% net margin / current ratio ≥1.75 | Board targets from June RevB | Ryan | Open |
 | P2 | Wind down `Mobile Trip Income` in QBO to $0 | Legacy revenue still posting | Jill | Open |
-| P2 | Review Unapplied Cash / Undeposited Funds monthly | QBO flags from exports | Jill | Open |
-| P3 | Monthly export ritual → refresh `knowledge/08_finance/` | AI gives stale answers without it | Ryan | Open |
+| P2 | Review Unapplied Cash / Undeposited Funds monthly | QBO flags from exports + Jan P&L note | Jill | Open |
+| P2 | Primary-tech reporting standard in HCP (split credit clarified) | Fair productivity / accountability | Ryan | Open |
+| P3 | Monthly export ritual → refresh `knowledge/08_finance/` | AI gives stale answers without it | Ryan | **Datasets seeded 2026-07-12** |
 
 ## Team & systems
 
@@ -53,6 +57,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | Date | Item |
 |------|------|
+| 2026-07-12 | Ingested Jan/Mar/Apr-forecast/Jun CFO PDFs → `08_finance/datasets/` + monthly narratives |
 | 2026-06-28 | Built `knowledge/` business brain from intake + exports |
 | 2026-06-28 | Uploaded HCP pricebook + QBO exports |
 | 2026-06-28 | Shop throughput playbook + auto shop board from HCP jobs |

@@ -1,0 +1,182 @@
+{
+  "dataset": "ngc_staff_utilization",
+  "description": "Directional staff attribution from HCP leaderboard/time reports in PAGCW CFO packs. Shared jobs double-count — do not sum employee revenue as company production.",
+  "last_updated": "2026-07-12",
+  "privacy": "Names only; no pay rates or personal contact info.",
+  "months": [
+    {
+      "period": "2026-01",
+      "company_totals": {
+        "on_job_hours": 96.5,
+        "travel_hours": 37.6,
+        "total_field_hours": 134.1,
+        "travel_share_pct": 28.0
+      },
+      "employees": [
+        {
+          "name": "Payton Elkins",
+          "jobs": 30,
+          "on_job_hours": 78.0,
+          "travel_hours": 22.6,
+          "travel_share_pct": 22.5,
+          "hrs_per_tech_per_job": 2.6,
+          "avg_gp_per_job": 391.87,
+          "profit_margin_pct": 51.06,
+          "revenue_per_field_hour": 255.79,
+          "read": "Carried profitability load; healthier travel ratio."
+        },
+        {
+          "name": "Ryan White",
+          "jobs": 17,
+          "on_job_hours": 18.5,
+          "travel_hours": 13.0,
+          "travel_share_pct": 41.3,
+          "hrs_per_tech_per_job": 1.0,
+          "avg_gp_per_job": 59.57,
+          "profit_margin_pct": 29.95,
+          "revenue_per_field_hour": 107.33,
+          "read": "Travel-heavy owner mix; triage/follow-up pattern — shift to high-value sales/estimating/route control."
+        }
+      ],
+      "data_integrity": "Staff revenue sum exceeded unique company revenue by $2,707 (ZIP 70122 job double-attributed)."
+    },
+    {
+      "period": "2026-03",
+      "company_totals": {
+        "completed_jobs": 64,
+        "completed_job_revenue": 40572.85,
+        "on_job_hours": 167.9,
+        "travel_hours": 162.9,
+        "total_field_hours": 330.8,
+        "travel_share_pct": 49.2
+      },
+      "employees": [
+        {
+          "name": "Payton Elkins",
+          "attributed_revenue": 31498.96,
+          "jobs": 35,
+          "avg_job": 899.97,
+          "on_job_hours": 93.3,
+          "travel_hours": 24.1,
+          "travel_share_pct": 20.5,
+          "revenue_per_total_hr": 268.3,
+          "hrs_per_tech_per_job": 2.7,
+          "avg_gp_per_job": 428.4,
+          "profit_margin_pct": 47.6
+        },
+        {
+          "name": "Ryan White",
+          "attributed_revenue": 14501.27,
+          "jobs": 34,
+          "avg_job": 426.51,
+          "on_job_hours": 30.0,
+          "travel_hours": 127.3,
+          "travel_share_pct": 80.9,
+          "revenue_per_total_hr": 92.19,
+          "hrs_per_tech_per_job": 0.9,
+          "avg_gp_per_job": -10.98,
+          "profit_margin_pct": -2.58,
+          "read": "Owner dispatch/mobile routing/supervision + training overhead — not pure low productivity."
+        },
+        {
+          "name": "Daniel Champagne",
+          "attributed_revenue": 10087.73,
+          "jobs": 22,
+          "avg_job": 458.53,
+          "on_job_hours": 44.6,
+          "travel_hours": 11.4,
+          "travel_share_pct": 20.4,
+          "revenue_per_total_hr": 180.14,
+          "hrs_per_tech_per_job": 2.1,
+          "avg_gp_per_job": 236.02,
+          "profit_margin_pct": 51.47,
+          "status": "Released end of March — training/OJT paired with senior staff most of month; standards fit."
+        }
+      ]
+    },
+    {
+      "period": "2026-06",
+      "company_totals": {
+        "completed_jobs": 45,
+        "leaderboard_revenue": 74988.38,
+        "on_job_hours": 256.2,
+        "travel_hours": 87.6,
+        "total_field_hours": 343.8,
+        "travel_share_pct": 25.48
+      },
+      "employees": [
+        {
+          "name": "Marlon Gray",
+          "attributed_revenue": 32233.3,
+          "split_jobs": 17.08,
+          "on_job_hours": 93.3,
+          "travel_hours": 0.0,
+          "avg_gp": 898.22,
+          "margin_pct": 47.58,
+          "read": "Highest on-job hours; productive core technician."
+        },
+        {
+          "name": "Roy Gautreaux",
+          "attributed_revenue": 32178.88,
+          "split_jobs": 21.28,
+          "on_job_hours": 1.0,
+          "travel_hours": 87.6,
+          "avg_gp": 642.59,
+          "margin_pct": 42.49,
+          "read": "Travel-heavy support — pickup/delivery and shop-assistant model."
+        },
+        {
+          "name": "Dylan Silvan",
+          "attributed_revenue": 23061.89,
+          "split_jobs": 10.19,
+          "on_job_hours": 72.9,
+          "travel_hours": 0.0,
+          "avg_gp": 1030.34,
+          "margin_pct": 45.54,
+          "status": "Released June — culture and initiative; metrics do not override fit."
+        },
+        {
+          "name": "Taylor Couvillion",
+          "attributed_revenue": 18096.8,
+          "split_jobs": 7.86,
+          "on_job_hours": 72.3,
+          "travel_hours": 0.0,
+          "avg_gp": 995.75,
+          "margin_pct": 43.25,
+          "read": "Strong June activity; watch training curve, accuracy, QC."
+        },
+        {
+          "name": "Payton Elkins",
+          "attributed_revenue": 13274.79,
+          "split_jobs": 4.86,
+          "on_job_hours": 13.6,
+          "travel_hours": 0.0,
+          "avg_gp": 1215.23,
+          "margin_pct": 44.49,
+          "read": "Monday-only senior role; high-value limited-hour contribution."
+        },
+        {
+          "name": "Ryan White",
+          "attributed_revenue": 2700.73,
+          "split_jobs": 2.68,
+          "on_job_hours": 3.0,
+          "travel_hours": 0.0,
+          "avg_gp": 497.77,
+          "margin_pct": 49.32,
+          "read": "Owner production hours low — management/sales focus."
+        },
+        {
+          "name": "SHOP QUEUE",
+          "attributed_revenue": 1474.83,
+          "split_jobs": 1.06,
+          "on_job_hours": 0.0,
+          "travel_hours": 0.0,
+          "avg_gp": 511.77,
+          "margin_pct": 36.77,
+          "read": "Minimize or clarify for clean accountability."
+        }
+      ],
+      "reporting_standard": "Use split job count and primary-tech convention going forward; shared attribution is directional only."
+    }
+  ]
+}

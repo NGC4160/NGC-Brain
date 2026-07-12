@@ -1,0 +1,342 @@
+{
+  "dataset": "ngc_monthly_kpis",
+  "description": "Monthly operating and accounting KPIs from PAGCW CFO reports. HCP = production/collections; QBO = cash-basis accounting.",
+  "currency": "USD",
+  "accounting_basis": "cash",
+  "last_updated": "2026-07-12",
+  "sources": [
+    "external_docs/exports/cfo_reports/2026-01_Business_Health_Report.pdf",
+    "external_docs/exports/cfo_reports/2026-03_CFO_Month_End_Summary_Rev2.pdf",
+    "external_docs/exports/cfo_reports/2026-04_Q2_Forecast_and_Goals.pdf",
+    "external_docs/exports/cfo_reports/2026-06_CFO_CEO_Boardroom_Report_RevB.pdf"
+  ],
+  "months": [
+    {
+      "period": "2026-01",
+      "report_type": "actual",
+      "report_title": "January 2026 EOM / Business Health Report",
+      "hcp": {
+        "completed_jobs": 47,
+        "completed_job_revenue": 26406.58,
+        "avg_revenue_per_job": 561.84,
+        "operational_gross_profit": 12768.69,
+        "operational_gross_margin_pct": 48.35,
+        "avg_gp_per_job": 271.67,
+        "paid_in_full_revenue": null,
+        "revenue_producing_days": 20,
+        "calendar_days": 31,
+        "avg_revenue_per_production_day": 1320.33,
+        "avg_revenue_per_calendar_day": 851.83,
+        "on_job_hours": 96.5,
+        "travel_hours": 37.6,
+        "total_field_hours": 134.1,
+        "travel_share_pct": 28.0,
+        "revenue_per_on_job_hour": 273.64,
+        "revenue_per_field_hour": 196.92,
+        "gp_per_on_job_hour": 132.32,
+        "gp_per_field_hour": 95.22
+      },
+      "qbo": {
+        "total_income": 37923.15,
+        "cogs": 13969.19,
+        "gross_profit": 23953.96,
+        "gross_margin_pct": 63.16,
+        "cogs_adjusted_kpi": 12445.58,
+        "gross_profit_adjusted_kpi": 25477.57,
+        "gross_margin_adjusted_kpi_pct": 67.18,
+        "operating_expenses": 20008.02,
+        "net_income": 4130.67,
+        "net_margin_pct": 10.89,
+        "working_capital": null,
+        "current_ratio": null,
+        "bank_accounts": null,
+        "undeposited_funds": null,
+        "stripe_capital_loan": null,
+        "inventory_asset": null
+      },
+      "cost_structure_hcp": {
+        "labor_cost": 3902.37,
+        "service_cost": 12717.4,
+        "material_cost": 8428.74,
+        "miscellaneous": 1306.78,
+        "total_cost": 13637.89
+      },
+      "notes": [
+        "HCP staff attribution double-counts shared jobs; unique company totals are authoritative.",
+        "QBO KPI gross margin reclasses $1,523.61 of overhead out of COGS for presentation only; net income unchanged.",
+        "Clear Unapplied Cash Payment Income ($1,251.32) flagged in Jan P&L review."
+      ]
+    },
+    {
+      "period": "2026-02",
+      "report_type": "prior_period_from_march_rev2",
+      "report_title": "February 2026 (comparison columns in March Rev2)",
+      "hcp": {
+        "completed_jobs": 51,
+        "completed_job_revenue": 29377.09,
+        "avg_revenue_per_job": 576.02,
+        "operational_gross_profit": 13494.94,
+        "operational_gross_margin_pct": 45.94,
+        "avg_gp_per_job": null,
+        "paid_in_full_revenue": null,
+        "revenue_producing_days": null,
+        "calendar_days": 28,
+        "avg_revenue_per_production_day": null,
+        "avg_revenue_per_calendar_day": null,
+        "on_job_hours": null,
+        "travel_hours": null,
+        "total_field_hours": null,
+        "travel_share_pct": null,
+        "revenue_per_on_job_hour": null,
+        "revenue_per_field_hour": null,
+        "gp_per_on_job_hour": null,
+        "gp_per_field_hour": null
+      },
+      "qbo": {
+        "total_income": 30057.42,
+        "cogs": 4735.78,
+        "gross_profit": 25321.64,
+        "gross_margin_pct": null,
+        "operating_expenses": 16180.2,
+        "net_income": 9141.44,
+        "net_margin_pct": null,
+        "working_capital": -9373.49,
+        "current_assets": 17670.39,
+        "current_liabilities": 27043.88,
+        "current_ratio": 0.65,
+        "bank_accounts": 6009.53,
+        "undeposited_funds": null,
+        "stripe_capital_loan": 24273.83,
+        "inventory_asset": 9213.96
+      },
+      "notes": [
+        "February values taken from March Rev2 prior-period QBO/HCP comparison columns."
+      ]
+    },
+    {
+      "period": "2026-03",
+      "report_type": "actual",
+      "report_title": "March 2026 CFO Month-End Summary Rev2",
+      "hcp": {
+        "completed_jobs": 64,
+        "completed_job_revenue": 40572.85,
+        "avg_revenue_per_job": 633.95,
+        "operational_gross_profit": 13120.6,
+        "operational_gross_margin_pct": 32.34,
+        "avg_gp_per_job": 205.01,
+        "paid_in_full_revenue": 44717.06,
+        "revenue_producing_days": 22,
+        "calendar_days": 31,
+        "avg_revenue_per_production_day": 1844.22,
+        "avg_revenue_per_calendar_day": 1308.8,
+        "on_job_hours": 167.9,
+        "travel_hours": 162.9,
+        "total_field_hours": 330.8,
+        "travel_share_pct": 49.2,
+        "revenue_per_on_job_hour": 241.65,
+        "revenue_per_field_hour": 122.65,
+        "gp_per_on_job_hour": null,
+        "gp_per_field_hour": null
+      },
+      "qbo": {
+        "total_income": 42974.16,
+        "cogs": 16349.4,
+        "gross_profit": 26624.76,
+        "gross_margin_pct": null,
+        "operating_expenses": 23759.15,
+        "net_income": 2865.61,
+        "net_margin_pct": 6.7,
+        "working_capital": -10507.87,
+        "current_assets": 17064.45,
+        "current_liabilities": 27572.32,
+        "current_ratio": 0.62,
+        "bank_accounts": 9300.96,
+        "undeposited_funds": null,
+        "stripe_capital_loan": 23084.29,
+        "inventory_asset": 4763.11
+      },
+      "expense_highlights": {
+        "payroll": 9120.69,
+        "rent": 4700.0,
+        "professional_fees": 2525.0,
+        "automobile": 1482.03,
+        "merchant_fees": 991.5,
+        "advertising_marketing": 762.0,
+        "software": 497.27
+      },
+      "personnel_notes": [
+        "Daniel Champagne hired in March; mostly training/OJT paired with senior staff; released end of March for standards fit."
+      ],
+      "notes": [
+        "Strong volume and ticket; profit conversion weakened (COGS + opex spike).",
+        "Collections exceeded completed-job revenue by $4,144.21."
+      ]
+    },
+    {
+      "period": "2026-04",
+      "report_type": "forecast_target",
+      "report_title": "April + Q2 2026 Forecast and Goals (prepared 2026-04-07)",
+      "hcp": {
+        "completed_jobs": 70,
+        "completed_job_revenue": 46550.0,
+        "avg_revenue_per_job": 665.0,
+        "operational_gross_profit": 16758.0,
+        "operational_gross_margin_pct": 36.0,
+        "avg_gp_per_job": null,
+        "paid_in_full_revenue": null,
+        "revenue_producing_days": null,
+        "calendar_days": 30,
+        "avg_revenue_per_production_day": null,
+        "avg_revenue_per_calendar_day": null,
+        "on_job_hours": null,
+        "travel_hours": null,
+        "total_field_hours": null,
+        "travel_share_pct": 44.0,
+        "revenue_per_on_job_hour": 252.0,
+        "revenue_per_field_hour": 140.0,
+        "gp_per_on_job_hour": null,
+        "gp_per_field_hour": null
+      },
+      "qbo": {
+        "total_income_range_low": 47000.0,
+        "total_income_range_high": 48500.0,
+        "net_income_range_low": 5000.0,
+        "net_income_range_high": 6000.0
+      },
+      "goal_bands": {
+        "jobs_min_target_stretch": [66, 70, 74],
+        "avg_ticket_min_target_stretch": [645, 665, 685],
+        "completed_revenue_min_target_stretch": [42570, 46550, 50690],
+        "travel_share_min_target_stretch_max_pct": [46, 44, 42],
+        "op_gross_margin_min_target_stretch_pct": [35, 36.5, 38],
+        "qbo_noi_min_target_stretch": [4000, 5500, 7250]
+      },
+      "notes": [
+        "Planning targets only — not actual April close.",
+        "Q2 path in forecast: Apr 70 / May 74 / Jun 78 jobs; Q2 total 222 jobs / ~$149,930 completed revenue."
+      ]
+    },
+    {
+      "period": "2026-05",
+      "report_type": "prior_period_from_june_revb",
+      "report_title": "May 2026 (comparison columns in June RevB)",
+      "hcp": {
+        "completed_jobs": null,
+        "completed_job_revenue": null,
+        "avg_revenue_per_job": null,
+        "operational_gross_profit": null,
+        "operational_gross_margin_pct": null
+      },
+      "qbo": {
+        "total_income": 62783.1,
+        "cogs": 25301.91,
+        "gross_profit": 37481.19,
+        "gross_margin_pct": 59.7,
+        "operating_expenses": 31979.47,
+        "net_income": 6286.44,
+        "net_margin_pct": 10.01,
+        "working_capital": 4371.75,
+        "current_assets": 27384.34,
+        "current_liabilities": null,
+        "current_ratio": 1.19,
+        "bank_accounts": 451.7,
+        "undeposited_funds": 54.16,
+        "stripe_capital_loan": 18914.28,
+        "inventory_asset": 20670.48
+      },
+      "notes": [
+        "May values from June RevB MoM comparison."
+      ]
+    },
+    {
+      "period": "2026-06",
+      "report_type": "actual",
+      "report_title": "June 2026 CFO/CEO Boardroom Report RevB",
+      "hcp": {
+        "completed_jobs": 45,
+        "completed_job_revenue": 75626.38,
+        "avg_revenue_per_job": 1666.41,
+        "leaderboard_zip_revenue": 74988.38,
+        "operational_gross_profit_est": 33684.78,
+        "operational_gross_margin_pct": 44.92,
+        "avg_gp_per_job": null,
+        "paid_in_full_revenue": 83794.17,
+        "revenue_producing_days": 16,
+        "calendar_days": 30,
+        "avg_revenue_per_production_day": 4726.65,
+        "avg_revenue_per_calendar_day": 2520.88,
+        "on_job_hours": 256.2,
+        "travel_hours": 87.6,
+        "total_field_hours": 343.8,
+        "travel_share_pct": 25.48,
+        "revenue_per_on_job_hour": 292.69,
+        "revenue_per_field_hour": 218.12,
+        "gp_per_on_job_hour": 131.48,
+        "gp_per_field_hour": 97.98
+      },
+      "qbo": {
+        "total_income": 78265.63,
+        "cogs": 23052.46,
+        "gross_profit": 55213.17,
+        "gross_margin_pct": 70.55,
+        "operating_expenses": 37489.58,
+        "other_expense_suspense": 784.7,
+        "net_income": 16938.92,
+        "net_margin_pct": 21.64,
+        "working_capital": 19310.67,
+        "current_assets": 41455.42,
+        "total_liabilities": 22144.75,
+        "current_ratio": 1.87,
+        "bank_accounts": 3766.17,
+        "undeposited_funds": 7068.76,
+        "stripe_capital_loan": 15068.57,
+        "inventory_asset": 24382.49
+      },
+      "revenue_composition": {
+        "lfp_conversions_only": 17255.52,
+        "sales_and_services": 39354.1,
+        "services_income": 9093.01,
+        "sales_of_product_income": 4917.2
+      },
+      "expense_highlights": {
+        "payroll": 15513.45,
+        "payroll_pct_of_income": 19.82,
+        "advertising_marketing": 3443.84,
+        "advertising_pct_of_income": 4.4,
+        "merchant_fees": 2499.47,
+        "merchant_pct_of_income": 3.19,
+        "small_tools": 1829.91,
+        "website_domain_hosting": 955.0
+      },
+      "yoy_june_2025": {
+        "total_income": 47606.98,
+        "gross_profit": 29522.93,
+        "gross_margin_pct": 62.01,
+        "operating_expenses": 22577.75,
+        "net_income": 6945.18,
+        "net_margin_pct": 14.59
+      },
+      "personnel_notes": [
+        "Dylan Silvan released in June for culture/initiative fit (not a pure production decision)."
+      ],
+      "july_control_targets": {
+        "qbo_income_min": 75000,
+        "net_margin_min_pct": 20,
+        "current_ratio_min": 1.75,
+        "hcp_completed_revenue_min": 75000,
+        "completed_jobs_min": 45,
+        "avg_job_size_min": 1500,
+        "hcp_op_gross_margin_min_pct": 45,
+        "travel_share_max_pct": 25,
+        "revenue_per_field_hour_min": 220,
+        "gp_per_field_hour_min": 100
+      },
+      "notes": [
+        "RevB uses revised QBO after deferred bank-register cleanup.",
+        "Separate QBO cash-basis, HCP completed production, and HCP paid-in-full collections.",
+        "Clear Undeposited Funds weekly; resolve Suspense $784.70 before July final.",
+        "June governance: Shop Workflow SOP, Pickup/Delivery Inspection Form, revised Service T&Cs."
+      ]
+    }
+  ]
+}
