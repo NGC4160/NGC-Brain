@@ -22,6 +22,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [04_operations/sop_catalog.md](04_operations/sop_catalog.md) | **Master SOP list** — waves to write, transfer-ready operating system |
 | [04_operations/sops/SOP-01_customer_intake.md](04_operations/sops/SOP-01_customer_intake.md) | **Live** — customer intake (lead text, call, photos, diag terms) |
 | [04_operations/sops/SOP-05_deposit_collection.md](04_operations/sops/SOP-05_deposit_collection.md) | **Draft** — deposit collection & parts order release |
+| [04_operations/sops/SOP-04_lithium_quote.md](04_operations/sops/SOP-04_lithium_quote.md) | **Draft** — Professional Kit lithium quotes |
 | [05_team/roles.md](05_team/roles.md) | Team roster and responsibilities |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, future DMS |

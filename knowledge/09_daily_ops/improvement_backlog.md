@@ -16,8 +16,9 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P1 | HCP WIP hygiene — audit stale "in progress" (15+ days), correct statuses | 14 IP jobs, most aged; board can't lie | Ryan | Open |
 | P1 | Lithium job tracker (day 0/1/2, deposit received, parts ordered) | Protect 2–3 day promise; 2 Li jobs 50+ days in HCP | Ryan | In progress |
 | P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open — master list in [sop_catalog.md](../04_operations/sop_catalog.md) |
-| P1 | **SOP Wave 1** — lanes, lithium tracker, driver P&D | Transferable OS; stop tribal knowledge | Ryan / Christine | **SOP-01 Live**; **SOP-05 Draft** — next SOP-04 |
+| P1 | **SOP Wave 1** — lanes, lithium tracker, driver P&D | Transferable OS; stop tribal knowledge | Ryan / Christine | **SOP-01 Live**; SOP-04 & SOP-05 **Draft** — next SOP-03 |
 | P2 | Deposit collection checklist for Christine | Batteries/motors/controllers | Christine | **Drafted as SOP-05** — pilot then mark Live |
+| P2 | Standardize "Professional Kit" quote template for Christine | Faster, consistent quotes | Christine | **Drafted as SOP-04** — pilot then mark Live |
 | P3 | Everlogic evaluation demo + migration plan | HCP is wrong tool for shop-only | Ryan | Open |
 | P3 | Location Profile + new-site checklist (SOP-90/91) | Second service area without reinventing process | Ryan | Open — template started |
 
@@ -28,8 +29,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P1 | Lithium conversion funnel — landing page / GBP posts / before-afters | ~$81k/yr dedicated line + more in Services | Ryan | Open |
 | P2 | Review $64k marketing spend ROI (QBO) | Largest expense after payroll | Ryan | Open |
 | P2 | HOA outreach — revive or kill the tracker | Sheet in Drive, status unknown | Ryan | Open |
-| P2 | Standardize "Professional Kit" quote template for Christine | Faster, consistent quotes | Christine | Open |
-| P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | Open |
+| P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | Open — covered in SOP-04 add-ons |
 | P3 | Fleet maintenance program — package for HOAs/commercial | Doc exists in Drive | Ryan | Open |
 | P3 | Prep cart sales playbook (bill of sale, deposits) for future launch | Strategic defer, but prep now | Ryan | Open |
 

@@ -99,8 +99,8 @@ Status: **Todo** · **Draft** · **Live** · **Needs refresh**
 | **SOP-01** | Phone & walk-in intake | Same questions every time; correct job type; no wrong promises | Wave 1 | **Live** — [sops/SOP-01_customer_intake.md](sops/SOP-01_customer_intake.md) |
 | **SOP-02** | Scheduling & capacity gate | Enforce WIP limits before booking drop-offs / lithium | Wave 1 | Todo |
 | **SOP-03** | Quote & estimate (repair) | $179 diagnostic rule; known-issue vs full diag; Christine script | Wave 1 | Todo |
-| **SOP-04** | Quote & estimate (Professional lithium) | SKU pick, add-ons, deposit $1,800, 2–3 day SLA language | Wave 1 | Todo |
-| **SOP-05** | Deposit collection & order release | Batteries/motors/controllers never ordered without deposit | Wave 1 | Todo |
+| **SOP-04** | Quote & estimate (Professional lithium) | SKU pick, add-ons, deposit $1,800, 2–3 day SLA language | Wave 1 | **Draft** — [sops/SOP-04_lithium_quote.md](sops/SOP-04_lithium_quote.md) |
+| **SOP-05** | Deposit collection & order release | Batteries/motors/controllers never ordered without deposit | Wave 1 | **Draft** — [sops/SOP-05_deposit_collection.md](sops/SOP-05_deposit_collection.md) |
 | **SOP-06** | Customer notification (status / ready / delay) | Text/email templates; no PII in shared sheets | Wave 2 | Todo |
 | **SOP-07** | Payment collection & closeout | Balance, methods, invoice send, HCP close | Wave 1 | Todo |
 | **SOP-08** | Complaint / comeback intake | Log, schedule, no free rework without Ryan rule | Wave 2 | Todo |
@@ -219,7 +219,7 @@ Ship in this order so Covington stops depending on memory:
 
 1. ~~**SOP-01** Intake~~ **Done** — [sops/SOP-01_customer_intake.md](sops/SOP-01_customer_intake.md)
 2. ~~**SOP-05** Deposit collection & order release~~ **Draft** — [sops/SOP-05_deposit_collection.md](sops/SOP-05_deposit_collection.md)
-3. **SOP-04** Lithium quote (Professional Kits only)  
+3. ~~**SOP-04** Lithium quote (Professional Kits only)~~ **Draft** — [sops/SOP-04_lithium_quote.md](sops/SOP-04_lithium_quote.md)
 4. **SOP-03** Repair quote / $179 diagnostic  
 5. **SOP-11** Job lane lifecycle  
 6. **SOP-10** Morning huddle  
