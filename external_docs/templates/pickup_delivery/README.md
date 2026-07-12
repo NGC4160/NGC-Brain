@@ -11,6 +11,25 @@ Single-page driver condition record for Roy (or any driver) when picking up and 
 
 Two-page layout gives Roy a full sheet for each leg of the trip. Print both pages back-to-back or staple together per job.
 
+## GitHub Pages
+
+**Live form:** https://ngc4160.github.io/NGC-Brain/docs/pickup-delivery-inspection.html
+
+Deploy updates:
+
+```bash
+./scripts/deploy_pickup_delivery_form_pages.sh
+```
+
+## Files
+
+| File | Use |
+|------|-----|
+| `NGC_Cart_Pickup_Delivery_Visual_Inspection_Form.html` | Editable source |
+| `NGC_Cart_Pickup_Delivery_Visual_Inspection_Form_RevI.pdf` | Print / HCP attachment |
+
+Regenerate PDF: `python3 scripts/generate_pickup_delivery_inspection_pdf.py` (requires `weasyprint`)
+
 ## Revision history
 
 | Rev | Change |
