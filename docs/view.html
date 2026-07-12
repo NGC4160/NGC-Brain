@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="ngc-base" content="./" />
+  <title>Document — NGC Command Center</title>
+  <link rel="stylesheet" href="assets/command.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body data-page="viewer">
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <div id="login-gate" class="login-gate hidden">
+    <div class="login-panel">
+      <img class="login-logo" src="assets/ngc-logo.png" alt="NGC" />
+      <h1>NGC Command Center</h1>
+      <form id="login-form">
+        <label for="login-user">Operator</label>
+        <select id="login-user"><option value="Ryan">Ryan</option><option value="Christine">Christine</option></select>
+        <label for="login-password">Access Code</label>
+        <input id="login-password" type="password" required />
+        <button type="submit">Initialize Session</button>
+        <p id="login-error" class="login-error"></p>
+      </form>
+    </div>
+  </div>
+
+  <header class="viewer-header">
+    <a href="index.html">← Command Center</a>
+    <div>
+      <strong id="doc-title">Loading…</strong>
+      <div class="path" id="doc-path"></div>
+    </div>
+    <button class="btn-ghost" id="logout-btn" type="button" style="margin-left:auto">Logout</button>
+  </header>
+
+  <div class="viewer-body">
+    <article class="markdown" id="markdown-content">
+      <p class="viewer-loading">Loading document…</p>
+    </article>
+  </div>
+
+  <script src="assets/auth-config.js"></script>
+  <script src="assets/auth.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    document.getElementById("logout-btn")?.addEventListener("click", () => window.NGCAuth?.logout());
+    window.onAuthSuccess = () => { if (typeof initViewer === "function") initViewer(); };
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.NGCAuth?.isAuthed() && typeof initViewer === "function") initViewer();
+    });
+  </script>
+</body>
+</html>

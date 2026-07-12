@@ -1,0 +1,804 @@
+{
+  "generated_at": "2026-07-12T23:12:33Z",
+  "repo": "NGC4160/NGC-Brain",
+  "branch": "main",
+  "site_url": "https://NGC4160.github.io/NGC-Brain/",
+  "total_items": 60,
+  "sections": [
+    {
+      "id": "start",
+      "title": "Start Here",
+      "icon": "\ud83d\ude80",
+      "description": "How to use the NGC Business Brain in Cursor.",
+      "items": [
+        {
+          "title": "Start Here",
+          "description": "Daily rhythm, quick prompts, and how to feed the AI.",
+          "path": "START_HERE.md",
+          "type": "markdown",
+          "view": "view.html?path=START_HERE.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/START_HERE.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/START_HERE.md",
+          "tags": [
+            "cursor",
+            "guide"
+          ]
+        },
+        {
+          "title": "Repository README",
+          "description": "Project overview on GitHub.",
+          "path": "README.md",
+          "type": "markdown",
+          "view": "view.html?path=README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/README.md",
+          "tags": [
+            "meta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "knowledge",
+      "title": "Knowledge Base",
+      "icon": "\ud83d\udcda",
+      "description": "Single source of truth for NGC operations, pricing, and policies.",
+      "items": [
+        {
+          "title": "Knowledge Index",
+          "description": "Map of all business brain files.",
+          "path": "knowledge/00_index.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/00_index.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/00_index.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/00_index.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Company Profile",
+          "description": "Identity, contact, hours, positioning.",
+          "path": "knowledge/01_company/profile.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/01_company/profile.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/01_company/profile.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/01_company/profile.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Lithium Conversions",
+          "description": "Professional Kits, warranty, deposits, turnaround.",
+          "path": "knowledge/02_products/lithium_conversions.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/02_products/lithium_conversions.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/02_products/lithium_conversions.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/02_products/lithium_conversions.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Shop Services",
+          "description": "Diagnostics, fees, pickup/delivery, deposits.",
+          "path": "knowledge/03_services/shop_services.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/03_services/shop_services.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/03_services/shop_services.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/03_services/shop_services.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Pricebook Reference",
+          "description": "Key HCP line items and categories.",
+          "path": "knowledge/03_services/pricebook_reference.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/03_services/pricebook_reference.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/03_services/pricebook_reference.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/03_services/pricebook_reference.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Shop Workflow",
+          "description": "How work flows through the shop.",
+          "path": "knowledge/04_operations/shop_workflow.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/04_operations/shop_workflow.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/04_operations/shop_workflow.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/04_operations/shop_workflow.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Shop Throughput",
+          "description": "WIP limits, daily rhythm, lithium SLA.",
+          "path": "knowledge/04_operations/shop_throughput.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/04_operations/shop_throughput.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/04_operations/shop_throughput.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/04_operations/shop_throughput.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Shop Whiteboard",
+          "description": "Physical board columns, cards, colors.",
+          "path": "knowledge/04_operations/shop_whiteboard_layout.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/04_operations/shop_whiteboard_layout.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/04_operations/shop_whiteboard_layout.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/04_operations/shop_whiteboard_layout.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Team Roles",
+          "description": "Roster and responsibilities.",
+          "path": "knowledge/05_team/roles.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/05_team/roles.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/05_team/roles.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/05_team/roles.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Personnel Counseling",
+          "description": "Procedure and form usage guide.",
+          "path": "knowledge/05_team/personnel_counseling.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/05_team/personnel_counseling.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/05_team/personnel_counseling.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/05_team/personnel_counseling.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Systems & Tools",
+          "description": "Housecall Pro, QuickBooks, future DMS.",
+          "path": "knowledge/06_systems/tools.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/06_systems/tools.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/06_systems/tools.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/06_systems/tools.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Market & Marketing",
+          "description": "Service area, customer types, channels.",
+          "path": "knowledge/07_customers_marketing/market.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/07_customers_marketing/market.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/07_customers_marketing/market.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/07_customers_marketing/market.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Finance Overview",
+          "description": "Income categories, COA, sales tax.",
+          "path": "knowledge/08_finance/overview.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/08_finance/overview.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/08_finance/overview.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/08_finance/overview.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Daily Ops Guide",
+          "description": "Operating rhythms and data to feed AI.",
+          "path": "knowledge/09_daily_ops/README.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/09_daily_ops/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/09_daily_ops/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/09_daily_ops/README.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Improvement Backlog",
+          "description": "Prioritized growth and ops projects.",
+          "path": "knowledge/09_daily_ops/improvement_backlog.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/09_daily_ops/improvement_backlog.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/09_daily_ops/improvement_backlog.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Decision Log",
+          "description": "Policy decisions with dates.",
+          "path": "knowledge/09_daily_ops/decision_log.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/09_daily_ops/decision_log.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/09_daily_ops/decision_log.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/09_daily_ops/decision_log.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Weekly Review Template",
+          "description": "Friday review checklist.",
+          "path": "knowledge/09_daily_ops/weekly_review_template.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/09_daily_ops/weekly_review_template.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/09_daily_ops/weekly_review_template.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/09_daily_ops/weekly_review_template.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Automation Architecture",
+          "description": "Connectors, MCP, hooks, roadmap.",
+          "path": "knowledge/10_automation/README.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/10_automation/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/README.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Integration Playbook",
+          "description": "Step-by-step MCP and connector setup.",
+          "path": "knowledge/10_automation/integration_playbook.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/10_automation/integration_playbook.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/integration_playbook.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/integration_playbook.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Automations Catalog",
+          "description": "Ideas and automation inventory.",
+          "path": "knowledge/10_automation/automations_catalog.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/10_automation/automations_catalog.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/automations_catalog.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/automations_catalog.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "HCP API Setup",
+          "description": "Housecall Pro MAX API sync guide.",
+          "path": "knowledge/10_automation/hcp_api_setup.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/10_automation/hcp_api_setup.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/hcp_api_setup.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/hcp_api_setup.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Admin Bot Spec",
+          "description": "Deposit alerts, review requests, webhooks.",
+          "path": "knowledge/10_automation/ngc_admin_bot_spec.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/10_automation/ngc_admin_bot_spec.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/ngc_admin_bot_spec.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/ngc_admin_bot_spec.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Legacy Pricebook Cleanup",
+          "description": "Deactivate mobile and NGC Conversion items.",
+          "path": "knowledge/10_automation/legacy_pricebook_cleanup.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/10_automation/legacy_pricebook_cleanup.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/10_automation/legacy_pricebook_cleanup.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/10_automation/legacy_pricebook_cleanup.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Legacy Mobile (Archive)",
+          "description": "Discontinued mobile items \u2014 do not quote.",
+          "path": "knowledge/archive/legacy_mobile.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/archive/legacy_mobile.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/archive/legacy_mobile.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/archive/legacy_mobile.md",
+          "tags": [
+            "knowledge"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prompts",
+      "title": "Cursor Prompts",
+      "icon": "\ud83d\udcac",
+      "description": "Copy-paste prompts for daily rhythms and common tasks.",
+      "items": [
+        {
+          "title": "Morning Briefing",
+          "description": "Start-of-day priorities and shop capacity.",
+          "path": "prompts/morning_briefing.md",
+          "type": "markdown",
+          "view": "view.html?path=prompts/morning_briefing.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/morning_briefing.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/morning_briefing.md",
+          "tags": [
+            "prompt",
+            "cursor"
+          ]
+        },
+        {
+          "title": "End of Day",
+          "description": "Recap, blockers, tomorrow prep.",
+          "path": "prompts/end_of_day.md",
+          "type": "markdown",
+          "view": "view.html?path=prompts/end_of_day.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/end_of_day.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/end_of_day.md",
+          "tags": [
+            "prompt",
+            "cursor"
+          ]
+        },
+        {
+          "title": "Weekly Review",
+          "description": "KPIs, marketing, ops review (Fridays).",
+          "path": "prompts/weekly_review.md",
+          "type": "markdown",
+          "view": "view.html?path=prompts/weekly_review.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/weekly_review.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/weekly_review.md",
+          "tags": [
+            "prompt",
+            "cursor"
+          ]
+        },
+        {
+          "title": "Monthly Refresh",
+          "description": "Export refresh and knowledge updates.",
+          "path": "prompts/monthly_refresh.md",
+          "type": "markdown",
+          "view": "view.html?path=prompts/monthly_refresh.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/monthly_refresh.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/monthly_refresh.md",
+          "tags": [
+            "prompt",
+            "cursor"
+          ]
+        },
+        {
+          "title": "Quotes & Customers",
+          "description": "Customer replies and quote assistance.",
+          "path": "prompts/quote_and_customer.md",
+          "type": "markdown",
+          "view": "view.html?path=prompts/quote_and_customer.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/quote_and_customer.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/quote_and_customer.md",
+          "tags": [
+            "prompt",
+            "cursor"
+          ]
+        },
+        {
+          "title": "Growth & Strategy",
+          "description": "Revenue and strategic planning prompts.",
+          "path": "prompts/growth_and_strategy.md",
+          "type": "markdown",
+          "view": "view.html?path=prompts/growth_and_strategy.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/prompts/growth_and_strategy.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/prompts/growth_and_strategy.md",
+          "tags": [
+            "prompt",
+            "cursor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "templates",
+      "title": "Templates & Forms",
+      "icon": "\ud83d\udccb",
+      "description": "Interactive and printable deliverables.",
+      "items": [
+        {
+          "title": "Personnel Counseling Form",
+          "description": "Branded fillable form \u2014 print or save as PDF.",
+          "path": "docs/templates/personnel-counseling.html",
+          "type": "html",
+          "view": "templates/personnel-counseling.html",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html",
+          "tags": [
+            "form",
+            "hr",
+            "interactive"
+          ]
+        },
+        {
+          "title": "Personnel Form README",
+          "description": "How to use and update the counseling template.",
+          "path": "external_docs/templates/personnel_counseling/README.md",
+          "type": "markdown",
+          "view": "view.html?path=external_docs/templates/personnel_counseling/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/templates/personnel_counseling/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/external_docs/templates/personnel_counseling/README.md",
+          "tags": [
+            "form",
+            "hr"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scripts",
+      "title": "Scripts & Automation",
+      "icon": "\u2699\ufe0f",
+      "description": "Sync, connectors, and admin bot tooling built in Cursor.",
+      "items": [
+        {
+          "title": "Run Ingest",
+          "description": "Sync HCP/QBO exports into knowledge manifest.",
+          "path": "scripts/sync/run_ingest.sh",
+          "type": "shell",
+          "view": "scripts/sync/run_ingest.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/run_ingest.sh",
+          "tags": [
+            "script",
+            "shell"
+          ]
+        },
+        {
+          "title": "Ingest Exports",
+          "description": "Parse pricebook and QBO exports.",
+          "path": "scripts/sync/ingest_exports.py",
+          "type": "python",
+          "view": "scripts/sync/ingest_exports.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/ingest_exports.py",
+          "tags": [
+            "script",
+            "python"
+          ]
+        },
+        {
+          "title": "HCP API Sync",
+          "description": "Pull live jobs and pricebook from HCP MAX.",
+          "path": "scripts/sync/sync_hcp_api.py",
+          "type": "python",
+          "view": "scripts/sync/sync_hcp_api.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/sync_hcp_api.py",
+          "tags": [
+            "script",
+            "python"
+          ]
+        },
+        {
+          "title": "Run HCP Sync",
+          "description": "Shell wrapper for HCP API sync.",
+          "path": "scripts/sync/run_hcp_sync.sh",
+          "type": "shell",
+          "view": "scripts/sync/run_hcp_sync.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/run_hcp_sync.sh",
+          "tags": [
+            "script",
+            "shell"
+          ]
+        },
+        {
+          "title": "Shop Board Generator",
+          "description": "Auto-generate shop board from HCP jobs.",
+          "path": "scripts/sync/generate_shop_board.py",
+          "type": "python",
+          "view": "scripts/sync/generate_shop_board.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/generate_shop_board.py",
+          "tags": [
+            "script",
+            "python"
+          ]
+        },
+        {
+          "title": "Run Shop Board",
+          "description": "Shell wrapper for shop board generation.",
+          "path": "scripts/sync/run_shop_board.sh",
+          "type": "shell",
+          "view": "scripts/sync/run_shop_board.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/sync/run_shop_board.sh",
+          "tags": [
+            "script",
+            "shell"
+          ]
+        },
+        {
+          "title": "HCP Client",
+          "description": "Housecall Pro API connector module.",
+          "path": "scripts/connectors/hcp_client.py",
+          "type": "python",
+          "view": "scripts/connectors/hcp_client.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/connectors/hcp_client.py",
+          "tags": [
+            "script",
+            "python"
+          ]
+        },
+        {
+          "title": "Deposit Gate Alerts",
+          "description": "Admin Bot Phase 1 \u2014 deposit notifications.",
+          "path": "scripts/admin_bot/deposit_gate_alerts.py",
+          "type": "python",
+          "view": "scripts/admin_bot/deposit_gate_alerts.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/admin_bot/deposit_gate_alerts.py",
+          "tags": [
+            "script",
+            "python"
+          ]
+        },
+        {
+          "title": "Legacy Pricebook Audit",
+          "description": "Find active mobile/NGC Conversion items.",
+          "path": "scripts/admin_bot/legacy_pricebook_audit.py",
+          "type": "python",
+          "view": "scripts/admin_bot/legacy_pricebook_audit.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/admin_bot/legacy_pricebook_audit.py",
+          "tags": [
+            "script",
+            "python"
+          ]
+        },
+        {
+          "title": "Run Deposit Alerts",
+          "description": "Shell wrapper for deposit alerts.",
+          "path": "scripts/admin_bot/run_deposit_alerts.sh",
+          "type": "shell",
+          "view": "scripts/admin_bot/run_deposit_alerts.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/admin_bot/run_deposit_alerts.sh",
+          "tags": [
+            "script",
+            "shell"
+          ]
+        },
+        {
+          "title": "Run Legacy Audit",
+          "description": "Shell wrapper for pricebook audit.",
+          "path": "scripts/admin_bot/run_legacy_audit.sh",
+          "type": "shell",
+          "view": "scripts/admin_bot/run_legacy_audit.sh",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/admin_bot/run_legacy_audit.sh",
+          "tags": [
+            "script",
+            "shell"
+          ]
+        },
+        {
+          "title": "Generate Counseling DOCX",
+          "description": "Build Word version of HR form.",
+          "path": "scripts/generate_personnel_counseling_docx.py",
+          "type": "python",
+          "view": "scripts/generate_personnel_counseling_docx.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/generate_personnel_counseling_docx.py",
+          "tags": [
+            "script",
+            "python"
+          ]
+        },
+        {
+          "title": "Pages Manifest Builder",
+          "description": "Regenerate GitHub Pages deliverables index.",
+          "path": "scripts/build_pages_manifest.py",
+          "type": "python",
+          "view": "scripts/build_pages_manifest.py",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/scripts/build_pages_manifest.py",
+          "tags": [
+            "script",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "title": "Cursor Skills",
+      "icon": "\ud83c\udfaf",
+      "description": "Specialized AI skills for recurring NGC workflows.",
+      "items": [
+        {
+          "title": "HCP API Skill",
+          "description": "Sync live HCP data, jobs summary, pricebook compare.",
+          "path": ".cursor/skills/ngc-hcp-api/SKILL.md",
+          "type": "markdown",
+          "view": "view.html?path=.cursor/skills/ngc-hcp-api/SKILL.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/skills/ngc-hcp-api/SKILL.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/.cursor/skills/ngc-hcp-api/SKILL.md",
+          "tags": [
+            "skill",
+            "cursor"
+          ]
+        },
+        {
+          "title": "Morning Briefing Skill",
+          "description": "Run the service manager morning briefing.",
+          "path": ".cursor/skills/ngc-morning-briefing/SKILL.md",
+          "type": "markdown",
+          "view": "view.html?path=.cursor/skills/ngc-morning-briefing/SKILL.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/skills/ngc-morning-briefing/SKILL.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/.cursor/skills/ngc-morning-briefing/SKILL.md",
+          "tags": [
+            "skill",
+            "cursor"
+          ]
+        },
+        {
+          "title": "Sync Exports Skill",
+          "description": "Refresh exports and detect pricebook drift.",
+          "path": ".cursor/skills/ngc-sync-exports/SKILL.md",
+          "type": "markdown",
+          "view": "view.html?path=.cursor/skills/ngc-sync-exports/SKILL.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/skills/ngc-sync-exports/SKILL.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/.cursor/skills/ngc-sync-exports/SKILL.md",
+          "tags": [
+            "skill",
+            "cursor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cursor-config",
+      "title": "Cursor Configuration",
+      "icon": "\ud83d\udd27",
+      "description": "Rules, hooks, and MCP templates that power the brain.",
+      "items": [
+        {
+          "title": "Business Brain Rules",
+          "description": "Core AI rules \u2014 shop-only, lithium, pricing authority.",
+          "path": ".cursor/rules/ngc-business-brain.mdc",
+          "type": "config",
+          "view": ".cursor/rules/ngc-business-brain.mdc",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/rules/ngc-business-brain.mdc",
+          "tags": [
+            "cursor",
+            "rules"
+          ]
+        },
+        {
+          "title": "Daily Operator Rules",
+          "description": "Chief-of-staff behavior, backlog ties, proactive offers.",
+          "path": ".cursor/rules/ngc-daily-operator.mdc",
+          "type": "config",
+          "view": ".cursor/rules/ngc-daily-operator.mdc",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/rules/ngc-daily-operator.mdc",
+          "tags": [
+            "cursor",
+            "rules"
+          ]
+        },
+        {
+          "title": "MCP Config Example",
+          "description": "Template for QuickBooks and other MCP connectors.",
+          "path": ".cursor/mcp.json.example",
+          "type": "config",
+          "view": ".cursor/mcp.json.example",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/mcp.json.example",
+          "tags": [
+            "cursor",
+            "mcp"
+          ]
+        },
+        {
+          "title": "Session Hooks",
+          "description": "Auto-sync exports on session start and file changes.",
+          "path": ".cursor/hooks.json",
+          "type": "config",
+          "view": ".cursor/hooks.json",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.cursor/hooks.json",
+          "tags": [
+            "cursor",
+            "hooks"
+          ]
+        },
+        {
+          "title": "Environment Example",
+          "description": "Required API keys and env vars (no secrets).",
+          "path": ".env.example",
+          "type": "config",
+          "view": ".env.example",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/.env.example",
+          "tags": [
+            "config"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exports",
+      "title": "Data Exports",
+      "icon": "\ud83d\udcca",
+      "description": "HCP pricebook and QuickBooks exports (refresh monthly).",
+      "items": [
+        {
+          "title": "HCP Pricebook Export",
+          "description": "282-item Housecall Pro pricebook CSV.",
+          "path": "external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
+          "type": "data",
+          "view": "external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
+          "tags": [
+            "export",
+            "data"
+          ]
+        },
+        {
+          "title": "Chart of Accounts",
+          "description": "QuickBooks COA export.",
+          "path": "external_docs/exports/qbo/chart_of_accounts.xlsx",
+          "type": "data",
+          "view": "external_docs/exports/qbo/chart_of_accounts.xlsx",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/qbo/chart_of_accounts.xlsx",
+          "tags": [
+            "export",
+            "data"
+          ]
+        },
+        {
+          "title": "P&L (12 months)",
+          "description": "QuickBooks profit and loss.",
+          "path": "external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
+          "type": "data",
+          "view": "external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
+          "tags": [
+            "export",
+            "data"
+          ]
+        },
+        {
+          "title": "Balance Sheet",
+          "description": "Current QuickBooks balance sheet.",
+          "path": "external_docs/exports/qbo/balance_sheet_current.xlsx",
+          "type": "data",
+          "view": "external_docs/exports/qbo/balance_sheet_current.xlsx",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/qbo/balance_sheet_current.xlsx",
+          "tags": [
+            "export",
+            "data"
+          ]
+        },
+        {
+          "title": "QBO Products & Services",
+          "description": "QuickBooks product/service list.",
+          "path": "external_docs/exports/qbo/products_and_services.xlsx",
+          "type": "data",
+          "view": "external_docs/exports/qbo/products_and_services.xlsx",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/exports/qbo/products_and_services.xlsx",
+          "tags": [
+            "export",
+            "data"
+          ]
+        }
+      ]
+    }
+  ]
+}

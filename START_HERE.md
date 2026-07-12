@@ -2,6 +2,8 @@
 
 Open this project in **Cursor** and chat with the AI to run and improve Neighborhood Golf Carts daily.
 
+**NGC Command Center:** [ngc4160.github.io/NGC-Brain](https://ngc4160.github.io/NGC-Brain/) — owners-only hub for live ops, systems, and everything being built. Setup: [`docs/COMMAND_CENTER.md`](docs/COMMAND_CENTER.md)
+
 ## Quick start (60 seconds)
 
 1. Open **Cursor** → open this folder as your workspace
