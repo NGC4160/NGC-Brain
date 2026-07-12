@@ -1,6 +1,6 @@
 # Shop Board (auto-generated)
 
-**Generated:** 2026-07-12 23:12 UTC  
+**Generated:** 2026-07-12 23:18 UTC  
 **HCP jobs export:** 2026-06-28T23:40:51.293876+00:00  
 **Privacy:** No customer names or addresses.
 
@@ -68,8 +68,8 @@
 - #17328 · General - 1.0 - Golf Cart Diagnostic & Inspection · 22d ($ due)
 - #17326 · General - 1.0 - Golf Cart Diagnostic & Inspection · 23d ($ due)
 - #17323 · General - 1.0 - Golf Cart Diagnostic & Inspection · 27d ($ due)
-- #17312-6 · General - 0.5- Fleet Inspection · 29d ($ due)
-- #17312-5 · General - 0.5- Fleet Inspection · 29d ($ due)
+- #17312-6 · General - 0.5- Fleet Inspection · 30d ($ due)
+- #17312-5 · General - 0.5- Fleet Inspection · 30d ($ due)
 - #17312-2 · General - 0.5- Fleet Inspection · 30d ($ due)
 - #17317 · General - 1.0 - Golf Cart Diagnostic & Inspection · 32d ($ due)
 - #17312-1 · General - 0.5- Fleet Inspection · 33d ($ due)
