@@ -6,7 +6,6 @@
   <style>
     :root {
       --ngc-blue: #1a4d7a;
-      --ngc-blue-light: #2d6ba3;
       --ngc-green: #6faa2d;
       --border: #b8c9d9;
       --text: #1a1a1a;
@@ -33,43 +32,9 @@
 
     .page {
       width: 100%;
-      min-height: 10.44in;
+      height: 10.44in;
       display: flex;
       flex-direction: column;
-      page-break-after: always;
-    }
-
-    .page:last-child {
-      page-break-after: auto;
-    }
-
-    .page-sheet {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      padding: 4px 6px;
-      min-height: 9.8in;
-    }
-
-    .page-sheet.pickup {
-      background: var(--pickup-bg);
-      border: 2px solid var(--ngc-blue);
-      border-radius: 4px;
-    }
-
-    .page-sheet.dropoff {
-      background: var(--dropoff-bg);
-      border: 2px solid var(--ngc-green);
-      border-radius: 4px;
-    }
-
-    .page-num {
-      text-align: right;
-      font-size: 6pt;
-      color: var(--muted);
-      margin-top: 2px;
-      flex-shrink: 0;
     }
 
     .page-header {
@@ -92,7 +57,6 @@
       font-size: 7.5pt;
       font-weight: 700;
       color: var(--ngc-blue);
-      margin-top: 0;
     }
 
     .page-header .sub {
@@ -102,22 +66,38 @@
     }
 
     .half {
-      flex: 1;
+      flex: 0 0 4.95in;
+      height: 4.95in;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      padding: 0;
-      min-height: 0;
+      padding: 2px 3px;
     }
 
-    .half.pickup,
+    .half.pickup {
+      background: var(--pickup-bg);
+      border: 1.5px solid var(--ngc-blue);
+      border-radius: 3px 3px 0 0;
+    }
+
     .half.dropoff {
-      background: transparent;
-      border: none;
-      border-radius: 0;
+      background: var(--dropoff-bg);
+      border: 1.5px solid var(--ngc-green);
+      border-top: none;
+      border-radius: 0 0 3px 3px;
     }
 
-    .divider { display: none; }
+    .divider {
+      flex: 0 0 auto;
+      text-align: center;
+      font-size: 5pt;
+      color: #888;
+      border-top: 1px dashed #999;
+      border-bottom: 1px dashed #999;
+      padding: 1px 0;
+      background: #fff;
+      letter-spacing: 0.06em;
+    }
 
     .section-banner {
       font-size: 7pt;
@@ -147,10 +127,7 @@
       white-space: nowrap;
     }
 
-    .field label {
-      font-weight: 600;
-      color: var(--muted);
-    }
+    .field label { font-weight: 600; color: var(--muted); }
 
     .field .line {
       flex: 1;
@@ -166,7 +143,7 @@
       font-weight: 700;
       color: var(--ngc-blue);
       text-transform: uppercase;
-      margin: 1px 0 1px;
+      margin: 1px 0;
       letter-spacing: 0.02em;
     }
 
@@ -204,10 +181,7 @@
       vertical-align: middle;
     }
 
-    .cb-col {
-      width: 22px;
-      text-align: center;
-    }
+    .cb-col { width: 22px; text-align: center; }
 
     .two-col-tables {
       display: grid;
@@ -217,9 +191,9 @@
 
     .notes-box {
       border: 1px solid var(--border);
-      min-height: 48px;
-      padding: 2px 4px;
-      margin-bottom: 4px;
+      min-height: 18px;
+      padding: 1px 3px;
+      margin-bottom: 2px;
       background: #fff;
       flex-shrink: 0;
     }
@@ -233,7 +207,7 @@
     }
 
     .notes-lines {
-      height: 40px;
+      height: 12px;
       background: repeating-linear-gradient(
         transparent,
         transparent 5px,
@@ -253,7 +227,7 @@
     }
 
     .sig-row.wide {
-      grid-template-columns: 1.6fr 0.8fr 1.6fr 0.9fr;
+      grid-template-columns: 1.6fr 0.8fr 1.6fr;
     }
 
     .sig {
@@ -277,15 +251,13 @@
   </style>
 </head>
 <body>
-  <!-- PAGE 1: PICKUP -->
   <div class="page">
     <div class="page-header">
       <div class="company">NEIGHBORHOOD GOLF CARTS</div>
       <div class="doc-title">CART PICKUP / DELIVERY VISUAL INSPECTION FORM</div>
-      <div class="sub">Page 1 of 2 — Pickup before loading</div>
+      <div class="sub">One-page driver condition record — top: pickup before loading · bottom: drop-off at final return</div>
     </div>
 
-    <div class="page-sheet pickup">
     <div class="half pickup">
       <div class="section-banner">Pickup — Before Loading</div>
 
@@ -363,19 +335,9 @@
         <div class="sig"><label>Date/Time:</label><span class="line"></span></div>
       </div>
     </div>
-    </div>
-    <div class="page-num">Page 1 of 2 — Pickup</div>
-  </div>
 
-  <!-- PAGE 2: DROP-OFF -->
-  <div class="page">
-    <div class="page-header">
-      <div class="company">NEIGHBORHOOD GOLF CARTS</div>
-      <div class="doc-title">CART PICKUP / DELIVERY VISUAL INSPECTION FORM</div>
-      <div class="sub">Page 2 of 2 — Drop-off at final return</div>
-    </div>
+    <div class="divider">— FOLD / CUT HERE — DROP-OFF SECTION BELOW —</div>
 
-    <div class="page-sheet dropoff">
     <div class="half dropoff">
       <div class="section-banner">Drop-Off — Final Return</div>
 
@@ -459,8 +421,6 @@
         </div>
       </div>
     </div>
-    </div>
-    <div class="page-num">Page 2 of 2 — Drop-Off</div>
   </div>
 </body>
 </html>

@@ -4,12 +4,14 @@ Single-page driver condition record for Roy (or any driver) when picking up and 
 
 ## Layout (Rev I)
 
-| Page | Section | Purpose |
-|------|---------|---------|
-| **Page 1** | Pickup — Before Loading | Photos, checklist, notes, and signature **before loading** |
-| **Page 2** | Drop-Off — Final Return | Photos, checklist, notes, and signatures **at final return** |
+Single letter-size page:
 
-Two-page layout gives Roy a full sheet for each leg of the trip. Print both pages back-to-back or staple together per job.
+| Section | Position | Purpose |
+|---------|----------|---------|
+| **Pickup** | Top half | Photos, checklist, notes, and signature **before loading** |
+| **Drop-off** | Bottom half | Photos, checklist, notes, and signatures **at final return** |
+
+Dashed fold/cut line between halves.
 
 ## GitHub Pages
 
@@ -35,4 +37,4 @@ Regenerate PDF: `python3 scripts/generate_pickup_delivery_inspection_pdf.py` (re
 | Rev | Change |
 |-----|--------|
 | H | Side-by-side Before / Return columns on one flow |
-| I | Split workflow — Page 1 pickup, Page 2 drop-off |
+| I | Single page — pickup top half, drop-off bottom half |
