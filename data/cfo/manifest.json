@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-07-12T14:40:46.848Z",
+  "packCount": 4,
+  "metricCount": 30,
+  "scanDirs": [
+    "external_docs/exports/qbo",
+    "external_docs/exports/cfo",
+    "data/cfo-packs"
+  ],
+  "packs": [
+    {
+      "id": "balance-sheet-current",
+      "title": "Balance Sheet",
+      "kind": "balance_sheet",
+      "periodLabel": "As of Jun 28, 2026",
+      "sourceFile": "balance_sheet_current.xlsx",
+      "file": "balance-sheet-current.json",
+      "asOf": "As of Jun 28, 2026",
+      "metricCount": 10,
+      "generatedAt": "2026-07-12T14:40:46.808Z"
+    },
+    {
+      "id": "chart-of-accounts",
+      "title": "Account List",
+      "kind": "chart_of_accounts",
+      "periodLabel": "Account List",
+      "sourceFile": "chart_of_accounts.xlsx",
+      "file": "chart-of-accounts.json",
+      "asOf": "Account List",
+      "metricCount": 5,
+      "generatedAt": "2026-07-12T14:40:46.818Z"
+    },
+    {
+      "id": "products-and-services",
+      "title": "Product/Service List",
+      "kind": "products_and_services",
+      "periodLabel": "Product/Service List",
+      "sourceFile": "products_and_services.xlsx",
+      "file": "products-and-services.json",
+      "asOf": "Product/Service List",
+      "metricCount": 5,
+      "generatedAt": "2026-07-12T14:40:46.843Z"
+    },
+    {
+      "id": "profit-and-loss-last-12-months",
+      "title": "Profit and Loss",
+      "kind": "profit_and_loss",
+      "periodLabel": "June 28, 2025-June 28, 2026",
+      "sourceFile": "profit_and_loss_last_12_months.xlsx",
+      "file": "profit-and-loss-last-12-months.json",
+      "asOf": "June 28, 2025-June 28, 2026",
+      "metricCount": 10,
+      "generatedAt": "2026-07-12T14:40:46.847Z"
+    }
+  ]
+}

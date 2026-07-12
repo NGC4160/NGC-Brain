@@ -1,0 +1,253 @@
+{
+  "id": "balance-sheet-current",
+  "title": "Balance Sheet",
+  "kind": "balance_sheet",
+  "periodLabel": "As of Jun 28, 2026",
+  "sourceFile": "balance_sheet_current.xlsx",
+  "sourcePath": "external_docs/exports/qbo/balance_sheet_current.xlsx",
+  "asOf": "As of Jun 28, 2026",
+  "generatedAt": "2026-07-12T14:40:46.808Z",
+  "metricCount": 10,
+  "metrics": [
+    {
+      "id": "cfo-bs-cash",
+      "name": "Bank / Cash Total",
+      "value": 6736.37,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 15000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Sum of bank accounts",
+      "description": "Total bank accounts as of As of Jun 28, 2026.",
+      "formula": "QBO Balance Sheet → Total for Bank Accounts",
+      "historicalContext": "Liquidity for payroll, parts, and deposits.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-bs-ar",
+      "name": "Accounts Receivable (QBO)",
+      "value": 0,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 5000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "QBO A/R balance",
+      "description": "Accounts receivable as of As of Jun 28, 2026.",
+      "formula": "QBO Balance Sheet → Accounts Receivable",
+      "historicalContext": "May differ from HCP AR cache — QBO is books SoR.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-bs-inventory",
+      "name": "Inventory Asset",
+      "value": 19705.73,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 20000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Inventory on the books",
+      "description": "Inventory asset as of As of Jun 28, 2026.",
+      "formula": "QBO Balance Sheet → Inventory Asset",
+      "historicalContext": "Bridge to future inventory module.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-bs-current-assets",
+      "name": "Current Assets",
+      "value": 35769.14,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 40000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Total current assets",
+      "description": "Current assets as of As of Jun 28, 2026.",
+      "formula": "QBO Balance Sheet → Total for Current Assets",
+      "historicalContext": "Short-term financial strength.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-bs-liabilities",
+      "name": "Total Liabilities",
+      "value": 21430.52,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 20000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "All liabilities",
+      "description": "Total liabilities as of As of Jun 28, 2026.",
+      "formula": "QBO Balance Sheet → Total for Liabilities",
+      "historicalContext": "Includes tax payables and financing.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-bs-equity",
+      "name": "Owner's Equity Total",
+      "value": 14338.62,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 20000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Total equity",
+      "description": "Total equity as of As of Jun 28, 2026.",
+      "formula": "QBO Balance Sheet → Total for Equity",
+      "historicalContext": "Includes draws, equity, retained earnings, net income.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-bs-asset-liability-ratio",
+      "name": "Assets / Liabilities",
+      "value": 1.67,
+      "format": "decimal",
+      "unit": "x",
+      "direction": "higher-better",
+      "defaultTarget": 1.5,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Coverage of liabilities by assets",
+      "description": "Total assets divided by total liabilities.",
+      "formula": "Total Assets / Total Liabilities",
+      "historicalContext": ">1 means assets cover liabilities.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-bs-stripe-loan",
+      "name": "Stripe Capital Balance",
+      "value": 0,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 10000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Outstanding Stripe Capital loan",
+      "description": "Stripe Capital (via Housecall Pro) loan balance.",
+      "formula": "QBO Balance Sheet → Stripe Capital loan line",
+      "historicalContext": "Financing drag — pay down as cash allows.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-bs-undeposited",
+      "name": "Undeposited Funds",
+      "value": 3089.04,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 2000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Cash waiting to hit the bank",
+      "description": "Undeposited funds balance.",
+      "formula": "QBO Balance Sheet → Undeposited Funds",
+      "historicalContext": "Clear deposits promptly for accurate cash.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-bs-ytd-net-income",
+      "name": "BS Net Income (YTD)",
+      "value": 45748.89,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 40000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Net income on the balance sheet",
+      "description": "Net income line on equity section as of As of Jun 28, 2026.",
+      "formula": "QBO Balance Sheet → Net Income (equity)",
+      "historicalContext": "May differ from TTM P&L depending on period cut.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    }
+  ]
+}

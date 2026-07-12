@@ -1,0 +1,133 @@
+{
+  "id": "chart-of-accounts",
+  "title": "Account List",
+  "kind": "chart_of_accounts",
+  "periodLabel": "Account List",
+  "sourceFile": "chart_of_accounts.xlsx",
+  "sourcePath": "external_docs/exports/qbo/chart_of_accounts.xlsx",
+  "asOf": "Account List",
+  "generatedAt": "2026-07-12T14:40:46.818Z",
+  "metricCount": 5,
+  "metrics": [
+    {
+      "id": "cfo-coa-account-count",
+      "name": "Chart of Accounts Size",
+      "value": 150,
+      "format": "number",
+      "unit": "accounts",
+      "direction": "higher-better",
+      "defaultTarget": 150,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Active QBO accounts in pack",
+      "description": "Count of accounts on the Account List export.",
+      "formula": "COUNT(chart_of_accounts rows)",
+      "historicalContext": "Structural complexity of the books.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-coa-bank-balance",
+      "name": "COA Bank Balances",
+      "value": 6736.37,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 15000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Sum of Bank-type account balances",
+      "description": "Sum of balances where Type = Bank.",
+      "formula": "SUM(balance WHERE type=Bank)",
+      "historicalContext": "Cross-check vs Balance Sheet bank total.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-coa-ar-balance",
+      "name": "COA A/R Balance",
+      "value": 1706.98,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 5000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "A/R accounts total from COA",
+      "description": "Sum of Accounts receivable type balances.",
+      "formula": "SUM(balance WHERE type includes receivable)",
+      "historicalContext": "COA export may show open A/R even when BS snapshot differs.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-coa-ap-balance",
+      "name": "COA A/P Balance",
+      "value": 1045,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 5000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Accounts payable from COA",
+      "description": "Absolute sum of payable-type balances.",
+      "formula": "SUM(|balance| WHERE type includes payable)",
+      "historicalContext": "Vendor obligations.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-coa-type-count",
+      "name": "Account Types in Use",
+      "value": 13,
+      "format": "number",
+      "unit": "types",
+      "direction": "higher-better",
+      "defaultTarget": 13,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Distinct account types",
+      "description": "Number of distinct QBO account types present.",
+      "formula": "COUNT(DISTINCT type)",
+      "historicalContext": "Useful when reviewing chart hygiene with the bookkeeper.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    }
+  ]
+}

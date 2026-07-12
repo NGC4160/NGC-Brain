@@ -1,0 +1,253 @@
+{
+  "id": "profit-and-loss-last-12-months",
+  "title": "Profit and Loss",
+  "kind": "profit_and_loss",
+  "periodLabel": "June 28, 2025-June 28, 2026",
+  "sourceFile": "profit_and_loss_last_12_months.xlsx",
+  "sourcePath": "external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
+  "asOf": "June 28, 2025-June 28, 2026",
+  "generatedAt": "2026-07-12T14:40:46.847Z",
+  "metricCount": 10,
+  "metrics": [
+    {
+      "id": "cfo-pnl-total-income",
+      "name": "Total Income (QBO)",
+      "value": 554509.1,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 600000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "P&L total income from CFO pack",
+      "description": "Total income for June 28, 2025-June 28, 2026.",
+      "formula": "QBO Profit & Loss → Total for Income",
+      "historicalContext": "Cash-basis QBO export — Griffin & Furman SoR.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-pnl-gross-profit",
+      "name": "Gross Profit (QBO)",
+      "value": 371918.02,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 400000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Income minus COGS",
+      "description": "Gross profit for June 28, 2025-June 28, 2026.",
+      "formula": "QBO P&L → Gross Profit",
+      "historicalContext": "Watch COGS / job supplies when lithium volume rises.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-pnl-gross-margin",
+      "name": "Gross Margin %",
+      "value": 67.07,
+      "format": "percent",
+      "unit": "%",
+      "direction": "higher-better",
+      "defaultTarget": 65,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Gross profit ÷ income",
+      "description": "Gross margin percentage from the P&L pack.",
+      "formula": "Gross Profit / Total Income × 100",
+      "historicalContext": "Target healthy service margins after parts.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-pnl-noi",
+      "name": "Net Operating Income",
+      "value": 27278.39,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 50000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Operating profit after expenses",
+      "description": "Net operating income for June 28, 2025-June 28, 2026.",
+      "formula": "QBO P&L → Net Operating Income",
+      "historicalContext": "Primary operating profitability signal for Ryan/Christine.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-pnl-net-income",
+      "name": "Net Income (QBO)",
+      "value": 31807.02,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 50000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Bottom-line net income",
+      "description": "Net income for June 28, 2025-June 28, 2026.",
+      "formula": "QBO P&L → Net Income",
+      "historicalContext": "Includes other income/expense; cash basis.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-pnl-lfp-revenue",
+      "name": "LFP / Lithium Revenue",
+      "value": 81026.21,
+      "format": "currency",
+      "unit": "$",
+      "direction": "higher-better",
+      "defaultTarget": 100000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Lithium conversion income line",
+      "description": "LFP Conversions Only from P&L.",
+      "formula": "QBO P&L → LFP Conversions Only",
+      "historicalContext": "Pairs with $1,800 lithium deposit gates.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-pnl-payroll",
+      "name": "Payroll Expenses",
+      "value": 139430.66,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 150000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Total payroll from P&L",
+      "description": "Total payroll expenses including wages and taxes.",
+      "formula": "QBO P&L → Total for Payroll Expenses",
+      "historicalContext": "Largest expense block — track vs revenue.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-pnl-marketing",
+      "name": "Advertising & Marketing",
+      "value": 63845.77,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 50000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Marketing spend from P&L",
+      "description": "Advertising & marketing total.",
+      "formula": "QBO P&L → Advertising & Marketing",
+      "historicalContext": "Compare to new-job intake volume on the ops side.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-pnl-fuel",
+      "name": "Fuel Expense",
+      "value": 11254.99,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 10000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Vehicle fuel from P&L",
+      "description": "Fuel line under automobile expense.",
+      "formula": "QBO P&L → Fuel",
+      "historicalContext": "Driver / mobile trip cost signal.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    },
+    {
+      "id": "cfo-pnl-expenses",
+      "name": "Total Operating Expenses",
+      "value": 344639.63,
+      "format": "currency",
+      "unit": "$",
+      "direction": "lower-better",
+      "defaultTarget": 350000,
+      "defaultThresholds": {
+        "greenAt": 100,
+        "yellowAt": 80
+      },
+      "shortDescription": "Total expenses from P&L",
+      "description": "Total for Expenses for June 28, 2025-June 28, 2026.",
+      "formula": "QBO P&L → Total for Expenses",
+      "historicalContext": "OpEx control for executive review.",
+      "category": "cfo",
+      "accessRoles": [
+        "owner",
+        "service-manager",
+        "front-desk"
+      ],
+      "source": "cfo-pack"
+    }
+  ]
+}
