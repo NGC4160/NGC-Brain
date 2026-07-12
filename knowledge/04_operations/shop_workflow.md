@@ -72,6 +72,11 @@ Historical mobile SOPs referenced Housecall Pro photos, checklists, and NGC stic
 - Parts used / ordered
 - Customer-facing summary of work performed
 
+## SOP program
+
+Full list of SOPs to create (intake, shop lanes, tech, lithium, driver, multi-site): **[sop_catalog.md](sop_catalog.md)**.  
+Per-location variables for a second shop: **[../01_company/location_profile_template.md](../01_company/location_profile_template.md)**.
+
 ## Internal reference documents
 
 | Document | Location |
