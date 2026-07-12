@@ -148,6 +148,71 @@ async function initHub() {
   }
 }
 
+function resolveDocPath(fromPath, href) {
+  if (!href || href.startsWith('#') || href.startsWith('mailto:') || /^https?:\/\//i.test(href)) {
+    return null;
+  }
+  if (href.startsWith('view.html')) return href;
+
+  const [pathPart, hash] = href.split('#');
+  const path = pathPart.split('?')[0];
+  if (!path.endsWith('.md') && !path.endsWith('.mdc')) return null;
+
+  const fromDir = fromPath.includes('/') ? fromPath.slice(0, fromPath.lastIndexOf('/') + 1) : '';
+  const parts = (fromDir + path).split('/');
+  const resolved = [];
+  for (const part of parts) {
+    if (!part || part === '.') continue;
+    if (part === '..') {
+      if (resolved.length) resolved.pop();
+    } else {
+      resolved.push(part);
+    }
+  }
+  const target = `view.html?path=${resolved.join('/')}`;
+  return hash ? `${target}#${hash}` : target;
+}
+
+function enhanceRenderedMarkdown(html, docPath) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  doc.querySelectorAll('a[href]').forEach((a) => {
+    const href = a.getAttribute('href');
+    const resolved = resolveDocPath(docPath, href);
+    if (resolved) {
+      a.setAttribute('href', `${BASE}${resolved}`);
+      return;
+    }
+    if (href && /github\.com\/[^/]+\/[^/]+\/blob\//.test(href)) {
+      const match = href.match(/\/blob\/[^/]+\/(.+?)(?:#|$)/);
+      if (match && (match[1].endsWith('.md') || match[1].endsWith('.mdc'))) {
+        a.setAttribute('href', `${BASE}view.html?path=${decodeURIComponent(match[1])}`);
+      }
+    }
+  });
+  return doc.body.innerHTML;
+}
+
+async function fetchDocument(path, manifest) {
+  const urls = [];
+  if (path.startsWith('live/')) {
+    urls.push(`${BASE}${path}`);
+  } else {
+    urls.push(`${BASE}content/${path}`);
+    urls.push(`https://raw.githubusercontent.com/${manifest.repo}/${manifest.branch}/${path}`);
+  }
+  let lastError = null;
+  for (const url of urls) {
+    try {
+      const res = await fetch(url);
+      if (res.ok) return await res.text();
+      lastError = new Error(`HTTP ${res.status} for ${url}`);
+    } catch (err) {
+      lastError = err;
+    }
+  }
+  throw lastError || new Error(`Could not load ${path}`);
+}
+
 async function initViewer() {
   const params = new URLSearchParams(window.location.search);
   const path = params.get('path');
@@ -161,31 +226,21 @@ async function initViewer() {
   pathEl.textContent = path;
 
   try {
-    let fetchUrl = `${BASE}${path}`;
+    const manifest = await loadManifest();
     let title = path.split('/').pop();
-
-    if (!path.startsWith('live/')) {
-      const manifest = await loadManifest();
-      fetchUrl = `https://raw.githubusercontent.com/${manifest.repo}/${manifest.branch}/${path}`;
-      for (const section of manifest.sections) {
-        const match = section.items.find((i) => i.path === path);
-        if (match?.raw) {
-          fetchUrl = match.raw;
-          if (match.title) title = match.title;
-          break;
-        }
-      }
+    for (const section of manifest.sections) {
+      const match = section.items.find((i) => i.path === path);
+      if (match?.title) title = match.title;
     }
 
     titleEl.textContent = title;
-    const res = await fetch(fetchUrl);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const text = await res.text();
+    const text = await fetchDocument(path, manifest);
 
     if (path.endsWith('.json')) {
       contentEl.innerHTML = `<pre><code>${escapeHtml(JSON.stringify(JSON.parse(text), null, 2))}</code></pre>`;
     } else if (typeof marked !== 'undefined') {
-      contentEl.innerHTML = marked.parse(text, { gfm: true, breaks: false });
+      const html = marked.parse(text, { gfm: true, breaks: false });
+      contentEl.innerHTML = enhanceRenderedMarkdown(html, path);
     } else {
       contentEl.innerHTML = `<pre>${escapeHtml(text)}</pre>`;
     }

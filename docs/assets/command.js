@@ -120,14 +120,17 @@ function renderZones(zones, pipeline) {
         <div class="zone-cards">
           ${zone.cards
             .map(
-              (card) => `
-            <a class="zone-card ${card.primary ? "primary" : ""}" href="${card.href}" ${card.external ? 'target="_blank" rel="noopener"' : ""}>
+              (card) => {
+                const isExternal = card.external || /^https?:\/\//i.test(card.href || "");
+                return `
+            <a class="zone-card ${card.primary ? "primary" : ""}" href="${card.href}" ${isExternal ? 'target="_blank" rel="noopener"' : ""}>
               <h3>
                 ${escapeHtml(card.title)}
                 ${card.badge ? `<span class="badge ${card.badge.includes("Sync") ? "warn" : ""}">${escapeHtml(card.badge)}</span>` : ""}
               </h3>
               <p>${escapeHtml(card.desc)}</p>
-            </a>`
+            </a>`;
+              }
             )
             .join("")}
         </div>

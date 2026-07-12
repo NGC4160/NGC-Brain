@@ -7,6 +7,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -252,7 +253,7 @@ def build_app_links() -> list[dict]:
         ("Settings", "App configuration", "../settings/"),
     ]
     return [
-        {"title": title, "desc": desc, "href": href, "external": True, "primary": i == 0}
+        {"title": title, "desc": desc, "href": href, "primary": i == 0}
         for i, (title, desc, href) in enumerate(apps)
     ]
 
@@ -374,6 +375,67 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict]) -> list[dict]:
     ]
 
 
+def bundle_static_content(manifest: dict) -> int:
+    """Copy viewable docs into docs/content/ so the viewer loads from Pages, not GitHub raw."""
+    content = DOCS / "content"
+    if content.exists():
+        shutil.rmtree(content)
+    content.mkdir(parents=True)
+    copied = 0
+
+    for dirname in ("knowledge", "prompts", ".cursor/skills"):
+        src = ROOT / dirname
+        if src.exists():
+            shutil.copytree(src, content / dirname)
+            copied += sum(1 for _ in (content / dirname).rglob("*") if _.is_file())
+
+    for filename in ("START_HERE.md", "README.md"):
+        src = ROOT / filename
+        if src.exists():
+            shutil.copy2(src, content / filename)
+            copied += 1
+
+    extra = ROOT / "external_docs/templates/personnel_counseling/README.md"
+    if extra.exists():
+        dst = content / "external_docs/templates/personnel_counseling/README.md"
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(extra, dst)
+        copied += 1
+
+    print(f"Bundled {copied} files into docs/content/")
+    return copied
+
+
+def validate_zone_links(zones: list[dict]) -> list[str]:
+    """Return list of validation warnings for zone card hrefs."""
+    warnings: list[str] = []
+    gh_pages_apps = {
+        "../", "../kpi-hub/", "../board/", "../jobs/", "../scheduling/",
+        "../intake/", "../qc/", "../inventory/", "../invoicing/",
+        "../customers/", "../sops/", "../resources/", "../settings/",
+    }
+    internal_pages = {
+        "dashboard.html", "explore.html", "index.html",
+        "templates/personnel-counseling.html",
+    }
+    for zone in zones:
+        for card in zone.get("cards", []):
+            href = card.get("href", "")
+            if href.startswith("http"):
+                continue
+            if href.startswith("../"):
+                continue  # checked separately on gh-pages
+            if href.startswith("view.html?path="):
+                rel = href.split("path=", 1)[1]
+                local = DOCS / "content" / rel if not rel.startswith("live/") else DOCS / rel
+                if not local.exists():
+                    warnings.append(f"Missing content: {rel} ({card.get('title')})")
+            elif href in internal_pages or href.endswith(".html"):
+                if not (DOCS / href.split("?")[0]).exists():
+                    warnings.append(f"Missing page: {href} ({card.get('title')})")
+    return warnings
+
+
 def copy_live_files() -> None:
     LIVE.mkdir(parents=True, exist_ok=True)
     mappings = [
@@ -401,7 +463,12 @@ def main() -> None:
     manifest = run_manifest_builder()
     ops = build_ops_snapshot()
     copy_live_files()
+    bundle_static_content(manifest)
     pipeline = parse_backlog_pipeline()
+    zones = build_zones(manifest, ops, pipeline)
+    link_warnings = validate_zone_links(zones)
+    for w in link_warnings:
+        print(f"WARN: {w}")
 
     command_center = {
         "generated_at": datetime.now(tz=timezone.utc).isoformat(),
@@ -413,7 +480,7 @@ def main() -> None:
         "ops": ops,
         "systems": build_systems(),
         "pipeline": pipeline,
-        "zones": build_zones(manifest, ops, pipeline),
+        "zones": zones,
         "manifest_total": manifest.get("total_items", 0),
     }
 
