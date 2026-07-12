@@ -96,6 +96,7 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
   owner: [
     'dashboard',
     'intake',
+    'sops',
     'board',
     'jobs',
     'agent-input',
@@ -107,6 +108,7 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
   'service-manager': [
     'dashboard',
     'intake',
+    'sops',
     'board',
     'jobs',
     'agent-input',
@@ -115,10 +117,11 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
     'invoicing',
     'settings',
   ],
-  technician: ['dashboard', 'board', 'jobs', 'agent-input', 'qc', 'resources'],
+  technician: ['dashboard', 'board', 'jobs', 'agent-input', 'qc', 'sops', 'resources'],
   'front-desk': [
     'dashboard',
     'intake',
+    'sops',
     'board',
     'jobs',
     'agent-input',

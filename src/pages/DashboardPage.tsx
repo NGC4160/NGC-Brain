@@ -31,7 +31,7 @@ export function DashboardPage() {
     hcpError,
     refreshHcp,
   } = useApp()
-  const { session, isTechnician } = useAuthContext()
+  const { session, isTechnician, canAccessModule } = useAuthContext()
   const visibleJobs = useMemo(
     () => filterJobsForSession(jobs, session),
     [jobs, session],
@@ -76,6 +76,28 @@ export function DashboardPage() {
         error={hcpError}
         onRefresh={() => void refreshHcp()}
       />
+
+      {canAccessModule('sops') && (
+        <div className="flex flex-wrap items-center gap-2 rounded-xl border border-ngc-200 bg-white px-3 py-3 text-sm dark:border-ngc-800 dark:bg-slate-900">
+          <span className="font-medium text-ngc-700 dark:text-ngc-200">Operate by SOP:</span>
+          {canAccessModule('intake') && (
+            <Link to="/intake" className="rounded-lg bg-brand-50 px-3 py-1.5 text-brand-800 dark:bg-brand-950 dark:text-brand-200">
+              Intake
+            </Link>
+          )}
+          <Link to="/sops" className="rounded-lg bg-ngc-50 px-3 py-1.5 text-ngc-800 dark:bg-ngc-950 dark:text-ngc-200">
+            All SOPs
+          </Link>
+          {canAccessModule('qc') && (
+            <Link to="/qc" className="rounded-lg bg-slate-100 px-3 py-1.5 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+              QC
+            </Link>
+          )}
+          <Link to="/board" className="rounded-lg bg-slate-100 px-3 py-1.5 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+            Board
+          </Link>
+        </div>
+      )}
 
       <section>
         <h2 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">

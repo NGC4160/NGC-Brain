@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { FormEvent, useCallback, useEffect, useState } from 'react'
 import {
   Database,
   Download,
@@ -23,6 +23,7 @@ import { NGC_BOOKKEEPER } from '@/config/business'
 import { ROLE_LABELS, MAX_TECHNICIANS } from '@/config/staff'
 import { useAuthContext } from '@/context/AuthContext'
 import { Link } from 'react-router-dom'
+import { createDraftSop, listAllSops, saveCustomSop } from '@/sops/registry'
 
 type ApiMode = 'checking' | 'live' | 'pages'
 
@@ -35,6 +36,11 @@ export function SettingsPage() {
   const [importing, setImporting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [importResult, setImportResult] = useState<string | null>(null)
+  const [customTitle, setCustomTitle] = useState('')
+  const [customDesc, setCustomDesc] = useState('')
+  const [customItems, setCustomItems] = useState('')
+  const [customSavedId, setCustomSavedId] = useState<string | null>(null)
+  const sopCount = listAllSops().length
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -253,6 +259,108 @@ export function SettingsPage() {
           </ul>
         </section>
       )}
+
+      <section className="card space-y-4 p-6">
+        <div className="flex items-center gap-2">
+          <BookOpen className="h-5 w-5 text-brand-600" />
+          <div>
+            <h2 className="text-lg font-semibold text-slate-900 dark:text-white">SOPs on file</h2>
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              {sopCount} procedures registered. The DMS hub runs every catalog SOP plus any custom
+              checklists saved on this device. Ship permanent SOPs in{' '}
+              <code className="text-xs">src/sops/catalog/</code> — see{' '}
+              <code className="text-xs">docs/ADDING_SOPS.md</code>.
+            </p>
+          </div>
+        </div>
+        <Link to="/sops" className="btn-secondary inline-flex">
+          Open SOPs hub
+        </Link>
+
+        {canManageStaff && (
+          <form
+            className="space-y-3 border-t border-slate-200 pt-4 dark:border-slate-800"
+            onSubmit={(e: FormEvent) => {
+              e.preventDefault()
+              const title = customTitle.trim()
+              if (!title) return
+              const id = title
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-|-$/g, '')
+                .slice(0, 48)
+              const checklist = customItems
+                .split('\n')
+                .map((line) => line.trim())
+                .filter(Boolean)
+                .map((label, i) => ({ id: `item-${i + 1}`, label, required: true }))
+              const sop = createDraftSop({
+                id: id || `custom-${Date.now()}`,
+                title,
+                description: customDesc.trim() || 'Custom shop checklist.',
+                status: 'active',
+                runtime: 'checklist',
+                accessRoles: ['front-desk', 'service-manager', 'owner', 'technician'],
+                ownerRoles: ['service-manager'],
+                steps: [
+                  {
+                    id: 'run',
+                    title: 'Run checklist',
+                    summary: 'Complete every required item, then mark the run complete.',
+                  },
+                ],
+                checklist:
+                  checklist.length > 0
+                    ? checklist
+                    : [{ id: 'done', label: 'Procedure completed', required: true }],
+              })
+              saveCustomSop(sop)
+              setCustomSavedId(sop.id)
+              setCustomTitle('')
+              setCustomDesc('')
+              setCustomItems('')
+            }}
+          >
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
+              Add checklist SOP (this device)
+            </h3>
+            <p className="text-xs text-slate-500">
+              Instantly operable from the SOPs hub. For shop-wide permanent SOPs, also add them to the
+              catalog in a deploy.
+            </p>
+            <input
+              className="input-field w-full"
+              placeholder="Title (e.g. Battery watering)"
+              value={customTitle}
+              onChange={(e) => setCustomTitle(e.target.value)}
+              required
+            />
+            <input
+              className="input-field w-full"
+              placeholder="Short description"
+              value={customDesc}
+              onChange={(e) => setCustomDesc(e.target.value)}
+            />
+            <textarea
+              className="input-field min-h-[88px] w-full"
+              placeholder="Checklist items — one per line"
+              value={customItems}
+              onChange={(e) => setCustomItems(e.target.value)}
+            />
+            <button type="submit" className="btn-primary">
+              Save to SOP registry
+            </button>
+            {customSavedId && (
+              <p className="text-sm text-emerald-700 dark:text-emerald-300">
+                Saved.{' '}
+                <Link to={`/sops/${customSavedId}`} className="underline">
+                  Open SOP
+                </Link>
+              </p>
+            )}
+          </form>
+        )}
+      </section>
 
       <section className="card p-6">
         <div className="flex items-center gap-2">
