@@ -265,49 +265,21 @@
     .sig label { font-weight: 700; color: var(--text); white-space: nowrap; }
     .sig .line { flex: 1; border-bottom: 1px solid var(--line); height: 12px; }
 
-    .accept {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 10pt;
-      grid-column: 1 / -1;
-      justify-content: flex-end;
-    }
-
     @media screen {
       body { background: #e8edf2; padding: 1rem 0 2rem; }
-      .toolbar {
-        max-width: 8.5in; margin: 0 auto 1rem; padding: 0 1rem;
-        display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
-        justify-content: space-between; font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px;
-      }
-      .toolbar a, .toolbar button {
-        color: #000; text-decoration: none; background: #fff; border: 1px solid #333;
-        border-radius: 8px; padding: 0.45rem 0.85rem; cursor: pointer; font-size: 14px;
-      }
+      .toolbar { max-width: 8.5in; margin: 0 auto 1rem; padding: 0 1rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between; font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px; }
+      .toolbar a, .toolbar button { color: #000; text-decoration: none; background: #fff; border: 1px solid #333; border-radius: 8px; padding: 0.45rem 0.85rem; cursor: pointer; font-size: 14px; }
       .toolbar button { background: #000; color: #fff; border-color: #000; font-weight: 600; }
       .toolbar .hint { color: #444; font-size: 13px; }
       .pages-wrap { max-width: 8.5in; margin: 0 auto; padding: 0 1rem; }
       .page { background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.12); border-radius: 6px; padding: 0.15in 0.25in; }
     }
-    @media print {
-      .toolbar { display: none !important; }
-      body { background: #fff; padding: 0; }
-      .pages-wrap { padding: 0; }
-      .page { box-shadow: none; border-radius: 0; padding: 0; }
-    }
+    @media print { .toolbar { display: none !important; } body { background: #fff; padding: 0; } .pages-wrap { padding: 0; } .page { box-shadow: none; border-radius: 0; padding: 0; } }
   </style>
 </head>
 <body>
 
-  <div class="toolbar">
-    <div>
-      <a href="/NGC-Brain/">← NGC Dashboard</a>
-      <a href="/NGC-Brain/docs/intake-checklist.html">Intake Checklist</a>
-    </div>
-    <span class="hint">Top: Pickup · Bottom: Drop-off (complete later)</span>
-    <button type="button" onclick="window.print()">Print Form</button>
-  </div>
+  <div class="toolbar"><div><a href="/NGC-Brain/">← NGC Dashboard</a><a href="/NGC-Brain/docs/intake-checklist.html">Intake Checklist</a></div><span class="hint">Top: Pickup · Bottom: Drop-off (complete later)</span><button type="button" onclick="window.print()">Print Form</button></div>
   <div class="pages-wrap">
   <div class="page">
     <div class="page-header">
@@ -352,7 +324,6 @@
           </tbody>
         </table>
       </div>
-      <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
 
       <div class="section-label">Visual Inspection Checklist — C/W = Complied With</div>
       <div class="two-col-tables">
@@ -388,6 +359,8 @@
         <div class="notes-title">Before Loading Discrepancies / Pre-Existing Conditions — location, condition, photo reference</div>
         <div class="notes-lines"></div>
       </div>
+
+      <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
 
       <div class="sig-row">
         <div class="sig"><label>Driver Pickup Signature:</label><span class="line"></span></div>
@@ -428,7 +401,6 @@
           </tbody>
         </table>
       </div>
-      <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
 
       <div class="section-label">Visual Inspection Checklist — C/W = Complied With</div>
       <div class="two-col-tables">
@@ -467,15 +439,12 @@
 
       <p class="callout strong">Obtain customer/receiver signature at drop-off whenever possible.</p>
 
+      <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
+
       <div class="sig-row wide">
         <div class="sig"><label>Driver Drop-Off Signature:</label><span class="line"></span></div>
         <div class="sig"><label>Date/Time:</label><span class="line"></span></div>
         <div class="sig"><label>Customer/Receiver Signature:</label><span class="line"></span></div>
-        <div class="accept">
-          <span>Return Accepted:</span>
-          <span><span class="cb"></span> Yes</span>
-          <span><span class="cb"></span> No</span>
-        </div>
       </div>
     </div>
   </div>
