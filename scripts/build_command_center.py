@@ -144,6 +144,9 @@ def build_ops_snapshot() -> dict:
             "shop_board": "live/shop_board.md" if shop_md.exists() else None,
             "deposit_alerts": "live/deposit_alerts.md" if deposit_md.exists() else None,
             "sync_manifest": "live/sync_manifest.json" if SYNC_MANIFEST.exists() else None,
+            "sync_status": "live/sync_status.json"
+            if (ROOT / "knowledge" / ".generated" / "sync_status.json").exists()
+            else None,
         },
     }
 
@@ -442,6 +445,7 @@ def copy_live_files() -> None:
         (ROOT / "knowledge" / ".generated" / "shop_board.md", LIVE / "shop_board.md"),
         (ROOT / "knowledge" / ".generated" / "deposit_alerts.md", LIVE / "deposit_alerts.md"),
         (ROOT / "knowledge" / ".generated" / "sync_manifest.json", LIVE / "sync_manifest.json"),
+        (ROOT / "knowledge" / ".generated" / "sync_status.json", LIVE / "sync_status.json"),
         (ROOT / "knowledge" / ".generated" / "legacy_pricebook_audit.md", LIVE / "legacy_pricebook_audit.md"),
     ]
     for src, dst in mappings:

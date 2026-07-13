@@ -1,0 +1,62 @@
+name: Morning Sync
+
+on:
+  schedule:
+    # 7:30 AM CST (13:30 UTC). During CDT (Mar–Nov) this runs at 8:30 AM local.
+    - cron: "30 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morning-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run morning sync
+        env:
+          HCP_API_KEY: ${{ secrets.HCP_API_KEY }}
+          QBO_CLIENT_ID: ${{ secrets.QBO_CLIENT_ID }}
+          QBO_CLIENT_SECRET: ${{ secrets.QBO_CLIENT_SECRET }}
+          QBO_REALM_ID: ${{ secrets.QBO_REALM_ID }}
+          QBO_REFRESH_TOKEN: ${{ secrets.QBO_REFRESH_TOKEN }}
+          NGC_COMMAND_CENTER_PASSWORD: ${{ secrets.NGC_COMMAND_CENTER_PASSWORD }}
+        run: ./scripts/sync/run_morning_sync.sh
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add external_docs/exports/ knowledge/.generated/ docs/live/ docs/command-center.json docs/content/ docs/assets/auth-config.js
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Morning sync: HCP + QBO → Command Center [skip ci]"
+            git push
+          fi
+
+      - name: Deploy Command Center to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs
+          target-folder: command-center
+          branch: gh-pages
+          clean: false
+          commit-message: "Morning sync deploy @ ${{ github.sha }}"
