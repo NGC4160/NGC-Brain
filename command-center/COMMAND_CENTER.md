@@ -39,16 +39,28 @@ Send her:
 
 ## Refresh live data
 
-The dashboard reads HCP job exports. Refresh from your machine:
+**Automatic:** GitHub Actions runs **Morning Sync** every day at **7:30 AM CST** — pulls HCP + QBO, updates Command Center, deploys to gh-pages.
+
+**Manual** from your machine:
 
 ```bash
-./scripts/sync/run_hcp_sync.sh
-git add knowledge/.generated/ external_docs/exports/hcp/
+./scripts/sync/run_morning_sync.sh
+git add external_docs/exports/ knowledge/.generated/ docs/
 git commit -m "Refresh Command Center live ops data"
 git push
 ```
 
 Or say **"sync HCP"** in Cursor — then commit and push the generated files.
+
+### Required GitHub Actions secrets
+
+| Secret | Purpose |
+|--------|---------|
+| `HCP_API_KEY` | Housecall Pro API |
+| `QBO_CLIENT_ID`, `QBO_CLIENT_SECRET`, `QBO_REALM_ID`, `QBO_REFRESH_TOKEN` | QuickBooks Online API |
+| `NGC_COMMAND_CENTER_PASSWORD` | Login gate |
+
+Setup: [`knowledge/10_automation/qbo_api_setup.md`](../knowledge/10_automation/qbo_api_setup.md) and [`hcp_api_setup.md`](../knowledge/10_automation/hcp_api_setup.md)
 
 ## Security notes
 
