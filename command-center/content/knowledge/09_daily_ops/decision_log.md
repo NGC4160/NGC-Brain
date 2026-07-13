@@ -19,6 +19,10 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-06-28 | No cart sales/rentals until service shop is solid | Ryan | |
 | 2026-06-28 | HCP MAX plan — API sync scripts + MCP path documented | Ryan | See hcp_api_setup.md |
 | 2026-06-28 | Diagnostic fee $179 — not waived; applies toward repair on known-issue jobs | Ryan | |
+| 2026-07-13 | Paid pickup/delivery flat rate = **$99** | Ryan | Outside 40 mi Northshore or Southshore |
+| 2026-07-13 | Free pickup/delivery zone = **40 miles Northshore** (final) | Ryan | Boundary is distance + Northshore; Southshore always paid |
+| 2026-07-13 | Keep customer-supplied lithium install at **$549** | Ryan | Active offer; clarify warranty scope on customer packs |
+| 2026-07-13 | Morning Sync live — daily HCP + QBO → Command Center | Ryan | 7:30 AM CST; finance knowledge refreshed from API P&L |
 
 ---
 
@@ -26,6 +30,4 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 
 | Topic | Options | Target date |
 |-------|---------|-------------|
-| Paid pickup flat rate | $99 (pricebook) vs new rate | TBD |
-| Southshore / >40mi boundary | Map or zip list | TBD |
-| Customer-supplied lithium install | Offer at $549 or discontinue | TBD |
+| *(none)* | — | — |

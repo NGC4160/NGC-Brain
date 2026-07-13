@@ -1,0 +1,12 @@
+{
+  "started_at": "2026-07-13T02:34:33Z",
+  "finished_at": "2026-07-13T02:34:50.030303+00:00",
+  "overall": "success",
+  "steps": {
+    "hcp": "ok",
+    "qbo": "ok",
+    "ingest": "ok",
+    "command_center": "ok"
+  },
+  "detail": null
+}

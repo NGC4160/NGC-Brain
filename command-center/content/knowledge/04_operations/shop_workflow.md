@@ -24,7 +24,7 @@ Shop diagnosis/repair → Payment → Pickup/delivery OR customer pickup
 Options:
 
 - Customer drops cart at shop
-- **Roy** picks up cart (free within 40 mi Northshore; flat fee outside zone / Southshore)
+- **Roy** picks up cart (free within 40 mi Northshore; **$99** flat outside zone / Southshore)
 
 ### 3. Service execution
 

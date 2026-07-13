@@ -1,6 +1,6 @@
 # NGC Automation Architecture
 
-**Last verified:** 2026-06-28  
+**Last verified:** 2026-07-13  
 **Goal:** Replace manual exports and copy-paste prompts with connectors, scheduled jobs, and live data where APIs allow.
 
 ## Automation stack (target state)
@@ -30,7 +30,7 @@
 | **1** | Session hooks + project skills | Low | ✅ Built |
 | **2** | QuickBooks MCP (live P&L, COA, no export) | Medium | 🔲 Template ready |
 | **3** | **HCP API sync** (MAX plan) | Medium | ✅ Scripts + daily GitHub Action |
-| **3b** | **QBO API sync** (morning pull) | Medium | ✅ Scripts ready — add OAuth secrets |
+| **3b** | **QBO API sync** (morning pull) | Medium | ✅ Live — daily GitHub Action |
 | **4** | Cursor Automations (scheduled weekly review) | Low | 🔲 Agents Window |
 | **5** | Custom NGC Admin Bot + webhooks | High | 🟡 Phase 1 live — deposit alerts |
 

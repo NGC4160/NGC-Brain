@@ -40,7 +40,7 @@ Full row-by-row list with UUIDs → run the audit script.
 | Legacy | Current substitute |
 |--------|-------------------|
 | Mobile diagnostic ($174–$229) | **`1.0 - Golf Cart Diagnostic & Inspection`** — $179 in-shop |
-| Trip charges | **None** — free Northshore pickup/delivery (40 mi); paid flat outside zone |
+| Trip charges | **None** — free Northshore pickup/delivery (40 mi); **$99** flat outside zone / Southshore |
 | `3.0-NGC Lithium Conversion, 48v…` | **`6.0- 48V Professional Lithium Battery Conversion Kit Installed`** — $2,799 |
 | `3.0-NGC Lithium Conversion, 36v…` | **`6.0- 36V Professional…`** — $2,599 |
 | `3.0-NGC MINI…` | **`6.0- 48V MINI Professional…`** — $2,799 |

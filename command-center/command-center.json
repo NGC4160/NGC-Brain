@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T02:34:49.998288+00:00",
+  "generated_at": "2026-07-13T02:45:04.640275+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-13T02:34:49.973531+00:00",
+    "generated_at": "2026-07-13T02:45:04.615852+00:00",
     "jobs_synced_at": "2026-07-13T02:34:42.288246+00:00",
     "has_live_data": true,
     "metrics": {
@@ -305,7 +305,7 @@
       "shop_board": "live/shop_board.md",
       "deposit_alerts": "live/deposit_alerts.md",
       "sync_manifest": "live/sync_manifest.json",
-      "sync_status": null
+      "sync_status": "live/sync_status.json"
     }
   },
   "systems": [
@@ -365,14 +365,6 @@
       "why": "Prevents wrong quotes & booking",
       "owner": "Ryan / Christine",
       "status": "**Checklist ready** \u2014 see legacy_pricebook_cleanup.md",
-      "category": "Operations (run the shop better)"
-    },
-    {
-      "priority": "P1",
-      "name": "Finalize pickup/delivery zone map (free vs $99)",
-      "why": "Roy + Christine need consistent answers",
-      "owner": "Ryan",
-      "status": "Open",
       "category": "Operations (run the shop better)"
     },
     {
@@ -489,8 +481,8 @@
     },
     {
       "priority": "P3",
-      "name": "Monthly export ritual \u2192 refresh `knowledge/08_finance/`",
-      "why": "AI gives stale answers without it",
+      "name": "Monthly knowledge finance refresh from morning sync P&L",
+      "why": "Numbers auto-pull; still verify `08_finance/` after big chart changes",
       "owner": "Ryan",
       "status": "Open",
       "category": "Finance & admin"
@@ -722,7 +714,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "20 tracked projects \u00b7 P1\u2013P3",
+          "desc": "19 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },

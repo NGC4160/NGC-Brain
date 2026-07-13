@@ -1,6 +1,6 @@
 # Lithium Conversions (LiFePO4)
 
-**Last verified:** 2026-06-28  
+**Last verified:** 2026-07-13  
 **Product line:** Professional Kit tiers only — **NGC Conversion line is discontinued**
 
 ## Overview
@@ -90,4 +90,7 @@ Core charge applies on conversion: **$20 per 6V or 8V battery**, **$30 per 12V b
 - All **NGC Conversion** items (36V/48V/60V/72V/MINI at lower price points)
 - **NGC Lithium Conversion Kit** standalone ($1,899 electrical line)
 - **TEST PARTIAL KIT 48V** — remove from active pricebook
-- Customer-supplied lithium install ($549) — confirm with Ryan before quoting
+
+## Customer-supplied lithium install
+
+**Active offer:** Install customer-supplied lithium for **$549** (confirmed 2026-07-13). Quote as install-only — no kit warranty from NGC on customer-supplied packs; clarify warranty scope with customer before booking.

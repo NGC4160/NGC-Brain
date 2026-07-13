@@ -1,17 +1,18 @@
 # Customers & Marketing
 
-**Last verified:** 2026-06-28
+**Last verified:** 2026-07-13
 
 ## Service area
 
 | Zone | Coverage |
 |------|----------|
 | **Core (free pickup/delivery)** | Within **40 miles** of shop on the **Northshore** |
-| **Extended (paid flat rate)** | Outside 40 miles or **Southshore** — reasonable flat fee (~$99 in pricebook; boundary TBD) |
+| **Extended ($99 flat)** | Outside 40 miles or **Southshore** |
 | **Market positioning** | **Greater New Orleans metro** |
 
 Shop address: 71363 Thelma Ln, Suite E, Covington, LA 70433
 
+**Policy (final — 2026-07-13):** Free within 40 mi Northshore; **$99** flat outside that zone or Southshore.
 ## Customer segments
 
 | Segment | Status |
@@ -41,7 +42,7 @@ Confirm current marketing spend mix with Ryan — QBO shows ~$64k advertising/ma
 - LiFePO4 lithium conversions (Professional Kits, 5-year battery + BMS warranty)
 - Advanced diagnostics capability
 - Free 7-point inspection with every service
-- Free local pickup/delivery (Northshore, 40 mi)
+- Free local pickup/delivery (Northshore, 40 mi); $99 outside zone / Southshore
 - All makes and models
 
 ## Reviews

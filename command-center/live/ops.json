@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T02:34:49.973531+00:00",
+  "generated_at": "2026-07-13T02:45:04.615852+00:00",
   "jobs_synced_at": "2026-07-13T02:34:42.288246+00:00",
   "has_live_data": true,
   "metrics": {
@@ -295,6 +295,6 @@
     "shop_board": "live/shop_board.md",
     "deposit_alerts": "live/deposit_alerts.md",
     "sync_manifest": "live/sync_manifest.json",
-    "sync_status": null
+    "sync_status": "live/sync_status.json"
   }
 }

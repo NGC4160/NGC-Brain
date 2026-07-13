@@ -1,6 +1,6 @@
 # Pricebook Reference
 
-**Last verified:** 2026-06-28  
+**Last verified:** 2026-07-13  
 **Source file:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`  
 **Total line items:** 282
 
@@ -52,7 +52,7 @@ The CSV is the **full pricebook**. This file summarizes categories and flags ite
 | Diagnostic Testing | $125 | Current |
 | Advanced Diagnostics (In-Shop) | $145 | Current |
 | Shop Labor Hours | $125 | Current |
-| Standard Pick-up/Drop-off Service | $99 | Current (paid zone) |
+| Standard Pick-up/Drop-off Service | $99 | **Current** — paid zone (outside 40 mi Northshore or Southshore) |
 | 7-Point Golf Cart Safety Inspection | $0 | Current |
 | WORK PERFORMED AT SHOP | $0 | Internal flag line |
 
