@@ -5,27 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="ngc-base" content="./" />
+  <meta name="theme-color" content="#080b10" />
   <title>NGC Command Center</title>
   <link rel="stylesheet" href="assets/command.css" />
 </head>
 <body>
-  <div class="grid-bg" aria-hidden="true"></div>
-  <div class="scanline" aria-hidden="true"></div>
+  <div class="aura" aria-hidden="true"></div>
 
   <div id="login-gate" class="login-gate hidden">
     <div class="login-panel">
       <img class="login-logo" src="assets/ngc-logo.png" alt="NGC" />
-      <h1>NGC Command Center</h1>
-      <p class="subtitle">Authorized access only · Ryan &amp; Christine</p>
+      <h1>Command Center</h1>
+      <p class="subtitle">Ryan &amp; Christine only</p>
       <form id="login-form">
         <label for="login-user">Operator</label>
         <select id="login-user" name="user">
           <option value="Ryan">Ryan White</option>
           <option value="Christine">Christine White</option>
         </select>
-        <label for="login-password">Access Code</label>
-        <input id="login-password" type="password" autocomplete="current-password" placeholder="Enter access code" required />
-        <button type="submit">Initialize Session</button>
+        <label for="login-password">Access code</label>
+        <input id="login-password" type="password" autocomplete="current-password" placeholder="••••" required />
+        <button type="submit">Enter</button>
         <p id="login-error" class="login-error" role="alert"></p>
         <p id="login-notice" class="login-notice"></p>
       </form>
@@ -38,7 +38,7 @@
         <img src="assets/ngc-logo.png" alt="" />
         <div>
           <h1>NGC Command Center</h1>
-          <span>Neighborhood Golf Carts</span>
+          <span>Neighborhood Golf Carts · Covington</span>
         </div>
       </div>
       <div class="topbar-status" id="status-bar"></div>
@@ -51,7 +51,7 @@
 
     <div class="command-layout">
       <nav class="nav-panel" id="nav-panel" aria-label="Sections">
-        <p class="nav-label">Sections</p>
+        <p class="nav-label">Navigate</p>
         <ul class="nav-list" id="nav-list"></ul>
         <div class="nav-footer">
           <a href="dashboard.html">Ops Dashboard</a>
@@ -70,12 +70,22 @@
           <header class="section-header" id="section-header"></header>
           <div class="section-cards" id="section-cards"></div>
         </div>
+
+        <div id="doc-view" class="doc-view hidden">
+          <div class="doc-toolbar">
+            <button type="button" class="doc-back" id="doc-back">← Back</button>
+            <h2 id="doc-title">Document</h2>
+          </div>
+          <div class="doc-body" id="doc-content"></div>
+        </div>
       </main>
     </div>
   </div>
 
+  <script src="assets/marked.min.js"></script>
   <script src="assets/auth-config.js"></script>
   <script src="assets/auth.js"></script>
+  <script src="assets/doc-reader.js"></script>
   <script src="assets/command.js"></script>
 </body>
 </html>

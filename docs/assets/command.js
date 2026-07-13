@@ -2,13 +2,11 @@ const BASE = document.querySelector('meta[name="ngc-base"]')?.content || "./";
 
 let ccData = null;
 let activeSection = "overview";
+let docReturnSection = "overview";
+let manifestCache = null;
 
 function escapeHtml(str) {
-  return String(str)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+  return NGCDoc.escapeHtml(str);
 }
 
 function cardLinkAttrs(card) {
@@ -17,14 +15,19 @@ function cardLinkAttrs(card) {
 }
 
 function renderCard(card, zoneColor) {
-  return `
-    <a class="zone-card ${card.primary ? "primary" : ""}" href="${card.href}" style="--zone-color:${zoneColor}"${cardLinkAttrs(card)}>
+  const docPath = NGCDoc.parseDocPath(card.href);
+  const inner = `
       <h3>
         ${escapeHtml(card.title)}
         ${card.badge ? `<span class="badge ${card.badge.includes("Sync") ? "warn" : ""}">${escapeHtml(card.badge)}</span>` : ""}
       </h3>
-      <p>${escapeHtml(card.desc)}</p>
-    </a>`;
+      <p>${escapeHtml(card.desc)}</p>`;
+
+  if (docPath) {
+    return `<button type="button" class="zone-card doc-open ${card.primary ? "primary" : ""}" data-doc="${escapeHtml(docPath)}" style="--zone-color:${zoneColor}">${inner}</button>`;
+  }
+
+  return `<a class="zone-card ${card.primary ? "primary" : ""}" href="${card.href}" style="--zone-color:${zoneColor}"${cardLinkAttrs(card)}>${inner}</a>`;
 }
 
 function updateClock() {
@@ -52,7 +55,7 @@ function renderMetrics(ops) {
 
   const m = ops.metrics;
   const tiles = [
-    { value: m.in_progress, label: "In Progress", cls: m.wip_over > 0 ? "warn" : "" },
+    { value: m.in_progress, label: "In Shop", cls: m.wip_over > 0 ? "warn" : "" },
     { value: m.active_pipeline, label: "Pipeline", cls: "" },
     { value: m.lithium_at_risk, label: "Li Risk", cls: m.lithium_at_risk > 0 ? "alert" : "" },
     { value: m.stale_15_plus, label: "Stale 15d+", cls: m.stale_15_plus > 0 ? "warn" : "" },
@@ -75,13 +78,13 @@ function renderStatusBar(ops) {
   const bar = document.getElementById("status-bar");
   if (!bar) return;
 
-  const syncOk = ops?.sync?.exists !== false && ops?.has_live_data;
+  const syncOk = ops?.has_live_data;
   const wipWarn = (ops?.metrics?.wip_over || 0) > 0;
 
   bar.innerHTML = `
     <span class="status-pill"><span class="status-dot ${syncOk ? "" : "warn"}"></span> HCP</span>
     <span class="status-pill"><span class="status-dot"></span> QBO</span>
-    <span class="status-pill"><span class="status-dot ${wipWarn ? "warn" : ""}"></span> WIP ${ops?.metrics?.in_progress ?? "—"}/${ops?.metrics?.wip_target ?? 6}</span>
+    <span class="status-pill"><span class="status-dot ${wipWarn ? "warn" : ""}"></span> WIP ${ops?.metrics?.in_progress ?? "—"}/6</span>
   `;
 }
 
@@ -102,7 +105,7 @@ function renderOverviewPipeline(pipeline) {
 
   el.innerHTML = `
     <div class="pipeline-compact">
-      <span class="pipeline-title">Build Pipeline</span>
+      <span class="pipeline-title">Build pipeline</span>
       <div class="pipeline-bar">
         <span class="p1" style="width:${(counts.P1 / total) * 100}%"></span>
         <span class="p2" style="width:${(counts.P2 / total) * 100}%"></span>
@@ -118,15 +121,15 @@ function zoneSummary(zone, ops) {
   let stat = `${count} links`;
 
   if (zone.id === "live-ops" && ops?.metrics) {
-    stat = `${ops.metrics.in_progress} in shop · ${ops.metrics.lithium_at_risk} Li risk`;
+    stat = `${ops.metrics.in_progress} in shop · ${ops.metrics.lithium_at_risk} Li at risk`;
   } else if (zone.id === "pipeline") {
     const c = pipelineCounts(ccData?.pipeline || []);
-    stat = `${c.P1} P1 · ${c.P2} P2 · ${c.P3} P3`;
+    stat = `${c.P1} P1 · ${c.P2} P2 · ${c.P3} P3 projects`;
   } else if (zone.id === "apps") {
-    stat = `${count} apps`;
+    stat = `${count} operational apps`;
   }
 
-  return { primary, stat, count };
+  return { primary, stat };
 }
 
 function renderOverviewGrid(zones, ops) {
@@ -158,7 +161,7 @@ function renderNav(zones) {
   if (!list) return;
 
   const items = [
-    { id: "overview", icon: "◎", title: "Overview", color: "#00f0ff" },
+    { id: "overview", icon: "◉", title: "Overview", color: "#6faa2d" },
     ...zones.map((z) => ({ id: z.id, icon: z.icon, title: z.title, color: z.color })),
   ];
 
@@ -203,20 +206,55 @@ function renderSection(zone, pipeline) {
           <span class="p3" style="width:${(counts.P3 / total) * 100}%"></span>
         </div>
         <div class="pipeline-legend">
-          <span class="p1"><em>${counts.P1}</em> P1 Now</span>
-          <span class="p2"><em>${counts.P2}</em> P2 Month</span>
-          <span class="p3"><em>${counts.P3}</em> P3 Quarter</span>
+          <span><em>${counts.P1}</em> P1 now</span>
+          <span><em>${counts.P2}</em> P2 this month</span>
+          <span><em>${counts.P3}</em> P3 quarter</span>
         </div>
       </div>`;
   }
 
-  cards.innerHTML =
-    extra +
-    zone.cards.map((card) => renderCard(card, zone.color)).join("");
+  cards.innerHTML = extra + zone.cards.map((card) => renderCard(card, zone.color)).join("");
+  bindDocOpenButtons(cards);
+}
+
+function bindDocOpenButtons(container) {
+  container?.querySelectorAll(".doc-open[data-doc]").forEach((btn) => {
+    btn.addEventListener("click", () => openDoc(btn.dataset.doc));
+  });
+}
+
+async function getManifest() {
+  if (!manifestCache) manifestCache = await NGCDoc.loadManifest();
+  return manifestCache;
+}
+
+async function openDoc(path) {
+  docReturnSection = activeSection;
+  closePanelsForDoc();
+
+  const docView = document.getElementById("doc-view");
+  const titleEl = document.getElementById("doc-title");
+  const contentEl = document.getElementById("doc-content");
+  docView?.classList.remove("hidden");
+
+  const manifest = await getManifest();
+  await NGCDoc.renderInto(path, titleEl, contentEl, manifest);
+  NGCDoc.bindInlineLinks(contentEl, openDoc);
+}
+
+function closeDoc() {
+  document.getElementById("doc-view")?.classList.add("hidden");
+  selectSection(docReturnSection);
+}
+
+function closePanelsForDoc() {
+  document.getElementById("overview-view")?.classList.add("hidden");
+  document.getElementById("section-view")?.classList.add("hidden");
 }
 
 function selectSection(sectionId) {
   activeSection = sectionId;
+  document.getElementById("doc-view")?.classList.add("hidden");
 
   document.querySelectorAll(".nav-item").forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.section === sectionId);
@@ -241,6 +279,8 @@ function bindLogout() {
   document.getElementById("logout-btn")?.addEventListener("click", () => window.NGCAuth?.logout());
 }
 
+document.getElementById("doc-back")?.addEventListener("click", closeDoc);
+
 async function initCommandCenter() {
   updateClock();
   setInterval(updateClock, 30000);
@@ -261,13 +301,18 @@ async function initCommandCenter() {
 
     const gen = document.getElementById("generated-at");
     if (gen) gen.textContent = ccData.generated_at?.slice(0, 10) || "—";
+
+    const params = new URLSearchParams(window.location.search);
+    const openPath = params.get("doc") || NGCDoc.parseDocPath(params.get("path") ? `view.html?path=${params.get("path")}` : null);
+    if (openPath) openDoc(openPath);
   } catch (err) {
     const grid = document.getElementById("overview-grid");
-    if (grid) grid.innerHTML = `<p style="color:var(--red)">${escapeHtml(err.message)}</p>`;
+    if (grid) grid.innerHTML = `<p style="color:var(--red);padding:1rem">${escapeHtml(err.message)}</p>`;
   }
 }
 
 window.onAuthSuccess = initCommandCenter;
+window.openDoc = openDoc;
 
 document.addEventListener("DOMContentLoaded", () => {
   if (window.NGCAuth?.isAuthed()) initCommandCenter();
