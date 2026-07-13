@@ -30,6 +30,29 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Verify required secrets present
+        env:
+          HCP_API_KEY: ${{ secrets.HCP_API_KEY }}
+          QBO_CLIENT_ID: ${{ secrets.QBO_CLIENT_ID }}
+          QBO_CLIENT_SECRET: ${{ secrets.QBO_CLIENT_SECRET }}
+          QBO_REALM_ID: ${{ secrets.QBO_REALM_ID }}
+          QBO_REFRESH_TOKEN: ${{ secrets.QBO_REFRESH_TOKEN }}
+        run: |
+          missing=0
+          for name in HCP_API_KEY QBO_CLIENT_ID QBO_CLIENT_SECRET QBO_REALM_ID QBO_REFRESH_TOKEN; do
+            eval "val=\${$name}"
+            if [ -z "$val" ]; then
+              echo "MISSING secret: $name"
+              missing=1
+            else
+              echo "OK: $name is set (length=${#val})"
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "Add missing secrets under Settings → Secrets and variables → Actions"
+            exit 1
+          fi
+
       - name: Run morning sync
         env:
           HCP_API_KEY: ${{ secrets.HCP_API_KEY }}
@@ -37,6 +60,7 @@ jobs:
           QBO_CLIENT_SECRET: ${{ secrets.QBO_CLIENT_SECRET }}
           QBO_REALM_ID: ${{ secrets.QBO_REALM_ID }}
           QBO_REFRESH_TOKEN: ${{ secrets.QBO_REFRESH_TOKEN }}
+          QBO_ENVIRONMENT: production
           NGC_COMMAND_CENTER_PASSWORD: ${{ secrets.NGC_COMMAND_CENTER_PASSWORD }}
         run: ./scripts/sync/run_morning_sync.sh
 
