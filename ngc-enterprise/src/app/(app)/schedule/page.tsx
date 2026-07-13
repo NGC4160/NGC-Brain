@@ -1,3 +1,5 @@
+import { StaticSchedulePage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { WorkOrderStatus } from "@prisma/client"
 import { CalendarDays, Gauge, PanelTop, Route } from "lucide-react"
 
@@ -52,6 +54,10 @@ function addressLine(
 }
 
 export default async function SchedulePage() {
+  if (isStaticExport()) {
+    return <StaticSchedulePage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

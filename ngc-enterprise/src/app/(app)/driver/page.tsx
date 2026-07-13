@@ -1,3 +1,5 @@
+import { StaticDriverPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { DispatchStatus } from "@prisma/client"
 import {
   Camera,
@@ -51,6 +53,10 @@ const statusButtons = [
 ]
 
 export default async function DriverPage() {
+  if (isStaticExport()) {
+    return <StaticDriverPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
   const userId = session?.user?.id

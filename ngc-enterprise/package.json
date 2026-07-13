@@ -13,6 +13,7 @@
     "db:reset": "prisma migrate reset --force",
     "db:studio": "prisma studio",
     "test": "vitest run",
+    "export:pages": "NEXT_PUBLIC_STATIC_EXPORT=1 NEXT_PUBLIC_BASE_PATH=/NGC-Brain/enterprise next build",
     "postinstall": "prisma generate"
   },
   "prisma": {

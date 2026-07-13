@@ -1,3 +1,5 @@
+import { StaticCustomersPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { Plus, Search, Users } from "lucide-react"
 import { Prisma, WorkOrderStatus } from "@prisma/client"
@@ -37,6 +39,10 @@ const openStatuses: WorkOrderStatus[] = Object.values(WorkOrderStatus).filter(
 export default async function CustomersPage({
   searchParams,
 }: CustomersPageProps) {
+  if (isStaticExport()) {
+    return <StaticCustomersPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
   const params = await searchParams

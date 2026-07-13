@@ -1,14 +1,10 @@
 "use client"
 
-import { Suspense, useMemo, useState } from "react"
+import { useMemo, useState } from "react"
 import Link from "next/link"
-import { useRouter, useSearchParams } from "next/navigation"
-import { signIn } from "next-auth/react"
-import { motion } from "framer-motion"
 import {
   ArrowRight,
   CheckCircle2,
-  Loader2,
   LockKeyhole,
   Mail,
   ShieldCheck,
@@ -18,80 +14,47 @@ import {
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { StaticLogin } from "@/components/demo/static-login"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { isStaticExport } from "@/lib/static"
+import { appBasePath, DEMO_ACCOUNTS, DEMO_PASSWORD } from "@/lib/static"
+import { setDemoSession } from "@/lib/demo-session"
 import { cn } from "@/lib/utils"
 
-const demoAccounts = [
-  {
-    label: "Owner",
-    email: "owner@ngcgolfcarts.com",
-    password: "demo-owner",
-  },
-  {
-    label: "Dispatcher",
-    email: "dispatch@ngcgolfcarts.com",
-    password: "demo-dispatch",
-  },
-  {
-    label: "Tech",
-    email: "tech@ngcgolfcarts.com",
-    password: "demo-tech",
-  },
-  {
-    label: "Driver",
-    email: "driver@ngcgolfcarts.com",
-    password: "demo-driver",
-  },
-]
+function roleHome(role: string) {
+  if (role === "DISPATCHER") return "/dispatch"
+  if (role === "PICKUP_DRIVER" || role === "DELIVERY_DRIVER") return "/driver"
+  if (role === "SHOP_TECHNICIAN") return "/shop-floor"
+  return "/dashboard"
+}
 
-function LoginContent() {
-  const router = useRouter()
-  const searchParams = useSearchParams()
-  const callbackUrl = searchParams.get("callbackUrl") ?? "/dashboard"
-  const urlError = searchParams.get("error")
-  const [email, setEmail] = useState(demoAccounts[0].email)
-  const [password, setPassword] = useState(demoAccounts[0].password)
-  const [selectedDemo, setSelectedDemo] = useState(demoAccounts[0].label)
-  const [error, setError] = useState<string | null>(
-    urlError ? "We could not sign you in. Please try again." : null
-  )
-  const [loading, setLoading] = useState(false)
+export function StaticLogin() {
+  const [selectedEmail, setSelectedEmail] = useState(DEMO_ACCOUNTS[0].email)
+  const [password, setPassword] = useState(DEMO_PASSWORD)
+  const [error, setError] = useState<string | null>(null)
 
-  const selectedRole = useMemo(
-    () => demoAccounts.find((account) => account.label === selectedDemo),
-    [selectedDemo]
+  const selectedAccount = useMemo(
+    () =>
+      DEMO_ACCOUNTS.find((account) => account.email === selectedEmail) ??
+      DEMO_ACCOUNTS[0],
+    [selectedEmail]
   )
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setError(null)
-    setLoading(true)
 
-    try {
-      const result = await signIn("credentials", {
-        email,
-        password,
-        redirect: false,
-        callbackUrl,
-      })
+    const account = DEMO_ACCOUNTS.find(
+      (demoAccount) =>
+        demoAccount.email.toLowerCase() === selectedEmail.trim().toLowerCase()
+    )
 
-      if (result?.error) {
-        setError("Those credentials did not match an NGC Enterprise user.")
-        return
-      }
-
-      router.push(result?.url ?? callbackUrl)
-      router.refresh()
-    } catch {
-      setError(
-        "Demo sign-in is not wired to NextAuth yet. The app shell is using a temporary local session."
-      )
-    } finally {
-      setLoading(false)
+    if (!account || password !== DEMO_PASSWORD) {
+      setError(`Use one of the demo emails and password "${DEMO_PASSWORD}".`)
+      return
     }
+
+    setDemoSession(account)
+    window.location.assign(`${appBasePath()}${roleHome(account.role)}`)
   }
 
   return (
@@ -112,27 +75,22 @@ function LoginContent() {
           </Link>
 
           <div className="max-w-3xl py-16 lg:py-0">
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="space-y-8"
-            >
+            <div className="space-y-8">
               <Badge className="h-8 gap-2 bg-blue-100 px-3 text-blue-700 dark:bg-blue-950 dark:text-blue-200">
                 <ShieldCheck className="size-4" />
-                Shop-first service command center
+                GitHub Pages demo - data is simulated locally.
               </Badge>
               <div className="space-y-5">
                 <h1 className="max-w-3xl text-balance text-5xl font-black tracking-[-0.055em] text-slate-950 sm:text-7xl lg:text-8xl dark:text-white">
                   NGC Enterprise
                 </h1>
                 <p className="max-w-2xl text-pretty text-xl font-medium leading-8 text-slate-600 sm:text-2xl dark:text-slate-300">
-                  Pickup, repair, deliver, and grow every shop job from one
-                  calm operations platform.
+                  Explore a full shop workflow for Neighborhood Golf Carts:
+                  intake, bays, dispatch, invoices, and lithium growth.
                 </p>
               </div>
               <div className="grid max-w-2xl gap-3 sm:grid-cols-3">
-                {["Live shop board", "Role-based work", "Revenue visibility"].map(
+                {["Local demo login", "No API runtime", "Rich NGC data"].map(
                   (item) => (
                     <div
                       key={item}
@@ -144,52 +102,56 @@ function LoginContent() {
                   )
                 )}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           <div className="hidden items-center gap-3 text-sm text-slate-500 lg:flex dark:text-slate-400">
             <Wrench className="size-4 text-primary" />
-            Built for shop-based service operations.
+            Shop-only service operations in Covington, LA.
           </div>
         </section>
 
         <section className="flex items-center justify-center px-6 pb-10 sm:px-10 lg:px-12 lg:py-12">
-          <motion.div
-            initial={{ opacity: 0, y: 22, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.55, delay: 0.08, ease: "easeOut" }}
-            className="w-full max-w-md rounded-[2rem] border border-white/80 bg-white/82 p-5 shadow-2xl shadow-blue-900/10 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/72 dark:shadow-black/30 sm:p-7"
-          >
+          <div className="w-full max-w-md rounded-[2rem] border border-white/80 bg-white/82 p-5 shadow-2xl shadow-blue-900/10 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/72 dark:shadow-black/30 sm:p-7">
             <div className="mb-7 space-y-2">
-              <p className="text-sm font-semibold text-primary">
-                Welcome back
-              </p>
+              <p className="text-sm font-semibold text-primary">Static demo</p>
               <h2 className="text-2xl font-bold tracking-tight">
-                Sign in to the shop
+                Choose a shop role
               </h2>
               <p className="text-sm leading-6 text-muted-foreground">
-                Choose a demo role or enter your NGC Enterprise credentials.
+                Password for every demo role is{" "}
+                <span className="font-mono font-semibold text-foreground">
+                  {DEMO_PASSWORD}
+                </span>
+                .
               </p>
             </div>
 
             <div className="mb-6 grid grid-cols-2 gap-2">
-              {demoAccounts.map((account) => (
+              {DEMO_ACCOUNTS.map((account) => (
                 <Button
-                  key={account.label}
+                  key={account.email}
                   type="button"
-                  variant={selectedDemo === account.label ? "default" : "outline"}
+                  variant={
+                    selectedEmail === account.email ? "default" : "outline"
+                  }
                   className={cn(
-                    "h-10 justify-start rounded-xl",
-                    selectedDemo !== account.label && "bg-white/60 dark:bg-white/5"
+                    "h-auto min-h-11 justify-start rounded-xl py-2 text-left",
+                    selectedEmail !== account.email &&
+                      "bg-white/60 dark:bg-white/5"
                   )}
                   onClick={() => {
-                    setSelectedDemo(account.label)
-                    setEmail(account.email)
-                    setPassword(account.password)
+                    setSelectedEmail(account.email)
+                    setPassword(DEMO_PASSWORD)
                     setError(null)
                   }}
                 >
-                  {account.label}
+                  <span>
+                    <span className="block font-semibold">{account.label}</span>
+                    <span className="block text-[11px] opacity-75">
+                      {account.role.replaceAll("_", " ").toLowerCase()}
+                    </span>
+                  </span>
                 </Button>
               ))}
             </div>
@@ -204,11 +166,10 @@ function LoginContent() {
                     autoComplete="email"
                     className="h-11 rounded-xl bg-white/70 pl-10 dark:bg-white/5"
                     inputMode="email"
-                    onChange={(event) => setEmail(event.target.value)}
-                    placeholder="owner@ngcgolfcarts.com"
+                    onChange={(event) => setSelectedEmail(event.target.value)}
                     required
                     type="email"
-                    value={email}
+                    value={selectedEmail}
                   />
                 </div>
               </div>
@@ -222,7 +183,6 @@ function LoginContent() {
                     autoComplete="current-password"
                     className="h-11 rounded-xl bg-white/70 pl-10 dark:bg-white/5"
                     onChange={(event) => setPassword(event.target.value)}
-                    placeholder="Enter password"
                     required
                     type="password"
                     value={password}
@@ -236,56 +196,22 @@ function LoginContent() {
                 </div>
               ) : (
                 <div className="rounded-2xl border border-blue-100 bg-blue-50/70 px-4 py-3 text-sm leading-6 text-blue-700 dark:border-blue-950 dark:bg-blue-950/40 dark:text-blue-200">
-                  {selectedRole?.label} demo fills a ready-to-test shop role.
+                  {selectedAccount.label} opens at{" "}
+                  <span className="font-semibold">
+                    {roleHome(selectedAccount.role)}
+                  </span>
+                  .
                 </div>
               )}
 
-              <Button
-                className="h-11 w-full rounded-xl text-base font-semibold"
-                disabled={loading}
-                type="submit"
-              >
-                {loading ? (
-                  <>
-                    <Loader2 className="size-4 animate-spin" />
-                    Signing in...
-                  </>
-                ) : (
-                  <>
-                    Open NGC Enterprise
-                    <ArrowRight className="size-4" />
-                  </>
-                )}
+              <Button className="h-11 w-full rounded-xl text-base font-semibold">
+                Open static demo
+                <ArrowRight className="size-4" />
               </Button>
             </form>
-
-            <p className="mt-6 text-center text-sm text-muted-foreground">
-              Need an account?{" "}
-              <Link href="/signup" className="font-semibold text-primary">
-                Request access
-              </Link>
-            </p>
-          </motion.div>
+          </div>
         </section>
       </div>
     </main>
-  )
-}
-
-export default function LoginPage() {
-  if (isStaticExport()) {
-    return <StaticLogin />
-  }
-
-  return (
-    <Suspense
-      fallback={
-        <div className="flex min-h-svh items-center justify-center bg-background">
-          <Loader2 className="size-6 animate-spin text-primary" />
-        </div>
-      }
-    >
-      <LoginContent />
-    </Suspense>
   )
 }

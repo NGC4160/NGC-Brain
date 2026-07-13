@@ -1,10 +1,16 @@
 import { NextResponse } from "next/server"
 
-import { auth } from "@/lib/auth"
-import { prisma } from "@/lib/db"
 import { formatCurrency } from "@/lib/utils"
 
 export async function GET(request: Request) {
+  if (process.env.NEXT_PUBLIC_STATIC_EXPORT === "1") {
+    return NextResponse.json({ results: [] })
+  }
+
+  const [{ auth }, { prisma }] = await Promise.all([
+    import("@/lib/auth"),
+    import("@/lib/db"),
+  ])
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

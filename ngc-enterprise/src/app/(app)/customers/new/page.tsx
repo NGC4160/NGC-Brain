@@ -1,3 +1,5 @@
+import { StaticCustomerNewPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { ArrowLeft, Save, UserPlus } from "lucide-react"
 
@@ -18,6 +20,10 @@ import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 export default function NewCustomerPage() {
+
+  if (isStaticExport()) {
+    return <StaticCustomerNewPage />
+  }
   return (
     <div className="space-y-6">
       <PageHeader

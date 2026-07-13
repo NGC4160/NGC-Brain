@@ -1,3 +1,5 @@
+import { StaticSettingsPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { Role } from "@prisma/client"
 import type { LucideIcon } from "lucide-react"
 import {
@@ -53,6 +55,10 @@ function jsonSummary(value: unknown) {
 }
 
 export default async function SettingsPage() {
+  if (isStaticExport()) {
+    return <StaticSettingsPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

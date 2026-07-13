@@ -1,3 +1,5 @@
+import { StaticShopFloorPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { WorkOrderStatus } from "@prisma/client"
 import { Activity, AlertTriangle, Clock3, Wrench } from "lucide-react"
 
@@ -42,6 +44,10 @@ function equipmentLabel(
 }
 
 export default async function ShopFloorPage() {
+  if (isStaticExport()) {
+    return <StaticShopFloorPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

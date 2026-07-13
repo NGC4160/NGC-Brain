@@ -1,3 +1,6 @@
+import { StaticWorkOrderDetailPage } from "@/components/demo/static-app-pages"
+import { demoWorkOrders } from "@/lib/demo-data"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import {
@@ -39,6 +42,13 @@ import {
 import { auth } from "@/lib/auth"
 import { prisma } from "@/lib/db"
 import { cn, formatCurrency, formatDate, formatDateTime } from "@/lib/utils"
+
+
+export function generateStaticParams() {
+  if (!isStaticExport()) return []
+
+  return demoWorkOrders.map((workOrder) => ({ id: workOrder.id }))
+}
 
 type WorkOrderDetailPageProps = {
   params: Promise<{ id: string }>
@@ -87,9 +97,14 @@ function checklistItems(value: unknown): ChecklistItem[] {
 export default async function WorkOrderDetailPage({
   params,
 }: WorkOrderDetailPageProps) {
+  const { id } = await params
+
+  if (isStaticExport()) {
+    return <StaticWorkOrderDetailPage id={id} />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
-  const { id } = await params
 
   if (!organizationId) {
     return (

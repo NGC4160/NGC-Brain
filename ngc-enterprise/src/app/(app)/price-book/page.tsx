@@ -1,3 +1,5 @@
+import { StaticPriceBookPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { LineItemType } from "@prisma/client"
 import { BookOpen, Calculator, Plus, Search, Star } from "lucide-react"
 
@@ -34,6 +36,10 @@ export default async function PriceBookPage({
 }: {
   searchParams?: SearchParams
 }) {
+  if (isStaticExport()) {
+    return <StaticPriceBookPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
   const params = await searchParams

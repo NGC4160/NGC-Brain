@@ -1,5 +1,7 @@
 "use client"
 
+import { StaticBookPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { useState } from "react"
 import Link from "next/link"
 import { CalendarCheck, MapPin, Truck, Wrench } from "lucide-react"
@@ -10,6 +12,10 @@ import { Textarea } from "@/components/ui/textarea"
 
 export default function BookingPage() {
   const [submitted, setSubmitted] = useState(false)
+
+  if (isStaticExport()) {
+    return <StaticBookPage />
+  }
 
   if (submitted) {
     return (

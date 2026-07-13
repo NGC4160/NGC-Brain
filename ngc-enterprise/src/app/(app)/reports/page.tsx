@@ -1,3 +1,5 @@
+import { StaticReportsPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { LineItemType, WorkOrderStatus } from "@prisma/client"
 import { BarChart3 } from "lucide-react"
 
@@ -63,6 +65,10 @@ function seedData(): ReportsDashboardData {
 }
 
 export default async function ReportsPage() {
+  if (isStaticExport()) {
+    return <StaticReportsPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

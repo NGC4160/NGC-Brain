@@ -1,3 +1,5 @@
+import { StaticWorkOrderNewPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { ArrowLeft, Save, Wrench } from "lucide-react"
 
@@ -26,6 +28,10 @@ type NewWorkOrderPageProps = {
 export default async function NewWorkOrderPage({
   searchParams,
 }: NewWorkOrderPageProps) {
+  if (isStaticExport()) {
+    return <StaticWorkOrderNewPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
   const params = await searchParams

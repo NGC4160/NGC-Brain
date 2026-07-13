@@ -7,6 +7,8 @@ This repository contains:
 
 ## NGC Enterprise
 
+**Live demo (GitHub Pages):** https://ngc4160.github.io/NGC-Brain/enterprise/
+
 ```bash
 cd ngc-enterprise
 npm install

@@ -1,3 +1,5 @@
+import { StaticLeadsPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { Handshake, Plus } from "lucide-react"
 import { LeadStatus } from "@prisma/client"
@@ -28,6 +30,10 @@ const columns = [
 ]
 
 export default async function LeadsPage() {
+  if (isStaticExport()) {
+    return <StaticLeadsPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

@@ -1,3 +1,5 @@
+import { StaticTeamPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { Role } from "@prisma/client"
 import { ShieldCheck, UserCog, Users, Wrench } from "lucide-react"
 
@@ -25,6 +27,10 @@ const roleLabels: Record<Role, string> = {
 const driverRoles = new Set<Role>([Role.PICKUP_DRIVER, Role.DELIVERY_DRIVER])
 
 export default async function TeamPage() {
+  if (isStaticExport()) {
+    return <StaticTeamPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

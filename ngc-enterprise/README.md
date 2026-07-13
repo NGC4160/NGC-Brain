@@ -43,6 +43,17 @@ Built for Neighborhood Golf Carts and any shop that receives, diagnoses, repairs
 
 ---
 
+## Live demo (GitHub Pages)
+
+**URL:** [https://ngc4160.github.io/NGC-Brain/enterprise/](https://ngc4160.github.io/NGC-Brain/enterprise/)
+
+Static interactive demo (no database). Login with any demo account / password `demo1234`.  
+Full Postgres + Auth.js stack still runs locally or on Vercel/Railway via the steps below.
+
+Deploy workflow: `.github/workflows/enterprise-pages.yml` → `gh-pages` branch folder `enterprise/`.
+
+---
+
 ## Quick Start
 
 ### Prerequisites

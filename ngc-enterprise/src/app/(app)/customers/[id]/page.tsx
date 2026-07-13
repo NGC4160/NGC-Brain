@@ -1,3 +1,6 @@
+import { StaticCustomerDetailPage } from "@/components/demo/static-app-pages"
+import { demoCustomers } from "@/lib/demo-data"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import {
@@ -40,6 +43,13 @@ import { auth } from "@/lib/auth"
 import { prisma } from "@/lib/db"
 import { cn, formatCurrency, formatDate, formatDateTime } from "@/lib/utils"
 
+
+export function generateStaticParams() {
+  if (!isStaticExport()) return []
+
+  return demoCustomers.map((customer) => ({ id: customer.id }))
+}
+
 type CustomerDetailPageProps = {
   params: Promise<{ id: string }>
 }
@@ -47,9 +57,14 @@ type CustomerDetailPageProps = {
 export default async function CustomerDetailPage({
   params,
 }: CustomerDetailPageProps) {
+  const { id } = await params
+
+  if (isStaticExport()) {
+    return <StaticCustomerDetailPage id={id} />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
-  const { id } = await params
 
   if (!organizationId) {
     return (

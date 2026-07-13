@@ -1,3 +1,5 @@
+import { StaticEstimatesPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { FileText, Plus } from "lucide-react"
 import { EstimateStatus } from "@prisma/client"
@@ -20,6 +22,10 @@ import { prisma } from "@/lib/db"
 import { cn, formatCurrency, formatDate } from "@/lib/utils"
 
 export default async function EstimatesPage() {
+  if (isStaticExport()) {
+    return <StaticEstimatesPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

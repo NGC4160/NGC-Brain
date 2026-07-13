@@ -1,0 +1,59 @@
+name: Deploy NGC Enterprise Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "ngc-enterprise/**"
+      - ".github/workflows/enterprise-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ngc-enterprise
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: ngc-enterprise/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        env:
+          # prisma generate during postinstall — no live DB needed
+          DATABASE_URL: postgresql://ngc:ngc@localhost:5432/ngc_enterprise?schema=public
+
+      - name: Build static GitHub Pages export
+        run: npm run export:pages
+        env:
+          DATABASE_URL: postgresql://ngc:ngc@localhost:5432/ngc_enterprise?schema=public
+          AUTH_SECRET: github-pages-static-demo-secret-not-used
+          NEXT_PUBLIC_STATIC_EXPORT: "1"
+          NEXT_PUBLIC_BASE_PATH: /NGC-Brain/enterprise
+
+      - name: Add .nojekyll for _next assets
+        run: touch out/.nojekyll
+
+      - name: Deploy to gh-pages/enterprise
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ngc-enterprise/out
+          target-folder: enterprise
+          branch: gh-pages
+          clean: false
+          commit-message: "Deploy NGC Enterprise static demo @ ${{ github.sha }}"

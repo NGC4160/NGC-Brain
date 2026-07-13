@@ -1,3 +1,5 @@
+import { StaticDispatchPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { DispatchStatus, Role } from "@prisma/client"
 import { CalendarClock, MapPinned, Route, Truck } from "lucide-react"
 
@@ -54,6 +56,10 @@ function windowLabel(start?: Date | null, end?: Date | null) {
 }
 
 export default async function DispatchPage() {
+  if (isStaticExport()) {
+    return <StaticDispatchPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

@@ -1,3 +1,5 @@
+import { StaticDashboardPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import {
   AlertTriangle,
@@ -111,6 +113,10 @@ function buildRevenueChart(
 }
 
 export default async function DashboardPage() {
+  if (isStaticExport()) {
+    return <StaticDashboardPage />
+  }
+
   const session = await auth()
   const user = session?.user
   const organizationId = user?.organizationId

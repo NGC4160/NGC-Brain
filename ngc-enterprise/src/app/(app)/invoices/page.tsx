@@ -1,3 +1,5 @@
+import { StaticInvoicesPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { ReceiptText } from "lucide-react"
 import { InvoiceStatus } from "@prisma/client"
@@ -19,6 +21,10 @@ import { prisma } from "@/lib/db"
 import { formatCurrency, formatDate } from "@/lib/utils"
 
 export default async function InvoicesPage() {
+  if (isStaticExport()) {
+    return <StaticInvoicesPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

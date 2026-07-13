@@ -1,3 +1,6 @@
+import { StaticInvoiceDetailPage } from "@/components/demo/static-app-pages"
+import { demoInvoices } from "@/lib/demo-data"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowLeft, CreditCard, ReceiptText, UserRound, Wrench } from "lucide-react"
@@ -31,6 +34,13 @@ import { auth } from "@/lib/auth"
 import { prisma } from "@/lib/db"
 import { cn, formatCurrency, formatDate, formatDateTime } from "@/lib/utils"
 
+
+export function generateStaticParams() {
+  if (!isStaticExport()) return []
+
+  return demoInvoices.map((invoice) => ({ id: invoice.id }))
+}
+
 type InvoiceDetailPageProps = {
   params: Promise<{ id: string }>
 }
@@ -38,9 +48,14 @@ type InvoiceDetailPageProps = {
 export default async function InvoiceDetailPage({
   params,
 }: InvoiceDetailPageProps) {
+  const { id } = await params
+
+  if (isStaticExport()) {
+    return <StaticInvoiceDetailPage id={id} />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
-  const { id } = await params
 
   if (!organizationId) {
     return (

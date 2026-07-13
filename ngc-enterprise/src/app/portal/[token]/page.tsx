@@ -1,3 +1,5 @@
+import { StaticPortalPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import {
@@ -19,6 +21,12 @@ import { prisma } from "@/lib/db"
 import { cn, formatCurrency, formatDate, formatDateTime } from "@/lib/utils"
 
 type PortalParams = Promise<{ token: string }>
+
+export function generateStaticParams() {
+  if (!isStaticExport()) return []
+
+  return [{ token: "demo-portal" }]
+}
 
 const tracker = [
   { key: "RECEIVED", label: "Received", icon: PackageCheck },
@@ -46,6 +54,11 @@ export default async function CustomerPortalPage({
   params: PortalParams
 }) {
   const { token } = await params
+
+  if (isStaticExport()) {
+    return <StaticPortalPage token={token} />
+  }
+
   if (!token) notFound()
 
   const customer = await prisma.customer.findUnique({

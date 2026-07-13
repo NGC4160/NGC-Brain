@@ -1,3 +1,5 @@
+import { StaticCommunicationsPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { MessageChannel } from "@prisma/client"
 import { Mail, MessageSquare, Send, Smartphone, Sparkles } from "lucide-react"
 
@@ -16,6 +18,10 @@ const channelIcons = {
 }
 
 export default async function CommunicationsPage() {
+  if (isStaticExport()) {
+    return <StaticCommunicationsPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

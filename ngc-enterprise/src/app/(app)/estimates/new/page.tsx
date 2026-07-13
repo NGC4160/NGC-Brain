@@ -1,3 +1,5 @@
+import { StaticEstimateNewPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import Link from "next/link"
 import { ArrowLeft, FileText, Save } from "lucide-react"
 
@@ -20,6 +22,10 @@ import { prisma } from "@/lib/db"
 import { cn } from "@/lib/utils"
 
 export default async function NewEstimatePage() {
+  if (isStaticExport()) {
+    return <StaticEstimateNewPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

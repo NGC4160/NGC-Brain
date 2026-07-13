@@ -1,3 +1,5 @@
+import { StaticInventoryPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { AlertTriangle, Boxes, ClipboardList, Package, RefreshCw } from "lucide-react"
 
 import { EmptyState } from "@/components/shared/empty-state"
@@ -11,6 +13,10 @@ import { prisma } from "@/lib/db"
 import { formatCurrency } from "@/lib/utils"
 
 export default async function InventoryPage() {
+  if (isStaticExport()) {
+    return <StaticInventoryPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

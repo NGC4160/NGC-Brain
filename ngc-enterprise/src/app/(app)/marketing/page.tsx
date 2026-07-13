@@ -1,3 +1,5 @@
+import { StaticMarketingPage } from "@/components/demo/static-app-pages"
+import { isStaticExport } from "@/lib/static"
 import { LeadStatus } from "@prisma/client"
 import { Gift, Megaphone, MessageSquareHeart, Star, Target, TrendingUp } from "lucide-react"
 
@@ -9,6 +11,10 @@ import { prisma } from "@/lib/db"
 import { formatCurrency } from "@/lib/utils"
 
 export default async function MarketingPage() {
+  if (isStaticExport()) {
+    return <StaticMarketingPage />
+  }
+
   const session = await auth()
   const organizationId = session?.user?.organizationId
 

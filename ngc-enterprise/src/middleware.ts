@@ -41,6 +41,10 @@ function hasSessionCookie(request: NextRequest) {
 }
 
 export function middleware(request: NextRequest) {
+  if (process.env.NEXT_PUBLIC_STATIC_EXPORT === "1") {
+    return NextResponse.next()
+  }
+
   const { pathname } = request.nextUrl
 
   if (pathname === "/" || startsWithAny(pathname, publicPrefixes)) {
