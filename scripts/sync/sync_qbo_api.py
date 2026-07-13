@@ -129,12 +129,6 @@ def main() -> int:
         write_json("company_test.json", test)
         name = test.get("company_name") or "(unknown)"
         print(f"  OK — connected to {name} (realm {client.realm_id}, {client.environment})")
-        if client.environment == "production" and str(client.realm_id).startswith("9130"):
-            print(
-                "  NOTE: Realm looks like a sandbox company. "
-                "Re-authorize against live Neighborhood Golf Carts for real P&L.",
-                file=sys.stderr,
-            )
     except Exception as e:
         print(f"  FAIL: {e}", file=sys.stderr)
         write_json("company_test.json", {"ok": False, "error": str(e)})
