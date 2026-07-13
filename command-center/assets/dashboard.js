@@ -89,9 +89,9 @@ async function initDashboard() {
 
     const links = ops.live_files || {};
     const linkHtml = [
-      links.shop_board && `<a href="view.html?path=live/shop_board.md">Shop Board →</a>`,
-      links.deposit_alerts && `<a href="view.html?path=live/deposit_alerts.md">Deposit Alerts →</a>`,
-      links.sync_manifest && `<a href="view.html?path=live/sync_manifest.json">Sync Manifest →</a>`,
+      links.shop_board && `<a href="index.html?doc=${encodeURIComponent("live/shop_board.md")}">Shop Board →</a>`,
+      links.deposit_alerts && `<a href="index.html?doc=${encodeURIComponent("live/deposit_alerts.md")}">Deposit Alerts →</a>`,
+      links.sync_manifest && `<a href="index.html?doc=${encodeURIComponent("live/sync_manifest.json")}">Sync Manifest →</a>`,
     ]
       .filter(Boolean)
       .join(" · ");

@@ -5,24 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="ngc-base" content="./" />
+  <meta name="theme-color" content="#080b10" />
   <title>Operations Dashboard — NGC Command Center</title>
   <link rel="stylesheet" href="assets/command.css" />
 </head>
 <body>
-  <div class="grid-bg" aria-hidden="true"></div>
-  <div class="scanline" aria-hidden="true"></div>
+  <div class="aura" aria-hidden="true"></div>
 
   <div id="login-gate" class="login-gate hidden">
     <div class="login-panel">
       <img class="login-logo" src="assets/ngc-logo.png" alt="NGC" />
-      <h1>NGC Command Center</h1>
-      <p class="subtitle">Authorized access only</p>
+      <h1>Command Center</h1>
       <form id="login-form">
-        <label for="login-user">Operator</label>
-        <select id="login-user"><option value="Ryan">Ryan White</option><option value="Christine">Christine White</option></select>
-        <label for="login-password">Access Code</label>
+        <select id="login-user"><option value="Ryan">Ryan</option><option value="Christine">Christine</option></select>
         <input id="login-password" type="password" required />
-        <button type="submit">Initialize Session</button>
+        <button type="submit">Enter</button>
         <p id="login-error" class="login-error"></p>
       </form>
     </div>
@@ -44,45 +41,36 @@
 
     <main class="dashboard-main">
       <p id="dashboard-error" style="color:var(--red)"></p>
-      <p id="jobs-synced" style="color:var(--muted);font-size:0.88rem;margin-bottom:1rem"></p>
-      <p id="live-links" style="margin-bottom:1.25rem;font-size:0.9rem"></p>
+      <p id="jobs-synced" style="color:var(--text-muted);font-size:0.85rem;margin-bottom:0.75rem"></p>
+      <p id="live-links" style="margin-bottom:1rem;font-size:0.875rem"></p>
 
       <div class="dashboard-grid">
         <section class="panel span-4">
           <h2>Shop WIP</h2>
           <div class="wip-gauge" id="wip-gauge">—</div>
         </section>
-
         <section class="panel span-4">
-          <h2>Pipeline Queue</h2>
+          <h2>Queue</h2>
           <div class="sync-grid">
             <div class="sync-item"><strong>Scheduled</strong><span id="metric-scheduled">—</span></div>
-            <div class="sync-item"><strong>Needs Scheduling</strong><span id="metric-needs-sched">—</span></div>
-            <div class="sync-item"><strong>Deposit Alerts</strong><span id="metric-deposits">—</span></div>
+            <div class="sync-item"><strong>Needs Sched</strong><span id="metric-needs-sched">—</span></div>
+            <div class="sync-item"><strong>Deposits</strong><span id="metric-deposits">—</span></div>
           </div>
         </section>
-
         <section class="panel span-4">
           <h2>Data Sync</h2>
           <div id="sync-panel">Loading…</div>
         </section>
-
         <section class="panel span-6">
-          <h2>Lithium At Risk (&gt;3 days)</h2>
+          <h2>Lithium at risk (&gt;3 days)</h2>
           <ul class="alert-list" id="lithium-alerts"></ul>
         </section>
-
         <section class="panel span-6">
           <h2>Stale WIP (15+ days)</h2>
           <ul class="alert-list" id="stale-alerts"></ul>
         </section>
       </div>
     </main>
-
-    <footer class="footer-bar">
-      <span class="classified">◆ LIVE OPS ◆</span>
-      <p>Regenerate: <code>./scripts/sync/run_hcp_sync.sh</code></p>
-    </footer>
   </div>
 
   <script src="assets/auth-config.js"></script>

@@ -5,52 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="ngc-base" content="./" />
+  <meta name="theme-color" content="#080b10" />
   <title>Document — NGC Command Center</title>
   <link rel="stylesheet" href="assets/command.css" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body data-page="viewer">
-  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="aura" aria-hidden="true"></div>
 
   <div id="login-gate" class="login-gate hidden">
     <div class="login-panel">
       <img class="login-logo" src="assets/ngc-logo.png" alt="NGC" />
-      <h1>NGC Command Center</h1>
+      <h1>Command Center</h1>
       <form id="login-form">
         <label for="login-user">Operator</label>
         <select id="login-user"><option value="Ryan">Ryan</option><option value="Christine">Christine</option></select>
-        <label for="login-password">Access Code</label>
+        <label for="login-password">Access code</label>
         <input id="login-password" type="password" required />
-        <button type="submit">Initialize Session</button>
+        <button type="submit">Enter</button>
         <p id="login-error" class="login-error"></p>
       </form>
     </div>
   </div>
 
-  <header class="viewer-header">
-    <a href="index.html">← Command Center</a>
-    <div>
-      <strong id="doc-title">Loading…</strong>
-      <div class="path" id="doc-path"></div>
+  <div class="shell">
+    <header class="viewer-header">
+      <a href="index.html" class="doc-back">← Command Center</a>
+      <h2 id="doc-title" style="flex:1;margin:0;font-size:1rem;font-weight:700">Loading…</h2>
+      <button class="btn-ghost" id="logout-btn" type="button">Logout</button>
+    </header>
+    <div class="viewer-body" id="doc-content">
+      <div class="doc-loading"><div class="doc-spinner"></div><p>Loading document…</p></div>
     </div>
-    <button class="btn-ghost" id="logout-btn" type="button" style="margin-left:auto">Logout</button>
-  </header>
-
-  <div class="viewer-body">
-    <article class="markdown" id="markdown-content">
-      <p class="viewer-loading">Loading document…</p>
-    </article>
   </div>
 
+  <script src="assets/marked.min.js"></script>
   <script src="assets/auth-config.js"></script>
   <script src="assets/auth.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="assets/doc-reader.js"></script>
   <script>
     document.getElementById("logout-btn")?.addEventListener("click", () => window.NGCAuth?.logout());
-    window.onAuthSuccess = () => { if (typeof initViewer === "function") initViewer(); };
+
+    async function initViewer() {
+      const params = new URLSearchParams(window.location.search);
+      const path = params.get("path");
+      if (!path) {
+        window.location.href = "index.html";
+        return;
+      }
+      const titleEl = document.getElementById("doc-title");
+      const contentEl = document.getElementById("doc-content");
+      const manifest = await NGCDoc.loadManifest();
+      await NGCDoc.renderInto(path, titleEl, contentEl, manifest);
+      NGCDoc.bindInlineLinks(contentEl, (p) => {
+        window.location.href = `view.html?path=${encodeURIComponent(p)}`;
+      });
+    }
+
+    window.onAuthSuccess = initViewer;
     document.addEventListener("DOMContentLoaded", () => {
-      if (window.NGCAuth?.isAuthed() && typeof initViewer === "function") initViewer();
+      if (window.NGCAuth?.isAuthed()) initViewer();
     });
   </script>
 </body>

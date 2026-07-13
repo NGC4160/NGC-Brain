@@ -5,24 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="ngc-base" content="./" />
+  <meta name="theme-color" content="#080b10" />
   <title>Full Index — NGC Command Center</title>
   <link rel="stylesheet" href="assets/command.css" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .item-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.65rem; }
+    .section-head { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; }
+    .section-desc { color: var(--text-secondary); font-size: 0.85rem; margin: 0 0 1rem; }
+    .nav-sections { list-style: none; margin: 0; padding: 0; }
+    .nav-sections a { display: block; padding: 0.4rem 0.5rem; border-radius: 6px; color: var(--text-secondary); font-size: 0.85rem; }
+    .nav-sections a.active, .nav-sections a:hover { background: var(--glass); color: var(--text); }
+    .sidebar-stats { margin-top: 0.75rem; font-size: 0.75rem; color: var(--text-muted); }
+    #explore-doc-overlay { position: fixed; inset: 0; z-index: 9000; }
+  </style>
 </head>
 <body class="explore-shell">
-  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="aura" aria-hidden="true"></div>
 
   <div id="login-gate" class="login-gate hidden">
     <div class="login-panel">
       <img class="login-logo" src="assets/ngc-logo.png" alt="NGC" />
-      <h1>NGC Command Center</h1>
-      <p class="subtitle">Authorized access only</p>
+      <h1>Command Center</h1>
       <form id="login-form">
-        <label for="login-user">Operator</label>
-        <select id="login-user"><option value="Ryan">Ryan White</option><option value="Christine">Christine White</option></select>
-        <label for="login-password">Access Code</label>
-        <input id="login-password" type="password" required />
-        <button type="submit">Initialize Session</button>
+        <select id="login-user"><option value="Ryan">Ryan</option><option value="Christine">Christine</option></select>
+        <input id="login-password" type="password" placeholder="Access code" required />
+        <button type="submit">Enter</button>
         <p id="login-error" class="login-error"></p>
       </form>
     </div>
@@ -43,18 +50,20 @@
 
   <div class="layout">
     <aside class="sidebar">
-      <label for="search">Search deliverables</label>
-      <input id="search" type="search" placeholder="lithium, prompts, HCP…" autocomplete="off" />
+      <label for="search" style="font-size:0.75rem;font-weight:600;color:var(--text-muted)">Search</label>
+      <input id="search" type="search" placeholder="lithium, prompts…" autocomplete="off" />
       <nav aria-label="Sections"><ul class="nav-sections" id="nav-sections"></ul></nav>
       <div class="sidebar-stats" id="stats">Loading…</div>
     </aside>
     <main class="main-content">
-      <div id="sections"><p class="viewer-loading">Loading…</p></div>
+      <div id="sections"><p class="doc-loading">Loading…</p></div>
     </main>
   </div>
 
+  <script src="assets/marked.min.js"></script>
   <script src="assets/auth-config.js"></script>
   <script src="assets/auth.js"></script>
+  <script src="assets/doc-reader.js"></script>
   <script src="assets/app.js"></script>
   <script>
     document.getElementById("logout-btn")?.addEventListener("click", () => window.NGCAuth?.logout());
