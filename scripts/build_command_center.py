@@ -228,6 +228,14 @@ def build_systems() -> list[dict]:
             "icon": "📁",
         },
         {
+            "id": "enterprise",
+            "name": "NGC Enterprise",
+            "role": "Shop ops demo · Pickup · Repair · Deliver",
+            "url": "https://ngc4160.github.io/NGC-Brain/enterprise/",
+            "status": "online",
+            "icon": "🛠️",
+        },
+        {
             "id": "cursor",
             "name": "NGC Business Brain",
             "role": "Cursor AI workspace",

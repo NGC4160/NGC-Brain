@@ -4,6 +4,8 @@ Open this project in **Cursor** and chat with the AI to run and improve Neighbor
 
 **NGC Command Center:** [ngc4160.github.io/NGC-Brain/command-center](https://ngc4160.github.io/NGC-Brain/command-center/) — owners-only hub for live ops, systems, and everything being built. Setup: [`docs/COMMAND_CENTER.md`](docs/COMMAND_CENTER.md)
 
+**NGC Enterprise (shop platform demo):** [ngc4160.github.io/NGC-Brain/enterprise](https://ngc4160.github.io/NGC-Brain/enterprise/) — interactive static demo (login `owner@ngc.demo` / `demo1234`). Source: [`ngc-enterprise/`](ngc-enterprise/).
+
 ## Quick start (60 seconds)
 
 1. Open **Cursor** → open this folder as your workspace

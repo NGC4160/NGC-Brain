@@ -1,0 +1,217 @@
+"use client"
+
+import { useMemo, useState } from "react"
+import Link from "next/link"
+import {
+  ArrowRight,
+  CheckCircle2,
+  LockKeyhole,
+  Mail,
+  ShieldCheck,
+  Sparkles,
+  Wrench,
+} from "lucide-react"
+
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { appBasePath, DEMO_ACCOUNTS, DEMO_PASSWORD } from "@/lib/static"
+import { setDemoSession } from "@/lib/demo-session"
+import { cn } from "@/lib/utils"
+
+function roleHome(role: string) {
+  if (role === "DISPATCHER") return "/dispatch"
+  if (role === "PICKUP_DRIVER" || role === "DELIVERY_DRIVER") return "/driver"
+  if (role === "SHOP_TECHNICIAN") return "/shop-floor"
+  return "/dashboard"
+}
+
+export function StaticLogin() {
+  const [selectedEmail, setSelectedEmail] = useState(DEMO_ACCOUNTS[0].email)
+  const [password, setPassword] = useState(DEMO_PASSWORD)
+  const [error, setError] = useState<string | null>(null)
+
+  const selectedAccount = useMemo(
+    () =>
+      DEMO_ACCOUNTS.find((account) => account.email === selectedEmail) ??
+      DEMO_ACCOUNTS[0],
+    [selectedEmail]
+  )
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setError(null)
+
+    const account = DEMO_ACCOUNTS.find(
+      (demoAccount) =>
+        demoAccount.email.toLowerCase() === selectedEmail.trim().toLowerCase()
+    )
+
+    if (!account || password !== DEMO_PASSWORD) {
+      setError(`Use one of the demo emails and password "${DEMO_PASSWORD}".`)
+      return
+    }
+
+    setDemoSession(account)
+    window.location.assign(`${appBasePath()}${roleHome(account.role)}`)
+  }
+
+  return (
+    <main className="relative min-h-svh overflow-hidden bg-[linear-gradient(135deg,#eff6ff_0%,#f8fafc_42%,#e0f2fe_100%)] text-foreground dark:bg-[linear-gradient(135deg,#07111f_0%,#0a1626_48%,#082f49_100%)]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(37,99,235,0.18),transparent_28rem),radial-gradient(circle_at_85%_12%,rgba(14,165,233,0.14),transparent_24rem),linear-gradient(rgba(37,99,235,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,235,0.06)_1px,transparent_1px)] bg-[size:auto,auto,48px_48px,48px_48px]" />
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background/90 to-transparent" />
+
+      <div className="relative mx-auto grid min-h-svh w-full max-w-7xl grid-cols-1 lg:grid-cols-[1.08fr_0.92fr]">
+        <section className="flex min-h-[46svh] flex-col justify-between px-6 py-8 sm:px-10 lg:min-h-svh lg:px-12">
+          <Link
+            href="/"
+            className="flex w-fit items-center gap-3 rounded-full bg-white/70 px-3 py-2 text-sm font-semibold text-blue-800 shadow-sm ring-1 ring-blue-100 backdrop-blur dark:bg-white/10 dark:text-blue-100 dark:ring-white/10"
+          >
+            <span className="flex size-9 items-center justify-center rounded-full bg-primary text-primary-foreground">
+              <Sparkles className="size-4" />
+            </span>
+            NGC Enterprise
+          </Link>
+
+          <div className="max-w-3xl py-16 lg:py-0">
+            <div className="space-y-8">
+              <Badge className="h-8 gap-2 bg-blue-100 px-3 text-blue-700 dark:bg-blue-950 dark:text-blue-200">
+                <ShieldCheck className="size-4" />
+                GitHub Pages demo - data is simulated locally.
+              </Badge>
+              <div className="space-y-5">
+                <h1 className="max-w-3xl text-balance text-5xl font-black tracking-[-0.055em] text-slate-950 sm:text-7xl lg:text-8xl dark:text-white">
+                  NGC Enterprise
+                </h1>
+                <p className="max-w-2xl text-pretty text-xl font-medium leading-8 text-slate-600 sm:text-2xl dark:text-slate-300">
+                  Explore a full shop workflow for Neighborhood Golf Carts:
+                  intake, bays, dispatch, invoices, and lithium growth.
+                </p>
+              </div>
+              <div className="grid max-w-2xl gap-3 sm:grid-cols-3">
+                {["Local demo login", "No API runtime", "Rich NGC data"].map(
+                  (item) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-2 rounded-2xl bg-white/65 px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm ring-1 ring-blue-100 backdrop-blur dark:bg-white/10 dark:text-slate-200 dark:ring-white/10"
+                    >
+                      <CheckCircle2 className="size-4 text-primary" />
+                      {item}
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden items-center gap-3 text-sm text-slate-500 lg:flex dark:text-slate-400">
+            <Wrench className="size-4 text-primary" />
+            Shop-only service operations in Covington, LA.
+          </div>
+        </section>
+
+        <section className="flex items-center justify-center px-6 pb-10 sm:px-10 lg:px-12 lg:py-12">
+          <div className="w-full max-w-md rounded-[2rem] border border-white/80 bg-white/82 p-5 shadow-2xl shadow-blue-900/10 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/72 dark:shadow-black/30 sm:p-7">
+            <div className="mb-7 space-y-2">
+              <p className="text-sm font-semibold text-primary">Static demo</p>
+              <h2 className="text-2xl font-bold tracking-tight">
+                Choose a shop role
+              </h2>
+              <p className="text-sm leading-6 text-muted-foreground">
+                Password for every demo role is{" "}
+                <span className="font-mono font-semibold text-foreground">
+                  {DEMO_PASSWORD}
+                </span>
+                .
+              </p>
+            </div>
+
+            <div className="mb-6 grid grid-cols-2 gap-2">
+              {DEMO_ACCOUNTS.map((account) => (
+                <Button
+                  key={account.email}
+                  type="button"
+                  variant={
+                    selectedEmail === account.email ? "default" : "outline"
+                  }
+                  className={cn(
+                    "h-auto min-h-11 justify-start rounded-xl py-2 text-left",
+                    selectedEmail !== account.email &&
+                      "bg-white/60 dark:bg-white/5"
+                  )}
+                  onClick={() => {
+                    setSelectedEmail(account.email)
+                    setPassword(DEMO_PASSWORD)
+                    setError(null)
+                  }}
+                >
+                  <span>
+                    <span className="block font-semibold">{account.label}</span>
+                    <span className="block text-[11px] opacity-75">
+                      {account.role.replaceAll("_", " ").toLowerCase()}
+                    </span>
+                  </span>
+                </Button>
+              ))}
+            </div>
+
+            <form className="space-y-5" onSubmit={handleSubmit}>
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <div className="relative">
+                  <Mail className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                  <Input
+                    id="email"
+                    autoComplete="email"
+                    className="h-11 rounded-xl bg-white/70 pl-10 dark:bg-white/5"
+                    inputMode="email"
+                    onChange={(event) => setSelectedEmail(event.target.value)}
+                    required
+                    type="email"
+                    value={selectedEmail}
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="password">Password</Label>
+                <div className="relative">
+                  <LockKeyhole className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                  <Input
+                    id="password"
+                    autoComplete="current-password"
+                    className="h-11 rounded-xl bg-white/70 pl-10 dark:bg-white/5"
+                    onChange={(event) => setPassword(event.target.value)}
+                    required
+                    type="password"
+                    value={password}
+                  />
+                </div>
+              </div>
+
+              {error ? (
+                <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm leading-6 text-red-700 dark:border-red-950 dark:bg-red-950/40 dark:text-red-200">
+                  {error}
+                </div>
+              ) : (
+                <div className="rounded-2xl border border-blue-100 bg-blue-50/70 px-4 py-3 text-sm leading-6 text-blue-700 dark:border-blue-950 dark:bg-blue-950/40 dark:text-blue-200">
+                  {selectedAccount.label} opens at{" "}
+                  <span className="font-semibold">
+                    {roleHome(selectedAccount.role)}
+                  </span>
+                  .
+                </div>
+              )}
+
+              <Button className="h-11 w-full rounded-xl text-base font-semibold">
+                Open static demo
+                <ArrowRight className="size-4" />
+              </Button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+  )
+}

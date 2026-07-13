@@ -31,11 +31,13 @@ Send her:
 | Zone | What it does |
 |------|----------------|
 | **Live Ops** | Operations dashboard, shop board, deposit alerts |
-| **Systems** | One-click to HCP, QBO, website, Google Business, Drive |
+| **Systems** | One-click to HCP, QBO, website, Google Business, Drive, **NGC Enterprise** demo |
 | **Daily Rhythm** | Morning briefing, EOD, weekly review, throughput SOPs |
 | **Build Pipeline** | Visual P1/P2/P3 backlog — everything being built |
 | **Knowledge Base** | Full business brain docs |
 | **Tools & Forms** | HR form, Cursor setup, automation playbooks |
+
+**NGC Enterprise demo:** https://ngc4160.github.io/NGC-Brain/enterprise/ (static shop ops UI — `owner@ngc.demo` / `demo1234`)
 
 ## Refresh live data
 
