@@ -66,14 +66,21 @@ def ingest_pricebook() -> dict:
 
 def ingest_qbo_pl() -> dict:
     pl_path = QBO_DIR / "profit_and_loss_last_12_months.xlsx"
-    if not pl_path.exists():
-        return {"exists": False}
+    json_path = QBO_DIR / "profit_and_loss_last_12_months.json"
+    if not pl_path.exists() and not json_path.exists():
+        return {"exists": False, "note": "Run ./scripts/sync/sync_qbo_api.py after QBO OAuth setup"}
 
+    if pl_path.exists():
+        return _ingest_qbo_pl_xlsx(pl_path)
+
+    return _ingest_qbo_pl_json(json_path)
+
+
+def _ingest_qbo_pl_xlsx(pl_path: Path) -> dict:
     try:
         import openpyxl
     except ImportError:
-        venv_python = ROOT / ".venv" / "bin" / "python3"
-        return {"exists": True, "error": "openpyxl not installed; run from .venv"}
+        return {"exists": True, "error": "openpyxl not installed; pip install openpyxl"}
 
     wb = openpyxl.load_workbook(pl_path, read_only=True, data_only=True)
     ws = wb.active
@@ -118,6 +125,84 @@ def ingest_qbo_pl() -> dict:
         "income_highlights": income,
         "net_income": net_income,
     }
+
+
+def _ingest_qbo_pl_json(json_path: Path) -> dict:
+    report = json.loads(json_path.read_text())
+    income: dict[str, float] = {}
+    net_income = None
+
+    def walk(rows: list | dict | None) -> None:
+        nonlocal net_income
+        if not rows:
+            return
+        if isinstance(rows, dict):
+            rows = [rows]
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            for key in ("Summary", "ColData"):
+                if key == "ColData" and row.get("ColData"):
+                    cols = row["ColData"]
+                    label = str(cols[0].get("value", "")).strip()
+                    val = cols[1].get("value") if len(cols) > 1 else None
+                    _record(label, val)
+                elif row.get("Summary", {}).get("ColData"):
+                    cols = row["Summary"]["ColData"]
+                    label = str(cols[0].get("value", "")).strip()
+                    val = cols[1].get("value") if len(cols) > 1 else None
+                    _record(label, val)
+            nested = row.get("Rows", {})
+            if nested:
+                walk(nested.get("Row", nested))
+
+    def _record(label: str, val: object) -> None:
+        nonlocal net_income
+        if not label or val in (None, ""):
+            return
+        try:
+            amount = float(str(val).replace(",", ""))
+        except ValueError:
+            return
+        if label == "Total for Income":
+            income["_total"] = amount
+        elif label == "Net Income":
+            net_income = amount
+        elif any(k in label for k in ("Sales", "LFP", "Services", "Mobile", "Lithium", "Conversion")):
+            if "Total for" not in label:
+                income[label.strip()] = amount
+
+    walk(report.get("Rows", {}).get("Row", []))
+    header = report.get("Header", {})
+    return {
+        "exists": True,
+        "path": str(json_path),
+        "modified": datetime.fromtimestamp(json_path.stat().st_mtime, tz=timezone.utc).isoformat(),
+        "period_note": f"{header.get('StartPeriod', '')} to {header.get('EndPeriod', '')}",
+        "income_highlights": income,
+        "net_income": net_income,
+        "source": "qbo_api_json",
+    }
+
+
+def ingest_qbo_api() -> dict:
+    manifest_path = QBO_DIR / "api_sync_manifest.json"
+    if not manifest_path.exists():
+        return {"exists": False, "note": "Run ./scripts/sync/sync_qbo_api.py after QBO OAuth setup"}
+    out: dict = {"exists": True}
+    out["manifest"] = json.loads(manifest_path.read_text())
+    out["modified"] = datetime.fromtimestamp(
+        manifest_path.stat().st_mtime, tz=timezone.utc
+    ).isoformat()
+    coa = QBO_DIR / "chart_of_accounts.json"
+    if coa.exists():
+        data = json.loads(coa.read_text())
+        out["account_count"] = len(data.get("QueryResponse", {}).get("Account", []))
+    items = QBO_DIR / "products_services.json"
+    if items.exists():
+        data = json.loads(items.read_text())
+        out["item_count"] = len(data.get("QueryResponse", {}).get("Item", []))
+    return out
 
 
 def ingest_hcp_api() -> dict:
@@ -167,6 +252,7 @@ def main() -> int:
         "synced_at": datetime.now(tz=timezone.utc).isoformat(),
         "pricebook": ingest_pricebook(),
         "qbo_pl": ingest_qbo_pl(),
+        "qbo_api": ingest_qbo_api(),
         "hcp_api": ingest_hcp_api(),
         "qbo_files": [
             {

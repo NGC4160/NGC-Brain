@@ -29,7 +29,8 @@
 | **0** | Manual exports + `scripts/sync/ingest_exports.py` | Done | ✅ Built |
 | **1** | Session hooks + project skills | Low | ✅ Built |
 | **2** | QuickBooks MCP (live P&L, COA, no export) | Medium | 🔲 Template ready |
-| **3** | **HCP API sync** (MAX plan) | Medium | ✅ Scripts ready — add API key |
+| **3** | **HCP API sync** (MAX plan) | Medium | ✅ Scripts + daily GitHub Action |
+| **3b** | **QBO API sync** (morning pull) | Medium | ✅ Scripts ready — add OAuth secrets |
 | **4** | Cursor Automations (scheduled weekly review) | Low | 🔲 Agents Window |
 | **5** | Custom NGC Admin Bot + webhooks | High | 🟡 Phase 1 live — deposit alerts |
 
@@ -37,6 +38,7 @@
 
 | Trigger | Action |
 |---------|--------|
+| **Daily 7:30 AM CST** | GitHub Action `morning-sync.yml` — HCP + QBO API → Command Center |
 | **Cursor session start** | Hook runs `ingest_exports.py` → updates `knowledge/.generated/sync_manifest.json` |
 | **After export file edit** | Hook re-runs ingest |
 | **You say `/sync`** or "sync exports" | Skill runs ingest + offers knowledge diff |
@@ -44,7 +46,8 @@
 Run manually anytime:
 
 ```bash
-./scripts/sync/ingest_exports.py
+./scripts/sync/run_morning_sync.sh   # full HCP + QBO + Command Center
+./scripts/sync/run_ingest.sh         # exports only
 ```
 
 ## Connectors to set up (priority order)
@@ -101,6 +104,8 @@ When selected: API or export sync for inventory, ROs, customers. Plan migration 
 | File | Purpose |
 |------|---------|
 | [integration_playbook.md](integration_playbook.md) | Step-by-step setup for each connector |
+| [hcp_api_setup.md](hcp_api_setup.md) | HCP API key + sync scripts |
+| [qbo_api_setup.md](qbo_api_setup.md) | QBO OAuth + morning sync secrets |
 | [automations_catalog.md](automations_catalog.md) | Recommended Cursor Automations + Zapier recipes |
 | [ngc_admin_bot_spec.md](ngc_admin_bot_spec.md) | **Admin Bot** — deposit alerts, review requests, webhooks |
 
