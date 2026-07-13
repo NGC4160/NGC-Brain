@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T02:34:49.998288+00:00",
+  "generated_at": "2026-07-13T16:02:27.332117+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,17 +9,17 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-13T02:34:49.973531+00:00",
-    "jobs_synced_at": "2026-07-13T02:34:42.288246+00:00",
+    "generated_at": "2026-07-13T16:02:27.308539+00:00",
+    "jobs_synced_at": "2026-07-13T16:02:15.463122+00:00",
     "has_live_data": true,
     "metrics": {
-      "in_progress": 11,
-      "scheduled": 13,
-      "needs_scheduling": 13,
-      "active_pipeline": 37,
+      "in_progress": 12,
+      "scheduled": 15,
+      "needs_scheduling": 11,
+      "active_pipeline": 38,
       "wip_target": 6,
-      "wip_over": 5,
-      "stale_15_plus": 5,
+      "wip_over": 6,
+      "stale_15_plus": 6,
       "lithium_at_risk": 2,
       "deposit_alerts": 0
     },
@@ -75,15 +75,22 @@
           "days": 18,
           "lithium": false,
           "status": "in progress"
+        },
+        {
+          "invoice": "17341-1",
+          "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+          "days": 16,
+          "lithium": false,
+          "status": "in progress"
         }
       ]
     },
     "sync": {
-      "synced_at": "2026-07-13T02:34:49.671502+00:00",
+      "synced_at": "2026-07-13T16:02:26.997660+00:00",
       "pricebook": {
         "exists": true,
         "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-        "modified": "2026-07-13T02:34:32.447811+00:00",
+        "modified": "2026-07-13T16:01:59.009245+00:00",
         "total_items": 282,
         "lithium_professional_skus": [
           {
@@ -185,7 +192,7 @@
       "qbo_pl": {
         "exists": true,
         "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-        "modified": "2026-07-13T02:34:47.453012+00:00",
+        "modified": "2026-07-13T16:02:23.738400+00:00",
         "period_note": "See file header for date range",
         "income_highlights": {
           "LFP Conversions Only": 90493.66,
@@ -201,7 +208,7 @@
       "qbo_api": {
         "exists": true,
         "manifest": {
-          "synced_at": "2026-07-13T02:34:49.622520+00:00",
+          "synced_at": "2026-07-13T16:02:26.943730+00:00",
           "source": "quickbooks_online_api",
           "environment": "production",
           "realm_id": "9130357503747056",
@@ -214,14 +221,14 @@
           ],
           "refresh_token_rotated": false
         },
-        "modified": "2026-07-13T02:34:49.622645+00:00",
+        "modified": "2026-07-13T16:02:26.943864+00:00",
         "account_count": 148,
         "item_count": 521
       },
       "hcp_api": {
         "exists": true,
         "manifest": {
-          "synced_at": "2026-07-13T02:34:44.271877+00:00",
+          "synced_at": "2026-07-13T16:02:19.312538+00:00",
           "source": "housecall_pro_api",
           "paths": [
             "api_sync_manifest.json",
@@ -232,16 +239,16 @@
             "pricebook_services.json"
           ]
         },
-        "modified": "2026-07-13T02:34:44.272306+00:00",
+        "modified": "2026-07-13T16:02:19.313025+00:00",
         "job_count": 500,
         "jobs_by_status": {
-          "needs scheduling": 13,
-          "scheduled": 13,
+          "needs scheduling": 11,
+          "scheduled": 15,
           "user canceled": 27,
-          "in progress": 11,
+          "in progress": 12,
           "complete rated": 103,
           "pro canceled": 44,
-          "complete unrated": 289
+          "complete unrated": 288
         },
         "pricebook_service_count": 283,
         "professional_lithium_skus": [
@@ -257,43 +264,43 @@
       "qbo_files": [
         {
           "name": "api_sync_manifest.json",
-          "modified": "2026-07-13T02:34:49.622645+00:00"
+          "modified": "2026-07-13T16:02:26.943864+00:00"
         },
         {
           "name": "balance_sheet.json",
-          "modified": "2026-07-13T02:34:48.179093+00:00"
+          "modified": "2026-07-13T16:02:24.807134+00:00"
         },
         {
           "name": "balance_sheet_current.xlsx",
-          "modified": "2026-07-13T02:34:32.447811+00:00"
+          "modified": "2026-07-13T16:01:59.010478+00:00"
         },
         {
           "name": "chart_of_accounts.json",
-          "modified": "2026-07-13T02:34:48.924873+00:00"
+          "modified": "2026-07-13T16:02:25.788839+00:00"
         },
         {
           "name": "chart_of_accounts.xlsx",
-          "modified": "2026-07-13T02:34:32.448696+00:00"
+          "modified": "2026-07-13T16:01:59.010478+00:00"
         },
         {
           "name": "company_test.json",
-          "modified": "2026-07-13T02:34:45.769692+00:00"
+          "modified": "2026-07-13T16:02:21.391960+00:00"
         },
         {
           "name": "products_and_services.xlsx",
-          "modified": "2026-07-13T02:34:32.448696+00:00"
+          "modified": "2026-07-13T16:01:59.010478+00:00"
         },
         {
           "name": "products_services.json",
-          "modified": "2026-07-13T02:34:49.622040+00:00"
+          "modified": "2026-07-13T16:02:26.943569+00:00"
         },
         {
           "name": "profit_and_loss_last_12_months.json",
-          "modified": "2026-07-13T02:34:47.365743+00:00"
+          "modified": "2026-07-13T16:02:23.655641+00:00"
         },
         {
           "name": "profit_and_loss_last_12_months.xlsx",
-          "modified": "2026-07-13T02:34:47.453012+00:00"
+          "modified": "2026-07-13T16:02:23.738400+00:00"
         }
       ],
       "alerts": [
@@ -305,7 +312,7 @@
       "shop_board": "live/shop_board.md",
       "deposit_alerts": "live/deposit_alerts.md",
       "sync_manifest": "live/sync_manifest.json",
-      "sync_status": null
+      "sync_status": "live/sync_status.json"
     }
   },
   "systems": [
@@ -365,14 +372,6 @@
       "why": "Prevents wrong quotes & booking",
       "owner": "Ryan / Christine",
       "status": "**Checklist ready** \u2014 see legacy_pricebook_cleanup.md",
-      "category": "Operations (run the shop better)"
-    },
-    {
-      "priority": "P1",
-      "name": "Finalize pickup/delivery zone map (free vs $99)",
-      "why": "Roy + Christine need consistent answers",
-      "owner": "Ryan",
-      "status": "Open",
       "category": "Operations (run the shop better)"
     },
     {
@@ -489,8 +488,8 @@
     },
     {
       "priority": "P3",
-      "name": "Monthly export ritual \u2192 refresh `knowledge/08_finance/`",
-      "why": "AI gives stale answers without it",
+      "name": "Monthly knowledge finance refresh from morning sync P&L",
+      "why": "Numbers auto-pull; still verify `08_finance/` after big chart changes",
       "owner": "Ryan",
       "status": "Open",
       "category": "Finance & admin"
@@ -619,7 +618,7 @@
           "title": "Operations Dashboard",
           "desc": "WIP, lithium lane, deposit alerts, sync status",
           "href": "dashboard.html",
-          "badge": "11 in shop",
+          "badge": "12 in shop",
           "primary": true
         },
         {
@@ -722,7 +721,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "20 tracked projects \u00b7 P1\u2013P3",
+          "desc": "19 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },

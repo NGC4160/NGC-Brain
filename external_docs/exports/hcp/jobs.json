@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-13T02:34:42.288246+00:00",
+  "synced_at": "2026-07-13T16:02:15.463122+00:00",
   "count": 500,
   "jobs": [
     {
@@ -1119,21 +1119,55 @@
       "id": "job_16e4cc6be10240838ba9a728610666be",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
-      "work_status": "needs scheduling",
+      "work_status": "scheduled",
       "work_timestamps": {
         "on_my_way_at": null,
         "started_at": null,
         "completed_at": null
       },
       "schedule": {
-        "scheduled_start": null,
-        "scheduled_end": null,
-        "arrival_window": 0,
+        "scheduled_start": "2026-07-13T16:30:00Z",
+        "scheduled_end": "2026-07-13T17:00:00Z",
+        "arrival_window": 120,
         "appointments": []
       },
       "total_amount": 20239,
       "outstanding_balance": 20239,
-      "assigned_employees": [],
+      "assigned_employees": [
+        {
+          "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
+          "first_name": "Roy",
+          "last_name": "Gautreaux",
+          "email": "royjgautreaux@gmail.com",
+          "mobile_number": "5044017782",
+          "color_hex": "0a0a0b",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": true,
+            "can_chat_with_customers": true,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": true,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-04-23T21:20:02Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        }
+      ],
       "tags": [],
       "original_estimate_id": "est_51344e70e79d458898773762b5ca7bff",
       "original_estimate_uuids": [
@@ -1147,7 +1181,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-06T21:55:06Z",
-      "updated_at": "2026-07-06T21:55:08Z",
+      "updated_at": "2026-07-13T14:05:58Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -1196,21 +1230,55 @@
       "id": "job_1056225cea7c4bcab62263a7f21ecc62",
       "description": "General - ***SEE NOTES***",
       "notes": [],
-      "work_status": "needs scheduling",
+      "work_status": "scheduled",
       "work_timestamps": {
         "on_my_way_at": null,
         "started_at": null,
         "completed_at": null
       },
       "schedule": {
-        "scheduled_start": null,
-        "scheduled_end": null,
-        "arrival_window": 0,
+        "scheduled_start": "2026-07-13T17:00:00Z",
+        "scheduled_end": "2026-07-13T17:30:00Z",
+        "arrival_window": 120,
         "appointments": []
       },
       "total_amount": 42061,
       "outstanding_balance": 42061,
-      "assigned_employees": [],
+      "assigned_employees": [
+        {
+          "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
+          "first_name": "Roy",
+          "last_name": "Gautreaux",
+          "email": "royjgautreaux@gmail.com",
+          "mobile_number": "5044017782",
+          "color_hex": "0a0a0b",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": true,
+            "can_chat_with_customers": true,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": true,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-04-23T21:20:02Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        }
+      ],
       "tags": [],
       "original_estimate_id": "est_c3dba60951ea42e0ac56b5bfa4adcad9",
       "original_estimate_uuids": [
@@ -1224,7 +1292,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-06T01:53:55Z",
-      "updated_at": "2026-07-06T15:19:59Z",
+      "updated_at": "2026-07-13T14:06:28Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2480,13 +2548,13 @@
       "notes": [],
       "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": "2026-07-10T14:57:16Z",
-        "started_at": null,
+        "on_my_way_at": "2026-07-13T15:49:24Z",
+        "started_at": "2026-07-13T15:49:24Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-07-10T15:00:00Z",
-        "scheduled_end": "2026-07-10T15:30:00Z",
+        "scheduled_end": "2026-07-13T17:45:00Z",
         "arrival_window": 120,
         "appointments": []
       },
@@ -2525,6 +2593,39 @@
           "created_at": "2026-04-23T21:20:02Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_2274105ada1f4a889389d12fbff48cb6",
+          "first_name": "Taylor",
+          "last_name": "Couvillion",
+          "email": "t.couvillion@yahoo.com",
+          "mobile_number": "5043303735",
+          "color_hex": "311a92",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-05-18T13:49:49Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [],
@@ -2540,7 +2641,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-30T18:04:58Z",
-      "updated_at": "2026-07-10T14:57:16Z",
+      "updated_at": "2026-07-13T15:49:24Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3358,15 +3459,15 @@
           "content": "tested solenoid, failed,  recommend replacing solenoid "
         }
       ],
-      "work_status": "complete unrated",
+      "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": "2026-07-07T15:22:48Z",
+        "on_my_way_at": "2026-07-13T14:27:57Z",
         "started_at": "2026-07-07T15:22:48Z",
-        "completed_at": "2026-07-10T20:39:57Z"
+        "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-07-02T18:30:00Z",
-        "scheduled_end": "2026-07-10T20:30:00Z",
+        "scheduled_end": "2026-07-13T16:00:00Z",
         "arrival_window": 0,
         "appointments": []
       },
@@ -3488,7 +3589,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-26T16:48:35Z",
-      "updated_at": "2026-07-12T14:24:20Z",
+      "updated_at": "2026-07-13T14:27:59Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3554,7 +3655,7 @@
         "appointments": []
       },
       "total_amount": 100146,
-      "outstanding_balance": 100146,
+      "outstanding_balance": 0,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -3671,7 +3772,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-26T15:31:57Z",
-      "updated_at": "2026-07-10T17:34:08Z",
+      "updated_at": "2026-07-13T15:04:35Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4207,6 +4308,10 @@
         {
           "id": "nte_509d9d253dd04bd7b1460a97c0c20d92",
           "content": " diagnosed golf cart, recommenda new controller ,  found forward & reverse is getting pack voltage at the controller at all times even when  power is disconnected from the forward & reverse switch on new controller,   found speed sensor harnesses plugging into controllers has a bad connections,     found on old controller when In forward controller gets pack voltage but when in reverse get 0volts at controller.      golf cart will drive in forward but not reverse "
+        },
+        {
+          "id": "nte_70d03eea9c42403e8e82e365caab03be",
+          "content": "cart wont move in reverse, retested controller, passed check list,removed old and installed new controller, tested cart, cart moves in forward and reverse "
         }
       ],
       "work_status": "in progress",

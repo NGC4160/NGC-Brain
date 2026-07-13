@@ -1,6 +1,6 @@
 {
   "Header": {
-    "Time": "2026-07-12T19:34:48-07:00",
+    "Time": "2026-07-13T09:02:24-07:00",
     "ReportName": "BalanceSheet",
     "ReportBasis": "Accrual",
     "StartPeriod": "2026-07-13",
@@ -202,7 +202,7 @@
                               "id": "13"
                             },
                             {
-                              "value": "2879.98"
+                              "value": "1878.52"
                             }
                           ],
                           "type": "Data"
@@ -215,7 +215,7 @@
                           "value": "Total Accounts Receivable"
                         },
                         {
-                          "value": "2879.98"
+                          "value": "1878.52"
                         }
                       ]
                     },
@@ -266,7 +266,7 @@
                               "id": "60"
                             },
                             {
-                              "value": "1351.21"
+                              "value": "2352.67"
                             }
                           ],
                           "type": "Data"
@@ -291,7 +291,7 @@
                           "value": "Total Other Current Assets"
                         },
                         {
-                          "value": "16481.90"
+                          "value": "17483.36"
                         }
                       ]
                     },

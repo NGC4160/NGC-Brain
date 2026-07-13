@@ -1,6 +1,6 @@
 # Improvement & Growth Backlog
 
-**Last reviewed:** 2026-06-28  
+**Last reviewed:** 2026-07-13  
 Ask the AI: **"What's the highest-impact item on the backlog this week?"**
 
 Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
@@ -12,7 +12,6 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P | Item | Why | Owner | Status |
 |---|------|-----|-------|--------|
 | P1 | Deactivate legacy HCP/QBO items (mobile, NGC Conversion, trip charges) | Prevents wrong quotes & booking | Ryan / Christine | **Checklist ready** — see legacy_pricebook_cleanup.md |
-| P1 | Finalize pickup/delivery zone map (free vs $99) | Roy + Christine need consistent answers | Ryan | Open |
 | P1 | HCP WIP hygiene — audit stale "in progress" (15+ days), correct statuses | 14 IP jobs, most aged; board can't lie | Ryan | Open |
 | P1 | Lithium job tracker (day 0/1/2, deposit received, parts ordered) | Protect 2–3 day promise; 2 Li jobs 50+ days in HCP | Ryan | In progress |
 | P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open |
@@ -37,7 +36,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 |---|------|-----|-------|--------|
 | P2 | Wind down `Mobile Trip Income` in QBO to $0 | Legacy revenue still posting | Jill | Open |
 | P2 | Review Unapplied Cash / Undeposited Funds monthly | QBO flags from exports | Jill | Open |
-| P3 | Monthly export ritual → refresh `knowledge/08_finance/` | AI gives stale answers without it | Ryan | Open |
+| P3 | Monthly knowledge finance refresh from morning sync P&L | Numbers auto-pull; still verify `08_finance/` after big chart changes | Ryan | Open |
 
 ## Team & systems
 
@@ -53,6 +52,10 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | Date | Item |
 |------|------|
+| 2026-07-13 | Pickup policy finalized — free 40 mi Northshore; $99 flat outside/Southshore |
+| 2026-07-13 | Customer-supplied lithium install kept at $549 |
+| 2026-07-13 | Finance overview refreshed from live QBO morning sync |
+| 2026-07-13 | Morning Sync automation live (HCP + QBO → Command Center) |
 | 2026-06-28 | Built `knowledge/` business brain from intake + exports |
 | 2026-06-28 | Uploaded HCP pricebook + QBO exports |
 | 2026-06-28 | Shop throughput playbook + auto shop board from HCP jobs |

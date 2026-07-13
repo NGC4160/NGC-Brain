@@ -81,8 +81,8 @@
         "Classification": "Asset",
         "AccountType": "Accounts Receivable",
         "AccountSubType": "AccountsReceivable",
-        "CurrentBalance": 2879.98,
-        "CurrentBalanceWithSubAccounts": 2879.98,
+        "CurrentBalance": 1878.52,
+        "CurrentBalanceWithSubAccounts": 1878.52,
         "CurrencyRef": {
           "value": "USD",
           "name": "United States Dollar"
@@ -93,7 +93,7 @@
         "SyncToken": "0",
         "MetaData": {
           "CreateTime": "2024-03-19T13:34:14-07:00",
-          "LastUpdatedTime": "2026-07-12T07:24:49-07:00"
+          "LastUpdatedTime": "2026-07-13T07:17:28-07:00"
         }
       },
       {
@@ -3319,8 +3319,8 @@
         "Classification": "Asset",
         "AccountType": "Other Current Asset",
         "AccountSubType": "UndepositedFunds",
-        "CurrentBalance": 1351.21,
-        "CurrentBalanceWithSubAccounts": 1351.21,
+        "CurrentBalance": 2352.67,
+        "CurrentBalanceWithSubAccounts": 2352.67,
         "CurrencyRef": {
           "value": "USD",
           "name": "United States Dollar"
@@ -3331,7 +3331,7 @@
         "SyncToken": "1",
         "MetaData": {
           "CreateTime": "2024-03-19T13:34:15-07:00",
-          "LastUpdatedTime": "2026-07-12T18:52:51-07:00"
+          "LastUpdatedTime": "2026-07-13T07:17:28-07:00"
         }
       },
       {
@@ -3558,5 +3558,5 @@
     "startPosition": 1,
     "maxResults": 148
   },
-  "time": "2026-07-12T19:34:48.785-07:00"
+  "time": "2026-07-13T09:02:25.514-07:00"
 }
