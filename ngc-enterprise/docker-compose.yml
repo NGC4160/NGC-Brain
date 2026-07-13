@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ngc
+      POSTGRES_PASSWORD: ngc_dev_password
+      POSTGRES_DB: ngc_enterprise
+    ports:
+      - "5432:5432"
+    volumes:
+      - ngc_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ngc -d ngc_enterprise"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://ngc:ngc_dev_password@db:5432/ngc_enterprise?schema=public
+      AUTH_SECRET: ngc-enterprise-docker-secret-change-me-32ch
+      AUTH_URL: http://localhost:3000
+      NEXTAUTH_URL: http://localhost:3000
+      NEXT_PUBLIC_APP_NAME: NGC Enterprise
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  ngc_pgdata:
