@@ -1,0 +1,853 @@
+{
+  "Header": {
+    "Time": "2026-07-12T19:34:48-07:00",
+    "ReportName": "BalanceSheet",
+    "ReportBasis": "Accrual",
+    "StartPeriod": "2026-07-13",
+    "EndPeriod": "2026-07-13",
+    "SummarizeColumnsBy": "Total",
+    "Currency": "USD",
+    "Option": [
+      {
+        "Name": "AccountingStandard",
+        "Value": "GAAP"
+      },
+      {
+        "Name": "NoReportData",
+        "Value": "false"
+      }
+    ]
+  },
+  "Columns": {
+    "Column": [
+      {
+        "ColTitle": "",
+        "ColType": "Account",
+        "MetaData": [
+          {
+            "Name": "ColKey",
+            "Value": "account"
+          }
+        ]
+      },
+      {
+        "ColTitle": "Total",
+        "ColType": "Money",
+        "MetaData": [
+          {
+            "Name": "ColKey",
+            "Value": "total"
+          }
+        ]
+      }
+    ]
+  },
+  "Rows": {
+    "Row": [
+      {
+        "Header": {
+          "ColData": [
+            {
+              "value": "ASSETS"
+            },
+            {
+              "value": ""
+            }
+          ]
+        },
+        "Rows": {
+          "Row": [
+            {
+              "Header": {
+                "ColData": [
+                  {
+                    "value": "Current Assets"
+                  },
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              "Rows": {
+                "Row": [
+                  {
+                    "Header": {
+                      "ColData": [
+                        {
+                          "value": "Bank Accounts"
+                        },
+                        {
+                          "value": ""
+                        }
+                      ]
+                    },
+                    "Rows": {
+                      "Row": [
+                        {
+                          "ColData": [
+                            {
+                              "value": "Amazon Credit",
+                              "id": "165"
+                            },
+                            {
+                              "value": "-29.83"
+                            }
+                          ],
+                          "type": "Data"
+                        },
+                        {
+                          "ColData": [
+                            {
+                              "value": "Chase Checking (7928)",
+                              "id": "144"
+                            },
+                            {
+                              "value": "6122.25"
+                            }
+                          ],
+                          "type": "Data"
+                        },
+                        {
+                          "ColData": [
+                            {
+                              "value": "Growth & Reserves (0056)",
+                              "id": "1150040003"
+                            },
+                            {
+                              "value": "7200.81"
+                            }
+                          ],
+                          "type": "Data"
+                        },
+                        {
+                          "ColData": [
+                            {
+                              "value": "Housecall Pro Balance",
+                              "id": "186"
+                            },
+                            {
+                              "value": "0.00"
+                            }
+                          ],
+                          "type": "Data"
+                        },
+                        {
+                          "ColData": [
+                            {
+                              "value": "Payroll 6966",
+                              "id": "189"
+                            },
+                            {
+                              "value": "201.87"
+                            }
+                          ],
+                          "type": "Data"
+                        },
+                        {
+                          "ColData": [
+                            {
+                              "value": "Tax Account 6982",
+                              "id": "188"
+                            },
+                            {
+                              "value": "-136.18"
+                            }
+                          ],
+                          "type": "Data"
+                        },
+                        {
+                          "ColData": [
+                            {
+                              "value": "Tax Reserves (0031)",
+                              "id": "1150040004"
+                            },
+                            {
+                              "value": "0.00"
+                            }
+                          ],
+                          "type": "Data"
+                        }
+                      ]
+                    },
+                    "Summary": {
+                      "ColData": [
+                        {
+                          "value": "Total Bank Accounts"
+                        },
+                        {
+                          "value": "13358.92"
+                        }
+                      ]
+                    },
+                    "type": "Section",
+                    "group": "BankAccounts"
+                  },
+                  {
+                    "Header": {
+                      "ColData": [
+                        {
+                          "value": "Accounts Receivable"
+                        },
+                        {
+                          "value": ""
+                        }
+                      ]
+                    },
+                    "Rows": {
+                      "Row": [
+                        {
+                          "ColData": [
+                            {
+                              "value": "Accounts Receivable (A/R)",
+                              "id": "13"
+                            },
+                            {
+                              "value": "2879.98"
+                            }
+                          ],
+                          "type": "Data"
+                        }
+                      ]
+                    },
+                    "Summary": {
+                      "ColData": [
+                        {
+                          "value": "Total Accounts Receivable"
+                        },
+                        {
+                          "value": "2879.98"
+                        }
+                      ]
+                    },
+                    "type": "Section",
+                    "group": "AR"
+                  },
+                  {
+                    "Header": {
+                      "ColData": [
+                        {
+                          "value": "Other Current Assets"
+                        },
+                        {
+                          "value": ""
+                        }
+                      ]
+                    },
+                    "Rows": {
+                      "Row": [
+                        {
+                          "ColData": [
+                            {
+                              "value": "Due from LDOR",
+                              "id": "1150040041"
+                            },
+                            {
+                              "value": "3104.00"
+                            }
+                          ],
+                          "type": "Data"
+                        },
+                        {
+                          "ColData": [
+                            {
+                              "value": "Inventory Asset",
+                              "id": "41"
+                            },
+                            {
+                              "value": "11966.69"
+                            }
+                          ],
+                          "type": "Data"
+                        },
+                        {
+                          "ColData": [
+                            {
+                              "value": "Undeposited Funds",
+                              "id": "60"
+                            },
+                            {
+                              "value": "1351.21"
+                            }
+                          ],
+                          "type": "Data"
+                        },
+                        {
+                          "ColData": [
+                            {
+                              "value": "Warranty",
+                              "id": "1150040042"
+                            },
+                            {
+                              "value": "60.00"
+                            }
+                          ],
+                          "type": "Data"
+                        }
+                      ]
+                    },
+                    "Summary": {
+                      "ColData": [
+                        {
+                          "value": "Total Other Current Assets"
+                        },
+                        {
+                          "value": "16481.90"
+                        }
+                      ]
+                    },
+                    "type": "Section",
+                    "group": "OtherCurrentAssets"
+                  }
+                ]
+              },
+              "Summary": {
+                "ColData": [
+                  {
+                    "value": "Total Current Assets"
+                  },
+                  {
+                    "value": "32720.80"
+                  }
+                ]
+              },
+              "type": "Section",
+              "group": "CurrentAssets"
+            },
+            {
+              "Header": {
+                "ColData": [
+                  {
+                    "value": "Fixed Assets"
+                  },
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              "Rows": {
+                "Row": [
+                  {
+                    "ColData": [
+                      {
+                        "value": "Accumulated depreciation",
+                        "id": "15"
+                      },
+                      {
+                        "value": "-5000.00"
+                      }
+                    ],
+                    "type": "Data"
+                  },
+                  {
+                    "ColData": [
+                      {
+                        "value": "Vehicles",
+                        "id": "85"
+                      },
+                      {
+                        "value": "5000.00"
+                      }
+                    ],
+                    "type": "Data"
+                  }
+                ]
+              },
+              "Summary": {
+                "ColData": [
+                  {
+                    "value": "Total Fixed Assets"
+                  },
+                  {
+                    "value": "0.00"
+                  }
+                ]
+              },
+              "type": "Section",
+              "group": "FixedAssets"
+            }
+          ]
+        },
+        "Summary": {
+          "ColData": [
+            {
+              "value": "TOTAL ASSETS"
+            },
+            {
+              "value": "32720.80"
+            }
+          ]
+        },
+        "type": "Section",
+        "group": "TotalAssets"
+      },
+      {
+        "Header": {
+          "ColData": [
+            {
+              "value": "LIABILITIES AND EQUITY"
+            },
+            {
+              "value": ""
+            }
+          ]
+        },
+        "Rows": {
+          "Row": [
+            {
+              "Header": {
+                "ColData": [
+                  {
+                    "value": "Liabilities"
+                  },
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              "Rows": {
+                "Row": [
+                  {
+                    "Header": {
+                      "ColData": [
+                        {
+                          "value": "Current Liabilities"
+                        },
+                        {
+                          "value": ""
+                        }
+                      ]
+                    },
+                    "Rows": {
+                      "Row": [
+                        {
+                          "Header": {
+                            "ColData": [
+                              {
+                                "value": "Accounts Payable"
+                              },
+                              {
+                                "value": ""
+                              }
+                            ]
+                          },
+                          "Rows": {
+                            "Row": [
+                              {
+                                "ColData": [
+                                  {
+                                    "value": "Accounts Payable (A/P)",
+                                    "id": "12"
+                                  },
+                                  {
+                                    "value": "-1830.00"
+                                  }
+                                ],
+                                "type": "Data"
+                              }
+                            ]
+                          },
+                          "Summary": {
+                            "ColData": [
+                              {
+                                "value": "Total Accounts Payable"
+                              },
+                              {
+                                "value": "-1830.00"
+                              }
+                            ]
+                          },
+                          "type": "Section",
+                          "group": "AP"
+                        },
+                        {
+                          "Header": {
+                            "ColData": [
+                              {
+                                "value": "Other Current Liabilities"
+                              },
+                              {
+                                "value": ""
+                              }
+                            ]
+                          },
+                          "Rows": {
+                            "Row": [
+                              {
+                                "Header": {
+                                  "ColData": [
+                                    {
+                                      "value": "Louisiana Department of Revenue Payable",
+                                      "id": "154"
+                                    },
+                                    {
+                                      "value": "5585.12"
+                                    }
+                                  ]
+                                },
+                                "Rows": {
+                                  "Row": [
+                                    {
+                                      "ColData": [
+                                        {
+                                          "value": "Louisiana Dept of Rev Sales Tax Payments",
+                                          "id": "173"
+                                        },
+                                        {
+                                          "value": "0.00"
+                                        }
+                                      ],
+                                      "type": "Data"
+                                    }
+                                  ]
+                                },
+                                "Summary": {
+                                  "ColData": [
+                                    {
+                                      "value": "Total Louisiana Department of Revenue Payable"
+                                    },
+                                    {
+                                      "value": "5585.12"
+                                    }
+                                  ]
+                                },
+                                "type": "Section"
+                              },
+                              {
+                                "ColData": [
+                                  {
+                                    "value": "Louisiana, Jefferson Parish Payable",
+                                    "id": "206"
+                                  },
+                                  {
+                                    "value": "93.08"
+                                  }
+                                ],
+                                "type": "Data"
+                              },
+                              {
+                                "Header": {
+                                  "ColData": [
+                                    {
+                                      "value": "Louisiana, Saint Tammany Parish Payable",
+                                      "id": "155"
+                                    },
+                                    {
+                                      "value": "1520.96"
+                                    }
+                                  ]
+                                },
+                                "Rows": {
+                                  "Row": [
+                                    {
+                                      "ColData": [
+                                        {
+                                          "value": "Louisiana Saint Tammany Sales Tax Payments",
+                                          "id": "174"
+                                        },
+                                        {
+                                          "value": "-2824.00"
+                                        }
+                                      ],
+                                      "type": "Data"
+                                    }
+                                  ]
+                                },
+                                "Summary": {
+                                  "ColData": [
+                                    {
+                                      "value": "Total Louisiana, Saint Tammany Parish Payable"
+                                    },
+                                    {
+                                      "value": "-1303.04"
+                                    }
+                                  ]
+                                },
+                                "type": "Section"
+                              },
+                              {
+                                "ColData": [
+                                  {
+                                    "value": "Louisiana, Tangipahoa Parish Payable",
+                                    "id": "196"
+                                  },
+                                  {
+                                    "value": "31.02"
+                                  }
+                                ],
+                                "type": "Data"
+                              },
+                              {
+                                "ColData": [
+                                  {
+                                    "value": "Louisiana, Washington Parish Payable",
+                                    "id": "197"
+                                  },
+                                  {
+                                    "value": "16.56"
+                                  }
+                                ],
+                                "type": "Data"
+                              },
+                              {
+                                "ColData": [
+                                  {
+                                    "value": "Out Of Scope Agency Payable",
+                                    "id": "156"
+                                  },
+                                  {
+                                    "value": "401.65"
+                                  }
+                                ],
+                                "type": "Data"
+                              },
+                              {
+                                "Header": {
+                                  "ColData": [
+                                    {
+                                      "value": "Payroll Liabilities",
+                                      "id": "1150040007"
+                                    },
+                                    {
+                                      "value": "-103.15"
+                                    }
+                                  ]
+                                },
+                                "Rows": {
+                                  "Row": [
+                                    {
+                                      "ColData": [
+                                        {
+                                          "value": "401k",
+                                          "id": "1150040015"
+                                        },
+                                        {
+                                          "value": "261.35"
+                                        }
+                                      ],
+                                      "type": "Data"
+                                    },
+                                    {
+                                      "ColData": [
+                                        {
+                                          "value": "Health Insurance",
+                                          "id": "1150040014"
+                                        },
+                                        {
+                                          "value": "0.00"
+                                        }
+                                      ],
+                                      "type": "Data"
+                                    },
+                                    {
+                                      "ColData": [
+                                        {
+                                          "value": "Service Vehicle Damage",
+                                          "id": "1150040016"
+                                        },
+                                        {
+                                          "value": "0.00"
+                                        }
+                                      ],
+                                      "type": "Data"
+                                    },
+                                    {
+                                      "ColData": [
+                                        {
+                                          "value": "Tips",
+                                          "id": "181"
+                                        },
+                                        {
+                                          "value": "0.00"
+                                        }
+                                      ],
+                                      "type": "Data"
+                                    }
+                                  ]
+                                },
+                                "Summary": {
+                                  "ColData": [
+                                    {
+                                      "value": "Total Payroll Liabilities"
+                                    },
+                                    {
+                                      "value": "158.20"
+                                    }
+                                  ]
+                                },
+                                "type": "Section"
+                              },
+                              {
+                                "ColData": [
+                                  {
+                                    "value": "Sales Tax Payable",
+                                    "id": "177"
+                                  },
+                                  {
+                                    "value": "1172.02"
+                                  }
+                                ],
+                                "type": "Data"
+                              },
+                              {
+                                "ColData": [
+                                  {
+                                    "value": "Stripe Capital (via Housecall Pro) - Loan 03/17/2025",
+                                    "id": "184"
+                                  },
+                                  {
+                                    "value": "0.00"
+                                  }
+                                ],
+                                "type": "Data"
+                              },
+                              {
+                                "ColData": [
+                                  {
+                                    "value": "Stripe Capital (via Housecall Pro) - Loan 08/19/2025",
+                                    "id": "187"
+                                  },
+                                  {
+                                    "value": "13320.57"
+                                  }
+                                ],
+                                "type": "Data"
+                              }
+                            ]
+                          },
+                          "Summary": {
+                            "ColData": [
+                              {
+                                "value": "Total Other Current Liabilities"
+                              },
+                              {
+                                "value": "19475.18"
+                              }
+                            ]
+                          },
+                          "type": "Section",
+                          "group": "OtherCurrentLiabilities"
+                        }
+                      ]
+                    },
+                    "Summary": {
+                      "ColData": [
+                        {
+                          "value": "Total Current Liabilities"
+                        },
+                        {
+                          "value": "17645.18"
+                        }
+                      ]
+                    },
+                    "type": "Section",
+                    "group": "CurrentLiabilities"
+                  }
+                ]
+              },
+              "Summary": {
+                "ColData": [
+                  {
+                    "value": "Total Liabilities"
+                  },
+                  {
+                    "value": "17645.18"
+                  }
+                ]
+              },
+              "type": "Section",
+              "group": "Liabilities"
+            },
+            {
+              "Header": {
+                "ColData": [
+                  {
+                    "value": "Equity"
+                  },
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              "Rows": {
+                "Row": [
+                  {
+                    "ColData": [
+                      {
+                        "value": "Owner's Draw- Ryan White",
+                        "id": "1150040001"
+                      },
+                      {
+                        "value": "-22000.00"
+                      }
+                    ],
+                    "type": "Data"
+                  },
+                  {
+                    "ColData": [
+                      {
+                        "value": "Owner's Equity - Ryan White",
+                        "id": "11"
+                      },
+                      {
+                        "value": "-29570.32"
+                      }
+                    ],
+                    "type": "Data"
+                  },
+                  {
+                    "ColData": [
+                      {
+                        "value": "Retained Earnings",
+                        "id": "4"
+                      },
+                      {
+                        "value": "21573.95"
+                      }
+                    ],
+                    "type": "Data"
+                  },
+                  {
+                    "ColData": [
+                      {
+                        "value": "Net Income"
+                      },
+                      {
+                        "value": "45071.99"
+                      }
+                    ],
+                    "type": "Data",
+                    "group": "NetIncome"
+                  }
+                ]
+              },
+              "Summary": {
+                "ColData": [
+                  {
+                    "value": "Total Equity"
+                  },
+                  {
+                    "value": "15075.62"
+                  }
+                ]
+              },
+              "type": "Section",
+              "group": "Equity"
+            }
+          ]
+        },
+        "Summary": {
+          "ColData": [
+            {
+              "value": "TOTAL LIABILITIES AND EQUITY"
+            },
+            {
+              "value": "32720.80"
+            }
+          ]
+        },
+        "type": "Section",
+        "group": "TotalLiabilitiesAndEquity"
+      }
+    ]
+  }
+}
