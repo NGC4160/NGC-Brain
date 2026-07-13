@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-06-28  
+**Last verified:** 2026-07-13  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -50,8 +50,10 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 
 | Zone | Fee |
 |------|-----|
-| **Within 40 miles of shop on the Northshore** | **Free** (marketed as "free locally") |
-| **Outside 40 miles OR Southshore** | **Reasonable flat rate** — pricebook lists **$99** as Standard Pick-up/Drop-off; exact boundary **TBD** |
+| **Within 40 miles of shop on the Northshore** | **Free** |
+| **Outside 40 miles OR Southshore** | **$99** flat (Standard Pick-up/Drop-off) |
+
+**Policy (final — 2026-07-13):** 40-mile Northshore free zone is firm. Outside that zone or Southshore = **$99** flat. No trip charges / mobile service.
 
 **Driver:** Roy handles pickups and deliveries.
 
