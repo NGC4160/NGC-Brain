@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T00:23:11.838867+00:00",
+  "generated_at": "2026-07-13T02:34:49.998288+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,17 +9,17 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-13T00:23:11.710800+00:00",
-    "jobs_synced_at": "2026-06-28T23:40:51.293876+00:00",
+    "generated_at": "2026-07-13T02:34:49.973531+00:00",
+    "jobs_synced_at": "2026-07-13T02:34:42.288246+00:00",
     "has_live_data": true,
     "metrics": {
-      "in_progress": 14,
+      "in_progress": 11,
       "scheduled": 13,
-      "needs_scheduling": 11,
-      "active_pipeline": 38,
+      "needs_scheduling": 13,
+      "active_pipeline": 37,
       "wip_target": 6,
-      "wip_over": 8,
-      "stale_15_plus": 14,
+      "wip_over": 5,
+      "stale_15_plus": 5,
       "lithium_at_risk": 2,
       "deposit_alerts": 0
     },
@@ -35,19 +35,12 @@
         {
           "invoice": "17266",
           "description": "72V Professional Lithium Battery Conversion Kit Installed",
-          "days": 64,
+          "days": 65,
           "lithium": true,
           "status": "in progress"
         }
       ],
       "stale_wip": [
-        {
-          "invoice": "17190",
-          "description": "Electrical - 1.5-Replace charger",
-          "days": 94,
-          "lithium": false,
-          "status": "in progress"
-        },
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
@@ -65,7 +58,7 @@
         {
           "invoice": "17266",
           "description": "72V Professional Lithium Battery Conversion Kit Installed",
-          "days": 64,
+          "days": 65,
           "lithium": true,
           "status": "in progress"
         },
@@ -77,35 +70,241 @@
           "status": "in progress"
         },
         {
-          "invoice": "17306",
-          "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-          "days": 38,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17315",
+          "invoice": "17336",
           "description": "General - ***SEE NOTES***",
-          "days": 32,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17321",
-          "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-          "days": 30,
+          "days": 18,
           "lithium": false,
           "status": "in progress"
         }
       ]
     },
     "sync": {
-      "exists": false
+      "synced_at": "2026-07-13T02:34:49.671502+00:00",
+      "pricebook": {
+        "exists": true,
+        "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
+        "modified": "2026-07-13T02:34:32.447811+00:00",
+        "total_items": 282,
+        "lithium_professional_skus": [
+          {
+            "name": "TEST PARTIAL KIT 48V Professional Lithium Battery Conversion Kit Installed",
+            "price": "$2499.00",
+            "category": "Lithium Battery Conversions [Full Kit]"
+          },
+          {
+            "name": "6.0- 36V Professional Lithium Battery Conversion Kit Installed",
+            "price": "$2599.00",
+            "category": "Lithium Battery Conversions [Full Kit]"
+          },
+          {
+            "name": "6.0- 48V Professional Lithium Battery Conversion Kit Installed",
+            "price": "$2799.00",
+            "category": "Lithium Battery Conversions [Full Kit]"
+          },
+          {
+            "name": "6.0- 48V MINI Professional Lithium Battery Conversion Kit Installed",
+            "price": "$2799.00",
+            "category": "Lithium Battery Conversions [Full Kit]"
+          },
+          {
+            "name": "Professional Lithium Battery Conversion",
+            "price": "$2799.00",
+            "category": "Golf Cart Services"
+          },
+          {
+            "name": "6.0- 72V Professional Lithium Battery Conversion Kit Installed",
+            "price": "$3299.00",
+            "category": "Lithium Battery Conversions [Full Kit]"
+          },
+          {
+            "name": "6.0- 48V/150AH Professional Lithium Battery Conversion Kit Installed",
+            "price": "$3299.00",
+            "category": "Lithium Battery Conversions [Full Kit]"
+          }
+        ],
+        "diagnostic_lines": [
+          {
+            "name": "1.0 - Golf Cart Diagnostic & Inspection [Mobile Service Call]",
+            "price": "$174.00"
+          },
+          {
+            "name": "1.0 - Diagnostics for Additional Cart",
+            "price": "$99.00"
+          },
+          {
+            "name": "1.0 - Advanced Diagnostics (In-Shop)",
+            "price": "$145.00"
+          },
+          {
+            "name": "Additional Diagnostic Time Labor Only (On-Site)",
+            "price": "$145.00"
+          },
+          {
+            "name": "Mobile On-Site Golf Cart Diagnostics",
+            "price": "$174.00"
+          },
+          {
+            "name": "1.0 - Diagnostic Testing",
+            "price": "$125.00"
+          },
+          {
+            "name": "1.0 - Diagnostic Service Call (Bedico Creek Subdivision)",
+            "price": "$129.00"
+          },
+          {
+            "name": "Diagnostic Service Call (out of service area)",
+            "price": "$149.00"
+          },
+          {
+            "name": "On-Site Mobile Diagnostics",
+            "price": "$229.00"
+          },
+          {
+            "name": "1.0 - Golf Cart Diagnostic & Inspection",
+            "price": "$179.00"
+          },
+          {
+            "name": "Minimum Service Charge- Diagnostic Inspection",
+            "price": "$179.00"
+          }
+        ],
+        "legacy_item_count": 10,
+        "legacy_sample": [
+          "Standard Trip Charge",
+          "1.0 - Golf Cart Diagnostic & Inspection [Mobile Service Call]",
+          "Extended Distance Adder- On-Site Tire Replacement Service (Vendor Convenience Fee)",
+          "Extended Range Trip Charge",
+          "Additional Diagnostic Time Labor Only (On-Site)",
+          "Mobile On-Site Golf Cart Diagnostics",
+          "Mobile On-Site Golf Cart General Service and Repairs",
+          "Extended Distance Trip Charge",
+          "Supplemental Trip Charge",
+          "On-Site Mobile Diagnostics"
+        ]
+      },
+      "qbo_pl": {
+        "exists": true,
+        "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
+        "modified": "2026-07-13T02:34:47.453012+00:00",
+        "period_note": "See file header for date range",
+        "income_highlights": {
+          "LFP Conversions Only": 90493.66,
+          "Mobile Trip Income": 8491.61,
+          "Sales": 22710.09,
+          "Sales and Services": 365991.07,
+          "Sales of Product Income": 23275.64,
+          "Services Income": 63852.7,
+          "Accounting Services": 1533.86
+        },
+        "net_income": 28276.12
+      },
+      "qbo_api": {
+        "exists": true,
+        "manifest": {
+          "synced_at": "2026-07-13T02:34:49.622520+00:00",
+          "source": "quickbooks_online_api",
+          "environment": "production",
+          "realm_id": "9130357503747056",
+          "paths": [
+            "profit_and_loss_last_12_months.json",
+            "profit_and_loss_last_12_months.xlsx",
+            "balance_sheet.json",
+            "chart_of_accounts.json",
+            "products_services.json"
+          ],
+          "refresh_token_rotated": false
+        },
+        "modified": "2026-07-13T02:34:49.622645+00:00",
+        "account_count": 148,
+        "item_count": 521
+      },
+      "hcp_api": {
+        "exists": true,
+        "manifest": {
+          "synced_at": "2026-07-13T02:34:44.271877+00:00",
+          "source": "housecall_pro_api",
+          "paths": [
+            "api_sync_manifest.json",
+            "company.json",
+            "company_test.json",
+            "jobs.json",
+            "pricebook_material_categories.json",
+            "pricebook_services.json"
+          ]
+        },
+        "modified": "2026-07-13T02:34:44.272306+00:00",
+        "job_count": 500,
+        "jobs_by_status": {
+          "needs scheduling": 13,
+          "scheduled": 13,
+          "user canceled": 27,
+          "in progress": 11,
+          "complete rated": 103,
+          "pro canceled": 44,
+          "complete unrated": 289
+        },
+        "pricebook_service_count": 283,
+        "professional_lithium_skus": [
+          "TEST PARTIAL KIT 48V Professional Lithium Battery Conversion Kit Installed",
+          "Professional Lithium Battery Conversion",
+          "6.0- 48V/150AH Professional Lithium Battery Conversion Kit Installed",
+          "6.0- 48V MINI Professional Lithium Battery Conversion Kit Installed",
+          "6.0- 72V Professional Lithium Battery Conversion Kit Installed",
+          "6.0- 36V Professional Lithium Battery Conversion Kit Installed",
+          "6.0- 48V Professional Lithium Battery Conversion Kit Installed"
+        ]
+      },
+      "qbo_files": [
+        {
+          "name": "api_sync_manifest.json",
+          "modified": "2026-07-13T02:34:49.622645+00:00"
+        },
+        {
+          "name": "balance_sheet.json",
+          "modified": "2026-07-13T02:34:48.179093+00:00"
+        },
+        {
+          "name": "balance_sheet_current.xlsx",
+          "modified": "2026-07-13T02:34:32.447811+00:00"
+        },
+        {
+          "name": "chart_of_accounts.json",
+          "modified": "2026-07-13T02:34:48.924873+00:00"
+        },
+        {
+          "name": "chart_of_accounts.xlsx",
+          "modified": "2026-07-13T02:34:32.448696+00:00"
+        },
+        {
+          "name": "company_test.json",
+          "modified": "2026-07-13T02:34:45.769692+00:00"
+        },
+        {
+          "name": "products_and_services.xlsx",
+          "modified": "2026-07-13T02:34:32.448696+00:00"
+        },
+        {
+          "name": "products_services.json",
+          "modified": "2026-07-13T02:34:49.622040+00:00"
+        },
+        {
+          "name": "profit_and_loss_last_12_months.json",
+          "modified": "2026-07-13T02:34:47.365743+00:00"
+        },
+        {
+          "name": "profit_and_loss_last_12_months.xlsx",
+          "modified": "2026-07-13T02:34:47.453012+00:00"
+        }
+      ],
+      "alerts": [
+        "10 legacy/mobile/NGC Conversion items still in pricebook \u2014 see knowledge/archive/legacy_mobile.md"
+      ],
+      "exists": true
     },
     "live_files": {
       "shop_board": "live/shop_board.md",
       "deposit_alerts": "live/deposit_alerts.md",
-      "sync_manifest": null,
+      "sync_manifest": "live/sync_manifest.json",
       "sync_status": null
     }
   },
@@ -420,7 +619,7 @@
           "title": "Operations Dashboard",
           "desc": "WIP, lithium lane, deposit alerts, sync status",
           "href": "dashboard.html",
-          "badge": "14 in shop",
+          "badge": "11 in shop",
           "primary": true
         },
         {
