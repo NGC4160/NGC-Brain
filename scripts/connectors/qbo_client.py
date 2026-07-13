@@ -158,8 +158,16 @@ class QBOClient:
         )
 
     def test_connection(self) -> dict:
-        result = self.query("select Id, CompanyName from CompanyInfo")
-        return {"ok": True, "environment": self.environment, "company_info": result}
+        # CompanyInfo is fetched by realm id — not all fields are queryable via SELECT.
+        result = self.request("GET", self.company_path(f"/companyinfo/{self.realm_id}"), query={"minorversion": "65"})
+        info = result.get("CompanyInfo", result)
+        return {
+            "ok": True,
+            "environment": self.environment,
+            "realm_id": self.realm_id,
+            "company_name": info.get("CompanyName") if isinstance(info, dict) else None,
+            "company_info": result,
+        }
 
     @staticmethod
     def last_12_months_range() -> tuple[str, str]:
