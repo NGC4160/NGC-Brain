@@ -86,17 +86,25 @@ else
   DETAIL+="Command Center build failed (rc=$BUILD_RC). "
 fi
 
+HCP_STEP="$( [[ $HCP_RC -eq 0 ]] && echo ok || echo fail )"
+QBO_STEP="$( [[ $QBO_RC -eq 0 ]] && echo ok || echo fail )"
+INGEST_STEP="$( [[ $INGEST_RC -eq 0 ]] && echo ok || echo fail )"
+BUILD_STEP="$( [[ $BUILD_RC -eq 0 ]] && echo ok || echo fail )"
+
 if [[ $HCP_RC -eq 0 && $QBO_RC -eq 0 && $INGEST_RC -eq 0 && $BUILD_RC -eq 0 ]]; then
-  write_status "success" "ok" "ok" "ok" "ok" "$DETAIL"
+  write_status "success" "$HCP_STEP" "$QBO_STEP" "$INGEST_STEP" "$BUILD_STEP" "$DETAIL"
   echo "=== Morning sync complete ==="
   exit 0
 fi
 
-write_status "partial" \
-  "$( [[ $HCP_RC -eq 0 ]] && echo ok || echo fail )" \
-  "$( [[ $QBO_RC -eq 0 ]] && echo ok || echo fail )" \
-  "$( [[ $INGEST_RC -eq 0 ]] && echo ok || echo fail )" \
-  "$( [[ $BUILD_RC -eq 0 ]] && echo ok || echo fail )" \
-  "$DETAIL"
-echo "=== Morning sync finished with errors ===" >&2
+# Partial success: still exit 0 if HCP + Command Center succeeded so Actions
+# commits/deploys live ops even when QBO credentials need a fix.
+if [[ $HCP_RC -eq 0 && $BUILD_RC -eq 0 ]]; then
+  write_status "partial" "$HCP_STEP" "$QBO_STEP" "$INGEST_STEP" "$BUILD_STEP" "$DETAIL"
+  echo "=== Morning sync partial (HCP OK) — check QBO secrets if qbo=fail ===" >&2
+  exit 0
+fi
+
+write_status "failed" "$HCP_STEP" "$QBO_STEP" "$INGEST_STEP" "$BUILD_STEP" "$DETAIL"
+echo "=== Morning sync failed ===" >&2
 exit 1
