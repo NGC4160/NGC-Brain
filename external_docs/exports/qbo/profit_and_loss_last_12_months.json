@@ -1,10 +1,10 @@
 {
   "Header": {
-    "Time": "2026-07-13T09:02:23-07:00",
+    "Time": "2026-07-14T08:06:46-07:00",
     "ReportName": "ProfitAndLoss",
     "ReportBasis": "Accrual",
-    "StartPeriod": "2025-07-13",
-    "EndPeriod": "2026-07-13",
+    "StartPeriod": "2025-07-14",
+    "EndPeriod": "2026-07-14",
     "SummarizeColumnsBy": "Total",
     "Currency": "USD",
     "Option": [
@@ -100,7 +100,7 @@
                   "id": "1150040023"
                 },
                 {
-                  "value": "90493.66"
+                  "value": "94940.25"
                 }
               ],
               "type": "Data"
@@ -160,7 +160,7 @@
                   "id": "5"
                 },
                 {
-                  "value": "365991.07"
+                  "value": "366449.07"
                 }
               ],
               "type": "Data"
@@ -196,7 +196,7 @@
                   "id": "162"
                 },
                 {
-                  "value": "2247.06"
+                  "value": "2263.31"
                 }
               ],
               "type": "Data"
@@ -221,7 +221,7 @@
               "value": "Total Income"
             },
             {
-              "value": "557481.40"
+              "value": "562402.24"
             }
           ]
         },
@@ -272,7 +272,7 @@
                   "id": "92"
                 },
                 {
-                  "value": "71222.43"
+                  "value": "71122.45"
                 }
               ],
               "type": "Data"
@@ -285,7 +285,7 @@
               "value": "Total Cost of Goods Sold"
             },
             {
-              "value": "183019.14"
+              "value": "182919.16"
             }
           ]
         },
@@ -299,7 +299,7 @@
               "value": "Gross Profit"
             },
             {
-              "value": "374462.26"
+              "value": "379483.08"
             }
           ]
         },
@@ -666,7 +666,7 @@
                   "id": "149"
                 },
                 {
-                  "value": "13795.60"
+                  "value": "14120.16"
                 }
               ],
               "type": "Data"
@@ -1035,7 +1035,7 @@
               "value": "Total Expenses"
             },
             {
-              "value": "351497.67"
+              "value": "351822.23"
             }
           ]
         },
@@ -1049,7 +1049,7 @@
               "value": "Net Operating Income"
             },
             {
-              "value": "22964.59"
+              "value": "27660.85"
             }
           ]
         },
@@ -1205,7 +1205,7 @@
               "value": "Net Income"
             },
             {
-              "value": "28276.12"
+              "value": "32972.38"
             }
           ]
         },

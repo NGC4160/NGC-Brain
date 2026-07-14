@@ -93,7 +93,7 @@
         "SyncToken": "0",
         "MetaData": {
           "CreateTime": "2024-03-19T13:34:14-07:00",
-          "LastUpdatedTime": "2026-07-13T07:17:28-07:00"
+          "LastUpdatedTime": "2026-07-13T13:34:59-07:00"
         }
       },
       {
@@ -494,8 +494,8 @@
         "Classification": "Asset",
         "AccountType": "Bank",
         "AccountSubType": "Checking",
-        "CurrentBalance": 6122.25,
-        "CurrentBalanceWithSubAccounts": 6122.25,
+        "CurrentBalance": 5797.69,
+        "CurrentBalanceWithSubAccounts": 5797.69,
         "CurrencyRef": {
           "value": "USD",
           "name": "United States Dollar"
@@ -506,7 +506,7 @@
         "SyncToken": "1",
         "MetaData": {
           "CreateTime": "2024-03-19T13:36:28-07:00",
-          "LastUpdatedTime": "2026-07-12T18:52:51-07:00"
+          "LastUpdatedTime": "2026-07-13T17:37:40-07:00"
         }
       },
       {
@@ -1287,8 +1287,8 @@
         "Classification": "Liability",
         "AccountType": "Other Current Liability",
         "AccountSubType": "GlobalTaxPayable",
-        "CurrentBalance": -1840.05,
-        "CurrentBalanceWithSubAccounts": -1840.05,
+        "CurrentBalance": -2086.08,
+        "CurrentBalanceWithSubAccounts": -2086.08,
         "CurrencyRef": {
           "value": "USD",
           "name": "United States Dollar"
@@ -1299,7 +1299,7 @@
         "SyncToken": "0",
         "MetaData": {
           "CreateTime": "2024-04-25T11:44:02-07:00",
-          "LastUpdatedTime": "2026-07-10T15:32:20-07:00"
+          "LastUpdatedTime": "2026-07-13T12:53:36-07:00"
         }
       },
       {
@@ -1543,8 +1543,8 @@
         "Classification": "Liability",
         "AccountType": "Other Current Liability",
         "AccountSubType": "GlobalTaxPayable",
-        "CurrentBalance": 526.5,
-        "CurrentBalanceWithSubAccounts": 3350.5,
+        "CurrentBalance": 317.34,
+        "CurrentBalanceWithSubAccounts": 3141.34,
         "CurrencyRef": {
           "value": "USD",
           "name": "United States Dollar"
@@ -1555,7 +1555,7 @@
         "SyncToken": "0",
         "MetaData": {
           "CreateTime": "2024-04-25T11:44:02-07:00",
-          "LastUpdatedTime": "2026-07-10T10:34:28-07:00"
+          "LastUpdatedTime": "2026-07-13T12:53:36-07:00"
         }
       },
       {
@@ -2220,8 +2220,8 @@
         "Classification": "Liability",
         "AccountType": "Other Current Liability",
         "AccountSubType": "OtherCurrentLiabilities",
-        "CurrentBalance": 103.15,
-        "CurrentBalanceWithSubAccounts": -158.2,
+        "CurrentBalance": -2977.46,
+        "CurrentBalanceWithSubAccounts": -3368.35,
         "CurrencyRef": {
           "value": "USD",
           "name": "United States Dollar"
@@ -2232,7 +2232,7 @@
         "SyncToken": "0",
         "MetaData": {
           "CreateTime": "2025-02-19T09:08:46-08:00",
-          "LastUpdatedTime": "2026-07-10T08:54:54-07:00"
+          "LastUpdatedTime": "2026-07-13T21:01:00-07:00"
         }
       },
       {
@@ -2246,8 +2246,8 @@
         "Classification": "Liability",
         "AccountType": "Other Current Liability",
         "AccountSubType": "OtherCurrentLiabilities",
-        "CurrentBalance": -261.35,
-        "CurrentBalanceWithSubAccounts": -261.35,
+        "CurrentBalance": -390.89,
+        "CurrentBalanceWithSubAccounts": -390.89,
         "CurrencyRef": {
           "value": "USD",
           "name": "United States Dollar"
@@ -2258,7 +2258,7 @@
         "SyncToken": "0",
         "MetaData": {
           "CreateTime": "2025-10-17T11:27:56-07:00",
-          "LastUpdatedTime": "2026-07-07T08:15:37-07:00"
+          "LastUpdatedTime": "2026-07-13T21:01:00-07:00"
         }
       },
       {
@@ -3319,8 +3319,8 @@
         "Classification": "Asset",
         "AccountType": "Other Current Asset",
         "AccountSubType": "UndepositedFunds",
-        "CurrentBalance": 2352.67,
-        "CurrentBalanceWithSubAccounts": 2352.67,
+        "CurrentBalance": 7728.7,
+        "CurrentBalanceWithSubAccounts": 7728.7,
         "CurrencyRef": {
           "value": "USD",
           "name": "United States Dollar"
@@ -3331,7 +3331,7 @@
         "SyncToken": "1",
         "MetaData": {
           "CreateTime": "2024-03-19T13:34:15-07:00",
-          "LastUpdatedTime": "2026-07-13T07:17:28-07:00"
+          "LastUpdatedTime": "2026-07-13T13:34:59-07:00"
         }
       },
       {
@@ -3558,5 +3558,5 @@
     "startPosition": 1,
     "maxResults": 148
   },
-  "time": "2026-07-13T09:02:25.514-07:00"
+  "time": "2026-07-14T08:06:49.840-07:00"
 }
