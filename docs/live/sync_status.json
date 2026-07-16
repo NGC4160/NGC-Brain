@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-07-14T15:06:25Z",
-  "finished_at": "2026-07-14T15:06:51.583174+00:00",
-  "overall": "success",
+  "started_at": "2026-07-15T15:05:15Z",
+  "finished_at": "2026-07-15T15:05:31.081935+00:00",
+  "overall": "partial",
   "steps": {
     "hcp": "ok",
-    "qbo": "ok",
+    "qbo": "fail",
     "ingest": "ok",
     "command_center": "ok"
   },
-  "detail": null
+  "detail": "QBO sync failed (rc=1)."
 }
