@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-18T14:33:21.215950+00:00",
+  "synced_at": "2026-07-19T14:36:32.814434+00:00",
   "count": 500,
   "jobs": [
     {
@@ -952,7 +952,12 @@
     {
       "id": "job_5b538991ff7847618874c8a404fc8624",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-      "notes": [],
+      "notes": [
+        {
+          "id": "nte_0c5a4098d4aa424da512d12215adae1e",
+          "content": "6yr old 3rd rate batteries, mixed jumpers with questionable crimps, voltage drop suspect.\n"
+        }
+      ],
       "work_status": "in progress",
       "work_timestamps": {
         "on_my_way_at": "2026-07-17T15:52:58Z",
@@ -1062,7 +1067,7 @@
     },
     {
       "id": "job_49ab6d0e3c884c14b7cab543cce8f934",
-      "description": "General - ***SEE NOTES***",
+      "description": "1.5-Complete Battery Replacement, 6V",
       "notes": [],
       "work_status": "complete unrated",
       "work_timestamps": {
@@ -1126,7 +1131,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-10T20:28:36Z",
-      "updated_at": "2026-07-15T19:39:55Z",
+      "updated_at": "2026-07-18T21:39:40Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -1546,7 +1551,12 @@
     {
       "id": "job_02aa1d900e7a4229a3ad05117e9d6826",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-      "notes": [],
+      "notes": [
+        {
+          "id": "nte_04b6e0a9b48f4ca1856c0e7639b9f3e4",
+          "content": "Were ALL lines inspected for a crimp or crushing damage from Master Cylinder to Wheel Cylinders? Were the Wheel Cylinders inspected and bled? Need additional details on the Work Order before calling a Master Cylinder IMHO."
+        }
+      ],
       "work_status": "scheduled",
       "work_timestamps": {
         "on_my_way_at": null,
@@ -1988,7 +1998,12 @@
     {
       "id": "job_93e640ab65324328aec71058c27ae7b8",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-      "notes": [],
+      "notes": [
+        {
+          "id": "nte_f0aae9c09fcb4b849b48017015314db0",
+          "content": "2hrs and 20min logged on this cart with zero documentation on the Job Report...what is happening with documentation?"
+        }
+      ],
       "work_status": "in progress",
       "work_timestamps": {
         "on_my_way_at": "2026-07-17T18:03:06Z",
@@ -2699,6 +2714,10 @@
         {
           "id": "nte_de8abee57151452593077d6fdb0e8688",
           "content": "Remove old lee spring bushings and installed the new kit"
+        },
+        {
+          "id": "nte_e077f16b3564410da624a3e5e7506bda",
+          "content": "6.5hrs logged for amp and underglow lights on a CC??"
         }
       ],
       "work_status": "complete unrated",
@@ -4016,6 +4035,10 @@
         {
           "id": "nte_f483d11aca8047d793d028ca95c4f799",
           "content": "Who completed this Job Report? Need training."
+        },
+        {
+          "id": "nte_90008e67b96f43c6b40e00b9c65c2c1a",
+          "content": "5.5hrs logged on a CC Light Issue?"
         }
       ],
       "work_status": "in progress",
@@ -4146,7 +4169,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-30T23:03:49Z",
-      "updated_at": "2026-07-17T18:46:33Z",
+      "updated_at": "2026-07-18T18:45:23Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
