@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-19T14:36:32.814434+00:00",
+  "synced_at": "2026-07-20T15:25:05.943775+00:00",
   "count": 500,
   "jobs": [
     {
@@ -1442,13 +1442,13 @@
       ],
       "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": "2026-07-15T14:53:32Z",
-        "started_at": null,
+        "on_my_way_at": "2026-07-20T14:30:04Z",
+        "started_at": "2026-07-20T14:30:04Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-07-15T14:30:00Z",
-        "scheduled_end": "2026-07-15T15:00:00Z",
+        "scheduled_end": "2026-07-20T16:15:00Z",
         "arrival_window": 120,
         "appointments": []
       },
@@ -1487,6 +1487,39 @@
           "created_at": "2026-04-23T21:20:02Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_2274105ada1f4a889389d12fbff48cb6",
+          "first_name": "Taylor",
+          "last_name": "Couvillion",
+          "email": "t.couvillion@yahoo.com",
+          "mobile_number": "5043303735",
+          "color_hex": "311a92",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-05-18T13:49:49Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [],
@@ -1502,7 +1535,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-09T21:30:04Z",
-      "updated_at": "2026-07-15T17:35:37Z",
+      "updated_at": "2026-07-20T14:30:04Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -1709,7 +1742,7 @@
       },
       "schedule": {
         "scheduled_start": "2026-07-14T14:00:00Z",
-        "scheduled_end": "2026-07-16T19:30:00Z",
+        "scheduled_end": "2026-07-20T16:30:00Z",
         "arrival_window": 120,
         "appointments": []
       },
@@ -1781,6 +1814,39 @@
           "created_at": "2026-05-01T21:12:20Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_96c62c1f641442399a788e397c0d69e6",
+          "first_name": "Richard",
+          "last_name": "Flynn",
+          "email": "flynn6959@gmail.com",
+          "mobile_number": "9853273960",
+          "color_hex": "c0370c",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-07-14T13:21:59Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [],
@@ -1796,7 +1862,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-09T20:02:03Z",
-      "updated_at": "2026-07-16T18:51:57Z",
+      "updated_at": "2026-07-20T14:39:28Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -13766,9 +13832,9 @@
       "id": "job_48ed8796b0bb468faaa7f588dce96e04",
       "description": "PM Services - 1.0 - Deluxe Electric Golf Cart PM Service",
       "notes": [],
-      "work_status": "scheduled",
+      "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": null,
+        "on_my_way_at": "2026-07-20T14:34:14Z",
         "started_at": null,
         "completed_at": null
       },
@@ -13830,7 +13896,7 @@
       },
       "locked_at": null,
       "created_at": "2026-05-28T15:04:55Z",
-      "updated_at": "2026-05-28T15:05:31Z",
+      "updated_at": "2026-07-20T14:34:14Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
