@@ -5,10 +5,10 @@
   <title>NGC Cart Pickup / Delivery Visual Inspection Form</title>
   <style>
     :root {
-      --border: #333;
+      --border: #222;
       --text: #000;
       --muted: #333;
-      --line: #666;
+      --line: #777;
     }
 
     @page {
@@ -16,117 +16,83 @@
       margin: 0.2in;
     }
 
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: "Segoe UI", Calibri, Arial, sans-serif;
-      font-size: 9pt;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8pt;
       color: var(--text);
       line-height: 1.05;
+      background: #fff;
     }
 
     .page {
       width: 8.1in;
-      height: 10.6in;
-      max-height: 10.6in;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
     }
 
     .page-header {
       text-align: center;
-      border-bottom: 1.5px solid var(--border);
+      border-bottom: 1px solid var(--border);
       padding-bottom: 1px;
       margin-bottom: 2px;
-      flex-shrink: 0;
     }
 
     .page-header .company {
-      font-size: 11pt;
+      font-size: 10pt;
       font-weight: 700;
-      letter-spacing: 0.03em;
-      line-height: 1;
+      letter-spacing: 0.02em;
     }
 
     .page-header .doc-title {
-      font-size: 10pt;
+      font-size: 9pt;
       font-weight: 700;
-      line-height: 1.05;
     }
 
     .page-header .sub {
-      font-size: 7.5pt;
+      font-size: 7pt;
       color: var(--muted);
     }
 
     .half {
-      flex: 1 1 0;
-      min-height: 0;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
       padding: 2px 3px;
       border: 1px solid var(--border);
-      background: #fff;
     }
 
-    .half.pickup {
-      border-radius: 2px 2px 0 0;
-      border-bottom: none;
-    }
-
-    .half.dropoff {
-      border-radius: 0 0 2px 2px;
-      border-top: none;
-    }
+    .half.pickup { border-bottom: 0; }
+    .half.dropoff { border-top: 0; }
 
     .divider {
-      flex: 0 0 auto;
       text-align: center;
-      font-size: 7.5pt;
+      font-size: 6.5pt;
       font-weight: 700;
-      color: var(--text);
       border-top: 1px dashed var(--line);
       border-bottom: 1px dashed var(--line);
       padding: 1px 0;
-      background: #fff;
     }
 
     .section-banner {
-      font-size: 9.5pt;
+      font-size: 8.5pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.02em;
-      padding: 0;
-      margin: 0 0 1px;
-      border-bottom: 1.5px solid var(--border);
-      flex-shrink: 0;
+      margin-bottom: 1px;
+      border-bottom: 1px solid var(--border);
     }
 
     .fields {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 0 5px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0 4px;
       margin-bottom: 1px;
-      font-size: 9pt;
-      flex-shrink: 0;
+      font-size: 8pt;
     }
 
-    .fields.compact {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+    .fields.compact { grid-template-columns: repeat(3, 1fr); }
 
     .field {
       display: flex;
       align-items: baseline;
-      gap: 3px;
+      gap: 2px;
       white-space: nowrap;
     }
 
@@ -135,146 +101,157 @@
     .field .line {
       flex: 1;
       border-bottom: 1px solid var(--line);
-      min-width: 12px;
-      height: 11px;
+      height: 10px;
+      min-width: 8px;
     }
 
     .section-label {
-      font-size: 8.5pt;
+      font-size: 7.5pt;
       font-weight: 700;
       text-transform: uppercase;
       margin: 1px 0 0;
-      letter-spacing: 0.01em;
-      flex-shrink: 0;
     }
 
     .callout {
-      font-size: 7.5pt;
-      color: var(--muted);
+      font-size: 7pt;
       font-style: italic;
+      color: var(--muted);
       margin: 0;
-      line-height: 1.05;
-      flex-shrink: 0;
     }
 
     .callout.strong {
       font-style: normal;
       font-weight: 700;
-      flex-shrink: 0;
-      margin: 1px 0 0;
-      font-size: 8.5pt;
+      color: var(--text);
+      margin: 1px 0;
+      font-size: 7.5pt;
+    }
+
+    .two-col-tables {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      margin-bottom: 1px;
     }
 
     table.data {
       width: 100%;
       border-collapse: collapse;
-      font-size: 8pt;
-      margin-bottom: 1px;
-      flex-shrink: 0;
+      font-size: 7.5pt;
     }
 
     table.data th,
     table.data td {
       border: 1px solid var(--border);
       padding: 0 2px;
-      vertical-align: middle;
-      line-height: 1.05;
+      line-height: 1.1;
+      background: #fff;
     }
 
     table.data th {
-      background: #eee;
       font-weight: 700;
       text-align: left;
-      font-size: 8pt;
     }
 
     .cb {
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       border: 1px solid var(--border);
       display: inline-block;
       vertical-align: middle;
+      background: #fff;
     }
 
-    .cb-col { width: 28px; text-align: center; }
-
-    .two-col-tables {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3px;
-      flex-shrink: 0;
-    }
+    .cb-col { width: 24px; text-align: center; }
 
     .upload-check {
       display: flex;
       align-items: center;
-      gap: 5px;
-      font-size: 9pt;
+      gap: 4px;
+      font-size: 8pt;
       font-weight: 700;
       margin: 1px 0;
-      flex-shrink: 0;
     }
 
     .notes-box {
       border: 1px solid var(--border);
-      padding: 1px 3px;
+      padding: 1px 3px 2px;
       margin: 1px 0;
       background: #fff;
-      flex: 1 1 auto;
-      min-height: 0.22in;
-      display: flex;
-      flex-direction: column;
     }
 
     .notes-box .notes-title {
-      font-size: 8.5pt;
+      font-size: 7.5pt;
       font-weight: 700;
-      line-height: 1.05;
       margin-bottom: 1px;
-      flex-shrink: 0;
     }
 
-    .notes-lines {
-      flex: 1 1 auto;
-      min-height: 0.16in;
-      background: repeating-linear-gradient(
-        transparent,
-        transparent 11px,
-        #999 11px,
-        #999 12px
-      );
+    .note-line {
+      height: 11px;
+      border-bottom: 1px solid #999;
+      background: none;
     }
 
     .sig-row {
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 4px;
-      font-size: 9pt;
-      flex-shrink: 0;
+      font-size: 8pt;
+      margin-top: 1px;
     }
 
-    .sig-row.wide {
-      grid-template-columns: 1.5fr 0.7fr 1.5fr;
-    }
+    .sig-row.wide { grid-template-columns: 1.5fr 0.7fr 1.5fr; }
 
     .sig {
       display: flex;
       align-items: baseline;
-      gap: 3px;
+      gap: 2px;
     }
 
     .sig label { font-weight: 700; white-space: nowrap; }
-    .sig .line { flex: 1; border-bottom: 1px solid var(--line); height: 11px; }
+    .sig .line { flex: 1; border-bottom: 1px solid var(--line); height: 10px; }
 
     @media print {
-      html, body { width: 100%; height: auto; }
+      @page { size: letter; margin: 0.2in; }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
       .page {
         width: 100%;
-        height: auto;
-        max-height: none;
-        overflow: visible;
+        margin: 0;
       }
-      .half { overflow: visible; }
+
+      .note-line {
+        border-bottom: 1px solid #999 !important;
+        background: none !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      table.data th,
+      table.data td,
+      .cb {
+        background: #fff !important;
+      }
+
+      /* Keep whole form on one sheet in browsers that paginate aggressively */
+      .page {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+
+      .half.pickup,
+      .half.dropoff,
+      .divider {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
     }
   </style>
 </head>
@@ -301,7 +278,7 @@
       </div>
 
       <div class="section-label">Required Photos — Before Loading</div>
-      <p class="callout">Each photo must show the <strong>entire subject in frame</strong> — step back so nothing is cropped.</p>
+      <p class="callout">Photos must show the <strong>entire subject in frame</strong> — nothing cropped.</p>
       <div class="two-col-tables">
         <table class="data">
           <thead><tr><th>Required Photo</th><th class="cb-col">Done</th></tr></thead>
@@ -354,12 +331,14 @@
       </div>
 
       <div class="notes-box">
-        <div class="notes-title">Before Loading Discrepancies / Pre-Existing Conditions — location, condition, photo reference</div>
-        <div class="notes-lines"></div>
+        <div class="notes-title">Before Loading Discrepancies / Pre-Existing Conditions</div>
+        <div class="notes-lines">
+          <div class="note-line"></div>
+          <div class="note-line"></div>
+        </div>
       </div>
 
       <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
-
       <div class="sig-row">
         <div class="sig"><label>Driver Pickup Signature:</label><span class="line"></span></div>
         <div class="sig"><label>Date/Time:</label><span class="line"></span></div>
@@ -378,7 +357,7 @@
       </div>
 
       <div class="section-label">Required Photos — At Final Return</div>
-      <p class="callout">Each photo must show the <strong>entire subject in frame</strong> — step back so nothing is cropped.</p>
+      <p class="callout">Photos must show the <strong>entire subject in frame</strong> — nothing cropped.</p>
       <div class="two-col-tables">
         <table class="data">
           <thead><tr><th>Required Photo</th><th class="cb-col">Done</th></tr></thead>
@@ -431,14 +410,15 @@
       </div>
 
       <div class="notes-box">
-        <div class="notes-title">Final Return Discrepancies / Delivery Condition — location, condition, photo reference</div>
-        <div class="notes-lines"></div>
+        <div class="notes-title">Final Return Discrepancies / Delivery Condition</div>
+        <div class="notes-lines">
+          <div class="note-line"></div>
+          <div class="note-line"></div>
+        </div>
       </div>
 
       <p class="callout strong">Obtain customer/receiver signature at drop-off whenever possible.</p>
-
       <div class="upload-check"><span class="cb"></span> Photos uploaded to job file</div>
-
       <div class="sig-row wide">
         <div class="sig"><label>Driver Drop-Off Signature:</label><span class="line"></span></div>
         <div class="sig"><label>Date/Time:</label><span class="line"></span></div>
