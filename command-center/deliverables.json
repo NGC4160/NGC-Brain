@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-21T15:20:49Z",
+  "generated_at": "2026-07-21T22:07:58Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 60,
+  "total_items": 103,
   "sections": [
     {
       "id": "start",
@@ -796,6 +796,571 @@
           "tags": [
             "export",
             "data"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "training",
+      "title": "Technician Training",
+      "icon": "\ud83c\udf93",
+      "description": "Golf Cart Diagnostic Technician \u2014 10-week / 40-hour ready-to-deliver package.",
+      "items": [
+        {
+          "title": "Training Hub (browse)",
+          "description": "GitHub Pages index for the full technician curriculum.",
+          "path": "docs/training/index.html",
+          "type": "html",
+          "view": "training/index.html",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/index.html",
+          "tags": [
+            "training",
+            "html"
+          ]
+        },
+        {
+          "title": "Training Package README",
+          "description": "Start here \u2014 schedule, folder map, instructor quick start.",
+          "path": "docs/training/golf-cart-diagnostic-technician/README.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/README.md",
+          "tags": [
+            "training",
+            "guide"
+          ]
+        },
+        {
+          "title": "Program Guide",
+          "description": "Learning objectives, rubrics, class size, scaling.",
+          "path": "docs/training/golf-cart-diagnostic-technician/00_program_guide.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/00_program_guide.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/00_program_guide.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/00_program_guide.md",
+          "tags": [
+            "training"
+          ]
+        },
+        {
+          "title": "Instructor Master Checklist",
+          "description": "Cohort staging and weekly bay rhythm.",
+          "path": "docs/training/golf-cart-diagnostic-technician/00_instructor_master_checklist.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/00_instructor_master_checklist.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/00_instructor_master_checklist.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/00_instructor_master_checklist.md",
+          "tags": [
+            "training",
+            "instructor"
+          ]
+        },
+        {
+          "title": "Week 1 \u2014 Safety, Tools & Electrical",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_01_safety_tools_electrical.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_01_safety_tools_electrical.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_01_safety_tools_electrical.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_01_safety_tools_electrical.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Week 2 \u2014 Lead-Acid Batteries",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_02_lead_acid_batteries.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_02_lead_acid_batteries.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_02_lead_acid_batteries.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_02_lead_acid_batteries.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Week 3 \u2014 Chargers & Lithium",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_03_chargers_lithium.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_03_chargers_lithium.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_03_chargers_lithium.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_03_chargers_lithium.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Week 4 \u2014 Electric Motors",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_04_electric_motors.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_04_electric_motors.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_04_electric_motors.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_04_electric_motors.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Week 5 \u2014 Controllers, Throttle & Solenoids",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_05_controllers_throttle_solenoids.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_05_controllers_throttle_solenoids.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_05_controllers_throttle_solenoids.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_05_controllers_throttle_solenoids.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Week 6 \u2014 Wiring Diagrams",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_06_wiring_diagrams.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_06_wiring_diagrams.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_06_wiring_diagrams.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_06_wiring_diagrams.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Week 7 \u2014 Diagnostic Methodology",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_07_diagnostic_methodology.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_07_diagnostic_methodology.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_07_diagnostic_methodology.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_07_diagnostic_methodology.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Week 8 \u2014 Mechanical Systems",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_08_mechanical_systems.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_08_mechanical_systems.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_08_mechanical_systems.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_08_mechanical_systems.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Week 9 \u2014 Gas-Powered Carts",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_09_gas_powered_carts.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_09_gas_powered_carts.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_09_gas_powered_carts.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_09_gas_powered_carts.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Week 10 \u2014 PM & Certification",
+          "description": "Lesson plans, quiz, instructor prep.",
+          "path": "docs/training/golf-cart-diagnostic-technician/weeks/week_10_pm_certification.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_10_pm_certification.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/weeks/week_10_pm_certification.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/weeks/week_10_pm_certification.md",
+          "tags": [
+            "training",
+            "week"
+          ]
+        },
+        {
+          "title": "Labs Index",
+          "description": "Printable worksheet map for all practical sessions.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/README.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/README.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W01 loto competency",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W01_loto_competency.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W01_loto_competency.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W01_loto_competency.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W01_loto_competency.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W01 multimeter scavenger",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W01_multimeter_scavenger.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W01_multimeter_scavenger.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W01_multimeter_scavenger.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W01_multimeter_scavenger.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W01 preassessment",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W01_preassessment.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W01_preassessment.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W01_preassessment.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W01_preassessment.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W02 battery diagnostic log",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W02_battery_diagnostic_log.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W02_battery_diagnostic_log.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W02_battery_diagnostic_log.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W02_battery_diagnostic_log.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W03 charger troubleshoot",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W03_charger_troubleshoot.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W03_charger_troubleshoot.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W03_charger_troubleshoot.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W03_charger_troubleshoot.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W03 lithium comparison",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W03_lithium_comparison.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W03_lithium_comparison.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W03_lithium_comparison.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W03_lithium_comparison.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W04 motor inspection report",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W04_motor_inspection_report.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W04_motor_inspection_report.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W04_motor_inspection_report.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W04_motor_inspection_report.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W05 fault code throttle solenoid",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W05_fault_code_throttle_solenoid.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W05_fault_code_throttle_solenoid.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W05_fault_code_throttle_solenoid.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W05_fault_code_throttle_solenoid.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W06 harness fault isolation",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W06_harness_fault_isolation.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W06_harness_fault_isolation.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W06_harness_fault_isolation.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W06_harness_fault_isolation.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W07 diagnostic report",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W07_diagnostic_report.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W07_diagnostic_report.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W07_diagnostic_report.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W07_diagnostic_report.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W07 seven step checklist",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W07_seven_step_checklist.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W07_seven_step_checklist.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W07_seven_step_checklist.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W07_seven_step_checklist.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W08 mechanical inspection",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W08_mechanical_inspection.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W08_mechanical_inspection.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W08_mechanical_inspection.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W08_mechanical_inspection.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W09 gas diagnostic checklist",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W09_gas_diagnostic_checklist.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W09_gas_diagnostic_checklist.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W09_gas_diagnostic_checklist.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W09_gas_diagnostic_checklist.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "W10 pm plan worksheet",
+          "description": "Lab worksheet / checklist.",
+          "path": "docs/training/golf-cart-diagnostic-technician/labs/W10_pm_plan_worksheet.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/labs/W10_pm_plan_worksheet.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/labs/W10_pm_plan_worksheet.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/labs/W10_pm_plan_worksheet.md",
+          "tags": [
+            "training",
+            "lab"
+          ]
+        },
+        {
+          "title": "Common Fault Flowcharts",
+          "description": "Student reference handout.",
+          "path": "docs/training/golf-cart-diagnostic-technician/handouts/common_fault_flowcharts.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/handouts/common_fault_flowcharts.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/handouts/common_fault_flowcharts.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/handouts/common_fault_flowcharts.md",
+          "tags": [
+            "training",
+            "handout"
+          ]
+        },
+        {
+          "title": "Curtis Fault Codes Reference",
+          "description": "Student reference handout.",
+          "path": "docs/training/golf-cart-diagnostic-technician/handouts/curtis_fault_codes_reference.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/handouts/curtis_fault_codes_reference.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/handouts/curtis_fault_codes_reference.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/handouts/curtis_fault_codes_reference.md",
+          "tags": [
+            "training",
+            "handout"
+          ]
+        },
+        {
+          "title": "Diagram Placeholder Catalog",
+          "description": "Student reference handout.",
+          "path": "docs/training/golf-cart-diagnostic-technician/handouts/diagram_placeholder_catalog.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/handouts/diagram_placeholder_catalog.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/handouts/diagram_placeholder_catalog.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/handouts/diagram_placeholder_catalog.md",
+          "tags": [
+            "training",
+            "handout"
+          ]
+        },
+        {
+          "title": "Ohm Law Quick Reference",
+          "description": "Student reference handout.",
+          "path": "docs/training/golf-cart-diagnostic-technician/handouts/ohm_law_quick_reference.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/handouts/ohm_law_quick_reference.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/handouts/ohm_law_quick_reference.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/handouts/ohm_law_quick_reference.md",
+          "tags": [
+            "training",
+            "handout"
+          ]
+        },
+        {
+          "title": "Pm Checklists",
+          "description": "Student reference handout.",
+          "path": "docs/training/golf-cart-diagnostic-technician/handouts/pm_checklists.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/handouts/pm_checklists.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/handouts/pm_checklists.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/handouts/pm_checklists.md",
+          "tags": [
+            "training",
+            "handout"
+          ]
+        },
+        {
+          "title": "Recommended Tool List",
+          "description": "Student reference handout.",
+          "path": "docs/training/golf-cart-diagnostic-technician/handouts/recommended_tool_list.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/handouts/recommended_tool_list.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/handouts/recommended_tool_list.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/handouts/recommended_tool_list.md",
+          "tags": [
+            "training",
+            "handout"
+          ]
+        },
+        {
+          "title": "Resources Further Learning",
+          "description": "Student reference handout.",
+          "path": "docs/training/golf-cart-diagnostic-technician/handouts/resources_further_learning.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/handouts/resources_further_learning.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/handouts/resources_further_learning.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/handouts/resources_further_learning.md",
+          "tags": [
+            "training",
+            "handout"
+          ]
+        },
+        {
+          "title": "Safety Shop Poster",
+          "description": "Student reference handout.",
+          "path": "docs/training/golf-cart-diagnostic-technician/handouts/safety_shop_poster.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/handouts/safety_shop_poster.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/handouts/safety_shop_poster.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/handouts/safety_shop_poster.md",
+          "tags": [
+            "training",
+            "handout"
+          ]
+        },
+        {
+          "title": "Wiring Symbol Glossary",
+          "description": "Student reference handout.",
+          "path": "docs/training/golf-cart-diagnostic-technician/handouts/wiring_symbol_glossary.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/handouts/wiring_symbol_glossary.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/handouts/wiring_symbol_glossary.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/handouts/wiring_symbol_glossary.md",
+          "tags": [
+            "training",
+            "handout"
+          ]
+        },
+        {
+          "title": "Final Practical Rubric",
+          "description": "Skills assessment scoring sheet.",
+          "path": "docs/training/golf-cart-diagnostic-technician/final_assessment/practical_skills_rubric.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/final_assessment/practical_skills_rubric.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/final_assessment/practical_skills_rubric.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/final_assessment/practical_skills_rubric.md",
+          "tags": [
+            "training",
+            "assessment"
+          ]
+        },
+        {
+          "title": "Written Final Exam (50 Q)",
+          "description": "Closed-book knowledge exam.",
+          "path": "docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam.md",
+          "tags": [
+            "training",
+            "assessment"
+          ]
+        },
+        {
+          "title": "Final Exam Answer Key",
+          "description": "Instructor only.",
+          "path": "docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam_answer_key.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam_answer_key.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam_answer_key.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam_answer_key.md",
+          "tags": [
+            "training",
+            "assessment"
+          ]
+        },
+        {
+          "title": "Certificate Template",
+          "description": "Completion certificate.",
+          "path": "docs/training/golf-cart-diagnostic-technician/final_assessment/certificate_template.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/final_assessment/certificate_template.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/final_assessment/certificate_template.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/final_assessment/certificate_template.md",
+          "tags": [
+            "training",
+            "assessment"
+          ]
+        },
+        {
+          "title": "Cohort Grade Tracker",
+          "description": "Roster scoring sheet.",
+          "path": "docs/training/golf-cart-diagnostic-technician/final_assessment/cohort_grade_tracker.md",
+          "type": "markdown",
+          "view": "view.html?path=docs/training/golf-cart-diagnostic-technician/final_assessment/cohort_grade_tracker.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/golf-cart-diagnostic-technician/final_assessment/cohort_grade_tracker.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/docs/training/golf-cart-diagnostic-technician/final_assessment/cohort_grade_tracker.md",
+          "tags": [
+            "training",
+            "assessment"
           ]
         }
       ]

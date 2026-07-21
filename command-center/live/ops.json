@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T15:20:49.852776+00:00",
+  "generated_at": "2026-07-21T22:07:58.089189+00:00",
   "jobs_synced_at": "2026-07-21T15:20:45.832902+00:00",
   "has_live_data": true,
   "metrics": {
@@ -18,7 +18,7 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 77,
+        "days": 78,
         "lithium": true,
         "status": "in progress"
       },
@@ -34,14 +34,14 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 77,
+        "days": 78,
         "lithium": true,
         "status": "in progress"
       },
       {
         "invoice": "17260",
         "description": "Accessories - 1.0-Seat belt kit installation",
-        "days": 76,
+        "days": 77,
         "lithium": false,
         "status": "in progress"
       },
@@ -62,7 +62,7 @@
       {
         "invoice": "17328",
         "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-        "days": 30,
+        "days": 31,
         "lithium": false,
         "status": "in progress"
       },
@@ -76,14 +76,14 @@
       {
         "invoice": "17351-2",
         "description": "General - 0.5- Fleet Inspection",
-        "days": 18,
+        "days": 19,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17351-1",
         "description": "General - 0.5- Fleet Inspection",
-        "days": 18,
+        "days": 19,
         "lithium": false,
         "status": "in progress"
       }
