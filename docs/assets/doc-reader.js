@@ -48,6 +48,35 @@ const NGCDoc = (() => {
     return hash ? `${target}#${hash}` : target;
   }
 
+  /** Resolve relative .pdf / .html links for docs deployed under command-center/. */
+  function resolveSiteAsset(fromPath, href) {
+    if (!href || href.startsWith("#") || href.startsWith("mailto:") || /^https?:\/\//i.test(href)) {
+      return null;
+    }
+    if (href.startsWith("view.html") || href.startsWith("/")) return null;
+
+    const [pathPart, hash] = href.split("#");
+    const path = pathPart.split("?")[0];
+    if (!path.endsWith(".pdf") && !path.endsWith(".html")) return null;
+
+    const fromDir = fromPath.includes("/") ? fromPath.slice(0, fromPath.lastIndexOf("/") + 1) : "";
+    const parts = (fromDir + path).split("/");
+    const resolved = [];
+    for (const part of parts) {
+      if (!part || part === ".") continue;
+      if (part === "..") {
+        if (resolved.length) resolved.pop();
+      } else {
+        resolved.push(part);
+      }
+    }
+    let sitePath = resolved.join("/");
+    // Repo paths under docs/ are deployed at command-center/ (docs/ stripped)
+    if (sitePath.startsWith("docs/")) sitePath = sitePath.slice("docs/".length);
+    const url = `${BASE()}${sitePath}`;
+    return hash ? `${url}#${hash}` : url;
+  }
+
   function enhanceRenderedMarkdown(html, docPath) {
     const doc = new DOMParser().parseFromString(html, "text/html");
     doc.querySelectorAll("a[href]").forEach((a) => {
@@ -58,6 +87,15 @@ const NGCDoc = (() => {
         a.setAttribute("href", "#");
         a.dataset.docPath = path;
         a.classList.add("doc-inline-link");
+        return;
+      }
+      const asset = resolveSiteAsset(docPath, href);
+      if (asset) {
+        a.setAttribute("href", asset);
+        if (asset.includes(".pdf")) {
+          a.setAttribute("target", "_blank");
+          a.setAttribute("rel", "noopener");
+        }
         return;
       }
       if (href && /github\.com\/[^/]+\/[^/]+\/blob\//.test(href)) {

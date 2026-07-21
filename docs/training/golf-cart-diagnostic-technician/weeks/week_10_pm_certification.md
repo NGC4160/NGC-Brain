@@ -6,6 +6,28 @@
 
 ---
 
+## PDF downloads (central library)
+
+Printable PDFs live in the **[central downloads library](../../downloads.html#week-10)** (Command Center → Technician Training → PDF Downloads).
+
+| Document | Download |
+|---|---|
+| Week 10 — PM & Certification (this week) | [PDF](../../pdfs/week-10-pm-certification.pdf) · [Library](../../downloads.html#week-10-pm-certification) |
+| Program Guide | [PDF](../../pdfs/program-guide.pdf) · [Library](../../downloads.html#program-guide) |
+| Instructor Master Checklist | [PDF](../../pdfs/instructor-master-checklist.pdf) · [Library](../../downloads.html#instructor-master-checklist) |
+| W07 Seven-Step Checklist | [PDF](../../pdfs/w07-seven-step-checklist.pdf) · [Library](../../downloads.html#w07-seven-step-checklist) |
+| W07 Diagnostic Report | [PDF](../../pdfs/w07-diagnostic-report.pdf) · [Library](../../downloads.html#w07-diagnostic-report) |
+| W10 PM Plan Worksheet | [PDF](../../pdfs/w10-pm-plan-worksheet.pdf) · [Library](../../downloads.html#w10-pm-plan-worksheet) |
+| PM Checklists | [PDF](../../pdfs/pm-checklists.pdf) · [Library](../../downloads.html#pm-checklists) |
+| Resources & Further Learning | [PDF](../../pdfs/resources-further-learning.pdf) · [Library](../../downloads.html#resources-further-learning) |
+| Final Practical Skills Rubric | [PDF](../../pdfs/practical-skills-rubric.pdf) · [Library](../../downloads.html#practical-skills-rubric) |
+| Written Final Exam (50 Q) | [PDF](../../pdfs/written-final-exam.pdf) · [Library](../../downloads.html#written-final-exam) |
+| Written Final Exam Answer Key (Instructor) | [PDF](../../pdfs/written-final-exam-answer-key.pdf) · [Library](../../downloads.html#written-final-exam-answer-key) |
+| Certificate Template | [PDF](../../pdfs/certificate-template.pdf) · [Library](../../downloads.html#certificate-template) |
+| Cohort Grade Tracker | [PDF](../../pdfs/cohort-grade-tracker.pdf) · [Library](../../downloads.html#cohort-grade-tracker) |
+
+Full catalog: [training/downloads.html](../../downloads.html)
+
 ## Instructor Preparation Guide (Complete Day Before)
 
 ### Pre-session setup

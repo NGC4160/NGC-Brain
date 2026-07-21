@@ -6,6 +6,25 @@
 
 ---
 
+## PDF downloads (central library)
+
+Printable PDFs live in the **[central downloads library](../../downloads.html#week-1)** (Command Center → Technician Training → PDF Downloads).
+
+| Document | Download |
+|---|---|
+| Week 1 — Safety, Tools & Electrical (this week) | [PDF](../../pdfs/week-01-safety-tools-electrical.pdf) · [Library](../../downloads.html#week-01-safety-tools-electrical) |
+| Program Guide | [PDF](../../pdfs/program-guide.pdf) · [Library](../../downloads.html#program-guide) |
+| Instructor Master Checklist | [PDF](../../pdfs/instructor-master-checklist.pdf) · [Library](../../downloads.html#instructor-master-checklist) |
+| W01 Pre-Assessment | [PDF](../../pdfs/w01-preassessment.pdf) · [Library](../../downloads.html#w01-preassessment) |
+| W01 Multimeter Scavenger | [PDF](../../pdfs/w01-multimeter-scavenger.pdf) · [Library](../../downloads.html#w01-multimeter-scavenger) |
+| W01 LOTO Competency | [PDF](../../pdfs/w01-loto-competency.pdf) · [Library](../../downloads.html#w01-loto-competency) |
+| Wiring Symbol Glossary | [PDF](../../pdfs/wiring-symbol-glossary.pdf) · [Library](../../downloads.html#wiring-symbol-glossary) |
+| Ohm’s Law Quick Reference | [PDF](../../pdfs/ohm-law-quick-reference.pdf) · [Library](../../downloads.html#ohm-law-quick-reference) |
+| Safety Shop Poster | [PDF](../../pdfs/safety-shop-poster.pdf) · [Library](../../downloads.html#safety-shop-poster) |
+| Recommended Tool List | [PDF](../../pdfs/recommended-tool-list.pdf) · [Library](../../downloads.html#recommended-tool-list) |
+
+Full catalog: [training/downloads.html](../../downloads.html)
+
 ## Instructor Preparation Guide (Complete Day Before)
 
 ### Pre-session setup

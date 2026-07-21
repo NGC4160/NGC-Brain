@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T22:07:26.741547+00:00",
+  "generated_at": "2026-07-21T22:16:39.792026+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-21T22:07:26.720953+00:00",
+    "generated_at": "2026-07-21T22:16:39.772491+00:00",
     "jobs_synced_at": "2026-07-21T15:20:45.832902+00:00",
     "has_live_data": true,
     "metrics": {
@@ -765,7 +765,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "103 indexed deliverables",
+          "desc": "104 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -829,6 +829,11 @@
           "primary": true
         },
         {
+          "title": "PDF Downloads",
+          "desc": "Central printable library \u2014 all weeks & labs",
+          "href": "training/downloads.html"
+        },
+        {
           "title": "Program Guide",
           "desc": "Objectives, rubrics, class size, scaling",
           "href": "view.html?path=docs/training/golf-cart-diagnostic-technician/00_program_guide.md"
@@ -846,5 +851,5 @@
       ]
     }
   ],
-  "manifest_total": 103
+  "manifest_total": 104
 }

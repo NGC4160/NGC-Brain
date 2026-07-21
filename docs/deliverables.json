@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-21T22:07:26Z",
+  "generated_at": "2026-07-21T22:16:39Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 103,
+  "total_items": 104,
   "sections": [
     {
       "id": "start",
@@ -816,6 +816,19 @@
           "tags": [
             "training",
             "html"
+          ]
+        },
+        {
+          "title": "PDF Downloads (central library)",
+          "description": "Download printable PDFs for all weeks, labs, handouts, and finals.",
+          "path": "docs/training/downloads.html",
+          "type": "html",
+          "view": "training/downloads.html",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/training/downloads.html",
+          "tags": [
+            "training",
+            "html",
+            "pdf"
           ]
         },
         {

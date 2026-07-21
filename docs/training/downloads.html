@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="ngc-base" content="../" />
+  <meta name="theme-color" content="#080b10" />
+  <title>Training PDF Downloads — NGC Command Center</title>
+  <link rel="stylesheet" href="../assets/command.css" />
+  <style>
+    .dl-hero { padding: 1.25rem 0 0.75rem; border-bottom: 1px solid var(--border, rgba(255,255,255,.08)); margin-bottom: 1.25rem; }
+    .dl-hero h1 { margin: 0 0 .35rem; font-size: 1.45rem; }
+    .dl-hero p { margin: 0; color: var(--text-secondary); max-width: 46rem; line-height: 1.45; }
+    .dl-section { margin-bottom: 1.75rem; scroll-margin-top: 1rem; }
+    .dl-section h2 { margin: 0 0 .65rem; font-size: 1rem; }
+    .dl-week-jump { display: flex; flex-wrap: wrap; gap: .4rem; margin: .85rem 0 0; }
+    .dl-week-jump a {
+      font-size: .75rem; padding: .25rem .55rem; border-radius: 999px;
+      border: 1px solid var(--border, rgba(255,255,255,.12)); color: var(--text-secondary); text-decoration: none;
+    }
+    .dl-week-jump a:hover { color: var(--text); border-color: #f472b6; }
+    .dl-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    .dl-table th, .dl-table td { text-align: left; padding: .55rem .45rem; border-bottom: 1px solid var(--border, rgba(255,255,255,.08)); vertical-align: top; }
+    .dl-table th { color: var(--text-muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; }
+    .dl-table tr { scroll-margin-top: 1rem; }
+    .dl-table tr:target { background: rgba(244, 114, 182, 0.12); }
+    .dl-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .dl-actions a {
+      color: #f9a8d4; text-decoration: none; font-weight: 600; font-size: .85rem;
+    }
+    .dl-actions a:hover { text-decoration: underline; }
+    .dl-meta { color: var(--text-muted); font-size: .75rem; }
+    .dl-empty { color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="aura" aria-hidden="true"></div>
+
+  <div id="login-gate" class="login-gate hidden">
+    <div class="login-panel">
+      <img class="login-logo" src="../assets/ngc-logo.png" alt="NGC" />
+      <h1>Command Center</h1>
+      <p class="subtitle">Ryan &amp; Christine only</p>
+      <form id="login-form">
+        <label for="login-user">Operator</label>
+        <select id="login-user"><option value="Ryan">Ryan White</option><option value="Christine">Christine White</option></select>
+        <label for="login-password">Access code</label>
+        <input id="login-password" type="password" autocomplete="current-password" required />
+        <button type="submit">Enter</button>
+        <p id="login-error" class="login-error" role="alert"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="shell">
+    <header class="topbar">
+      <div class="topbar-brand">
+        <img src="../assets/ngc-logo.png" alt="" />
+        <div>
+          <h1>Training PDF Downloads</h1>
+          <span>
+            <a href="./index.html">← Training Hub</a> ·
+            <a href="../index.html">Command Center</a>
+          </span>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn-ghost" id="logout-btn" type="button">Logout</button>
+      </div>
+    </header>
+
+    <main class="main-content" style="padding: 1rem 1.25rem 2.5rem; max-width: 1000px; margin: 0 auto;">
+      <section class="dl-hero">
+        <h1>Central PDF library</h1>
+        <p>Download printable versions of the Golf Cart Diagnostic Technician curriculum — weeks, labs, handouts, and finals. Each week’s lesson plan links back here.</p>
+        <div class="dl-week-jump" id="week-jumps"></div>
+        <p class="dl-meta" id="dl-stats" style="margin-top:.75rem">Loading catalog…</p>
+      </section>
+      <div id="dl-root"><p class="dl-empty">Loading…</p></div>
+    </main>
+  </div>
+
+  <script src="../assets/auth-config.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script>
+    const BASE = document.querySelector('meta[name="ngc-base"]')?.content || "../";
+    const CATEGORIES = [
+      { id: "program", title: "Program guides" },
+      { id: "weeks", title: "Weekly curricula" },
+      { id: "labs", title: "Lab worksheets" },
+      { id: "handouts", title: "Student handouts" },
+      { id: "final_assessment", title: "Final assessment" },
+    ];
+
+    function fmtBytes(n) {
+      if (n < 1024) return `${n} B`;
+      if (n < 1024 * 1024) return `${(n / 1024).toFixed(0)} KB`;
+      return `${(n / (1024 * 1024)).toFixed(1)} MB`;
+    }
+
+    function render(manifest) {
+      const root = document.getElementById("dl-root");
+      const jumps = document.getElementById("week-jumps");
+      jumps.innerHTML = Array.from({ length: 10 }, (_, i) => {
+        const w = i + 1;
+        return `<a href="#week-${w}">Week ${w}</a>`;
+      }).join("") + `<a href="#all">All PDFs</a>`;
+
+      document.getElementById("dl-stats").textContent =
+        `${manifest.count} PDFs · updated ${new Date(manifest.generated_at).toLocaleString()}`;
+
+      // Week sections (materials tagged to that week)
+      let html = "";
+      for (let w = 1; w <= 10; w++) {
+        const items = manifest.items.filter((it) => (it.weeks || []).includes(w));
+        html += `<section class="dl-section" id="week-${w}">
+          <h2>Week ${w} downloads</h2>
+          <table class="dl-table"><thead><tr><th>Document</th><th>Size</th><th>Actions</th></tr></thead><tbody>
+          ${items.map(rowHtml).join("") || `<tr><td colspan="3" class="dl-empty">No PDFs tagged for this week.</td></tr>`}
+          </tbody></table>
+        </section>`;
+      }
+
+      html += `<section class="dl-section" id="all"><h2>Full catalog</h2>`;
+      for (const cat of CATEGORIES) {
+        const items = manifest.items.filter((it) => it.category === cat.id);
+        if (!items.length) continue;
+        html += `<h3 style="margin:1rem 0 .4rem;font-size:.95rem">${cat.title}</h3>
+          <table class="dl-table"><thead><tr><th>Document</th><th>Size</th><th>Actions</th></tr></thead><tbody>
+          ${items.map(rowHtml).join("")}
+          </tbody></table>`;
+      }
+      html += `</section>`;
+      root.innerHTML = html;
+
+      // Honor deep link after render
+      if (location.hash) {
+        const el = document.querySelector(location.hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function rowHtml(it) {
+      const viewPath = it.path?.replace(/^docs\//, "") || "";
+      // Markdown source path for viewer (strip docs/training/pdfs/xxx.pdf → original not available; link library id only)
+      return `<tr id="${it.id}">
+        <td><strong>${it.title}</strong><div class="dl-meta">${it.file}</div></td>
+        <td class="dl-meta">${fmtBytes(it.bytes || 0)}</td>
+        <td class="dl-actions">
+          <a href="./${it.href}" download>Download PDF</a>
+          <a href="./${it.href}" target="_blank" rel="noopener">Open</a>
+        </td>
+      </tr>`;
+    }
+
+    async function initDownloads() {
+      try {
+        const res = await fetch("./pdfs/manifest.json");
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        render(await res.json());
+      } catch (err) {
+        document.getElementById("dl-root").innerHTML =
+          `<p class="dl-empty">Could not load PDF catalog: ${err.message}. Run <code>python3 scripts/build_training_pdfs.py</code> and redeploy.</p>`;
+        document.getElementById("dl-stats").textContent = "Catalog missing";
+      }
+    }
+
+    document.getElementById("logout-btn")?.addEventListener("click", () => window.NGCAuth?.logout());
+    window.onAuthSuccess = initDownloads;
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.NGCAuth?.isAuthed()) initDownloads();
+    });
+  </script>
+</body>
+</html>

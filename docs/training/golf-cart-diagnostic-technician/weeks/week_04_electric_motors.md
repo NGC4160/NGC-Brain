@@ -6,6 +6,19 @@
 
 ---
 
+## PDF downloads (central library)
+
+Printable PDFs live in the **[central downloads library](../../downloads.html#week-4)** (Command Center → Technician Training → PDF Downloads).
+
+| Document | Download |
+|---|---|
+| Week 4 — Electric Motors (this week) | [PDF](../../pdfs/week-04-electric-motors.pdf) · [Library](../../downloads.html#week-04-electric-motors) |
+| Program Guide | [PDF](../../pdfs/program-guide.pdf) · [Library](../../downloads.html#program-guide) |
+| Instructor Master Checklist | [PDF](../../pdfs/instructor-master-checklist.pdf) · [Library](../../downloads.html#instructor-master-checklist) |
+| W04 Motor Inspection Report | [PDF](../../pdfs/w04-motor-inspection-report.pdf) · [Library](../../downloads.html#w04-motor-inspection-report) |
+
+Full catalog: [training/downloads.html](../../downloads.html)
+
 ## Instructor Preparation Guide (Complete Day Before)
 
 ### Pre-session setup
