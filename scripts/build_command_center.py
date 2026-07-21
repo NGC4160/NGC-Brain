@@ -375,6 +375,36 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict]) -> list[dict]:
                 {"title": "Integration Playbook", "desc": "QBO MCP, Zapier, Everlogic", "href": "view.html?path=knowledge/10_automation/integration_playbook.md"},
             ],
         },
+        {
+            "id": "training",
+            "title": "Technician Training",
+            "icon": "▣",
+            "color": "#f472b6",
+            "description": "Golf Cart Diagnostic Technician — 10 weeks · 40 hours",
+            "cards": [
+                {
+                    "title": "Training Hub",
+                    "desc": "Browse weeks, labs, handouts, finals",
+                    "href": "training/index.html",
+                    "primary": True,
+                },
+                {
+                    "title": "Program Guide",
+                    "desc": "Objectives, rubrics, class size, scaling",
+                    "href": "view.html?path=docs/training/golf-cart-diagnostic-technician/00_program_guide.md",
+                },
+                {
+                    "title": "Week 1 — Safety & Tools",
+                    "desc": "Start the 10-week curriculum",
+                    "href": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_01_safety_tools_electrical.md",
+                },
+                {
+                    "title": "Final Assessment Pack",
+                    "desc": "Practical rubric · 50-Q exam · certificate",
+                    "href": "view.html?path=docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam.md",
+                },
+            ],
+        },
     ]
 
 
@@ -398,6 +428,14 @@ def bundle_static_content(manifest: dict) -> int:
             shutil.copy2(src, content / filename)
             copied += 1
 
+    training_src = DOCS / "training"
+    if training_src.exists():
+        dst = content / "docs" / "training"
+        if dst.exists():
+            shutil.rmtree(dst)
+        shutil.copytree(training_src, dst)
+        copied += sum(1 for _ in dst.rglob("*") if _.is_file())
+
     extra = ROOT / "external_docs/templates/personnel_counseling/README.md"
     if extra.exists():
         dst = content / "external_docs/templates/personnel_counseling/README.md"
@@ -420,6 +458,7 @@ def validate_zone_links(zones: list[dict]) -> list[str]:
     internal_pages = {
         "dashboard.html", "explore.html", "index.html",
         "templates/personnel-counseling.html",
+        "training/index.html",
     }
     for zone in zones:
         for card in zone.get("cards", []):

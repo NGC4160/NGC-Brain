@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T15:20:49.877505+00:00",
+  "generated_at": "2026-07-21T22:07:26.741547+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-21T15:20:49.852776+00:00",
+    "generated_at": "2026-07-21T22:07:26.720953+00:00",
     "jobs_synced_at": "2026-07-21T15:20:45.832902+00:00",
     "has_live_data": true,
     "metrics": {
@@ -28,7 +28,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 77,
+          "days": 78,
           "lithium": true,
           "status": "in progress"
         },
@@ -44,14 +44,14 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 77,
+          "days": 78,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17260",
           "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 76,
+          "days": 77,
           "lithium": false,
           "status": "in progress"
         },
@@ -72,7 +72,7 @@
         {
           "invoice": "17328",
           "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-          "days": 30,
+          "days": 31,
           "lithium": false,
           "status": "in progress"
         },
@@ -86,14 +86,14 @@
         {
           "invoice": "17351-2",
           "description": "General - 0.5- Fleet Inspection",
-          "days": 18,
+          "days": 19,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17351-1",
           "description": "General - 0.5- Fleet Inspection",
-          "days": 18,
+          "days": 19,
           "lithium": false,
           "status": "in progress"
         }
@@ -765,7 +765,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "60 indexed deliverables",
+          "desc": "103 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -814,7 +814,37 @@
           "href": "view.html?path=knowledge/10_automation/integration_playbook.md"
         }
       ]
+    },
+    {
+      "id": "training",
+      "title": "Technician Training",
+      "icon": "\u25a3",
+      "color": "#f472b6",
+      "description": "Golf Cart Diagnostic Technician \u2014 10 weeks \u00b7 40 hours",
+      "cards": [
+        {
+          "title": "Training Hub",
+          "desc": "Browse weeks, labs, handouts, finals",
+          "href": "training/index.html",
+          "primary": true
+        },
+        {
+          "title": "Program Guide",
+          "desc": "Objectives, rubrics, class size, scaling",
+          "href": "view.html?path=docs/training/golf-cart-diagnostic-technician/00_program_guide.md"
+        },
+        {
+          "title": "Week 1 \u2014 Safety & Tools",
+          "desc": "Start the 10-week curriculum",
+          "href": "view.html?path=docs/training/golf-cart-diagnostic-technician/weeks/week_01_safety_tools_electrical.md"
+        },
+        {
+          "title": "Final Assessment Pack",
+          "desc": "Practical rubric \u00b7 50-Q exam \u00b7 certificate",
+          "href": "view.html?path=docs/training/golf-cart-diagnostic-technician/final_assessment/written_final_exam.md"
+        }
+      ]
     }
   ],
-  "manifest_total": 60
+  "manifest_total": 103
 }

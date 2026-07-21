@@ -258,6 +258,91 @@ def build_sections() -> list[dict]:
         }
     )
 
+    training_root = DOCS / "training" / "golf-cart-diagnostic-technician"
+    if training_root.exists():
+        training_items: list[dict] = [
+            {
+                "title": "Training Hub (browse)",
+                "description": "GitHub Pages index for the full technician curriculum.",
+                "path": "docs/training/index.html",
+                "type": "html",
+                "view": "training/index.html",
+                "github": gh_blob("docs/training/index.html"),
+                "tags": ["training", "html"],
+            },
+            md_item(
+                training_root / "README.md",
+                "Training Package README",
+                "Start here — schedule, folder map, instructor quick start.",
+                tags=["training", "guide"],
+            ),
+            md_item(
+                training_root / "00_program_guide.md",
+                "Program Guide",
+                "Learning objectives, rubrics, class size, scaling.",
+                tags=["training"],
+            ),
+            md_item(
+                training_root / "00_instructor_master_checklist.md",
+                "Instructor Master Checklist",
+                "Cohort staging and weekly bay rhythm.",
+                tags=["training", "instructor"],
+            ),
+        ]
+        week_titles = {
+            "week_01_safety_tools_electrical.md": "Week 1 — Safety, Tools & Electrical",
+            "week_02_lead_acid_batteries.md": "Week 2 — Lead-Acid Batteries",
+            "week_03_chargers_lithium.md": "Week 3 — Chargers & Lithium",
+            "week_04_electric_motors.md": "Week 4 — Electric Motors",
+            "week_05_controllers_throttle_solenoids.md": "Week 5 — Controllers, Throttle & Solenoids",
+            "week_06_wiring_diagrams.md": "Week 6 — Wiring Diagrams",
+            "week_07_diagnostic_methodology.md": "Week 7 — Diagnostic Methodology",
+            "week_08_mechanical_systems.md": "Week 8 — Mechanical Systems",
+            "week_09_gas_powered_carts.md": "Week 9 — Gas-Powered Carts",
+            "week_10_pm_certification.md": "Week 10 — PM & Certification",
+        }
+        for name, title in week_titles.items():
+            path = training_root / "weeks" / name
+            if path.exists():
+                training_items.append(md_item(path, title, "Lesson plans, quiz, instructor prep.", tags=["training", "week"]))
+
+        for path in sorted((training_root / "labs").glob("*.md")):
+            if path.name == "README.md":
+                training_items.append(
+                    md_item(path, "Labs Index", "Printable worksheet map for all practical sessions.", tags=["training", "lab"])
+                )
+            else:
+                training_items.append(
+                    md_item(path, path.stem.replace("_", " "), "Lab worksheet / checklist.", tags=["training", "lab"])
+                )
+
+        for path in sorted((training_root / "handouts").glob("*.md")):
+            training_items.append(
+                md_item(path, path.stem.replace("_", " ").title(), "Student reference handout.", tags=["training", "handout"])
+            )
+
+        finals = [
+            ("practical_skills_rubric.md", "Final Practical Rubric", "Skills assessment scoring sheet."),
+            ("written_final_exam.md", "Written Final Exam (50 Q)", "Closed-book knowledge exam."),
+            ("written_final_exam_answer_key.md", "Final Exam Answer Key", "Instructor only."),
+            ("certificate_template.md", "Certificate Template", "Completion certificate."),
+            ("cohort_grade_tracker.md", "Cohort Grade Tracker", "Roster scoring sheet."),
+        ]
+        for name, title, desc in finals:
+            path = training_root / "final_assessment" / name
+            if path.exists():
+                training_items.append(md_item(path, title, desc, tags=["training", "assessment"]))
+
+        sections.append(
+            {
+                "id": "training",
+                "title": "Technician Training",
+                "icon": "🎓",
+                "description": "Golf Cart Diagnostic Technician — 10-week / 40-hour ready-to-deliver package.",
+                "items": training_items,
+            }
+        )
+
     return sections
 
 

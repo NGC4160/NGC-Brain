@@ -83,6 +83,10 @@ const NGCDoc = (() => {
     if (path.startsWith("live/")) {
       urls.push(`${BASE()}${path}`);
     } else {
+      // Training package lives under docs/ and is deployed at command-center/training/...
+      if (path.startsWith("docs/training/")) {
+        urls.push(`${BASE()}${path.slice("docs/".length)}`);
+      }
       urls.push(`${BASE()}content/${path}`);
       if (manifest) {
         urls.push(`https://raw.githubusercontent.com/${manifest.repo}/${manifest.branch}/${path}`);
