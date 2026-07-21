@@ -6,6 +6,20 @@
 
 ---
 
+## PDF downloads (central library)
+
+Printable PDFs live in the **[central downloads library](../../downloads.html#week-5)** (Command Center → Technician Training → PDF Downloads).
+
+| Document | Download |
+|---|---|
+| Week 5 — Controllers, Throttle & Solenoids (this week) | [PDF](../../pdfs/week-05-controllers-throttle-solenoids.pdf) · [Library](../../downloads.html#week-05-controllers-throttle-solenoids) |
+| Program Guide | [PDF](../../pdfs/program-guide.pdf) · [Library](../../downloads.html#program-guide) |
+| Instructor Master Checklist | [PDF](../../pdfs/instructor-master-checklist.pdf) · [Library](../../downloads.html#instructor-master-checklist) |
+| W05 Fault Code / Throttle / Solenoid | [PDF](../../pdfs/w05-fault-code-throttle-solenoid.pdf) · [Library](../../downloads.html#w05-fault-code-throttle-solenoid) |
+| Curtis Fault Codes Reference | [PDF](../../pdfs/curtis-fault-codes-reference.pdf) · [Library](../../downloads.html#curtis-fault-codes-reference) |
+
+Full catalog: [training/downloads.html](../../downloads.html)
+
 ## Instructor Preparation Guide (Complete Day Before)
 
 ### Pre-session setup

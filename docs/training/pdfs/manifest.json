@@ -1,0 +1,557 @@
+{
+  "generated_at": "2026-07-21T22:15:54.617254+00:00",
+  "hub": "training/downloads.html",
+  "count": 41,
+  "items": [
+    {
+      "id": "program-guide",
+      "title": "Program Guide",
+      "category": "program",
+      "file": "program-guide.pdf",
+      "href": "pdfs/program-guide.pdf",
+      "path": "docs/training/pdfs/program-guide.pdf",
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "bytes": 40580,
+      "sha256": "afb39255ed37fa47"
+    },
+    {
+      "id": "instructor-master-checklist",
+      "title": "Instructor Master Checklist",
+      "category": "program",
+      "file": "instructor-master-checklist.pdf",
+      "href": "pdfs/instructor-master-checklist.pdf",
+      "path": "docs/training/pdfs/instructor-master-checklist.pdf",
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "bytes": 22549,
+      "sha256": "31b3d42e83ff330a"
+    },
+    {
+      "id": "package-readme",
+      "title": "Training Package README",
+      "category": "program",
+      "file": "package-readme.pdf",
+      "href": "pdfs/package-readme.pdf",
+      "path": "docs/training/pdfs/package-readme.pdf",
+      "weeks": [],
+      "bytes": 30549,
+      "sha256": "714f383bce0f3dae"
+    },
+    {
+      "id": "week-01-safety-tools-electrical",
+      "title": "Week 1 \u2014 Safety, Tools & Electrical",
+      "category": "weeks",
+      "file": "week-01-safety-tools-electrical.pdf",
+      "href": "pdfs/week-01-safety-tools-electrical.pdf",
+      "path": "docs/training/pdfs/week-01-safety-tools-electrical.pdf",
+      "weeks": [
+        1
+      ],
+      "bytes": 42159,
+      "sha256": "348aa869438bc0b9"
+    },
+    {
+      "id": "week-02-lead-acid-batteries",
+      "title": "Week 2 \u2014 Lead-Acid Batteries",
+      "category": "weeks",
+      "file": "week-02-lead-acid-batteries.pdf",
+      "href": "pdfs/week-02-lead-acid-batteries.pdf",
+      "path": "docs/training/pdfs/week-02-lead-acid-batteries.pdf",
+      "weeks": [
+        2
+      ],
+      "bytes": 36320,
+      "sha256": "3bf1c8322ab32a2c"
+    },
+    {
+      "id": "week-03-chargers-lithium",
+      "title": "Week 3 \u2014 Chargers & Lithium",
+      "category": "weeks",
+      "file": "week-03-chargers-lithium.pdf",
+      "href": "pdfs/week-03-chargers-lithium.pdf",
+      "path": "docs/training/pdfs/week-03-chargers-lithium.pdf",
+      "weeks": [
+        3
+      ],
+      "bytes": 33739,
+      "sha256": "e56fd2faeb99e934"
+    },
+    {
+      "id": "week-04-electric-motors",
+      "title": "Week 4 \u2014 Electric Motors",
+      "category": "weeks",
+      "file": "week-04-electric-motors.pdf",
+      "href": "pdfs/week-04-electric-motors.pdf",
+      "path": "docs/training/pdfs/week-04-electric-motors.pdf",
+      "weeks": [
+        4
+      ],
+      "bytes": 31439,
+      "sha256": "ce0293bcdf60be8a"
+    },
+    {
+      "id": "week-05-controllers-throttle-solenoids",
+      "title": "Week 5 \u2014 Controllers, Throttle & Solenoids",
+      "category": "weeks",
+      "file": "week-05-controllers-throttle-solenoids.pdf",
+      "href": "pdfs/week-05-controllers-throttle-solenoids.pdf",
+      "path": "docs/training/pdfs/week-05-controllers-throttle-solenoids.pdf",
+      "weeks": [
+        5
+      ],
+      "bytes": 33056,
+      "sha256": "f99ff6f1e6f47bb1"
+    },
+    {
+      "id": "week-06-wiring-diagrams",
+      "title": "Week 6 \u2014 Wiring Diagrams",
+      "category": "weeks",
+      "file": "week-06-wiring-diagrams.pdf",
+      "href": "pdfs/week-06-wiring-diagrams.pdf",
+      "path": "docs/training/pdfs/week-06-wiring-diagrams.pdf",
+      "weeks": [
+        6
+      ],
+      "bytes": 31379,
+      "sha256": "fc6dda33ad7a970c"
+    },
+    {
+      "id": "week-07-diagnostic-methodology",
+      "title": "Week 7 \u2014 Diagnostic Methodology",
+      "category": "weeks",
+      "file": "week-07-diagnostic-methodology.pdf",
+      "href": "pdfs/week-07-diagnostic-methodology.pdf",
+      "path": "docs/training/pdfs/week-07-diagnostic-methodology.pdf",
+      "weeks": [
+        7
+      ],
+      "bytes": 33495,
+      "sha256": "413e940b67142b9a"
+    },
+    {
+      "id": "week-08-mechanical-systems",
+      "title": "Week 8 \u2014 Mechanical Systems",
+      "category": "weeks",
+      "file": "week-08-mechanical-systems.pdf",
+      "href": "pdfs/week-08-mechanical-systems.pdf",
+      "path": "docs/training/pdfs/week-08-mechanical-systems.pdf",
+      "weeks": [
+        8
+      ],
+      "bytes": 31022,
+      "sha256": "f50c0ed1af8036e9"
+    },
+    {
+      "id": "week-09-gas-powered-carts",
+      "title": "Week 9 \u2014 Gas-Powered Carts",
+      "category": "weeks",
+      "file": "week-09-gas-powered-carts.pdf",
+      "href": "pdfs/week-09-gas-powered-carts.pdf",
+      "path": "docs/training/pdfs/week-09-gas-powered-carts.pdf",
+      "weeks": [
+        9
+      ],
+      "bytes": 31209,
+      "sha256": "ade35b39dfee35b1"
+    },
+    {
+      "id": "week-10-pm-certification",
+      "title": "Week 10 \u2014 PM & Certification",
+      "category": "weeks",
+      "file": "week-10-pm-certification.pdf",
+      "href": "pdfs/week-10-pm-certification.pdf",
+      "path": "docs/training/pdfs/week-10-pm-certification.pdf",
+      "weeks": [
+        10
+      ],
+      "bytes": 34456,
+      "sha256": "47c3bc1383cb0c2e"
+    },
+    {
+      "id": "w01-preassessment",
+      "title": "W01 Pre-Assessment",
+      "category": "labs",
+      "file": "w01-preassessment.pdf",
+      "href": "pdfs/w01-preassessment.pdf",
+      "path": "docs/training/pdfs/w01-preassessment.pdf",
+      "weeks": [
+        1
+      ],
+      "bytes": 17557,
+      "sha256": "5cd6b2241841feae"
+    },
+    {
+      "id": "w01-multimeter-scavenger",
+      "title": "W01 Multimeter Scavenger",
+      "category": "labs",
+      "file": "w01-multimeter-scavenger.pdf",
+      "href": "pdfs/w01-multimeter-scavenger.pdf",
+      "path": "docs/training/pdfs/w01-multimeter-scavenger.pdf",
+      "weeks": [
+        1
+      ],
+      "bytes": 19932,
+      "sha256": "c7f0acd4e154bcd6"
+    },
+    {
+      "id": "w01-loto-competency",
+      "title": "W01 LOTO Competency",
+      "category": "labs",
+      "file": "w01-loto-competency.pdf",
+      "href": "pdfs/w01-loto-competency.pdf",
+      "path": "docs/training/pdfs/w01-loto-competency.pdf",
+      "weeks": [
+        1
+      ],
+      "bytes": 18615,
+      "sha256": "8b1ea18a49cc3d20"
+    },
+    {
+      "id": "w02-battery-diagnostic-log",
+      "title": "W02 Battery Diagnostic Log",
+      "category": "labs",
+      "file": "w02-battery-diagnostic-log.pdf",
+      "href": "pdfs/w02-battery-diagnostic-log.pdf",
+      "path": "docs/training/pdfs/w02-battery-diagnostic-log.pdf",
+      "weeks": [
+        2
+      ],
+      "bytes": 28413,
+      "sha256": "c0667255322232d6"
+    },
+    {
+      "id": "w03-charger-troubleshoot",
+      "title": "W03 Charger Troubleshooting",
+      "category": "labs",
+      "file": "w03-charger-troubleshoot.pdf",
+      "href": "pdfs/w03-charger-troubleshoot.pdf",
+      "path": "docs/training/pdfs/w03-charger-troubleshoot.pdf",
+      "weeks": [
+        3
+      ],
+      "bytes": 18759,
+      "sha256": "0b2de14b63717947"
+    },
+    {
+      "id": "w03-lithium-comparison",
+      "title": "W03 Lithium Comparison",
+      "category": "labs",
+      "file": "w03-lithium-comparison.pdf",
+      "href": "pdfs/w03-lithium-comparison.pdf",
+      "path": "docs/training/pdfs/w03-lithium-comparison.pdf",
+      "weeks": [
+        3
+      ],
+      "bytes": 17916,
+      "sha256": "2f044c15b346cf46"
+    },
+    {
+      "id": "w04-motor-inspection-report",
+      "title": "W04 Motor Inspection Report",
+      "category": "labs",
+      "file": "w04-motor-inspection-report.pdf",
+      "href": "pdfs/w04-motor-inspection-report.pdf",
+      "path": "docs/training/pdfs/w04-motor-inspection-report.pdf",
+      "weeks": [
+        4
+      ],
+      "bytes": 21016,
+      "sha256": "f10852fbe01c312d"
+    },
+    {
+      "id": "w05-fault-code-throttle-solenoid",
+      "title": "W05 Fault Code / Throttle / Solenoid",
+      "category": "labs",
+      "file": "w05-fault-code-throttle-solenoid.pdf",
+      "href": "pdfs/w05-fault-code-throttle-solenoid.pdf",
+      "path": "docs/training/pdfs/w05-fault-code-throttle-solenoid.pdf",
+      "weeks": [
+        5
+      ],
+      "bytes": 19373,
+      "sha256": "c8826ace5105551b"
+    },
+    {
+      "id": "w06-harness-fault-isolation",
+      "title": "W06 Harness Fault Isolation",
+      "category": "labs",
+      "file": "w06-harness-fault-isolation.pdf",
+      "href": "pdfs/w06-harness-fault-isolation.pdf",
+      "path": "docs/training/pdfs/w06-harness-fault-isolation.pdf",
+      "weeks": [
+        6
+      ],
+      "bytes": 18516,
+      "sha256": "917096b149875444"
+    },
+    {
+      "id": "w07-seven-step-checklist",
+      "title": "W07 Seven-Step Checklist",
+      "category": "labs",
+      "file": "w07-seven-step-checklist.pdf",
+      "href": "pdfs/w07-seven-step-checklist.pdf",
+      "path": "docs/training/pdfs/w07-seven-step-checklist.pdf",
+      "weeks": [
+        7,
+        10
+      ],
+      "bytes": 17130,
+      "sha256": "8756816cd32134b9"
+    },
+    {
+      "id": "w07-diagnostic-report",
+      "title": "W07 Diagnostic Report",
+      "category": "labs",
+      "file": "w07-diagnostic-report.pdf",
+      "href": "pdfs/w07-diagnostic-report.pdf",
+      "path": "docs/training/pdfs/w07-diagnostic-report.pdf",
+      "weeks": [
+        7,
+        10
+      ],
+      "bytes": 22153,
+      "sha256": "bdc8d5ce6b8eb128"
+    },
+    {
+      "id": "w08-mechanical-inspection",
+      "title": "W08 Mechanical Inspection",
+      "category": "labs",
+      "file": "w08-mechanical-inspection.pdf",
+      "href": "pdfs/w08-mechanical-inspection.pdf",
+      "path": "docs/training/pdfs/w08-mechanical-inspection.pdf",
+      "weeks": [
+        8
+      ],
+      "bytes": 20578,
+      "sha256": "da977266edc76aa6"
+    },
+    {
+      "id": "w09-gas-diagnostic-checklist",
+      "title": "W09 Gas Diagnostic Checklist",
+      "category": "labs",
+      "file": "w09-gas-diagnostic-checklist.pdf",
+      "href": "pdfs/w09-gas-diagnostic-checklist.pdf",
+      "path": "docs/training/pdfs/w09-gas-diagnostic-checklist.pdf",
+      "weeks": [
+        9
+      ],
+      "bytes": 21884,
+      "sha256": "0ca542ec444cf395"
+    },
+    {
+      "id": "w10-pm-plan-worksheet",
+      "title": "W10 PM Plan Worksheet",
+      "category": "labs",
+      "file": "w10-pm-plan-worksheet.pdf",
+      "href": "pdfs/w10-pm-plan-worksheet.pdf",
+      "path": "docs/training/pdfs/w10-pm-plan-worksheet.pdf",
+      "weeks": [
+        10
+      ],
+      "bytes": 17149,
+      "sha256": "298b5231febbe92d"
+    },
+    {
+      "id": "wiring-symbol-glossary",
+      "title": "Wiring Symbol Glossary",
+      "category": "handouts",
+      "file": "wiring-symbol-glossary.pdf",
+      "href": "pdfs/wiring-symbol-glossary.pdf",
+      "path": "docs/training/pdfs/wiring-symbol-glossary.pdf",
+      "weeks": [
+        1,
+        6
+      ],
+      "bytes": 17583,
+      "sha256": "d8c50d103a90d55f"
+    },
+    {
+      "id": "ohm-law-quick-reference",
+      "title": "Ohm\u2019s Law Quick Reference",
+      "category": "handouts",
+      "file": "ohm-law-quick-reference.pdf",
+      "href": "pdfs/ohm-law-quick-reference.pdf",
+      "path": "docs/training/pdfs/ohm-law-quick-reference.pdf",
+      "weeks": [
+        1
+      ],
+      "bytes": 20565,
+      "sha256": "5b8d8fa524cca065"
+    },
+    {
+      "id": "safety-shop-poster",
+      "title": "Safety Shop Poster",
+      "category": "handouts",
+      "file": "safety-shop-poster.pdf",
+      "href": "pdfs/safety-shop-poster.pdf",
+      "path": "docs/training/pdfs/safety-shop-poster.pdf",
+      "weeks": [
+        1
+      ],
+      "bytes": 17875,
+      "sha256": "7509a826f93df826"
+    },
+    {
+      "id": "common-fault-flowcharts",
+      "title": "Common Fault Flowcharts",
+      "category": "handouts",
+      "file": "common-fault-flowcharts.pdf",
+      "href": "pdfs/common-fault-flowcharts.pdf",
+      "path": "docs/training/pdfs/common-fault-flowcharts.pdf",
+      "weeks": [
+        7
+      ],
+      "bytes": 19270,
+      "sha256": "225cc6d0ed34976f"
+    },
+    {
+      "id": "curtis-fault-codes-reference",
+      "title": "Curtis Fault Codes Reference",
+      "category": "handouts",
+      "file": "curtis-fault-codes-reference.pdf",
+      "href": "pdfs/curtis-fault-codes-reference.pdf",
+      "path": "docs/training/pdfs/curtis-fault-codes-reference.pdf",
+      "weeks": [
+        5
+      ],
+      "bytes": 17778,
+      "sha256": "fe1028ab6ea3e1fa"
+    },
+    {
+      "id": "pm-checklists",
+      "title": "PM Checklists",
+      "category": "handouts",
+      "file": "pm-checklists.pdf",
+      "href": "pdfs/pm-checklists.pdf",
+      "path": "docs/training/pdfs/pm-checklists.pdf",
+      "weeks": [
+        10
+      ],
+      "bytes": 17750,
+      "sha256": "4f320cf61add9303"
+    },
+    {
+      "id": "recommended-tool-list",
+      "title": "Recommended Tool List",
+      "category": "handouts",
+      "file": "recommended-tool-list.pdf",
+      "href": "pdfs/recommended-tool-list.pdf",
+      "path": "docs/training/pdfs/recommended-tool-list.pdf",
+      "weeks": [
+        1
+      ],
+      "bytes": 19911,
+      "sha256": "b83f2ad19d6a60e1"
+    },
+    {
+      "id": "resources-further-learning",
+      "title": "Resources & Further Learning",
+      "category": "handouts",
+      "file": "resources-further-learning.pdf",
+      "href": "pdfs/resources-further-learning.pdf",
+      "path": "docs/training/pdfs/resources-further-learning.pdf",
+      "weeks": [
+        10
+      ],
+      "bytes": 16506,
+      "sha256": "65deb6c1bf0402aa"
+    },
+    {
+      "id": "diagram-placeholder-catalog",
+      "title": "Diagram Placeholder Catalog",
+      "category": "handouts",
+      "file": "diagram-placeholder-catalog.pdf",
+      "href": "pdfs/diagram-placeholder-catalog.pdf",
+      "path": "docs/training/pdfs/diagram-placeholder-catalog.pdf",
+      "weeks": [],
+      "bytes": 16017,
+      "sha256": "6926e015a2a2ac23"
+    },
+    {
+      "id": "practical-skills-rubric",
+      "title": "Final Practical Skills Rubric",
+      "category": "final_assessment",
+      "file": "practical-skills-rubric.pdf",
+      "href": "pdfs/practical-skills-rubric.pdf",
+      "path": "docs/training/pdfs/practical-skills-rubric.pdf",
+      "weeks": [
+        10
+      ],
+      "bytes": 20842,
+      "sha256": "50129c0bee8deafa"
+    },
+    {
+      "id": "written-final-exam",
+      "title": "Written Final Exam (50 Q)",
+      "category": "final_assessment",
+      "file": "written-final-exam.pdf",
+      "href": "pdfs/written-final-exam.pdf",
+      "path": "docs/training/pdfs/written-final-exam.pdf",
+      "weeks": [
+        10
+      ],
+      "bytes": 29097,
+      "sha256": "6e92711578cbb9c1"
+    },
+    {
+      "id": "written-final-exam-answer-key",
+      "title": "Written Final Exam Answer Key (Instructor)",
+      "category": "final_assessment",
+      "file": "written-final-exam-answer-key.pdf",
+      "href": "pdfs/written-final-exam-answer-key.pdf",
+      "path": "docs/training/pdfs/written-final-exam-answer-key.pdf",
+      "weeks": [
+        10
+      ],
+      "bytes": 20550,
+      "sha256": "c4767b3c6e8338b5"
+    },
+    {
+      "id": "certificate-template",
+      "title": "Certificate Template",
+      "category": "final_assessment",
+      "file": "certificate-template.pdf",
+      "href": "pdfs/certificate-template.pdf",
+      "path": "docs/training/pdfs/certificate-template.pdf",
+      "weeks": [
+        10
+      ],
+      "bytes": 19360,
+      "sha256": "84012f8c88ab98e7"
+    },
+    {
+      "id": "cohort-grade-tracker",
+      "title": "Cohort Grade Tracker",
+      "category": "final_assessment",
+      "file": "cohort-grade-tracker.pdf",
+      "href": "pdfs/cohort-grade-tracker.pdf",
+      "path": "docs/training/pdfs/cohort-grade-tracker.pdf",
+      "weeks": [
+        10
+      ],
+      "bytes": 18057,
+      "sha256": "4504aebbe14a1234"
+    }
+  ]
+}

@@ -6,6 +6,20 @@
 
 ---
 
+## PDF downloads (central library)
+
+Printable PDFs live in the **[central downloads library](../../downloads.html#week-6)** (Command Center → Technician Training → PDF Downloads).
+
+| Document | Download |
+|---|---|
+| Week 6 — Wiring Diagrams (this week) | [PDF](../../pdfs/week-06-wiring-diagrams.pdf) · [Library](../../downloads.html#week-06-wiring-diagrams) |
+| Program Guide | [PDF](../../pdfs/program-guide.pdf) · [Library](../../downloads.html#program-guide) |
+| Instructor Master Checklist | [PDF](../../pdfs/instructor-master-checklist.pdf) · [Library](../../downloads.html#instructor-master-checklist) |
+| W06 Harness Fault Isolation | [PDF](../../pdfs/w06-harness-fault-isolation.pdf) · [Library](../../downloads.html#w06-harness-fault-isolation) |
+| Wiring Symbol Glossary | [PDF](../../pdfs/wiring-symbol-glossary.pdf) · [Library](../../downloads.html#wiring-symbol-glossary) |
+
+Full catalog: [training/downloads.html](../../downloads.html)
+
 ## Instructor Preparation Guide (Complete Day Before)
 
 ### Pre-session setup

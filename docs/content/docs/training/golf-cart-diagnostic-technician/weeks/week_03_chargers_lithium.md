@@ -6,6 +6,20 @@
 
 ---
 
+## PDF downloads (central library)
+
+Printable PDFs live in the **[central downloads library](../../downloads.html#week-3)** (Command Center → Technician Training → PDF Downloads).
+
+| Document | Download |
+|---|---|
+| Week 3 — Chargers & Lithium (this week) | [PDF](../../pdfs/week-03-chargers-lithium.pdf) · [Library](../../downloads.html#week-03-chargers-lithium) |
+| Program Guide | [PDF](../../pdfs/program-guide.pdf) · [Library](../../downloads.html#program-guide) |
+| Instructor Master Checklist | [PDF](../../pdfs/instructor-master-checklist.pdf) · [Library](../../downloads.html#instructor-master-checklist) |
+| W03 Charger Troubleshooting | [PDF](../../pdfs/w03-charger-troubleshoot.pdf) · [Library](../../downloads.html#w03-charger-troubleshoot) |
+| W03 Lithium Comparison | [PDF](../../pdfs/w03-lithium-comparison.pdf) · [Library](../../downloads.html#w03-lithium-comparison) |
+
+Full catalog: [training/downloads.html](../../downloads.html)
+
 ## Instructor Preparation Guide (Complete Day Before)
 
 ### Pre-session setup

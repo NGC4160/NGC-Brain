@@ -389,6 +389,11 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict]) -> list[dict]:
                     "primary": True,
                 },
                 {
+                    "title": "PDF Downloads",
+                    "desc": "Central printable library — all weeks & labs",
+                    "href": "training/downloads.html",
+                },
+                {
                     "title": "Program Guide",
                     "desc": "Objectives, rubrics, class size, scaling",
                     "href": "view.html?path=docs/training/golf-cart-diagnostic-technician/00_program_guide.md",
@@ -459,6 +464,7 @@ def validate_zone_links(zones: list[dict]) -> list[str]:
         "dashboard.html", "explore.html", "index.html",
         "templates/personnel-counseling.html",
         "training/index.html",
+        "training/downloads.html",
     }
     for zone in zones:
         for card in zone.get("cards", []):

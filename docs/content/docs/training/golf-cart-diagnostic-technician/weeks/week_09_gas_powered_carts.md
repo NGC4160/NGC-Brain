@@ -6,6 +6,19 @@
 
 ---
 
+## PDF downloads (central library)
+
+Printable PDFs live in the **[central downloads library](../../downloads.html#week-9)** (Command Center → Technician Training → PDF Downloads).
+
+| Document | Download |
+|---|---|
+| Week 9 — Gas-Powered Carts (this week) | [PDF](../../pdfs/week-09-gas-powered-carts.pdf) · [Library](../../downloads.html#week-09-gas-powered-carts) |
+| Program Guide | [PDF](../../pdfs/program-guide.pdf) · [Library](../../downloads.html#program-guide) |
+| Instructor Master Checklist | [PDF](../../pdfs/instructor-master-checklist.pdf) · [Library](../../downloads.html#instructor-master-checklist) |
+| W09 Gas Diagnostic Checklist | [PDF](../../pdfs/w09-gas-diagnostic-checklist.pdf) · [Library](../../downloads.html#w09-gas-diagnostic-checklist) |
+
+Full catalog: [training/downloads.html](../../downloads.html)
+
 ## Instructor Preparation Guide (Complete Day Before)
 
 ### Pre-session setup

@@ -270,6 +270,15 @@ def build_sections() -> list[dict]:
                 "github": gh_blob("docs/training/index.html"),
                 "tags": ["training", "html"],
             },
+            {
+                "title": "PDF Downloads (central library)",
+                "description": "Download printable PDFs for all weeks, labs, handouts, and finals.",
+                "path": "docs/training/downloads.html",
+                "type": "html",
+                "view": "training/downloads.html",
+                "github": gh_blob("docs/training/downloads.html"),
+                "tags": ["training", "html", "pdf"],
+            },
             md_item(
                 training_root / "README.md",
                 "Training Package README",

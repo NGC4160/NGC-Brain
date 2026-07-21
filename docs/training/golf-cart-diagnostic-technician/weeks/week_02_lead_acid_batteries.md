@@ -6,6 +6,19 @@
 
 ---
 
+## PDF downloads (central library)
+
+Printable PDFs live in the **[central downloads library](../../downloads.html#week-2)** (Command Center → Technician Training → PDF Downloads).
+
+| Document | Download |
+|---|---|
+| Week 2 — Lead-Acid Batteries (this week) | [PDF](../../pdfs/week-02-lead-acid-batteries.pdf) · [Library](../../downloads.html#week-02-lead-acid-batteries) |
+| Program Guide | [PDF](../../pdfs/program-guide.pdf) · [Library](../../downloads.html#program-guide) |
+| Instructor Master Checklist | [PDF](../../pdfs/instructor-master-checklist.pdf) · [Library](../../downloads.html#instructor-master-checklist) |
+| W02 Battery Diagnostic Log | [PDF](../../pdfs/w02-battery-diagnostic-log.pdf) · [Library](../../downloads.html#w02-battery-diagnostic-log) |
+
+Full catalog: [training/downloads.html](../../downloads.html)
+
 ## Instructor Preparation Guide (Complete Day Before)
 
 ### Pre-session setup

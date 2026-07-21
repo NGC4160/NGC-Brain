@@ -36,7 +36,7 @@ Send her:
 | **Build Pipeline** | Visual P1/P2/P3 backlog — everything being built |
 | **Knowledge Base** | Full business brain docs |
 | **Tools & Forms** | HR form, Cursor setup, automation playbooks |
-| **Technician Training** | Golf Cart Diagnostic Technician package (10 weeks / 40 hrs) — hub, weeks, labs, finals |
+| **Technician Training** | Golf Cart Diagnostic Technician package (10 weeks / 40 hrs) — hub, PDF downloads, weeks, labs, finals |
 
 ## Refresh live data
 

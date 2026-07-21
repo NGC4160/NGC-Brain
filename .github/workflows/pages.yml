@@ -7,6 +7,7 @@ on:
       - "docs/**"
       - "scripts/build_command_center.py"
       - "scripts/build_pages_manifest.py"
+      - "scripts/build_training_pdfs.py"
       - "knowledge/**"
       - "external_docs/exports/**"
       - ".github/workflows/pages.yml"

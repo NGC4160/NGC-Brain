@@ -7,6 +7,21 @@
 
 ---
 
+## PDF downloads (central library)
+
+Printable PDFs live in the **[central downloads library](../../downloads.html#week-7)** (Command Center → Technician Training → PDF Downloads).
+
+| Document | Download |
+|---|---|
+| Week 7 — Diagnostic Methodology (this week) | [PDF](../../pdfs/week-07-diagnostic-methodology.pdf) · [Library](../../downloads.html#week-07-diagnostic-methodology) |
+| Program Guide | [PDF](../../pdfs/program-guide.pdf) · [Library](../../downloads.html#program-guide) |
+| Instructor Master Checklist | [PDF](../../pdfs/instructor-master-checklist.pdf) · [Library](../../downloads.html#instructor-master-checklist) |
+| W07 Seven-Step Checklist | [PDF](../../pdfs/w07-seven-step-checklist.pdf) · [Library](../../downloads.html#w07-seven-step-checklist) |
+| W07 Diagnostic Report | [PDF](../../pdfs/w07-diagnostic-report.pdf) · [Library](../../downloads.html#w07-diagnostic-report) |
+| Common Fault Flowcharts | [PDF](../../pdfs/common-fault-flowcharts.pdf) · [Library](../../downloads.html#common-fault-flowcharts) |
+
+Full catalog: [training/downloads.html](../../downloads.html)
+
 ## Instructor Preparation Guide (Complete Day Before)
 
 ### Pre-session setup

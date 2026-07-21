@@ -17,6 +17,7 @@
 | [`labs/`](labs/) | Printable lab worksheets, checklists, data logs, diagnostic report forms |
 | [`handouts/`](handouts/) | Student references (symbols, flowcharts, PM, Curtis, Ohm’s Law, tools, resources) |
 | [`final_assessment/`](final_assessment/) | Practical rubric, 50-question exam + key, certificate, grade tracker |
+| [`../pdfs/`](../pdfs/) | Printable PDF library (see [`../downloads.html`](../downloads.html)) |
 | [`ITERATION_LOG.md`](ITERATION_LOG.md) | Self-improvement review cycles against delivery goals |
 
 ---
@@ -28,6 +29,13 @@
 3. Each week: follow that week’s file — Session 1 (theory), Session 2 (lab).
 4. Use **Instructor Preparation** section at the top of each week file *the day before*.
 5. Week 10: run final practical + written exam from `final_assessment/`.
+
+
+### PDF downloads
+
+- **Central library (all PDFs):** [`../downloads.html`](../downloads.html) on GitHub Pages — https://ngc4160.github.io/NGC-Brain/command-center/training/downloads.html
+- Files also live in-repo at `docs/training/pdfs/`
+- Regenerate with: `python3 scripts/build_training_pdfs.py`
 
 ### GitHub Pages (Command Center)
 
