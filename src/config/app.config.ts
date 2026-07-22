@@ -85,6 +85,14 @@ export const navModules: NavModule[] = [
     description: 'KPI overview and quick access',
   },
   {
+    id: 'guide',
+    label: 'Learning Guide',
+    path: '/guide',
+    icon: 'GraduationCap',
+    enabled: true,
+    description: 'Interactive walkthrough of every dashboard feature',
+  },
+  {
     id: 'agent-input',
     label: 'Agent Input',
     path: '/agent-input',

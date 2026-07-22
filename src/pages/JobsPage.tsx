@@ -31,7 +31,7 @@ export function JobsPage() {
   return (
     <div className="space-y-5 sm:space-y-6">
       <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
-        <div>
+        <div data-guide="guide-page-title">
           <h1 className="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
             Repair Jobs
           </h1>

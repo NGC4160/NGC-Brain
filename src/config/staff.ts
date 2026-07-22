@@ -106,6 +106,7 @@ export const SOP_LIBRARY_ROLES: StaffRole[] = ['owner', 'service-manager', 'fron
 export const ROLE_MODULES: Record<StaffRole, string[]> = {
   owner: [
     'dashboard',
+    'guide',
     'intake',
     'sops',
     'kpi-hub',
@@ -119,6 +120,7 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
   ],
   'service-manager': [
     'dashboard',
+    'guide',
     'intake',
     'sops',
     'kpi-hub',
@@ -130,9 +132,20 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
     'invoicing',
     'settings',
   ],
-  technician: ['dashboard', 'board', 'jobs', 'agent-input', 'qc', 'sops', 'kpi-hub', 'resources'],
+  technician: [
+    'dashboard',
+    'guide',
+    'board',
+    'jobs',
+    'agent-input',
+    'qc',
+    'sops',
+    'kpi-hub',
+    'resources',
+  ],
   'front-desk': [
     'dashboard',
+    'guide',
     'intake',
     'sops',
     'kpi-hub',
@@ -142,7 +155,7 @@ export const ROLE_MODULES: Record<StaffRole, string[]> = {
     'resources',
     'invoicing',
   ],
-  driver: ['dashboard', 'sops', 'kpi-hub', 'board', 'resources'],
+  driver: ['dashboard', 'guide', 'sops', 'kpi-hub', 'board', 'resources'],
 }
 
 export function canAssignJobs(role: StaffRole): boolean {

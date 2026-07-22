@@ -1,6 +1,7 @@
 import { HashRouter, Navigate, Routes, Route } from 'react-router-dom'
 import { AppProvider, useApp } from '@/context/AppContext'
 import { AuthProvider, useAuthContext } from '@/context/AuthContext'
+import { GuideProvider } from '@/context/GuideContext'
 import { Layout } from '@/components/layout/Layout'
 import { DashboardPage } from '@/pages/DashboardPage'
 import { AgentInputPage } from '@/pages/AgentInputPage'
@@ -15,6 +16,7 @@ import { InvoicingPage } from '@/pages/InvoicingPage'
 import { SettingsPage } from '@/pages/SettingsPage'
 import { ComingSoonPage } from '@/pages/ComingSoonPage'
 import { LoginPage } from '@/pages/LoginPage'
+import { GuidePage } from '@/pages/GuidePage'
 
 function RequireModule({
   moduleId,
@@ -39,12 +41,14 @@ function AppRoutes() {
   }
 
   return (
+    <GuideProvider>
     <Layout
       darkMode={darkMode}
       onToggleDarkMode={() => setDarkMode(!darkMode)}
     >
       <Routes>
         <Route path="/" element={<DashboardPage />} />
+        <Route path="/guide" element={<GuidePage />} />
         <Route
           path="/agent-input"
           element={
@@ -143,6 +147,7 @@ function AppRoutes() {
         />
       </Routes>
     </Layout>
+    </GuideProvider>
   )
 }
 
