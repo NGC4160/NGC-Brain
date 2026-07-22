@@ -43,7 +43,7 @@ export function SopsHubPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
+        <h1 className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white sm:text-2xl" data-guide="guide-page-title">
           <BookOpen className="h-6 w-6 text-brand-600" />
           Shop SOPs
         </h1>

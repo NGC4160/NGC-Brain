@@ -5,6 +5,7 @@ import {
   ClipboardCheck,
   ClipboardEdit,
   ClipboardList,
+  GraduationCap,
   Kanban,
   LayoutDashboard,
   Library,
@@ -26,6 +27,7 @@ import { NavLink } from 'react-router-dom'
 
 const iconMap: Record<string, LucideIcon> = {
   LayoutDashboard,
+  GraduationCap,
   BarChart3,
   ClipboardEdit,
   ClipboardCheck,

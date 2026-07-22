@@ -5,8 +5,14 @@ import { Sidebar } from './Sidebar'
 import { BottomNav } from './BottomNav'
 import { MobileDrawer } from './MobileDrawer'
 import { PullToRefresh } from './PullToRefresh'
+import {
+  GuideFab,
+  GuideWelcomeModal,
+  LearningGuideOverlay,
+} from '@/components/guide/LearningGuide'
 import { appConfig } from '@/config/app.config'
 import { useApp } from '@/context/AppContext'
+import { useGuide } from '@/context/GuideContext'
 
 interface LayoutProps {
   children: ReactNode
@@ -19,17 +25,23 @@ export function Layout({ children, darkMode, onToggleDarkMode }: LayoutProps) {
   const [pullRefreshing, setPullRefreshing] = useState(false)
   const location = useLocation()
   const { refreshHcp, hcpLoading } = useApp()
+  const { openDrawerForStep, active: guideActive } = useGuide()
 
   useEffect(() => {
-    setDrawerOpen(false)
-  }, [location.pathname])
+    if (!guideActive) setDrawerOpen(false)
+  }, [location.pathname, guideActive])
 
   useEffect(() => {
-    document.body.style.overflow = drawerOpen ? 'hidden' : ''
+    if (openDrawerForStep) setDrawerOpen(true)
+    else if (guideActive) setDrawerOpen(false)
+  }, [openDrawerForStep, guideActive])
+
+  useEffect(() => {
+    document.body.style.overflow = drawerOpen && !guideActive ? 'hidden' : ''
     return () => {
       document.body.style.overflow = ''
     }
-  }, [drawerOpen])
+  }, [drawerOpen, guideActive])
 
   async function handleRefresh() {
     setPullRefreshing(true)
@@ -42,7 +54,7 @@ export function Layout({ children, darkMode, onToggleDarkMode }: LayoutProps) {
 
   return (
     <div className="flex min-h-dvh bg-slate-50 dark:bg-slate-950">
-      <div className="hidden md:flex">
+      <div className="hidden md:flex" data-guide="guide-nav">
         <Sidebar darkMode={darkMode} onToggleDarkMode={onToggleDarkMode} />
       </div>
 
@@ -99,14 +111,17 @@ export function Layout({ children, darkMode, onToggleDarkMode }: LayoutProps) {
       </div>
 
       {drawerOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
+        <div className={`fixed inset-0 md:hidden ${guideActive ? 'z-[75]' : 'z-40'}`}>
           <button
             type="button"
             className="absolute inset-0 bg-slate-950/50"
             aria-label="Close menu"
             onClick={() => setDrawerOpen(false)}
           />
-          <div className="absolute inset-y-0 left-0 flex w-[min(20rem,88vw)] flex-col bg-white shadow-xl dark:bg-slate-900 safe-top safe-bottom">
+          <div
+            className="absolute inset-y-0 left-0 flex w-[min(20rem,88vw)] flex-col bg-white shadow-xl dark:bg-slate-900 safe-top safe-bottom"
+            data-guide="guide-nav"
+          >
             <div className="flex items-center justify-between border-b border-ngc-200 px-4 py-3 dark:border-ngc-800">
               <p className="text-sm font-semibold text-ngc-700 dark:text-ngc-200">Menu</p>
               <button
@@ -122,6 +137,10 @@ export function Layout({ children, darkMode, onToggleDarkMode }: LayoutProps) {
           </div>
         </div>
       )}
+
+      <GuideWelcomeModal />
+      <LearningGuideOverlay />
+      <GuideFab />
     </div>
   )
 }

@@ -134,7 +134,7 @@ export function CustomerIntakePage() {
     <div className="space-y-5">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h1 className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
+          <h1 className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white sm:text-2xl" data-guide="guide-page-title">
             <ClipboardList className="h-6 w-6 text-brand-600" />
             Customer Intake
           </h1>

@@ -72,7 +72,7 @@ export function StatusBoardPage() {
     <div className="space-y-5">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h1 className="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
+          <h1 className="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl" data-guide="guide-page-title">
             Shop Status Board
           </h1>
           <p className="mt-1 text-sm text-slate-500">

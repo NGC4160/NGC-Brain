@@ -40,9 +40,9 @@ export function DashboardPage() {
   const activeJobs = visibleJobs.filter((j) => !['picked-up', 'ready'].includes(j.status))
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8" data-guide="guide-welcome">
       <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
-        <div>
+        <div data-guide="guide-page-title">
           <h1 className="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl">
             Dashboard
           </h1>
@@ -52,7 +52,10 @@ export function DashboardPage() {
               : 'Shop overview — KPIs, activity, and quick links'}
           </p>
         </div>
-        <div className="flex w-full rounded-lg border border-slate-200 p-1 dark:border-slate-700 sm:w-auto">
+        <div
+          className="flex w-full rounded-lg border border-slate-200 p-1 dark:border-slate-700 sm:w-auto"
+          data-guide="guide-date-range"
+        >
           {DATE_RANGE_OPTIONS.map((opt) => (
             <button
               key={opt.value}
@@ -70,12 +73,14 @@ export function DashboardPage() {
         </div>
       </div>
 
-      <HcpSyncBanner
-        meta={hcpMeta}
-        loading={hcpLoading}
-        error={hcpError}
-        onRefresh={() => void refreshHcp()}
-      />
+      <div data-guide="guide-hcp-sync">
+        <HcpSyncBanner
+          meta={hcpMeta}
+          loading={hcpLoading}
+          error={hcpError}
+          onRefresh={() => void refreshHcp()}
+        />
+      </div>
 
       {canAccessModule('sops') && (
         <section className="rounded-xl border border-ngc-200 bg-white p-4 dark:border-ngc-800 dark:bg-slate-900">
@@ -142,7 +147,7 @@ export function DashboardPage() {
         </section>
       )}
 
-      <section>
+      <section data-guide="guide-kpi-cards">
         <h2 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">
           Key Metrics
         </h2>
@@ -165,7 +170,7 @@ export function DashboardPage() {
         </div>
       </section>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2" data-guide="guide-home-panels">
         <section className="card">
           <h2 className="mb-4 text-lg font-semibold text-slate-900 dark:text-white">
             Revenue Trend

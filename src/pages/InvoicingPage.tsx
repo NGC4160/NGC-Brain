@@ -182,7 +182,7 @@ export function InvoicingPage() {
 
 function Header() {
   return (
-    <div>
+    <div data-guide="guide-page-title">
       <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Invoicing</h1>
       <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
         Accounts receivable, deposit gates, and payment collection from Housecall Pro
