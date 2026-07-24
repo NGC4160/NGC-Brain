@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGC Shop QC Form</title>
+  <style>
+    :root {
+      --ngc-blue: #1a4d7a;
+      --ngc-blue-light: #2d6ba3;
+      --ngc-green: #6faa2d;
+      --border: #c5d4e3;
+      --text: #1a1a1a;
+      --muted: #555;
+      --danger: #b42318;
+      --success: #2e7d32;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Calibri, Arial, sans-serif;
+      font-size: 10pt;
+      color: var(--text);
+      line-height: 1.35;
+      margin: 0;
+      padding: 72px 0 40px;
+      background: #f0f4f8;
+    }
+
+    .toolbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      background: #fff;
+      border-bottom: 2px solid var(--ngc-blue);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .toolbar .title {
+      font-weight: 700;
+      color: var(--ngc-blue);
+      margin-right: auto;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 6px;
+      padding: 9px 16px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-primary { background: var(--ngc-blue); color: #fff; }
+    .btn-primary:hover { background: var(--ngc-blue-light); }
+    .btn-secondary { background: #e8eef5; color: var(--ngc-blue); }
+    .btn-danger { background: #fdecea; color: var(--danger); }
+
+    .status {
+      max-width: 8.5in;
+      margin: 0 auto 12px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      display: none;
+    }
+
+    .status.show { display: block; }
+    .status.success { background: #e8f5e9; color: var(--success); border: 1px solid #a5d6a7; }
+    .status.error { background: #fdecea; color: var(--danger); border: 1px solid #f5c2c0; }
+
+    .page {
+      max-width: 8.5in;
+      margin: 0 auto 16px;
+      background: #fff;
+      padding: 0.45in 0.55in 0.5in;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--ngc-blue);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .header img { height: 58px; width: auto; }
+    .header-text { text-align: right; flex: 1; margin-left: 16px; }
+    .header-text h1 { margin: 0; font-size: 15pt; color: var(--ngc-blue); }
+    .header-text .sub { font-size: 8.5pt; color: var(--muted); margin-top: 3px; }
+
+    .doc-title {
+      background: linear-gradient(90deg, var(--ngc-blue), var(--ngc-blue-light));
+      color: #fff;
+      text-align: center;
+      font-size: 12pt;
+      font-weight: 700;
+      padding: 7px 10px;
+      margin: 0 0 10px;
+    }
+
+    .intro {
+      font-size: 9pt;
+      color: var(--muted);
+      margin: 0 0 10px;
+      padding: 7px 9px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+    }
+
+    .section { margin-bottom: 12px; }
+
+    .section-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--ngc-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 2px solid var(--ngc-green);
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px 12px; }
+
+    label.field-label {
+      display: block;
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 2px;
+    }
+
+    label.required::after { content: " *"; color: var(--danger); }
+
+    input[type="text"], input[type="date"], input[type="time"], textarea {
+      width: 100%;
+      font: inherit;
+      padding: 4px 6px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+    }
+
+    textarea { min-height: 48px; resize: vertical; }
+
+    .check-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+    }
+
+    .check-table th, .check-table td {
+      border: 1px solid var(--border);
+      padding: 4px 6px;
+      vertical-align: top;
+    }
+
+    .check-table th {
+      background: #eef4fa;
+      color: var(--ngc-blue);
+      font-size: 8pt;
+      text-transform: uppercase;
+    }
+
+    .check-table .cb-col { width: 34px; text-align: center; }
+    .check-table .num-col { width: 24px; text-align: center; color: var(--muted); }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 10px;
+      font-size: 9pt;
+    }
+
+    .checkbox-grid label.cb, .inline-cb {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-weight: 400;
+      text-transform: none;
+      color: var(--text);
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+      font-size: 8.5pt;
+    }
+
+    .photo-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      border: 1px solid var(--border);
+      padding: 4px 6px;
+      background: #fafcfe;
+    }
+
+    .photo-item .num { font-weight: 700; color: var(--ngc-blue); min-width: 14px; }
+
+    .upload-zone {
+      border: 2px dashed var(--ngc-blue-light);
+      border-radius: 8px;
+      padding: 18px;
+      text-align: center;
+      background: #f8fbff;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .upload-zone:hover, .upload-zone.dragover {
+      background: #eef5fc;
+      border-color: var(--ngc-green);
+    }
+
+    .upload-zone strong { color: var(--ngc-blue); }
+
+    .media-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .media-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+      position: relative;
+    }
+
+    .media-card img, .media-card video {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      display: block;
+      background: #eee;
+    }
+
+    .media-card .meta {
+      padding: 6px 8px;
+      font-size: 7.5pt;
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    .media-card .remove {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background: rgba(180, 35, 24, 0.9);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 10px;
+      padding: 2px 6px;
+      cursor: pointer;
+    }
+
+    .media-count {
+      margin-top: 8px;
+      font-size: 9pt;
+      color: var(--muted);
+    }
+
+    .attest {
+      font-size: 9pt;
+      border: 2px solid var(--ngc-blue);
+      padding: 8px 10px;
+      background: #f4f8fc;
+    }
+
+    .attest label.cb { font-weight: 600; color: var(--ngc-blue); }
+
+    .note { font-size: 8pt; color: var(--muted); font-style: italic; margin-top: 4px; }
+
+    @media print {
+      body { padding: 0; background: #fff; }
+      .toolbar, .status, .upload-zone, .media-gallery, .media-count, .btn, .remove { display: none !important; }
+      .page { box-shadow: none; margin: 0; page-break-after: always; }
+    }
+
+    @media (max-width: 720px) {
+      .grid-3, .grid-2, .checkbox-grid, .photo-grid { grid-template-columns: 1fr; }
+      body { padding-top: 120px; }
+      .toolbar { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <span class="title">NGC Shop QC Form</span>
+  <button type="button" class="btn btn-secondary" onclick="window.print()">Print</button>
+  <button type="button" class="btn btn-danger" id="clearBtn">Clear Form</button>
+  <button type="button" class="btn btn-primary" id="saveBtn">Save QC Form</button>
+</div>
+
+<div class="status" id="status"></div>
+
+<form id="qcForm">
+  <div class="page">
+    <header class="header">
+      <img src="/assets/ngc-logo.png" alt="Neighborhood Golf Carts logo" />
+      <div class="header-text">
+        <h1>Neighborhood Golf Carts</h1>
+        <div class="sub">
+          71363 Thelma Ln, Suite E · Covington, LA 70433<br />
+          985-402-1206 · contact@ngcgolfcarts.com<br />
+          Shop hours: Monday–Friday, 8:00 AM – 5:00 PM
+        </div>
+      </div>
+    </header>
+
+    <div class="doc-title">SHOP QC COMPLETION FORM</div>
+
+    <p class="intro">
+      Complete this form when a cart is finished and ready to move to <strong>READY</strong>.
+      Upload photos and videos below, then click <strong>Save QC Form</strong>.
+      Files are saved in the <strong>QC forms</strong> folder as a single file named
+      <em>{job #}_{customer last name}.zip</em> (form data + all photos/videos inside).
+    </p>
+
+    <div class="section">
+      <div class="section-title">Job information</div>
+      <div class="grid-3">
+        <div>
+          <label class="field-label required" for="jobNumber">HCP invoice / job #</label>
+          <input type="text" id="jobNumber" name="jobNumber" required />
+        </div>
+        <div>
+          <label class="field-label required" for="customerLastName">Customer last name</label>
+          <input type="text" id="customerLastName" name="customerLastName" required />
+        </div>
+        <div>
+          <label class="field-label" for="dateCompleted">Date work completed</label>
+          <input type="date" id="dateCompleted" name="dateCompleted" />
+        </div>
+        <div>
+          <label class="field-label" for="timeCompleted">Time completed</label>
+          <input type="time" id="timeCompleted" name="timeCompleted" />
+        </div>
+        <div>
+          <label class="field-label" for="technician">Technician name</label>
+          <input type="text" id="technician" name="technician" placeholder="Taylor / Marlon / Peyton" />
+        </div>
+        <div>
+          <label class="field-label" for="bayLocation">Bay / location in shop</label>
+          <input type="text" id="bayLocation" name="bayLocation" />
+        </div>
+        <div>
+          <label class="field-label" for="serviceType">Service type</label>
+          <input type="text" id="serviceType" name="serviceType" placeholder="Diagnostic, repair, lithium, PM" />
+        </div>
+        <div>
+          <label class="field-label" for="cartMakeModel">Cart make / model / year</label>
+          <input type="text" id="cartMakeModel" name="cartMakeModel" />
+        </div>
+        <div>
+          <label class="field-label" for="serialVin">Serial # or VIN</label>
+          <input type="text" id="serialVin" name="serialVin" />
+        </div>
+        <div>
+          <label class="field-label" for="powerType">Power type</label>
+          <input type="text" id="powerType" name="powerType" placeholder="36V / 48V / 72V / gas" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Photos &amp; videos — upload as many as needed</div>
+      <p class="note">Before-work shots, inspection findings, repair areas, test drive clips, fault codes, etc.</p>
+
+      <div class="upload-zone" id="uploadZone">
+        <strong>Click or drag photos and videos here</strong><br />
+        <span>No limit — JPG, PNG, HEIC, MP4, MOV, WEBM, and other common formats</span>
+        <input type="file" id="mediaInput" multiple accept="image/*,video/*,.heic,.heif" hidden />
+      </div>
+
+      <div class="media-count" id="mediaCount">0 files selected</div>
+      <div class="media-gallery" id="mediaGallery"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Pre-work shop procedure (before wrenching)</div>
+      <table class="check-table">
+        <thead><tr><th class="cb-col">✓</th><th>Step</th><th>Notes / initial</th></tr></thead>
+        <tbody>
+          <tr><td class="cb-col"><input type="checkbox" data-field="prework.reviewedJob" /></td><td>Reviewed HCP job — complaint, authorized work, and parts list verified</td><td><input type="text" data-field="prework.reviewedJobNote" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="prework.verifiedCart" /></td><td>Verified correct cart (invoice #, keys, and physical cart match)</td><td><input type="text" data-field="prework.verifiedCartNote" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="prework.ppe" /></td><td>PPE in use (safety glasses, gloves; lithium protocols if applicable)</td><td><input type="text" data-field="prework.ppeNote" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="prework.towRun" /></td><td>Tow / run switch in TOW or OFF before electrical work; cart secured</td><td><input type="text" data-field="prework.towRunNote" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="prework.batteryDisconnect" /></td><td>Battery disconnect / lockout performed when required</td><td><input type="text" data-field="prework.batteryDisconnectNote" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="prework.workArea" /></td><td>Work area clean; tools and lift/chocks set up safely</td><td><input type="text" data-field="prework.workAreaNote" /></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Required before-work photos (7)</div>
+      <div class="photo-grid">
+        <div class="photo-item"><span class="num">1</span><label class="inline-cb"><input type="checkbox" data-field="beforePhotos.front" /> Front of cart (full view)</label></div>
+        <div class="photo-item"><span class="num">2</span><label class="inline-cb"><input type="checkbox" data-field="beforePhotos.rear" /> Rear of cart (full view)</label></div>
+        <div class="photo-item"><span class="num">3</span><label class="inline-cb"><input type="checkbox" data-field="beforePhotos.driverSide" /> Driver side (full profile)</label></div>
+        <div class="photo-item"><span class="num">4</span><label class="inline-cb"><input type="checkbox" data-field="beforePhotos.passengerSide" /> Passenger side (full profile)</label></div>
+        <div class="photo-item"><span class="num">5</span><label class="inline-cb"><input type="checkbox" data-field="beforePhotos.battery" /> Battery compartment / pack area</label></div>
+        <div class="photo-item"><span class="num">6</span><label class="inline-cb"><input type="checkbox" data-field="beforePhotos.dash" /> Dash / key switch / charge port</label></div>
+        <div class="photo-item"><span class="num">7</span><label class="inline-cb"><input type="checkbox" data-field="beforePhotos.serial" /> Serial # / VIN tag or data plate</label></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">7-point safety inspection</div>
+      <table class="check-table">
+        <thead><tr><th class="num-col">#</th><th class="cb-col">✓</th><th>Inspection point</th><th>Pass / note / N/A</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="cb-col"><input type="checkbox" data-field="inspection.wires" /></td><td>Wires, cables, and terminals</td><td><input type="text" data-field="inspection.wiresNote" /></td></tr>
+          <tr><td>2</td><td class="cb-col"><input type="checkbox" data-field="inspection.battery" /></td><td>Battery water levels (lead-acid) or lithium pack condition</td><td><input type="text" data-field="inspection.batteryNote" /></td></tr>
+          <tr><td>3</td><td class="cb-col"><input type="checkbox" data-field="inspection.lights" /></td><td>Lights and horn (if applicable)</td><td><input type="text" data-field="inspection.lightsNote" /></td></tr>
+          <tr><td>4</td><td class="cb-col"><input type="checkbox" data-field="inspection.tires" /></td><td>Tires — inflation, tread depth, uneven wear</td><td><input type="text" data-field="inspection.tiresNote" /></td></tr>
+          <tr><td>5</td><td class="cb-col"><input type="checkbox" data-field="inspection.steering" /></td><td>Steering and suspension</td><td><input type="text" data-field="inspection.steeringNote" /></td></tr>
+          <tr><td>6</td><td class="cb-col"><input type="checkbox" data-field="inspection.drivetrain" /></td><td>Drivetrain (axle &amp; motor)</td><td><input type="text" data-field="inspection.drivetrainNote" /></td></tr>
+          <tr><td>7</td><td class="cb-col"><input type="checkbox" data-field="inspection.brakes" /></td><td>Brakes — operation and adjustment</td><td><input type="text" data-field="inspection.brakesNote" /></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="section">
+      <div class="section-title">Inspection findings — notable conditions</div>
+      <table class="check-table" id="findingsTable">
+        <thead><tr><th class="cb-col">✓</th><th>Condition / finding</th><th>Photo on job? (Y/N)</th></tr></thead>
+        <tbody>
+          <tr><td class="cb-col"><input type="checkbox" data-field="findings.0.checked" /></td><td><input type="text" data-field="findings.0.text" /></td><td><input type="text" data-field="findings.0.photo" style="width:60px" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="findings.1.checked" /></td><td><input type="text" data-field="findings.1.text" /></td><td><input type="text" data-field="findings.1.photo" style="width:60px" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="findings.2.checked" /></td><td><input type="text" data-field="findings.2.text" /></td><td><input type="text" data-field="findings.2.photo" style="width:60px" /></td></tr>
+        </tbody>
+      </table>
+      <label class="inline-cb" style="margin-top:6px"><input type="checkbox" data-field="findings.none" /> No notable conditions beyond normal wear — N/A</label>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Work performed — photo documentation</div>
+      <table class="check-table">
+        <thead><tr><th class="cb-col">✓</th><th>Work area / repair performed</th><th>Before &amp; after? (Y/N)</th></tr></thead>
+        <tbody>
+          <tr><td class="cb-col"><input type="checkbox" data-field="work.0.checked" /></td><td><input type="text" data-field="work.0.text" /></td><td><input type="text" data-field="work.0.photo" style="width:60px" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="work.1.checked" /></td><td><input type="text" data-field="work.1.text" /></td><td><input type="text" data-field="work.1.photo" style="width:60px" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="work.2.checked" /></td><td><input type="text" data-field="work.2.text" /></td><td><input type="text" data-field="work.2.photo" style="width:60px" /></td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="work.3.checked" /></td><td><input type="text" data-field="work.3.text" /></td><td><input type="text" data-field="work.3.photo" style="width:60px" /></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Electric diagnostic close-out (if applicable)</div>
+      <div class="checkbox-grid">
+        <label class="cb"><input type="checkbox" data-field="electric.faultCodes" /> Fault codes reviewed and cleared (photo or .CPF saved to HCP)</label>
+        <label class="cb"><input type="checkbox" data-field="electric.monitorLog" /> Post-repair monitor / log file saved if required</label>
+        <label class="cb"><input type="checkbox" data-field="electric.charger" /> Charger tested / verified compatible</label>
+        <label class="cb"><input type="checkbox" data-field="electric.lithiumGuide" /> Lithium care guide staged for customer</label>
+        <label class="cb"><input type="checkbox" data-field="electric.na" /> N/A — non-electrical job</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Final quality check — work completeness</div>
+      <table class="check-table">
+        <thead><tr><th class="cb-col">✓</th><th>Quality standard</th></tr></thead>
+        <tbody>
+          <tr><td class="cb-col"><input type="checkbox" data-field="quality.completeness" /></td><td><strong>Completeness</strong> — all authorized work finished; no open tasks or missing parts</td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="quality.neatness" /></td><td><strong>Neatness</strong> — wiring routed and secured; panels aligned; no stray hardware</td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="quality.cleanliness" /></td><td><strong>Cleanliness</strong> — work area wiped down; grease and debris removed from cart</td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="quality.tightness" /></td><td><strong>Tightness</strong> — fasteners, lug nuts, terminals, and clamps torqued / snugged correctly</td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="quality.safety" /></td><td><strong>Safety</strong> — seat belts, body panels, battery hold-downs, and covers reinstalled</td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="quality.fluids" /></td><td><strong>Fluids / levels</strong> — battery water, gear oil, or other fluids checked as applicable</td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="quality.accessories" /></td><td><strong>Accessories</strong> — lights, horn, mirrors, and add-ons function correctly</td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="quality.toolsParts" /></td><td><strong>Tools &amp; parts</strong> — no tools, rags, or old parts left on or in the cart</td></tr>
+          <tr><td class="cb-col"><input type="checkbox" data-field="quality.hcpUpdated" /></td><td><strong>HCP updated</strong> — notes, parts used, labor, and photos complete on the job</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Test drive &amp; delivery readiness</div>
+      <div class="grid-2">
+        <div>
+          <label class="field-label" for="testDriveDateTime">Test drive date / time</label>
+          <input type="text" id="testDriveDateTime" name="testDriveDateTime" />
+        </div>
+        <div>
+          <label class="field-label" for="testDriveDistance">Distance / duration</label>
+          <input type="text" id="testDriveDistance" name="testDriveDistance" placeholder="Shop loop or ~1 mile" />
+        </div>
+      </div>
+      <div class="checkbox-grid" style="margin-top:8px">
+        <label class="cb"><input type="checkbox" data-field="testDrive.forwardReverse" /> Forward / reverse operation verified</label>
+        <label class="cb"><input type="checkbox" data-field="testDrive.brakes" /> Brakes stop cart smoothly — no pull or noise</label>
+        <label class="cb"><input type="checkbox" data-field="testDrive.steering" /> Steering tracks straight; no new vibrations or noises</label>
+        <label class="cb"><input type="checkbox" data-field="testDrive.speed" /> Speed / acceleration normal; no fault codes after drive</label>
+        <label class="cb"><input type="checkbox" data-field="testDrive.complaintResolved" /> Customer complaint verified resolved (or documented if not)</label>
+        <label class="cb"><input type="checkbox" data-field="testDrive.charged" /> Cart charged / SOC appropriate for pickup or delivery</label>
+      </div>
+      <div style="margin-top:8px">
+        <label class="field-label" for="testDriveNotes">Test drive notes</label>
+        <textarea id="testDriveNotes" name="testDriveNotes" placeholder="Leave blank if no issues. If issues found, do not move to READY."></textarea>
+      </div>
+    </div>
+
+    <div class="attest">
+      <label class="cb">
+        <input type="checkbox" id="certification" data-field="certification" />
+        I certify that I completed all required steps, uploaded photos/videos, performed the 7-point safety
+        inspection, test drove this cart, and verified it is complete, neat, clean, tight, and ready for customer
+        pickup or delivery. I am turning this form in to move this cart to <strong>READY</strong>.
+      </label>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Technician sign-off</div>
+      <div class="grid-2">
+        <div>
+          <label class="field-label" for="techSignature">Technician signature (type name)</label>
+          <input type="text" id="techSignature" name="techSignature" />
+        </div>
+        <div>
+          <label class="field-label" for="techSignDate">Date</label>
+          <input type="date" id="techSignDate" name="techSignDate" />
+        </div>
+        <div>
+          <label class="field-label" for="managerReview">Service manager review (Ryan — spot-check)</label>
+          <input type="text" id="managerReview" name="managerReview" />
+        </div>
+        <div>
+          <label class="field-label" for="managerReviewDate">Date</label>
+          <input type="date" id="managerReviewDate" name="managerReviewDate" />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script>
+(() => {
+  const mediaFiles = [];
+  const mediaGallery = document.getElementById("mediaGallery");
+  const mediaCount = document.getElementById("mediaCount");
+  const mediaInput = document.getElementById("mediaInput");
+  const uploadZone = document.getElementById("uploadZone");
+  const statusEl = document.getElementById("status");
+  const saveBtn = document.getElementById("saveBtn");
+  const clearBtn = document.getElementById("clearBtn");
+
+  function showStatus(message, type) {
+    statusEl.textContent = message;
+    statusEl.className = "status show " + type;
+  }
+
+  function setNested(obj, path, value) {
+    const parts = path.split(".");
+    let current = obj;
+    for (let i = 0; i < parts.length - 1; i += 1) {
+      const key = parts[i];
+      if (!(key in current)) current[key] = {};
+      current = current[key];
+    }
+    current[parts[parts.length - 1]] = value;
+  }
+
+  function collectPayload() {
+    const payload = {};
+    document.querySelectorAll("[data-field]").forEach((el) => {
+      const path = el.getAttribute("data-field");
+      const value = el.type === "checkbox" ? el.checked : el.value;
+      setNested(payload, path, value);
+    });
+
+    ["jobNumber", "customerLastName", "dateCompleted", "timeCompleted", "technician",
+      "bayLocation", "serviceType", "cartMakeModel", "serialVin", "powerType",
+      "testDriveDateTime", "testDriveDistance", "testDriveNotes",
+      "techSignature", "techSignDate", "managerReview", "managerReviewDate"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) payload[id] = el.type === "checkbox" ? el.checked : el.value;
+    });
+
+    payload.certification = document.getElementById("certification").checked;
+    payload.mediaFileNames = mediaFiles.map((item) => item.file.name);
+    return payload;
+  }
+
+  function renderGallery() {
+    mediaGallery.innerHTML = "";
+    mediaFiles.forEach((item, index) => {
+      const card = document.createElement("div");
+      card.className = "media-card";
+
+      const remove = document.createElement("button");
+      remove.type = "button";
+      remove.className = "remove no-print";
+      remove.textContent = "Remove";
+      remove.addEventListener("click", () => {
+        URL.revokeObjectURL(item.url);
+        mediaFiles.splice(index, 1);
+        renderGallery();
+      });
+
+      let preview;
+      if (item.file.type.startsWith("video/")) {
+        preview = document.createElement("video");
+        preview.src = item.url;
+        preview.controls = true;
+        preview.muted = true;
+      } else {
+        preview = document.createElement("img");
+        preview.src = item.url;
+        preview.alt = item.file.name;
+      }
+
+      const meta = document.createElement("div");
+      meta.className = "meta";
+      meta.textContent = item.file.name;
+
+      card.appendChild(remove);
+      card.appendChild(preview);
+      card.appendChild(meta);
+      mediaGallery.appendChild(card);
+    });
+
+    mediaCount.textContent = mediaFiles.length === 1
+      ? "1 file selected"
+      : mediaFiles.length + " files selected";
+  }
+
+  function addFiles(fileList) {
+    Array.from(fileList).forEach((file) => {
+      if (!file.type.startsWith("image/") && !file.type.startsWith("video/")) return;
+      mediaFiles.push({ file, url: URL.createObjectURL(file) });
+    });
+    renderGallery();
+  }
+
+  uploadZone.addEventListener("click", () => mediaInput.click());
+  mediaInput.addEventListener("change", (event) => addFiles(event.target.files));
+
+  ["dragenter", "dragover"].forEach((name) => {
+    uploadZone.addEventListener(name, (event) => {
+      event.preventDefault();
+      uploadZone.classList.add("dragover");
+    });
+  });
+
+  ["dragleave", "drop"].forEach((name) => {
+    uploadZone.addEventListener(name, (event) => {
+      event.preventDefault();
+      uploadZone.classList.remove("dragover");
+      if (name === "drop") addFiles(event.dataTransfer.files);
+    });
+  });
+
+  clearBtn.addEventListener("click", () => {
+    if (!confirm("Clear the entire form and remove all uploaded files?")) return;
+    document.getElementById("qcForm").reset();
+    mediaFiles.forEach((item) => URL.revokeObjectURL(item.url));
+    mediaFiles.length = 0;
+    renderGallery();
+    showStatus("Form cleared.", "success");
+  });
+
+  saveBtn.addEventListener("click", async () => {
+    const jobNumber = document.getElementById("jobNumber").value.trim();
+    const lastName = document.getElementById("customerLastName").value.trim();
+
+    if (!jobNumber || !lastName) {
+      showStatus("Job # and customer last name are required before saving.", "error");
+      return;
+    }
+
+    saveBtn.disabled = true;
+    saveBtn.textContent = "Saving…";
+
+    const formData = new FormData();
+    formData.append("payload", JSON.stringify(collectPayload()));
+    mediaFiles.forEach((item) => formData.append("media", item.file, item.file.name));
+
+    try {
+      const response = await fetch("/api/save", { method: "POST", body: formData });
+      const result = await response.json();
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || "Save failed.");
+      }
+      showStatus(
+        "Saved " + result.fileName + " (" + result.mediaCount + " photo/video file" +
+        (result.mediaCount === 1 ? "" : "s") + " inside). Move whiteboard card to READY.",
+        "success"
+      );
+    } catch (error) {
+      showStatus(error.message || "Could not save. Is the QC form server running?", "error");
+    } finally {
+      saveBtn.disabled = false;
+      saveBtn.textContent = "Save QC Form";
+    }
+  });
+
+  renderGallery();
+})();
+</script>
+
+</body>
+</html>

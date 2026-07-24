@@ -1,0 +1,5 @@
+# Saved QC form submissions (contains customer names and job photos).
+# Do not commit completed forms to git.
+*
+!.gitkeep
+!.gitignore

@@ -4,3 +4,6 @@
 .cursor/mcp.json
 knowledge/.generated/
 external_docs/My Drive/Management/Personnel/
+QC forms/*
+!QC forms/.gitkeep
+!QC forms/.gitignore
