@@ -54,7 +54,7 @@ Standard form for **documented employee counseling** at Neighborhood Golf Carts 
 ### After
 
 1. Both sign; employee gets a copy
-2. File original in **Management / Personnel** (create folder if needed on Drive)
+2. File original in **Management / Personnel** (Drive API or Desktop). Cloud agents: connect Drive per [`google_drive_setup.md`](../10_automation/google_drive_setup.md)
 3. Name file: `YYYY-MM-DD_LastName_Counseling_[topic].pdf`
 4. Log only that counseling occurred in your private tracker — **not** in `knowledge/` or customer systems
 
