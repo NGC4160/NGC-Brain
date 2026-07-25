@@ -8,7 +8,7 @@
 |--------|---------|--------|
 | **Housecall Pro** | Scheduling, pricebook, jobs, invoicing, customer comms | Active |
 | **QuickBooks Online** | Accounting, inventory, sales tax, P&L | Active — books clean |
-| **Google Drive** | SOPs, document repository, internal docs | Active (`external_docs/My Drive/`) |
+| **Google Drive** | SOPs, document repository, internal docs | API for cloud (`google_drive_setup.md`); Mac Desktop sync optional |
 | **Website** | [NGCGolfCarts.com](https://www.NGCGolfCarts.com) | Active |
 | **Google Business Profile** | Local presence, reviews | Active |
 

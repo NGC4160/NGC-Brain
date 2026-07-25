@@ -41,7 +41,8 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | `external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx` | QBO P&L (Jun 2025 – Jun 2026) |
 | `external_docs/exports/qbo/balance_sheet_current.xlsx` | QBO balance sheet (Jun 28, 2026) |
 | `external_docs/exports/qbo/products_and_services.xlsx` | QBO product/service list |
-| `external_docs/My Drive/NGC Document Repository/` | SOPs, manuals, procedures (Google Drive sync) |
+| `external_docs/My Drive/NGC Document Repository/` | SOPs, manuals (Mac Desktop sync — cloud use API instead) |
+| [`10_automation/google_drive_setup.md`](10_automation/google_drive_setup.md) | **Google Drive API** for Cloud Agents (no Mac required) |
 
 ## Authority rules
 

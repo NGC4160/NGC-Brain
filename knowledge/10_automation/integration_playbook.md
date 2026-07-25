@@ -79,19 +79,24 @@ Keep CSV export to `external_docs/exports/pricebook/` — hooks still sync.
 
 ## Google Drive
 
-### Current (no API)
+### Cloud agents (preferred)
 
-Google Drive for Desktop syncs to `external_docs/My Drive/`
+Full guide: [`google_drive_setup.md`](google_drive_setup.md)
 
-**Limitation:** `.gsheet` / `.gdoc` files are stubs — export to xlsx/pdf for AI reading.
+```bash
+./scripts/setup/connect_google_drive.sh
+./scripts/sync/run_google_drive_sync.sh
+python3 scripts/drive/search_drive.py "filename"
+```
 
-### Upgrade: Google Drive MCP
+Credentials: `GOOGLE_DRIVE_*` in `.env` **and** Cursor Environment secrets.  
+Scope: `https://www.googleapis.com/auth/drive` (upload/move counseling files).
 
-1. Google Cloud Console → enable Drive API
-2. OAuth credentials → install a Drive MCP server from Cursor MCP directory
-3. Scope: `drive.readonly` on NGC shared drive folder
+### Desktop symlink (optional)
 
-**Automate:** Nightly export of key sheets (Tech Performance, HOA, Outreach) to `external_docs/exports/drive/`
+Google Drive for Desktop → `external_docs/My Drive/` — **does not work in cloud agents**.
+
+**Limitation:** `.gsheet` / `.gdoc` stubs still need export or API sync for AI reading.
 
 ---
 
