@@ -247,9 +247,10 @@ def build():
     story.append(HRFlowable(width="100%", thickness=2.5, color=NGC_BLUE, spaceAfter=6))
     story.append(
         Paragraph(
-            "Purpose: Screen for transferable electrical/mechanical skill, diagnostic thinking, "
-            "safety, and coachability. <b>Golf cart experience is a bonus — not a hiring gate.</b> "
-            "Logistics (hours, commute, availability) are cleared on Indeed — skip unless inconsistent.",
+            "Purpose: See if they can learn the job — hands-on electrical/mechanical skill, how they "
+            "figure out problems, safety, and whether they take coaching. "
+            "<b>Golf cart experience is a plus, not required.</b> "
+            "Skip hours/commute — already covered on Indeed.",
             s["body"],
         )
     )
@@ -301,11 +302,20 @@ def build():
     story.append(Spacer(1, 3))
     story.append(
         Paragraph(
-            "☐ Shop-only Covington repair + lithium conversions (no mobile) &nbsp;&nbsp; "
-            "☐ Mon–Fri bay work under Ryan &nbsp;&nbsp; "
-            "☐ Golf cart veterans not required — we train the product line &nbsp;&nbsp; "
-            "☐ Strong fits get a 3–4 hr shop evaluation (written + hands-on + troubleshooting)",
+            "<b>Say:</b> “This is a shop job in Covington — we fix golf carts and install lithium batteries here. "
+            "No house calls. Weekdays, working with our techs and me. You don’t need golf cart experience — "
+            "we’ll teach that. If this call goes well, next step is a half-day hands-on test at the shop.”",
             s["body"],
+        )
+    )
+    story.append(Spacer(1, 3))
+    story.append(
+        Paragraph(
+            "☐ Covered shop-only / no mobile &nbsp;&nbsp; "
+            "☐ Covered Mon–Fri bay work &nbsp;&nbsp; "
+            "☐ Covered “we train golf carts” &nbsp;&nbsp; "
+            "☐ Covered shop eval next step",
+            s["small"],
         )
     )
     story.append(Spacer(1, 7))
@@ -313,25 +323,29 @@ def build():
     # --- Section 2: Transferable background ---
     story.append(
         section_header(
-            "2. TRANSFERABLE BACKGROUND  ·  4 min  ·  Score A",
+            "2. WORK BACKGROUND  ·  4 min  ·  Score A",
             content_width,
         )
     )
     story.append(Spacer(1, 3))
     story.append(
         Paragraph(
-            "<i>Prompts:</i> Last 2–3 years of work? Auto / marine / RV / forklift / industrial / powersports / HVAC electrical? "
-            "Any 12–48V+ DC or battery work? Multimeter use? Mechanical (brakes, bearings, steering)? Shop tickets vs field alone?",
-            s["prompt"],
+            "<b>Ask:</b><br/>"
+            "1. “Walk me through what you’ve been doing for work the last couple of years.”<br/>"
+            "2. “Have you worked on cars, boats, RVs, forklifts, lawn equipment, or anything with batteries and wiring?”<br/>"
+            "3. “Have you used a multimeter — the tool that checks voltage?”<br/>"
+            "4. “Have you done mechanical work too — brakes, bearings, steering, that kind of thing?”<br/>"
+            "5. “Were you usually in a shop with other people, or mostly working alone?”",
+            s["body"],
         )
     )
     story.append(Spacer(1, 3))
     story.append(
         score_row(
-            "A. Transferable electrical / mechanical experience",
+            "A. Electrical / mechanical experience",
             "High weight",
-            "Real DC or shop electrical plus mechanical exposure; can name systems they’ve troubleshot.",
-            "Notes: brands/systems _______________________________________________",
+            "Has real hands-on electrical or shop work; can name things they’ve fixed.",
+            "Notes: what they’ve worked on _________________________________________",
         )
     )
     story.append(Spacer(1, 3))
@@ -341,7 +355,7 @@ def build():
     # --- Section 3: Diagnostic thinking ---
     story.append(
         section_header(
-            "3. DIAGNOSTIC THINKING  ·  6 min  ·  Scores B–D  ·  highest weight",
+            "3. HOW THEY FIGURE OUT PROBLEMS  ·  6 min  ·  Scores B–D  ·  highest weight",
             content_width,
         )
     )
@@ -349,38 +363,41 @@ def build():
 
     scenarios = [
         (
-            "B. No-go / won’t move",
-            "“A battery-powered vehicle won’t move. You don’t know the brand. Where do you start?”",
-            "Verifies symptom → safety/visual → source voltage → path of power → what to measure next. Not “replace the controller.”",
+            "B. Won’t move",
+            "“A battery-powered vehicle won’t move at all. You’ve never worked on that brand before. "
+            "What would you check first, and what would you check next?”",
+            "Starts simple and safe: confirm the problem, look around, check battery power, then follow the power path. "
+            "Not “just replace the big expensive part.”",
         ),
         (
-            "C. Weak / dies under load",
-            "“It runs a little then dies on hills. What are you trying to prove or rule out?”",
-            "Resting vs loaded voltage, connections, pack health — then downstream. Not parts-chasing.",
+            "C. Dies when working hard",
+            "“It runs for a little bit, then dies when it goes up a hill. How would you figure out what’s wrong?”",
+            "Checks battery power while it’s resting and while it’s working; checks dirty/loose connections; "
+            "then looks at other parts. Not guessing and swapping parts.",
         ),
         (
-            "D. Learning unknown systems",
-            "“You’ve never seen this system. How do you learn it on day one without guessing?”",
-            "Manuals/diagrams, ask lead tech, structured tests, document findings. Escalates instead of cowboying.",
+            "D. Something new to them",
+            "“It’s your first day and you’ve never seen this kind of machine. How do you learn it without guessing?”",
+            "Looks up manuals, asks a lead tech, tests step by step, writes down what they find. Asks for help instead of winging it.",
         ),
     ]
     for title, prompt, guide in scenarios:
         block = [
             Paragraph(f"<b>{title}</b>", s["body"]),
-            Paragraph(prompt, s["prompt"]),
+            Paragraph(f"<b>Ask:</b> {prompt}", s["prompt"]),
         ]
         story.append(KeepTogether(block))
         story.append(Spacer(1, 2))
         story.append(score_row(title, "Highest", guide))
         story.append(Spacer(1, 3))
 
-    story.append(notes_box("Diagnostic notes (listen for measure-before-replace)", 2))
+    story.append(notes_box("Problem-solving notes (listen for: test before replacing parts)", 2))
     story.append(Spacer(1, 8))
 
     # --- Section 4: Safety (gate) ---
     story.append(
         section_header(
-            "4. SAFETY & ELECTRICAL JUDGMENT  ·  3 min  ·  Score E  ·  GATE — must be ≥ 3",
+            "4. SAFETY  ·  3 min  ·  Score E  ·  GATE — must be ≥ 3",
             content_width,
             bg=colors.HexColor("#8a5a00"),
         )
@@ -388,16 +405,20 @@ def build():
     story.append(Spacer(1, 3))
     story.append(
         Paragraph(
-            "<i>Prompts:</i> “You’re about to work on a high-current battery pack. What before tools go on?” "
-            "Jewelry? Meter discipline? Short/arc risk? Bypass interlocks “just to test”? Any near-miss and what changed?",
-            s["prompt"],
+            "<b>Ask:</b><br/>"
+            "1. “You’re about to work on a big battery that can put out a lot of power. "
+            "What do you do before you put tools on it?”<br/>"
+            "2. “Would you take off rings or watches first? Why?”<br/>"
+            "3. “Have you ever almost gotten hurt on a job — what happened, and what did you change after that?”",
+            s["body"],
         )
     )
     story.append(Spacer(1, 3))
     gate = score_row(
-        "E. Safety & high-current judgment",
+        "E. Safety around batteries & power",
         "GATE",
-        "Explicit caution: PPE mindset, isolate energy, meter discipline, no interlock bypass, respects pack energy.",
+        "Takes it seriously: removes jewelry, thinks before touching, uses meter carefully, "
+        "won’t defeat safety switches “just to test.”",
         "☐ FAIL SAFETY → do not invite to shop eval",
     )
     # Re-style with warm background
@@ -423,32 +444,35 @@ def build():
     # --- Section 5: Shop habits ---
     story.append(
         section_header(
-            "5. SHOP HABITS & COACHABILITY  ·  3 min  ·  Scores F–G",
+            "5. WORKING WITH THE TEAM  ·  3 min  ·  Scores F–G",
             content_width,
         )
     )
     story.append(Spacer(1, 3))
     story.append(
         Paragraph(
-            "<i>Prompts:</i> How do you write up findings so the office can quote? Time you were wrong — what did you do? "
-            "Comfortable being new on a product line if the process is clear? Steady ticket closer vs only “interesting” jobs?",
-            s["prompt"],
+            "<b>Ask:</b><br/>"
+            "1. “After you find the problem, how do you write it down so the office can call the customer with a price?”<br/>"
+            "2. “Tell me about a time you got a diagnosis wrong. What did you do?”<br/>"
+            "3. “Are you okay learning a new type of machine if we show you a clear process?”<br/>"
+            "4. “Do you prefer finishing regular repair jobs, or only the tricky ones?”",
+            s["body"],
         )
     )
     story.append(Spacer(1, 3))
     story.append(
         score_row(
-            "F. Shop communication & documentation",
+            "F. Explaining work clearly",
             "Medium",
-            "Can explain findings simply; understands office needs estimate-ready notes.",
+            "Can explain what they found in plain words so the office can quote the job.",
         )
     )
     story.append(Spacer(1, 3))
     story.append(
         score_row(
-            "G. Coachability & work style",
+            "G. Learns well / good teammate",
             "High",
-            "Owns mistakes, asks for help, open to process; won’t guess past a stop-point.",
+            "Owns mistakes, asks for help, follows a process; doesn’t guess when stuck.",
         )
     )
     story.append(Spacer(1, 3))
@@ -465,10 +489,17 @@ def build():
     )
     story.append(Spacer(1, 3))
     story.append(
+        Paragraph(
+            "<b>Ask (optional):</b> “Have you ever worked on a golf cart, UTV, or a lithium battery system?”",
+            s["body"],
+        )
+    )
+    story.append(Spacer(1, 3))
+    story.append(
         score_row(
-            "H. Golf cart / lithium / BMS exposure",
+            "H. Golf cart or lithium experience",
             "Bonus",
-            "Some cart, UTV, or lithium/BMS exposure. Absence is fine — leave blank or mark N/A.",
+            "Any cart / UTV / lithium experience is a plus. None is fine — mark N/A.",
         )
     )
     story.append(Spacer(1, 8))
@@ -523,18 +554,18 @@ def build():
         [
             [
                 Paragraph(
-                    "<b>☐ ADVANCE</b><br/>Safety ≥ 3, Diagnostic (B–D) avg ≥ 3, "
-                    "looks trainable → schedule 3–4 hr shop eval",
+                    "<b>☐ ADVANCE</b><br/>Safety ≥ 3, problem-solving (B–D) avg ≥ 3, "
+                    "can learn the job → schedule shop eval",
                     s["rec"],
                 ),
                 Paragraph(
-                    "<b>☐ MAYBE</b><br/>Strong wrench, developing electrical; "
-                    "honest gaps → only if hungry; heavier hands-on day",
+                    "<b>☐ MAYBE</b><br/>Good with tools, weaker on electrical; "
+                    "honest about gaps and eager → heavier hands-on day",
                     s["rec"],
                 ),
                 Paragraph(
-                    "<b>☐ PASS</b><br/>Parts-swap habit, unsafe, "
-                    "or cannot describe troubleshooting they’ve owned",
+                    "<b>☐ PASS</b><br/>Guesses and swaps parts, unsafe, "
+                    "or can’t describe how they’ve fixed anything",
                     s["rec"],
                 ),
             ]
