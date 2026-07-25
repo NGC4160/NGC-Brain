@@ -405,20 +405,37 @@ def build():
     story.append(Spacer(1, 3))
     story.append(
         Paragraph(
+            "<b>Why we ask (you):</b> Cart batteries can spark, burn skin, or short out tools. "
+            "We’re checking if they’re careful — not if they know fancy electrical words.",
+            s["small"],
+        )
+    )
+    story.append(Spacer(1, 3))
+    story.append(
+        Paragraph(
             "<b>Ask:</b><br/>"
-            "1. “You’re about to work on a big battery that can put out a lot of power. "
-            "What do you do before you put tools on it?”<br/>"
-            "2. “Would you take off rings or watches first? Why?”<br/>"
-            "3. “Have you ever almost gotten hurt on a job — what happened, and what did you change after that?”",
+            "1. “A customer’s golf cart is in your bay and you need to work around the batteries. "
+            "Walk me through how you stay safe before you start.”<br/>"
+            "2. “Why do shops tell people to take off rings and metal watches for this work?”<br/>"
+            "3. “Have you ever had a close call with tools or electricity? What did you learn?”",
             s["body"],
+        )
+    )
+    story.append(Spacer(1, 2))
+    story.append(
+        Paragraph(
+            "<b>Good answer sounds like:</b> turn key off / make sure it’s not powered · take off metal jewelry · "
+            "don’t lay wrenches across battery posts · look before you touch · ask if unsure.<br/>"
+            "<b>Bad answer sounds like:</b> “I’d just dive in” · jokes about getting shocked · "
+            "“safety switches get in the way so I’d bypass them.”",
+            s["small"],
         )
     )
     story.append(Spacer(1, 3))
     gate = score_row(
-        "E. Safety around batteries & power",
+        "E. Careful around batteries",
         "GATE",
-        "Takes it seriously: removes jewelry, thinks before touching, uses meter carefully, "
-        "won’t defeat safety switches “just to test.”",
+        "Takes batteries seriously — jewelry off, thinks before touching, won’t skip safety steps.",
         "☐ FAIL SAFETY → do not invite to shop eval",
     )
     # Re-style with warm background
