@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGC Shop QC Completion Form</title>
+  <style>
+    :root {
+      --ngc-blue: #1a4d7a;
+      --ngc-blue-light: #2d6ba3;
+      --ngc-green: #6faa2d;
+      --border: #c5d4e3;
+      --text: #1a1a1a;
+      --muted: #555;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Calibri, Arial, sans-serif;
+      font-size: 9pt;
+      color: var(--text);
+      line-height: 1.25;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+    }
+
+    .page {
+      max-width: 8.5in;
+      margin: 0 auto 16px;
+      background: #fff;
+      padding: 0.38in 0.48in 0.4in;
+      height: 10.4in;
+      overflow: hidden;
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .page:last-child { page-break-after: auto; break-after: auto; margin-bottom: 0; }
+
+    @page { size: letter; margin: 0.35in 0.45in; }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        padding: 0;
+        height: auto;
+        overflow: visible;
+        box-shadow: none;
+      }
+      .no-print { display: none !important; }
+      input[type="text"], input[type="date"], input[type="time"], textarea {
+        border: none !important;
+        border-bottom: 1px solid #999 !important;
+      }
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--ngc-blue);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .header img { height: 54px; width: auto; }
+
+    .header-text {
+      text-align: right;
+      flex: 1;
+      margin-left: 16px;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 15pt;
+      color: var(--ngc-blue);
+      letter-spacing: 0.02em;
+    }
+
+    .header-text .sub {
+      font-size: 8.5pt;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .doc-title {
+      background: linear-gradient(90deg, var(--ngc-blue), var(--ngc-blue-light));
+      color: #fff;
+      text-align: center;
+      font-size: 12pt;
+      font-weight: 700;
+      padding: 7px 10px;
+      margin: 0 0 10px;
+      letter-spacing: 0.04em;
+    }
+
+    .intro {
+      font-size: 9pt;
+      color: var(--muted);
+      margin: 0 0 10px;
+      padding: 7px 9px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+    }
+
+    .section { margin-bottom: 7px; }
+
+    .section-title {
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--ngc-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 2px solid var(--ngc-green);
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 1px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea {
+      width: 100%;
+      font: inherit;
+      padding: 3px 5px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+    }
+
+    textarea {
+      min-height: 32px;
+      resize: vertical;
+    }
+
+    .check-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9pt;
+    }
+
+    .check-table th,
+    .check-table td {
+      border: 1px solid var(--border);
+      padding: 2px 5px;
+      vertical-align: top;
+    }
+
+    .check-table th {
+      background: #eef4fa;
+      color: var(--ngc-blue);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-align: left;
+    }
+
+    .check-table .cb-col {
+      width: 34px;
+      text-align: center;
+    }
+
+    .check-table .num-col { width: 24px; text-align: center; color: var(--muted); }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 10px;
+      font-size: 9pt;
+    }
+
+    .checkbox-grid label.cb,
+    .inline-cb {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--text);
+      font-size: 9pt;
+    }
+
+    .checkbox-grid input,
+    .inline-cb input { margin-top: 2px; flex-shrink: 0; }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 12px;
+      font-size: 8.5pt;
+    }
+
+    .photo-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      border: 1px solid var(--border);
+      padding: 3px 5px;
+      background: #fafcfe;
+    }
+
+    .photo-item .num {
+      font-weight: 700;
+      color: var(--ngc-blue);
+      min-width: 14px;
+    }
+
+    .note {
+      font-size: 8pt;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 4px;
+    }
+
+    .sig-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 24px;
+      margin-top: 8px;
+    }
+
+    .sig-line {
+      border-bottom: 1px solid #333;
+      height: 24px;
+      margin-bottom: 3px;
+    }
+
+    .sig-meta { font-size: 8pt; color: var(--muted); }
+
+    .footer {
+      margin-top: 10px;
+      padding-top: 6px;
+      border-top: 1px solid var(--border);
+      font-size: 7.5pt;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .attest {
+      font-size: 8.5pt;
+      border: 2px solid var(--ngc-blue);
+      padding: 6px 8px;
+      background: #f4f8fc;
+      margin-top: 6px;
+    }
+
+    .attest label.cb {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: var(--ngc-blue);
+    }
+
+    .print-btn {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: var(--ngc-blue);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      font-size: 11pt;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .print-btn:hover { background: var(--ngc-blue-light); }
+  </style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">Print / Save PDF</button>
+
+<!-- PAGE 1 -->
+<div class="page">
+  <header class="header">
+    <img src="assets/ngc-logo.png" alt="Neighborhood Golf Carts logo" />
+    <div class="header-text">
+      <h1>Neighborhood Golf Carts</h1>
+      <div class="sub">
+        71363 Thelma Ln, Suite E · Covington, LA 70433<br />
+        985-402-1206 · contact@ngcgolfcarts.com · NGCGolfCarts.com<br />
+        Shop hours: Monday–Friday, 8:00 AM – 5:00 PM
+      </div>
+    </div>
+  </header>
+
+  <div class="doc-title">SHOP QC COMPLETION FORM</div>
+
+  <p class="intro">
+    <strong>Turn in this completed form when a cart is finished and ready to move to READY.</strong>
+    Adapted from the NGC service-call procedure for in-shop work. All photos must be uploaded to the
+    Housecall Pro job before turning in this form. Use invoice # only on the whiteboard — no customer
+    names on posted copies.
+  </p>
+
+  <div class="section">
+    <div class="section-title">Job information</div>
+    <div class="grid-3">
+      <div>
+        <label>HCP invoice / job #</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Date work completed</label>
+        <input type="date" />
+      </div>
+      <div>
+        <label>Time completed</label>
+        <input type="time" />
+      </div>
+      <div>
+        <label>Technician name</label>
+        <input type="text" placeholder="Taylor / Marlon / Peyton" />
+      </div>
+      <div>
+        <label>Bay / location in shop</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Service type</label>
+        <input type="text" placeholder="Diagnostic, repair, lithium, PM, etc." />
+      </div>
+      <div>
+        <label>Cart make / model / year</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Serial # or VIN (if visible)</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Power type</label>
+        <input type="text" placeholder="36V / 48V / 72V / gas" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Pre-work shop procedure (before wrenching)</div>
+    <table class="check-table">
+      <thead>
+        <tr>
+          <th class="cb-col">✓</th>
+          <th>Step</th>
+          <th>Notes / initial</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cb-col"><input type="checkbox" /></td>
+          <td>Reviewed HCP job — complaint, authorized work, and parts list verified</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td class="cb-col"><input type="checkbox" /></td>
+          <td>Verified correct cart (invoice #, keys, and physical cart match)</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td class="cb-col"><input type="checkbox" /></td>
+          <td>PPE in use (safety glasses, gloves as required; lithium protocols if applicable)</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td class="cb-col"><input type="checkbox" /></td>
+          <td>Tow / run switch in TOW or OFF before electrical work; cart secured</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td class="cb-col"><input type="checkbox" /></td>
+          <td>Battery disconnect / lockout performed when required for the job</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td class="cb-col"><input type="checkbox" /></td>
+          <td>Work area clean; tools and lift/chocks set up safely</td>
+          <td><input type="text" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Required before-work photos (7) — uploaded to HCP</div>
+    <p class="note">Take all seven photos before starting repair work. Check each box when uploaded to the job in Housecall Pro.</p>
+    <div class="photo-grid">
+      <div class="photo-item"><span class="num">1</span><label class="inline-cb"><input type="checkbox" /> Front of cart (full view)</label></div>
+      <div class="photo-item"><span class="num">2</span><label class="inline-cb"><input type="checkbox" /> Rear of cart (full view)</label></div>
+      <div class="photo-item"><span class="num">3</span><label class="inline-cb"><input type="checkbox" /> Driver side (full profile)</label></div>
+      <div class="photo-item"><span class="num">4</span><label class="inline-cb"><input type="checkbox" /> Passenger side (full profile)</label></div>
+      <div class="photo-item"><span class="num">5</span><label class="inline-cb"><input type="checkbox" /> Battery compartment / pack area</label></div>
+      <div class="photo-item"><span class="num">6</span><label class="inline-cb"><input type="checkbox" /> Dash / key switch / charge port area</label></div>
+      <div class="photo-item"><span class="num">7</span><label class="inline-cb"><input type="checkbox" /> Serial # / VIN tag or manufacturer data plate</label></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">7-point safety inspection (free with every service)</div>
+    <table class="check-table">
+      <thead>
+        <tr>
+          <th class="num-col">#</th>
+          <th class="cb-col">✓</th>
+          <th>Inspection point</th>
+          <th>Pass / note / N/A</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="num-col">1</td><td class="cb-col"><input type="checkbox" /></td><td>Wires, cables, and terminals</td><td><input type="text" /></td></tr>
+        <tr><td class="num-col">2</td><td class="cb-col"><input type="checkbox" /></td><td>Battery water levels (lead-acid) or lithium pack condition</td><td><input type="text" /></td></tr>
+        <tr><td class="num-col">3</td><td class="cb-col"><input type="checkbox" /></td><td>Lights and horn (if applicable)</td><td><input type="text" /></td></tr>
+        <tr><td class="num-col">4</td><td class="cb-col"><input type="checkbox" /></td><td>Tires — inflation, tread depth, uneven wear</td><td><input type="text" /></td></tr>
+        <tr><td class="num-col">5</td><td class="cb-col"><input type="checkbox" /></td><td>Steering and suspension</td><td><input type="text" /></td></tr>
+        <tr><td class="num-col">6</td><td class="cb-col"><input type="checkbox" /></td><td>Drivetrain (axle &amp; motor)</td><td><input type="text" /></td></tr>
+        <tr><td class="num-col">7</td><td class="cb-col"><input type="checkbox" /></td><td>Brakes — operation and adjustment</td><td><input type="text" /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <span>NGC Shop QC Completion Form · Rev. 2026-07 · Page 1 of 2</span>
+    <span>Form ID: SHOP-QC-001</span>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <div class="section" style="margin-top:0">
+    <div class="section-title">HCP invoice / job # (page 2)</div>
+    <input type="text" style="max-width: 220px" />
+  </div>
+
+  <div class="section">
+    <div class="section-title">Inspection findings — notable conditions (photos uploaded to HCP)</div>
+    <p class="note">Photograph any damage, wear, leaks, corrosion, loose hardware, fault codes, or customer-reported symptoms found during inspection. List each condition below and confirm photos are on the job.</p>
+    <table class="check-table">
+      <thead>
+        <tr>
+          <th class="cb-col">✓</th>
+          <th>Condition / finding</th>
+          <th>Photo uploaded? (Y/N)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><input type="text" /></td><td><input type="text" style="width:60px" /></td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><input type="text" /></td><td><input type="text" style="width:60px" /></td></tr>
+      </tbody>
+    </table>
+    <div style="margin-top:4px">
+      <label class="inline-cb"><input type="checkbox" /> No notable conditions beyond normal wear — N/A</label>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Work performed — photo documentation (uploaded to HCP)</div>
+    <p class="note">Photograph all repaired or replaced areas, new parts installed, wiring, torque-critical fasteners, and completed assemblies.</p>
+    <table class="check-table">
+      <thead>
+        <tr>
+          <th class="cb-col">✓</th>
+          <th>Work area / repair performed</th>
+          <th>Before &amp; after photos on job?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><input type="text" /></td><td><input type="text" style="width:60px" /></td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><input type="text" /></td><td><input type="text" style="width:60px" /></td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><input type="text" /></td><td><input type="text" style="width:60px" /></td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><input type="text" /></td><td><input type="text" style="width:60px" /></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Electric diagnostic close-out (if applicable)</div>
+    <div class="checkbox-grid">
+      <label class="cb"><input type="checkbox" /> Fault codes reviewed and cleared (photo or .CPF saved to HCP)</label>
+      <label class="cb"><input type="checkbox" /> Post-repair monitor / log file saved if required</label>
+      <label class="cb"><input type="checkbox" /> Charger tested / verified compatible</label>
+      <label class="cb"><input type="checkbox" /> Lithium care guide staged for customer (lithium jobs)</label>
+      <label class="cb"><input type="checkbox" /> N/A — non-electrical job</label>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Final quality check — work completeness</div>
+    <p class="note">Physically re-walk the cart. Check every item that applies to this job.</p>
+    <table class="check-table">
+      <thead>
+        <tr>
+          <th class="cb-col">✓</th>
+          <th>Quality standard</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><strong>Completeness</strong> — all authorized work finished; no open tasks or missing parts</td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><strong>Neatness</strong> — wiring routed and secured; panels aligned; no stray hardware</td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><strong>Cleanliness</strong> — work area wiped down; grease and debris removed from cart</td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><strong>Tightness</strong> — fasteners, lug nuts, terminals, and clamps torqued / snugged correctly</td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><strong>Safety</strong> — seat belts, body panels, battery hold-downs, and covers reinstalled</td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><strong>Fluids / levels</strong> — battery water (lead-acid), gear oil, or other fluids checked as applicable</td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><strong>Accessories</strong> — lights, horn, mirrors, and add-ons function correctly</td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><strong>Tools &amp; parts</strong> — no tools, rags, or old parts left on or in the cart</td></tr>
+        <tr><td class="cb-col"><input type="checkbox" /></td><td><strong>HCP updated</strong> — notes, parts used, labor, and photos complete on the job</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Test drive &amp; delivery readiness</div>
+    <div class="grid-2">
+      <div>
+        <label>Test drive date / time</label>
+        <input type="text" placeholder="Date and time" />
+      </div>
+      <div>
+        <label>Distance / duration (min. shop loop or ~1 mile equivalent)</label>
+        <input type="text" />
+      </div>
+    </div>
+    <div class="checkbox-grid" style="margin-top:6px">
+      <label class="cb"><input type="checkbox" /> Forward / reverse operation verified</label>
+      <label class="cb"><input type="checkbox" /> Brakes stop cart smoothly — no pull or noise</label>
+      <label class="cb"><input type="checkbox" /> Steering tracks straight; no new vibrations or noises</label>
+      <label class="cb"><input type="checkbox" /> Speed / acceleration normal for cart; no fault codes after drive</label>
+      <label class="cb"><input type="checkbox" /> Customer complaint verified resolved (or documented if not)</label>
+      <label class="cb"><input type="checkbox" /> Cart charged / SOC appropriate for pickup or delivery</label>
+    </div>
+    <div style="margin-top:6px">
+      <label>Test drive notes (issues found, if any)</label>
+      <textarea placeholder="Leave blank if no issues. If issues found, do not move to READY — return to IN REPAIR."></textarea>
+    </div>
+  </div>
+
+  <div class="attest">
+    <label class="cb">
+      <input type="checkbox" />
+      I certify that I have completed all required steps on this form, uploaded all required photos to Housecall Pro,
+      performed the 7-point safety inspection, test drove this cart, and verified it is complete, neat, clean, tight,
+      and in proper condition to be delivered or picked up by the customer. I am turning this form in to move this cart
+      to <strong>READY</strong>.
+    </label>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Technician sign-off</div>
+    <div class="sig-grid" style="margin-top:4px">
+      <div>
+        <div class="sig-line"></div>
+        <div class="sig-meta">Technician signature</div>
+      </div>
+      <div>
+        <div class="sig-line"></div>
+        <div class="sig-meta">Date</div>
+      </div>
+      <div>
+        <div class="sig-line"></div>
+        <div class="sig-meta">Service manager review (Ryan — if spot-check)</div>
+      </div>
+      <div>
+        <div class="sig-line"></div>
+        <div class="sig-meta">Date</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Turn in to office tray · Move whiteboard card to READY · Christine notifies customer</span>
+    <span>Form ID: SHOP-QC-001 · Page 2 of 2</span>
+  </div>
+</div>
+
+</body>
+</html>
