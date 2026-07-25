@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-24T15:11:31.436380+00:00",
+  "synced_at": "2026-07-25T14:43:56.066959+00:00",
   "count": 500,
   "jobs": [
     {
@@ -316,7 +316,7 @@
       "id": "job_8173d42bb29b493f8966ec7cdd7e9073",
       "description": "Lithium Battery Conversion Kit (Complete) - 36V Complete Lithium Battery Conversion Kit",
       "notes": [],
-      "work_status": "needs scheduling",
+      "work_status": "user canceled",
       "work_timestamps": {
         "on_my_way_at": null,
         "started_at": null,
@@ -342,8 +342,8 @@
       },
       "locked_at": null,
       "created_at": "2026-07-23T17:35:31Z",
-      "updated_at": "2026-07-23T17:37:54Z",
-      "canceled_at": null,
+      "updated_at": "2026-07-24T22:21:08Z",
+      "canceled_at": "2026-07-24T22:21:08Z",
       "deleted_at": null,
       "assigned_route_template_id": null,
       "company_name": "Neighborhood Golf Carts",
@@ -615,17 +615,17 @@
     },
     {
       "id": "job_8b555b2607a14553b5af2af81306f1ac",
-      "description": "General - ***SEE NOTES***",
+      "description": "Accessories - 1.0-Replace Charger Port, Lithium upgrade",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "scheduled",
       "work_timestamps": {
-        "on_my_way_at": "2026-07-22T18:16:47Z",
+        "on_my_way_at": null,
         "started_at": null,
-        "completed_at": "2026-07-23T17:44:16Z"
+        "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-07-22T17:00:00Z",
-        "scheduled_end": "2026-07-23T17:00:00Z",
+        "scheduled_end": "2026-07-23T22:00:00Z",
         "arrival_window": 0,
         "appointments": []
       },
@@ -664,6 +664,39 @@
           "created_at": "2026-04-23T21:20:02Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_96c62c1f641442399a788e397c0d69e6",
+          "first_name": "Richard",
+          "last_name": "Flynn",
+          "email": "flynn6959@gmail.com",
+          "mobile_number": "9853273960",
+          "color_hex": "c0370c",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-07-14T13:21:59Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [],
@@ -677,7 +710,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-22T02:02:14Z",
-      "updated_at": "2026-07-23T17:44:18Z",
+      "updated_at": "2026-07-24T21:00:18Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -1342,7 +1375,7 @@
     },
     {
       "id": "job_c33ca12d145a4809b34ac7bf840d8b04",
-      "description": "Diagnostic Inspection (Minimum Service Charge)",
+      "description": "General - 1.0-Additional Diagnostic Time Labor Only",
       "notes": [
         {
           "id": "nte_2487c5e504794085a9e8a01f073bb380",
@@ -1373,8 +1406,8 @@
         "arrival_window": 0,
         "appointments": []
       },
-      "total_amount": 19556,
-      "outstanding_balance": 19556,
+      "total_amount": 325128,
+      "outstanding_balance": 325128,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -1448,7 +1481,7 @@
       "original_estimate_uuids": [
         "est_59238d07747c4095a265f0fb5a607d3f"
       ],
-      "subtotal": 17900,
+      "subtotal": 297600,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -1456,7 +1489,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-17T22:01:04Z",
-      "updated_at": "2026-07-24T14:45:38Z",
+      "updated_at": "2026-07-24T22:18:17Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2123,11 +2156,11 @@
       "id": "job_7a008e85c09d48ee99d90307103c67c7",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
-      "work_status": "in progress",
+      "work_status": "complete unrated",
       "work_timestamps": {
         "on_my_way_at": "2026-07-23T13:30:44Z",
         "started_at": "2026-07-22T15:40:03Z",
-        "completed_at": null
+        "completed_at": "2026-07-24T22:15:53Z"
       },
       "schedule": {
         "scheduled_start": "2026-07-21T13:30:00Z",
@@ -2136,7 +2169,7 @@
         "appointments": []
       },
       "total_amount": 62737,
-      "outstanding_balance": 62737,
+      "outstanding_balance": 0,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -2218,7 +2251,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-15T14:26:25Z",
-      "updated_at": "2026-07-23T13:30:44Z",
+      "updated_at": "2026-07-24T22:15:56Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2733,11 +2766,15 @@
     },
     {
       "id": "job_5b538991ff7847618874c8a404fc8624",
-      "description": "General - ***SEE NOTES***",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [
         {
           "id": "nte_0c5a4098d4aa424da512d12215adae1e",
           "content": "6yr old 3rd rate batteries, mixed jumpers with questionable crimps, voltage drop suspect.\n"
+        },
+        {
+          "id": "nte_d2c01c589d624956904763b98dddb128",
+          "content": "installed new its sensor, removed and installed all new shocks, removed and installed new rear leaf spering bushings, had to cut 2 leaf spring bushing bolt, cleaned area  and installed new dc to dc converter, test drove golf cart"
         }
       ],
       "work_status": "scheduled",
@@ -2868,7 +2905,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-10T20:30:02Z",
-      "updated_at": "2026-07-23T17:42:12Z",
+      "updated_at": "2026-07-24T18:04:15Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3502,7 +3539,7 @@
     },
     {
       "id": "job_02aa1d900e7a4229a3ad05117e9d6826",
-      "description": "General - ***SEE NOTES***",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [
         {
           "id": "nte_04b6e0a9b48f4ca1856c0e7639b9f3e4",
@@ -3608,7 +3645,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-09T20:02:34Z",
-      "updated_at": "2026-07-20T21:53:54Z",
+      "updated_at": "2026-07-24T20:13:57Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3989,7 +4026,7 @@
     },
     {
       "id": "job_93e640ab65324328aec71058c27ae7b8",
-      "description": "General - ***SEE NOTES***",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [
         {
           "id": "nte_f0aae9c09fcb4b849b48017015314db0",
@@ -4128,7 +4165,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-08T21:07:48Z",
-      "updated_at": "2026-07-22T23:01:21Z",
+      "updated_at": "2026-07-24T20:54:28Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4326,7 +4363,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-07T16:43:58Z",
-      "updated_at": "2026-07-22T16:51:28Z",
+      "updated_at": "2026-07-24T20:49:37Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -7110,7 +7147,7 @@
         "appointments": []
       },
       "total_amount": 215031,
-      "outstanding_balance": 215031,
+      "outstanding_balance": 0,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -7225,7 +7262,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-26T22:05:38Z",
-      "updated_at": "2026-07-21T17:32:34Z",
+      "updated_at": "2026-07-24T20:17:19Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
