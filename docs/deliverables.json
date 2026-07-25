@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-21T22:07:26Z",
+  "generated_at": "2026-07-25T17:42:50Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 103,
+  "total_items": 113,
   "sections": [
     {
       "id": "start",
@@ -421,10 +421,114 @@
       ]
     },
     {
+      "id": "documents",
+      "title": "Documents",
+      "icon": "\u25a4",
+      "description": "Hiring scorecards, HR forms, shop tools, customer handouts \u2014 Command Center Documents hub.",
+      "items": [
+        {
+          "title": "Documents Hub",
+          "description": "Browse all working documents by category.",
+          "path": "docs/documents/index.html",
+          "type": "html",
+          "view": "documents/index.html",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/docs/documents/index.html",
+          "tags": [
+            "document",
+            "hub"
+          ]
+        },
+        {
+          "title": "Technician Phone Interview Scorecard",
+          "description": "15\u201320 min scored phone screen \u2014 transferable skills, safety gate, Advance/Maybe/Pass",
+          "path": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+          "type": "pdf",
+          "view": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+          "tags": [
+            "document",
+            "hiring",
+            "pdf"
+          ]
+        },
+        {
+          "title": "Hiring phone screen \u2014 how to use",
+          "description": "Indeed logistics already cleared; golf cart experience is bonus only",
+          "path": "external_docs/templates/hiring/README.md",
+          "type": "markdown",
+          "view": "view.html?path=documents/hiring/README.md",
+          "tags": [
+            "document",
+            "hiring",
+            "markdown"
+          ]
+        },
+        {
+          "title": "Personnel Counseling Form",
+          "description": "Fillable branded form \u2014 print or save as PDF",
+          "path": "external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html",
+          "type": "html",
+          "view": "documents/team_hr/personnel-counseling.html",
+          "tags": [
+            "document",
+            "team_hr",
+            "html"
+          ]
+        },
+        {
+          "title": "Personnel counseling procedure",
+          "description": "When and how to use the counseling form",
+          "path": "knowledge/05_team/personnel_counseling.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/05_team/personnel_counseling.md",
+          "tags": [
+            "document",
+            "team_hr",
+            "markdown"
+          ]
+        },
+        {
+          "title": "Team roles & hiring overview",
+          "description": "Roster, RACI, phone screen \u2192 shop eval funnel",
+          "path": "knowledge/05_team/roles.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/05_team/roles.md",
+          "tags": [
+            "document",
+            "team_hr",
+            "markdown"
+          ]
+        },
+        {
+          "title": "Shop throughput playbook",
+          "description": "WIP limits, lithium SLA, daily rhythm",
+          "path": "knowledge/04_operations/shop_throughput.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/04_operations/shop_throughput.md",
+          "tags": [
+            "document",
+            "operations",
+            "markdown"
+          ]
+        },
+        {
+          "title": "Shop whiteboard layout",
+          "description": "Physical board columns, cards, 8:15 huddle",
+          "path": "knowledge/04_operations/shop_whiteboard_layout.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/04_operations/shop_whiteboard_layout.md",
+          "tags": [
+            "document",
+            "operations",
+            "markdown"
+          ]
+        }
+      ]
+    },
+    {
       "id": "templates",
       "title": "Templates & Forms",
       "icon": "\ud83d\udccb",
-      "description": "Interactive and printable deliverables.",
+      "description": "Source templates (also listed under Documents).",
       "items": [
         {
           "title": "Personnel Counseling Form",
@@ -440,6 +544,19 @@
           ]
         },
         {
+          "title": "Technician Phone Interview Scorecard",
+          "description": "Scored 15\u201320 min phone screen PDF.",
+          "path": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+          "type": "pdf",
+          "view": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+          "tags": [
+            "form",
+            "hiring",
+            "pdf"
+          ]
+        },
+        {
           "title": "Personnel Form README",
           "description": "How to use and update the counseling template.",
           "path": "external_docs/templates/personnel_counseling/README.md",
@@ -450,6 +567,19 @@
           "tags": [
             "form",
             "hr"
+          ]
+        },
+        {
+          "title": "Hiring phone screen README",
+          "description": "How to use the technician phone interview scorecard.",
+          "path": "external_docs/templates/hiring/README.md",
+          "type": "markdown",
+          "view": "view.html?path=external_docs/templates/hiring/README.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/templates/hiring/README.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/external_docs/templates/hiring/README.md",
+          "tags": [
+            "form",
+            "hiring"
           ]
         }
       ]

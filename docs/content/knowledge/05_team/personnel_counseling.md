@@ -66,10 +66,13 @@ Standard form for **documented employee counseling** at Neighborhood Golf Carts 
 `My Drive / Management / NGC Personnel Counseling Form.docx`  
 Open in Google Drive → **Open with Google Docs** (or double-click; Drive converts automatically).
 
+**Command Center:** Documents → Personnel Counseling Form (`documents/index.html`)
+
 **Browser / PDF:**
 ```bash
 open "external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html"
 ```
+# or: docs/documents/team_hr/personnel-counseling.html
 
 Regenerate the Word/Google Docs file after template changes:
 ```bash

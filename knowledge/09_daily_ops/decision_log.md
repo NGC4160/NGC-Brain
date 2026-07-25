@@ -24,6 +24,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-07-13 | Keep customer-supplied lithium install at **$549** | Ryan | Active offer; clarify warranty scope on customer packs |
 | 2026-07-13 | Morning Sync live — daily HCP + QBO → Command Center | Ryan | 7:30 AM CST; finance knowledge refreshed from API P&L |
 | 2026-07-25 | Tech hiring: golf cart experience not required; Indeed handles logistics gates; phone screen scores transferable skill + safety before shop eval | Ryan | Scorecard: `external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf` |
+| 2026-07-25 | Command Center **Documents** zone + hub — all present/future working docs cataloged in `scripts/documents_catalog.py` | Ryan | Hub: `docs/documents/index.html` |
 
 ---
 

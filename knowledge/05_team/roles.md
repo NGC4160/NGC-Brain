@@ -44,6 +44,7 @@
 
 - Scorecard PDF: `external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf`
 - Guide / regenerate: `external_docs/templates/hiring/README.md`
+- **Command Center:** Documents → Technician Phone Interview Scorecard (hub: `documents/index.html`)
 
 **Shop evaluation** for advanced candidates (~3–4 hours):
 
