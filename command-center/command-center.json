@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T14:44:00.598406+00:00",
+  "generated_at": "2026-07-25T17:45:30.413161+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-25T14:44:00.572786+00:00",
+    "generated_at": "2026-07-25T17:45:30.382183+00:00",
     "jobs_synced_at": "2026-07-25T14:43:56.066959+00:00",
     "has_live_data": true,
     "metrics": {
@@ -19,7 +19,7 @@
       "active_pipeline": 37,
       "wip_target": 6,
       "wip_over": 10,
-      "stale_15_plus": 11,
+      "stale_15_plus": 12,
       "lithium_at_risk": 2,
       "deposit_alerts": 0
     },
@@ -28,7 +28,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 81,
+          "days": 82,
           "lithium": true,
           "status": "in progress"
         },
@@ -44,7 +44,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 81,
+          "days": 82,
           "lithium": true,
           "status": "in progress"
         },
@@ -765,7 +765,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "103 indexed deliverables",
+          "desc": "113 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -787,16 +787,50 @@
       ]
     },
     {
-      "id": "tools",
-      "title": "Tools & Forms",
-      "icon": "\u2699",
-      "color": "#34d399",
-      "description": "Templates, scripts, Cursor skills",
+      "id": "documents",
+      "title": "Documents",
+      "icon": "\u25a4",
+      "color": "#94a3b8",
+      "description": "Hiring scorecards, HR forms, shop tools, customer handouts",
       "cards": [
         {
-          "title": "Personnel Counseling",
-          "desc": "Fillable HR form \u2014 print/PDF",
-          "href": "templates/personnel-counseling.html"
+          "title": "Documents Hub",
+          "desc": "7 active \u00b7 5 planned \u2014 all categories",
+          "href": "documents/index.html",
+          "primary": true,
+          "badge": "7 docs"
+        },
+        {
+          "title": "Technician Phone Interview Scorecard",
+          "desc": "15\u201320 min scored phone screen \u2014 transferable skills, safety gate, Advance/Maybe/Pass",
+          "href": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+          "external": false
+        },
+        {
+          "title": "Personnel Counseling Form",
+          "desc": "Fillable branded form \u2014 print or save as PDF",
+          "href": "documents/team_hr/personnel-counseling.html",
+          "external": false
+        },
+        {
+          "title": "Personnel counseling procedure",
+          "desc": "When and how to use the counseling form",
+          "href": "view.html?path=knowledge/05_team/personnel_counseling.md",
+          "external": false
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools & Setup",
+      "icon": "\u2699",
+      "color": "#34d399",
+      "description": "Cursor brain, API sync, integration playbooks",
+      "cards": [
+        {
+          "title": "Documents Hub",
+          "desc": "All forms & scorecards by category",
+          "href": "documents/index.html"
         },
         {
           "title": "Start Here (Cursor)",
@@ -846,5 +880,10 @@
       ]
     }
   ],
-  "manifest_total": 103
+  "documents": {
+    "active": 7,
+    "planned": 5,
+    "categories": 5
+  },
+  "manifest_total": 113
 }

@@ -35,8 +35,15 @@ Send her:
 | **Daily Rhythm** | Morning briefing, EOD, weekly review, throughput SOPs |
 | **Build Pipeline** | Visual P1/P2/P3 backlog — everything being built |
 | **Knowledge Base** | Full business brain docs |
-| **Tools & Forms** | HR form, Cursor setup, automation playbooks |
+| **Documents** | Hiring scorecards, HR forms, shop tools, customer handouts (by category) |
+| **Tools & Setup** | Cursor brain, API sync, integration playbooks |
 | **Technician Training** | Golf Cart Diagnostic Technician package (10 weeks / 40 hrs) — hub, weeks, labs, finals |
+
+### Documents hub
+
+Browse all working docs at **Documents → Documents Hub** (`documents/index.html`).
+
+To add a present or future document: edit [`scripts/documents_catalog.py`](../scripts/documents_catalog.py), place the file under `external_docs/templates/<category>/`, run `python3 scripts/build_command_center.py`. See [`docs/documents/README.md`](documents/README.md).
 
 ## Refresh live data
 

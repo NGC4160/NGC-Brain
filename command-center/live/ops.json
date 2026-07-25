@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T14:44:00.572786+00:00",
+  "generated_at": "2026-07-25T17:45:30.382183+00:00",
   "jobs_synced_at": "2026-07-25T14:43:56.066959+00:00",
   "has_live_data": true,
   "metrics": {
@@ -9,7 +9,7 @@
     "active_pipeline": 37,
     "wip_target": 6,
     "wip_over": 10,
-    "stale_15_plus": 11,
+    "stale_15_plus": 12,
     "lithium_at_risk": 2,
     "deposit_alerts": 0
   },
@@ -18,7 +18,7 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 81,
+        "days": 82,
         "lithium": true,
         "status": "in progress"
       },
@@ -34,7 +34,7 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 81,
+        "days": 82,
         "lithium": true,
         "status": "in progress"
       },

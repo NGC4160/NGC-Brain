@@ -127,6 +127,11 @@ function zoneSummary(zone, ops) {
     stat = `${c.P1} P1 · ${c.P2} P2 · ${c.P3} P3 projects`;
   } else if (zone.id === "apps") {
     stat = `${count} operational apps`;
+  } else if (zone.id === "documents") {
+    const d = ccData?.documents;
+    stat = d
+      ? `${d.active} active · ${d.planned} planned`
+      : `${count} document links`;
   }
 
   return { primary, stat };
