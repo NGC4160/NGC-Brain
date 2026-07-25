@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 LIVE = DOCS / "live"
 ASSETS = DOCS / "assets"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 REPO = "NGC4160/NGC-Brain"
 BRANCH = "main"
@@ -261,7 +262,10 @@ def build_app_links() -> list[dict]:
     ]
 
 
-def build_zones(manifest: dict, ops: dict, pipeline: list[dict]) -> list[dict]:
+def build_zones(manifest: dict, ops: dict, pipeline: list[dict], documents_catalog: dict | None = None) -> list[dict]:
+    from documents_catalog import featured_zone_cards  # noqa: WPS433
+
+    doc_cards = featured_zone_cards(documents_catalog)
     return [
         {
             "id": "apps",
@@ -363,13 +367,21 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict]) -> list[dict]:
             ],
         },
         {
+            "id": "documents",
+            "title": "Documents",
+            "icon": "▤",
+            "color": "#94a3b8",
+            "description": "Hiring scorecards, HR forms, shop tools, customer handouts",
+            "cards": doc_cards,
+        },
+        {
             "id": "tools",
-            "title": "Tools & Forms",
+            "title": "Tools & Setup",
             "icon": "⚙",
             "color": "#34d399",
-            "description": "Templates, scripts, Cursor skills",
+            "description": "Cursor brain, API sync, integration playbooks",
             "cards": [
-                {"title": "Personnel Counseling", "desc": "Fillable HR form — print/PDF", "href": "templates/personnel-counseling.html"},
+                {"title": "Documents Hub", "desc": "All forms & scorecards by category", "href": "documents/index.html"},
                 {"title": "Start Here (Cursor)", "desc": "How to run the business brain", "href": "view.html?path=START_HERE.md"},
                 {"title": "HCP API Setup", "desc": "Live sync & MCP configuration", "href": "view.html?path=knowledge/10_automation/hcp_api_setup.md"},
                 {"title": "Integration Playbook", "desc": "QBO MCP, Zapier, Everlogic", "href": "view.html?path=knowledge/10_automation/integration_playbook.md"},
@@ -436,12 +448,27 @@ def bundle_static_content(manifest: dict) -> int:
         shutil.copytree(training_src, dst)
         copied += sum(1 for _ in dst.rglob("*") if _.is_file())
 
-    extra = ROOT / "external_docs/templates/personnel_counseling/README.md"
-    if extra.exists():
-        dst = content / "external_docs/templates/personnel_counseling/README.md"
-        dst.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(extra, dst)
-        copied += 1
+    for extra_rel in (
+        "external_docs/templates/personnel_counseling/README.md",
+        "external_docs/templates/hiring/README.md",
+        "docs/documents/README.md",
+    ):
+        extra = ROOT / extra_rel
+        if extra.exists():
+            dst = content / extra_rel
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(extra, dst)
+            copied += 1
+
+    # Deployed document markdown copies (hiring README under documents/)
+    docs_deployed = DOCS / "documents"
+    if docs_deployed.exists():
+        for md in docs_deployed.rglob("*.md"):
+            rel = md.relative_to(DOCS)
+            dst = content / rel
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(md, dst)
+            copied += 1
 
     print(f"Bundled {copied} files into docs/content/")
     return copied
@@ -458,6 +485,7 @@ def validate_zone_links(zones: list[dict]) -> list[str]:
     internal_pages = {
         "dashboard.html", "explore.html", "index.html",
         "templates/personnel-counseling.html",
+        "documents/index.html",
         "training/index.html",
     }
     for zone in zones:
@@ -472,9 +500,12 @@ def validate_zone_links(zones: list[dict]) -> list[str]:
                 local = DOCS / "content" / rel if not rel.startswith("live/") else DOCS / rel
                 if not local.exists():
                     warnings.append(f"Missing content: {rel} ({card.get('title')})")
-            elif href in internal_pages or href.endswith(".html"):
+            elif href in internal_pages or href.endswith(".html") or href.endswith(".pdf"):
                 if not (DOCS / href.split("?")[0]).exists():
                     warnings.append(f"Missing page: {href} ({card.get('title')})")
+            elif not href.startswith("../") and "/" in href:
+                if not (DOCS / href.split("?")[0]).exists():
+                    warnings.append(f"Missing asset: {href} ({card.get('title')})")
     return warnings
 
 
@@ -499,16 +530,19 @@ def run_manifest_builder() -> dict:
 
 
 def main() -> None:
+    from documents_catalog import build_catalog  # noqa: WPS433
+
     LIVE.mkdir(parents=True, exist_ok=True)
     ASSETS.mkdir(parents=True, exist_ok=True)
 
     build_auth_config()
+    documents_catalog = build_catalog()
     manifest = run_manifest_builder()
     ops = build_ops_snapshot()
     copy_live_files()
     bundle_static_content(manifest)
     pipeline = parse_backlog_pipeline()
-    zones = build_zones(manifest, ops, pipeline)
+    zones = build_zones(manifest, ops, pipeline, documents_catalog)
     link_warnings = validate_zone_links(zones)
     for w in link_warnings:
         print(f"WARN: {w}")
@@ -524,6 +558,11 @@ def main() -> None:
         "systems": build_systems(),
         "pipeline": pipeline,
         "zones": zones,
+        "documents": {
+            "active": documents_catalog["counts"]["active"],
+            "planned": documents_catalog["counts"]["planned"],
+            "categories": len(documents_catalog["categories"]),
+        },
         "manifest_total": manifest.get("total_items", 0),
     }
 

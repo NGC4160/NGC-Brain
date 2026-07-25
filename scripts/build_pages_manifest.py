@@ -120,12 +120,58 @@ def build_sections() -> list[dict]:
         }
     )
 
+    # Documents hub + catalog (hiring, HR, ops, customer, finance)
+    import sys
+
+    _scripts = str(Path(__file__).resolve().parent)
+    if _scripts not in sys.path:
+        sys.path.insert(0, _scripts)
+    try:
+        from documents_catalog import CATALOG_JSON, build_catalog, manifest_items
+
+        if not CATALOG_JSON.exists():
+            build_catalog()
+        doc_items = manifest_items()
+    except Exception:
+        doc_items = [
+            {
+                "title": "Personnel Counseling Form",
+                "description": "Branded fillable form — print or save as PDF.",
+                "path": "docs/templates/personnel-counseling.html",
+                "type": "html",
+                "view": "templates/personnel-counseling.html",
+                "github": gh_blob("external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html"),
+                "tags": ["form", "hr", "interactive"],
+            }
+        ]
+
+    sections.append(
+        {
+            "id": "documents",
+            "title": "Documents",
+            "icon": "▤",
+            "description": "Hiring scorecards, HR forms, shop tools, customer handouts — Command Center Documents hub.",
+            "items": [
+                {
+                    "title": "Documents Hub",
+                    "description": "Browse all working documents by category.",
+                    "path": "docs/documents/index.html",
+                    "type": "html",
+                    "view": "documents/index.html",
+                    "github": gh_blob("docs/documents/index.html"),
+                    "tags": ["document", "hub"],
+                },
+                *doc_items,
+            ],
+        }
+    )
+
     sections.append(
         {
             "id": "templates",
             "title": "Templates & Forms",
             "icon": "📋",
-            "description": "Interactive and printable deliverables.",
+            "description": "Source templates (also listed under Documents).",
             "items": [
                 {
                     "title": "Personnel Counseling Form",
@@ -136,11 +182,26 @@ def build_sections() -> list[dict]:
                     "github": gh_blob("external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html"),
                     "tags": ["form", "hr", "interactive"],
                 },
+                {
+                    "title": "Technician Phone Interview Scorecard",
+                    "description": "Scored 15–20 min phone screen PDF.",
+                    "path": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+                    "type": "pdf",
+                    "view": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+                    "github": gh_blob("external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf"),
+                    "tags": ["form", "hiring", "pdf"],
+                },
                 md_item(
                     ROOT / "external_docs/templates/personnel_counseling/README.md",
                     "Personnel Form README",
                     "How to use and update the counseling template.",
                     tags=["form", "hr"],
+                ),
+                md_item(
+                    ROOT / "external_docs/templates/hiring/README.md",
+                    "Hiring phone screen README",
+                    "How to use the technician phone interview scorecard.",
+                    tags=["form", "hiring"],
                 ),
             ],
         }
