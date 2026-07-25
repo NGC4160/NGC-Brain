@@ -40,7 +40,12 @@
 
 ## Hiring
 
-Technician hiring uses a structured evaluation (~3–4 hours):
+**Phone screen first** (15–20 min) — score transferable electrical/mechanical skill, diagnostic thinking, safety, and coachability. Golf cart experience is a **bonus, not a gate**. Logistics (hours, commute, availability) are cleared via Indeed application questions.
+
+- Scorecard PDF: `external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf`
+- Guide / regenerate: `external_docs/templates/hiring/README.md`
+
+**Shop evaluation** for advanced candidates (~3–4 hours):
 
 - Written knowledge (120 pts)
 - Hands-on skills (120 pts)
