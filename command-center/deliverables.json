@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-26T02:15:07Z",
+  "generated_at": "2026-07-26T02:44:55Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 114,
+  "total_items": 116,
   "sections": [
     {
       "id": "start",
@@ -468,6 +468,30 @@
           "path": "external_docs/templates/hiring/NGC_Technician_Hands_On_Eval_Scorecard.pdf",
           "type": "pdf",
           "view": "documents/hiring/NGC_Technician_Hands_On_Eval_Scorecard.pdf",
+          "tags": [
+            "document",
+            "hiring",
+            "pdf"
+          ]
+        },
+        {
+          "title": "Technician Hiring Quiz (Written)",
+          "description": "40 questions \u00b7 120 pts \u00b7 pass 75% \u00b7 entry-level \u00b7 critical safety rule",
+          "path": "external_docs/templates/hiring/NGC_Technician_Hiring_Quiz.pdf",
+          "type": "pdf",
+          "view": "documents/hiring/NGC_Technician_Hiring_Quiz.pdf",
+          "tags": [
+            "document",
+            "hiring",
+            "pdf"
+          ]
+        },
+        {
+          "title": "Hiring Quiz Answer Key (evaluator only)",
+          "description": "Answers + rationales \u2014 do not give to candidates",
+          "path": "external_docs/templates/hiring/NGC_Technician_Hiring_Quiz_Answer_Key.pdf",
+          "type": "pdf",
+          "view": "documents/hiring/NGC_Technician_Hiring_Quiz_Answer_Key.pdf",
           "tags": [
             "document",
             "hiring",
