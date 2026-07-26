@@ -48,12 +48,11 @@
 
 **Shop evaluation** for phone-screen ADVANCE candidates (~3–4 hours):
 
-- Scorecard PDF: `external_docs/templates/hiring/NGC_Technician_Hands_On_Eval_Scorecard.pdf`
-- Live safety gate → written (120) → hands-on stations → troubleshooting (60)
+- Hands-on scorecard: `external_docs/templates/hiring/NGC_Technician_Hands_On_Eval_Scorecard.pdf`
+- Written quiz: `external_docs/templates/hiring/NGC_Technician_Hiring_Quiz.pdf` (40Q · 120 pts · pass 75%; answer key separate)
+- Live safety gate → written → hands-on stations → troubleshooting
 - Same 1–4 scale as phone screen; Hire / Second look / Pass
-- **Command Center:** Documents → Technician Hands-On Evaluation Scorecard
-
-Point sheets (optional): `external_docs/My Drive/Hiring quiz evaluation - Technician.docx`
+- **Command Center:** Documents → Hiring (phone, quiz, hands-on)
 
 ## Future growth
 

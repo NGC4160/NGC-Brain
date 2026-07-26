@@ -352,8 +352,9 @@ def build():
     story.append(Spacer(1, 3))
     story.append(
         Paragraph(
-            "<b>Do:</b> Give the written hiring quiz (Drive: <i>Hiring quiz evaluation – Technician</i>). "
-            "They work alone. You may clarify a confusing question — don’t give answers.",
+            "<b>Do:</b> Give <i>NGC Technician Hiring Quiz</i> (40 questions / 120 pts). "
+            "They work alone. You may clarify a confusing wording — don’t give answers. "
+            "Use the Answer Key (evaluator only) to score.",
             s["body"],
         )
     )
