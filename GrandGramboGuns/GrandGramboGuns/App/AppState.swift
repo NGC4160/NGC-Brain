@@ -27,7 +27,7 @@ enum HubDestination: Hashable, Identifiable {
     }
 }
 
-/// Global UI / session state (not persisted — see SwiftData models for that).
+/// Global UI / session state (not persisted — see GunLibraryStore for that).
 @MainActor
 final class AppState: ObservableObject {
     /// Currently equipped gun ID used by the Range.

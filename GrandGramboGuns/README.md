@@ -37,7 +37,7 @@ Stylized video-game toy only — no real-world ballistics, construction details,
 ```
 GrandGramboGuns/
 ├── App/                 # Entry, AppState, RootView
-├── Models/              # Gun types, SwiftData models, seed data
+├── Models/              # Gun types, Codable models, seed data
 ├── Scene3D/             # GunSceneBuilder, GunSceneView, RangeSceneView
 ├── Services/            # Haptics, sound, settings, share exporter
 ├── Views/
