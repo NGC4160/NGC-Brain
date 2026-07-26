@@ -1,0 +1,3 @@
+[submodule "tools/GarageBuddy"]
+	path = tools/GarageBuddy
+	url = https://github.com/dimitar-grigorov/GarageBuddy.git

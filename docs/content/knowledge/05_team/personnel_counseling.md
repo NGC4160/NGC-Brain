@@ -71,8 +71,8 @@ Open in Google Drive → **Open with Google Docs** (or double-click; Drive conve
 **Browser / PDF:**
 ```bash
 open "external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html"
+# or deployed copy: docs/documents/team_hr/personnel-counseling.html
 ```
-# or: docs/documents/team_hr/personnel-counseling.html
 
 Regenerate the Word/Google Docs file after template changes:
 ```bash

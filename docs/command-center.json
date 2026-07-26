@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T02:39:09.047945+00:00",
+  "generated_at": "2026-07-26T06:19:37.656104+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-26T02:39:09.019721+00:00",
+    "generated_at": "2026-07-26T06:19:37.626022+00:00",
     "jobs_synced_at": "2026-07-25T14:43:56.066959+00:00",
     "has_live_data": true,
     "metrics": {
@@ -377,6 +377,14 @@
       "url": "https://github.com/NGC4160/NGC-Brain",
       "status": "online",
       "icon": "\ud83e\udde0"
+    },
+    {
+      "id": "garagebuddy",
+      "name": "Garage Buddy",
+      "role": "Open-source garage DMS (eval)",
+      "url": "https://github.com/dimitar-grigorov/GarageBuddy",
+      "status": "online",
+      "icon": "\ud83d\udd27"
     }
   ],
   "pipeline": [
@@ -689,6 +697,12 @@
           "desc": "Cursor AI workspace",
           "href": "https://github.com/NGC4160/NGC-Brain",
           "external": true
+        },
+        {
+          "title": "Garage Buddy",
+          "desc": "Open-source garage DMS (eval)",
+          "href": "https://github.com/dimitar-grigorov/GarageBuddy",
+          "external": true
         }
       ]
     },
@@ -848,6 +862,11 @@
           "title": "Start Here (Cursor)",
           "desc": "How to run the business brain",
           "href": "view.html?path=START_HERE.md"
+        },
+        {
+          "title": "Garage Buddy Setup",
+          "desc": "SQL Server 2019 + .NET 7 local DMS eval",
+          "href": "view.html?path=knowledge/06_systems/garagebuddy.md"
         },
         {
           "title": "HCP API Setup",

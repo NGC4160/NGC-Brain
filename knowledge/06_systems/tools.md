@@ -11,6 +11,7 @@
 | **Google Drive** | SOPs, document repository, internal docs | Active (`external_docs/My Drive/`) |
 | **Website** | [NGCGolfCarts.com](https://www.NGCGolfCarts.com) | Active |
 | **Google Business Profile** | Local presence, reviews | Active |
+| **GarageBuddy** | Open-source garage DMS (eval sandbox) | Eval — see [garagebuddy.md](garagebuddy.md) |
 
 ## Housecall Pro
 
@@ -61,6 +62,9 @@
 |-----------|-------|
 | **Everlogic** | **Preferred** — lean toward this when migrating |
 | **BitDMS** | Under evaluation |
+| **GarageBuddy** | Open-source ASP.NET eval — submodule `tools/GarageBuddy`; not production |
+
+**Setup:** [garagebuddy.md](garagebuddy.md) · `./scripts/garagebuddy/setup.sh`
 
 **Migration trigger:** When shop volume slows enough to execute migration off HCP.
 

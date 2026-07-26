@@ -31,7 +31,7 @@ Send her:
 | Zone | What it does |
 |------|----------------|
 | **Live Ops** | Operations dashboard, shop board, deposit alerts |
-| **Systems** | One-click to HCP, QBO, website, Google Business, Drive |
+| **Systems** | One-click to HCP, QBO, website, Google Business, Drive, Garage Buddy |
 | **Daily Rhythm** | Morning briefing, EOD, weekly review, throughput SOPs |
 | **Build Pipeline** | Visual P1/P2/P3 backlog — everything being built |
 | **Knowledge Base** | Full business brain docs |

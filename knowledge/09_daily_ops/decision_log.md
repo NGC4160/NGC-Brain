@@ -27,6 +27,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-07-25 | Command Center **Documents** zone + hub — all present/future working docs cataloged in `scripts/documents_catalog.py` | Ryan | Hub: `docs/documents/index.html` |
 | 2026-07-26 | Hands-on shop eval scorecard added — next step after phone ADVANCE; pairs with 120/120/60 hiring quiz | Ryan | `NGC_Technician_Hands_On_Eval_Scorecard.pdf` |
 | 2026-07-26 | Written hiring quiz locked v1.0 — 40Q / 120 pts / 75% pass / ★ safety hard-fail; 8 critique loops | Ryan | `NGC_Technician_Hiring_Quiz.pdf` |
+| 2026-07-26 | GarageBuddy cloned as submodule for open-source DMS eval; Command Center Systems + Tools links added | Ryan | `tools/GarageBuddy` · setup: `scripts/garagebuddy/setup.sh` · not production |
 
 ---
 

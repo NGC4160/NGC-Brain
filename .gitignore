@@ -5,3 +5,7 @@
 knowledge/.generated/
 external_docs/My Drive/Management/Personnel/
 __pycache__/
+
+# GarageBuddy local secrets / overrides (never commit passwords)
+scripts/garagebuddy/.env
+tools/GarageBuddy/src/Web/GarageBuddy.Web/Configurations/database.Development.json
