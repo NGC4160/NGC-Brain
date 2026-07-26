@@ -46,13 +46,14 @@
 - Guide / regenerate: `external_docs/templates/hiring/README.md`
 - **Command Center:** Documents → Technician Phone Interview Scorecard (hub: `documents/index.html`)
 
-**Shop evaluation** for advanced candidates (~3–4 hours):
+**Shop evaluation** for phone-screen ADVANCE candidates (~3–4 hours):
 
-- Written knowledge (120 pts)
-- Hands-on skills (120 pts)
-- Troubleshooting & diagnostics (60 pts)
+- Scorecard PDF: `external_docs/templates/hiring/NGC_Technician_Hands_On_Eval_Scorecard.pdf`
+- Live safety gate → written (120) → hands-on stations → troubleshooting (60)
+- Same 1–4 scale as phone screen; Hire / Second look / Pass
+- **Command Center:** Documents → Technician Hands-On Evaluation Scorecard
 
-Reference: `external_docs/My Drive/Hiring quiz evaluation - Technician.docx`
+Point sheets (optional): `external_docs/My Drive/Hiring quiz evaluation - Technician.docx`
 
 ## Future growth
 
