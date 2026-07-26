@@ -26,6 +26,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-07-25 | Tech hiring: golf cart experience not required; Indeed handles logistics gates; phone screen scores transferable skill + safety before shop eval | Ryan | Scorecard: `external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf` |
 | 2026-07-25 | Command Center **Documents** zone + hub — all present/future working docs cataloged in `scripts/documents_catalog.py` | Ryan | Hub: `docs/documents/index.html` |
 | 2026-07-26 | Hands-on shop eval scorecard added — next step after phone ADVANCE; pairs with 120/120/60 hiring quiz | Ryan | `NGC_Technician_Hands_On_Eval_Scorecard.pdf` |
+| 2026-07-26 | Written hiring quiz locked v1.0 — 40Q / 120 pts / 75% pass / ★ safety hard-fail; 8 critique loops | Ryan | `NGC_Technician_Hiring_Quiz.pdf` |
 
 ---
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T18:21:15.420029+00:00",
+  "generated_at": "2026-07-26T02:39:09.047945+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-25T18:21:15.395594+00:00",
+    "generated_at": "2026-07-26T02:39:09.019721+00:00",
     "jobs_synced_at": "2026-07-25T14:43:56.066959+00:00",
     "has_live_data": true,
     "metrics": {
@@ -35,7 +35,7 @@
         {
           "invoice": "17266",
           "description": "72V Professional Lithium Battery Conversion Kit Installed",
-          "days": 77,
+          "days": 78,
           "lithium": true,
           "status": "in progress"
         }
@@ -51,49 +51,49 @@
         {
           "invoice": "17260",
           "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 80,
+          "days": 81,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17266",
           "description": "72V Professional Lithium Battery Conversion Kit Installed",
-          "days": 77,
+          "days": 78,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17109-2",
           "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 59,
+          "days": 60,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17328",
           "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-          "days": 34,
+          "days": 35,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17349",
           "description": "***SEE NOTES***",
-          "days": 24,
+          "days": 25,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17351-2",
           "description": "General - 0.5- Fleet Inspection",
-          "days": 22,
+          "days": 23,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17351-1",
           "description": "General - 0.5- Fleet Inspection",
-          "days": 22,
+          "days": 23,
           "lithium": false,
           "status": "in progress"
         }
@@ -765,7 +765,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "114 indexed deliverables",
+          "desc": "116 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -795,10 +795,10 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "8 active \u00b7 5 planned \u2014 all categories",
+          "desc": "10 active \u00b7 4 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "8 docs"
+          "badge": "10 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
@@ -810,6 +810,12 @@
           "title": "Technician Hands-On Evaluation Scorecard",
           "desc": "3\u20134 hr shop tryout after phone ADVANCE \u2014 safety gate, written, stations, troubleshooting",
           "href": "documents/hiring/NGC_Technician_Hands_On_Eval_Scorecard.pdf",
+          "external": false
+        },
+        {
+          "title": "Technician Hiring Quiz (Written)",
+          "desc": "40 questions \u00b7 120 pts \u00b7 pass 75% \u00b7 entry-level \u00b7 critical safety rule",
+          "href": "documents/hiring/NGC_Technician_Hiring_Quiz.pdf",
           "external": false
         },
         {
@@ -887,9 +893,9 @@
     }
   ],
   "documents": {
-    "active": 8,
-    "planned": 5,
+    "active": 10,
+    "planned": 4,
     "categories": 5
   },
-  "manifest_total": 114
+  "manifest_total": 116
 }
