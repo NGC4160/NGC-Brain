@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T22:48:21.246900+00:00",
+  "generated_at": "2026-07-26T02:15:07.915919+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-25T22:48:21.215841+00:00",
+    "generated_at": "2026-07-26T02:15:07.884257+00:00",
     "jobs_synced_at": "2026-07-25T14:43:56.066959+00:00",
     "has_live_data": true,
     "metrics": {
@@ -35,7 +35,7 @@
         {
           "invoice": "17266",
           "description": "72V Professional Lithium Battery Conversion Kit Installed",
-          "days": 77,
+          "days": 78,
           "lithium": true,
           "status": "in progress"
         }
@@ -58,7 +58,7 @@
         {
           "invoice": "17266",
           "description": "72V Professional Lithium Battery Conversion Kit Installed",
-          "days": 77,
+          "days": 78,
           "lithium": true,
           "status": "in progress"
         },
@@ -79,7 +79,7 @@
         {
           "invoice": "17349",
           "description": "***SEE NOTES***",
-          "days": 24,
+          "days": 25,
           "lithium": false,
           "status": "in progress"
         },
@@ -765,7 +765,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "113 indexed deliverables",
+          "desc": "114 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -795,15 +795,21 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "7 active \u00b7 5 planned \u2014 all categories",
+          "desc": "8 active \u00b7 5 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "7 docs"
+          "badge": "8 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
           "desc": "15\u201320 min scored phone screen \u2014 transferable skills, safety gate, Advance/Maybe/Pass",
           "href": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+          "external": false
+        },
+        {
+          "title": "Technician Hands-On Evaluation Scorecard",
+          "desc": "3\u20134 hr shop tryout after phone ADVANCE \u2014 safety gate, written, stations, troubleshooting",
+          "href": "documents/hiring/NGC_Technician_Hands_On_Eval_Scorecard.pdf",
           "external": false
         },
         {
@@ -881,9 +887,9 @@
     }
   ],
   "documents": {
-    "active": 7,
+    "active": 8,
     "planned": 5,
     "categories": 5
   },
-  "manifest_total": 113
+  "manifest_total": 114
 }

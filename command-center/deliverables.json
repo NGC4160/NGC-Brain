@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-25T22:48:21Z",
+  "generated_at": "2026-07-26T02:15:07Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 113,
+  "total_items": 114,
   "sections": [
     {
       "id": "start",
@@ -460,6 +460,18 @@
             "document",
             "hiring",
             "markdown"
+          ]
+        },
+        {
+          "title": "Technician Hands-On Evaluation Scorecard",
+          "description": "3\u20134 hr shop tryout after phone ADVANCE \u2014 safety gate, written, stations, troubleshooting",
+          "path": "external_docs/templates/hiring/NGC_Technician_Hands_On_Eval_Scorecard.pdf",
+          "type": "pdf",
+          "view": "documents/hiring/NGC_Technician_Hands_On_Eval_Scorecard.pdf",
+          "tags": [
+            "document",
+            "hiring",
+            "pdf"
           ]
         },
         {
