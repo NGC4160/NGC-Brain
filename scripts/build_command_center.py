@@ -236,6 +236,14 @@ def build_systems() -> list[dict]:
             "status": "online",
             "icon": "🧠",
         },
+        {
+            "id": "garagebuddy",
+            "name": "Garage Buddy",
+            "role": "Open-source garage DMS (eval)",
+            "url": "https://github.com/dimitar-grigorov/GarageBuddy",
+            "status": "online",
+            "icon": "🔧",
+        },
     ]
 
 
@@ -383,6 +391,7 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict], documents_catal
             "cards": [
                 {"title": "Documents Hub", "desc": "All forms & scorecards by category", "href": "documents/index.html"},
                 {"title": "Start Here (Cursor)", "desc": "How to run the business brain", "href": "view.html?path=START_HERE.md"},
+                {"title": "Garage Buddy Setup", "desc": "SQL Server 2019 + .NET 7 local DMS eval", "href": "view.html?path=knowledge/06_systems/garagebuddy.md"},
                 {"title": "HCP API Setup", "desc": "Live sync & MCP configuration", "href": "view.html?path=knowledge/10_automation/hcp_api_setup.md"},
                 {"title": "Integration Playbook", "desc": "QBO MCP, Zapier, Everlogic", "href": "view.html?path=knowledge/10_automation/integration_playbook.md"},
             ],
