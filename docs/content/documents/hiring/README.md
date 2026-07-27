@@ -2,7 +2,7 @@
 
 ## 1. Phone interview scorecard
 
-**Printable HTML (use this):** [NGC_Technician_Phone_Interview_Scorecard.html](NGC_Technician_Phone_Interview_Scorecard.html) — open in browser → **Print / Save PDF**
+**Printable HTML (use this):** [NGC_Technician_Phone_Interview_Scorecard.html](NGC_Technician_Phone_Interview_Scorecard.html) — open in browser → **Print / Save PDF** (fits **2 letter pages**)
 
 **PDF copy:** [NGC_Technician_Phone_Interview_Scorecard.pdf](NGC_Technician_Phone_Interview_Scorecard.pdf)
 
