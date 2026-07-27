@@ -1,12 +1,12 @@
 {
-  "synced_at": "2026-07-26T14:47:06.292936+00:00",
+  "synced_at": "2026-07-27T15:57:19.071417+00:00",
   "count": 500,
   "jobs": [
     {
       "id": "job_5fa7810d99204e38ad194b9e8bef2969",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
-      "work_status": "needs scheduling",
+      "work_status": "user canceled",
       "work_timestamps": {
         "on_my_way_at": null,
         "started_at": null,
@@ -34,8 +34,8 @@
       },
       "locked_at": null,
       "created_at": "2026-07-24T14:57:27Z",
-      "updated_at": "2026-07-24T14:57:28Z",
-      "canceled_at": null,
+      "updated_at": "2026-07-27T02:07:54Z",
+      "canceled_at": "2026-07-27T02:07:54Z",
       "deleted_at": null,
       "assigned_route_template_id": null,
       "company_name": "Neighborhood Golf Carts",
@@ -2785,7 +2785,7 @@
       },
       "schedule": {
         "scheduled_start": "2026-07-17T14:00:00Z",
-        "scheduled_end": "2026-07-23T21:30:00Z",
+        "scheduled_end": "2026-07-27T15:30:00Z",
         "arrival_window": 0,
         "appointments": []
       },
@@ -2905,7 +2905,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-10T20:30:02Z",
-      "updated_at": "2026-07-24T18:04:15Z",
+      "updated_at": "2026-07-27T02:10:01Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4412,13 +4412,13 @@
     },
     {
       "id": "job_57292afd27054c1ca2f0be85b03946ed",
-      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+      "description": "General - ***SEE NOTES***",
       "notes": [],
-      "work_status": "in progress",
+      "work_status": "complete unrated",
       "work_timestamps": {
         "on_my_way_at": "2026-07-15T18:43:50Z",
         "started_at": "2026-07-15T18:43:50Z",
-        "completed_at": null
+        "completed_at": "2026-07-27T14:24:10Z"
       },
       "schedule": {
         "scheduled_start": "2026-07-14T14:30:00Z",
@@ -4426,8 +4426,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 20239,
-      "outstanding_balance": 20239,
+      "total_amount": 49627,
+      "outstanding_balance": 49627,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -4503,7 +4503,7 @@
       "original_estimate_uuids": [
         "est_767e9a99114e49d3b1e9c03b4968f5cb"
       ],
-      "subtotal": 18525,
+      "subtotal": 45425,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -4511,7 +4511,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-07T16:43:14Z",
-      "updated_at": "2026-07-15T18:43:50Z",
+      "updated_at": "2026-07-27T14:25:54Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4532,7 +4532,7 @@
         "notes": "This customer was sent over from Geaux buggies. It\u2019s a diagnostic and also an estimate for 4 new tires.",
         "kind": "homeowner",
         "created_at": "2026-07-06T15:41:17Z",
-        "updated_at": "2026-07-06T15:41:17Z",
+        "updated_at": "2026-07-27T14:24:30Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": [
@@ -5456,11 +5456,11 @@
       "id": "job_96be4d2179ac4aec8b4ef541de7eabf1",
       "description": "General - 0.5- Fleet Inspection",
       "notes": [],
-      "work_status": "in progress",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-07-08T16:01:05Z",
         "started_at": "2026-07-08T16:01:05Z",
-        "completed_at": null
+        "completed_at": "2026-07-27T13:34:04Z"
       },
       "schedule": {
         "scheduled_start": "2026-07-08T15:30:00Z",
@@ -5468,8 +5468,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 65404,
-      "outstanding_balance": 65404,
+      "total_amount": 58849,
+      "outstanding_balance": 58849,
       "assigned_employees": [
         {
           "id": "pro_5839102c39c943d0b19373312e405754",
@@ -5516,7 +5516,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-02T20:25:13Z",
-      "updated_at": "2026-07-20T18:59:26Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -5531,13 +5531,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
@@ -5561,11 +5561,11 @@
       "id": "job_89bc7d1d89b045419ee154cfc221b892",
       "description": "General - 0.5- Fleet Inspection",
       "notes": [],
-      "work_status": "in progress",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-07-08T15:22:56Z",
         "started_at": "2026-07-08T15:22:56Z",
-        "completed_at": null
+        "completed_at": "2026-07-27T13:35:43Z"
       },
       "schedule": {
         "scheduled_start": "2026-07-08T15:00:00Z",
@@ -5573,8 +5573,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 241187,
-      "outstanding_balance": 91187,
+      "total_amount": 248288,
+      "outstanding_balance": 98288,
       "assigned_employees": [
         {
           "id": "pro_5839102c39c943d0b19373312e405754",
@@ -5613,7 +5613,7 @@
       "tags": [],
       "original_estimate_id": null,
       "original_estimate_uuids": [],
-      "subtotal": 220766,
+      "subtotal": 233266,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -5621,7 +5621,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-02T20:24:36Z",
-      "updated_at": "2026-07-20T18:59:11Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -5636,13 +5636,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
@@ -5692,7 +5692,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-02T20:22:55Z",
-      "updated_at": "2026-07-02T20:23:25Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": "2026-07-02T20:23:25Z",
       "assigned_route_template_id": null,
@@ -5707,13 +5707,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
@@ -5763,7 +5763,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-02T20:22:43Z",
-      "updated_at": "2026-07-02T20:23:17Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": "2026-07-02T20:23:17Z",
       "assigned_route_template_id": null,
@@ -5778,13 +5778,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
@@ -10504,7 +10504,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-12T23:13:45Z",
-      "updated_at": "2026-07-03T02:07:54Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -10519,13 +10519,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
@@ -10549,7 +10549,7 @@
       "id": "job_f780f22eb8f34844bfc48af894700345",
       "description": "General - 0.5- Fleet Inspection",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-06-15T16:50:36Z",
         "started_at": "2026-06-15T16:50:36Z",
@@ -10642,7 +10642,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-12T23:13:20Z",
-      "updated_at": "2026-07-03T02:07:54Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -10657,13 +10657,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
@@ -10713,7 +10713,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-12T23:12:38Z",
-      "updated_at": "2026-06-12T23:13:32Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": "2026-06-12T23:13:32Z",
       "assigned_route_template_id": null,
@@ -10728,13 +10728,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
@@ -10784,7 +10784,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-12T23:12:32Z",
-      "updated_at": "2026-06-12T23:13:38Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": "2026-06-12T23:13:38Z",
       "assigned_route_template_id": null,
@@ -10799,13 +10799,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
@@ -10829,11 +10829,11 @@
       "id": "job_860d40114a41433582602438ce57d53b",
       "description": "General - 0.5- Fleet Inspection",
       "notes": [],
-      "work_status": "scheduled",
+      "work_status": "complete unrated",
       "work_timestamps": {
-        "on_my_way_at": null,
+        "on_my_way_at": "2026-06-15T16:14:05Z",
         "started_at": "2026-06-15T16:14:05Z",
-        "completed_at": null
+        "completed_at": "2026-07-27T13:36:07Z"
       },
       "schedule": {
         "scheduled_start": "2026-06-15T14:30:00Z",
@@ -10841,8 +10841,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 17880,
-      "outstanding_balance": 17880,
+      "total_amount": 23932,
+      "outstanding_balance": 23932,
       "assigned_employees": [
         {
           "id": "pro_2274105ada1f4a889389d12fbff48cb6",
@@ -10947,7 +10947,7 @@
       "tags": [],
       "original_estimate_id": null,
       "original_estimate_uuids": [],
-      "subtotal": 22366,
+      "subtotal": 27906,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -10955,7 +10955,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-12T23:12:03Z",
-      "updated_at": "2026-07-20T19:00:06Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -10970,13 +10970,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
@@ -12348,11 +12348,11 @@
       "id": "job_3593cc3fa25e41abb560832beeacc3f3",
       "description": "General - 0.5- Fleet Inspection",
       "notes": [],
-      "work_status": "scheduled",
+      "work_status": "complete rated",
       "work_timestamps": {
-        "on_my_way_at": null,
+        "on_my_way_at": "2026-06-15T15:12:13Z",
         "started_at": "2026-06-15T15:12:13Z",
-        "completed_at": null
+        "completed_at": "2026-07-27T13:36:03Z"
       },
       "schedule": {
         "scheduled_start": "2026-06-12T15:00:00Z",
@@ -12360,8 +12360,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 45192,
-      "outstanding_balance": 26063,
+      "total_amount": 72942,
+      "outstanding_balance": 53813,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -12466,7 +12466,7 @@
       "tags": [],
       "original_estimate_id": null,
       "original_estimate_uuids": [],
-      "subtotal": 47366,
+      "subtotal": 72766,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -12474,7 +12474,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-08T23:51:11Z",
-      "updated_at": "2026-07-20T18:59:51Z",
+      "updated_at": "2026-07-27T14:41:42Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -12489,13 +12489,13 @@
         "mobile_number": "9859748198",
         "home_number": null,
         "work_number": null,
-        "company": "Adventures RV Resort",
+        "company": "Fireside RV Resort",
         "notifications_enabled": true,
         "lead_source": "Outreach",
         "notes": null,
         "kind": "business",
         "created_at": "2026-06-08T23:50:57Z",
-        "updated_at": "2026-07-02T15:30:06Z",
+        "updated_at": "2026-07-27T14:41:42Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": []
