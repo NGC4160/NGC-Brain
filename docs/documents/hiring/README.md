@@ -2,18 +2,23 @@
 
 ## 1. Phone interview scorecard
 
-**PDF (use this on the call):** [NGC_Technician_Phone_Interview_Scorecard.pdf](NGC_Technician_Phone_Interview_Scorecard.pdf)
+**Printable HTML (use this):** [NGC_Technician_Phone_Interview_Scorecard.html](NGC_Technician_Phone_Interview_Scorecard.html) — open in browser → **Print / Save PDF**
 
-**Regenerate:** `python3 generate_phone_screen_pdf.py`
+**PDF copy:** [NGC_Technician_Phone_Interview_Scorecard.pdf](NGC_Technician_Phone_Interview_Scorecard.pdf)
+
+**Command Center:** Documents → Technician Phone Interview Scorecard
+
+**Regenerate PDF:** `python3 generate_phone_screen_pdf.py`
 
 ### How to use
 
-1. Print or open the PDF before the Indeed-cleared candidate call (15–20 min).
+1. Open the HTML scorecard (or print a blank copy) before the Indeed-cleared candidate call (15–20 min).
 2. Skip hours/commute — already handled on the Indeed application.
 3. Read the **Ask:** / **Say:** lines out loud — questions are in plain language for the candidate.
 4. Score sections **A–G** (1–4). **E Safety is a gate** (must be ≥ 3).
 5. Golf cart / lithium (**H**) is bonus only — not required.
 6. Advance → schedule the hands-on shop evaluation (next scorecard).
+7. After the call: **Print / Save PDF** and file the scored copy.
 
 ## 2. Written hiring quiz
 

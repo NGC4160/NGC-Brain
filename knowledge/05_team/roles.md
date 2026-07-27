@@ -42,7 +42,8 @@
 
 **Phone screen first** (15–20 min) — score transferable electrical/mechanical skill, diagnostic thinking, safety, and coachability. Golf cart experience is a **bonus, not a gate**. Logistics (hours, commute, availability) are cleared via Indeed application questions.
 
-- Scorecard PDF: `external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf`
+- Printable HTML (Print / Save PDF): `external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.html`
+- PDF copy: `external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf`
 - Guide / regenerate: `external_docs/templates/hiring/README.md`
 - **Command Center:** Documents → Technician Phone Interview Scorecard (hub: `documents/index.html`)
 

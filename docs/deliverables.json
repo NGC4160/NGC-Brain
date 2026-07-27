@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-26T06:36:27Z",
+  "generated_at": "2026-07-27T17:48:24Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 116,
+  "total_items": 118,
   "sections": [
     {
       "id": "start",
@@ -440,7 +440,19 @@
         },
         {
           "title": "Technician Phone Interview Scorecard",
-          "description": "15\u201320 min scored phone screen \u2014 transferable skills, safety gate, Advance/Maybe/Pass",
+          "description": "Fillable printable form \u2014 Print / Save PDF \u00b7 15\u201320 min phone screen",
+          "path": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.html",
+          "type": "html",
+          "view": "documents/hiring/phone-interview-scorecard.html",
+          "tags": [
+            "document",
+            "hiring",
+            "html"
+          ]
+        },
+        {
+          "title": "Phone Interview Scorecard (PDF)",
+          "description": "Static PDF copy of the phone screen scorecard",
           "path": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
           "type": "pdf",
           "view": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
@@ -581,7 +593,20 @@
         },
         {
           "title": "Technician Phone Interview Scorecard",
-          "description": "Scored 15\u201320 min phone screen PDF.",
+          "description": "Fillable printable form \u2014 Print / Save PDF.",
+          "path": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.html",
+          "type": "html",
+          "view": "documents/hiring/phone-interview-scorecard.html",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.html",
+          "tags": [
+            "form",
+            "hiring",
+            "interactive"
+          ]
+        },
+        {
+          "title": "Phone Interview Scorecard (PDF)",
+          "description": "Static PDF copy of the phone screen scorecard.",
           "path": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
           "type": "pdf",
           "view": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",

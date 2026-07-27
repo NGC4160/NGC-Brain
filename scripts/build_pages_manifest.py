@@ -184,7 +184,16 @@ def build_sections() -> list[dict]:
                 },
                 {
                     "title": "Technician Phone Interview Scorecard",
-                    "description": "Scored 15–20 min phone screen PDF.",
+                    "description": "Fillable printable form — Print / Save PDF.",
+                    "path": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.html",
+                    "type": "html",
+                    "view": "documents/hiring/phone-interview-scorecard.html",
+                    "github": gh_blob("external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.html"),
+                    "tags": ["form", "hiring", "interactive"],
+                },
+                {
+                    "title": "Phone Interview Scorecard (PDF)",
+                    "description": "Static PDF copy of the phone screen scorecard.",
                     "path": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
                     "type": "pdf",
                     "view": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
