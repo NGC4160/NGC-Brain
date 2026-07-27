@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T15:57:24.777745+00:00",
+  "generated_at": "2026-07-27T17:54:31.213253+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-27T15:57:24.746876+00:00",
+    "generated_at": "2026-07-27T17:54:31.182055+00:00",
     "jobs_synced_at": "2026-07-27T15:57:19.071417+00:00",
     "has_live_data": true,
     "metrics": {
@@ -28,7 +28,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 83,
+          "days": 84,
           "lithium": true,
           "status": "in progress"
         },
@@ -44,7 +44,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 83,
+          "days": 84,
           "lithium": true,
           "status": "in progress"
         },
@@ -91,8 +91,8 @@
           "status": "in progress"
         },
         {
-          "invoice": "17364",
-          "description": "General - ***SEE NOTES***",
+          "invoice": "17366",
+          "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
           "days": 17,
           "lithium": false,
           "status": "in progress"
@@ -779,7 +779,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "116 indexed deliverables",
+          "desc": "118 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -809,15 +809,15 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "10 active \u00b7 4 planned \u2014 all categories",
+          "desc": "11 active \u00b7 4 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "10 docs"
+          "badge": "11 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
-          "desc": "15\u201320 min scored phone screen \u2014 transferable skills, safety gate, Advance/Maybe/Pass",
-          "href": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
+          "desc": "Fillable printable form \u2014 Print / Save PDF \u00b7 15\u201320 min phone screen",
+          "href": "documents/hiring/phone-interview-scorecard.html",
           "external": false
         },
         {
@@ -912,9 +912,9 @@
     }
   ],
   "documents": {
-    "active": 10,
+    "active": 11,
     "planned": 4,
     "categories": 5
   },
-  "manifest_total": 116
+  "manifest_total": 118
 }

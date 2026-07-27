@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T15:57:24.702396+00:00",
+  "generated_at": "2026-07-27T17:54:31.141393+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan & Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",
@@ -40,11 +40,26 @@
       "id": "tech-phone-scorecard",
       "category": "hiring",
       "title": "Technician Phone Interview Scorecard",
-      "description": "15\u201320 min scored phone screen \u2014 transferable skills, safety gate, Advance/Maybe/Pass",
-      "type": "pdf",
+      "description": "Fillable printable form \u2014 Print / Save PDF \u00b7 15\u201320 min phone screen",
+      "type": "html",
       "audience": "Ryan",
       "status": "active",
       "featured": true,
+      "href": "documents/hiring/phone-interview-scorecard.html",
+      "source": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.html",
+      "deploy_path": "documents/hiring/phone-interview-scorecard.html",
+      "external": false,
+      "notes": ""
+    },
+    {
+      "id": "tech-phone-scorecard-pdf",
+      "category": "hiring",
+      "title": "Phone Interview Scorecard (PDF)",
+      "description": "Static PDF copy of the phone screen scorecard",
+      "type": "pdf",
+      "audience": "Ryan",
+      "status": "active",
+      "featured": false,
       "href": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
       "source": "external_docs/templates/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
       "deploy_path": "documents/hiring/NGC_Technician_Phone_Interview_Scorecard.pdf",
@@ -248,8 +263,8 @@
     }
   ],
   "counts": {
-    "total": 14,
-    "active": 10,
+    "total": 15,
+    "active": 11,
     "planned": 4
   }
 }
