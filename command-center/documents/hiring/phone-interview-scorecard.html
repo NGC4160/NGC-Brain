@@ -24,9 +24,9 @@
 
     body {
       font-family: "Segoe UI", Calibri, Arial, sans-serif;
-      font-size: 10pt;
+      font-size: 9.5pt;
       color: var(--text);
-      line-height: 1.35;
+      line-height: 1.3;
       margin: 0;
       padding: 0;
       background: #e8eef4;
@@ -104,55 +104,114 @@
       vertical-align: middle;
     }
 
-    .page {
+    .sheet {
       max-width: 8.5in;
       margin: 16px auto;
       background: #fff;
-      padding: 0.5in 0.6in 0.55in;
+      padding: 0.4in 0.5in;
       box-shadow: 0 2px 16px rgba(0,0,0,0.08);
     }
 
+    @page {
+      size: letter;
+      margin: 0.28in 0.35in;
+    }
+
     @media print {
-      body { background: #fff; }
+      body { background: #fff; font-size: 7.6pt; line-height: 1.2; }
       .toolbar, .no-print, .print-fab, .print-banner { display: none !important; }
-      .page {
+      .sheet {
         margin: 0;
-        padding: 0.35in 0.45in;
+        padding: 0;
         box-shadow: none;
         max-width: none;
       }
-      .section { break-inside: avoid; page-break-inside: avoid; }
+      .page-break {
+        break-before: page;
+        page-break-before: always;
+      }
       .score-row { break-inside: avoid; page-break-inside: avoid; }
-      input, textarea {
+      .header h1 { font-size: 11pt; }
+      .header .doc-name { font-size: 9pt; }
+      .header-right { font-size: 7pt; }
+      .header-right strong { font-size: 8pt; }
+      hr.rule { margin: 3px 0 4px; border-top-width: 2px; }
+      .purpose { font-size: 7pt; margin: 0 0 4px; }
+      .meta-grid { gap: 3px 8px; padding: 4px 6px; margin-bottom: 4px; }
+      label.field { font-size: 6.5pt; margin-bottom: 0; }
+      input[type="text"],
+      input[type="date"],
+      input[type="tel"],
+      input[type="number"] {
+        padding: 1px 3px;
         border: none !important;
         border-bottom: 1px solid #999 !important;
         background: transparent !important;
-        box-shadow: none !important;
+        font-size: 7.5pt;
       }
-      textarea { border: 1px solid #bbb !important; min-height: 2.2em; }
-      .score-opts label { border-color: #999 !important; }
+      textarea {
+        border: 1px solid #bbb !important;
+        background: transparent !important;
+        min-height: 1.15em !important;
+        height: 1.35em !important;
+        padding: 1px 3px !important;
+        font-size: 7.5pt;
+        resize: none;
+      }
+      .scale { font-size: 7pt; margin: 0 0 4px; }
+      .section { margin-bottom: 5px; }
+      .section-head {
+        font-size: 7.5pt;
+        padding: 2px 5px;
+        margin-bottom: 3px;
+      }
+      .ask, .say { font-size: 7.4pt; margin: 0 0 2px; }
+      .ask ol { margin: 1px 0 3px; padding-left: 1.1em; }
+      .ask li { margin-bottom: 0; }
+      .hint { font-size: 6.8pt; margin: 0 0 2px; }
+      .checks { gap: 2px 10px; font-size: 7pt; margin: 2px 0; }
+      .score-row {
+        grid-template-columns: 1fr 118px;
+        margin: 2px 0;
+      }
+      .score-main { padding: 2px 5px; }
+      .score-main strong { font-size: 7.5pt; }
+      .score-main .wt { font-size: 6.8pt; }
+      .score-main .guide { font-size: 6.6pt; margin-top: 0; }
+      .score-box { padding: 2px 3px; }
+      .score-box .lbl { font-size: 6.5pt; margin-bottom: 1px; }
+      .score-opts label { font-size: 6.5pt; padding: 0 2px; gap: 0; }
+      .notes { margin-top: 2px; }
+      .totals { gap: 2px; margin: 3px 0; }
+      .totals .cell { padding: 2px 1px; }
+      .totals .cell .k { font-size: 6.5pt; }
+      .totals .cell input { font-size: 7.5pt; padding: 0; margin-top: 0; }
+      .avg-row { font-size: 7.4pt; margin: 3px 0; gap: 4px 12px; }
+      .avg-row input[type="text"] { width: 36px; }
+      .decision-grid { gap: 3px; margin: 3px 0; }
+      .decision-grid label { padding: 4px 5px; font-size: 7pt; }
+      .decision-grid strong { font-size: 8pt; margin-bottom: 1px; }
+      .footer { margin-top: 4px; padding-top: 3px; font-size: 6.5pt; }
     }
-
-    @page { size: letter; margin: 0.4in; }
 
     .header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 12px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .header h1 {
       margin: 0;
-      font-size: 15pt;
+      font-size: 14pt;
       color: var(--ngc-blue);
       letter-spacing: 0.02em;
     }
 
     .header .doc-name {
-      margin: 2px 0 0;
-      font-size: 11.5pt;
+      margin: 1px 0 0;
+      font-size: 11pt;
       font-weight: 700;
       color: var(--ngc-blue);
     }
@@ -160,46 +219,46 @@
     .header-right {
       text-align: right;
       color: var(--muted);
-      font-size: 9pt;
-      line-height: 1.35;
+      font-size: 8.5pt;
+      line-height: 1.3;
       flex-shrink: 0;
     }
 
     .header-right strong {
       display: block;
       color: var(--ngc-blue);
-      font-size: 10pt;
+      font-size: 9.5pt;
     }
 
     hr.rule {
       border: none;
       border-top: 2.5px solid var(--ngc-blue);
-      margin: 8px 0 10px;
+      margin: 6px 0 8px;
     }
 
     .purpose {
-      font-size: 9.5pt;
-      margin: 0 0 10px;
+      font-size: 9pt;
+      margin: 0 0 8px;
     }
 
     .meta-grid {
       display: grid;
       grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 8px 12px;
+      gap: 6px 10px;
       background: var(--light-bg);
       border: 1px solid var(--border);
-      padding: 8px 10px;
-      margin-bottom: 10px;
+      padding: 6px 8px;
+      margin-bottom: 8px;
     }
 
     label.field {
       display: block;
-      font-size: 8pt;
+      font-size: 7.5pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       color: var(--muted);
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
     input[type="text"],
@@ -209,34 +268,32 @@
     textarea {
       width: 100%;
       font: inherit;
-      padding: 4px 6px;
+      padding: 3px 5px;
       border: 1px solid var(--border);
       border-radius: 3px;
       background: #fff;
     }
 
     textarea {
-      min-height: 48px;
+      min-height: 36px;
       resize: vertical;
     }
 
     .scale {
-      font-size: 8.5pt;
+      font-size: 8pt;
       color: var(--muted);
-      margin: 0 0 10px;
+      margin: 0 0 8px;
     }
 
-    .section {
-      margin-bottom: 12px;
-    }
+    .section { margin-bottom: 9px; }
 
     .section-head {
       background: var(--ngc-blue);
       color: #fff;
-      font-size: 9.5pt;
+      font-size: 9pt;
       font-weight: 700;
-      padding: 5px 8px;
-      margin-bottom: 6px;
+      padding: 4px 7px;
+      margin-bottom: 4px;
       letter-spacing: 0.02em;
     }
 
@@ -245,36 +302,36 @@
     .section-head.decision { background: var(--ngc-green-dark); }
 
     .ask, .say {
-      margin: 0 0 6px;
-      font-size: 9.5pt;
+      margin: 0 0 4px;
+      font-size: 9pt;
     }
 
-    .ask ol, .say + p {
-      margin: 4px 0 8px;
-      padding-left: 1.2em;
+    .ask ol {
+      margin: 2px 0 4px;
+      padding-left: 1.15em;
     }
 
-    .ask li { margin-bottom: 2px; }
+    .ask li { margin-bottom: 1px; }
 
     .hint {
-      font-size: 8.5pt;
+      font-size: 8pt;
       color: var(--muted);
       font-style: italic;
-      margin: 0 0 6px;
+      margin: 0 0 4px;
     }
 
     .checks {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px 14px;
-      font-size: 8.5pt;
-      margin: 6px 0 4px;
+      gap: 4px 12px;
+      font-size: 8pt;
+      margin: 4px 0 2px;
     }
 
     .checks label {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
       font-weight: 400;
       text-transform: none;
       letter-spacing: 0;
@@ -283,10 +340,9 @@
 
     .score-row {
       display: grid;
-      grid-template-columns: 1fr 150px;
-      gap: 0;
+      grid-template-columns: 1fr 140px;
       border: 1px solid var(--border);
-      margin: 6px 0;
+      margin: 4px 0;
       background: var(--light-bg);
     }
 
@@ -295,118 +351,112 @@
       border-color: var(--gate);
     }
 
-    .score-main { padding: 6px 8px; }
-    .score-main strong { color: var(--ngc-blue); font-size: 9.5pt; }
+    .score-main { padding: 4px 6px; }
+    .score-main strong { color: var(--ngc-blue); font-size: 9pt; }
     .score-main .wt {
       color: var(--muted);
       font-weight: 600;
-      font-size: 8.5pt;
+      font-size: 8pt;
     }
     .score-main .guide {
-      font-size: 8pt;
+      font-size: 7.5pt;
       color: var(--muted);
-      margin-top: 2px;
+      margin-top: 1px;
     }
 
     .score-box {
       border-left: 1.5px solid var(--ngc-blue-light);
       background: #fff;
-      padding: 6px 6px 4px;
+      padding: 4px;
       text-align: center;
     }
 
     .score-box .lbl {
-      font-size: 8pt;
+      font-size: 7.5pt;
       font-weight: 700;
       color: var(--ngc-blue);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .score-opts {
       display: flex;
       justify-content: space-around;
-      gap: 2px;
+      gap: 1px;
     }
 
     .score-opts label {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2px;
-      font-size: 8pt;
+      gap: 1px;
+      font-size: 7.5pt;
       font-weight: 600;
       cursor: pointer;
-      padding: 2px 4px;
-      border: 1px solid transparent;
-      border-radius: 3px;
+      padding: 1px 3px;
     }
 
     .score-opts input { margin: 0; }
 
-    .notes {
-      margin-top: 6px;
-    }
-
-    .notes label.field { margin-bottom: 3px; }
+    .notes { margin-top: 3px; }
 
     .totals {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      gap: 4px;
-      margin: 8px 0;
+      gap: 3px;
+      margin: 5px 0;
     }
 
     .totals .cell {
       border: 1px solid var(--border);
       text-align: center;
-      padding: 4px 2px;
+      padding: 3px 1px;
       background: var(--pass-bg);
     }
 
     .totals .cell.gate-cell { background: var(--gate-bg); }
-    .totals .cell .k { font-size: 8pt; font-weight: 700; }
+    .totals .cell .k { font-size: 7.5pt; font-weight: 700; }
     .totals .cell input {
       width: 100%;
       text-align: center;
       border: none;
       border-bottom: 1px solid #999;
       background: transparent;
-      padding: 2px 0;
-      margin-top: 2px;
+      padding: 1px 0;
+      margin-top: 1px;
     }
 
     .avg-row {
-      font-size: 9.5pt;
-      margin: 8px 0;
+      font-size: 9pt;
+      margin: 5px 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 18px;
+      gap: 6px 14px;
       align-items: end;
     }
 
     .avg-row .field-inline {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .avg-row input[type="text"] {
-      width: 52px;
+      width: 44px;
       text-align: center;
     }
 
     .decision-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 6px;
-      margin: 8px 0;
+      gap: 4px;
+      margin: 5px 0;
     }
 
     .decision-grid label {
       display: block;
       border: 1px solid var(--border);
-      padding: 8px;
-      font-size: 9pt;
+      padding: 6px;
+      font-size: 8.5pt;
       cursor: pointer;
       text-transform: none;
       letter-spacing: 0;
@@ -417,14 +467,14 @@
     .decision-grid label.advance { background: var(--pass-bg); }
     .decision-grid label.maybe { background: var(--gate-bg); }
     .decision-grid label.pass { background: var(--fail-bg); }
-    .decision-grid strong { display: block; margin-bottom: 4px; font-size: 10pt; }
-    .decision-grid input { margin-right: 4px; }
+    .decision-grid strong { display: block; margin-bottom: 2px; font-size: 9.5pt; }
+    .decision-grid input { margin-right: 3px; }
 
     .footer {
-      margin-top: 12px;
-      padding-top: 8px;
+      margin-top: 8px;
+      padding-top: 5px;
       border-top: 1px solid var(--border);
-      font-size: 7.5pt;
+      font-size: 7pt;
       color: var(--muted);
       text-align: center;
     }
@@ -433,18 +483,18 @@
 <body>
 
 <div class="toolbar no-print">
-  <span>Technician Phone Interview Scorecard</span>
+  <span>Technician Phone Interview Scorecard · prints on 2 pages</span>
   <button type="button" onclick="window.print()">Print / Save PDF</button>
 </div>
 
 <button type="button" class="print-fab no-print" onclick="window.print()">Print</button>
 
 <p class="print-banner no-print">
-  This is the printable form.
+  Prints on 2 letter pages.
   <button type="button" onclick="window.print()">Print / Save PDF</button>
 </p>
 
-<div class="page">
+<div class="sheet">
 
   <header class="header">
     <div>
@@ -453,15 +503,13 @@
     </div>
     <div class="header-right">
       <strong>PHONE SCREEN</strong>
-      Technician hire<br />
-      15–20 minutes · Ryan
+      Technician hire · 15–20 min · Ryan
     </div>
   </header>
   <hr class="rule" />
 
   <p class="purpose">
-    Purpose: See if they can learn the job — hands-on electrical/mechanical skill, how they
-    figure out problems, safety, and whether they take coaching.
+    Purpose: See if they can learn the job — hands-on electrical/mechanical skill, problem-solving, safety, coaching.
     <strong>Golf cart experience is a plus, not required.</strong>
     Skip hours/commute — already covered on Indeed.
   </p>
@@ -494,25 +542,22 @@
   </div>
 
   <p class="scale">
-    <strong>Scoring scale:</strong>
-    1 = Unsatisfactory · 2 = Developing · 3 = Solid / trainable · 4 = Strong
+    <strong>Scale:</strong> 1 Unsatisfactory · 2 Developing · 3 Solid / trainable · 4 Strong
     &nbsp;|&nbsp;
-    <strong>Advance if:</strong> Safety ≥ 3, Diagnostic ≥ 3, and overall trainable.
+    <strong>Advance if:</strong> Safety ≥ 3, Diagnostic ≥ 3, overall trainable.
   </p>
 
-  <!-- 1. Role frame -->
   <section class="section">
-    <div class="section-head">1. ROLE FRAME · 2 min · no score — set expectations</div>
-    <p class="say"><strong>Say:</strong> “This is a shop job in Covington — we fix golf carts and install lithium batteries here. No house calls. Weekdays, working with our techs and me. You don’t need golf cart experience — we’ll teach that. If this call goes well, next step is a half-day hands-on test at the shop.”</p>
+    <div class="section-head">1. ROLE FRAME · 2 min · no score</div>
+    <p class="say"><strong>Say:</strong> “This is a shop job in Covington — we fix golf carts and install lithium batteries here. No house calls. Weekdays with our techs and me. You don’t need golf cart experience — we’ll teach that. If this call goes well, next is a half-day hands-on at the shop.”</p>
     <div class="checks">
-      <label><input type="checkbox" /> Covered shop-only / no mobile</label>
-      <label><input type="checkbox" /> Covered Mon–Fri bay work</label>
-      <label><input type="checkbox" /> Covered “we train golf carts”</label>
-      <label><input type="checkbox" /> Covered shop eval next step</label>
+      <label><input type="checkbox" /> Shop-only / no mobile</label>
+      <label><input type="checkbox" /> Mon–Fri bay work</label>
+      <label><input type="checkbox" /> We train golf carts</label>
+      <label><input type="checkbox" /> Shop eval next</label>
     </div>
   </section>
 
-  <!-- 2. Work background -->
   <section class="section">
     <div class="section-head">2. WORK BACKGROUND · 4 min · Score A</div>
     <div class="ask">
@@ -521,20 +566,16 @@
         <li>“Walk me through what you’ve been doing for work the last couple of years.”</li>
         <li>“Have you worked on cars, boats, RVs, forklifts, lawn equipment, or anything with batteries and wiring?”</li>
         <li>“Have you used a multimeter — the tool that checks voltage?”</li>
-        <li>“Have you done mechanical work too — brakes, bearings, steering, that kind of thing?”</li>
+        <li>“Have you done mechanical work too — brakes, bearings, steering?”</li>
         <li>“Were you usually in a shop with other people, or mostly working alone?”</li>
       </ol>
     </div>
-
     <div class="score-row">
       <div class="score-main">
         <strong>A. Electrical / mechanical experience</strong>
-        <span class="wt">(High weight)</span>
-        <div class="guide">“3” looks like: Has real hands-on electrical or shop work; can name things they’ve fixed.</div>
-        <div class="notes" style="margin-top:6px">
-          <label class="field" for="a-notes">Notes: what they’ve worked on</label>
-          <input id="a-notes" type="text" />
-        </div>
+        <span class="wt">(High)</span>
+        <div class="guide">“3”: Real hands-on electrical or shop work; can name things they’ve fixed.</div>
+        <input id="a-notes" type="text" placeholder="Notes: what they’ve worked on" aria-label="A notes" style="margin-top:3px" />
       </div>
       <div class="score-box">
         <div class="lbl">Score</div>
@@ -546,24 +587,16 @@
         </div>
       </div>
     </div>
-    <div class="notes">
-      <label class="field" for="bg-notes">Background notes</label>
-      <textarea id="bg-notes" rows="2"></textarea>
-    </div>
   </section>
 
-  <!-- 3. Problem solving -->
   <section class="section">
     <div class="section-head">3. HOW THEY FIGURE OUT PROBLEMS · 6 min · Scores B–D · highest weight</div>
 
-    <p class="ask"><strong>B. Won’t move</strong><br />
-      <strong>Ask:</strong> “A battery-powered vehicle won’t move at all. You’ve never worked on that brand before. What would you check first, and what would you check next?”
-    </p>
+    <p class="ask"><strong>B. Won’t move — Ask:</strong> “A battery-powered vehicle won’t move at all. You’ve never worked on that brand. What would you check first, then next?”</p>
     <div class="score-row">
       <div class="score-main">
-        <strong>B. Won’t move</strong>
-        <span class="wt">(Highest)</span>
-        <div class="guide">“3” looks like: Starts simple and safe: confirm the problem, look around, check battery power, then follow the power path. Not “just replace the big expensive part.”</div>
+        <strong>B. Won’t move</strong> <span class="wt">(Highest)</span>
+        <div class="guide">“3”: Starts simple/safe — confirm problem, look around, battery power, follow power path. Not “replace the expensive part.”</div>
       </div>
       <div class="score-box">
         <div class="lbl">Score</div>
@@ -576,14 +609,11 @@
       </div>
     </div>
 
-    <p class="ask"><strong>C. Dies when working hard</strong><br />
-      <strong>Ask:</strong> “It runs for a little bit, then dies when it goes up a hill. How would you figure out what’s wrong?”
-    </p>
+    <p class="ask"><strong>C. Dies under load — Ask:</strong> “It runs a little, then dies going up a hill. How would you figure out what’s wrong?”</p>
     <div class="score-row">
       <div class="score-main">
-        <strong>C. Dies when working hard</strong>
-        <span class="wt">(Highest)</span>
-        <div class="guide">“3” looks like: Checks battery power while it’s resting and while it’s working; checks dirty/loose connections; then looks at other parts. Not guessing and swapping parts.</div>
+        <strong>C. Dies when working hard</strong> <span class="wt">(Highest)</span>
+        <div class="guide">“3”: Checks power at rest and under load; dirty/loose connections; then other parts. Not guess-and-swap.</div>
       </div>
       <div class="score-box">
         <div class="lbl">Score</div>
@@ -596,14 +626,11 @@
       </div>
     </div>
 
-    <p class="ask"><strong>D. Something new to them</strong><br />
-      <strong>Ask:</strong> “It’s your first day and you’ve never seen this kind of machine. How do you learn it without guessing?”
-    </p>
+    <p class="ask"><strong>D. Something new — Ask:</strong> “First day, never seen this machine. How do you learn it without guessing?”</p>
     <div class="score-row">
       <div class="score-main">
-        <strong>D. Something new to them</strong>
-        <span class="wt">(Highest)</span>
-        <div class="guide">“3” looks like: Looks up manuals, asks a lead tech, tests step by step, writes down what they find. Asks for help instead of winging it.</div>
+        <strong>D. Something new to them</strong> <span class="wt">(Highest)</span>
+        <div class="guide">“3”: Manuals, asks lead, tests step by step, writes findings. Asks for help instead of winging it.</div>
       </div>
       <div class="score-box">
         <div class="lbl">Score</div>
@@ -617,33 +644,32 @@
     </div>
 
     <div class="notes">
-      <label class="field" for="diag-notes">Problem-solving notes (listen for: test before replacing parts)</label>
-      <textarea id="diag-notes" rows="2"></textarea>
+      <label class="field" for="diag-notes">Problem-solving notes (test before replacing parts)</label>
+      <textarea id="diag-notes" rows="1"></textarea>
     </div>
   </section>
 
-  <!-- 4. Safety -->
-  <section class="section">
+  <!-- Page 2 starts at Safety -->
+  <section class="section page-break">
     <div class="section-head gate">4. SAFETY · 3 min · Score E · GATE — must be ≥ 3</div>
-    <p class="hint"><strong>Why we ask (you):</strong> Cart batteries can spark, burn skin, or short out tools. We’re checking if they’re careful — not if they know fancy electrical words.</p>
+    <p class="hint"><strong>Why:</strong> Batteries can spark/burn/short tools. Checking carefulness — not fancy electrical words.</p>
     <div class="ask">
       <strong>Ask:</strong>
       <ol>
-        <li>“A customer’s golf cart is in your bay and you need to work around the batteries. Walk me through how you stay safe before you start.”</li>
+        <li>“Customer’s cart in your bay — walk me through how you stay safe around the batteries before you start.”</li>
         <li>“Why do shops tell people to take off rings and metal watches for this work?”</li>
         <li>“Have you ever had a close call with tools or electricity? What did you learn?”</li>
       </ol>
     </div>
     <p class="hint">
-      <strong>Good answer sounds like:</strong> turn key off / make sure it’s not powered · take off metal jewelry · don’t lay wrenches across battery posts · look before you touch · ask if unsure.<br />
-      <strong>Bad answer sounds like:</strong> “I’d just dive in” · jokes about getting shocked · “safety switches get in the way so I’d bypass them.”
+      <strong>Good:</strong> key off / not powered · jewelry off · no wrenches across posts · look before touch · ask if unsure.
+      &nbsp;·&nbsp;
+      <strong>Bad:</strong> “just dive in” · jokes about shock · “bypass safety switches.”
     </p>
-
     <div class="score-row gate-row">
       <div class="score-main">
-        <strong>E. Careful around batteries</strong>
-        <span class="wt">(GATE)</span>
-        <div class="guide">“3” looks like: Takes batteries seriously — jewelry off, thinks before touching, won’t skip safety steps.</div>
+        <strong>E. Careful around batteries</strong> <span class="wt">(GATE)</span>
+        <div class="guide">“3”: Takes batteries seriously — jewelry off, thinks before touching, won’t skip safety.</div>
         <div class="checks">
           <label><input type="checkbox" /> FAIL SAFETY → do not invite to shop eval</label>
         </div>
@@ -660,11 +686,10 @@
     </div>
     <div class="notes">
       <label class="field" for="safety-notes">Safety notes</label>
-      <textarea id="safety-notes" rows="2"></textarea>
+      <textarea id="safety-notes" rows="1"></textarea>
     </div>
   </section>
 
-  <!-- 5. Team -->
   <section class="section">
     <div class="section-head">5. WORKING WITH THE TEAM · 3 min · Scores F–G</div>
     <div class="ask">
@@ -676,12 +701,10 @@
         <li>“Do you prefer finishing regular repair jobs, or only the tricky ones?”</li>
       </ol>
     </div>
-
     <div class="score-row">
       <div class="score-main">
-        <strong>F. Explaining work clearly</strong>
-        <span class="wt">(Medium)</span>
-        <div class="guide">“3” looks like: Can explain what they found in plain words so the office can quote the job.</div>
+        <strong>F. Explaining work clearly</strong> <span class="wt">(Medium)</span>
+        <div class="guide">“3”: Explains findings in plain words so the office can quote the job.</div>
       </div>
       <div class="score-box">
         <div class="lbl">Score</div>
@@ -693,12 +716,10 @@
         </div>
       </div>
     </div>
-
     <div class="score-row">
       <div class="score-main">
-        <strong>G. Learns well / good teammate</strong>
-        <span class="wt">(High)</span>
-        <div class="guide">“3” looks like: Owns mistakes, asks for help, follows a process; doesn’t guess when stuck.</div>
+        <strong>G. Learns well / good teammate</strong> <span class="wt">(High)</span>
+        <div class="guide">“3”: Owns mistakes, asks for help, follows a process; doesn’t guess when stuck.</div>
       </div>
       <div class="score-box">
         <div class="lbl">Score</div>
@@ -710,22 +731,19 @@
         </div>
       </div>
     </div>
-
     <div class="notes">
       <label class="field" for="fit-notes">Fit notes</label>
-      <textarea id="fit-notes" rows="2"></textarea>
+      <textarea id="fit-notes" rows="1"></textarea>
     </div>
   </section>
 
-  <!-- 6. Bonus -->
   <section class="section">
     <div class="section-head bonus">6. BONUS ONLY (optional) · Score H · does not gate the hire</div>
     <p class="ask"><strong>Ask (optional):</strong> “Have you ever worked on a golf cart, UTV, or a lithium battery system?”</p>
     <div class="score-row">
       <div class="score-main">
-        <strong>H. Golf cart or lithium experience</strong>
-        <span class="wt">(Bonus)</span>
-        <div class="guide">“3” looks like: Any cart / UTV / lithium experience is a plus. None is fine — mark N/A.</div>
+        <strong>H. Golf cart or lithium experience</strong> <span class="wt">(Bonus)</span>
+        <div class="guide">Any cart / UTV / lithium is a plus. None is fine — mark N/A.</div>
       </div>
       <div class="score-box">
         <div class="lbl">Score</div>
@@ -740,60 +758,51 @@
     </div>
   </section>
 
-  <!-- 7. Totals -->
   <section class="section">
     <div class="section-head decision">7. TOTALS &amp; DECISION</div>
-
     <div class="totals">
-      <div class="cell"><div class="k">A Transferable</div><input type="text" aria-label="Score A total" /></div>
+      <div class="cell"><div class="k">A Trans.</div><input type="text" aria-label="Score A total" /></div>
       <div class="cell"><div class="k">B No-go</div><input type="text" aria-label="Score B total" /></div>
       <div class="cell"><div class="k">C Load</div><input type="text" aria-label="Score C total" /></div>
-      <div class="cell"><div class="k">D Learning</div><input type="text" aria-label="Score D total" /></div>
+      <div class="cell"><div class="k">D Learn</div><input type="text" aria-label="Score D total" /></div>
       <div class="cell gate-cell"><div class="k">E Safety</div><input type="text" aria-label="Score E total" /></div>
       <div class="cell"><div class="k">F Docs</div><input type="text" aria-label="Score F total" /></div>
       <div class="cell"><div class="k">G Coach</div><input type="text" aria-label="Score G total" /></div>
-      <div class="cell"><div class="k">H Bonus</div><input type="text" aria-label="Score H total" placeholder="/ N/A" /></div>
+      <div class="cell"><div class="k">H Bonus</div><input type="text" aria-label="Score H total" placeholder="N/A" /></div>
     </div>
-
     <div class="avg-row">
       <div class="field-inline">
-        <strong>Core average</strong> (A–G, exclude H):
+        <strong>Core avg</strong> (A–G):
         <input type="text" aria-label="Core average" /> / 4
       </div>
       <div class="field-inline">
-        <strong>Diagnostic average</strong> (B–D):
+        <strong>Diag avg</strong> (B–D):
         <input type="text" aria-label="Diagnostic average" /> / 4
       </div>
       <div class="field-inline">
-        Safety (E) ≥ 3?
+        Safety ≥ 3?
         <label><input type="radio" name="safety-ok" value="yes" /> Yes</label>
         <label><input type="radio" name="safety-ok" value="no" /> No</label>
       </div>
     </div>
-
     <div class="decision-grid">
       <label class="advance">
         <strong><input type="radio" name="decision" value="advance" /> ADVANCE</strong>
-        Safety ≥ 3, problem-solving (B–D) avg ≥ 3, can learn the job → schedule shop eval
+        Safety ≥ 3, B–D avg ≥ 3, trainable → schedule shop eval
       </label>
       <label class="maybe">
         <strong><input type="radio" name="decision" value="maybe" /> MAYBE</strong>
-        Good with tools, weaker on electrical; honest about gaps and eager → heavier hands-on day
+        Good with tools, weaker electrical; honest &amp; eager → heavier hands-on
       </label>
       <label class="pass">
         <strong><input type="radio" name="decision" value="pass" /> PASS</strong>
-        Guesses and swaps parts, unsafe, or can’t describe how they’ve fixed anything
+        Guesses/swaps parts, unsafe, or can’t describe fixes
       </label>
     </div>
-
-    <p class="hint">
-      Next step if ADVANCE: shop evaluation — written knowledge (120), hands-on skills (120),
-      troubleshooting &amp; diagnostics (60). Ref: Hiring quiz evaluation – Technician.
-    </p>
-
+    <p class="hint">Next if ADVANCE: shop eval — written (120), hands-on (120), troubleshooting (60).</p>
     <div class="notes">
       <label class="field" for="final-notes">Final recommendation / scheduling notes</label>
-      <textarea id="final-notes" rows="3"></textarea>
+      <textarea id="final-notes" rows="1"></textarea>
     </div>
   </section>
 
