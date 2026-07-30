@@ -6,3 +6,5 @@ Making my business AI friendly.
 Setup: [`docs/COMMAND_CENTER.md`](docs/COMMAND_CENTER.md)
 
 Open in Cursor → see [`START_HERE.md`](START_HERE.md).
+
+Optional personal stack: Omi wearable → Obsidian second brain → [`omi-second-brain/`](omi-second-brain/).
