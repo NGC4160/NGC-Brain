@@ -76,6 +76,7 @@ Historical mobile SOPs referenced Housecall Pro photos, checklists, and NGC stic
 
 | Document | Location |
 |----------|----------|
+| 7-point inspection report (print) | `external_docs/templates/operations/NGC_Golf_Cart_Inspection_Report.pdf` |
 | Mobile repair SOP (legacy) | `NGC Document Repository /Procedures/Mobile Golf Cart Repair and Safety Protocol.docx` |
 | Procedure checklist (legacy HCP flow) | `NGC Document Repository /Checklists/NGC Mobile Golf Cart Repair Services Procedure Checklist.docx` |
 | Technician hiring test | `My Drive/Hiring quiz evaluation - Technician.docx` |
