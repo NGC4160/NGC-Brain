@@ -106,3 +106,5 @@ Every service includes the **7-point safety inspection**:
 5. Steering and suspension
 6. Drivetrain (axle & motor)
 7. Brakes
+
+**Printable form:** [`external_docs/templates/operations/NGC_Golf_Cart_Inspection_Report.pdf`](../../external_docs/templates/operations/NGC_Golf_Cart_Inspection_Report.pdf) — battery Δ / mOhm grid + Pass/Fail/N/A checklist. Used for complimentary campground / event inspections; promo **INSPECT10** = 10% off any service when the sheet is presented at booking.

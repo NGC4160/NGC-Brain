@@ -460,6 +460,7 @@ def bundle_static_content(manifest: dict) -> int:
     for extra_rel in (
         "external_docs/templates/personnel_counseling/README.md",
         "external_docs/templates/hiring/README.md",
+        "external_docs/templates/operations/README.md",
         "docs/documents/README.md",
     ):
         extra = ROOT / extra_rel
