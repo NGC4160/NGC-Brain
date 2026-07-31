@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T15:34:22.180273+00:00",
+  "generated_at": "2026-07-31T22:07:18.962706+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-07-31T15:34:22.152769+00:00",
+    "generated_at": "2026-07-31T22:07:18.929877+00:00",
     "jobs_synced_at": "2026-07-31T15:34:18.463825+00:00",
     "has_live_data": true,
     "metrics": {
@@ -28,7 +28,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 87,
+          "days": 88,
           "lithium": true,
           "status": "in progress"
         }
@@ -37,14 +37,14 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 87,
+          "days": 88,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17260",
           "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 86,
+          "days": 87,
           "lithium": false,
           "status": "in progress"
         },
@@ -65,7 +65,7 @@
         {
           "invoice": "17366",
           "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-          "days": 20,
+          "days": 21,
           "lithium": false,
           "status": "in progress"
         },
@@ -758,7 +758,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "118 indexed deliverables",
+          "desc": "120 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -788,10 +788,10 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "11 active \u00b7 4 planned \u2014 all categories",
+          "desc": "13 active \u00b7 4 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "11 docs"
+          "badge": "13 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
@@ -821,6 +821,12 @@
           "title": "Personnel counseling procedure",
           "desc": "When and how to use the counseling form",
           "href": "view.html?path=knowledge/05_team/personnel_counseling.md",
+          "external": false
+        },
+        {
+          "title": "7-Point Golf Cart Inspection Report",
+          "desc": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10",
+          "href": "documents/operations/NGC_Golf_Cart_Inspection_Report.pdf",
           "external": false
         }
       ]
@@ -891,9 +897,9 @@
     }
   ],
   "documents": {
-    "active": 11,
+    "active": 13,
     "planned": 4,
     "categories": 5
   },
-  "manifest_total": 118
+  "manifest_total": 120
 }

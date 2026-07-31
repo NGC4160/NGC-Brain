@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T15:34:22.117191+00:00",
+  "generated_at": "2026-07-31T22:07:18.889300+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan & Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",
@@ -202,6 +202,36 @@
       "notes": ""
     },
     {
+      "id": "golf-cart-inspection-report",
+      "category": "operations",
+      "title": "7-Point Golf Cart Inspection Report",
+      "description": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10",
+      "type": "pdf",
+      "audience": "Techs / Christine",
+      "status": "active",
+      "featured": true,
+      "href": "documents/operations/NGC_Golf_Cart_Inspection_Report.pdf",
+      "source": "external_docs/templates/operations/NGC_Golf_Cart_Inspection_Report.pdf",
+      "deploy_path": "documents/operations/NGC_Golf_Cart_Inspection_Report.pdf",
+      "external": false,
+      "notes": ""
+    },
+    {
+      "id": "ops-templates-readme",
+      "category": "operations",
+      "title": "Operations templates \u2014 how to use",
+      "description": "Inspection report usage and INSPECT10 booking note",
+      "type": "markdown",
+      "audience": "Ryan / Christine",
+      "status": "active",
+      "featured": false,
+      "href": "view.html?path=documents/operations/README.md",
+      "source": "external_docs/templates/operations/README.md",
+      "deploy_path": "documents/operations/README.md",
+      "external": false,
+      "notes": ""
+    },
+    {
       "id": "shop-floor-checklist",
       "category": "operations",
       "title": "Shop-floor checklist (mobile steps stripped)",
@@ -263,8 +293,8 @@
     }
   ],
   "counts": {
-    "total": 15,
-    "active": 11,
+    "total": 17,
+    "active": 13,
     "planned": 4
   }
 }
