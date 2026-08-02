@@ -415,9 +415,14 @@ def save_settings(
 
 
 def run() -> None:
+    import os
+
     import uvicorn
 
-    uvicorn.run("app.main:app", host="127.0.0.1", port=8787, reload=True)
+    host = os.getenv("HOST", "127.0.0.1")
+    port = int(os.getenv("PORT", "8787"))
+    reload = os.getenv("RELOAD", "1") == "1"
+    uvicorn.run("app.main:app", host=host, port=port, reload=reload)
 
 
 if __name__ == "__main__":
