@@ -4,18 +4,15 @@ Local ops app for a 3D-printed birdhouse side business.
 
 **Status:** MVP + Windows desktop packaging  
 **Plan:** [BUILD_PLAN.md](BUILD_PLAN.md)  
-**Windows product handoff:** [WINDOWS.md](WINDOWS.md)  
+**Desktop handoff (Mac + Windows):** [DESKTOP.md](DESKTOP.md)  
 **Cloud hosting (optional):** [DEPLOY.md](DEPLOY.md)
 
-## Product form (what you asked for)
+## Product form
 
-Ship a **Windows `.exe`** your friend double-clicks and keeps forever:
+- **Windows friend:** `BirdhousePrintShop.exe` (Windows only — will not open on your Mac)
+- **You on MacBook Air:** macOS `.app` zip
 
-1. GitHub Actions builds `BirdhousePrintShop.exe`
-2. You send the file/link
-3. Their data stays on their PC (`%LOCALAPPDATA%\BirdhousePrintShop`)
-
-See **[WINDOWS.md](WINDOWS.md)**.
+See **[DESKTOP.md](DESKTOP.md)**.
 
 ## Run from source (dev)
 

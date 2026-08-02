@@ -1,5 +1,8 @@
 # Birdhouse Print Shop — Windows desktop product
 
+> **Moved:** see **[DESKTOP.md](DESKTOP.md)** for Mac + Windows.  
+> The `.exe` is **Windows-only**. On a Mac it fails (error -10661).
+
 Give your friend a **`.exe` they double-click forever**.  
 No Render account. No Python install. Data stays on their PC.
 
