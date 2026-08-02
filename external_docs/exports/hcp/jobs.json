@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-08-01T14:42:33.324424+00:00",
+  "synced_at": "2026-08-02T14:45:14.252035+00:00",
   "count": 500,
   "jobs": [
     {
@@ -3185,8 +3185,8 @@
         "arrival_window": 0,
         "appointments": []
       },
-      "total_amount": 20239,
-      "outstanding_balance": 20239,
+      "total_amount": 19733,
+      "outstanding_balance": 19733,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -3301,7 +3301,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-21T17:29:13Z",
-      "updated_at": "2026-07-28T20:10:48Z",
+      "updated_at": "2026-08-01T16:24:35Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
