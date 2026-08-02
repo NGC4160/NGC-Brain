@@ -1,18 +1,18 @@
-# Birdhouse Print Shop
+# Blake's Birdhouses
 
-Local ops app for a 3D-printed birdhouse side business.
+Military-themed local ops app for a 3D-printed birdhouse side business.
 
-**Status:** MVP + Windows desktop packaging  
+**Status:** MVP + Mac/Windows desktop packaging  
 **Plan:** [BUILD_PLAN.md](BUILD_PLAN.md)  
-**Desktop handoff (Mac + Windows):** [DESKTOP.md](DESKTOP.md)  
+**Desktop handoff:** [DESKTOP.md](DESKTOP.md)  
 **Cloud hosting (optional):** [DEPLOY.md](DEPLOY.md)
 
 ## Product form
 
-- **Windows friend:** `BirdhousePrintShop.exe` (Windows only — will not open on your Mac)
-- **You on MacBook Air:** macOS `.app` zip
+- **Windows:** `BlakesBirdhouses.exe`
+- **Mac:** `BlakesBirdhouses-macOS.zip` → `BlakesBirdhouses.app`
 
-See **[DESKTOP.md](DESKTOP.md)**.
+Sample missions: **Kayla**, **Elliot**, **Emmet**. See **[DESKTOP.md](DESKTOP.md)**.
 
 ## Run from source (dev)
 
