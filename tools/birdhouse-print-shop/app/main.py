@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from contextlib import asynccontextmanager
-from pathlib import Path
 
 from fastapi import FastAPI, Form, Request
 from fastapi.responses import RedirectResponse
@@ -18,9 +17,9 @@ from app.db import (
     order_economics,
     set_setting,
 )
+from app.paths import static_dir, templates_dir
 
-BASE = Path(__file__).resolve().parent
-templates = Jinja2Templates(directory=str(BASE / "templates"))
+templates = Jinja2Templates(directory=str(templates_dir()))
 
 
 @asynccontextmanager
@@ -30,7 +29,7 @@ async def lifespan(_: FastAPI):
 
 
 app = FastAPI(title="Birdhouse Print Shop", lifespan=lifespan)
-app.mount("/static", StaticFiles(directory=str(BASE / "static")), name="static")
+app.mount("/static", StaticFiles(directory=str(static_dir())), name="static")
 
 
 def _shop_name(conn) -> str:

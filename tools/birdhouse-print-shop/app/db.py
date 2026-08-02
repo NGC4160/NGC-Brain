@@ -1,15 +1,8 @@
 from __future__ import annotations
 
-import os
 import sqlite3
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-SCHEMA_PATH = ROOT / "schema.sql"
-
-# Allow hosted deploys to put SQLite on a persistent disk (e.g. Render /var/data)
-DATA_DIR = Path(os.getenv("BIRDHOUSE_DATA_DIR", str(ROOT / "data")))
-DB_PATH = DATA_DIR / "birdhouse.db"
+from app.paths import default_data_dir, schema_path
 
 ORDER_STATUSES = [
     "Draft",
@@ -31,9 +24,17 @@ JOB_STATUSES = [
 ]
 
 
+def data_dir():
+    return default_data_dir()
+
+
+def db_path():
+    return data_dir() / "birdhouse.db"
+
+
 def connect() -> sqlite3.Connection:
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
+    data_dir().mkdir(parents=True, exist_ok=True)
+    conn = sqlite3.connect(db_path())
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
@@ -41,7 +42,7 @@ def connect() -> sqlite3.Connection:
 
 def init_db(seed: bool = True) -> None:
     with connect() as conn:
-        conn.executescript(SCHEMA_PATH.read_text())
+        conn.executescript(schema_path().read_text(encoding="utf-8"))
         _ensure_settings(conn)
         if seed and _is_empty(conn):
             _seed(conn)
