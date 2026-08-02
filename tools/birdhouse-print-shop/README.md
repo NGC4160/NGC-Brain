@@ -43,15 +43,20 @@ SQLite DB path: `data/birdhouse.db` (created on first launch, seeded with sample
 
 ## Text a demo link to a friend
 
-Friends can’t open `localhost` on your computer. Use a temporary public tunnel:
+### Permanent link (recommended)
+
+Host it once on Render → get a stable `https://….onrender.com` URL you can text anytime.
+
+See **[DEPLOY.md](DEPLOY.md)** (about 5 minutes).
+
+### Temporary link (laptop must stay awake)
 
 ```bash
 cd tools/birdhouse-print-shop
 ./share.sh
 ```
 
-Copy the `https://….trycloudflare.com` URL it prints and text that.  
-Keep the terminal open while they’re trying it — closing it kills the link.
+Copy the `https://….trycloudflare.com` URL. Closing the terminal kills the link.
 
 ## Backup
 

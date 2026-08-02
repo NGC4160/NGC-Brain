@@ -1,0 +1,15 @@
+# Render Blueprint — Birdhouse Print Shop demo
+# https://dashboard.render.com/select-repo?type=blueprint
+services:
+  - type: web
+    name: birdhouse-print-shop
+    runtime: python
+    plan: free
+    rootDir: tools/birdhouse-print-shop
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: RELOAD
+        value: "0"
+      - key: HOST
+        value: "0.0.0.0"
