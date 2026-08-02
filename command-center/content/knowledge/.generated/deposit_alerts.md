@@ -1,7 +1,7 @@
 # Deposit Gate Alerts (NGC Admin Bot)
 
-**Generated:** 2026-08-01 14:42 UTC  
-**HCP jobs export:** 2026-08-01T14:42:33.324424+00:00  
+**Generated:** 2026-08-02 14:45 UTC  
+**HCP jobs export:** 2026-08-02T14:45:14.252035+00:00  
 **Privacy:** Invoice # and description only — open job in HCP for customer contact.
 
 ## Summary
@@ -41,7 +41,7 @@
 - **#17383** · General - ***SEE NOTES*** · `needs scheduling` · paid $0.00 / $206.48 · **gap $206.48** — Balance due before pickup or additional work
 - **#17394** · ***SEE NOTES*** · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
 - **#17392** · General - 1.0 - Golf Cart Diagnostic & Inspection · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
-- **#17382** · General - 1.0 - Golf Cart Diagnostic & Inspection · `scheduled` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
+- **#17382** · General - 1.0 - Golf Cart Diagnostic & Inspection · `scheduled` · paid $0.00 / $197.33 · **gap $197.33** — Diagnostic balance due
 - **#17353** · ***SEE NOTES*** · `in progress` · paid $1462.57 / $1563.28 · **gap $100.71** — Balance due before pickup or additional work
 
 ## Christine — next steps
