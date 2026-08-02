@@ -1,9 +1,9 @@
 {
-  "synced_at": "2026-07-26T14:47:10.808514+00:00",
+  "synced_at": "2026-07-26T21:55:01.915227+00:00",
   "pricebook": {
     "exists": true,
-    "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-    "modified": "2026-07-26T14:46:50.205620+00:00",
+    "path": "/Users/whitehousecommandcenter/Documents/GitHub/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
+    "modified": "2026-07-26T21:45:09.266286+00:00",
     "total_items": 282,
     "lithium_professional_skus": [
       {
@@ -104,19 +104,7 @@
   },
   "qbo_pl": {
     "exists": true,
-    "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-    "modified": "2026-07-26T14:46:50.207072+00:00",
-    "period_note": "See file header for date range",
-    "income_highlights": {
-      "LFP Conversions Only": 94940.25,
-      "Mobile Trip Income": 8491.61,
-      "Sales": 22710.09,
-      "Sales and Services": 366449.07,
-      "Sales of Product Income": 23275.64,
-      "Services Income": 63852.7,
-      "Accounting Services": 1533.86
-    },
-    "net_income": 32972.38
+    "error": "openpyxl not installed; pip install openpyxl"
   },
   "qbo_api": {
     "exists": true,
@@ -134,7 +122,7 @@
       ],
       "refresh_token_rotated": true
     },
-    "modified": "2026-07-26T14:46:50.205620+00:00",
+    "modified": "2026-07-26T21:45:09.266422+00:00",
     "account_count": 148,
     "item_count": 521
   },
@@ -152,7 +140,7 @@
         "pricebook_services.json"
       ]
     },
-    "modified": "2026-07-26T14:47:09.884779+00:00",
+    "modified": "2026-07-26T21:45:09.263847+00:00",
     "job_count": 500,
     "jobs_by_status": {
       "needs scheduling": 10,
@@ -177,43 +165,43 @@
   "qbo_files": [
     {
       "name": "api_sync_manifest.json",
-      "modified": "2026-07-26T14:46:50.205620+00:00"
+      "modified": "2026-07-26T21:45:09.266422+00:00"
     },
     {
       "name": "balance_sheet.json",
-      "modified": "2026-07-26T14:46:50.207072+00:00"
+      "modified": "2026-07-26T21:45:09.266607+00:00"
     },
     {
       "name": "balance_sheet_current.xlsx",
-      "modified": "2026-07-26T14:46:50.207072+00:00"
+      "modified": "2026-07-26T21:45:09.267490+00:00"
     },
     {
       "name": "chart_of_accounts.json",
-      "modified": "2026-07-26T14:46:50.207072+00:00"
+      "modified": "2026-07-26T21:45:09.267649+00:00"
     },
     {
       "name": "chart_of_accounts.xlsx",
-      "modified": "2026-07-26T14:46:50.207072+00:00"
+      "modified": "2026-07-26T21:45:09.267729+00:00"
     },
     {
       "name": "company_test.json",
-      "modified": "2026-07-26T14:47:10.769992+00:00"
+      "modified": "2026-07-26T21:45:09.267795+00:00"
     },
     {
       "name": "products_and_services.xlsx",
-      "modified": "2026-07-26T14:46:50.207072+00:00"
+      "modified": "2026-07-26T21:45:09.267967+00:00"
     },
     {
       "name": "products_services.json",
-      "modified": "2026-07-26T14:46:50.207072+00:00"
+      "modified": "2026-07-26T21:45:09.268240+00:00"
     },
     {
       "name": "profit_and_loss_last_12_months.json",
-      "modified": "2026-07-26T14:46:50.207072+00:00"
+      "modified": "2026-07-26T21:45:09.268327+00:00"
     },
     {
       "name": "profit_and_loss_last_12_months.xlsx",
-      "modified": "2026-07-26T14:46:50.207072+00:00"
+      "modified": "2026-07-26T21:45:09.268444+00:00"
     }
   ],
   "alerts": [
