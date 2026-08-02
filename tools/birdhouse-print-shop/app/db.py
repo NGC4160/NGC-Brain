@@ -1,12 +1,15 @@
 from __future__ import annotations
 
+import os
 import sqlite3
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT / "data"
-DB_PATH = DATA_DIR / "birdhouse.db"
 SCHEMA_PATH = ROOT / "schema.sql"
+
+# Allow hosted deploys to put SQLite on a persistent disk (e.g. Render /var/data)
+DATA_DIR = Path(os.getenv("BIRDHOUSE_DATA_DIR", str(ROOT / "data")))
+DB_PATH = DATA_DIR / "birdhouse.db"
 
 ORDER_STATUSES = [
     "Draft",

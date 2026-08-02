@@ -1,62 +1,67 @@
-# Permanent demo link (host online)
+# Host online for a month (friend can keep using it)
 
-Temporary Cloudflare links die when your laptop sleeps.  
-A **permanent** link means hosting this app on a free cloud service.
+For **~30 days of real use**, you need:
 
-## Recommended: Render (about 5 minutes)
+1. An always-on URL (doesn’t sleep)
+2. A **persistent disk** so orders/inventory don’t wipe on restart
 
-Gives you a stable URL like:
+Free Render/Railway sleep + ephemeral storage are fine for a quick peek — **not** for a month.
 
-`https://birdhouse-print-shop.onrender.com`
+## Recommended: Render Starter + 1 GB disk (~$7–10/mo)
 
-### Option A — Blueprint (fastest)
+Gives a stable link like `https://birdhouse-print-shop.onrender.com` that stays up all month and keeps their data.
+
+### Deploy (once)
 
 1. Open [Render Blueprint](https://dashboard.render.com/select-repo?type=blueprint)
-2. Connect GitHub repo `NGC4160/NGC-Brain`
-3. Choose branch `cursor/birdhouse-print-shop-mvp-838f` (or `main` after merge)
-4. Apply the repo-root `render.yaml`
-5. Wait for deploy → copy the `.onrender.com` URL → text that
+2. Connect GitHub → **NGC4160/NGC-Brain**
+3. Branch: **`cursor/birdhouse-print-shop-mvp-838f`** (or `main` after merge)
+4. Apply repo-root `render.yaml` (Starter plan + `/var/data` disk)
+5. Add a payment method if Render asks (required for Starter)
+6. Wait for live deploy → copy the `.onrender.com` URL
 
-### Option B — Manual Web Service
+### Manual setup (same result)
 
-1. Create a free account at [https://render.com](https://render.com)
-2. **New → Web Service → Connect GitHub → `NGC4160/NGC-Brain`**
-3. Settings:
-   - **Name:** `birdhouse-print-shop`
+1. [render.com](https://render.com) → **New → Web Service** → `NGC4160/NGC-Brain`
+2. Settings:
    - **Root Directory:** `tools/birdhouse-print-shop`
-   - **Runtime:** Python 3
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-   - **Branch:** `cursor/birdhouse-print-shop-mvp-838f` (or `main` after merge)
-4. Create Web Service
-5. Wait for deploy → copy the `.onrender.com` URL → text that
+   - **Build:** `pip install -r requirements.txt`
+   - **Start:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+   - **Instance type:** Starter (not Free)
+   - **Disk:** 1 GB mounted at `/var/data`
+   - **Env var:** `BIRDHOUSE_DATA_DIR=/var/data`
+   - **Env var:** `RELOAD=0`
+3. Deploy → text the URL
 
-### Free-tier note
+### Text your friend
 
-Render free apps **sleep after ~15 minutes idle**. First open can take 30–60 seconds to wake. The URL itself stays permanent.
+> Here’s the birdhouse shop tool — use this link for the next month:  
+> https://YOUR-SERVICE.onrender.com  
+> Add products/orders on the Board as you go. Don’t delete the bookmark.
 
-SQLite data on free tier can reset when the service redeploys. Fine for demos; for real orders later, add a paid disk or move to Postgres.
+### Keep it healthy for 30 days
 
-## Alternative: Railway
+| Do | Don’t |
+|---|---|
+| Leave the Render service running | Switch back to Free plan |
+| Avoid unnecessary redeploys if they’re mid-trial | Expect Free tier to keep their data |
+| Optional: download `birdhouse.db` from disk/backups later | Put real customer passwords in it (there is no login yet) |
 
-1. [https://railway.app](https://railway.app) → New Project → Deploy from GitHub
-2. Select `NGC4160/NGC-Brain`
-3. Set root / watch path to `tools/birdhouse-print-shop`
-4. Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-5. Generate a public domain in Settings → Networking
+**No login yet** — anyone with the link can edit the shared shop. Only send it to people you trust for this trial.
 
-## Alternative: Docker anywhere
+### After the month
 
-```bash
-cd tools/birdhouse-print-shop
-docker build -t birdhouse-print-shop .
-docker run -p 8787:8787 birdhouse-print-shop
-```
+- Cancel/delete the Render service to stop billing, **or**
+- Keep it if the side business is using it
 
-## Custom domain later
+## Cheaper but weaker: Free Render
 
-In Render/Railway: Settings → Custom Domain → point `demo.yourbirdhousestore.com` (or similar) via DNS CNAME.
+- URL can last a month
+- App **sleeps** after idle (slow first open)
+- **Data can reset** on redeploy  
+Only use this if they’re casually clicking around, not running real orders.
 
-## What to text your friend
+## Optional later
 
-> Permanent birdhouse shop demo: https://YOUR-SERVICE.onrender.com
+- Custom domain in Render → Settings → Custom Domain
+- Add a simple password/gate before wider sharing

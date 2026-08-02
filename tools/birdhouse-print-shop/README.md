@@ -43,11 +43,11 @@ SQLite DB path: `data/birdhouse.db` (created on first launch, seeded with sample
 
 ## Text a demo link to a friend
 
-### Permanent link (recommended)
+### Permanent / month-long link (recommended)
 
-Host it once on Render → get a stable `https://….onrender.com` URL you can text anytime.
+For a friend to use it for ~a month: host on **Render Starter + disk** (~$7–10/mo) so it stays awake and keeps their data.
 
-See **[DEPLOY.md](DEPLOY.md)** (about 5 minutes).
+See **[DEPLOY.md](DEPLOY.md)**.
 
 ### Temporary link (laptop must stay awake)
 
