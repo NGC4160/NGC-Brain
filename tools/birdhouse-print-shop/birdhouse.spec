@@ -2,8 +2,6 @@
 # Build on Windows:
 #   pyinstaller --noconfirm birdhouse.spec
 
-from PyInstaller.building.build_main import Analysis, PYZ, EXE
-
 block_cipher = None
 
 a = Analysis(
