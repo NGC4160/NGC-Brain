@@ -3,17 +3,17 @@
 {% block content %}
 <section class="grid cards">
   <div class="panel">
-    <h2>Open orders</h2>
+    <h2>Active missions</h2>
     <p style="font-size:2rem;margin:0">{{ due|length }}</p>
     <p class="muted">Not shipped / cancelled</p>
   </div>
   <div class="panel">
-    <h2>In process</h2>
+    <h2>In the field</h2>
     <p style="font-size:2rem;margin:0">{{ stuck|length }}</p>
     <p class="muted">Printing or finishing</p>
   </div>
   <div class="panel">
-    <h2>Low stock</h2>
+    <h2>Resupply</h2>
     <p style="font-size:2rem;margin:0" class="{% if low %}warn{% endif %}">{{ low|length }}</p>
     <p class="muted">At or below reorder point</p>
   </div>
@@ -21,7 +21,7 @@
 
 <section class="split" style="margin-top:1rem">
   <div class="panel">
-    <h2>Due / open queue</h2>
+    <h2>Mission queue</h2>
     {% if due %}
     <table>
       <thead><tr><th>Order</th><th>Channel</th><th>Due</th><th>Status</th></tr></thead>

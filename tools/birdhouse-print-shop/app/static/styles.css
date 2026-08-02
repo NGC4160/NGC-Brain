@@ -1,15 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Barlow+Condensed:wght@400;600;700&display=swap");
+
 :root {
-  --bg: #f3efe6;
-  --ink: #1f2a24;
-  --muted: #5d6b63;
-  --panel: #fffdf8;
-  --line: #d5cbb8;
-  --accent: #2f6b4f;
-  --accent-ink: #f4fff8;
-  --warn: #8a4b1f;
-  --danger: #8a2f2f;
-  --shadow: 0 10px 30px rgba(31, 42, 36, 0.08);
-  --font: "Segoe UI", "Helvetica Neue", sans-serif;
+  --bg: #1a1f16;
+  --ink: #e6e2d3;
+  --muted: #9aa38a;
+  --panel: #242b1d;
+  --panel-2: #2e3624;
+  --line: #4a5538;
+  --accent: #6b7c3a;
+  --accent-ink: #11150c;
+  --tan: #c2a66b;
+  --warn: #d4a017;
+  --danger: #b54a3a;
+  --ok: #8faf4a;
+  --shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  --font: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --display: "Black Ops One", "Impact", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -18,32 +24,56 @@ body {
   font-family: var(--font);
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(47, 107, 79, 0.12), transparent 40%),
-    linear-gradient(180deg, #f7f3ea 0%, var(--bg) 100%);
+    linear-gradient(135deg, rgba(107, 124, 58, 0.12) 0 25%, transparent 25% 50%, rgba(194, 166, 107, 0.08) 50% 75%, transparent 75%),
+    radial-gradient(circle at top right, rgba(194, 166, 107, 0.18), transparent 40%),
+    linear-gradient(180deg, #222819 0%, var(--bg) 55%, #12160f 100%);
+  background-size: 48px 48px, auto, auto;
   min-height: 100vh;
+  letter-spacing: 0.02em;
 }
-a { color: var(--accent); text-decoration: none; }
+a { color: var(--tan); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .shell { max-width: 1200px; margin: 0 auto; padding: 1.25rem; }
 .top {
   display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;
   align-items: end; margin-bottom: 1.25rem;
+  border-bottom: 3px solid var(--tan);
+  padding-bottom: 1rem;
 }
-.brand h1 { margin: 0; font-size: 1.6rem; letter-spacing: -0.02em; }
-.brand p { margin: 0.2rem 0 0; color: var(--muted); }
+.brand h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--tan);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+.brand p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+}
 
-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+nav { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 nav a {
-  padding: 0.45rem 0.75rem;
+  padding: 0.4rem 0.7rem;
   border: 1px solid var(--line);
   background: var(--panel);
   color: var(--ink);
-  border-radius: 999px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
 }
 nav a.active, nav a:hover {
   background: var(--accent);
-  border-color: var(--accent);
+  border-color: var(--tan);
   color: var(--accent-ink);
   text-decoration: none;
 }
@@ -51,32 +81,46 @@ nav a.active, nav a:hover {
 .grid { display: grid; gap: 1rem; }
 .grid.cards { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .panel {
-  background: var(--panel);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-left: 4px solid var(--tan);
+  border-radius: 2px;
   padding: 1rem;
   box-shadow: var(--shadow);
 }
-.panel h2, .panel h3 { margin: 0 0 0.75rem; font-size: 1.05rem; }
+.panel h2, .panel h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--tan);
+  font-weight: 700;
+}
 .muted { color: var(--muted); }
-.warn { color: var(--warn); font-weight: 600; }
-.ok { color: var(--accent); font-weight: 600; }
+.warn { color: var(--warn); font-weight: 700; }
+.ok { color: var(--ok); font-weight: 700; }
 
-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+table { width: 100%; border-collapse: collapse; font-size: 1rem; }
 th, td { text-align: left; padding: 0.55rem 0.35rem; border-bottom: 1px solid var(--line); vertical-align: top; }
-th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+th {
+  color: var(--tan);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
 
 form.inline { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: end; }
-label { display: grid; gap: 0.25rem; font-size: 0.85rem; color: var(--muted); }
+label { display: grid; gap: 0.25rem; font-size: 0.9rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
 input, select, textarea, button {
-  font: inherit; padding: 0.45rem 0.6rem; border-radius: 8px;
-  border: 1px solid var(--line); background: white; color: var(--ink);
+  font: inherit; padding: 0.45rem 0.6rem; border-radius: 2px;
+  border: 1px solid var(--line); background: #151910; color: var(--ink);
 }
 button, .btn {
-  background: var(--accent); color: var(--accent-ink); border-color: var(--accent);
-  cursor: pointer;
+  background: var(--accent); color: var(--accent-ink); border-color: var(--tan);
+  cursor: pointer; text-transform: uppercase; font-weight: 700; letter-spacing: 0.08em;
 }
-button.secondary { background: white; color: var(--ink); }
+button.secondary { background: var(--panel); color: var(--ink); }
 button.small { padding: 0.25rem 0.5rem; font-size: 0.85rem; }
 
 .board {
@@ -88,12 +132,13 @@ button.small { padding: 0.25rem 0.5rem; font-size: 0.85rem; }
 .column { min-height: 180px; }
 .job {
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-top: 3px solid var(--accent);
+  border-radius: 2px;
   padding: 0.7rem;
   margin-bottom: 0.6rem;
-  background: #fff;
+  background: #1b2115;
 }
-.job strong { display: block; margin-bottom: 0.2rem; }
+.job strong { display: block; margin-bottom: 0.2rem; color: var(--tan); }
 .job form { margin-top: 0.5rem; }
 
 .stack { display: grid; gap: 1rem; }

@@ -1,35 +1,30 @@
-# Birdhouse Print Shop — desktop apps
+# Blake's Birdhouses — desktop apps
 
-## Important
+Military-themed 3D print shop ops for Blake's Birdhouses.
 
-| File | Opens on |
+## Which file?
+
+| Your computer | Download |
 |---|---|
-| `BirdhousePrintShop.exe` | **Windows only** |
-| `BirdhousePrintShop.app` (in the macOS zip) | **Mac only** |
+| **Mac** | `BlakesBirdhouses-macOS.zip` |
+| **Windows** | `BlakesBirdhouses.exe` |
 
-Your MacBook Air **cannot** open the `.exe`. Error **-10661** usually means macOS rejected a Windows program.
+`.exe` will not open on a Mac (error -10661).
 
-- **You (Mac):** use the macOS build  
-- **Friend (Windows):** use the `.exe`
-
-## Download (Releases — easiest)
+## Releases
 
 https://github.com/NGC4160/NGC-Brain/releases
 
-### On your Mac
-1. Download **BirdhousePrintShop-macOS.zip**
-2. Unzip
-3. Right-click **Birdhouse Print Shop** / `BirdhousePrintShop.app` → **Open**  
-   (first time: confirm Gatekeeper warning)
-4. App data: `~/.birdhouse-print-shop/`
+### Mac
+1. Download macOS zip → unzip  
+2. Right-click `BlakesBirdhouses.app` → **Open**  
+3. Data: `~/.birdhouse-print-shop/`
 
-### For your Windows friend
-1. Send them **BirdhousePrintShop.exe**
-2. They double-click it
-3. If SmartScreen appears: **More info → Run anyway**
-4. Their data: `%LOCALAPPDATA%\BirdhousePrintShop`
+### Windows friend
+1. Send `BlakesBirdhouses.exe`  
+2. Double-click (SmartScreen → More info → Run anyway)  
+3. Data: `%LOCALAPPDATA%\BirdhousePrintShop`
 
-## Build via Actions
+## Sample orders
 
-Workflow: **Build Birdhouse Desktop Apps**  
-https://github.com/NGC4160/NGC-Brain/actions/workflows/birdhouse-desktop.yml
+Fresh installs include missions for **Kayla**, **Elliot**, and **Emmet**.

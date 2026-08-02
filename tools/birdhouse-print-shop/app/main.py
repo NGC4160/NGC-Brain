@@ -28,12 +28,12 @@ async def lifespan(_: FastAPI):
     yield
 
 
-app = FastAPI(title="Birdhouse Print Shop", lifespan=lifespan)
+app = FastAPI(title="Blake's Birdhouses", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=str(static_dir())), name="static")
 
 
 def _shop_name(conn) -> str:
-    return get_setting(conn, "shop_name", "Birdhouse Print Shop")
+    return get_setting(conn, "shop_name", "Blake's Birdhouses")
 
 
 @app.get("/")

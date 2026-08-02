@@ -45,7 +45,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='BirdhousePrintShop',
+    name='BlakesBirdhouses',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

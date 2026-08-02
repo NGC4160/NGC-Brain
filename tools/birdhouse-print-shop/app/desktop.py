@@ -53,7 +53,7 @@ def main() -> int:
     thread.start()
 
     if not _wait_ready(port):
-        print("Birdhouse Print Shop failed to start.", file=sys.stderr)
+        print("Blake's Birdhouses failed to start.", file=sys.stderr)
         return 1
 
     # Prefer a real desktop window; fall back to the default browser.
@@ -61,7 +61,7 @@ def main() -> int:
         import webview
 
         webview.create_window(
-            "Birdhouse Print Shop",
+            "Blake's Birdhouses",
             url,
             width=1280,
             height=840,
@@ -70,7 +70,7 @@ def main() -> int:
         webview.start()
     except Exception:
         webbrowser.open(url)
-        print(f"Birdhouse Print Shop is running at {url}")
+        print(f"Blake's Birdhouses is running at {url}")
         print("Close this window to quit.")
         try:
             while thread.is_alive():

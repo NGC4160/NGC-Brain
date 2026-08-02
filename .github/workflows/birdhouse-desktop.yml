@@ -31,8 +31,8 @@ jobs:
           pyinstaller --noconfirm birdhouse.spec
       - uses: actions/upload-artifact@v4
         with:
-          name: BirdhousePrintShop-Windows
-          path: tools/birdhouse-print-shop/dist/BirdhousePrintShop.exe
+          name: BlakesBirdhouses-Windows
+          path: tools/birdhouse-print-shop/dist/BlakesBirdhouses.exe
 
   macos:
     runs-on: macos-latest
@@ -49,8 +49,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-desktop.txt
           pyinstaller --noconfirm birdhouse-mac.spec
-          ditto -c -k --sequesterRsrc --keepParent dist/BirdhousePrintShop.app dist/BirdhousePrintShop-macOS.zip
+          ditto -c -k --sequesterRsrc --keepParent dist/BlakesBirdhouses.app dist/BlakesBirdhouses-macOS.zip
       - uses: actions/upload-artifact@v4
         with:
-          name: BirdhousePrintShop-macOS
-          path: tools/birdhouse-print-shop/dist/BirdhousePrintShop-macOS.zip
+          name: BlakesBirdhouses-macOS
+          path: tools/birdhouse-print-shop/dist/BlakesBirdhouses-macOS.zip

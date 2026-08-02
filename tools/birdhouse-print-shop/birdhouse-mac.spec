@@ -41,7 +41,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='BirdhousePrintShop',
+    name='BlakesBirdhouses',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -62,18 +62,18 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name='BirdhousePrintShop',
+    name='BlakesBirdhouses',
 )
 
 app = BUNDLE(
     coll,
-    name='BirdhousePrintShop.app',
+    name='BlakesBirdhouses.app',
     icon=None,
-    bundle_identifier='com.birdhouseprintshop.app',
+    bundle_identifier='com.blakesbirdhouses.app',
     info_plist={
-        'CFBundleName': 'Birdhouse Print Shop',
-        'CFBundleDisplayName': 'Birdhouse Print Shop',
-        'CFBundleShortVersionString': '0.1.0',
+        'CFBundleName': "Blake's Birdhouses",
+        'CFBundleDisplayName': "Blake's Birdhouses",
+        'CFBundleShortVersionString': '0.2.0',
         'NSHighResolutionCapable': True,
     },
 )

@@ -40,12 +40,20 @@ def connect() -> sqlite3.Connection:
     return conn
 
 
+SEED_VERSION = "blakes-military-v1"
+
+
 def init_db(seed: bool = True) -> None:
     with connect() as conn:
         conn.executescript(schema_path().read_text(encoding="utf-8"))
         _ensure_settings(conn)
-        if seed and _is_empty(conn):
-            _seed(conn)
+        if seed:
+            current = get_setting(conn, "seed_version", "")
+            if current != SEED_VERSION:
+                _reset_business_data(conn)
+                _seed(conn)
+                set_setting(conn, "seed_version", SEED_VERSION)
+            set_setting(conn, "shop_name", "Blake's Birdhouses")
         conn.commit()
 
 
@@ -67,7 +75,7 @@ def _ensure_settings(conn: sqlite3.Connection) -> None:
         # Active labor $/hr (finishing/packing), not full printer runtime
         "hourly_rate": "20",
         "waste_factor": "0.05",
-        "shop_name": "Birdhouse Print Shop",
+        "shop_name": "Blake's Birdhouses",
     }
     for key, value in defaults.items():
         exists = conn.execute("SELECT 1 FROM settings WHERE key = ?", (key,)).fetchone()
@@ -75,27 +83,35 @@ def _ensure_settings(conn: sqlite3.Connection) -> None:
             set_setting(conn, key, value)
 
 
-def _is_empty(conn: sqlite3.Connection) -> bool:
-    row = conn.execute("SELECT COUNT(*) AS c FROM products").fetchone()
-    return row["c"] == 0
+def _reset_business_data(conn: sqlite3.Connection) -> None:
+    for table in (
+        "material_uses",
+        "jobs",
+        "order_items",
+        "orders",
+        "variants",
+        "products",
+        "materials",
+    ):
+        conn.execute(f"DELETE FROM {table}")
 
 
 def _seed(conn: sqlite3.Connection) -> None:
     conn.execute(
         "INSERT INTO products(name, description) VALUES (?, ?)",
-        ("Classic Wren", "Small traditional birdhouse for wrens"),
+        ("Patrol Nest", "Rugged field birdhouse — olive drab finish"),
     )
     conn.execute(
         "INSERT INTO products(name, description) VALUES (?, ?)",
-        ("Modern Box", "Clean-lined box birdhouse"),
+        ("Bunker Box", "Hardened roost box with camo plate lines"),
     )
 
     # est_hours = hands-on labor (finish/pack), not printer runtime
     variants = [
-        (1, "Small", "Forest Green", "WREN-S-GRN", 2800, 85, 0.35),
-        (1, "Small", "Barn Red", "WREN-S-RED", 2800, 85, 0.35),
-        (2, "Medium", "Slate Gray", "BOX-M-GRY", 4200, 140, 0.5),
-        (2, "Medium", "Cedar Brown", "BOX-M-BRN", 4200, 140, 0.5),
+        (1, "Standard", "Olive Drab", "PATROL-OD", 3200, 95, 0.4),
+        (1, "Standard", "Desert Tan", "PATROL-TAN", 3200, 95, 0.4),
+        (2, "Heavy", "Camo Green", "BUNKER-CAMO", 4500, 150, 0.55),
+        (2, "Heavy", "Coyote Brown", "BUNKER-COY", 4500, 150, 0.55),
     ]
     conn.executemany(
         "INSERT INTO variants(product_id, size, color_name, sku, sell_price_cents, est_grams, est_hours) "
@@ -104,11 +120,11 @@ def _seed(conn: sqlite3.Connection) -> None:
     )
 
     materials = [
-        ("PLA Forest Green", "filament", "Forest Green", 900, 22.0, 200),
-        ("PLA Barn Red", "filament", "Barn Red", 750, 22.0, 200),
-        ("PLA Slate Gray", "filament", "Slate Gray", 1100, 24.0, 200),
-        ("PLA Cedar Brown", "filament", "Cedar Brown", 600, 24.0, 200),
-        ("Mounting Hook", "hardware", "", 40, 0.35, 10),
+        ("PLA Olive Drab", "filament", "Olive Drab", 1000, 24.0, 200),
+        ("PLA Desert Tan", "filament", "Desert Tan", 850, 24.0, 200),
+        ("PLA Camo Green", "filament", "Camo Green", 900, 25.0, 200),
+        ("PLA Coyote Brown", "filament", "Coyote Brown", 700, 25.0, 200),
+        ("Field Mount Hook", "hardware", "", 50, 0.4, 10),
     ]
     conn.executemany(
         "INSERT INTO materials(name, kind, color, qty_on_hand, cost_per_unit, reorder_at) "
@@ -116,20 +132,31 @@ def _seed(conn: sqlite3.Connection) -> None:
         materials,
     )
 
-    conn.execute(
-        "INSERT INTO orders(order_number, channel, customer_label, status, due_date, notes) "
-        "VALUES (?, ?, ?, ?, ?, ?)",
-        ("BH-1001", "Etsy", "Etsy #88421", "Queued", "2026-08-08", "Gift wrap if possible"),
-    )
-    conn.execute(
-        "INSERT INTO order_items(order_id, variant_id, qty, unit_price_cents) VALUES (1, 1, 2, 2800)"
-    )
-    conn.execute(
-        "INSERT INTO jobs(order_item_id, status, printer_name) VALUES (1, 'Queued', 'Prusa-1')"
-    )
-    conn.execute(
-        "INSERT INTO jobs(order_item_id, status, printer_name) VALUES (1, 'Queued', 'Prusa-2')"
-    )
+    orders = [
+        ("BB-KAYLA", "Local", "Kayla", "Queued", "2026-08-10", "Patrol Nest — olive drab"),
+        ("BB-ELLIOT", "Etsy", "Elliot", "Printing", "2026-08-09", "Bunker Box — camo green"),
+        ("BB-EMMET", "Facebook", "Emmet", "Finishing", "2026-08-08", "Patrol Nest — desert tan"),
+    ]
+    for order_number, channel, customer, status, due, notes in orders:
+        cur = conn.execute(
+            "INSERT INTO orders(order_number, channel, customer_label, status, due_date, notes) "
+            "VALUES (?, ?, ?, ?, ?, ?)",
+            (order_number, channel, customer, status, due, notes),
+        )
+        order_id = cur.lastrowid
+        # Map customers to variants: Kayla=1, Elliot=3, Emmet=2
+        variant_id = {"Kayla": 1, "Elliot": 3, "Emmet": 2}[customer]
+        price = {1: 3200, 2: 3200, 3: 4500, 4: 4500}[variant_id]
+        item = conn.execute(
+            "INSERT INTO order_items(order_id, variant_id, qty, unit_price_cents) VALUES (?, ?, 1, ?)",
+            (order_id, variant_id, price),
+        )
+        job_status = {"Kayla": "Queued", "Elliot": "Printing", "Emmet": "Finishing"}[customer]
+        printer = {"Kayla": "Alpha-1", "Elliot": "Bravo-2", "Emmet": "Charlie-3"}[customer]
+        conn.execute(
+            "INSERT INTO jobs(order_item_id, status, printer_name) VALUES (?, ?, ?)",
+            (item.lastrowid, job_status, printer),
+        )
 
 
 def money(cents: int) -> str:
