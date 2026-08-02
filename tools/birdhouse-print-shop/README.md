@@ -41,6 +41,18 @@ If `cd tools/birdhouse-print-shop` fails, you are not in the NGC-Brain repo root
 
 SQLite DB path: `data/birdhouse.db` (created on first launch, seeded with sample catalog).
 
+## Text a demo link to a friend
+
+Friends can’t open `localhost` on your computer. Use a temporary public tunnel:
+
+```bash
+cd tools/birdhouse-print-shop
+./share.sh
+```
+
+Copy the `https://….trycloudflare.com` URL it prints and text that.  
+Keep the terminal open while they’re trying it — closing it kills the link.
+
 ## Backup
 
 Copy `data/birdhouse.db` anywhere. That’s the whole shop database.
