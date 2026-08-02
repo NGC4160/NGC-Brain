@@ -114,11 +114,11 @@ struct PaintShopView: View {
     private var gunPicker: some View {
         Menu {
             ForEach(library.guns) { gun in
-                Button(gun.name) { load(gun: gun) }
+                Button(gun.displayName) { load(gun: gun) }
             }
         } label: {
             HStack {
-                Text(blueprint.name.isEmpty ? "Select gun" : blueprint.name)
+                Text(blueprint.displayName.isEmpty ? "Select gun" : blueprint.displayName)
                     .font(.system(size: 16, weight: .bold, design: .rounded))
                 Spacer()
                 Image(systemName: "chevron.up.chevron.down")

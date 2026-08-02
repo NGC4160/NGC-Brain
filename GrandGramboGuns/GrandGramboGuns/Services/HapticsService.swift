@@ -4,11 +4,21 @@
 import UIKit
 
 enum HapticsService {
-    static func fire(enabled: Bool) {
+    static func fire(enabled: Bool, bodyType: GunBodyType = .pistol) {
         guard enabled else { return }
-        let gen = UIImpactFeedbackGenerator(style: .medium)
+        let style: UIImpactFeedbackGenerator.FeedbackStyle
+        let intensity: CGFloat
+        switch bodyType {
+        case .smg, .machineGun:
+            style = .light; intensity = 0.7
+        case .pistol, .rifle:
+            style = .medium; intensity = 0.95
+        case .shotgun, .sniper:
+            style = .heavy; intensity = 1.0
+        }
+        let gen = UIImpactFeedbackGenerator(style: style)
         gen.prepare()
-        gen.impactOccurred(intensity: 0.9)
+        gen.impactOccurred(intensity: intensity)
     }
 
     static func reload(enabled: Bool) {
@@ -28,5 +38,13 @@ enum HapticsService {
     static func select(enabled: Bool) {
         guard enabled else { return }
         UISelectionFeedbackGenerator().selectionChanged()
+    }
+
+    /// Target impact — light for paper, heavy for steel.
+    static func hit(enabled: Bool, heavy: Bool = false) {
+        guard enabled else { return }
+        let gen = UIImpactFeedbackGenerator(style: heavy ? .heavy : .rigid)
+        gen.prepare()
+        gen.impactOccurred(intensity: heavy ? 1.0 : 0.85)
     }
 }

@@ -11,7 +11,7 @@ enum ShareCardExporter {
     static func makeCard(for blueprint: GunBlueprint, size: CGSize = CGSize(width: 1080, height: 1350)) -> UIImage? {
         let sceneView = SCNView(frame: CGRect(origin: .zero, size: CGSize(width: 900, height: 700)))
         sceneView.scene = GunSceneBuilder.makeInspectScene(blueprint: blueprint)
-        sceneView.backgroundColor = UIColor(Color(GGGTheme.background))
+        sceneView.backgroundColor = UIColor(GGGTheme.background)
         sceneView.antialiasingMode = .multisampling4X
         sceneView.pointOfView = sceneView.scene?.rootNode.childNode(withName: "camera", recursively: true)
 
@@ -22,7 +22,7 @@ enum ShareCardExporter {
 
         let renderer = ImageRenderer(
             content: ShareCardView(
-                gunName: blueprint.name,
+                gunName: blueprint.displayName,
                 bodyLabel: blueprint.bodyType.displayName,
                 snapshot: Image(uiImage: snapshot)
             )

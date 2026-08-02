@@ -57,6 +57,15 @@ final class GunLibraryStore: ObservableObject {
         save()
     }
 
+    /// Sets a player nickname without changing catalog / shop identity (`name`).
+    func renameGun(id: UUID, displayName: String?) {
+        guard let idx = guns.firstIndex(where: { $0.id == id }) else { return }
+        guns[idx].customDisplayName = SavedGun.normalizedDisplayName(displayName)
+        guns[idx].updatedAt = Date()
+        sortGuns()
+        save()
+    }
+
     func deleteGun(id: UUID) {
         guns.removeAll { $0.id == id && $0.isStarter == false }
         paintJobs.removeAll { $0.gunID == id }
@@ -136,11 +145,15 @@ final class GunLibraryStore: ObservableObject {
     }
 
     private func ensureStarters() {
-        if guns.contains(where: { $0.isStarter }) { return }
-        for gun in SeedData.starterGuns() {
+        var changed = false
+        let existingNames = Set(guns.map(\.name))
+        for gun in SeedData.starterGuns() where !existingNames.contains(gun.name) {
             guns.append(gun)
+            changed = true
         }
-        sortGuns()
-        save()
+        if changed {
+            sortGuns()
+            save()
+        }
     }
 }

@@ -1,59 +1,51 @@
 # Grand Grambo Guns
 
-Offline arcade-style **virtual gun simulator & customizer** for iPhone (iOS 16+).
+Offline iPhone gun simulator inspired by shake-to-shoot utility apps — plus gun customization (skins, paint, attachments) and a 3D shooting range.
 
-Stylized video-game toy only — no real-world ballistics, construction details, multiplayer, or online features.
+**No ads. No tracking. Fully offline.**
 
-## Open in Xcode
+Requires **iOS 17+**, Xcode 15+.
 
-1. Copy / clone this folder onto a Mac with Xcode 15+.
-2. Open `GrandGramboGuns.xcodeproj`.
-3. Select an iPhone simulator or device (iPhone only).
-4. Set your Development Team under Signing if needed.
-5. Run (⌘R).
+## Play modes
 
-## Features
+| Mode | What it does |
+|---|---|
+| **Story Mode** | Campaign **Operation Iron Meridian** — walkable missions, ammo/medkits, enemies, MW3-style briefing tone (original story, not COD IP). |
+| **Shake to Shoot** | Hold the phone like a gun, shake to fire. Sound, haptics, screen flash, and rear torch muzzle flash. Reload when empty. |
+| **Shooting Range** | FPS-style outdoor range — drag aim, hold fire, static targets with bullet holes. |
+
+## Customize (kept extras)
 
 | Screen | What it does |
 |---|---|
-| **Main Hub** | Cinematic title + navigation to all modes |
-| **Armory** | Grid of starter + saved guns, 3D inspect, equip, share card |
-| **Build Gun** | Modular toy attachments with live SceneKit preview |
-| **Paint Shop** | Region layers, spray / fill / camo, color picker |
+| **Armory** | Category-filtered gun grid, inspect, equip → Shake or Range |
+| **Build Gun** | Body types + modular attachments with live 3D preview |
+| **Paint Shop** | Region layers, spray / fill / camo |
 | **Skins** | Premade finishes (matte, desert, camo, gold, chrome, neon…) |
-| **Range** | Arcade FPS-style range — hold to fire, recoil, targets, reload |
-| **Settings** | Volume, haptics, reset data / onboarding |
+| **Settings** | Volume, haptics, flashlight, shake sensitivity — **no ads** |
+
+## Gun categories
+
+Pistol · SMG · Rifle · Shotgun · Machine Gun · Sniper — each with distinct fire rate, sound, recoil, and mag size.
+
+## Open in Xcode
+
+1. Open `GrandGramboGuns.xcodeproj`
+2. Select an **iPhone** simulator or device
+3. Set Development Team under Signing if needed
+4. Run (⌘R)
+
+**Simulator note:** Shake detection is weak in Simulator — use the on-screen **FIRE** button. Torch flashlight only works on a real iPhone.
 
 ## Tech
 
-- **SwiftUI** navigation & UI
-- **SceneKit** procedural 3D guns, attachments, range room, simple physics
-- **FileManager + Codable** persistence for guns, paint jobs, skin history (iOS 16+)
-- **UserDefaults** for settings + first-run onboarding flags
-- Portrait + landscape, dark military theme with neon accents
-
-## Project layout
-
-```
-GrandGramboGuns/
-├── App/                 # Entry, AppState, RootView
-├── Models/              # Gun types, Codable models, seed data
-├── Scene3D/             # GunSceneBuilder, GunSceneView, RangeSceneView
-├── Services/            # Haptics, sound, settings, share exporter
-├── Views/
-│   ├── Hub/
-│   ├── Armory/
-│   ├── Build/
-│   ├── Paint/
-│   ├── Skins/
-│   ├── Range/
-│   ├── Settings/
-│   └── Shared/
-└── Assets.xcassets/
-```
+- SwiftUI + SceneKit procedural guns
+- CoreMotion shake detection
+- AVFoundation torch flash + procedural audio
+- FileManager + Codable persistence
 
 ## Notes
 
-- Guns are built from **procedural block geometry** (cartoon/arcade), not imported real firearm meshes.
-- Range scoring and recoil are intentionally arcade-simple.
-- Share card uses a SceneKit snapshot + SwiftUI `ImageRenderer`.
+- Guns are procedural game-style meshes (not imported real firearm CAD).
+- Arcade toy / prank simulator — not a training tool.
+- Share card uses SceneKit snapshot + `ImageRenderer`.

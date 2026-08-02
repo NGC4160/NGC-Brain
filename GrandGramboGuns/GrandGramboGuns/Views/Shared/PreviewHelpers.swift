@@ -12,6 +12,11 @@ struct MainHubView_Previews: PreviewProvider {
         .environmentObject(AppState())
         .environmentObject(SettingsStore())
         .environmentObject(GunLibraryStore())
+        .environmentObject(CampaignProgressStore())
+        .environmentObject(OperatorRosterStore())
+        .environmentObject(RankProgressStore())
+        .environmentObject(CombatCoinStore())
+        .environmentObject(FriendsStore())
         .preferredColorScheme(.dark)
     }
 }

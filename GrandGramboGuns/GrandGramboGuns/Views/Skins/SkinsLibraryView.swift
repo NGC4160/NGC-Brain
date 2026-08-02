@@ -6,6 +6,7 @@ import SwiftUI
 struct SkinsLibraryView: View {
     @EnvironmentObject private var settings: SettingsStore
     @EnvironmentObject private var library: GunLibraryStore
+    @EnvironmentObject private var coins: CombatCoinStore
 
     @State private var selectedGunID: UUID?
     @State private var blueprint = GunBlueprint()
@@ -21,11 +22,11 @@ struct SkinsLibraryView: View {
             VStack(spacing: 12) {
                 Menu {
                     ForEach(library.guns) { gun in
-                        Button(gun.name) { load(gun) }
+                        Button(gun.displayName) { load(gun) }
                     }
                 } label: {
                     HStack {
-                        Text(blueprint.name.isEmpty ? "Select gun" : "Skinning: \(blueprint.name)")
+                        Text(blueprint.displayName.isEmpty ? "Select gun" : "Skinning: \(blueprint.displayName)")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                         Spacer()
                         Image(systemName: "chevron.up.chevron.down")
@@ -57,7 +58,23 @@ struct SkinsLibraryView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 12) {
                         ForEach(PremadeSkinID.allCases) { skin in
+                            let unlocked = coins.isSkinUnlocked(skin)
                             Button {
+                                guard unlocked else {
+                                    if let shopID = ShopCatalog.skinShopID(for: skin),
+                                       let item = ShopCatalog.item(id: shopID) {
+                                        withAnimation {
+                                            appliedBanner = "Locked — \(item.price) CC in Shop"
+                                        }
+                                    } else {
+                                        withAnimation { appliedBanner = "Locked — unlock in Shop" }
+                                    }
+                                    HapticsService.select(enabled: settings.hapticsEnabled)
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+                                        withAnimation { appliedBanner = nil }
+                                    }
+                                    return
+                                }
                                 apply(skin)
                             } label: {
                                 VStack(alignment: .leading, spacing: 10) {
@@ -68,12 +85,27 @@ struct SkinsLibraryView: View {
                                             RoundedRectangle(cornerRadius: 12, style: .continuous)
                                                 .stroke(blueprint.premadeSkin == skin ? GGGTheme.neonAccent : .clear, lineWidth: 2)
                                         )
+                                        .overlay {
+                                            if !unlocked {
+                                                Image(systemName: "lock.fill")
+                                                    .font(.system(size: 18, weight: .bold))
+                                                    .foregroundStyle(.white.opacity(0.9))
+                                            }
+                                        }
+                                        .opacity(unlocked ? 1 : 0.55)
                                     Text(skin.displayName)
                                         .font(.system(size: 14, weight: .bold, design: .rounded))
                                         .foregroundStyle(.white)
-                                    Text(skin.pattern.rawValue.uppercased())
-                                        .font(.system(size: 10, weight: .semibold, design: .rounded))
-                                        .foregroundStyle(GGGTheme.steel)
+                                    if unlocked {
+                                        Text(skin.pattern.rawValue.uppercased())
+                                            .font(.system(size: 10, weight: .semibold, design: .rounded))
+                                            .foregroundStyle(GGGTheme.steel)
+                                    } else if let shopID = ShopCatalog.skinShopID(for: skin),
+                                              let item = ShopCatalog.item(id: shopID) {
+                                        Text("\(item.price) CC")
+                                            .font(.system(size: 10, weight: .heavy, design: .rounded))
+                                            .foregroundStyle(GGGTheme.neonAmber)
+                                    }
                                 }
                                 .padding(12)
                                 .background(GGGTheme.panelElevated)

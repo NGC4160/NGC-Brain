@@ -21,14 +21,32 @@ struct RootView: View {
         switch destination {
         case .armory:
             ArmoryView()
+        case .characters:
+            CharactersView()
         case .buildGun:
             BuildGunView()
         case .paintShop:
             PaintShopView()
         case .skins:
             SkinsLibraryView()
+        case .shakeShoot:
+            ShakeShootView()
         case .range:
             RangeView()
+        case .storyMode:
+            StoryModeView()
+        case .missionPlay(let missionID):
+            MissionPlayView(missionID: missionID)
+        case .multiplayer:
+            MultiplayerLobbyView()
+        case .battleRoyale:
+            BattleRoyaleLobbyView()
+        case .training:
+            TrainingView()
+        case .shop:
+            ShopView()
+        case .friends:
+            FriendsView()
         case .settings:
             SettingsView()
         }

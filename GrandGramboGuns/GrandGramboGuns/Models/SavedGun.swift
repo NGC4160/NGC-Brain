@@ -6,7 +6,10 @@ import Foundation
 
 struct SavedGun: Identifiable, Codable, Hashable {
     var id: UUID
+    /// Catalog / canonical name — used for shop unlock matching & combat stats.
     var name: String
+    /// Optional player nickname. UI prefers this over `name` when set.
+    var customDisplayName: String?
     var bodyTypeRaw: String
     /// [AttachmentSlot.rawValue: AttachmentPart.id]
     var attachmentsMap: [String: String]
@@ -19,6 +22,7 @@ struct SavedGun: Identifiable, Codable, Hashable {
     init(
         id: UUID = UUID(),
         name: String,
+        customDisplayName: String? = nil,
         bodyType: GunBodyType,
         attachments: [AttachmentSlot: String] = [:],
         premadeSkin: PremadeSkinID? = nil,
@@ -29,6 +33,7 @@ struct SavedGun: Identifiable, Codable, Hashable {
     ) {
         self.id = id
         self.name = name
+        self.customDisplayName = Self.normalizedDisplayName(customDisplayName)
         self.bodyTypeRaw = bodyType.rawValue
         self.attachmentsMap = Dictionary(uniqueKeysWithValues: attachments.map { ($0.key.rawValue, $0.value) })
         self.premadeSkinRaw = premadeSkin?.rawValue
@@ -36,6 +41,20 @@ struct SavedGun: Identifiable, Codable, Hashable {
         self.isStarter = isStarter
         self.createdAt = createdAt
         self.updatedAt = updatedAt
+    }
+
+    /// Name shown in Armory, equip UI, and mission HUD.
+    var displayName: String {
+        if let custom = Self.normalizedDisplayName(customDisplayName) {
+            return custom
+        }
+        return name
+    }
+
+    static func normalizedDisplayName(_ raw: String?) -> String? {
+        guard let raw else { return nil }
+        let trimmed = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : trimmed
     }
 
     var bodyType: GunBodyType {

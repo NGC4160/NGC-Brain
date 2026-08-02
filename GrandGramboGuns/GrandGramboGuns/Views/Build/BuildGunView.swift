@@ -8,11 +8,13 @@ struct BuildGunView: View {
     @EnvironmentObject private var appState: AppState
     @EnvironmentObject private var settings: SettingsStore
     @EnvironmentObject private var library: GunLibraryStore
+    @EnvironmentObject private var coins: CombatCoinStore
 
     @State private var blueprint = GunBlueprint()
     @State private var selectedSlot: AttachmentSlot = .optic
     @State private var showSavedAlert = false
     @State private var editingExistingID: UUID?
+    @State private var lockBanner: String?
 
     var body: some View {
         ZStack {
@@ -70,11 +72,23 @@ struct BuildGunView: View {
                         }
 
                         ForEach(AttachmentCatalog.parts(for: selectedSlot)) { part in
+                            let unlocked = coins.isAttachmentUnlocked(part.id)
                             partButton(
-                                title: part.name,
+                                title: unlocked ? part.name : "\(part.name) · LOCK",
                                 selected: blueprint.attachments[selectedSlot] == part.id,
-                                accent: part.accentColor
+                                accent: unlocked ? part.accentColor : GGGTheme.steel
                             ) {
+                                guard unlocked else {
+                                    if let shopID = ShopCatalog.attachmentShopID(forPartID: part.id),
+                                       let item = ShopCatalog.item(id: shopID) {
+                                        lockBanner = "\(part.name) — \(item.price) CC in Shop"
+                                    } else {
+                                        lockBanner = "\(part.name) is locked — unlock in Shop"
+                                    }
+                                    HapticsService.select(enabled: settings.hapticsEnabled)
+                                    return
+                                }
+                                lockBanner = nil
                                 blueprint.attachments[selectedSlot] = part.id
                                 HapticsService.attach(enabled: settings.hapticsEnabled)
                                 SoundService.shared.playAttach(volume: settings.soundVolume)
@@ -82,6 +96,14 @@ struct BuildGunView: View {
                         }
                     }
                     .padding()
+                }
+
+                if let lockBanner {
+                    Text(lockBanner)
+                        .font(.system(size: 13, weight: .semibold, design: .rounded))
+                        .foregroundStyle(GGGTheme.neonAmber)
+                        .padding(.horizontal)
+                        .padding(.bottom, 6)
                 }
 
                 Button("Save to Armory") {
@@ -181,19 +203,21 @@ struct BuildGunView: View {
         blueprint.name = name.isEmpty ? "Custom Build" : name
 
         let id = editingExistingID ?? blueprint.id
+        let existing = library.gun(id: id)
         var gun = SavedGun(
             id: id,
             name: blueprint.name,
+            customDisplayName: existing?.customDisplayName,
             bodyType: blueprint.bodyType,
             attachments: blueprint.attachments,
             premadeSkin: blueprint.premadeSkin ?? .matteBlack,
-            paintJobID: library.gun(id: id)?.paintJobID,
+            paintJobID: existing?.paintJobID,
             isStarter: false,
-            createdAt: library.gun(id: id)?.createdAt ?? Date(),
+            createdAt: existing?.createdAt ?? Date(),
             updatedAt: Date()
         )
         // Keep paint / skin from existing record if editing.
-        if let existing = library.gun(id: id) {
+        if let existing {
             gun.premadeSkin = existing.premadeSkin ?? gun.premadeSkin
             gun.paintJobID = existing.paintJobID
         }

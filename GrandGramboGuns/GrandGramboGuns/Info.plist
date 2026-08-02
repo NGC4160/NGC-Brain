@@ -42,5 +42,9 @@
 	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Used only to flash the torch for muzzle-flash effect while shooting. No photos or video are captured.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Motion data detects phone shakes so you can shake to shoot.</string>
 </dict>
 </plist>
