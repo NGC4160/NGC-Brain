@@ -72,7 +72,7 @@ Board-aligned pack (July 2026 CFO/CEO Boardroom Report). Recruit Admin to remove
 | Doc | File | Use |
 |-----|------|-----|
 | Ryan 2-week time log | [NGC_Admin_Ryan_Time_Log.html](NGC_Admin_Ryan_Time_Log.html) | Verify transferable admin ≥~6–8 hrs/wk |
-| Job description + Indeed post | [NGC_Admin_Job_Description.md](NGC_Admin_Job_Description.md) | Posting + internal JD |
+| Job description + Indeed post | [NGC_Admin_Job_Description.md](NGC_Admin_Job_Description.md) · [PDF](NGC_Admin_Job_Description.pdf) · [HTML](NGC_Admin_Job_Description.html) | Posting + internal JD |
 | Phone + desk eval scorecard | [NGC_Admin_Phone_and_Desk_Eval_Scorecard.html](NGC_Admin_Phone_and_Desk_Eval_Scorecard.html) | Part A phone → Part B desk tryout |
 | Front-office SOPs | [NGC_Admin_Front_Office_SOPs.md](NGC_Admin_Front_Office_SOPs.md) | Wait codes, estimates, approvals, triage |
 | Weekly KPI + 30/60/90 | [NGC_Admin_KPI_and_Review.html](NGC_Admin_KPI_and_Review.html) | Track so role doesn’t become overhead |
