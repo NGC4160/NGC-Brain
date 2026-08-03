@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-31T21:57:26Z",
+  "generated_at": "2026-08-03T03:04:07Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 120,
+  "total_items": 125,
   "sections": [
     {
       "id": "start",
@@ -508,6 +508,66 @@
             "document",
             "hiring",
             "pdf"
+          ]
+        },
+        {
+          "title": "Ryan Admin Time Log (2 weeks)",
+          "description": "Hiring gate \u2014 quantify transferable admin hours before / during Admin recruiting",
+          "path": "external_docs/templates/hiring/NGC_Admin_Ryan_Time_Log.html",
+          "type": "html",
+          "view": "documents/hiring/admin-ryan-time-log.html",
+          "tags": [
+            "document",
+            "hiring",
+            "html"
+          ]
+        },
+        {
+          "title": "Admin / Service Coordinator job description",
+          "description": "Internal JD + Indeed posting copy \u00b7 ~$15/hr planning \u00b7 Gusto for new-hire packet",
+          "path": "external_docs/templates/hiring/NGC_Admin_Job_Description.md",
+          "type": "markdown",
+          "view": "view.html?path=documents/hiring/NGC_Admin_Job_Description.md",
+          "tags": [
+            "document",
+            "hiring",
+            "markdown"
+          ]
+        },
+        {
+          "title": "Admin Phone + Desk Eval Scorecard",
+          "description": "Part A phone screen \u2192 Part B desk tryout \u00b7 Print / Save PDF",
+          "path": "external_docs/templates/hiring/NGC_Admin_Phone_and_Desk_Eval_Scorecard.html",
+          "type": "html",
+          "view": "documents/hiring/admin-phone-desk-eval.html",
+          "tags": [
+            "document",
+            "hiring",
+            "html"
+          ]
+        },
+        {
+          "title": "Admin front-office SOPs",
+          "description": "Wait codes, standard estimates, approval follow-up, triage, marketing URL checks",
+          "path": "external_docs/templates/hiring/NGC_Admin_Front_Office_SOPs.md",
+          "type": "markdown",
+          "view": "view.html?path=documents/hiring/NGC_Admin_Front_Office_SOPs.md",
+          "tags": [
+            "document",
+            "hiring",
+            "markdown"
+          ]
+        },
+        {
+          "title": "Admin Weekly KPI + 30/60/90 Review",
+          "description": "Board KPIs weekly \u00b7 milestone review so role doesn\u2019t become overhead",
+          "path": "external_docs/templates/hiring/NGC_Admin_KPI_and_Review.html",
+          "type": "html",
+          "view": "documents/hiring/admin-kpi-review.html",
+          "tags": [
+            "document",
+            "hiring",
+            "html"
           ]
         },
         {

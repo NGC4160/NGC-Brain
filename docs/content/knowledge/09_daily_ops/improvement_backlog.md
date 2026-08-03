@@ -52,6 +52,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | Date | Item |
 |------|------|
+| 2026-08-03 | Admin hiring pack drafted (time log, JD, phone+desk eval, SOPs, KPI/30-60-90); Gusto = new-hire packet |
 | 2026-07-13 | Pickup policy finalized — free 40 mi Northshore; $99 flat outside/Southshore |
 | 2026-07-13 | Customer-supplied lithium install kept at $549 |
 | 2026-07-13 | Finance overview refreshed from live QBO morning sync |

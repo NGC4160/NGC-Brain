@@ -28,6 +28,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-07-26 | Hands-on shop eval scorecard added — next step after phone ADVANCE; pairs with 120/120/60 hiring quiz | Ryan | `NGC_Technician_Hands_On_Eval_Scorecard.pdf` |
 | 2026-07-26 | Written hiring quiz locked v1.0 — 40Q / 120 pts / 75% pass / ★ safety hard-fail; 8 critique loops | Ryan | `NGC_Technician_Hiring_Quiz.pdf` |
 | 2026-07-26 | GarageBuddy cloned as submodule for open-source DMS eval; Command Center Systems + Tools links added | Ryan | `tools/GarageBuddy` · setup: `scripts/garagebuddy/setup.sh` · not production |
+| 2026-08-03 | Admin / Service Coordinator hiring pack drafted (time log, JD, phone+desk eval, front-office SOPs, weekly KPI + 30/60/90); new-hire packet via **Gusto** | Ryan | Templates: `external_docs/templates/hiring/NGC_Admin_*` · Board Jul 2026 scope/KPIs |
 
 ---
 
