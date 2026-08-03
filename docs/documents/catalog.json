@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T03:04:07.251083+00:00",
+  "generated_at": "2026-08-03T03:29:49.109859+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan & Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",
@@ -153,6 +153,36 @@
       "href": "view.html?path=documents/hiring/NGC_Admin_Job_Description.md",
       "source": "external_docs/templates/hiring/NGC_Admin_Job_Description.md",
       "deploy_path": "documents/hiring/NGC_Admin_Job_Description.md",
+      "external": false,
+      "notes": ""
+    },
+    {
+      "id": "admin-job-description-pdf",
+      "category": "hiring",
+      "title": "Admin job description (PDF)",
+      "description": "Printable PDF \u2014 internal JD, Indeed posting, screening questions",
+      "type": "pdf",
+      "audience": "Ryan / Christine",
+      "status": "active",
+      "featured": true,
+      "href": "documents/hiring/NGC_Admin_Job_Description.pdf",
+      "source": "external_docs/templates/hiring/NGC_Admin_Job_Description.pdf",
+      "deploy_path": "documents/hiring/NGC_Admin_Job_Description.pdf",
+      "external": false,
+      "notes": ""
+    },
+    {
+      "id": "admin-job-description-html",
+      "category": "hiring",
+      "title": "Admin job description (HTML)",
+      "description": "Printable HTML source for the JD PDF \u2014 Print / Save PDF",
+      "type": "html",
+      "audience": "Ryan / Christine",
+      "status": "active",
+      "featured": false,
+      "href": "documents/hiring/admin-job-description.html",
+      "source": "external_docs/templates/hiring/NGC_Admin_Job_Description.html",
+      "deploy_path": "documents/hiring/admin-job-description.html",
       "external": false,
       "notes": ""
     },
@@ -368,8 +398,8 @@
     }
   ],
   "counts": {
-    "total": 22,
-    "active": 18,
+    "total": 24,
+    "active": 20,
     "planned": 4
   }
 }

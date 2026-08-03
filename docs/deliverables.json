@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-03T03:04:07Z",
+  "generated_at": "2026-08-03T03:29:49Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 125,
+  "total_items": 127,
   "sections": [
     {
       "id": "start",
@@ -532,6 +532,30 @@
             "document",
             "hiring",
             "markdown"
+          ]
+        },
+        {
+          "title": "Admin job description (PDF)",
+          "description": "Printable PDF \u2014 internal JD, Indeed posting, screening questions",
+          "path": "external_docs/templates/hiring/NGC_Admin_Job_Description.pdf",
+          "type": "pdf",
+          "view": "documents/hiring/NGC_Admin_Job_Description.pdf",
+          "tags": [
+            "document",
+            "hiring",
+            "pdf"
+          ]
+        },
+        {
+          "title": "Admin job description (HTML)",
+          "description": "Printable HTML source for the JD PDF \u2014 Print / Save PDF",
+          "path": "external_docs/templates/hiring/NGC_Admin_Job_Description.html",
+          "type": "html",
+          "view": "documents/hiring/admin-job-description.html",
+          "tags": [
+            "document",
+            "hiring",
+            "html"
           ]
         },
         {
