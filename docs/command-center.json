@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T03:04:07.321455+00:00",
+  "generated_at": "2026-08-03T03:29:33.536589+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-08-03T03:04:07.286273+00:00",
+    "generated_at": "2026-08-03T03:29:33.509498+00:00",
     "jobs_synced_at": "2026-08-02T14:45:14.252035+00:00",
     "has_live_data": true,
     "metrics": {
@@ -490,6 +490,14 @@
       "category": "Team & systems"
     },
     {
+      "priority": "P1",
+      "name": "Hire Admin / Service Coordinator (Board Jul 2026)",
+      "why": "Free Ryan for diagnostics/training/QC; pack drafted",
+      "owner": "Ryan / Christine",
+      "status": "Docs ready \u2014 recruit",
+      "category": "Team & systems"
+    },
+    {
       "priority": "P2",
       "name": "Peyton diagnostics \u2014 when to loop in (clear trigger)",
       "why": "Avoid bottleneck or underuse",
@@ -714,7 +722,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "19 tracked projects \u00b7 P1\u2013P3",
+          "desc": "20 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },
@@ -744,7 +752,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "125 indexed deliverables",
+          "desc": "127 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -774,10 +782,10 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "18 active \u00b7 4 planned \u2014 all categories",
+          "desc": "20 active \u00b7 4 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "18 docs"
+          "badge": "20 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
@@ -807,6 +815,12 @@
           "title": "Admin / Service Coordinator job description",
           "desc": "Internal JD + Indeed posting copy \u00b7 ~$15/hr planning \u00b7 Gusto for new-hire packet",
           "href": "view.html?path=documents/hiring/NGC_Admin_Job_Description.md",
+          "external": false
+        },
+        {
+          "title": "Admin job description (PDF)",
+          "desc": "Printable PDF \u2014 internal JD, Indeed posting, screening questions",
+          "href": "documents/hiring/NGC_Admin_Job_Description.pdf",
           "external": false
         },
         {
@@ -907,9 +921,9 @@
     }
   ],
   "documents": {
-    "active": 18,
+    "active": 20,
     "planned": 4,
     "categories": 5
   },
-  "manifest_total": 125
+  "manifest_total": 127
 }
