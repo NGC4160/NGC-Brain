@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T14:45:18.068454+00:00",
+  "generated_at": "2026-08-03T03:04:07.321455+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -9,7 +9,7 @@
     "Christine White"
   ],
   "ops": {
-    "generated_at": "2026-08-02T14:45:18.033823+00:00",
+    "generated_at": "2026-08-03T03:04:07.286273+00:00",
     "jobs_synced_at": "2026-08-02T14:45:14.252035+00:00",
     "has_live_data": true,
     "metrics": {
@@ -28,7 +28,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 89,
+          "days": 90,
           "lithium": true,
           "status": "in progress"
         }
@@ -37,28 +37,28 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 89,
+          "days": 90,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17260",
           "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 88,
+          "days": 89,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17109-2",
           "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 67,
+          "days": 68,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17353",
           "description": "***SEE NOTES***",
-          "days": 27,
+          "days": 28,
           "lithium": false,
           "status": "in progress"
         }
@@ -744,7 +744,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "120 indexed deliverables",
+          "desc": "125 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -774,10 +774,10 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "13 active \u00b7 4 planned \u2014 all categories",
+          "desc": "18 active \u00b7 4 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "13 docs"
+          "badge": "18 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
@@ -795,6 +795,30 @@
           "title": "Technician Hiring Quiz (Written)",
           "desc": "40 questions \u00b7 120 pts \u00b7 pass 75% \u00b7 entry-level \u00b7 critical safety rule",
           "href": "documents/hiring/NGC_Technician_Hiring_Quiz.pdf",
+          "external": false
+        },
+        {
+          "title": "Ryan Admin Time Log (2 weeks)",
+          "desc": "Hiring gate \u2014 quantify transferable admin hours before / during Admin recruiting",
+          "href": "documents/hiring/admin-ryan-time-log.html",
+          "external": false
+        },
+        {
+          "title": "Admin / Service Coordinator job description",
+          "desc": "Internal JD + Indeed posting copy \u00b7 ~$15/hr planning \u00b7 Gusto for new-hire packet",
+          "href": "view.html?path=documents/hiring/NGC_Admin_Job_Description.md",
+          "external": false
+        },
+        {
+          "title": "Admin Phone + Desk Eval Scorecard",
+          "desc": "Part A phone screen \u2192 Part B desk tryout \u00b7 Print / Save PDF",
+          "href": "documents/hiring/admin-phone-desk-eval.html",
+          "external": false
+        },
+        {
+          "title": "Admin Weekly KPI + 30/60/90 Review",
+          "desc": "Board KPIs weekly \u00b7 milestone review so role doesn\u2019t become overhead",
+          "href": "documents/hiring/admin-kpi-review.html",
           "external": false
         },
         {
@@ -883,9 +907,9 @@
     }
   ],
   "documents": {
-    "active": 13,
+    "active": 18,
     "planned": 4,
     "categories": 5
   },
-  "manifest_total": 120
+  "manifest_total": 125
 }

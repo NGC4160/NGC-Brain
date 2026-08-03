@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGC Admin Phone Interview & Desk Eval Scorecard</title>
+  <style>
+    :root {
+      --ngc-blue: #1a4d7a;
+      --ngc-blue-light: #2d6ba3;
+      --ngc-green: #6faa2d;
+      --ngc-green-dark: #3d6b12;
+      --gate: #8a5a00;
+      --border: #c5d4e3;
+      --text: #1a1a1a;
+      --muted: #555;
+      --light-bg: #f4f7fb;
+      --gate-bg: #fff6e8;
+      --pass-bg: #eef7e4;
+      --fail-bg: #f8ecec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Calibri, Arial, sans-serif;
+      font-size: 9.5pt; color: var(--text); line-height: 1.3;
+      margin: 0; padding: 0; background: #e8eef4;
+    }
+    .toolbar {
+      position: sticky; top: 0; z-index: 20;
+      display: flex; gap: 10px; justify-content: flex-end; align-items: center;
+      padding: 12px 16px; background: var(--ngc-blue); color: #fff;
+    }
+    .toolbar span { margin-right: auto; font-weight: 600; }
+    .toolbar button {
+      background: var(--ngc-green); color: #fff; border: none;
+      padding: 10px 18px; font-size: 12pt; font-weight: 800;
+      border-radius: 8px; cursor: pointer;
+    }
+    .sheet {
+      max-width: 8.5in; margin: 16px auto; background: #fff;
+      padding: 0.4in 0.5in; box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+    @page { size: letter; margin: 0.3in 0.35in; }
+    @media print {
+      body { background: #fff; font-size: 8pt; }
+      .toolbar, .no-print { display: none !important; }
+      .sheet { margin: 0; padding: 0; box-shadow: none; max-width: none; }
+      .page-break { break-before: page; page-break-before: always; }
+      .score-row { break-inside: avoid; }
+    }
+    .header { display: flex; justify-content: space-between; gap: 12px; }
+    .header h1 { margin: 0; font-size: 13pt; color: var(--ngc-blue); }
+    .header .doc-name { margin: 2px 0 0; font-size: 10.5pt; font-weight: 700; color: var(--ngc-blue); }
+    .header-right { text-align: right; color: var(--muted); font-size: 8pt; }
+    .header-right strong { display: block; color: var(--ngc-blue); font-size: 9pt; }
+    hr.rule { border: none; border-top: 2.5px solid var(--ngc-blue); margin: 6px 0 8px; }
+    .purpose { font-size: 8.5pt; margin: 0 0 8px; }
+    .meta-grid {
+      display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 6px 8px;
+      background: var(--light-bg); border: 1px solid var(--border);
+      padding: 6px 8px; margin-bottom: 8px;
+    }
+    label.field {
+      display: block; font-size: 7pt; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted);
+    }
+    input[type="text"], input[type="date"], input[type="tel"], input[type="number"], textarea {
+      width: 100%; font: inherit; padding: 3px 5px;
+      border: 1px solid var(--border); border-radius: 3px;
+    }
+    textarea { min-height: 32px; resize: vertical; }
+    .scale { font-size: 8pt; color: var(--muted); margin: 0 0 6px; }
+    .section { margin-bottom: 8px; }
+    .section-head {
+      background: var(--ngc-blue); color: #fff; font-size: 9pt; font-weight: 700;
+      padding: 4px 7px; margin-bottom: 4px;
+    }
+    .section-head.gate { background: var(--gate); }
+    .section-head.decision { background: var(--ngc-green-dark); }
+    .ask, .say, .hint { font-size: 8.5pt; margin: 0 0 3px; }
+    .hint { color: var(--muted); font-style: italic; }
+    .score-row {
+      display: grid; grid-template-columns: 1fr 130px; gap: 6px;
+      margin: 4px 0; align-items: stretch;
+    }
+    .score-main {
+      border: 1px solid var(--border); background: #fff; padding: 5px 7px;
+    }
+    .score-main strong { font-size: 9pt; }
+    .score-main .guide { font-size: 7.5pt; color: var(--muted); margin-top: 2px; }
+    .score-box {
+      border: 1px solid var(--border); background: var(--light-bg);
+      padding: 4px; text-align: center;
+    }
+    .score-box .lbl { font-size: 7pt; font-weight: 700; color: var(--muted); margin-bottom: 2px; }
+    .score-opts { display: flex; justify-content: space-around; gap: 2px; }
+    .score-opts label { font-size: 8pt; font-weight: 700; cursor: pointer; }
+    .scenario {
+      border: 1px solid var(--border); padding: 6px 8px; margin: 4px 0;
+      background: var(--light-bg); font-size: 8.5pt;
+    }
+    .scenario strong { color: var(--ngc-blue); }
+    .totals {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 6px 0;
+    }
+    .totals .cell {
+      border: 1px solid var(--border); background: var(--light-bg);
+      padding: 4px; text-align: center;
+    }
+    .totals .k { font-size: 7pt; color: var(--muted); text-transform: uppercase; font-weight: 700; }
+    .decision-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin: 6px 0; }
+    .decision-grid label {
+      border: 2px solid var(--border); padding: 8px; display: block; cursor: pointer;
+      font-size: 8.5pt;
+    }
+    .decision-grid label.pass { background: var(--pass-bg); }
+    .decision-grid label.look { background: var(--gate-bg); }
+    .decision-grid label.no { background: var(--fail-bg); }
+    .decision-grid strong { display: block; font-size: 10pt; margin-bottom: 2px; }
+    .footer { margin-top: 8px; font-size: 7.5pt; color: var(--muted); }
+    .checks { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 8pt; margin: 3px 0; }
+  </style>
+</head>
+<body>
+  <div class="toolbar no-print">
+    <span>NGC · Admin Phone + Desk Eval (print / save PDF)</span>
+    <button type="button" onclick="window.print()">Print / Save PDF</button>
+  </div>
+
+  <div class="sheet">
+    <div class="header">
+      <div>
+        <h1>Neighborhood Golf Carts</h1>
+        <p class="doc-name">Admin / Service Coordinator — Phone Interview Scorecard</p>
+      </div>
+      <div class="header-right">
+        <strong>Part A · 15–20 min</strong>
+        Indeed logistics already cleared<br />
+        Advance → Desk eval (Part B)
+      </div>
+    </div>
+    <hr class="rule" />
+
+    <p class="purpose">
+      Score transferable front-office skill: phone triage, follow-through, systems comfort, escalation judgment, and coachability.
+      Golf cart knowledge is a <strong>bonus, not a gate</strong>.
+    </p>
+
+    <div class="meta-grid">
+      <div><label class="field">Candidate</label><input type="text" /></div>
+      <div><label class="field">Date</label><input type="date" /></div>
+      <div><label class="field">Interviewer</label><input type="text" placeholder="Ryan / Christine" /></div>
+      <div><label class="field">Indeed / source</label><input type="text" /></div>
+    </div>
+
+    <p class="scale"><strong>Scale:</strong> 1 = Weak · 2 = Mixed · 3 = Solid · 4 = Strong. Target advance: most scores ≥ 3, no critical 1s.</p>
+
+    <!-- A -->
+    <div class="section">
+      <div class="section-head">A · Phone presence & customer tone</div>
+      <p class="ask"><strong>Ask:</strong> “Walk me through how you’d answer a busy shop phone when two people are waiting.”</p>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Clear, calm, professional</strong>
+          <div class="guide">4 = Confident + warm · 3 = Clear enough · 2 = Flat/rambling · 1 = Unprofessional or hard to follow</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="a" value="1" /> 1</label>
+            <label><input type="radio" name="a" value="2" /> 2</label>
+            <label><input type="radio" name="a" value="3" /> 3</label>
+            <label><input type="radio" name="a" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- B -->
+    <div class="section">
+      <div class="section-head">B · Triage & escalation judgment</div>
+      <p class="ask"><strong>Ask:</strong> “A customer says their cart won’t go and wants you to tell them what’s wrong over the phone. What do you do?”</p>
+      <p class="hint">Listen for: schedule shop diagnostic, don’t guess diagnosis, know when to pull Ryan in for upset/complex cases.</p>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Routes correctly; doesn’t fake technical answers</strong>
+          <div class="guide">4 = Crisp triage + escalate rules · 3 = Mostly right · 2 = Guesses diagnosis · 1 = Promises mobile / invents fixes</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="b" value="1" /> 1</label>
+            <label><input type="radio" name="b" value="2" /> 2</label>
+            <label><input type="radio" name="b" value="3" /> 3</label>
+            <label><input type="radio" name="b" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="section">
+      <div class="section-head">C · Follow-through & organization</div>
+      <p class="ask"><strong>Ask:</strong> “How do you keep track of callbacks so nothing sits overnight?”</p>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Systems for open loops (lists, CRM, end-of-day sweep)</strong>
+          <div class="guide">4 = Specific daily system · 3 = Sensible habit · 2 = Vague “I remember” · 1 = No method</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="c" value="1" /> 1</label>
+            <label><input type="radio" name="c" value="2" /> 2</label>
+            <label><input type="radio" name="c" value="3" /> 3</label>
+            <label><input type="radio" name="c" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- D -->
+    <div class="section">
+      <div class="section-head">D · Estimates & money conversations</div>
+      <p class="ask"><strong>Ask:</strong> “You’re asking a customer to approve a repair estimate. How do you explain it and what do you do if they say they’ll think about it?”</p>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Plain language; documents decision; schedules follow-up</strong>
+          <div class="guide">4 = Clear + next step · 3 = Adequate · 2 = Awkward / avoids ask · 1 = Pressures or can’t close loop</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="d" value="1" /> 1</label>
+            <label><input type="radio" name="d" value="2" /> 2</label>
+            <label><input type="radio" name="d" value="3" /> 3</label>
+            <label><input type="radio" name="d" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- E -->
+    <div class="section">
+      <div class="section-head gate">E · Policy integrity (gate — must be ≥ 3)</div>
+      <p class="say"><strong>Say:</strong> “We’re shop-only — no mobile service. Diagnostic is $179 minimum. Pickup is free within 40 miles Northshore; $99 outside or Southshore. You never invent a price.”</p>
+      <p class="ask"><strong>Ask:</strong> “A customer asks you to send someone to their house today and waive the diagnostic. What do you say?”</p>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Holds shop-only + diagnostic policy without sounding rude</strong>
+          <div class="guide">4 = Firm + helpful alternatives · 3 = Holds policy · 2 = Waffles · 1 = Agrees to mobile / waiver</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="e" value="1" /> 1</label>
+            <label><input type="radio" name="e" value="2" /> 2</label>
+            <label><input type="radio" name="e" value="3" /> 3</label>
+            <label><input type="radio" name="e" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- F -->
+    <div class="section">
+      <div class="section-head">F · Systems / learning speed</div>
+      <p class="ask"><strong>Ask:</strong> “What software have you used for scheduling, CRM, or estimates? How do you learn a new system?”</p>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Comfort with tools; coachable on Housecall Pro</strong>
+          <div class="guide">4 = Relevant tools + learning plan · 3 = Willing + examples · 2 = Avoids software · 1 = Resistant</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="f" value="1" /> 1</label>
+            <label><input type="radio" name="f" value="2" /> 2</label>
+            <label><input type="radio" name="f" value="3" /> 3</label>
+            <label><input type="radio" name="f" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- G -->
+    <div class="section">
+      <div class="section-head">G · Coachability & ownership</div>
+      <p class="ask"><strong>Ask:</strong> “Tell me about a time you made a customer or paperwork mistake. What did you do next?”</p>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Owns mistakes; wants feedback; doesn’t blame</strong>
+          <div class="guide">4 = Specific ownership · 3 = Acceptable · 2 = Defensive · 1 = Blames others / no example</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="g" value="1" /> 1</label>
+            <label><input type="radio" name="g" value="2" /> 2</label>
+            <label><input type="radio" name="g" value="3" /> 3</label>
+            <label><input type="radio" name="g" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="totals">
+      <div class="cell"><div class="k">A–G sum (max 28)</div><input type="number" min="0" max="28" /></div>
+      <div class="cell"><div class="k">Average</div><input type="text" placeholder="e.g. 3.1" /></div>
+      <div class="cell"><div class="k">Gate E ≥ 3?</div><input type="text" placeholder="Y / N" /></div>
+      <div class="cell"><div class="k">Red flags?</div><input type="text" /></div>
+    </div>
+
+    <div class="section">
+      <div class="section-head decision">Part A decision</div>
+      <div class="decision-grid">
+        <label class="pass"><input type="radio" name="decA" /> <strong>ADVANCE</strong> Schedule desk eval</label>
+        <label class="look"><input type="radio" name="decA" /> <strong>SECOND LOOK</strong> Christine reviews</label>
+        <label class="no"><input type="radio" name="decA" /> <strong>PASS</strong> Not a fit</label>
+      </div>
+      <label class="field">Notes</label>
+      <textarea></textarea>
+    </div>
+
+    <p class="footer">Part A · Admin hiring · Neighborhood Golf Carts · New-hire paperwork via Gusto after offer</p>
+
+    <!-- PAGE 2 DESK EVAL -->
+    <div class="page-break"></div>
+
+    <div class="header">
+      <div>
+        <h1>Neighborhood Golf Carts</h1>
+        <p class="doc-name">Admin / Service Coordinator — Desk Skills Evaluation</p>
+      </div>
+      <div class="header-right">
+        <strong>Part B · 45–60 min</strong>
+        Only after Part A ADVANCE<br />
+        Same 1–4 scale
+      </div>
+    </div>
+    <hr class="rule" />
+
+    <div class="meta-grid">
+      <div><label class="field">Candidate</label><input type="text" /></div>
+      <div><label class="field">Date</label><input type="date" /></div>
+      <div><label class="field">Evaluator</label><input type="text" /></div>
+      <div><label class="field">Phone avg (Part A)</label><input type="text" /></div>
+    </div>
+
+    <p class="purpose">Live tryout at the desk (or table). Provide pricebook cheat sheet + wait-code list. Candidate may ask clarifying questions.</p>
+
+    <div class="section">
+      <div class="section-head">D1 · Sample call (role-play)</div>
+      <div class="scenario">
+        <strong>Scenario:</strong> Customer near Mandeville — cart dead, wants someone at the house this afternoon, asks if diagnostic is free because “it’s probably just a battery.”
+        <br /><strong>Watch for:</strong> Shop-only; $179 diagnostic toward repair on known-issue jobs; offer pickup (free if ≤40 mi Northshore / $99 otherwise); schedule intake; no fake diagnosis.
+      </div>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Call handling accuracy + tone</strong>
+          <div class="guide">4 = Policy-perfect + warm · 3 = Minor miss · 2 = Major policy miss · 1 = Offers mobile / waives diagnostic</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="d1" value="1" /> 1</label>
+            <label><input type="radio" name="d1" value="2" /> 2</label>
+            <label><input type="radio" name="d1" value="3" /> 3</label>
+            <label><input type="radio" name="d1" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">D2 · Standard estimate from findings</div>
+      <div class="scenario">
+        <strong>Give candidate:</strong> “Club Car Precedent — tech notes: needs solenoid + 1 hr labor. Pricebook: solenoid $___ (use current HCP line), labor $125/hr. Diagnostic already charged.”
+        <br /><strong>Task:</strong> Draft a plain-language estimate summary (line items + total + what to say on the approval call). Escalate if anything looks non-standard.
+      </div>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Estimate clarity & pricing discipline</strong>
+          <div class="guide">4 = Clean lines + script · 3 = Usable · 2 = Math/structure errors · 1 = Invents prices / skips escalate</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="d2" value="1" /> 1</label>
+            <label><input type="radio" name="d2" value="2" /> 2</label>
+            <label><input type="radio" name="d2" value="3" /> 3</label>
+            <label><input type="radio" name="d2" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">D3 · Approval follow-up</div>
+      <div class="scenario">
+        <strong>Scenario:</strong> Estimate sent yesterday; no response. Role-play the follow-up call/text. Customer says “I need to talk to my spouse.”
+        <br /><strong>Watch for:</strong> Documents decision in HCP language; sets next contact time; doesn’t nag or give up.
+      </div>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Follow-up quality & documentation habit</strong>
+          <div class="guide">4 = Clear ask + next step logged · 3 = Adequate · 2 = Soft / no log · 1 = Argumentative or drops ball</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="d3" value="1" /> 1</label>
+            <label><input type="radio" name="d3" value="2" /> 2</label>
+            <label><input type="radio" name="d3" value="3" /> 3</label>
+            <label><input type="radio" name="d3" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">D4 · Wait-code coding</div>
+      <div class="scenario">
+        <strong>Task:</strong> Assign the correct wait code to each cart:<br />
+        1) Customer hasn’t approved estimate · 2) Solenoid on order from vendor · 3) Marlon free tomorrow, job ready · 4) Roy picking up Friday · 5) Waiting on Ryan for lithium scope question
+        <br /><strong>Codes:</strong> AUTH · PARTS · TECH · PICKUP · OTHER (document reason)
+      </div>
+      <div class="checks">
+        <label><input type="checkbox" /> 1 = AUTH</label>
+        <label><input type="checkbox" /> 2 = PARTS</label>
+        <label><input type="checkbox" /> 3 = TECH</label>
+        <label><input type="checkbox" /> 4 = PICKUP</label>
+        <label><input type="checkbox" /> 5 = OTHER (Ryan/scope)</label>
+      </div>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Workflow visibility / coding accuracy</strong>
+          <div class="guide">4 = 5/5 · 3 = 4/5 · 2 = 3/5 · 1 = ≤2/5</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="d4" value="1" /> 1</label>
+            <label><input type="radio" name="d4" value="2" /> 2</label>
+            <label><input type="radio" name="d4" value="3" /> 3</label>
+            <label><input type="radio" name="d4" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head gate">D5 · Deposit / special-order gate (≥ 3 required)</div>
+      <div class="scenario">
+        <strong>Ask:</strong> “Customer wants us to order a lithium kit / batteries today. What must happen before we order?”
+        <br /><strong>Listen for:</strong> Deposit covering material + processing fees before order; escalate amount questions to Christine/Ryan.
+      </div>
+      <div class="score-row">
+        <div class="score-main">
+          <strong>Deposit discipline before ordering parts</strong>
+          <div class="guide">4 = Clear deposit gate · 3 = Knows deposit required · 2 = Fuzzy · 1 = Would order without deposit</div>
+        </div>
+        <div class="score-box">
+          <div class="lbl">Score</div>
+          <div class="score-opts">
+            <label><input type="radio" name="d5" value="1" /> 1</label>
+            <label><input type="radio" name="d5" value="2" /> 2</label>
+            <label><input type="radio" name="d5" value="3" /> 3</label>
+            <label><input type="radio" name="d5" value="4" /> 4</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="totals">
+      <div class="cell"><div class="k">D1–D5 sum (max 20)</div><input type="number" min="0" max="20" /></div>
+      <div class="cell"><div class="k">Desk average</div><input type="text" /></div>
+      <div class="cell"><div class="k">D5 gate ≥ 3?</div><input type="text" placeholder="Y / N" /></div>
+      <div class="cell"><div class="k">Combined vs phone</div><input type="text" placeholder="Better / Same / Worse" /></div>
+    </div>
+
+    <div class="section">
+      <div class="section-head decision">Final hire decision</div>
+      <div class="decision-grid">
+        <label class="pass"><input type="radio" name="decF" /> <strong>HIRE</strong> Offer → Gusto onboarding</label>
+        <label class="look"><input type="radio" name="decF" /> <strong>SECOND LOOK</strong> Another desk session</label>
+        <label class="no"><input type="radio" name="decF" /> <strong>PASS</strong> Not a fit</label>
+      </div>
+      <label class="field">Offer notes (rate, start date — payroll in Gusto)</label>
+      <textarea></textarea>
+      <label class="field">Evaluator signature / date</label>
+      <input type="text" />
+    </div>
+
+    <p class="footer">
+      Part B · Admin hiring · Neighborhood Golf Carts · Scope from July 2026 Boardroom Report.
+      I-9 / tax / direct deposit handled in <strong>Gusto</strong>, not on this form. No customer PII on scored copies filed for training examples.
+    </p>
+  </div>
+</body>
+</html>

@@ -62,3 +62,25 @@
 | Team roles & hiring overview | `knowledge/05_team/roles.md` |
 | Command Center Documents | `documents/index.html` (after deploy) |
 | Training competencies (post-hire) | `docs/training/golf-cart-diagnostic-technician/` |
+
+---
+
+## 4. Administrative Assistant / Service Coordinator
+
+Board-aligned pack (July 2026 CFO/CEO Boardroom Report). Recruit Admin to remove phone/estimate/approval/scheduling work from Ryan. Planning wage ~$15/hr. **New-hire packet / I-9 / tax / direct deposit → Gusto** (not duplicated here).
+
+| Doc | File | Use |
+|-----|------|-----|
+| Ryan 2-week time log | [NGC_Admin_Ryan_Time_Log.html](NGC_Admin_Ryan_Time_Log.html) | Verify transferable admin ≥~6–8 hrs/wk |
+| Job description + Indeed post | [NGC_Admin_Job_Description.md](NGC_Admin_Job_Description.md) | Posting + internal JD |
+| Phone + desk eval scorecard | [NGC_Admin_Phone_and_Desk_Eval_Scorecard.html](NGC_Admin_Phone_and_Desk_Eval_Scorecard.html) | Part A phone → Part B desk tryout |
+| Front-office SOPs | [NGC_Admin_Front_Office_SOPs.md](NGC_Admin_Front_Office_SOPs.md) | Wait codes, estimates, approvals, triage |
+| Weekly KPI + 30/60/90 | [NGC_Admin_KPI_and_Review.html](NGC_Admin_KPI_and_Review.html) | Track so role doesn’t become overhead |
+
+### How to use (Admin funnel)
+
+1. Start Ryan time log (or run in parallel with recruiting).
+2. Post from job description; Indeed questions clear logistics.
+3. Phone scorecard (Part A) → ADVANCE only if policy gate (E) ≥ 3.
+4. Desk eval (Part B) → Hire / Second look / Pass; offer then **Gusto** onboarding.
+5. Train from Front Office SOPs; score weekly KPIs; formal 30/60/90 reviews.
