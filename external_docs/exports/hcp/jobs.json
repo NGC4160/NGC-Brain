@@ -1,26 +1,60 @@
 {
-  "synced_at": "2026-08-02T14:45:14.252035+00:00",
+  "synced_at": "2026-08-03T15:59:30.878309+00:00",
   "count": 500,
   "jobs": [
     {
       "id": "job_f943ceaa937a4e48be3ae972460341de",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
-      "work_status": "needs scheduling",
+      "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": null,
+        "on_my_way_at": "2026-08-03T15:19:41Z",
         "started_at": null,
         "completed_at": null
       },
       "schedule": {
-        "scheduled_start": null,
-        "scheduled_end": null,
-        "arrival_window": 0,
+        "scheduled_start": "2026-08-03T14:00:00Z",
+        "scheduled_end": "2026-08-03T16:00:00Z",
+        "arrival_window": 120,
         "appointments": []
       },
       "total_amount": 31054,
       "outstanding_balance": 31054,
-      "assigned_employees": [],
+      "assigned_employees": [
+        {
+          "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
+          "first_name": "Roy",
+          "last_name": "Gautreaux",
+          "email": "royjgautreaux@gmail.com",
+          "mobile_number": "5044017782",
+          "color_hex": "0a0a0b",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": true,
+            "can_chat_with_customers": true,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": true,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-04-23T21:20:02Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        }
+      ],
       "tags": [],
       "original_estimate_id": "est_4371f2b11a6f4fd79bbd8263115278ce",
       "original_estimate_uuids": [
@@ -34,7 +68,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-31T22:31:56Z",
-      "updated_at": "2026-07-31T22:31:58Z",
+      "updated_at": "2026-08-03T15:19:42Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -830,15 +864,15 @@
           "content": "Axle bearing broke, got a wheel off. \nChanged hub, \n\nBearing broke (1) stuck and can\u2019t get out."
         }
       ],
-      "work_status": "in progress",
+      "work_status": "scheduled",
       "work_timestamps": {
-        "on_my_way_at": "2026-07-31T15:20:09Z",
+        "on_my_way_at": null,
         "started_at": "2026-07-31T17:03:21Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-07-31T15:30:00Z",
-        "scheduled_end": "2026-07-31T16:00:00Z",
+        "scheduled_end": "2026-08-03T15:45:00Z",
         "arrival_window": 120,
         "appointments": []
       },
@@ -877,6 +911,39 @@
           "created_at": "2026-04-23T21:20:02Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_96c62c1f641442399a788e397c0d69e6",
+          "first_name": "Richard",
+          "last_name": "Flynn",
+          "email": "flynn6959@gmail.com",
+          "mobile_number": "9853273960",
+          "color_hex": "c0370c",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-07-14T13:21:59Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [],
@@ -892,7 +959,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-27T21:30:21Z",
-      "updated_at": "2026-07-31T17:03:22Z",
+      "updated_at": "2026-08-03T13:53:54Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -913,11 +980,14 @@
         "notes": "Axle bearing broke, got a wheel off. \nChanged hub, \n\nBearing broke (1) stuck and can\u2019t get out.",
         "kind": "homeowner",
         "created_at": "2026-07-20T14:45:09Z",
-        "updated_at": "2026-07-20T14:45:09Z",
+        "updated_at": "2026-08-03T13:53:54Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": [
           "EZ-GO",
+          "TXT",
+          "36 Volt",
+          "PDS",
           "electric"
         ]
       },
@@ -1382,16 +1452,16 @@
       "id": "job_fe36174ebdd94cceacb92f3a65fa5799",
       "description": "General - 1.0 - Diagnostic Testing",
       "notes": [],
-      "work_status": "in progress",
+      "work_status": "scheduled",
       "work_timestamps": {
-        "on_my_way_at": "2026-07-28T13:17:38Z",
+        "on_my_way_at": null,
         "started_at": "2026-07-28T15:42:06Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-07-28T14:00:00Z",
-        "scheduled_end": "2026-07-28T14:30:00Z",
-        "arrival_window": 240,
+        "scheduled_end": "2026-08-03T19:00:00Z",
+        "arrival_window": 0,
         "appointments": []
       },
       "total_amount": 39221,
@@ -1429,6 +1499,39 @@
           "created_at": "2026-04-23T21:20:02Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_96c62c1f641442399a788e397c0d69e6",
+          "first_name": "Richard",
+          "last_name": "Flynn",
+          "email": "flynn6959@gmail.com",
+          "mobile_number": "9853273960",
+          "color_hex": "c0370c",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-07-14T13:21:59Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [
@@ -1444,7 +1547,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-27T17:08:00Z",
-      "updated_at": "2026-07-28T18:27:13Z",
+      "updated_at": "2026-08-03T14:06:41Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3513,7 +3616,7 @@
       "work_timestamps": {
         "on_my_way_at": "2026-07-22T21:56:42Z",
         "started_at": "2026-07-22T22:41:31Z",
-        "completed_at": "2026-07-31T21:44:53Z"
+        "completed_at": "2026-08-03T14:28:37Z"
       },
       "schedule": {
         "scheduled_start": "2026-07-22T17:00:00Z",
@@ -3637,7 +3740,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-17T22:27:39Z",
-      "updated_at": "2026-07-31T21:44:57Z",
+      "updated_at": "2026-08-03T14:28:41Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4355,15 +4458,15 @@
           "content": "Was the initial customer complaint address before doing a LFP Swap? Don't see any notes on this job."
         }
       ],
-      "work_status": "complete unrated",
+      "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": "2026-07-22T19:53:44Z",
+        "on_my_way_at": "2026-08-03T13:57:51Z",
         "started_at": "2026-07-22T19:53:44Z",
-        "completed_at": "2026-07-31T15:58:38Z"
+        "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-07-22T15:00:00Z",
-        "scheduled_end": "2026-07-22T21:45:00Z",
+        "scheduled_end": "2026-08-03T15:30:00Z",
         "arrival_window": 120,
         "appointments": []
       },
@@ -4483,7 +4586,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-15T15:02:17Z",
-      "updated_at": "2026-07-31T16:09:56Z",
+      "updated_at": "2026-08-03T13:57:53Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -23781,7 +23884,7 @@
       },
       "schedule": {
         "scheduled_start": "2026-05-26T15:30:00Z",
-        "scheduled_end": "2026-07-31T17:30:00Z",
+        "scheduled_end": "2026-08-03T19:00:00Z",
         "arrival_window": 0,
         "appointments": []
       },
@@ -23934,7 +24037,7 @@
       },
       "locked_at": null,
       "created_at": "2026-05-09T02:13:27Z",
-      "updated_at": "2026-07-30T21:50:49Z",
+      "updated_at": "2026-08-03T14:05:22Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,

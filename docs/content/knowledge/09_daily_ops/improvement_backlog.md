@@ -43,6 +43,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P | Item | Why | Owner | Status |
 |---|------|-----|-------|--------|
 | P2 | NGC Admin Bot — Phase 1 deposit gate alerts | Spec + script live; Phase 2 review requests next | Ryan | In progress |
+| P1 | Hire Admin / Service Coordinator (Board Jul 2026) | Free Ryan for diagnostics/training/QC; pack drafted | Ryan / Christine | Docs ready — recruit |
 | P2 | Peyton diagnostics — when to loop in (clear trigger) | Avoid bottleneck or underuse | Ryan | Open |
 | P3 | Technician skills matrix (Taylor vs Marlon vs Peyton) | Better job assignment | Ryan | Open |
 
