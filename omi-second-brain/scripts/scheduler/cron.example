@@ -1,0 +1,6 @@
+# Linux / generic cron — run: crontab -e  and paste (edit ROOT path)
+# Nightly ingest at 23:30 local
+30 23 * * * /home/YOU/path/to/omi-second-brain/scripts/scheduler/nightly_run.sh >> /home/YOU/path/to/omi-second-brain/logs/cron.log 2>&1
+
+# Weekly reflection helper (Sunday 09:00) — optional separate job
+# 0 9 * * 0 cd /home/YOU/path/to/omi-second-brain && .venv/bin/python scripts/daily_reflect.py --date $(date -d yesterday +\%Y-\%m-\%d)

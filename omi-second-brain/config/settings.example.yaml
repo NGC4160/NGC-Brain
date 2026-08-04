@@ -1,0 +1,57 @@
+# Copy to config/settings.yaml (gitignored) or rely on .env overrides.
+# Env vars win over this file when both are set.
+
+omi:
+  api_base: "https://api.omi.me/v1/dev"
+  # Prefer env: OMI_DEV_API_KEY
+  lookback_hours: 36
+  page_limit: 50
+  include_transcript: true
+  include_memories: true
+  include_action_items: true
+
+vault:
+  # Prefer env: OBSIDIAN_VAULT_PATH
+  path: ""
+  # PARA paths relative to vault root
+  daily_dir: "Daily"
+  conversations_dir: "Daily/Conversations"
+  memories_dir: "Resources/Omi Memories"
+  inbox_dir: "Inbox"
+  tasks_dir: "Inbox/Tasks"
+  reflections_dir: "Daily/Reflections"
+  projects_dir: "Projects"
+  areas_dir: "Areas"
+  archive_dir: "Archive"
+
+processing:
+  local_only: true
+  ollama_base_url: "http://localhost:11434"
+  llm_model: "llama3.2"
+  embed_model: "nomic-embed-text"
+  # Tags always applied to ingested notes
+  default_tags:
+    - omi
+    - auto-ingest
+  # Skip conversations shorter than N transcript segments
+  min_transcript_segments: 2
+
+embeddings:
+  persist_dir: "./data/chroma"
+  collection: "omi_second_brain"
+  # Re-index only files modified since last run
+  incremental: true
+
+scheduler:
+  # Nightly ingest time (local) for launchd/cron docs
+  nightly_hour: 23
+  nightly_minute: 30
+  weekly_reflect_weekday: "sunday"
+  weekly_reflect_hour: 9
+
+privacy:
+  # Strip these patterns from notes before write (regex)
+  redact_patterns: []
+  # Never write raw geolocation into Markdown
+  omit_geolocation: true
+  consent_banner: true

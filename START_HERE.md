@@ -33,6 +33,12 @@ Full guide: [`knowledge/09_daily_ops/README.md`](knowledge/09_daily_ops/README.m
 
 ---
 
+## Personal Omi second brain (optional)
+
+Starter for wearable transcripts → Obsidian + MCP: [`omi-second-brain/README.md`](omi-second-brain/README.md). Separate from NGC shop ops — copy out of this repo if you want it standalone.
+
+---
+
 ## What to tell the AI each session
 
 Paste or summarize:
