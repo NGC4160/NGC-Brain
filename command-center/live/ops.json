@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-06T15:38:11.350886+00:00",
-  "jobs_synced_at": "2026-08-06T15:38:06.266634+00:00",
+  "generated_at": "2026-08-07T14:29:18.295504+00:00",
+  "jobs_synced_at": "2026-08-07T14:29:13.421010+00:00",
   "has_live_data": true,
   "metrics": {
-    "in_progress": 9,
-    "scheduled": 17,
-    "needs_scheduling": 8,
-    "active_pipeline": 34,
+    "in_progress": 11,
+    "scheduled": 16,
+    "needs_scheduling": 6,
+    "active_pipeline": 33,
     "wip_target": 6,
-    "wip_over": 3,
+    "wip_over": 5,
     "stale_15_plus": 4,
     "lithium_at_risk": 2,
     "deposit_alerts": 0
@@ -18,14 +18,14 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 93,
+        "days": 94,
         "lithium": true,
         "status": "in progress"
       },
       {
         "invoice": "17398",
         "description": "Batteries & Cables - 3.0-NGC Lithium Conversion, 36v 105ah",
-        "days": 9,
+        "days": 10,
         "lithium": true,
         "status": "in progress"
       }
@@ -34,39 +34,39 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 93,
+        "days": 94,
         "lithium": true,
         "status": "in progress"
       },
       {
         "invoice": "17260",
         "description": "Accessories - 1.0-Seat belt kit installation",
-        "days": 92,
+        "days": 93,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17109-2",
         "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-        "days": 71,
+        "days": 72,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17353",
         "description": "***SEE NOTES***",
-        "days": 31,
+        "days": 32,
         "lithium": false,
         "status": "in progress"
       }
     ]
   },
   "sync": {
-    "synced_at": "2026-08-06T15:38:11.013304+00:00",
+    "synced_at": "2026-08-07T14:29:17.962441+00:00",
     "pricebook": {
       "exists": true,
       "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-      "modified": "2026-08-06T15:37:48.097183+00:00",
+      "modified": "2026-08-07T14:28:58.058756+00:00",
       "total_items": 282,
       "lithium_professional_skus": [
         {
@@ -168,7 +168,7 @@
     "qbo_pl": {
       "exists": true,
       "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-      "modified": "2026-08-06T15:37:48.098464+00:00",
+      "modified": "2026-08-07T14:28:58.059788+00:00",
       "period_note": "See file header for date range",
       "income_highlights": {
         "LFP Conversions Only": 94940.25,
@@ -197,14 +197,14 @@
         ],
         "refresh_token_rotated": true
       },
-      "modified": "2026-08-06T15:37:48.097183+00:00",
+      "modified": "2026-08-07T14:28:58.058756+00:00",
       "account_count": 148,
       "item_count": 521
     },
     "hcp_api": {
       "exists": true,
       "manifest": {
-        "synced_at": "2026-08-06T15:38:10.209667+00:00",
+        "synced_at": "2026-08-07T14:29:17.000145+00:00",
         "source": "housecall_pro_api",
         "paths": [
           "api_sync_manifest.json",
@@ -215,18 +215,18 @@
           "pricebook_services.json"
         ]
       },
-      "modified": "2026-08-06T15:38:10.210119+00:00",
+      "modified": "2026-08-07T14:29:17.000569+00:00",
       "job_count": 500,
       "jobs_by_status": {
-        "needs scheduling": 8,
-        "scheduled": 17,
+        "in progress": 11,
+        "needs scheduling": 6,
+        "scheduled": 16,
         "user canceled": 34,
         "complete unrated": 289,
-        "in progress": 9,
-        "pro canceled": 37,
-        "complete rated": 106
+        "complete rated": 107,
+        "pro canceled": 37
       },
-      "pricebook_service_count": 287,
+      "pricebook_service_count": 289,
       "professional_lithium_skus": [
         "TEST PARTIAL KIT 48V Professional Lithium Battery Conversion Kit Installed",
         "Professional Lithium Battery Conversion",
@@ -240,43 +240,43 @@
     "qbo_files": [
       {
         "name": "api_sync_manifest.json",
-        "modified": "2026-08-06T15:37:48.097183+00:00"
+        "modified": "2026-08-07T14:28:58.058756+00:00"
       },
       {
         "name": "balance_sheet.json",
-        "modified": "2026-08-06T15:37:48.098464+00:00"
+        "modified": "2026-08-07T14:28:58.059788+00:00"
       },
       {
         "name": "balance_sheet_current.xlsx",
-        "modified": "2026-08-06T15:37:48.098464+00:00"
+        "modified": "2026-08-07T14:28:58.059788+00:00"
       },
       {
         "name": "chart_of_accounts.json",
-        "modified": "2026-08-06T15:37:48.098464+00:00"
+        "modified": "2026-08-07T14:28:58.059788+00:00"
       },
       {
         "name": "chart_of_accounts.xlsx",
-        "modified": "2026-08-06T15:37:48.098464+00:00"
+        "modified": "2026-08-07T14:28:58.059788+00:00"
       },
       {
         "name": "company_test.json",
-        "modified": "2026-08-06T15:38:10.969439+00:00"
+        "modified": "2026-08-07T14:29:17.919236+00:00"
       },
       {
         "name": "products_and_services.xlsx",
-        "modified": "2026-08-06T15:37:48.098464+00:00"
+        "modified": "2026-08-07T14:28:58.059788+00:00"
       },
       {
         "name": "products_services.json",
-        "modified": "2026-08-06T15:37:48.098464+00:00"
+        "modified": "2026-08-07T14:28:58.059788+00:00"
       },
       {
         "name": "profit_and_loss_last_12_months.json",
-        "modified": "2026-08-06T15:37:48.098464+00:00"
+        "modified": "2026-08-07T14:28:58.059788+00:00"
       },
       {
         "name": "profit_and_loss_last_12_months.xlsx",
-        "modified": "2026-08-06T15:37:48.098464+00:00"
+        "modified": "2026-08-07T14:28:58.059788+00:00"
       }
     ],
     "alerts": [
