@@ -1,9 +1,9 @@
 {
-  "synced_at": "2026-08-07T14:29:17.962441+00:00",
+  "synced_at": "2026-08-08T14:03:08.384354+00:00",
   "pricebook": {
     "exists": true,
     "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-    "modified": "2026-08-07T14:28:58.058756+00:00",
+    "modified": "2026-08-08T14:02:49.801309+00:00",
     "total_items": 282,
     "lithium_professional_skus": [
       {
@@ -105,7 +105,7 @@
   "qbo_pl": {
     "exists": true,
     "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-    "modified": "2026-08-07T14:28:58.059788+00:00",
+    "modified": "2026-08-08T14:02:49.803309+00:00",
     "period_note": "See file header for date range",
     "income_highlights": {
       "LFP Conversions Only": 94940.25,
@@ -134,14 +134,14 @@
       ],
       "refresh_token_rotated": true
     },
-    "modified": "2026-08-07T14:28:58.058756+00:00",
+    "modified": "2026-08-08T14:02:49.801309+00:00",
     "account_count": 148,
     "item_count": 521
   },
   "hcp_api": {
     "exists": true,
     "manifest": {
-      "synced_at": "2026-08-07T14:29:17.000145+00:00",
+      "synced_at": "2026-08-08T14:03:07.721959+00:00",
       "source": "housecall_pro_api",
       "paths": [
         "api_sync_manifest.json",
@@ -152,15 +152,15 @@
         "pricebook_services.json"
       ]
     },
-    "modified": "2026-08-07T14:29:17.000569+00:00",
+    "modified": "2026-08-08T14:03:07.722412+00:00",
     "job_count": 500,
     "jobs_by_status": {
-      "in progress": 11,
-      "needs scheduling": 6,
-      "scheduled": 16,
+      "needs scheduling": 10,
+      "in progress": 12,
+      "scheduled": 13,
       "user canceled": 34,
-      "complete unrated": 289,
-      "complete rated": 107,
+      "complete unrated": 290,
+      "complete rated": 104,
       "pro canceled": 37
     },
     "pricebook_service_count": 289,
@@ -177,43 +177,43 @@
   "qbo_files": [
     {
       "name": "api_sync_manifest.json",
-      "modified": "2026-08-07T14:28:58.058756+00:00"
+      "modified": "2026-08-08T14:02:49.801309+00:00"
     },
     {
       "name": "balance_sheet.json",
-      "modified": "2026-08-07T14:28:58.059788+00:00"
+      "modified": "2026-08-08T14:02:49.802309+00:00"
     },
     {
       "name": "balance_sheet_current.xlsx",
-      "modified": "2026-08-07T14:28:58.059788+00:00"
+      "modified": "2026-08-08T14:02:49.802309+00:00"
     },
     {
       "name": "chart_of_accounts.json",
-      "modified": "2026-08-07T14:28:58.059788+00:00"
+      "modified": "2026-08-08T14:02:49.802309+00:00"
     },
     {
       "name": "chart_of_accounts.xlsx",
-      "modified": "2026-08-07T14:28:58.059788+00:00"
+      "modified": "2026-08-08T14:02:49.802309+00:00"
     },
     {
       "name": "company_test.json",
-      "modified": "2026-08-07T14:29:17.919236+00:00"
+      "modified": "2026-08-08T14:03:08.343403+00:00"
     },
     {
       "name": "products_and_services.xlsx",
-      "modified": "2026-08-07T14:28:58.059788+00:00"
+      "modified": "2026-08-08T14:02:49.802309+00:00"
     },
     {
       "name": "products_services.json",
-      "modified": "2026-08-07T14:28:58.059788+00:00"
+      "modified": "2026-08-08T14:02:49.803309+00:00"
     },
     {
       "name": "profit_and_loss_last_12_months.json",
-      "modified": "2026-08-07T14:28:58.059788+00:00"
+      "modified": "2026-08-08T14:02:49.803309+00:00"
     },
     {
       "name": "profit_and_loss_last_12_months.xlsx",
-      "modified": "2026-08-07T14:28:58.059788+00:00"
+      "modified": "2026-08-08T14:02:49.803309+00:00"
     }
   ],
   "alerts": [
