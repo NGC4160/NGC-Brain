@@ -1,7 +1,84 @@
 {
-  "synced_at": "2026-08-08T14:03:04.470514+00:00",
+  "synced_at": "2026-08-09T14:03:39.782703+00:00",
   "count": 500,
   "jobs": [
+    {
+      "id": "job_ab2abdff553e470999b7326db357dc53",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+      "notes": [],
+      "work_status": "needs scheduling",
+      "work_timestamps": {
+        "on_my_way_at": null,
+        "started_at": null,
+        "completed_at": null
+      },
+      "schedule": {
+        "scheduled_start": null,
+        "scheduled_end": null,
+        "arrival_window": 0,
+        "appointments": []
+      },
+      "total_amount": 20239,
+      "outstanding_balance": 20239,
+      "assigned_employees": [],
+      "tags": [],
+      "original_estimate_id": "est_d75a4471f91e480e8b0d7ab9a42211ac",
+      "original_estimate_uuids": [
+        "est_d75a4471f91e480e8b0d7ab9a42211ac"
+      ],
+      "subtotal": 18525,
+      "lead_source": null,
+      "job_fields": {
+        "job_type": null,
+        "business_unit": null
+      },
+      "locked_at": null,
+      "created_at": "2026-08-08T17:47:12Z",
+      "updated_at": "2026-08-08T17:47:13Z",
+      "canceled_at": null,
+      "deleted_at": null,
+      "assigned_route_template_id": null,
+      "company_name": "Neighborhood Golf Carts",
+      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+      "invoice_number": "17418",
+      "customer": {
+        "id": "cus_3eb3cde9d6234d48bf05f4df5e4dce5a",
+        "first_name": "Elizabeth",
+        "last_name": "Foster",
+        "email": "elizabethefoster125@gmail.com",
+        "mobile_number": "9135221397",
+        "home_number": null,
+        "work_number": null,
+        "company": null,
+        "notifications_enabled": true,
+        "lead_source": "Yard sign-Costco",
+        "notes": null,
+        "kind": "homeowner",
+        "created_at": "2026-03-30T13:33:10Z",
+        "updated_at": "2026-04-07T22:40:50Z",
+        "company_name": "Neighborhood Golf Carts",
+        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+        "tags": [
+          "Club Car",
+          "Precedent",
+          "2013"
+        ]
+      },
+      "address": {
+        "id": "adr_a91a31066ae74c61a73c5b662432b338",
+        "type": "service",
+        "street": "841 Chretien Point Avenue, Covington, Louisiana, 70433",
+        "street_line_2": null,
+        "city": "Covington",
+        "state": null,
+        "zip": "70433",
+        "country": null
+      },
+      "recurrence_number": null,
+      "recurrence_rule": null,
+      "recurrence_status": null,
+      "recurrence_id": null
+    },
     {
       "id": "job_052ed955d18d4e22b1ed91009e09185d",
       "description": "***SEE NOTES***",
@@ -24,7 +101,7 @@
         "appointments": []
       },
       "total_amount": 305682,
-      "outstanding_balance": 305682,
+      "outstanding_balance": 125682,
       "assigned_employees": [],
       "tags": [
         "Pipeline Automation"
@@ -41,7 +118,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-07T21:05:53Z",
-      "updated_at": "2026-08-07T21:06:26Z",
+      "updated_at": "2026-08-08T15:32:36Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -25538,7 +25615,7 @@
       },
       "locked_at": null,
       "created_at": "2026-05-09T02:13:27Z",
-      "updated_at": "2026-08-04T20:14:19Z",
+      "updated_at": "2026-08-08T14:12:45Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -65670,119 +65747,6 @@
       "company_name": "Neighborhood Golf Carts",
       "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
       "invoice_number": "1636",
-      "customer": {
-        "id": "cus_7ee58a1ce3f24df6846bc2521625077d",
-        "first_name": "Chad",
-        "last_name": "Nichols",
-        "email": "chad0208@yahoo.com",
-        "mobile_number": "5043298219",
-        "home_number": null,
-        "work_number": null,
-        "company": null,
-        "notifications_enabled": true,
-        "lead_source": "Google",
-        "notes": null,
-        "kind": "homeowner",
-        "created_at": "2025-12-10T17:41:47Z",
-        "updated_at": "2025-12-15T19:00:33Z",
-        "company_name": "Neighborhood Golf Carts",
-        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-        "tags": [
-          "Club Car",
-          "6 batteries",
-          "road runner motor"
-        ]
-      },
-      "address": {
-        "id": "adr_06f77fb4982a45c6bee3093b20551333",
-        "type": "service",
-        "street": "452 San Cristobal Court",
-        "street_line_2": "",
-        "city": "Slidell",
-        "state": "LA",
-        "zip": "70458",
-        "country": "US"
-      },
-      "recurrence_number": null,
-      "recurrence_rule": null,
-      "recurrence_status": null,
-      "recurrence_id": null
-    },
-    {
-      "id": "job_b9bf8cc2b8f34713923d6bdae41376eb",
-      "description": "2.0-Complete front bushing replacement, Club Car Precedent",
-      "notes": [],
-      "work_status": "complete unrated",
-      "work_timestamps": {
-        "on_my_way_at": "2025-12-19T14:10:22Z",
-        "started_at": "2025-12-19T14:57:17Z",
-        "completed_at": "2025-12-19T23:40:40Z"
-      },
-      "schedule": {
-        "scheduled_start": "2025-12-19T15:00:00Z",
-        "scheduled_end": "2025-12-19T21:00:00Z",
-        "arrival_window": 120,
-        "appointments": []
-      },
-      "total_amount": 107830,
-      "outstanding_balance": 0,
-      "assigned_employees": [
-        {
-          "id": "pro_5920a7a4894f48b9b9bcd0d6ce972ae3",
-          "first_name": "Payton",
-          "last_name": "Elkins",
-          "email": "pjelkins04@gmail.com",
-          "mobile_number": "9855108005",
-          "color_hex": "c0370c",
-          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
-          "role": "field tech",
-          "tags": [],
-          "permissions": {
-            "can_add_and_edit_job": false,
-            "can_call_and_text_with_customers": false,
-            "can_chat_with_customers": true,
-            "can_delete_and_cancel_job": false,
-            "can_edit_message_on_invoice": false,
-            "can_see_street_view_data": false,
-            "can_take_payment_see_prices": true,
-            "can_see_customers": false,
-            "can_see_marketing_campaigns": false,
-            "can_see_reporting": false,
-            "can_edit_settings": false,
-            "can_be_booked_online": false,
-            "can_share_job": false,
-            "can_see_full_schedule": true,
-            "can_see_future_jobs": true,
-            "is_point_of_contact": false,
-            "is_admin": false
-          },
-          "created_at": "2025-09-21T16:06:08Z",
-          "company_name": "Neighborhood Golf Carts",
-          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
-        }
-      ],
-      "tags": [
-        "Pipeline Automation"
-      ],
-      "original_estimate_id": "est_76846186f610412a92108766af9e1b60",
-      "original_estimate_uuids": [
-        "est_76846186f610412a92108766af9e1b60"
-      ],
-      "subtotal": 98700,
-      "lead_source": null,
-      "job_fields": {
-        "job_type": null,
-        "business_unit": null
-      },
-      "locked_at": null,
-      "created_at": "2025-12-17T00:18:41Z",
-      "updated_at": "2025-12-20T02:00:48Z",
-      "canceled_at": null,
-      "deleted_at": null,
-      "assigned_route_template_id": null,
-      "company_name": "Neighborhood Golf Carts",
-      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-      "invoice_number": "1635",
       "customer": {
         "id": "cus_7ee58a1ce3f24df6846bc2521625077d",
         "first_name": "Chad",
