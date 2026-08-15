@@ -6,7 +6,7 @@ Concrete automations to build — ordered by impact vs effort.
 
 | # | Automation | Type | Trigger | Outcome |
 |---|------------|------|---------|---------|
-| 1 | **Export ingest** | Script + Hook | Session start / file save | `sync_manifest.json` always fresh |
+| 1 | **Daily morning briefing email** | GitHub Action | Cron 7:30 AM CST | Briefing emailed to Ryan@NGCgolfcarts.com — [morning_briefing_email.md](morning_briefing_email.md) |
 | 2 | **QBO MCP** | MCP | On demand in chat | Live P&L, no xlsx export |
 | 3 | **Friday weekly review** | Cursor Automation | Cron Fri 4 PM | Agent runs weekly review prompt |
 | 4 | **Legacy pricebook audit** | One-shot agent task | Manual | Deactivation checklist — `legacy_pricebook_cleanup.md` |
@@ -31,6 +31,20 @@ Concrete automations to build — ordered by impact vs effort.
 | 13 | **NGC Admin Bot** | Custom app | HCP sync + webhooks | Phase 1: deposit gate alerts — see [ngc_admin_bot_spec.md](ngc_admin_bot_spec.md) |
 
 ## Cursor Automations — copy prompts
+
+### Daily morning briefing (prefer GitHub Action email)
+
+```
+Run the NGC morning briefing skill.
+Read knowledge/04_operations/shop_throughput.md, knowledge/.generated/shop_board.md,
+knowledge/.generated/deposit_alerts.md, and knowledge/09_daily_ops/improvement_backlog.md.
+If shop_board.md is missing, run ./scripts/sync/run_shop_board.sh.
+Give top 3 priorities, lithium jobs over 3 days, deposit/parts follow-ups,
+one P1 backlog item, and missing inputs (staff, Roy routes, urgent).
+No customer names, phones, or addresses.
+```
+
+Prefer `./scripts/sync/run_morning_briefing.sh` + Morning Sync email over a Cursor-only cron.
 
 ### Friday weekly review
 

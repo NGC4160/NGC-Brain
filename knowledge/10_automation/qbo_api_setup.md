@@ -73,8 +73,9 @@ Manual run: **Actions** → **Morning Sync** → **Run workflow**.
 HCP API  → external_docs/exports/hcp/
 QBO API  → external_docs/exports/qbo/
          → knowledge/.generated/sync_manifest.json
-         → shop_board.md, deposit_alerts.md
+         → shop_board.md, deposit_alerts.md, morning_briefing.md
          → docs/live/ (Command Center)
+         → email Ryan@NGCgolfcarts.com (if SMTP secrets set)
          → gh-pages deploy
 ```
 

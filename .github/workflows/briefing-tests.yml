@@ -1,0 +1,22 @@
+name: Morning briefing tests
+
+on:
+  pull_request:
+  push:
+    paths:
+      - "scripts/sync/generate_morning_briefing.py"
+      - "scripts/sync/email_morning_briefing.py"
+      - "scripts/sync/test_generate_morning_briefing.py"
+      - "scripts/admin_bot/deposit_gate_alerts.py"
+      - "scripts/sync/generate_shop_board.py"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run briefing unit tests
+        run: python3 scripts/sync/test_generate_morning_briefing.py -v

@@ -1,18 +1,18 @@
 # Shop Throughput
 
-**Last verified:** 2026-06-28  
+**Last verified:** 2026-08-15  
 **Owner:** Ryan (service manager)  
 **Live board:** `knowledge/.generated/shop_board.md` (regenerate after HCP sync)
 
 ## Goal
 
-Move carts through the shop predictably — especially **lithium conversions in 2–3 days** — without overloading Taylor and Marlon.
+Move carts through the shop predictably — especially **lithium conversions in 2–3 days** — without overloading Marlon and Ryan G.
 
 ## Current constraints
 
 | Resource | Capacity (planning) |
 |----------|-------------------|
-| Taylor + Marlon | ~2 primary repair lanes, ~6 productive hrs/day each |
+| Marlon + Ryan G | ~2 primary repair lanes, ~6 productive hrs/day each (Ryan G started 2026-08-15 — ramp, don't max both lanes) |
 | Peyton | Advanced diagnostics only — timeboxed, by trigger |
 | Roy | Pickup/delivery — batch by zone, not one-off all day |
 | Jesse | Intake, deposits, parts/inventory, workflow, Roy routing (Christine part-time backup) |
@@ -44,7 +44,7 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 | Intake / needs scheduling | Jesse | Appointment booked or cart in bay |
 | Diagnose | Assigned tech | Complaint verified, estimate approved |
 | Waiting deposit/parts | Jesse | Deposit collected **before** battery/motor/controller order; Jesse orders and tracks parts |
-| In repair | Taylor / Marlon | Work complete per estimate |
+| In repair | Marlon / Ryan G | Work complete per estimate |
 | QC | Assigned tech | 7-point safety + test drive; fault codes cleared |
 | Ready | Jesse | Customer notified; balance collected or arranged |
 | Pickup/delivery | Roy | Cart off lot |
@@ -61,7 +61,7 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 ### 8:15 — Ryan shop huddle (10 min)
 
 - Read `knowledge/.generated/shop_board.md`
-- Assign every in-progress cart to **Taylor or Marlon**
+- Assign every in-progress cart to **Marlon or Ryan G** (not Taylor/Dylan — former staff)
 - Name **today’s finish list** (max 2 lithium + 2–4 repairs per tech)
 - Flag **Peyton** jobs with one-line symptom (controller, intermittent, data log needed)
 
@@ -134,8 +134,9 @@ See [shop_whiteboard_layout.md](shop_whiteboard_layout.md) — 7-column layout, 
 ## Commands
 
 ```bash
-./scripts/sync/run_hcp_sync.sh      # refresh jobs from HCP
-./scripts/sync/run_shop_board.sh    # rebuild shop_board.md
+./scripts/sync/run_hcp_sync.sh           # refresh jobs from HCP
+./scripts/sync/run_shop_board.sh         # rebuild shop_board.md
+./scripts/sync/run_morning_briefing.sh   # briefing → email (if SMTP set)
 ```
 
 Morning briefing prompt: [`../../prompts/morning_briefing.md`](../../prompts/morning_briefing.md)

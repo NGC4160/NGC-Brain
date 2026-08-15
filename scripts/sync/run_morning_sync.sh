@@ -74,9 +74,10 @@ else
   DETAIL+="Ingest failed (rc=$INGEST_RC). "
 fi
 
-echo "--- Shop board + deposit alerts ---"
+echo "--- Shop board + deposit alerts + morning briefing ---"
 "$PY" "$ROOT/scripts/sync/generate_shop_board.py" || true
 "$PY" "$ROOT/scripts/admin_bot/deposit_gate_alerts.py" || true
+"$PY" "$ROOT/scripts/sync/generate_morning_briefing.py" || true
 
 echo "--- Build Command Center ---"
 if "$PY" "$ROOT/scripts/build_command_center.py"; then

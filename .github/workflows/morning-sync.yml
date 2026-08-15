@@ -64,6 +64,9 @@ jobs:
           NGC_COMMAND_CENTER_PASSWORD: ${{ secrets.NGC_COMMAND_CENTER_PASSWORD }}
         run: ./scripts/sync/run_morning_sync.sh
 
+      - name: Generate morning briefing
+        run: ./scripts/sync/run_morning_briefing.sh
+
       - name: Commit and push updates
         run: |
           git config user.name "github-actions[bot]"
@@ -86,3 +89,21 @@ jobs:
           branch: gh-pages
           clean: false
           commit-message: "Morning sync deploy @ ${{ github.sha }}"
+
+      - name: Email morning briefing
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          BRIEFING_EMAIL_TO: ${{ secrets.BRIEFING_EMAIL_TO }}
+        run: |
+          if [ -z "${SMTP_HOST:-}" ] || [ -z "${SMTP_PASSWORD:-}" ]; then
+            echo "::warning::SMTP_HOST / SMTP_PASSWORD not set — briefing generated but not emailed."
+            echo "Add secrets: SMTP_HOST, SMTP_USER, SMTP_PASSWORD (optional SMTP_PORT, SMTP_FROM, BRIEFING_EMAIL_TO)."
+            echo "Default recipient is Ryan@NGCgolfcarts.com"
+            exit 0
+          fi
+          export BRIEFING_EMAIL_TO="${BRIEFING_EMAIL_TO:-Ryan@NGCgolfcarts.com}"
+          python3 scripts/sync/email_morning_briefing.py

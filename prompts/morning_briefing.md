@@ -25,3 +25,7 @@ Give me:
 5. What info you still need from me to be more useful
 
 Keep it short — bullet points I can act on before 8:30.
+
+---
+
+**Automated:** A PII-free version of this briefing is generated daily by Morning Sync and emailed to Ryan@NGCgolfcarts.com. Setup: [`knowledge/10_automation/morning_briefing_email.md`](../knowledge/10_automation/morning_briefing_email.md). Local: `./scripts/sync/run_morning_briefing.sh`.

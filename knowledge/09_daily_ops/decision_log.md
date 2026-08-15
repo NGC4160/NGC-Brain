@@ -31,6 +31,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-08-03 | Admin / Service Coordinator hiring pack drafted (time log, JD, phone+desk eval, front-office SOPs, weekly KPI + 30/60/90); new-hire packet via **Gusto** | Ryan | Templates: `external_docs/templates/hiring/NGC_Admin_*` · Board Jul 2026 scope/KPIs |
 | 2026-08-15 | **Jesse** (she/her) is Administrative Assistant / Service Coordinator. **Christine** is part-time assistant (still 50% co-owner). Jesse owns day-to-day front office **plus** inventory, parts ordering/tracking, data & reporting, pricebook maintenance, advanced estimating, shop workflow, and pickup/delivery routing. | Ryan | See `knowledge/05_team/roles.md` |
 | 2026-08-15 | Bookkeeper is **Jessica at Griffin & Furman** (not Jill Stoltz). | Ryan | QBO / month-end |
+| 2026-08-15 | **Taylor** and **Dylan** no longer work at NGC. **Ryan Gorgoglione** started as golf cart technician. Bay techs are Marlon + Ryan G; Ryan White stays service manager. | Ryan W | Reassign HCP tickets still on Taylor/Dylan; pair Ryan G with Marlon on day 1 |
 
 ---
 

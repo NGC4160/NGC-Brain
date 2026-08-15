@@ -30,6 +30,10 @@ description: Run the NGC service manager morning briefing using knowledge/, sync
 
 5. Tone: direct, owner-to-owner
 
+## Daily email
+
+GitHub Action `morning-sync.yml` generates `knowledge/.generated/morning_briefing.md` and emails **Ryan@NGCgolfcarts.com**. Setup: `knowledge/10_automation/morning_briefing_email.md`.
+
 ## Template
 
 See `prompts/morning_briefing.md`
