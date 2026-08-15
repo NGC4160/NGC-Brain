@@ -81,6 +81,9 @@ def build_ops_snapshot() -> dict:
         subprocess.run([sys.executable, str(ROOT / "scripts/sync/generate_shop_board.py")], check=False)
     if jobs and not deposit_md.exists():
         subprocess.run([sys.executable, str(ROOT / "scripts/admin_bot/deposit_gate_alerts.py")], check=False)
+    briefing_md = ROOT / "knowledge" / ".generated" / "morning_briefing.md"
+    if jobs and not briefing_md.exists():
+        subprocess.run([sys.executable, str(ROOT / "scripts/sync/generate_morning_briefing.py")], check=False)
 
     active_statuses = {"in progress", "scheduled", "needs scheduling"}
     active = [j for j in jobs if str(j.get("work_status", "")).lower() in active_statuses]
@@ -144,6 +147,9 @@ def build_ops_snapshot() -> dict:
         "live_files": {
             "shop_board": "live/shop_board.md" if shop_md.exists() else None,
             "deposit_alerts": "live/deposit_alerts.md" if deposit_md.exists() else None,
+            "morning_briefing": "live/morning_briefing.md"
+            if (ROOT / "knowledge" / ".generated" / "morning_briefing.md").exists()
+            else None,
             "sync_manifest": "live/sync_manifest.json" if SYNC_MANIFEST.exists() else None,
             "sync_status": "live/sync_status.json"
             if (ROOT / "knowledge" / ".generated" / "sync_status.json").exists()
@@ -306,6 +312,11 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict], documents_catal
                     "title": "Deposit Alerts",
                     "desc": "Jesse's deposit gate queue",
                     "href": "view.html?path=live/deposit_alerts.md",
+                },
+                {
+                    "title": "Today's Briefing",
+                    "desc": "Auto morning briefing emailed to Ryan",
+                    "href": "view.html?path=live/morning_briefing.md",
                 },
             ],
         },
@@ -526,6 +537,7 @@ def copy_live_files() -> None:
     mappings = [
         (ROOT / "knowledge" / ".generated" / "shop_board.md", LIVE / "shop_board.md"),
         (ROOT / "knowledge" / ".generated" / "deposit_alerts.md", LIVE / "deposit_alerts.md"),
+        (ROOT / "knowledge" / ".generated" / "morning_briefing.md", LIVE / "morning_briefing.md"),
         (ROOT / "knowledge" / ".generated" / "sync_manifest.json", LIVE / "sync_manifest.json"),
         (ROOT / "knowledge" / ".generated" / "sync_status.json", LIVE / "sync_status.json"),
         (ROOT / "knowledge" / ".generated" / "legacy_pricebook_audit.md", LIVE / "legacy_pricebook_audit.md"),

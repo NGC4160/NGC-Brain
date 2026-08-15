@@ -101,6 +101,10 @@ Use the **Agents Window** and the `automate` skill.
 
 ### Recommended automations
 
+**0. Daily morning briefing email (live)**
+
+GitHub Action — see [morning_briefing_email.md](morning_briefing_email.md). Add SMTP secrets so Ryan@NGCgolfcarts.com gets the 8:30 briefing.
+
 **1. Friday weekly review**
 
 | Field | Value |

@@ -16,9 +16,9 @@ This is not just documentation — it's an **operating system**. Cursor + `knowl
 
 ### Morning (5–10 min)
 
-1. Open Cursor → new chat
-2. Run [`prompts/morning_briefing.md`](../../prompts/morning_briefing.md)
-3. Tell the AI: carts in shop, tech availability, any fires
+1. Check email — daily briefing lands at **Ryan@NGCgolfcarts.com** after Morning Sync (7:30 AM CST)
+2. Or open Cursor → run [`prompts/morning_briefing.md`](../../prompts/morning_briefing.md)
+3. Tell the AI: staff in/out, Roy's route, any fires (HCP carts are already on the board)
 
 **Output you want:** Top 3 priorities, deposit follow-ups, pickup/delivery schedule for Roy, lithium jobs at risk of missing 2–3 day promise.
 

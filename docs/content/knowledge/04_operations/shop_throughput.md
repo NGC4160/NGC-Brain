@@ -134,8 +134,9 @@ See [shop_whiteboard_layout.md](shop_whiteboard_layout.md) — 7-column layout, 
 ## Commands
 
 ```bash
-./scripts/sync/run_hcp_sync.sh      # refresh jobs from HCP
-./scripts/sync/run_shop_board.sh    # rebuild shop_board.md
+./scripts/sync/run_hcp_sync.sh           # refresh jobs from HCP
+./scripts/sync/run_shop_board.sh         # rebuild shop_board.md
+./scripts/sync/run_morning_briefing.sh   # briefing → email (if SMTP set)
 ```
 
 Morning briefing prompt: [`../../prompts/morning_briefing.md`](../../prompts/morning_briefing.md)

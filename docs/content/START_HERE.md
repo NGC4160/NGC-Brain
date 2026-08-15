@@ -23,7 +23,7 @@ The AI reads `knowledge/` automatically via `.cursor/rules/`.
 
 | When | What to do | Prompt file |
 |------|------------|-------------|
-| **Morning** | Priorities, shop capacity, open loops | [`prompts/morning_briefing.md`](prompts/morning_briefing.md) |
+| **Morning** | Priorities, shop capacity, open loops (also emailed to Ryan@NGCgolfcarts.com) | [`prompts/morning_briefing.md`](prompts/morning_briefing.md) |
 | **Anytime** | Quotes, customer replies, SOP help | [`prompts/quote_and_customer.md`](prompts/quote_and_customer.md) |
 | **End of day** | Recap, blockers, tomorrow | [`prompts/end_of_day.md`](prompts/end_of_day.md) |
 | **Weekly (Friday)** | KPIs, marketing, ops review | [`prompts/weekly_review.md`](prompts/weekly_review.md) |
