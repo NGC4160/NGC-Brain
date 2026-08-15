@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · {{ shop_name }}{% endblock %}
+{% block content %}
+<section class="grid cards">
+  <div class="panel">
+    <h2>Active missions</h2>
+    <p style="font-size:2rem;margin:0">{{ due|length }}</p>
+    <p class="muted">Not shipped / cancelled</p>
+  </div>
+  <div class="panel">
+    <h2>In the field</h2>
+    <p style="font-size:2rem;margin:0">{{ stuck|length }}</p>
+    <p class="muted">Printing or finishing</p>
+  </div>
+  <div class="panel">
+    <h2>Resupply</h2>
+    <p style="font-size:2rem;margin:0" class="{% if low %}warn{% endif %}">{{ low|length }}</p>
+    <p class="muted">At or below reorder point</p>
+  </div>
+</section>
+
+<section class="split" style="margin-top:1rem">
+  <div class="panel">
+    <h2>Mission queue</h2>
+    {% if due %}
+    <table>
+      <thead><tr><th>Order</th><th>Channel</th><th>Due</th><th>Status</th></tr></thead>
+      <tbody>
+      {% for o in due %}
+        <tr>
+          <td>{{ o.order_number }}<div class="muted">{{ o.customer_label }}</div></td>
+          <td>{{ o.channel }}</td>
+          <td>{{ o.due_date or '—' }}</td>
+          <td>{{ o.status }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+      <p class="muted">No open orders. Add one under Orders.</p>
+    {% endif %}
+  </div>
+
+  <div class="stack">
+    <div class="panel">
+      <h2>Needs attention</h2>
+      {% if stuck %}
+      <table>
+        <thead><tr><th>Job</th><th>SKU</th><th>Status</th></tr></thead>
+        <tbody>
+        {% for j in stuck %}
+          <tr>
+            <td>#{{ j.id }} · {{ j.order_number }}</td>
+            <td>{{ j.sku }} <span class="muted">{{ j.color_name }}</span></td>
+            <td>{{ j.status }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+        <p class="muted">Nothing stuck in Printing/Finishing.</p>
+      {% endif %}
+    </div>
+
+    <div class="panel">
+      <h2>Low materials</h2>
+      {% if low %}
+      <ul>
+        {% for m in low %}
+          <li class="warn">{{ m.name }} — {{ m.qty_on_hand }} left (reorder {{ m.reorder_at }})</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <p class="ok">Stock looks fine.</p>
+      {% endif %}
+    </div>
+
+    <div class="panel">
+      <h2>Open-order margin (est.)</h2>
+      {% if margins %}
+      <table>
+        <thead><tr><th>Order</th><th>Revenue</th><th>Margin</th></tr></thead>
+        <tbody>
+        {% for m in margins %}
+          <tr>
+            <td>{{ m.order_number }}</td>
+            <td>{{ m.revenue }}</td>
+            <td class="{% if m.margin < 0 %}warn{% else %}ok{% endif %}">${{ '%.2f'|format(m.margin) }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+        <p class="muted">No open orders to score.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

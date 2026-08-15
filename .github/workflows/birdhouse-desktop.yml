@@ -1,0 +1,56 @@
+name: Build Birdhouse Desktop Apps
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - cursor/birdhouse-print-shop-mvp-838f
+      - main
+    paths:
+      - "tools/birdhouse-print-shop/**"
+      - ".github/workflows/birdhouse-desktop.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: tools/birdhouse-print-shop
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install + build
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-desktop.txt
+          pyinstaller --noconfirm birdhouse.spec
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BlakesBirdhouses-Windows
+          path: tools/birdhouse-print-shop/dist/BlakesBirdhouses.exe
+
+  macos:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: tools/birdhouse-print-shop
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install + build
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-desktop.txt
+          pyinstaller --noconfirm birdhouse-mac.spec
+          ditto -c -k --sequesterRsrc --keepParent dist/BlakesBirdhouses.app dist/BlakesBirdhouses-macOS.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BlakesBirdhouses-macOS
+          path: tools/birdhouse-print-shop/dist/BlakesBirdhouses-macOS.zip
