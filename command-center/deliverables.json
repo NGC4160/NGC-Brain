@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T04:37:33Z",
+  "generated_at": "2026-08-15T04:48:24Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
@@ -596,7 +596,7 @@
         },
         {
           "title": "Team roles & hiring overview",
-          "description": "Roster, RACI, phone screen \u2192 shop eval funnel",
+          "description": "Roster, RACI \u2014 Jesse coordinates shop ops; Jessica (Griffin & Furman) books",
           "path": "knowledge/05_team/roles.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/05_team/roles.md",

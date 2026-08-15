@@ -19,7 +19,7 @@ Copy this template each Friday. Fill in numbers you have; leave blank what you d
 
 - Roy pickups/deliveries issues: 
 - Tech bottlenecks (Taylor / Marlon / Peyton): 
-- Jesse / phone volume notes: 
+- Jesse / phones, parts, inventory, routing, reporting notes: 
 
 ## Money (rough — or paste from QBO)
 

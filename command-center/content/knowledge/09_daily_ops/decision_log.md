@@ -29,7 +29,8 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-07-26 | Written hiring quiz locked v1.0 — 40Q / 120 pts / 75% pass / ★ safety hard-fail; 8 critique loops | Ryan | `NGC_Technician_Hiring_Quiz.pdf` |
 | 2026-07-26 | GarageBuddy cloned as submodule for open-source DMS eval; Command Center Systems + Tools links added | Ryan | `tools/GarageBuddy` · setup: `scripts/garagebuddy/setup.sh` · not production |
 | 2026-08-03 | Admin / Service Coordinator hiring pack drafted (time log, JD, phone+desk eval, front-office SOPs, weekly KPI + 30/60/90); new-hire packet via **Gusto** | Ryan | Templates: `external_docs/templates/hiring/NGC_Admin_*` · Board Jul 2026 scope/KPIs |
-| 2026-08-15 | **Jesse** is Administrative Assistant / Service Coordinator (primary front office). **Christine** is part-time assistant (still 50% co-owner). Jesse owns the majority of tasks Christine previously handled day-to-day. | Ryan | See `knowledge/05_team/roles.md` |
+| 2026-08-15 | **Jesse** (she/her) is Administrative Assistant / Service Coordinator. **Christine** is part-time assistant (still 50% co-owner). Jesse owns day-to-day front office **plus** inventory, parts ordering/tracking, data & reporting, pricebook maintenance, advanced estimating, shop workflow, and pickup/delivery routing. | Ryan | See `knowledge/05_team/roles.md` |
+| 2026-08-15 | Bookkeeper is **Jessica at Griffin & Furman** (not Jill Stoltz). | Ryan | QBO / month-end |
 
 ---
 

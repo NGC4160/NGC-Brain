@@ -279,7 +279,7 @@ Class codes are **assigned by the carrier/NCCI**, not by you. Split payroll corr
 | W9 | **Lithium / battery handling** | Chemical, lift, thermal | Usually still 8380; poor practices → injuries → future e-mod | Worse safety **raises** later | SOP, OSHA |
 | W10 | **Go-forward rental duties** | Counter staff, lot attendants, after-hours | New class split; small $ if existing staff absorb it | New rental labor **raises** | Org plan |
 
-**NGC planning:** rental probably does **not** need a new WC policy — it **reclassifies a slice of payroll**. Budget a **10–25% WC increase** if someone is full-time on rental/delivery, or **~$500–$2,000** if existing staff absorb it. Confirm officer inclusion with Jill / the WC agent.
+**NGC planning:** rental probably does **not** need a new WC policy — it **reclassifies a slice of payroll**. Budget a **10–25% WC increase** if someone is full-time on rental/delivery, or **~$500–$2,000** if existing staff absorb it. Confirm officer inclusion with Jessica (Griffin & Furman) / the WC agent.
 
 ---
 

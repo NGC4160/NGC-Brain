@@ -45,7 +45,7 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 |---|------|--------:|-----------------|----------------|
 | 1 | **INTAKE** | 3 | Jesse → Ryan | Needs scheduling / scheduled (not started) |
 | 2 | **DIAG** | 2 | Assigned tech | In progress (diagnostic) |
-| 3 | **PARTS / DEPOSIT** | 4 | Jesse + Ryan | In progress — note "waiting deposit" or "waiting parts" |
+| 3 | **PARTS / DEPOSIT** | 4 | Jesse | In progress — note "waiting deposit" or "waiting parts"; Jesse orders/tracks |
 | 4 | **IN REPAIR** | 3 per tech | Taylor / Marlon | In progress |
 | 5 | **QC** | 2 | Assigned tech | In progress — final test drive |
 | 6 | **READY** | 4 | Jesse | In progress — ready for pickup |
@@ -109,9 +109,10 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 ### Jesse — 8:00 AM
 
 1. New drop-offs → **INTAKE** card (invoice # from HCP)
-2. Move card to **PARTS** if waiting deposit; mark `$ dep?`
-3. **READY** → notify customer; move to **OUT TODAY** if Roy delivering
-4. Erase **OUT TODAY** column at end of day
+2. Move card to **PARTS** if waiting deposit or parts; mark `$ dep?` / order ETA
+3. Build Roy’s **OUT TODAY** route (zone batch; free vs $99)
+4. **READY** → notify customer; move to **OUT TODAY** if Roy delivering
+5. Erase **OUT TODAY** column at end of day
 
 ### Ryan — 8:15 AM huddle (10 min)
 

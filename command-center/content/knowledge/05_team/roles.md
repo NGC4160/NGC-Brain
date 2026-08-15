@@ -13,35 +13,56 @@
 
 | Name | Role | Responsibilities |
 |------|------|------------------|
-| **Ryan** | Service manager | Shop operations, service workflow, technician oversight, non-standard pricing, training/QC/diagnostics |
-| **Jesse** | Administrative assistant / service coordinator | Phones, customer intake, standard estimates, approval follow-up, deposits, scheduling, pickup comms, HCP wait codes — **primary front office** |
-| **Christine** | Part-time assistant (co-owner) | Backup coverage when Jesse is out; owner-level exceptions, bookkeeping backup with Jill |
-| **Roy** | Driver | Pickups and deliveries |
+| **Ryan** | Service manager | Technician oversight, diagnostics, training, QC, owner-level pricing/warranty exceptions |
+| **Jesse** | Administrative assistant / service coordinator | **Primary shop operations coordinator** (she/her) — see scope below |
+| **Christine** | Part-time assistant (co-owner) | Backup coverage when Jesse is out; owner-level exceptions |
+| **Roy** | Driver | Executes pickups and deliveries that Jesse routes |
 | **Taylor** | Golf cart technician | In-shop repair and service |
 | **Marlon** | Golf cart technician | In-shop repair and service |
 | **Peyton** | Diagnostics (part-time) | Advanced diagnostics as needed |
 
 ## External
 
-| Name | Role |
-|------|------|
-| **Jill Stoltz** | Bookkeeper (QBO) |
+| Name | Role | Firm |
+|------|------|------|
+| **Jessica** | Bookkeeper (QBO) | Griffin & Furman |
+
+## Jesse — scope (current)
+
+Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, and QC. She handles the majority of work Christine previously did **plus**:
+
+| Area | What she owns |
+|------|----------------|
+| Front office | Phones, intake, deposits, customer updates, HCP wait codes |
+| Estimating | Standard **and advanced** estimates in HCP from tech findings + pricebook |
+| Pricebook | Maintenance in Housecall Pro (add/edit/deactivate lines; Ryan approves new rates) |
+| Inventory | Parts/stock visibility, counts, QBO/HCP alignment |
+| Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order |
+| Shop workflow | Board/HCP hygiene, lane movement, WIP visibility, finish-list support |
+| Pickup / delivery | Routing and scheduling for Roy (zones, batching, $99 vs free) |
+| Data & reporting | Shop metrics, deposit/parts queues, weekly numbers Ryan needs |
+| And more | Other coordinator work as the shop needs it |
+
+**Escalate to Ryan:** wrench work, diagnostic calls, warranty/courtesy write-offs, discounts, angry/fleet fights, ad strategy, payroll/banking. Christine covers when Jesse or Ryan is out.
 
 ## RACI summary
 
 | Function | Primary | Backup |
 |----------|---------|--------|
 | Customer phone / scheduling | Jesse | Christine (part-time) |
-| Standard estimates / approval follow-up | Jesse | Ryan |
+| Estimates (standard + advanced) | Jesse | Ryan (exceptions only) |
 | Deposits & payment collection | Jesse | Christine |
-| Service management | Ryan | — |
+| Pricebook maintenance | Jesse | Ryan (rate approval) |
+| Inventory | Jesse | Ryan |
+| Parts ordering & tracking | Jesse | Ryan |
+| Shop workflow management | Jesse | Ryan |
+| Data management & reporting | Jesse | Ryan |
+| Pickup/delivery routing & scheduling | Jesse | Roy (drive) / Christine |
+| Pickup & delivery (drive) | Roy | — |
+| Service management / tech oversight | Ryan | — |
 | Shop repair work | Taylor, Marlon | Peyton (diagnostics) |
-| Pickup & delivery | Roy | — |
-| Bookkeeping | Jill Stoltz | Christine |
-| Pricing / pricebook updates | Ryan | Jesse (HCP clicks) |
+| Bookkeeping | Jessica (Griffin & Furman) | Christine |
 | Owner exceptions / warranty / discounts | Ryan | Christine |
-
-**Rule:** Jesse handles the majority of tasks Christine previously owned day-to-day. Escalate unusual scope, discounts, warranty fights, and angry customers to Ryan (Christine if Ryan is unavailable).
 
 ## Hiring
 
@@ -62,7 +83,7 @@
 
 ## Administrative Assistant / Service Coordinator — filled
 
-**Filled 2026-08-15: Jesse.** Front-office SOPs, KPI scorecard, and Gusto remain the operating pack. Do **not** recruit another admin unless Jesse’s seat is open.
+**Filled 2026-08-15: Jesse (she/her).** Front-office SOPs, KPI scorecard, and Gusto remain the operating pack. Do **not** recruit another admin unless her seat is open.
 
 | Doc | Path |
 |-----|------|
@@ -73,7 +94,7 @@
 | Ryan 2-week time log (hiring gate, historical) | `external_docs/templates/hiring/NGC_Admin_Ryan_Time_Log.html` |
 | Pack guide | `external_docs/templates/hiring/README.md` |
 
-**RACI (current):** Jesse = primary for routine phone/estimates/approvals/scheduling/deposits; Christine = part-time backup; Ryan = escalations, non-standard pricing, training/QC/diagnostics. Keep Tech #3 recruiting separate — AUTH/PARTS backlog is **not** a technician-capacity trigger.
+Keep Tech #3 recruiting separate — AUTH/PARTS backlog is **not** a technician-capacity trigger.
 
 ## Future growth
 

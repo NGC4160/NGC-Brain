@@ -15,7 +15,7 @@ Move carts through the shop predictably — especially **lithium conversions in 
 | Taylor + Marlon | ~2 primary repair lanes, ~6 productive hrs/day each |
 | Peyton | Advanced diagnostics only — timeboxed, by trigger |
 | Roy | Pickup/delivery — batch by zone, not one-off all day |
-| Jesse | Intake + deposits — gate before parts orders (Christine part-time backup) |
+| Jesse | Intake, deposits, parts/inventory, workflow, Roy routing (Christine part-time backup) |
 | Shop hours | Mon–Fri 8–5 |
 
 **Planning math:** One Professional lithium kit ≈ **6 hours**. With two techs, plan **at most 2 lithium starts per day** if the shop is lithium-heavy; mix in smaller jobs only when WIP allows.
@@ -43,7 +43,7 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 |------|----------|---------------|
 | Intake / needs scheduling | Jesse | Appointment booked or cart in bay |
 | Diagnose | Assigned tech | Complaint verified, estimate approved |
-| Waiting deposit/parts | Jesse + Ryan | Deposit collected **before** battery/motor/controller order |
+| Waiting deposit/parts | Jesse | Deposit collected **before** battery/motor/controller order; Jesse orders and tracks parts |
 | In repair | Taylor / Marlon | Work complete per estimate |
 | QC | Assigned tech | 7-point safety + test drive; fault codes cleared |
 | Ready | Jesse | Customer notified; balance collected or arranged |
@@ -51,11 +51,12 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 
 ## Daily rhythm
 
-### 8:00 — Jesse (10 min)
+### 8:00 — Jesse (10–15 min)
 
 - Clear **needs scheduling** queue: book, callback, or waitlist
-- Confirm deposits on any job waiting parts
-- Give Roy today’s pickup/delivery list (zone batched)
+- Confirm deposits; order/track parts on any job waiting material
+- Set Roy’s pickup/delivery route (zone batched; free vs $99)
+- Flag WIP / AUTH / PARTS counts for Ryan’s huddle
 
 ### 8:15 — Ryan shop huddle (10 min)
 
