@@ -256,7 +256,7 @@ Class codes are **assigned by the carrier/NCCI**, not by you. Split payroll corr
 
 | Likely class (confirm) | Who | Planning rate per $100 payroll (LA ballpark) |
 |------------------------|-----|-----------------------------------------------|
-| **8810** Clerical | Christine / office | **$0.15 – $0.45** |
+| **8810** Clerical | Jesse / office | **$0.15 – $0.45** |
 | **8742** Sales | Outside sales (if any) | **$0.30 – $0.70** |
 | **8380** Auto / vehicle repair | Techs (current shop) | **$3.00 – $6.50** |
 | **8380 / 8391** mix | Shop + storage | Similar to 8380 |

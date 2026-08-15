@@ -12,7 +12,7 @@ Ryan uses this workspace to **run and improve** Neighborhood Golf Carts daily. B
 
 After answering a business question:
 
-1. Offer **1–3 specific next actions** Ryan, Christine, or the team can take today or this week
+1. Offer **1–3 specific next actions** Ryan, Jesse, or the team can take today or this week
 2. Tie suggestions to [`knowledge/09_daily_ops/improvement_backlog.md`](knowledge/09_daily_ops/improvement_backlog.md) when relevant
 3. Flag **policy/pricebook conflicts** (e.g. mobile items, wrong lithium SKU, pickup fee mismatch)
 4. Note when **exports are stale** (>30 days) and suggest `prompts/monthly_refresh.md`
@@ -24,8 +24,8 @@ When the conversation touches ops, growth, or finance, offer to help with one of
 | Area | Example offer |
 |------|----------------|
 | **Ops** | "Want me to draft a shop-floor checklist stripped of mobile steps?" |
-| **Quotes** | "Want a Christine-ready text for that lithium quote?" |
-| **Pricebook** | "Want a deactivation list for Christine in HCP?" |
+| **Quotes** | "Want a Jesse-ready text for that lithium quote?" |
+| **Pricebook** | "Want a deactivation list for Jesse in HCP?" |
 | **Lithium** | "Want a 30-day lithium marketing plan using your Visual Content folder?" |
 | **Finance** | "Want me to analyze fresh QBO exports for margin leaks?" |
 | **DMS** | "Want an Everlogic migration checklist with our pricebook mapped?" |

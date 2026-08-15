@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-03T03:04:07Z",
+  "generated_at": "2026-08-15T04:36:50Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 125,
+  "total_items": 127,
   "sections": [
     {
       "id": "start",
@@ -651,6 +651,30 @@
           "tags": [
             "document",
             "operations",
+            "markdown"
+          ]
+        },
+        {
+          "title": "Golf-cart rental insurance rating",
+          "description": "Planning catalog + quote calculator for a future rental fleet (not offered today)",
+          "path": "knowledge/11_future_lines/golf_cart_rental_insurance_rating.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/11_future_lines/golf_cart_rental_insurance_rating.md",
+          "tags": [
+            "document",
+            "finance_admin",
+            "markdown"
+          ]
+        },
+        {
+          "title": "Rental insurance calculator factors (CSV)",
+          "description": "Machine-readable multipliers for a planning spreadsheet",
+          "path": "knowledge/11_future_lines/rental_insurance_quote_calculator.csv",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/11_future_lines/rental_insurance_quote_calculator.csv",
+          "tags": [
+            "document",
+            "finance_admin",
             "markdown"
           ]
         }

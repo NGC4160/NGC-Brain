@@ -154,7 +154,7 @@ Store webhook URL in NGC Admin Bot when built.
 ## Privacy
 
 - AI reads job **structure** (status, line items, dates) — **not** customer names/phones in saved knowledge files
-- When drafting customer messages, Ryan/Christine pull contact info from HCP directly
+- When drafting customer messages, Ryan/Jesse pull contact info from HCP directly
 
 ## Troubleshooting
 

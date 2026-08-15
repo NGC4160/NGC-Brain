@@ -1,20 +1,21 @@
 # Team & Roles
 
-**Last verified:** 2026-08-03
+**Last verified:** 2026-08-15
 
 ## Ownership
 
 | Name | Role | Ownership |
 |------|------|-----------|
 | Ryan White | Service manager | 50% owner |
-| Christine White | Office manager | 50% owner |
+| Christine White | Co-owner / part-time assistant | 50% owner |
 
 ## Staff
 
 | Name | Role | Responsibilities |
 |------|------|------------------|
-| **Ryan** | Service manager | Shop operations, service workflow, technician oversight |
-| **Christine** | Office manager | Phones, customer intake, front office |
+| **Ryan** | Service manager | Shop operations, service workflow, technician oversight, non-standard pricing, training/QC/diagnostics |
+| **Jesse** | Administrative assistant / service coordinator | Phones, customer intake, standard estimates, approval follow-up, deposits, scheduling, pickup comms, HCP wait codes — **primary front office** |
+| **Christine** | Part-time assistant (co-owner) | Backup coverage when Jesse is out; owner-level exceptions, bookkeeping backup with Jill |
 | **Roy** | Driver | Pickups and deliveries |
 | **Taylor** | Golf cart technician | In-shop repair and service |
 | **Marlon** | Golf cart technician | In-shop repair and service |
@@ -30,13 +31,17 @@
 
 | Function | Primary | Backup |
 |----------|---------|--------|
-| Customer phone / scheduling | Christine | Ryan |
+| Customer phone / scheduling | Jesse | Christine (part-time) |
+| Standard estimates / approval follow-up | Jesse | Ryan |
+| Deposits & payment collection | Jesse | Christine |
 | Service management | Ryan | — |
 | Shop repair work | Taylor, Marlon | Peyton (diagnostics) |
 | Pickup & delivery | Roy | — |
 | Bookkeeping | Jill Stoltz | Christine |
-| Pricing / pricebook updates | Ryan | Christine |
-| Deposits & payment collection | Christine | Ryan |
+| Pricing / pricebook updates | Ryan | Jesse (HCP clicks) |
+| Owner exceptions / warranty / discounts | Ryan | Christine |
+
+**Rule:** Jesse handles the majority of tasks Christine previously owned day-to-day. Escalate unusual scope, discounts, warranty fights, and angry customers to Ryan (Christine if Ryan is unavailable).
 
 ## Hiring
 
@@ -55,26 +60,25 @@
 - Same 1–4 scale as phone screen; Hire / Second look / Pass
 - **Command Center:** Documents → Hiring (phone, quiz, hands-on)
 
-## Hiring — Administrative Assistant / Service Coordinator
+## Administrative Assistant / Service Coordinator — filled
 
-Board position (July 2026): **recruit immediately** if Ryan’s transferable admin load is verified (~6–8+ hrs/week). Role owns phones/triage, standard estimates, daily approval follow-up, scheduling/pickup comms, HCP wait codes, and marketing admin checks under direction. Planning rate ~$15/hr. **Payroll & new-hire packet (I-9, tax, direct deposit) → Gusto.**
+**Filled 2026-08-15: Jesse.** Front-office SOPs, KPI scorecard, and Gusto remain the operating pack. Do **not** recruit another admin unless Jesse’s seat is open.
 
 | Doc | Path |
 |-----|------|
-| Ryan 2-week time log | `external_docs/templates/hiring/NGC_Admin_Ryan_Time_Log.html` |
-| Job description + Indeed post | `external_docs/templates/hiring/NGC_Admin_Job_Description.md` |
-| Phone + desk eval scorecard | `external_docs/templates/hiring/NGC_Admin_Phone_and_Desk_Eval_Scorecard.html` |
-| Front-office SOPs | `external_docs/templates/hiring/NGC_Admin_Front_Office_SOPs.md` |
+| Front-office SOPs (living) | `external_docs/templates/hiring/NGC_Admin_Front_Office_SOPs.md` |
 | Weekly KPI + 30/60/90 review | `external_docs/templates/hiring/NGC_Admin_KPI_and_Review.html` |
+| Job description (historical + Indeed copy) | `external_docs/templates/hiring/NGC_Admin_Job_Description.md` |
+| Phone + desk eval scorecard | `external_docs/templates/hiring/NGC_Admin_Phone_and_Desk_Eval_Scorecard.html` |
+| Ryan 2-week time log (hiring gate, historical) | `external_docs/templates/hiring/NGC_Admin_Ryan_Time_Log.html` |
 | Pack guide | `external_docs/templates/hiring/README.md` |
 
-**RACI (when filled):** Admin = primary for routine phone/estimates/approvals/scheduling hygiene; Christine = Office Manager oversight; Ryan = escalations, non-standard pricing, training/QC/diagnostics. Keep Tech #3 recruiting separate — AUTH/PARTS backlog is **not** a technician-capacity trigger.
+**RACI (current):** Jesse = primary for routine phone/estimates/approvals/scheduling/deposits; Christine = part-time backup; Ryan = escalations, non-standard pricing, training/QC/diagnostics. Keep Tech #3 recruiting separate — AUTH/PARTS backlog is **not** a technician-capacity trigger.
 
 ## Future growth
 
 - Sales and rentals planned after service operations are solid
 - DMS migration may add shop-specific roles (service writer, parts counter)
-- Admin / Service Coordinator hiring pack live — fill seat when time-log / bottleneck confirms
 
 ## Personnel counseling
 

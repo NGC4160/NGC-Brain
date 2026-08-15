@@ -1,7 +1,7 @@
 # NGC Command Center — Setup
 
 **URL:** https://ngc4160.github.io/NGC-Brain/command-center/  
-**Access:** Ryan White & Christine White only
+**Access:** Ryan White, Christine White, and Jesse (service coordinator)
 
 ## First-time setup (Ryan — 5 minutes)
 
@@ -10,7 +10,7 @@
 1. Open GitHub → **NGC-Brain** repo → **Settings** → **Secrets and variables** → **Actions**
 2. Click **New repository secret**
 3. Name: `NGC_COMMAND_CENTER_PASSWORD`
-4. Value: choose a strong access code you and Christine will share
+4. Value: choose a strong access code Ryan, Christine, and Jesse will share
 5. Save
 
 ### 2. Enable GitHub Pages
@@ -19,12 +19,12 @@
 2. **Source:** GitHub Actions
 3. Merge the Command Center PR to `main` — deploy runs automatically
 
-### 3. Share with Christine
+### 3. Share with Christine and Jesse
 
-Send her:
+Send each:
 - URL: https://ngc4160.github.io/NGC-Brain/
 - Access code (via text or in person — not in email if avoidable)
-- She selects **Christine White** on login
+- Christine selects **Christine White**; Jesse selects **Jesse** on login
 
 ## What's on the Command Center
 

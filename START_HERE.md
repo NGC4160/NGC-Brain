@@ -40,7 +40,7 @@ Paste or summarize:
 - Jobs in the shop today (cart make/model, issue, tech assigned)
 - Any numbers you want analyzed (export fresh QBO/HCP first)
 - Decisions you made ("we're setting paid pickup at $99 for all Southshore")
-- Questions for staff (Christine, Roy, techs)
+- Questions for staff (Jesse, Roy, techs)
 
 **Do not paste** customer phone numbers or addresses unless necessary — look those up in HCP.
 

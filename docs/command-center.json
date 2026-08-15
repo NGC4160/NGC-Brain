@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T14:28:58.312304+00:00",
+  "generated_at": "2026-08-15T04:36:50.983464+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -8,8 +8,11 @@
     "Ryan White",
     "Christine White"
   ],
+  "operators": [
+    "Jesse"
+  ],
   "ops": {
-    "generated_at": "2026-08-14T14:28:58.292963+00:00",
+    "generated_at": "2026-08-15T04:36:50.935063+00:00",
     "jobs_synced_at": "2026-08-14T14:28:53.724350+00:00",
     "has_live_data": true,
     "metrics": {
@@ -28,7 +31,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 101,
+          "days": 102,
           "lithium": true,
           "status": "in progress"
         }
@@ -37,49 +40,49 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 101,
+          "days": 102,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17260",
           "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 100,
+          "days": 101,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17109-2",
           "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 79,
+          "days": 80,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17383",
           "description": "General - ***SEE NOTES***",
-          "days": 23,
+          "days": 24,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17381",
           "description": "***SEE NOTES***",
-          "days": 23,
+          "days": 24,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17390",
           "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-          "days": 21,
+          "days": 22,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17395",
           "description": "General - ***SEE NOTES***",
-          "days": 17,
+          "days": 18,
           "lithium": false,
           "status": "in progress"
         }
@@ -378,7 +381,7 @@
       "priority": "P1",
       "name": "Deactivate legacy HCP/QBO items (mobile, NGC Conversion, trip charges)",
       "why": "Prevents wrong quotes & booking",
-      "owner": "Ryan / Christine",
+      "owner": "Ryan / Jesse",
       "status": "**Checklist ready** \u2014 see legacy_pricebook_cleanup.md",
       "category": "Operations (run the shop better)"
     },
@@ -408,9 +411,9 @@
     },
     {
       "priority": "P2",
-      "name": "Deposit collection checklist for Christine",
+      "name": "Deposit collection checklist for Jesse",
       "why": "Batteries/motors/controllers",
-      "owner": "Christine",
+      "owner": "Jesse",
       "status": "Open",
       "category": "Operations (run the shop better)"
     },
@@ -448,9 +451,9 @@
     },
     {
       "priority": "P2",
-      "name": "Standardize \"Professional Kit\" quote template for Christine",
+      "name": "Standardize \"Professional Kit\" quote template for Jesse",
       "why": "Faster, consistent quotes",
-      "owner": "Christine",
+      "owner": "Jesse",
       "status": "Open",
       "category": "Revenue & growth"
     },
@@ -476,6 +479,14 @@
       "why": "Strategic defer, but prep now",
       "owner": "Ryan",
       "status": "Open",
+      "category": "Revenue & growth"
+    },
+    {
+      "priority": "P3",
+      "name": "Rental insurance RFP when rentals are greenlit \u2014 use rating catalog + 3 specialty quotes",
+      "why": "Know CAT/GL cost before launch; 70433 wind/flood is material",
+      "owner": "Ryan",
+      "status": "Catalog drafted \u2014 `knowledge/11_future_lines/`",
       "category": "Revenue & growth"
     },
     {
@@ -513,9 +524,9 @@
     {
       "priority": "P1",
       "name": "Hire Admin / Service Coordinator (Board Jul 2026)",
-      "why": "Free Ryan for diagnostics/training/QC; pack drafted",
-      "owner": "Ryan / Christine",
-      "status": "Docs ready \u2014 recruit",
+      "why": "Free Ryan for diagnostics/training/QC",
+      "owner": "Ryan",
+      "status": "**Filled \u2014 Jesse** (2026-08-15); Christine part-time backup",
       "category": "Team & systems"
     },
     {
@@ -644,7 +655,7 @@
         },
         {
           "title": "Deposit Alerts",
-          "desc": "Christine's deposit gate queue",
+          "desc": "Jesse's deposit gate queue",
           "href": "view.html?path=live/deposit_alerts.md"
         }
       ]
@@ -743,7 +754,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "20 tracked projects \u00b7 P1\u2013P3",
+          "desc": "21 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },
@@ -773,7 +784,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "125 indexed deliverables",
+          "desc": "127 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -791,6 +802,16 @@
           "title": "Pricebook Reference",
           "desc": "Key HCP line items",
           "href": "view.html?path=knowledge/03_services/pricebook_reference.md"
+        },
+        {
+          "title": "Team Roles",
+          "desc": "Jesse front office \u00b7 Christine part-time",
+          "href": "view.html?path=knowledge/05_team/roles.md"
+        },
+        {
+          "title": "Rental Insurance (future)",
+          "desc": "Rating factors + planning calculator \u2014 not offered today",
+          "href": "view.html?path=knowledge/11_future_lines/golf_cart_rental_insurance_rating.md"
         }
       ]
     },
@@ -803,10 +824,10 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "18 active \u00b7 4 planned \u2014 all categories",
+          "desc": "20 active \u00b7 4 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "18 docs"
+          "badge": "20 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
@@ -866,6 +887,12 @@
           "title": "7-Point Golf Cart Inspection Report",
           "desc": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10",
           "href": "documents/operations/NGC_Golf_Cart_Inspection_Report.pdf",
+          "external": false
+        },
+        {
+          "title": "Golf-cart rental insurance rating",
+          "desc": "Planning catalog + quote calculator for a future rental fleet (not offered today)",
+          "href": "view.html?path=knowledge/11_future_lines/golf_cart_rental_insurance_rating.md",
           "external": false
         }
       ]
@@ -936,9 +963,9 @@
     }
   ],
   "documents": {
-    "active": 18,
+    "active": 20,
     "planned": 4,
     "categories": 5
   },
-  "manifest_total": 125
+  "manifest_total": 127
 }

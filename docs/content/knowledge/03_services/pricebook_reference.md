@@ -86,7 +86,7 @@ See [archive/legacy_mobile.md](../archive/legacy_mobile.md) for full list. Inclu
 
 ## Online booking
 
-Most line items have `online_booking_enabled: false` in export. Booking flows through office (Christine) and Housecall Pro.
+Most line items have `online_booking_enabled: false` in export. Booking flows through office (Jesse) and Housecall Pro.
 
 ## Reconciliation note
 

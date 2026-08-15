@@ -16,7 +16,7 @@ Context:
 
 Give me:
 1. **Diagnosis** — 2–3 root causes based on what you know about the business
-2. **30-day plan** — max 5 actions, ordered, with owner (Ryan/Christine/tech)
+2. **30-day plan** — max 5 actions, ordered, with owner (Ryan/Jesse/tech)
 3. **Quick wins** — things we can do this week with no new software
 4. **Metrics to track** — 3–5 numbers I should watch weekly
 5. **What not to do** — distractions given we're not doing sales/rentals yet

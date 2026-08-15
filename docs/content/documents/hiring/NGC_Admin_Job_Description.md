@@ -1,12 +1,14 @@
 # Administrative Assistant / Service Coordinator
 
+**Status: FILLED (2026-08-15) — Jesse.** Keep this file as the role definition and Indeed archive. Do not post again unless the seat is open.
+
 **Neighborhood Golf Carts** · Covington, LA  
-**Reports to:** Christine White (Office Manager) · day-to-day coordination with Ryan White (Service Manager)  
+**Reports to:** Ryan White (Service Manager) · Christine White (co-owner / part-time backup)  
 **Classification:** Full-time, hourly · planning rate **~$15/hour** (Board Jul 2026 modeling assumption — confirm before offer)  
 **Location:** In-shop / front office — 71363 Thelma Ln, Suite E, Covington, LA 70433  
 **Hours:** Monday–Friday, ~8:00 AM – 5:00 PM (shop hours)
 
-**Last updated:** 2026-08-03  
+**Last updated:** 2026-08-15  
 **Authority:** July 2026 CFO/CEO Boardroom Report — Admin / Service Coordinator scope & KPIs
 
 ---
@@ -15,7 +17,7 @@
 
 Ryan’s time is highest-value on advanced diagnostics, technician training, QC, escalations, and shop leadership. Routine phones, standard estimates, approval follow-up, scheduling, and marketing admin are an **administrative bottleneck**. This hire removes that work from Ryan so the shop can move estimates and carts faster — without inventing a second technician.
 
-**Not this job:** wrench work, independent pricing strategy, changing Facebook ads strategy, or replacing Christine as Office Manager.
+**Not this job:** wrench work, independent pricing strategy, changing Facebook ads strategy, or owner-level decisions (Ryan/Christine).
 
 ---
 
@@ -27,7 +29,7 @@ Ryan’s time is highest-value on advanced diagnostics, technician training, QC,
 4. **Customer correspondence** — Routine status updates, scheduling confirmations, pickup/redelivery coordination with Roy.
 5. **Workflow hygiene** — Keep waiting carts coded in HCP: **authorization / parts / technician / pickup-delivery / other**.
 6. **Marketing admin** — Under Ryan/consultant direction, verify Facebook ad destination URLs and landing-page basics; do **not** change strategy without approval.
-7. **Front-office support** — Deposits language, shop-only policy answers, handoffs to Christine/Ryan for edge cases.
+7. **Front-office support** — Deposits language, shop-only policy answers, handoffs to Ryan for edge cases (Christine if Ryan is out).
 
 ---
 
@@ -71,7 +73,7 @@ Ryan’s time is highest-value on advanced diagnostics, technician training, QC,
 
 - Hourly pay per offer (planning assumption ~$15/hr — confirm at offer)
 - **New-hire packet, I-9, tax forms, direct deposit, and payroll enrollment are completed in Gusto**
-- Training: shadow Christine/Ryan; use NGC front-office SOPs and policy cheat sheet
+- Training: shadow Ryan; use NGC front-office SOPs and policy cheat sheet
 
 ---
 

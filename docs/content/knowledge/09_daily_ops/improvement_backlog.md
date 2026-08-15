@@ -11,11 +11,11 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | P | Item | Why | Owner | Status |
 |---|------|-----|-------|--------|
-| P1 | Deactivate legacy HCP/QBO items (mobile, NGC Conversion, trip charges) | Prevents wrong quotes & booking | Ryan / Christine | **Checklist ready** — see legacy_pricebook_cleanup.md |
+| P1 | Deactivate legacy HCP/QBO items (mobile, NGC Conversion, trip charges) | Prevents wrong quotes & booking | Ryan / Jesse | **Checklist ready** — see legacy_pricebook_cleanup.md |
 | P1 | HCP WIP hygiene — audit stale "in progress" (15+ days), correct statuses | 14 IP jobs, most aged; board can't lie | Ryan | Open |
 | P1 | Lithium job tracker (day 0/1/2, deposit received, parts ordered) | Protect 2–3 day promise; 2 Li jobs 50+ days in HCP | Ryan | In progress |
 | P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open |
-| P2 | Deposit collection checklist for Christine | Batteries/motors/controllers | Christine | Open |
+| P2 | Deposit collection checklist for Jesse | Batteries/motors/controllers | Jesse | Open |
 | P3 | Everlogic evaluation demo + migration plan | HCP is wrong tool for shop-only | Ryan | Open |
 
 ## Revenue & growth
@@ -25,7 +25,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P1 | Lithium conversion funnel — landing page / GBP posts / before-afters | ~$81k/yr dedicated line + more in Services | Ryan | Open |
 | P2 | Review $64k marketing spend ROI (QBO) | Largest expense after payroll | Ryan | Open |
 | P2 | HOA outreach — revive or kill the tracker | Sheet in Drive, status unknown | Ryan | Open |
-| P2 | Standardize "Professional Kit" quote template for Christine | Faster, consistent quotes | Christine | Open |
+| P2 | Standardize "Professional Kit" quote template for Jesse | Faster, consistent quotes | Jesse | Open |
 | P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | Open |
 | P3 | Fleet maintenance program — package for HOAs/commercial | Doc exists in Drive | Ryan | Open |
 | P3 | Prep cart sales playbook (bill of sale, deposits) for future launch | Strategic defer, but prep now | Ryan | Open |
@@ -44,7 +44,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P | Item | Why | Owner | Status |
 |---|------|-----|-------|--------|
 | P2 | NGC Admin Bot — Phase 1 deposit gate alerts | Spec + script live; Phase 2 review requests next | Ryan | In progress |
-| P1 | Hire Admin / Service Coordinator (Board Jul 2026) | Free Ryan for diagnostics/training/QC; pack drafted | Ryan / Christine | Docs ready — recruit |
+| P1 | Hire Admin / Service Coordinator (Board Jul 2026) | Free Ryan for diagnostics/training/QC | Ryan | **Filled — Jesse** (2026-08-15); Christine part-time backup |
 | P2 | Peyton diagnostics — when to loop in (clear trigger) | Avoid bottleneck or underuse | Ryan | Open |
 | P3 | Technician skills matrix (Taylor vs Marlon vs Peyton) | Better job assignment | Ryan | Open |
 
@@ -54,6 +54,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | Date | Item |
 |------|------|
+| 2026-08-15 | Jesse hired/seated as Admin / Service Coordinator; Christine → part-time assistant |
 | 2026-08-03 | Admin hiring pack drafted (time log, JD, phone+desk eval, SOPs, KPI/30-60-90); Gusto = new-hire packet |
 | 2026-07-13 | Pickup policy finalized — free 40 mi Northshore; $99 flat outside/Southshore |
 | 2026-07-13 | Customer-supplied lithium install kept at $549 |
@@ -70,7 +71,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 Examples:
 
-- "Draft a Christine checklist for lithium deposits"
+- "Draft a Jesse checklist for lithium deposits"
 - "Build a 30-day plan to deactivate legacy pricebook items"
 - "Compare Everlogic vs BitDMS for our shop-only model"
 - "Write a lithium upsell talk track for the front desk"

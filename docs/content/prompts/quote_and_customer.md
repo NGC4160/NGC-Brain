@@ -16,7 +16,7 @@ Read `knowledge/02_products/lithium_conversions.md`, `knowledge/03_services/shop
 
 **Location:** [Northshore city or Southshore — for pickup/delivery policy]
 
-**Audience:** [customer text Christine sends / my internal notes / talking points for phone]
+**Audience:** [customer text Jesse sends / my internal notes / talking points for phone]
 
 Give me:
 1. Accurate pricing and policy (Professional kits only — no NGC Conversion, no mobile)

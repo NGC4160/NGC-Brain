@@ -1,7 +1,7 @@
 # Legacy Pricebook Cleanup
 
 **Last verified:** 2026-06-28  
-**Owners:** Ryan (approve) · Christine (HCP + QBO clicks)  
+**Owners:** Ryan (approve) · Jesse (HCP clicks) · Jill/Christine (QBO clicks)  
 **Time:** ~45 min one-time  
 **Audit checklist:** `knowledge/.generated/legacy_pricebook_audit.md` (regenerate with `./scripts/admin_bot/run_legacy_audit.sh`)
 
@@ -9,7 +9,7 @@
 
 ## Why
 
-NGC is **shop-only**. Legacy mobile diagnostics, trip charges, and discontinued **NGC Conversion** lithium SKUs are still active in Housecall Pro and QuickBooks. Christine can accidentally quote or book them.
+NGC is **shop-only**. Legacy mobile diagnostics, trip charges, and discontinued **NGC Conversion** lithium SKUs are still active in Housecall Pro and QuickBooks. Jesse can accidentally quote or book them.
 
 **Active jobs check:** No open jobs reference these line items (safe to deactivate).
 
@@ -51,7 +51,7 @@ Policy source: [lithium_conversions.md](../02_products/lithium_conversions.md) �
 
 ---
 
-## Christine — Housecall Pro (30 min)
+## Jesse — Housecall Pro (30 min)
 
 ### Before you start
 
@@ -85,7 +85,7 @@ Policy source: [lithium_conversions.md](../02_products/lithium_conversions.md) �
 
 ---
 
-## Christine — QuickBooks Online (15 min)
+## Jill / Christine — QuickBooks Online (15 min)
 
 1. **Settings → Products and services**
 2. For each row in the audit **QBO section** (~26 items):
@@ -101,7 +101,7 @@ Policy source: [lithium_conversions.md](../02_products/lithium_conversions.md) �
 
 ## Ryan — verify (5 min)
 
-After Christine finishes:
+After Jesse (HCP) and Jill/Christine (QBO) finish:
 
 ```bash
 # Re-export HCP pricebook CSV to external_docs/exports/pricebook/

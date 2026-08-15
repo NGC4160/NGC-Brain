@@ -49,7 +49,7 @@ def build_auth_config() -> None:
     config = {
         "passwordHash": sha256_hex(password),
         "sessionHours": 24,
-        "allowedUsers": ["Ryan", "Christine"],
+        "allowedUsers": ["Ryan", "Christine", "Jesse"],
         "configured": password != "__UNCONFIGURED__",
     }
     existing_path.write_text(
@@ -304,7 +304,7 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict], documents_catal
                 },
                 {
                     "title": "Deposit Alerts",
-                    "desc": "Christine's deposit gate queue",
+                    "desc": "Jesse's deposit gate queue",
                     "href": "view.html?path=live/deposit_alerts.md",
                 },
             ],
@@ -372,6 +372,8 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict], documents_catal
                 {"title": "Lithium Conversions", "desc": "Professional Kits, warranty, deposits", "href": "view.html?path=knowledge/02_products/lithium_conversions.md"},
                 {"title": "Shop Services", "desc": "Diagnostics, pickup, fees", "href": "view.html?path=knowledge/03_services/shop_services.md"},
                 {"title": "Pricebook Reference", "desc": "Key HCP line items", "href": "view.html?path=knowledge/03_services/pricebook_reference.md"},
+                {"title": "Team Roles", "desc": "Jesse front office · Christine part-time", "href": "view.html?path=knowledge/05_team/roles.md"},
+                {"title": "Rental Insurance (future)", "desc": "Rating factors + planning calculator — not offered today", "href": "view.html?path=knowledge/11_future_lines/golf_cart_rental_insurance_rating.md"},
             ],
         },
         {
@@ -564,6 +566,7 @@ def main() -> None:
         "repo": REPO,
         "branch": BRANCH,
         "owners": ["Ryan White", "Christine White"],
+        "operators": ["Jesse"],
         "ops": ops,
         "systems": build_systems(),
         "pipeline": pipeline,

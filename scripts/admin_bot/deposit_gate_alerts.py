@@ -189,7 +189,7 @@ def build_report(alerts: list[Alert], synced_at: str | None) -> str:
     ]
 
     sections = [
-        ("BLOCK_PARTS — Christine priority", "BLOCK_PARTS"),
+        ("BLOCK_PARTS — Jesse priority", "BLOCK_PARTS"),
         ("SCHEDULE_UNPAID — collect before booking", "SCHEDULE_UNPAID"),
         ("COLLECT_BALANCE — before pickup / more labor", "COLLECT_BALANCE"),
     ]
@@ -205,7 +205,7 @@ def build_report(alerts: list[Alert], synced_at: str | None) -> str:
         lines.append("")
 
     lines += [
-        "## Christine — next steps",
+        "## Jesse — next steps",
         "",
         "1. Work **BLOCK_PARTS** top to bottom.",
         "2. Send HCP payment link; note `Deposit received YYYY-MM-DD` on job.",

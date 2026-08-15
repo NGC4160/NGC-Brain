@@ -171,7 +171,7 @@ def build_board(jobs: list[dict], synced_at: str | None) -> str:
 
     if needs_sched:
         ns_rows = sorted([job_row(j, now) for j in needs_sched], key=lambda x: x["days"] or 0, reverse=True)
-        lines += ["## Needs scheduling (Christine queue)", ""]
+        lines += ["## Needs scheduling (Jesse queue)", ""]
         for r in ns_rows[:15]:
             lines.append(format_row(r))
         if len(ns_rows) > 15:

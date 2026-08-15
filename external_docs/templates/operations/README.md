@@ -16,7 +16,7 @@ One-page printable form for complimentary battery testing + the free **7-point s
 2. Fill customer / cart header, static pack voltage, and per-battery Δ / mOhm.
 3. Mark Pass / Fail / N/A on all seven safety points.
 4. Write recommendations; inspector signs.
-5. Give the sheet to the customer — Christine honors **INSPECT10** when they book.
+5. Give the sheet to the customer — Jesse honors **INSPECT10** when they book.
 
 ### Related knowledge
 

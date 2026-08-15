@@ -1,7 +1,7 @@
 # Daily Operations Guide
 
 **Last verified:** 2026-06-28  
-**Primary user:** Ryan (service manager) — Christine and leads can use the same prompts
+**Primary user:** Ryan (service manager) — Jesse (front office) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
 
@@ -29,7 +29,7 @@ Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — see [
 | Need | Prompt / action |
 |------|-----------------|
 | Customer quote (lithium or repair) | [`prompts/quote_and_customer.md`](../../prompts/quote_and_customer.md) |
-| Draft text/email for Christine | Same — specify audience |
+| Draft text/email for Jesse | Same — specify audience |
 | "How do we diagnose X on Club Car?" | AI searches `NGC Document Repository` |
 | Staff instruction for Taylor/Marlon | Ask for shop-floor checklist from SOPs |
 | Price check | AI reads pricebook CSV — never guess |
@@ -55,7 +55,8 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | Person | Best uses |
 |--------|-----------|
 | **Ryan** | Morning briefing, diagnostics help, pricing, growth, DMS planning |
-| **Christine** | Customer reply drafts, deposit/payment policy, scheduling language |
+| **Jesse** | Customer reply drafts, deposit/payment policy, scheduling language |
+| **Christine** | Part-time backup; owner exceptions |
 | **Taylor / Marlon** | Procedure lookup, parts identification (with cart model) |
 | **Roy** | Pickup zone questions, route/day planning |
 | **Jill (bookkeeper)** | Month-end checklist, QBO category questions (export fresh P&L first) |
