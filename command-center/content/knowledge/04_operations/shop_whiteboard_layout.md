@@ -1,7 +1,7 @@
 # Shop Whiteboard Layout
 
 **Last verified:** 2026-06-28  
-**Owner:** Ryan · **Used by:** Ryan, Taylor, Marlon, Christine, Roy  
+**Owner:** Ryan · **Used by:** Ryan, Taylor, Marlon, Jesse, Roy · Christine (part-time backup)  
 **Pairs with:** [shop_throughput.md](shop_throughput.md) · HCP job statuses · `knowledge/.generated/shop_board.md`
 
 ---
@@ -43,12 +43,12 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 
 | # | Lane | WIP max | Who moves cards | HCP equivalent |
 |---|------|--------:|-----------------|----------------|
-| 1 | **INTAKE** | 3 | Christine → Ryan | Needs scheduling / scheduled (not started) |
+| 1 | **INTAKE** | 3 | Jesse → Ryan | Needs scheduling / scheduled (not started) |
 | 2 | **DIAG** | 2 | Assigned tech | In progress (diagnostic) |
-| 3 | **PARTS / DEPOSIT** | 4 | Christine + Ryan | In progress — note "waiting deposit" or "waiting parts" |
+| 3 | **PARTS / DEPOSIT** | 4 | Jesse + Ryan | In progress — note "waiting deposit" or "waiting parts" |
 | 4 | **IN REPAIR** | 3 per tech | Taylor / Marlon | In progress |
 | 5 | **QC** | 2 | Assigned tech | In progress — final test drive |
-| 6 | **READY** | 4 | Christine | In progress — ready for pickup |
+| 6 | **READY** | 4 | Jesse | In progress — ready for pickup |
 | 7 | **OUT TODAY** | — | Roy | Scheduled pickup/delivery (today only) |
 
 **IN REPAIR** column is split into three rows on the board (label with tape):
@@ -64,7 +64,7 @@ IN REPAIR
 
 ## Job card template
 
-Write **one card per cart**. Shop floor uses invoice # and cart — not required to write customer name (Christine’s desk copy can have name).
+Write **one card per cart**. Shop floor uses invoice # and cart — not required to write customer name (Jesse’s desk copy can have name).
 
 ```
 ┌─────────────────────────┐
@@ -106,7 +106,7 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 
 ## Daily use
 
-### Christine — 8:00 AM
+### Jesse — 8:00 AM
 
 1. New drop-offs → **INTAKE** card (invoice # from HCP)
 2. Move card to **PARTS** if waiting deposit; mark `$ dep?`
@@ -127,7 +127,7 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 - Waiting on customer or parts → **PARTS** (update HCP note)
 - Wrenching → **IN REPAIR** on your row
 - Done but not road-tested → **QC**
-- Road test pass → **READY**; tell Christine
+- Road test pass → **READY**; tell Jesse
 
 ### Roy — after huddle
 
@@ -154,9 +154,9 @@ Write daily in top-right corner:
 
 ---
 
-## Christine desk strip (optional 2×3 ft board)
+## Jesse desk strip (optional 2×3 ft board)
 
-If the main board is shop-only, Christine keeps a narrow **intake strip** at the front desk:
+If the main board is shop-only, Jesse keeps a narrow **intake strip** at the front desk:
 
 ```
 NEEDS SCHEDULE  →  SCHEDULED TODAY  →  WAITING CALLBACK

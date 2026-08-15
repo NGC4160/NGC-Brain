@@ -1,7 +1,7 @@
 # Weekly Review — NGC
 
 **Week of:** YYYY-MM-DD  
-**Completed by:** Ryan / Christine
+**Completed by:** Ryan / Jesse
 
 Copy this template each Friday. Fill in numbers you have; leave blank what you don't — the AI can help once you paste HCP/QBO notes.
 
@@ -19,7 +19,7 @@ Copy this template each Friday. Fill in numbers you have; leave blank what you d
 
 - Roy pickups/deliveries issues: 
 - Tech bottlenecks (Taylor / Marlon / Peyton): 
-- Christine / phone volume notes: 
+- Jesse / phone volume notes: 
 
 ## Money (rough — or paste from QBO)
 

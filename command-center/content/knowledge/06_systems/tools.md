@@ -73,7 +73,7 @@
 1. Export pricebook (done)
 2. Map QBO products/services to DMS SKUs
 3. Archive mobile-only workflows
-4. Train Christine + Ryan on new scheduling/invoicing flow
+4. Train Jesse + Ryan on new scheduling/invoicing flow
 5. Parallel-run period before cutting HCP
 
 ## Document repository
@@ -93,7 +93,7 @@ Folder: `external_docs/My Drive/NGC Admin Bot/` — automation/AI backend (empty
 | Resource | Purpose |
 |----------|---------|
 | [10_automation/ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md) | Full spec + roadmap |
-| `scripts/admin_bot/deposit_gate_alerts.py` | Phase 1 — Christine deposit queue |
+| `scripts/admin_bot/deposit_gate_alerts.py` | Phase 1 — Jesse deposit queue |
 | `knowledge/.generated/deposit_alerts.md` | Daily output (no PII) |
 
 Run: `./scripts/admin_bot/run_deposit_alerts.sh` (auto-runs after HCP sync)

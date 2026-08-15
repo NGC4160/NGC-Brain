@@ -10,7 +10,7 @@ description: Run the NGC service manager morning briefing using knowledge/, sync
 1. Read:
    - `knowledge/04_operations/shop_throughput.md`
    - `knowledge/.generated/shop_board.md`
-   - `knowledge/.generated/deposit_alerts.md` (NGC Admin Bot — Christine queue)
+   - `knowledge/.generated/deposit_alerts.md` (NGC Admin Bot — Jesse queue)
    - `knowledge/09_daily_ops/improvement_backlog.md`
    - `knowledge/.generated/sync_manifest.json` (run sync skill first if missing)
 

@@ -133,7 +133,7 @@ As of Jul 2026: books sync daily via morning sync (HCP + QBO API → Command Cen
 5. Taxes
 6. Month closeout
 
-Owner assignments for each flow — confirm current owners with Ryan/Christine.
+Owner assignments for each flow — confirm current owners with Ryan/Jesse (Christine part-time backup).
 
 ## Automation
 

@@ -15,7 +15,7 @@ Move carts through the shop predictably — especially **lithium conversions in 
 | Taylor + Marlon | ~2 primary repair lanes, ~6 productive hrs/day each |
 | Peyton | Advanced diagnostics only — timeboxed, by trigger |
 | Roy | Pickup/delivery — batch by zone, not one-off all day |
-| Christine | Intake + deposits — gate before parts orders |
+| Jesse | Intake + deposits — gate before parts orders (Christine part-time backup) |
 | Shop hours | Mon–Fri 8–5 |
 
 **Planning math:** One Professional lithium kit ≈ **6 hours**. With two techs, plan **at most 2 lithium starts per day** if the shop is lithium-heavy; mix in smaller jobs only when WIP allows.
@@ -26,7 +26,7 @@ Move carts through the shop predictably — especially **lithium conversions in 
 |------|------------|-----|
 | In progress (all jobs) | **6** | ~1 day of work per tech with buffer |
 | In progress (lithium) | **4** | Protect 2–3 day promise |
-| Needs scheduling | **5** | Christine queue; book or decline within 48 hrs |
+| Needs scheduling | **5** | Jesse queue; book or decline within 48 hrs |
 | Unassigned in progress | **0** | Every cart has an owner by **8:30 AM** |
 
 When WIP exceeds limits: **stop scheduling new drop-offs** until oldest jobs complete or get a firm parts date.
@@ -41,17 +41,17 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 
 | Lane | Who owns | Exit criteria |
 |------|----------|---------------|
-| Intake / needs scheduling | Christine | Appointment booked or cart in bay |
+| Intake / needs scheduling | Jesse | Appointment booked or cart in bay |
 | Diagnose | Assigned tech | Complaint verified, estimate approved |
-| Waiting deposit/parts | Christine + Ryan | Deposit collected **before** battery/motor/controller order |
+| Waiting deposit/parts | Jesse + Ryan | Deposit collected **before** battery/motor/controller order |
 | In repair | Taylor / Marlon | Work complete per estimate |
 | QC | Assigned tech | 7-point safety + test drive; fault codes cleared |
-| Ready | Christine | Customer notified; balance collected or arranged |
+| Ready | Jesse | Customer notified; balance collected or arranged |
 | Pickup/delivery | Roy | Cart off lot |
 
 ## Daily rhythm
 
-### 8:00 — Christine (10 min)
+### 8:00 — Jesse (10 min)
 
 - Clear **needs scheduling** queue: book, callback, or waitlist
 - Confirm deposits on any job waiting parts

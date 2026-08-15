@@ -18,7 +18,7 @@ Concrete automations to build — ordered by impact vs effort.
 | 5 | **HCP → Sheet job log** | Zapier | Job completed | Weekly review data without manual entry |
 | 6 | **Monday drift check** | Cursor Automation | Cron Mon 8 AM | Flags price/policy vs knowledge |
 | 7 | **Drive sheet auto-export** | Zapier/Google Apps Script | Nightly | Tech tracker, HOA xlsx in exports/ |
-| 8 | **Deposit reminder** | Zapier | HCP tag "awaiting deposit" | Email Christine |
+| 8 | **Deposit reminder** | Zapier | HCP tag "awaiting deposit" | Email Jesse |
 
 ## Tier 3 — Quarter
 

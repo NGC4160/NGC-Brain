@@ -9,7 +9,7 @@
 
 ## Purpose
 
-NGC Admin Bot is the **automation layer** between Housecall Pro, the team, and (selectively) customers. It handles repetitive follow-ups so Christine and Ryan don't rely on memory or stale HCP statuses.
+NGC Admin Bot is the **automation layer** between Housecall Pro, the team, and (selectively) customers. It handles repetitive follow-ups so Jesse and Ryan don't rely on memory or stale HCP statuses.
 
 **Not in scope:** replacing HCP scheduling, quoting, or tech workflows. The bot **nudges, alerts, and sends templated messages** at the right trigger.
 
@@ -36,11 +36,11 @@ NGC Admin Bot is the **automation layer** between Housecall Pro, the team, and (
 |-------|------|------|
 | Policy | `knowledge/02_products/`, `knowledge/03_services/` | Deposit amounts, review rules |
 | Data | `scripts/connectors/hcp_client.py` | Live jobs, payments |
-| Phase 1 output | `knowledge/.generated/deposit_alerts.md` | Christine daily queue (no PII) |
+| Phase 1 output | `knowledge/.generated/deposit_alerts.md` | Jesse daily queue (no PII) |
 | Phase 2 trigger | HCP webhooks (`job.updated`, `payment.paid`) | Real-time |
 | Phase 3 delivery | HCP customer SMS/email **or** Twilio | Customer-facing |
 
-**Privacy rule:** Generated files use **invoice # + job description only**. Customer names/phones stay in HCP; Christine opens the job there to act.
+**Privacy rule:** Generated files use **invoice # + job description only**. Customer names/phones stay in HCP; Jesse opens the job there to act.
 
 ---
 
@@ -48,7 +48,7 @@ NGC Admin Bot is the **automation layer** between Housecall Pro, the team, and (
 
 | Phase | Automation | Trigger | Owner | Delivery | Status |
 |-------|--------------|---------|-------|----------|--------|
-| **1** | **Deposit gate alert** | Daily HCP sync | Christine | `deposit_alerts.md` + morning briefing | **Building** |
+| **1** | **Deposit gate alert** | Daily HCP sync | Jesse | `deposit_alerts.md` + morning briefing | **Building** |
 | **2** | **Google review request** | Job paid + complete | Customer | HCP SMS/email template | Spec ready |
 | **3** | Deposit reminder (customer) | 48h unpaid deposit on Li/battery job | Customer | HCP message | Backlog |
 | **4** | Job completed → weekly metrics | Webhook | Ryan | Sheet / review file | Backlog |
@@ -88,7 +88,7 @@ Run: `./scripts/admin_bot/run_deposit_alerts.sh` (chained after HCP sync)
 
 Writes: `knowledge/.generated/deposit_alerts.md`
 
-### Christine daily use (2 min)
+### Jesse daily use (2 min)
 
 1. Open deposit alerts file or ask Cursor **"deposit alerts"**
 2. Work `BLOCK_PARTS` first — lithium and battery jobs
@@ -124,7 +124,7 @@ If we earned it, a quick Google review helps other Northshore owners find us:
 
 Questions? Reply here or call 985-402-1206.
 
-— Christine, Neighborhood Golf Carts
+— Jesse, Neighborhood Golf Carts
 ```
 
 **GBP review link:** use Google Business Profile short link from [company profile](../01_company/profile.md).
@@ -147,7 +147,7 @@ Questions? Reply here or call 985-402-1206.
 
 - **Trigger:** Estimate approved + lithium/battery line + 48h no payment
 - **Template:** Friendly reminder with deposit amount and HCP pay link
-- **Owner:** Christine; bot drafts, human sends until trust is high
+- **Owner:** Jesse; bot drafts, human sends until trust is high
 
 ### Lithium SLA alert (internal)
 
@@ -173,7 +173,7 @@ Host options: Cloudflare Worker, Railway, or small VPS. URL registered via HCP `
 | Variable | Purpose | Phase |
 |----------|---------|-------|
 | `HCP_API_KEY` | Already in `.env` | 1 |
-| `NGC_ALERT_EMAIL` | Christine inbox for future email delivery | 3 |
+| `NGC_ALERT_EMAIL` | Jesse inbox for future email delivery | 3 |
 | `NGC_SLACK_WEBHOOK` | Optional team alerts | 3 |
 | `NGC_REVIEW_MIN_TOTAL_CENTS` | Default `50000` ($500) | 2 |
 | `NGC_REVIEW_DELAY_HOURS` | Default `24` | 2 |
@@ -198,7 +198,7 @@ Host options: Cloudflare Worker, Railway, or small VPS. URL registered via HCP `
 - [x] Spec document (this file)
 - [x] `deposit_gate_alerts.py` + run script
 - [x] Chain after `run_hcp_sync.sh`
-- [ ] Christine validates alert list against 5 real jobs
+- [ ] Jesse validates alert list against 5 real jobs
 - [ ] Add HCP note convention: `Deposit received YYYY-MM-DD`
 
 ### Phase 2 (next)

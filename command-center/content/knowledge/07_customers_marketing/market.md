@@ -47,7 +47,7 @@ Confirm current marketing spend mix with Ryan — QBO shows ~$64k advertising/ma
 
 ## Reviews
 
-Historical SOPs request 5-star reviews after completed jobs. Platform: likely Google (via GBP). Confirm current review workflow with Christine.
+Historical SOPs request 5-star reviews after completed jobs. Platform: likely Google (via GBP). Confirm current review workflow with Jesse.
 
 ## Visual content
 

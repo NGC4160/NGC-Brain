@@ -75,7 +75,7 @@ Required when ordering:
 
 ## Payment methods
 
-Cash, card, check, Venmo, Zelle (per historical SOPs; confirm current preferred methods with Christine).
+Cash, card, check, Venmo, Zelle (per historical SOPs; confirm current preferred methods with Jesse).
 
 ## Cart brands serviced
 

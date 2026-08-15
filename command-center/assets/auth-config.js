@@ -3,7 +3,8 @@ window.NGC_AUTH = {
   "sessionHours": 24,
   "allowedUsers": [
     "Ryan",
-    "Christine"
+    "Christine",
+    "Jesse"
   ],
   "configured": true
 };

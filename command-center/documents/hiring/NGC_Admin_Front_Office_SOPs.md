@@ -1,8 +1,8 @@
 # Admin / Service Coordinator — Front Office SOPs
 
 **Neighborhood Golf Carts**  
-**Audience:** Administrative Assistant, Christine (backup), Ryan (escalations)  
-**Last updated:** 2026-08-03  
+**Audience:** Jesse (Administrative Assistant / Service Coordinator), Christine (part-time backup), Ryan (escalations)  
+**Last updated:** 2026-08-15  
 **Related:** Job description · KPI scorecard · `knowledge/03_services/shop_services.md` · pricebook export
 
 These SOPs cover the three board-critical admin workflows: **wait codes**, **standard estimates**, and **approval follow-up**. Also includes call triage, pickup language, deposits, and marketing admin checks.
@@ -19,7 +19,7 @@ These SOPs cover the three board-critical admin workflows: **wait codes**, **sta
 | Lithium | **Professional Kits only** — do not quote discontinued NGC Conversion line |
 | Deposits | Required before ordering batteries, motors, controllers, special-order parts |
 | Pricing | Use Housecall Pro / pricebook — **never invent** a price |
-| Escalation | Unusual scope, discounts, warranty exceptions, angry customers → Christine or Ryan |
+| Escalation | Unusual scope, discounts, warranty exceptions, angry customers → Ryan (Christine if Ryan is out) |
 
 ---
 
@@ -34,7 +34,7 @@ Answer or acknowledge same business day. Pull Ryan/techs only when the call is t
 3. Route:
    - **Schedule / status / pickup / estimate / payment** → handle or book
    - **“What’s wrong with my cart?”** → book shop diagnostic; do not diagnose on the phone
-   - **Upset / warranty fight / fleet / complex lithium scope** → Christine or Ryan
+   - **Upset / warranty fight / fleet / complex lithium scope** → Ryan (Christine if Ryan is out)
 4. Log outcome in HCP (note + next action). No customer PII in Cursor/chat logs.
 
 ### Scripts (short)
@@ -102,11 +102,11 @@ Same business day when technician findings and standard pricing are complete.
 4. Write a plain-language summary the customer will understand (what + why + total).
 5. Set job/estimate status so it appears on the **open estimates** list.
 6. Set wait code **AUTH**.
-7. Send estimate (HCP method Christine specifies) and note date/time sent.
+7. Send estimate (HCP text/email) and note date/time sent.
 8. Add to **same-day or next-morning follow-up list**.
 
 ### Deposit jobs (batteries, motors, controllers, lithium, special order)
-- Estimate may go out for approval, but **do not place the vendor order** until deposit is collected (amount: material + card fees — confirm with Christine).
+- Estimate may go out for approval, but **do not place the vendor order** until deposit is collected (amount: material + card fees — confirm with Ryan if unclear).
 - Typical anchors (confirm current): lithium conversion deposit ~$1,800; standard battery replacement ~$800.
 
 ---
@@ -121,7 +121,7 @@ Every open estimate is reviewed and contacted **daily** until approved, declined
 2. Work oldest first; same-day sends get end-of-day or next-morning contact.
 3. For each: call first when possible; text/email per customer preference.
 4. Document in HCP: contacted / no answer / left voicemail / decision / next date.
-5. **End of day:** Zero open estimates without a note from today (or explicit next-date parked by Christine/Ryan).
+5. **End of day:** Zero open estimates without a note from today (or explicit next-date parked by Ryan).
 
 ### Outcomes to record
 
@@ -131,7 +131,7 @@ Every open estimate is reviewed and contacted **daily** until approved, declined
 | Declined | Close/estimate declined reason; thank them | (remove from AUTH) |
 | Thinking / spouse | Set specific follow-up date/time; note it | AUTH |
 | Wants change / cheaper option | Escalate to Ryan — do not freelance discount | AUTH or OTHER |
-| No answer ×2 days | Alternate contact method; flag Christine if aging | AUTH |
+| No answer ×2 days | Alternate contact method; flag Ryan if aging | AUTH |
 
 ### Tone
 Helpful and direct. Ask for a decision. Never argue. Never invent a lower price.
@@ -143,7 +143,7 @@ Helpful and direct. Ask for a decision. Never argue. Never invent a lower price.
 
 ## 5. Scheduling & pickup / redelivery
 
-1. Confirm date/time windows with customer and shop capacity (Ryan/Christine for bay load).
+1. Confirm date/time windows with customer and shop capacity (Ryan for bay load).
 2. Coordinate Roy for pickup/delivery; confirm address zone (free vs $99) before promising free.
 3. Code **PICKUP** until cart is in shop or returned; then update.
 4. Status texts: only facts (received, waiting approval, parts ordered ETA, ready for pickup).
@@ -168,9 +168,9 @@ Daily or per-campaign check:
 Incoming need
 ├─ Standard schedule / status / estimate / approval / pickup quote → Admin handles
 ├─ Technical diagnosis question → Book diagnostic; do not advise repair steps
-├─ Upset customer / warranty / money exception → Christine or Ryan
+├─ Upset customer / warranty / money exception → Ryan (Christine if Ryan is out)
 ├─ Lithium kit choice / non-standard scope → Ryan
-├─ Deposit amount unclear → Christine
+├─ Deposit amount unclear → Ryan
 └─ Ad strategy / budget / creative → Ryan or consultant only
 ```
 
@@ -180,17 +180,17 @@ Incoming need
 
 **Day 1**
 - [ ] Gusto onboarding complete (I-9, tax, deposit) — payroll system of record
-- [ ] HCP login + shadow Christine on 3 live calls
+- [ ] HCP login + shadow Ryan (or Christine if covering) on 3 live calls
 - [ ] Read this SOP + policy table
 - [ ] Tour wait codes on live jobs with Ryan
 - [ ] Practice one sample estimate (not sent)
 
 **Week 1**
 - [ ] Own phones for defined blocks with backup
-- [ ] Build ≥3 standard estimates (Ryan/Christine review before send)
+- [ ] Build ≥3 standard estimates (Ryan review before send)
 - [ ] Run full open-estimate follow-up list once solo
 - [ ] Complete one marketing URL audit if ads are active
-- [ ] End of week: review KPI scorecard baseline with Christine/Ryan
+- [ ] End of week: review KPI scorecard baseline with Ryan
 
 ---
 

@@ -1,6 +1,6 @@
 # Deposit Gate Alerts (NGC Admin Bot)
 
-**Generated:** 2026-08-14 14:28 UTC  
+**Generated:** 2026-08-15 04:36 UTC  
 **HCP jobs export:** 2026-08-14T14:28:53.724350+00:00  
 **Privacy:** Invoice # and description only — open job in HCP for customer contact.
 
@@ -12,7 +12,7 @@
 | SCHEDULE_UNPAID | 9 |
 | COLLECT_BALANCE | 26 |
 
-## BLOCK_PARTS — Christine priority
+## BLOCK_PARTS — Jesse priority
 
 - **#17182-2** · Accessories - 1.0-Replace Charger Port, Lithium upgrade · `scheduled` · paid $326.66 / $326.66 · **gap $1473.34** — Do not order parts — collect deposit first
 - **#17419** · 1.5-Complete Battery Replacement, 8V · `in progress` · paid $0.00 / $1539.33 · **gap $800.00** — Do not order parts — collect deposit first
@@ -58,7 +58,7 @@
 - **#17404** · Diagnostic Inspection (Minimum Service Charge) · `scheduled` · paid $0.00 / $195.56 · **gap $195.56** — Diagnostic balance due
 - **#17312-1** · ***SEE NOTES*** · `scheduled` · paid $729.42 / $887.83 · **gap $158.41** — Balance due before pickup or additional work
 
-## Christine — next steps
+## Jesse — next steps
 
 1. Work **BLOCK_PARTS** top to bottom.
 2. Send HCP payment link; note `Deposit received YYYY-MM-DD` on job.
