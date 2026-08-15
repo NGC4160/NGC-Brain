@@ -31,7 +31,7 @@ Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — see [
 | Customer quote (lithium or repair) | [`prompts/quote_and_customer.md`](../../prompts/quote_and_customer.md) |
 | Draft text/email for Jesse | Same — specify audience |
 | "How do we diagnose X on Club Car?" | AI searches `NGC Document Repository` |
-| Staff instruction for Taylor/Marlon | Ask for shop-floor checklist from SOPs |
+| Staff instruction for Marlon / Ryan G | Ask for shop-floor checklist from SOPs |
 | Price check | AI reads pricebook CSV — never guess |
 
 ### End of day (5 min)
@@ -57,7 +57,7 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | **Ryan** | Morning briefing, diagnostics help, pricing, growth, DMS planning |
 | **Jesse** | Customer replies, deposits, estimates, pricebook, inventory/parts, workflow, Roy routing, reporting |
 | **Christine** | Part-time backup; owner exceptions |
-| **Taylor / Marlon** | Procedure lookup, parts identification (with cart model) |
+| **Marlon / Ryan G** | Procedure lookup, parts identification (with cart model) |
 | **Roy** | Pickup zone questions, route/day planning |
 | **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
 

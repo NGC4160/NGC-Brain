@@ -131,6 +131,29 @@ class BriefingTests(unittest.TestCase):
         self.assertIn("#17425", text)
         self.assertIn("DISCONTINUED SKU", text)
 
+    def test_former_staff_and_ryan_g(self) -> None:
+        jobs = [
+            _job(
+                invoice_number="17260",
+                description="Accessories - 1.0-Seat belt kit installation",
+                created_at="2026-05-06T12:00:00Z",
+                total_amount=10000,
+                outstanding_balance=0,
+                assigned_employees=[
+                    {"first_name": "Dylan", "last_name": "ShouldNotAppear"},
+                    {"first_name": "Taylor", "last_name": "AlsoHidden"},
+                    {"first_name": "Ryan", "last_name": "Gorgoglione"},
+                    {"first_name": "Roy", "last_name": "DriverLast"},
+                ],
+            )
+        ]
+        text = briefing.build_briefing(jobs, None, BACKLOG, now=NOW)
+        self.assertIn("Ryan G", text)
+        self.assertIn("former — reassign", text)
+        self.assertIn("Taylor and Dylan are gone", text)
+        for leaked in ("ShouldNotAppear", "AlsoHidden", "Gorgoglione", "DriverLast"):
+            self.assertNotIn(leaked, text)
+
     def test_short_last_name_does_not_match_fleet(self) -> None:
         jobs = [_job(customer={"first_name": "Pat", "last_name": "Lee", "email": "x@y.com"})]
         text = briefing.build_briefing(jobs, None, BACKLOG, now=NOW)

@@ -2,7 +2,7 @@
 
 **Saturday, August 15, 2026** · Service manager view · no customer names  
 **HCP jobs export:** 2026-08-14T14:28:53.724350+00:00  
-**Generated:** 2026-08-15 04:53 UTC
+**Generated:** 2026-08-15 04:59 UTC
 
 ## Snapshot
 
@@ -20,7 +20,7 @@
 
 ## Lithium jobs at risk (2–3 day turnaround)
 
-- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 102d · bay Marlon, Dylan · Roy on ticket (Li)
+- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 102d · bay Marlon · Dylan (former — reassign) · Roy on ticket (Li)
 - Also watch (not in-bay, but lithium / deposit-blocked):
   - #17425 · Batteries & Cables - 3.0- NGC Lithium Conversion, 72V 105AH · 3d · unassigned (Li, DISCONTINUED SKU) · `needs scheduling`
   - #17182-2 · Accessories - 1.0-Replace Charger Port, Lithium upgrade · 24d · Richard · Roy on ticket (Li) · `scheduled`
@@ -47,21 +47,33 @@
 
 ## Carts in shop (HCP in progress — no customer names)
 
-- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 102d · bay Marlon, Dylan · Roy on ticket (Li)
-- #17260 · Accessories - 1.0-Seat belt kit installation · 101d · bay Dylan · Roy on ticket
-- #17109-2 · Brakes - 1.0-Brake Inspection & Adjustment · 80d · bay Taylor, Marlon · Roy on ticket
+- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 102d · bay Marlon · Dylan (former — reassign) · Roy on ticket (Li)
+- #17260 · Accessories - 1.0-Seat belt kit installation · 101d · Dylan (former — reassign) · Roy on ticket
+- #17109-2 · Brakes - 1.0-Brake Inspection & Adjustment · 80d · bay Marlon · Taylor (former — reassign) · Roy on ticket
 - #17383 · General - ***SEE NOTES*** · 24d · Roy on ticket
-- #17381 · ***SEE NOTES*** · 24d · bay Ryan · Roy on ticket
+- #17381 · ***SEE NOTES*** · 24d · bay Ryan W · Roy on ticket
 - #17390 · General - 1.0 - Golf Cart Diagnostic & Inspection · 22d · bay Marlon · Roy on ticket
 - #17395 · General - ***SEE NOTES*** · 18d · bay Marlon · Roy on ticket
 - #17409 · General - 1.0 - Golf Cart Diagnostic & Inspection · 11d · bay Marlon · Roy on ticket
 - #17410 · General - 1.0 - Golf Cart Diagnostic & Inspection · 10d · bay Marlon · Roy on ticket
-- #17411 · ***SEE NOTES*** · 9d · bay Ryan · Roy on ticket
+- #17411 · ***SEE NOTES*** · 9d · bay Ryan G · Roy on ticket
 - #17412 · General - 1.0 - Golf Cart Diagnostic & Inspection · 8d · bay Marlon · Roy on ticket
 - #17416 · ***SEE NOTES*** · 7d · Roy on ticket
 - #17414 · General - 1.0 - Golf Cart Diagnostic & Inspection · 7d · bay Marlon · Roy on ticket
 - #17418 · General - 1.0 - Golf Cart Diagnostic & Inspection · 6d · Roy on ticket
 - #17419 · 1.5-Complete Battery Replacement, 8V · 4d · Roy on ticket
+
+## Former staff still on HCP tickets — Jesse reassign
+
+- **Taylor** and **Dylan** are off the roster (2026-08-15). Pull them off every open job.
+- Reassign to **Marlon** or **Ryan G**. Ryan G started today — pair him, don't dump the 100-day pile on day 1.
+- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 102d · bay Marlon · Dylan (former — reassign) · Roy on ticket (Li) · `in progress`
+- #17260 · Accessories - 1.0-Seat belt kit installation · 101d · Dylan (former — reassign) · Roy on ticket · `in progress`
+- #17109-2 · Brakes - 1.0-Brake Inspection & Adjustment · 80d · bay Marlon · Taylor (former — reassign) · Roy on ticket · `in progress`
+- #17312-1 · ***SEE NOTES*** · 67d · bay Marlon · Dylan (former — reassign) · Roy on ticket · `scheduled`
+- #17365 · 0.75-Replace Wheel Hub Bearings (both sides) · 36d · bay Marlon · Taylor (former — reassign) · `scheduled`
+- #17364 · General - ***SEE NOTES*** · 36d · Taylor (former — reassign) · Roy on ticket · `scheduled`
+- #17382 · General - 1.0 - Golf Cart Diagnostic & Inspection · 24d · bay Marlon · Taylor (former — reassign) · Richard · Roy on ticket · `scheduled`
 
 ## Improvement backlog — touch today
 
@@ -70,17 +82,18 @@
 
 ## Staff / Roy / urgent
 
-- Staff today: **not provided** — assume full shop (Ryan, Jesse, Taylor, Marlon, Roy). Peyton is on-call for advanced diag only.
+- Roster: **Ryan W** (service manager), **Jesse**, **Marlon**, **Ryan G** (tech, started today), **Roy**. Peyton on-call for advanced diag. **Taylor and Dylan are gone — do not assign.**
 - Pickups/deliveries for Roy: **none listed** in HCP descriptions. Jesse to set a zone-batched route.
 - Urgent: **not provided.**
 
 ## What I still need from you
 
-- Who is in / out today (especially Taylor, Marlon, Jesse, Roy, Peyton)
+- Who is in / out (Jesse, Marlon, Ryan G, Roy, Peyton)
+- Confirm Ryan G has HCP access and Taylor/Dylan logins are disabled
 - Roy's actual pickup/delivery list (or confirm none)
 - Any fire (comeback, angry customer, fleet) — do not paste names/phones
 - Which 15+ day tickets are physically in a bay vs stale HCP status
-- Confirm HCP assignees not on the current roster: **Dylan, Richard** (first names only — close or reassign those tickets)
+- Confirm HCP assignees not on the current roster: **Richard** (first names only — close or reassign those tickets)
 
 ## Notes
 

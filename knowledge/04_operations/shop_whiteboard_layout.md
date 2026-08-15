@@ -1,7 +1,7 @@
 # Shop Whiteboard Layout
 
-**Last verified:** 2026-06-28  
-**Owner:** Ryan · **Used by:** Ryan, Taylor, Marlon, Jesse, Roy · Christine (part-time backup)  
+**Last verified:** 2026-08-15  
+**Owner:** Ryan W · **Used by:** Ryan W, Marlon, Ryan G, Jesse, Roy · Christine (part-time backup) · Peyton (diag)  
 **Pairs with:** [shop_throughput.md](shop_throughput.md) · HCP job statuses · `knowledge/.generated/shop_board.md`
 
 ---
@@ -46,7 +46,7 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 | 1 | **INTAKE** | 3 | Jesse → Ryan | Needs scheduling / scheduled (not started) |
 | 2 | **DIAG** | 2 | Assigned tech | In progress (diagnostic) |
 | 3 | **PARTS / DEPOSIT** | 4 | Jesse | In progress — note "waiting deposit" or "waiting parts"; Jesse orders/tracks |
-| 4 | **IN REPAIR** | 3 per tech | Taylor / Marlon | In progress |
+| 4 | **IN REPAIR** | 3 per tech | Marlon / Ryan G | In progress |
 | 5 | **QC** | 2 | Assigned tech | In progress — final test drive |
 | 6 | **READY** | 4 | Jesse | In progress — ready for pickup |
 | 7 | **OUT TODAY** | — | Roy | Scheduled pickup/delivery (today only) |
@@ -55,9 +55,9 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 
 ```
 IN REPAIR
-  T — Taylor
-  M — Marlon
-  P — Peyton (diag block only)
+  M  — Marlon
+  RG — Ryan G (tech)
+  P  — Peyton (diag block only)
 ```
 
 ---

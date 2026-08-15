@@ -35,9 +35,10 @@ NEEDS_SCHED_TARGET = 5
 LITHIUM_SLA_DAYS = 3
 STALE_DAYS = 15
 
-BAY_TECH_NAMES = {"taylor", "marlon", "peyton", "ryan", "dylan"}
-DRIVER_NAMES = {"roy"}
-KNOWN_ROSTER = {"ryan", "jesse", "christine", "roy", "taylor", "marlon", "peyton"}
+BAY_TECH_KEYS = {"marlon", "peyton", "payton", "ryan"}
+DRIVER_KEYS = {"roy"}
+KNOWN_ROSTER = {"ryan", "jesse", "christine", "roy", "marlon", "peyton", "payton"}
+FORMER_STAFF = {"taylor", "dylan"}  # do not assign — departed 2026-08-15
 
 # Do not quote / do not treat as current sellable SKU
 DISCONTINUED_LITHIUM = ("ngc lithium conversion", "ngc conversion")
@@ -55,44 +56,67 @@ PII_KEYS = (
 )
 
 
-def staff_first_names(job: dict) -> list[str]:
-    """Bay/driver first names only — never last name, email, or phone."""
-    names: list[str] = []
+def _first_key(label: str) -> str:
+    return label.split()[0].lower()
+
+
+def staff_display_name(emp: dict) -> str:
+    """First name + last initial only when two staff share a first name. Never email/phone."""
+    first = str(emp.get("first_name") or "").strip()
+    last = str(emp.get("last_name") or "").strip()
+    key = first.lower()
+    if key == "payton":
+        return "Peyton"
+    if key == "ryan":
+        initial = last[:1].upper()
+        if initial == "G":
+            return "Ryan G"
+        if initial == "W":
+            return "Ryan W"
+        return "Ryan"
+    return first
+
+
+def staff_labels(job: dict) -> list[str]:
+    labels: list[str] = []
     seen: set[str] = set()
     for emp in job.get("assigned_employees") or []:
         if not isinstance(emp, dict):
             continue
-        first = str(emp.get("first_name") or "").strip()
-        if not first:
+        label = staff_display_name(emp)
+        if not label:
             continue
-        key = first.lower()
-        if key in seen:
+        if label.lower() in seen:
             continue
-        seen.add(key)
-        names.append(first)
-    return names
+        seen.add(label.lower())
+        labels.append(label)
+    return labels
 
 
-def bay_vs_driver(names: list[str]) -> tuple[list[str], list[str], list[str]]:
-    bay, driver, other = [], [], []
+def bay_vs_driver(names: list[str]) -> tuple[list[str], list[str], list[str], list[str]]:
+    bay, driver, former, other = [], [], [], []
     for name in names:
-        key = name.lower()
-        if key in BAY_TECH_NAMES:
+        key = _first_key(name)
+        if key in FORMER_STAFF:
+            former.append(f"{name} (former — reassign)")
+        elif key in BAY_TECH_KEYS:
             bay.append(name)
-        elif key in DRIVER_NAMES:
+        elif key in DRIVER_KEYS:
             driver.append(name)
         else:
             other.append(name)
-    return bay, driver, other
+    return bay, driver, former, other
 
 
 def format_techs(names: list[str]) -> str:
     if not names:
         return "unassigned"
-    bay, driver, other = bay_vs_driver(names)
+    bay, driver, former, other = bay_vs_driver(names)
     parts: list[str] = []
     if bay:
         parts.append("bay " + ", ".join(bay))
+    if former:
+        parts.append(", ".join(former))
     if other:
         parts.append(", ".join(other))
     if driver:
@@ -120,7 +144,7 @@ def format_job_line(job: dict, now: datetime) -> str:
     flag_str = f" ({', '.join(flags)})" if flags else ""
     return (
         f"- #{invoice_of(job)} · {sanitize_description(desc)} · {days_s} · "
-        f"{format_techs(staff_first_names(job))}{flag_str}"
+        f"{format_techs(staff_labels(job))}{flag_str}"
     )
 
 
@@ -199,7 +223,7 @@ def build_priorities(
     if roy_as_only_owner and len(priorities) < 3:
         priorities.append(
             f"**Bay ownership by 8:30** — {roy_as_only_owner} in-progress jobs "
-            f"have Roy (driver) and no Taylor/Marlon. Assign a wrench owner; "
+            f"have Roy (driver) and no Marlon/Ryan G. Assign a wrench owner; "
             f"Roy stays on the ticket only for pickup/delivery."
         )
     if len(needs_sched) > NEEDS_SCHED_TARGET and len(priorities) < 3:
@@ -280,15 +304,22 @@ def build_briefing(
     ]
 
     roy_only = 0
+    former_jobs: list[dict] = []
     hcp_extra: set[str] = set()
     for j in in_progress:
-        names = staff_first_names(j)
-        bay, driver, _other = bay_vs_driver(names)
+        names = staff_labels(j)
+        bay, driver, _former, _other = bay_vs_driver(names)
         if driver and not bay:
             roy_only += 1
     for j in active:
-        for n in staff_first_names(j):
-            if n.lower() not in KNOWN_ROSTER:
+        names = staff_labels(j)
+        if any(_first_key(n) in FORMER_STAFF for n in names):
+            former_jobs.append(j)
+        for n in names:
+            key = _first_key(n)
+            if key in FORMER_STAFF:
+                continue
+            if key not in KNOWN_ROSTER:
                 hcp_extra.add(n)
 
     alerts: list[Alert] = []
@@ -415,6 +446,23 @@ def build_briefing(
         lines.append("- None flagged in progress.")
     lines.append("")
 
+    if former_jobs:
+        lines += [
+            "## Former staff still on HCP tickets — Jesse reassign",
+            "",
+            "- **Taylor** and **Dylan** are off the roster (2026-08-15). Pull them off every open job.",
+            "- Reassign to **Marlon** or **Ryan G**. Ryan G started today — pair him, don't dump the 100-day pile on day 1.",
+        ]
+        seen_former: set[str] = set()
+        for j in sorted(former_jobs, key=lambda x: job_age_days(x, now) or 0, reverse=True):
+            inv = invoice_of(j)
+            if inv in seen_former:
+                continue
+            seen_former.add(inv)
+            status = str(j.get("work_status") or "").lower()
+            lines.append(f"{format_job_line(j, now)} · `{status}`")
+        lines.append("")
+
     lines += [
         "## Improvement backlog — touch today",
         "",
@@ -423,14 +471,15 @@ def build_briefing(
         "",
         "## Staff / Roy / urgent",
         "",
-        "- Staff today: **not provided** — assume full shop (Ryan, Jesse, Taylor, Marlon, Roy). "
-        "Peyton is on-call for advanced diag only.",
+        "- Roster: **Ryan W** (service manager), **Jesse**, **Marlon**, **Ryan G** (tech, started today), **Roy**. "
+        "Peyton on-call for advanced diag. **Taylor and Dylan are gone — do not assign.**",
         "- Pickups/deliveries for Roy: **none listed** in HCP descriptions. Jesse to set a zone-batched route.",
         "- Urgent: **not provided.**",
         "",
         "## What I still need from you",
         "",
-        "- Who is in / out today (especially Taylor, Marlon, Jesse, Roy, Peyton)",
+        "- Who is in / out (Jesse, Marlon, Ryan G, Roy, Peyton)",
+        "- Confirm Ryan G has HCP access and Taylor/Dylan logins are disabled",
         "- Roy's actual pickup/delivery list (or confirm none)",
         "- Any fire (comeback, angry customer, fleet) — do not paste names/phones",
         "- Which 15+ day tickets are physically in a bay vs stale HCP status",

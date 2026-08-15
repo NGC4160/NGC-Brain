@@ -286,7 +286,7 @@ DOCUMENTS: list[dict] = [
         "id": "shop-floor-checklist",
         "category": "operations",
         "title": "Shop-floor checklist (mobile steps stripped)",
-        "description": "Printable bay checklist for Taylor / Marlon — planned",
+        "description": "Printable bay checklist for Marlon / Ryan G — planned",
         "type": "pdf",
         "audience": "Techs",
         "status": "planned",

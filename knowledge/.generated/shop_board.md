@@ -1,6 +1,6 @@
 # Shop Board (auto-generated)
 
-**Generated:** 2026-08-15 04:52 UTC  
+**Generated:** 2026-08-15 04:58 UTC  
 **HCP jobs export:** 2026-08-14T14:28:53.724350+00:00  
 **Privacy:** No customer names or addresses.
 
@@ -76,7 +76,7 @@
 
 ## Ryan — 8:30 actions
 
-1. Assign every in-progress cart to Taylor or Marlon (Peyton only if flagged).
+1. Assign every in-progress cart to Marlon or Ryan G (Peyton only if flagged). Reassign Taylor/Dylan — former staff.
 2. Close or update stale HCP statuses (15+ day jobs).
 3. Protect lithium lane: finish or reschedule anything over 3 days.
 4. Hold new intake if WIP stays above 6 until oldest jobs clear.

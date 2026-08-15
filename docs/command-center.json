@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T04:53:14.207472+00:00",
+  "generated_at": "2026-08-15T04:59:01.980714+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-15T04:53:14.180747+00:00",
+    "generated_at": "2026-08-15T04:59:01.961525+00:00",
     "jobs_synced_at": "2026-08-14T14:28:53.724350+00:00",
     "has_live_data": true,
     "metrics": {
@@ -540,9 +540,9 @@
     },
     {
       "priority": "P3",
-      "name": "Technician skills matrix (Taylor vs Marlon vs Peyton)",
+      "name": "Technician skills matrix (Marlon vs Ryan G vs Peyton)",
       "why": "Better job assignment",
-      "owner": "Ryan",
+      "owner": "Ryan W",
       "status": "Open",
       "category": "Team & systems"
     }

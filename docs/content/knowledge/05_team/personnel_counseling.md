@@ -104,7 +104,7 @@ Primary source: **`NGC Document Repository / Procedures / NGC Policies & Procedu
 
 | Employee | Primary counselor | Backup |
 |----------|-------------------|--------|
-| Taylor, Marlon, Peyton | Ryan | Jesse (witness if needed) |
+| Marlon, Ryan G, Peyton | Ryan W | Jesse (witness if needed) |
 | Roy | Ryan | Jesse |
 | Jesse | Ryan | Christine (co-owner, witness if needed) |
 | Christine | Ryan or Christine (co-owner) | — |

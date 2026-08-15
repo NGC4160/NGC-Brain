@@ -13,13 +13,20 @@
 
 | Name | Role | Responsibilities |
 |------|------|------------------|
-| **Ryan** | Service manager | Technician oversight, diagnostics, training, QC, owner-level pricing/warranty exceptions |
+| **Ryan W** (White) | Service manager / owner | Technician oversight, diagnostics, training, QC, owner-level pricing/warranty exceptions |
 | **Jesse** | Administrative assistant / service coordinator | **Primary shop operations coordinator** (she/her) — see scope below |
 | **Christine** | Part-time assistant (co-owner) | Backup coverage when Jesse is out; owner-level exceptions |
 | **Roy** | Driver | Executes pickups and deliveries that Jesse routes |
-| **Taylor** | Golf cart technician | In-shop repair and service |
 | **Marlon** | Golf cart technician | In-shop repair and service |
+| **Ryan G** (Gorgoglione) | Golf cart technician | Started **2026-08-15** — in-shop repair; pair with Marlon while ramping |
 | **Peyton** | Diagnostics (part-time) | Advanced diagnostics as needed |
+
+## Former staff (do not assign)
+
+| Name | Role (was) | As of | HCP action |
+|------|------------|-------|------------|
+| **Taylor** | Golf cart technician | 2026-08-15 | Remove from open jobs; do not schedule |
+| **Dylan** | Golf cart technician | 2026-08-15 | Remove from open jobs; do not schedule |
 
 ## External
 
@@ -60,7 +67,7 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Pickup/delivery routing & scheduling | Jesse | Roy (drive) / Christine |
 | Pickup & delivery (drive) | Roy | — |
 | Service management / tech oversight | Ryan | — |
-| Shop repair work | Taylor, Marlon | Peyton (diagnostics) |
+| Shop repair work | Marlon, Ryan G | Peyton (diagnostics); Ryan W (oversight) |
 | Bookkeeping | Jessica (Griffin & Furman) | Christine |
 | Owner exceptions / warranty / discounts | Ryan | Christine |
 
