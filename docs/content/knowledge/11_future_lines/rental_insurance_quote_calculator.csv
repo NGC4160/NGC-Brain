@@ -82,7 +82,7 @@ W1,workers_comp,Class code mix,Payroll by duty,category,8810|8380|7380|8017,1.00
 W2,workers_comp,Payroll,Remuneration,number,USD,1.00,1.00,1.00,higher_payroll_raises,"Gusto, 941",Linear
 W3,workers_comp,Experience modifier,NCCI e-mod,number,mod,0.75,1.50,1.00,higher_emod_raises,"NCCI, LWCC",
 W4,workers_comp,Safety / drug-free credit,Programs,yes_no,yes|no,0.90,1.00,0.95,programs_lower,safety manual,
-W6,workers_comp,Officer inclusion,Include owners,yes_no,yes|no,1.00,1.00,1.00,including_raises,policy election,Confirm with Jill
+W6,workers_comp,Officer inclusion,Include owners,yes_no,yes|no,1.00,1.00,1.00,including_raises,policy election,Confirm with Jessica (Griffin & Furman)
 W7,workers_comp,1099 / leased labor,Misclass risk,category,clean|risky,1.00,1.50,1.00,misclass_raises,1099s,
 W8,workers_comp,Delivery / road exposure,Hours on public roads,number,hours,1.00,1.00,1.00,more_road_raises,roles,Roy is 7380-type
 L1,location,State,LA,category,LA,1.20,1.80,1.40,LA_raises,"ISO, NCCI",

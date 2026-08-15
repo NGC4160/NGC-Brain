@@ -35,7 +35,7 @@
 
 ## QuickBooks Online
 
-**Bookkeeper:** Jill Stoltz
+**Bookkeeper:** Jessica (Griffin & Furman)
 
 **Key bank accounts (names only):**
 

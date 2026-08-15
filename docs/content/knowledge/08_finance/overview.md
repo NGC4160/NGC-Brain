@@ -33,7 +33,7 @@ This document covers **structure and categories only** — not customer data, ac
 | **Shop Supply Fee** | $2,247 | |
 | **Housecall Pro Tips** | $2,341 | |
 | **Discounts given** | -$6,886 | |
-| **Unapplied Cash Payment Income** | -$19,926 | Review/cleanup with Jill |
+| **Unapplied Cash Payment Income** | -$19,926 | Review/cleanup with Jessica (Griffin & Furman) |
 
 **Takeaway:** Lithium dedicated line is up vs prior period (~$90k). Majority still flows through Sales and Services. Mobile trip income and Unapplied Cash still need cleanup.
 
@@ -45,7 +45,7 @@ This document covers **structure and categories only** — not customer data, ac
 | Job Supplies | $71,222 |
 | Contractors | $4,454 |
 
-Direct labor accounts exist in COA (`Direct Labor:Salaries & Wages`, payroll taxes) — confirm allocation with Jill.
+Direct labor accounts exist in COA (`Direct Labor:Salaries & Wages`, payroll taxes) — confirm allocation with Jessica (Griffin & Furman).
 
 ## Major expense categories
 
@@ -100,7 +100,7 @@ QBO tracks parish-level sales tax payables. Parishes with activity include:
 - East Baton Rouge
 - And others configured for out-of-area jobs
 
-**Rule of thumb:** Tax jurisdiction follows **where the service is performed** or customer location — confirm specific rules with Jill/bookkeeper for shop vs pickup/delivery scenarios.
+**Rule of thumb:** Tax jurisdiction follows **where the service is performed** or customer location — confirm specific rules with Jessica (Griffin & Furman) for shop vs pickup/delivery scenarios.
 
 ## Bank accounts (names only)
 
@@ -114,7 +114,7 @@ QBO tracks parish-level sales tax payables. Parishes with activity include:
 
 ## Bookkeeping status
 
-As of Jul 2026: books sync daily via morning sync (HCP + QBO API → Command Center). Unapplied Cash and Mobile Trip Income remain cleanup items for Jill.
+As of Jul 2026: books sync daily via morning sync (HCP + QBO API → Command Center). Unapplied Cash and Mobile Trip Income remain cleanup items for Jessica (Griffin & Furman).
 
 ## Month-end checklist
 
@@ -133,7 +133,7 @@ As of Jul 2026: books sync daily via morning sync (HCP + QBO API → Command Cen
 5. Taxes
 6. Month closeout
 
-Owner assignments for each flow — confirm current owners with Ryan/Jesse (Christine part-time backup).
+Owner assignments for each flow — confirm with Ryan / Jesse / Jessica at Griffin & Furman (Christine part-time backup).
 
 ## Automation
 

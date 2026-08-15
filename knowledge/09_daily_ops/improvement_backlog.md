@@ -35,8 +35,8 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | P | Item | Why | Owner | Status |
 |---|------|-----|-------|--------|
-| P2 | Wind down `Mobile Trip Income` in QBO to $0 | Legacy revenue still posting | Jill | Open |
-| P2 | Review Unapplied Cash / Undeposited Funds monthly | QBO flags from exports | Jill | Open |
+| P2 | Wind down `Mobile Trip Income` in QBO to $0 | Legacy revenue still posting | Jessica (Griffin & Furman) | Open |
+| P2 | Review Unapplied Cash / Undeposited Funds monthly | QBO flags from exports | Jessica (Griffin & Furman) | Open |
 | P3 | Monthly knowledge finance refresh from morning sync P&L | Numbers auto-pull; still verify `08_finance/` after big chart changes | Ryan | Open |
 
 ## Team & systems

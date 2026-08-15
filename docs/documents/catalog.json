@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T04:36:50.906508+00:00",
+  "generated_at": "2026-08-15T04:47:52.798911+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan, Jesse, and Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",
@@ -235,7 +235,7 @@
       "id": "team-roles",
       "category": "team_hr",
       "title": "Team roles & hiring overview",
-      "description": "Roster, RACI, phone screen \u2192 shop eval funnel",
+      "description": "Roster, RACI \u2014 Jesse coordinates shop ops; Jessica (Griffin & Furman) books",
       "type": "markdown",
       "audience": "Ryan / Jesse",
       "status": "active",

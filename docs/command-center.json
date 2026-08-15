@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T04:36:50.983464+00:00",
+  "generated_at": "2026-08-15T04:47:52.854989+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-15T04:36:50.935063+00:00",
+    "generated_at": "2026-08-15T04:47:52.828124+00:00",
     "jobs_synced_at": "2026-08-14T14:28:53.724350+00:00",
     "has_live_data": true,
     "metrics": {
@@ -493,7 +493,7 @@
       "priority": "P2",
       "name": "Wind down `Mobile Trip Income` in QBO to $0",
       "why": "Legacy revenue still posting",
-      "owner": "Jill",
+      "owner": "Jessica (Griffin & Furman)",
       "status": "Open",
       "category": "Finance & admin"
     },
@@ -501,7 +501,7 @@
       "priority": "P2",
       "name": "Review Unapplied Cash / Undeposited Funds monthly",
       "why": "QBO flags from exports",
-      "owner": "Jill",
+      "owner": "Jessica (Griffin & Furman)",
       "status": "Open",
       "category": "Finance & admin"
     },
@@ -805,7 +805,7 @@
         },
         {
           "title": "Team Roles",
-          "desc": "Jesse front office \u00b7 Christine part-time",
+          "desc": "Jesse coordinates shop ops \u00b7 Christine part-time",
           "href": "view.html?path=knowledge/05_team/roles.md"
         },
         {

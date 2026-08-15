@@ -1,7 +1,7 @@
 # Legacy Pricebook Cleanup
 
 **Last verified:** 2026-06-28  
-**Owners:** Ryan (approve) · Jesse (HCP clicks) · Jill/Christine (QBO clicks)  
+**Owners:** Ryan (approve rates) · Jesse (HCP pricebook) · Jessica / Christine (QBO clicks)  
 **Time:** ~45 min one-time  
 **Audit checklist:** `knowledge/.generated/legacy_pricebook_audit.md` (regenerate with `./scripts/admin_bot/run_legacy_audit.sh`)
 
@@ -85,7 +85,7 @@ Policy source: [lithium_conversions.md](../02_products/lithium_conversions.md) �
 
 ---
 
-## Jill / Christine — QuickBooks Online (15 min)
+## Jessica (Griffin & Furman) / Christine — QuickBooks Online (15 min)
 
 1. **Settings → Products and services**
 2. For each row in the audit **QBO section** (~26 items):
@@ -101,7 +101,7 @@ Policy source: [lithium_conversions.md](../02_products/lithium_conversions.md) �
 
 ## Ryan — verify (5 min)
 
-After Jesse (HCP) and Jill/Christine (QBO) finish:
+After Jesse (HCP) and Jessica/Christine (QBO) finish:
 
 ```bash
 # Re-export HCP pricebook CSV to external_docs/exports/pricebook/

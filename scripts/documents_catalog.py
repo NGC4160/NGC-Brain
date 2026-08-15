@@ -227,7 +227,7 @@ DOCUMENTS: list[dict] = [
         "id": "team-roles",
         "category": "team_hr",
         "title": "Team roles & hiring overview",
-        "description": "Roster, RACI, phone screen → shop eval funnel",
+        "description": "Roster, RACI — Jesse coordinates shop ops; Jessica (Griffin & Furman) books",
         "source": "knowledge/05_team/roles.md",
         "type": "markdown",
         "audience": "Ryan / Jesse",

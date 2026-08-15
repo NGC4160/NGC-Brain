@@ -1,7 +1,7 @@
 # Daily Operations Guide
 
 **Last verified:** 2026-06-28  
-**Primary user:** Ryan (service manager) — Jesse (front office) and leads can use the same prompts
+**Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
 
@@ -55,11 +55,11 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | Person | Best uses |
 |--------|-----------|
 | **Ryan** | Morning briefing, diagnostics help, pricing, growth, DMS planning |
-| **Jesse** | Customer reply drafts, deposit/payment policy, scheduling language |
+| **Jesse** | Customer replies, deposits, estimates, pricebook, inventory/parts, workflow, Roy routing, reporting |
 | **Christine** | Part-time backup; owner exceptions |
 | **Taylor / Marlon** | Procedure lookup, parts identification (with cart model) |
 | **Roy** | Pickup zone questions, route/day planning |
-| **Jill (bookkeeper)** | Month-end checklist, QBO category questions (export fresh P&L first) |
+| **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
 
 ## Data to feed the AI for best results
 

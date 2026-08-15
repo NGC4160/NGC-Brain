@@ -1,11 +1,11 @@
 # Admin / Service Coordinator — Front Office SOPs
 
 **Neighborhood Golf Carts**  
-**Audience:** Jesse (Administrative Assistant / Service Coordinator), Christine (part-time backup), Ryan (escalations)  
+**Audience:** Jesse (Administrative Assistant / Service Coordinator — she/her), Christine (part-time backup), Ryan (escalations)  
 **Last updated:** 2026-08-15  
-**Related:** Job description · KPI scorecard · `knowledge/03_services/shop_services.md` · pricebook export
+**Related:** Job description · KPI scorecard · `knowledge/03_services/shop_services.md` · `knowledge/05_team/roles.md` · pricebook export
 
-These SOPs cover the three board-critical admin workflows: **wait codes**, **standard estimates**, and **approval follow-up**. Also includes call triage, pickup language, deposits, and marketing admin checks.
+Jesse owns front office **plus** inventory, parts ordering/tracking, pricebook maintenance, advanced estimating, shop workflow, pickup/delivery routing, and data/reporting.
 
 ---
 
@@ -78,22 +78,22 @@ Every waiting cart has **one primary wait reason** so Ryan can see real technici
 
 ---
 
-## 3. Standard estimate SOP
+## 3. Estimate SOP (standard and advanced)
 
 ### Goal
-Same business day when technician findings and standard pricing are complete.
+Same business day when technician findings and pricebook pricing are complete. Jesse builds **advanced** estimates (multi-line repairs, lithium packages, bundled work) — not only simple one-liners.
 
-### When Admin builds the estimate
+### When Jesse builds the estimate
 - Tech has documented findings / recommended work in HCP or written notes
-- Items map cleanly to pricebook lines (parts + labor hours)
-- No custom engineering, unclear root cause, or “good/better/best” judgment calls
+- Items map to pricebook lines (parts + labor hours); she maintains those lines
+- Multi-system or lithium package quotes are in scope if findings are complete
 
 ### When to escalate to Ryan (do not guess)
-- Lithium conversion scope / kit selection edge cases
 - Warranty or courtesy write-offs
 - Bundled discounts or “customer says competitor quoted X”
 - Findings incomplete or conflicting
 - Job likely to change after further diagnosis
+- Brand-new SKU / rate that is not in the pricebook yet (she drafts; Ryan approves the dollar)
 
 ### Build steps
 1. Confirm customer + cart on the correct HCP job.
@@ -141,10 +141,12 @@ Helpful and direct. Ask for a decision. Never argue. Never invent a lower price.
 
 ---
 
-## 5. Scheduling & pickup / redelivery
+## 5. Scheduling & pickup / redelivery routing
 
-1. Confirm date/time windows with customer and shop capacity (Ryan for bay load).
-2. Coordinate Roy for pickup/delivery; confirm address zone (free vs $99) before promising free.
+Jesse **routes and schedules**; Roy **drives**.
+
+1. Confirm date/time windows with customer and shop capacity (Ryan if bay load is the constraint).
+2. Build Roy’s daily route: zone-batch Northshore free (40 mi) vs **$99** Southshore / outside 40 mi. Confirm zone before promising free.
 3. Code **PICKUP** until cart is in shop or returned; then update.
 4. Status texts: only facts (received, waiting approval, parts ordered ETA, ready for pickup).
 
@@ -166,11 +168,12 @@ Daily or per-campaign check:
 
 ```
 Incoming need
-├─ Standard schedule / status / estimate / approval / pickup quote → Admin handles
+├─ Schedule / status / estimate (incl. advanced) / approval / routing → Jesse
+├─ Pricebook edit / parts order / inventory / reporting → Jesse
 ├─ Technical diagnosis question → Book diagnostic; do not advise repair steps
 ├─ Upset customer / warranty / money exception → Ryan (Christine if Ryan is out)
-├─ Lithium kit choice / non-standard scope → Ryan
-├─ Deposit amount unclear → Ryan
+├─ New rate or SKU not in pricebook → Jesse drafts; Ryan approves $
+├─ Deposit amount unclear → Jesse uses policy; Ryan if exception
 └─ Ad strategy / budget / creative → Ryan or consultant only
 ```
 
@@ -187,12 +190,41 @@ Incoming need
 
 **Week 1**
 - [ ] Own phones for defined blocks with backup
-- [ ] Build ≥3 standard estimates (Ryan review before send)
+- [ ] Build ≥3 estimates including one multi-line / lithium package (Ryan review if new rate)
 - [ ] Run full open-estimate follow-up list once solo
 - [ ] Complete one marketing URL audit if ads are active
 - [ ] End of week: review KPI scorecard baseline with Ryan
 
 ---
+
+## 9. Inventory
+
+- Keep HCP/QBO stock views usable: what is on the shelf vs on order.
+- Flag lithium kits, batteries, and high-turn parts before they stock out.
+- Do not invent counts — count or pull from the last verified QBO inventory.
+
+## 10. Parts ordering & tracking
+
+- **No vendor order** on batteries, motors, controllers, lithium, or special-order parts until deposit is collected.
+- Log vendor, PO/order #, ETA, and wait code **PARTS** on the HCP job.
+- Chase late ETAs the same day they slip; tell the tech and customer the new date.
+
+## 11. Pricebook maintenance
+
+- Jesse is primary in Housecall Pro: add, edit, deactivate (mobile / NGC Conversion / wrong fees).
+- Never invent a customer price. New dollars need Ryan’s approval, then she keys them.
+- After edits, note the change so the brain/export can refresh (`prompts/monthly_refresh.md`).
+
+## 12. Shop workflow management
+
+- HCP statuses and the physical board match (intake → parts → repair → ready).
+- Every waiting cart has one primary wait code (AUTH / PARTS / TECH / PICKUP / OTHER).
+- Give Ryan the morning WIP / AUTH / PARTS counts; stop new drop-offs when WIP is red.
+
+## 13. Data management & reporting
+
+- Keep deposit alerts, shop board, and Friday review numbers current (no customer PII in Cursor).
+- Pull the counts Ryan asks for: lithium days, needs-scheduling, open estimates, parts aging.
 
 ## Privacy
 

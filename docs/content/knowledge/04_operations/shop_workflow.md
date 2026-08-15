@@ -15,7 +15,7 @@ Shop diagnosis/repair → Payment → Pickup/delivery OR customer pickup
 
 ### 1. Customer contact & scheduling
 
-- **Jesse** (administrative assistant / service coordinator) answers phones and handles intake; **Christine** covers part-time as backup
+- **Jesse** (administrative assistant / service coordinator) owns intake, estimating, workflow, parts/inventory, and Roy’s routing; **Christine** covers part-time as backup
 - Scheduling via **Housecall Pro**
 - Hours: Mon–Fri 8 AM – 5 PM
 

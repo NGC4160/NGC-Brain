@@ -44,6 +44,6 @@ Neighborhood Golf Carts is a trusted golf cart repair service specializing in **
 
 ## Bookkeeping
 
-- **Bookkeeper:** Jill Stoltz
+- **Bookkeeper:** Jessica (Griffin & Furman)
 - **Accounting system:** QuickBooks Online
 - **Status (as of Jun 2026):** Books clean and current
