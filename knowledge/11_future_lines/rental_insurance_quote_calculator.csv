@@ -1,0 +1,106 @@
+factor_id,coverage_line,factor_name,measurement,input_type,categories_or_unit,mult_low,mult_high,planning_default,direction,data_sources,notes
+U1,universal,Years in business (entity),Full years,number,years,0.90,1.75,1.10,more_years_lowers,"LA SOS, ACORD 125, D&B",<2 yrs treat as new venture
+U2,universal,Years in rental operations,Years renting to public,number,years,1.00,1.50,1.20,more_rental_years_lowers,"loss runs, prior dec pages",Shop years do not fully count
+U3,universal,Prior insurance lapse,Days uninsured last 3-5 yrs,number,days,1.00,1.50,1.00,lapse_raises,"prior dec pages, LexisNexis",>30d lapse often surplus
+U4,universal,Claims history 5 years,"Claim count, incurred $, loss ratio",category,"0 claims|1 small|LR>60%|large BI",0.85,2.50,1.00,worse_claims_raise,"loss runs, A-PLUS, C.L.U.E., ISO ClaimSearch",large BI can decline
+U5,universal,IRPM / schedule rating,Underwriter schedule,number,factor,0.75,1.25,1.00,credits_lower,carrier IRPM worksheet,Admitted only; often capped
+U6,universal,Financial condition / credit,Business + sometimes owner credit,category,strong|thin|poor,0.90,1.75,1.05,worse_credit_raises,"Experian, D&B, Equifax",BK can decline
+U7,universal,Owner industry experience,Years in carts/RV/rental,number,years,0.90,1.35,0.95,more_experience_lowers,"application, GBP",NGC shop experience helps
+U8,universal,Gross rental receipts,Annual rental revenue,number,USD,1.00,1.25,1.00,higher_revenue_raises_exposure,"QBO, tax return",Also the GL exposure base
+U9,universal,Payroll / employee count,W2 heads and 1099s,number,people,1.00,1.00,1.00,more_staff_raises_WC_HNOA,"Gusto, 941s",1099-as-employee is a refer
+U10,universal,Additional insured / contractual,# of heavy AI/waiver/PNC,number,count,1.00,1.15,1.05,more_contracts_raise,HOA/resort contracts,Add $50-150 each if not in factor
+U11,universal,Package / multi-line,Same carrier 3+ lines,yes_no,yes|no,0.85,1.00,1.00,package_lowers,broker submission,Many shop carriers exclude rental
+U12,universal,Deductible,Per line dollar or % wind,category,see line tables,0.70,1.10,1.00,higher_ded_lowers_prem,quote specs,Named-storm often 2-5% TIV
+U13,universal,Limits,Per-occ / aggregate,category,$300k|$500k|$1M|$2M,0.70,1.40,1.00,higher_limits_raise,contracts,ILF vs $1M/$2M = 1.00
+U14,universal,Admitted vs surplus,Market type,category,admitted|surplus,1.00,1.00,1.00,surplus_adds_tax,broker,Add 5.1-5.5% LA surplus tax/fees
+U15,universal,Seasonality,Months operated,number,months,0.70,1.00,1.00,fewer_months_lowers,application,LA storm season still counts
+U16,universal,Safety program,Written program + training,category,none|verbal|documented,0.75,1.25,0.90,stronger_lowers,"manuals, training logs",Stack with GPS
+U17,universal,Telematics / GPS / geofence,% of fleet monitored,number,percent,0.85,1.10,0.90,more_monitoring_lowers,"Samsara, Verizon Connect",100% + geofence for credit
+U18,universal,Rental agreement quality,Written hold harmless + rules,category,none|basic|attorney-reviewed,0.85,1.75,0.90,better_contract_lowers,sample agreement,None can decline
+U19,universal,Damage waiver / renter insurance,Renter CDW or personal policy,category,none|optional|required,0.90,1.15,1.00,shifting_risk_lowers,waiver form,Verify every rental
+U20,universal,Advertising risk,On-road/party/alcohol marketing,category,conservative|mixed|aggressive,1.00,1.50,1.00,riskier_ads_raise,"website, GBP, social",Underwriter will look
+G1,general_liability,Fleet size,Peak rental units,number,carts,0.90,1.15,1.00,more_carts_raise_total,fleet schedule,25+ slight per-cart credit
+G2,general_liability,Rental volume,Rental days per year,number,days,1.00,1.25,1.10,more_days_raise,rental software,>180 days/cart = utilization debit
+G3,general_liability,Gross rental receipts,USD per year,number,USD,1.00,1.00,1.00,higher_raises,P&L,Alt base $12-35 per $1k inland
+G4,general_liability,Territory state,State,category,state,1.20,1.80,1.40,LA_raises,ISO territory,LA vs Midwest inland
+G5,general_liability,Territory parish,Parish/county,category,parish,1.05,1.20,1.10,worse_parish_raises,ISO,St Tammany vs north LA
+G6,general_liability,Territory ZIP,5-digit ZIP,category,70433,1.00,1.15,1.00,hot_ZIP_raises,"ISO Location, Verisk",70433 better than 701xx
+G7,general_liability,Use class,Operating environment,category,course|gated|community|public_road|beach_event,0.75,4.00,1.20,more_public_raises,application/photos,Events can decline
+G8,general_liability,Street-legal / LSV,% of fleet titled for road,number,percent,0.85,2.00,1.15,more_road_raises,"titles, VIN",May force auto form
+G9,general_liability,Radius of operation,Miles from lot,number,miles,0.90,1.60,1.10,wider_raises,GPS geofence,Southshore is a debit
+G10,general_liability,Driver age minimum,Youngest renter,category,25+|21-24|18-20|under18,0.85,2.50,0.95,younger_raises,rental agreement,Under 21 often decline
+G11,general_liability,Driver screening,License/MVR/ID/card,category,none|license_only|license_card|license_card_MVR,0.85,1.50,0.90,stricter_lowers,"SambaSafety, LexisNexis, DMV",No ID check can decline
+G12,general_liability,Alcohol policy,Ban vs tolerate vs promote,category,ban|dont_ask|party,0.90,4.00,0.95,alcohol_raises,agreement/ads,Party use often decline
+G13,general_liability,Occupancy / seats,Max seats,category,2-4|6|8+,1.00,1.60,1.05,more_seats_raise,fleet schedule,Stretch/event refer
+G14,general_liability,Speed capability,Governed mph,number,mph,0.85,2.50,1.05,faster_raises,tech inspection,De-governed can decline
+G15,general_liability,Night / overnight rental,Allowed?,yes_no,yes|no,0.90,1.60,1.00,overnight_raises,hours policy,Unmanned 24/7 worse
+G16,general_liability,Unattended checkout,Staffed vs lockbox/app,category,staffed|lockbox,1.00,1.40,1.00,less_control_raises,ops description,
+G17,general_liability,Delivery of rental carts,You deliver?,category,none|staffed|roadside,1.00,1.50,1.10,delivery_raises,ops + auto policy,Needs owned auto not just HNOA
+G18,general_liability,Sub-rental,HOA/resort re-rents,yes_no,yes|no,1.00,1.75,1.00,subrental_raises,contracts,Need AI
+G19,general_liability,Shop + rental combo,Same entity repairs and rents,yes_no,yes|no,1.10,1.30,1.15,combo_raises,ACORD 126,Often two policies
+G20,general_liability,Event / youth,Camps weddings festivals,yes_no,yes|no,1.00,1.00,1.00,events_raise_or_separate,event app,May be separate premium
+G23,general_liability,GL deductible,Dollar SIR/ded,category,0|1000|2500|5000|10000,0.70,1.00,1.00,higher_ded_lowers,quote,
+P1,physical_damage,TIV / average cart value,ACV sum,number,USD,1.00,1.00,1.00,higher_TIV_raises,invoices/NADA,Rate is % of ACV
+P2,physical_damage,Fleet size,Unit count,number,carts,0.90,1.15,1.00,larger_slight_credit,schedule,
+P3,physical_damage,Age of unit,Years,number,years,0.90,1.30,1.00,older_raises_rate,VIN/titles,Or ACV cap
+P4,physical_damage,Powertrain,Gas vs lead-acid vs lithium,category,gas|lead_acid|lithium,1.00,1.30,1.15,lithium_raises_or_excludes,battery spec,Fire emerging
+P5,physical_damage,Customization / lift,Stock vs lifted/custom,category,stock|lifted|custom,1.00,1.40,1.05,more_custom_raises,photos,Stated amount if >~$15k
+P6,physical_damage,Collision vs OTC,Buy one or both,category,coll|otc|both,1.00,1.00,1.00,both_raises,quote,Combined planning 8-14% coastal
+P8,physical_damage,Wind / named storm,Coastal wind tier,category,inland|coastal|tier1,1.25,2.00,1.35,worse_wind_raises,"Verisk, CoreLogic, HazardHub, NOAA",St Tammany hurricane-exposed
+P9,physical_damage,Flood zone,FEMA zone,category,X|shadedX|AE|VE,1.00,1.50,1.00,worse_zone_raises_or_excludes,"FEMA NFHL, parish GIS",Assume flood excluded unless bought
+P10,physical_damage,Theft / crime,Crime score,category,low|mod|high,0.90,1.50,1.00,worse_crime_raises,"CAP Index, PD",
+P11,physical_damage,Storage / lot protection,Where carts sleep,category,building|fenced_camera|open|renter_site,0.75,1.50,0.90,worse_storage_raises,photos/alarm,Inside building best
+P12,physical_damage,Utilization,Rental days per cart per year,number,days,0.85,1.45,1.10,more_use_raises,rental software,
+P14,physical_damage,AOP deductible,Dollar,category,500|1000|2500|5000,0.70,1.10,0.90,higher_ded_lowers,quote,$1000 = 1.00 baseline in narrative; csv uses 0.90 as NGC default
+P15,physical_damage,Named-storm deductible,% of TIV,category,1%|2%|3%|5%,0.80,1.20,1.00,higher_pct_lowers_prem,coastal form,2% default for 70433
+P16,physical_damage,Valuation,ACV vs RC vs stated,category,ACV|RC|stated,1.00,1.35,1.00,RC_raises,appraisal,
+P17,physical_damage,Transit,Hauled on trailer,yes_no,yes|no,1.00,1.25,1.05,more_transit_raises,truck policy,Need cargo
+P18,physical_damage,Maintenance program,Documented PM,category,none|basic|logged,0.85,1.25,0.90,better_PM_lowers,shop records,NGC 7-point is a plus
+P19,physical_damage,Prior PD losses,Thefts/flood/hail/rollover,category,none|one|pattern,1.00,1.50,1.00,more_losses_raise,loss runs,Pattern can decline
+H1,hnoa,Employees who drive,Headcount,number,people,1.00,1.00,1.00,more_drivers_raise,Gusto,Incidental flat $150-400
+H2,hnoa,Cost of hire,USD rented autos,number,USD,1.00,1.00,1.00,higher_hire_raises,QBO,Rate $1.50-4.00 per $100
+H3,hnoa,Radius,Local vs statewide,category,local|statewide,1.00,1.35,1.00,wider_raises,application,
+H4,hnoa,Cart delivery on auto,Frequency,category,incidental|regular,1.00,2.50,1.00,delivery_raises,ops,Regular delivery = owned auto
+H5,hnoa,MVR quality,Violations/DUI,category,clean|minor|major,1.00,1.50,1.00,worse_MVR_raises,"MVR, SambaSafety",Major = exclude driver
+H6,hnoa,Personal auto limits required,Employee min limits,yes_no,yes|no,0.90,1.30,1.00,requiring_lowers,handbook,
+H8,hnoa,State auto environment,LA vs other,category,LA,1.15,1.40,1.20,LA_raises,ISO auto,
+K1,garagekeepers,Limit,USD,number,USD,1.00,1.00,1.00,higher_limit_raises,peak customer carts x ACV,$2-8 per $1k limit
+K2,garagekeepers,Peak customer units,Count,number,carts,1.00,1.00,1.00,more_units_raise_needed_limit,shop board,Not the rental fleet
+K3,garagekeepers,Coverage type,Legal liab vs direct primary,category,legal|direct,1.00,1.35,1.00,broader_raises,form,
+K4,garagekeepers,Perils,Comp vs comp+coll,category,comp|both,0.70,1.00,1.00,adding_coll_raises,quote,
+K5,garagekeepers,Lot protection,Same as P11,category,building|fenced_camera|open,0.75,1.40,0.90,worse_lot_raises,photos,
+K6,garagekeepers,Location CAT/crime,ZIP flood wind crime,category,see L factors,1.00,1.40,1.10,worse_loc_raises,"FEMA, crime",
+K7,garagekeepers,Deductible,Per cart or occ,category,500|1000|2500,0.85,1.05,1.00,higher_lowers,quote,
+K8,garagekeepers,Road test,Public-road test drives,yes_no,yes|no,1.00,1.25,1.10,road_test_raises,SOP,
+E1,umbrella,Layer size,$1M layers,number,millions,0.55,1.00,1.00,more_limit_raises,quote,Next $1M is 0.55-0.80x prior
+E2,umbrella,Underlying limits,Primary occ limit,category,500k|1M,1.00,1.75,1.00,weaker_underlying_raises,dec pages,$500k may not attach
+E3,umbrella,Underlying quality,Admitted A-rated vs surplus,category,admitted|surplus,1.00,2.00,1.25,weaker_raises_or_declines,AM Best,
+E4,umbrella,Use class,Same as G7-G12,category,see GL,1.00,5.00,1.50,riskier_use_raises,GL submission,Party/beach often decline
+E5,umbrella,Auto included,Over owned auto+HNOA,yes_no,yes|no,1.00,1.40,1.20,including_auto_raises,underlying schedule,
+E7,umbrella,Prior BI suit,Yes/no,yes_no,yes|no,1.00,3.00,1.00,suits_raise,loss runs/PACER,Can decline
+W1,workers_comp,Class code mix,Payroll by duty,category,8810|8380|7380|8017,1.00,1.00,1.00,higher_hazard_raises,"NCCI, LWCC",Do not dump drivers into clerical
+W2,workers_comp,Payroll,Remuneration,number,USD,1.00,1.00,1.00,higher_payroll_raises,"Gusto, 941",Linear
+W3,workers_comp,Experience modifier,NCCI e-mod,number,mod,0.75,1.50,1.00,higher_emod_raises,"NCCI, LWCC",
+W4,workers_comp,Safety / drug-free credit,Programs,yes_no,yes|no,0.90,1.00,0.95,programs_lower,safety manual,
+W6,workers_comp,Officer inclusion,Include owners,yes_no,yes|no,1.00,1.00,1.00,including_raises,policy election,Confirm with Jill
+W7,workers_comp,1099 / leased labor,Misclass risk,category,clean|risky,1.00,1.50,1.00,misclass_raises,1099s,
+W8,workers_comp,Delivery / road exposure,Hours on public roads,number,hours,1.00,1.00,1.00,more_road_raises,roles,Roy is 7380-type
+L1,location,State,LA,category,LA,1.20,1.80,1.40,LA_raises,"ISO, NCCI",
+L2,location,Parish,St Tammany,category,St Tammany,1.25,2.00,1.35,coastal_raises,carrier coastal list,Wind on PD/property
+L3,location,ZIP,70433,category,70433,1.00,1.15,1.00,worse_ZIP_raises,ISO/Verisk,Better than 701xx
+L4,location,Hurricane / wind tier,Carrier tier,category,tier,1.25,2.00,1.35,higher_tier_raises,"Verisk, RMS/AIR, NOAA",Some carriers decline
+L5,location,Distance to coast / lake,Miles,number,miles,1.00,1.40,1.10,closer_raises,GIS/HazardHub,Pontchartrain surge
+L6,location,FEMA flood zone,A/AE/VE/X,category,X|AE|VE,1.00,1.50,1.00,worse_raises_or_excludes,FEMA MSC,Confirm lot before launch
+L10,location,Crime / theft,Score,category,low|mod|high,0.90,1.60,1.00,higher_crime_raises,CAP Index,
+L13,location,ISO PPC,1-10,number,class,0.85,1.15,1.00,worse_PPC_raises_property,ISO PPC,Weak effect on cart floater
+L15,location,Secondary locations,Extra lots/corrals,number,count,1.00,1.30,1.00,more_locs_raise,location schedule,Unscheduled loc = claim fight
+BASE_GL,base_rate,GL per cart inland clean,$ / cart / yr at $1M/$2M,number,USD,90,220,150,higher_base_raises,specialty programs,Then multiply factors
+BASE_GL_RECEIPTS,base_rate,GL per $1k receipts,$ / $1000,number,USD,12,35,22,higher_raises,specialty programs,Alternate exposure
+BASE_GL_DAY,base_rate,GL per rental day,$ / day,number,USD,0.80,2.50,1.40,higher_raises,specialty programs,Alternate exposure
+BASE_PD,base_rate,PD combined % of ACV inland,percent,number,percent,0.05,0.09,0.07,higher_raises,specialty IM/RV,Coastal use 0.08-0.14 before factors
+BASE_PD_COASTAL,base_rate,PD combined % of ACV coastal,percent,number,percent,0.08,0.14,0.10,higher_raises,coastal programs,70433 planning default 10%
+BASE_HNOA,base_rate,HNOA incidental flat,$ / yr,number,USD,150,750,400,higher_raises,commercial auto,Not for cart delivery
+BASE_GKLL,base_rate,GKLL per $1k limit,$ / $1000,number,USD,2,8,4,higher_raises,garage form,Customer units only
+BASE_UMB,base_rate,Umbrella per $1M,$ / layer,number,USD,900,4500,2500,higher_raises,umbrella apps,Rental class toward high end
+BASE_MIN_GL,base_rate,GL minimum premium,$ / yr,number,USD,1500,5000,2500,floor,programs,
+SURPLUS_TAX,tax,LA surplus lines tax + stamp,percent,number,percent,0.051,0.055,0.053,always_adds_on_surplus,LA SLA,4.85% tax plus fees

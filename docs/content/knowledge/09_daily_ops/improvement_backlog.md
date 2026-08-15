@@ -29,6 +29,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | Open |
 | P3 | Fleet maintenance program — package for HOAs/commercial | Doc exists in Drive | Ryan | Open |
 | P3 | Prep cart sales playbook (bill of sale, deposits) for future launch | Strategic defer, but prep now | Ryan | Open |
+| P3 | Rental insurance RFP when rentals are greenlit — use rating catalog + 3 specialty quotes | Know CAT/GL cost before launch; 70433 wind/flood is material | Ryan | Catalog drafted — `knowledge/11_future_lines/` |
 
 ## Finance & admin
 

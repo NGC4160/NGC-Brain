@@ -33,6 +33,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [10_automation/hcp_api_setup.md](10_automation/hcp_api_setup.md) | **HCP MAX API** — key, sync, MCP, webhooks |
 | [10_automation/ngc_admin_bot_spec.md](10_automation/ngc_admin_bot_spec.md) | **Admin Bot** — deposit alerts, review requests, webhooks |
 | [10_automation/legacy_pricebook_cleanup.md](10_automation/legacy_pricebook_cleanup.md) | **Deactivate mobile / NGC Conversion pricebook items** |
+| [11_future_lines/golf_cart_rental_insurance_rating.md](11_future_lines/golf_cart_rental_insurance_rating.md) | **Future rentals** — insurance rating factors + planning calculator (not offered today) |
 
 **Quick start:** [`START_HERE.md`](../START_HERE.md) · **Prompts:** [`prompts/`](../prompts/) · **Sync:** `./scripts/sync/run_ingest.sh`
 
