@@ -1,7 +1,92 @@
 {
-  "synced_at": "2026-08-15T13:48:40.568448+00:00",
+  "synced_at": "2026-08-16T13:49:33.453952+00:00",
   "count": 500,
   "jobs": [
+    {
+      "id": "job_78374dda2b4644e28340a2078aa3fd5f",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+      "notes": [
+        {
+          "id": "nte_19ecb729ba9244e3a516064730897cff",
+          "content": "Customer dropping off and picking "
+        }
+      ],
+      "work_status": "needs scheduling",
+      "work_timestamps": {
+        "on_my_way_at": null,
+        "started_at": null,
+        "completed_at": null
+      },
+      "schedule": {
+        "scheduled_start": null,
+        "scheduled_end": null,
+        "arrival_window": 0,
+        "appointments": []
+      },
+      "total_amount": 20239,
+      "outstanding_balance": 20239,
+      "assigned_employees": [],
+      "tags": [],
+      "original_estimate_id": "est_cfcb40ddfc2448d48527748a270b39a9",
+      "original_estimate_uuids": [
+        "est_cfcb40ddfc2448d48527748a270b39a9"
+      ],
+      "subtotal": 18525,
+      "lead_source": null,
+      "job_fields": {
+        "job_type": null,
+        "business_unit": null
+      },
+      "locked_at": null,
+      "created_at": "2026-08-15T21:15:47Z",
+      "updated_at": "2026-08-15T21:15:49Z",
+      "canceled_at": null,
+      "deleted_at": null,
+      "assigned_route_template_id": null,
+      "company_name": "Neighborhood Golf Carts",
+      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+      "invoice_number": "17438",
+      "customer": {
+        "id": "cus_8ab42737b99b48b3877fbd896651d9da",
+        "first_name": "Blake",
+        "last_name": "Albert",
+        "email": "balbert32@yahoo.com",
+        "mobile_number": "5042591973",
+        "home_number": null,
+        "work_number": null,
+        "company": null,
+        "notifications_enabled": true,
+        "lead_source": "Referral",
+        "notes": null,
+        "kind": "homeowner",
+        "created_at": "2026-08-15T16:16:53Z",
+        "updated_at": "2026-08-15T16:16:53Z",
+        "company_name": "Neighborhood Golf Carts",
+        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+        "tags": [
+          "Club Car",
+          "Precedent",
+          "lithium",
+          "2008"
+        ]
+      },
+      "address": {
+        "id": null,
+        "type": "service",
+        "street": null,
+        "street_line_2": null,
+        "city": null,
+        "state": null,
+        "zip": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
+      },
+      "recurrence_number": null,
+      "recurrence_rule": null,
+      "recurrence_status": null,
+      "recurrence_id": null
+    },
     {
       "id": "job_2776f2ff9c564882b294c45fd1964b7b",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
@@ -2416,8 +2501,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 31054,
-      "outstanding_balance": 31054,
+      "total_amount": 106218,
+      "outstanding_balance": 106218,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -2524,7 +2609,7 @@
       "original_estimate_uuids": [
         "est_024d4c051b9d499a852863639e782083"
       ],
-      "subtotal": 28425,
+      "subtotal": 115125,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -2532,7 +2617,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-07T21:04:27Z",
-      "updated_at": "2026-08-14T13:23:33Z",
+      "updated_at": "2026-08-15T21:11:45Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3191,7 +3276,7 @@
     },
     {
       "id": "job_f943ceaa937a4e48be3ae972460341de",
-      "description": "General - ***SEE NOTES***",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [
         {
           "id": "nte_db42698948b54522a8f7f33cb0436f0b",
@@ -3293,7 +3378,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-31T22:31:56Z",
-      "updated_at": "2026-08-14T20:40:01Z",
+      "updated_at": "2026-08-15T15:11:56Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4327,7 +4412,7 @@
     },
     {
       "id": "job_f0dd3b3c7a05416b96c9105ad489efe6",
-      "description": "General - ***SEE NOTES***",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
       "work_status": "complete unrated",
       "work_timestamps": {
@@ -4490,7 +4575,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-28T14:08:02Z",
-      "updated_at": "2026-08-14T23:53:24Z",
+      "updated_at": "2026-08-15T15:11:15Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4539,7 +4624,7 @@
     },
     {
       "id": "job_63e11a50c1754db79f5cc2efd9143136",
-      "description": "General - ***SEE NOTES***",
+      "description": "Drivetrain - 1.0-Drivetrain Labor Hours",
       "notes": [
         {
           "id": "nte_b5b181c07c9c4048b5ffa8a1d772669b",
@@ -4674,7 +4759,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-27T21:30:21Z",
-      "updated_at": "2026-08-14T18:06:42Z",
+      "updated_at": "2026-08-15T15:12:37Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -5637,7 +5722,7 @@
     },
     {
       "id": "job_b4c165b9b2ea4aed9bbb55f2d346f296",
-      "description": "General - ***SEE NOTES***",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [
         {
           "id": "nte_0dfb267df6744c259fb037f9baa1e90b",
@@ -5739,7 +5824,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-27T17:05:02Z",
-      "updated_at": "2026-08-14T18:07:47Z",
+      "updated_at": "2026-08-15T15:14:25Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -5792,7 +5877,7 @@
     },
     {
       "id": "job_b9e03f382a2f43a79275e8d969b2339b",
-      "description": "***SEE NOTES***",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
       "work_status": "complete unrated",
       "work_timestamps": {
@@ -5889,7 +5974,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-27T17:04:44Z",
-      "updated_at": "2026-08-13T02:09:38Z",
+      "updated_at": "2026-08-15T15:23:44Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -7857,7 +7942,7 @@
     },
     {
       "id": "job_67484ac225c74037a58805e5c4a5aebc",
-      "description": "***SEE NOTES***",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
       "work_status": "in progress",
       "work_timestamps": {
@@ -7871,8 +7956,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 31054,
-      "outstanding_balance": 31054,
+      "total_amount": 67613,
+      "outstanding_balance": 67613,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -7946,7 +8031,7 @@
       "original_estimate_uuids": [
         "est_00975168d9084ae6b591aec996874ecc"
       ],
-      "subtotal": 28425,
+      "subtotal": 62125,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -7954,7 +8039,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-21T17:28:24Z",
-      "updated_at": "2026-08-12T20:03:59Z",
+      "updated_at": "2026-08-15T19:45:04Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -67382,94 +67467,6 @@
         "country": null,
         "latitude": 30.2789431,
         "longitude": -89.6972936
-      },
-      "recurrence_number": null,
-      "recurrence_rule": null,
-      "recurrence_status": null,
-      "recurrence_id": null
-    },
-    {
-      "id": "job_211435fe02dd48a1be986e4c0df9d062",
-      "description": "48V MINI Professional Lithium Battery Conversion Kit Installed",
-      "notes": [
-        {
-          "id": "nte_400ab252ad5f4fe4ab06a35423bcae91",
-          "content": "1.0- Golf Cart Diagnostic & Inspection Mobile Service Call:\n1.Please provide as much info as you can about your cart.    Year/Make/Model?    Gas or Electric?    36V or 48V?    Carb or Fuel-injected?:\n- Test\n\n2.Where did you hear about us?:\n- Test"
-        }
-      ],
-      "work_status": "pro canceled",
-      "work_timestamps": {
-        "on_my_way_at": null,
-        "started_at": null,
-        "completed_at": null
-      },
-      "schedule": {
-        "scheduled_start": null,
-        "scheduled_end": null,
-        "arrival_window": 0,
-        "appointments": []
-      },
-      "total_amount": 252801,
-      "outstanding_balance": 252801,
-      "assigned_employees": [],
-      "tags": [
-        "lithium"
-      ],
-      "original_estimate_id": "est_0f051df7a8b7471fb69abb9dc52b3b75",
-      "original_estimate_uuids": [
-        "est_0f051df7a8b7471fb69abb9dc52b3b75"
-      ],
-      "subtotal": 231397,
-      "lead_source": "Online Booking",
-      "job_fields": {
-        "job_type": {
-          "id": "jbt_ec0b0846b2354cc4a010852fbb6bdb74",
-          "name": "Lithium Battery Conversion"
-        },
-        "business_unit": {
-          "id": "buu_7ef0ea7ef50f4c26a30c87d8664fae7c",
-          "name": "Golf Cart Service"
-        }
-      },
-      "locked_at": null,
-      "created_at": "2025-12-26T19:44:10Z",
-      "updated_at": "2025-12-26T19:52:33Z",
-      "canceled_at": null,
-      "deleted_at": "2025-12-26T19:52:33Z",
-      "assigned_route_template_id": null,
-      "company_name": "Neighborhood Golf Carts",
-      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-      "invoice_number": "1652",
-      "customer": {
-        "id": "cus_3eb172603e954f73a0fc34f65a433c6e",
-        "first_name": "Test",
-        "last_name": "Test",
-        "email": "service@pagolfcartworld.com",
-        "mobile_number": "4124407734",
-        "home_number": null,
-        "work_number": null,
-        "company": null,
-        "notifications_enabled": true,
-        "lead_source": null,
-        "notes": null,
-        "kind": "homeowner",
-        "created_at": "2025-12-17T04:07:08Z",
-        "updated_at": "2026-02-02T18:22:23Z",
-        "company_name": "Neighborhood Golf Carts",
-        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-        "tags": []
-      },
-      "address": {
-        "id": "adr_8635643c88584d178d8d2f160adf8658",
-        "type": "service",
-        "street": "test",
-        "street_line_2": null,
-        "city": "Test",
-        "state": "PA",
-        "zip": "11111",
-        "country": "US",
-        "latitude": 41.2033216,
-        "longitude": -77.1945247
       },
       "recurrence_number": null,
       "recurrence_rule": null,
