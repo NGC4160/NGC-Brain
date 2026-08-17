@@ -1,7 +1,7 @@
 # Deposit Gate Alerts (NGC Admin Bot)
 
-**Generated:** 2026-08-16 13:49 UTC  
-**HCP jobs export:** 2026-08-16T13:49:33.453952+00:00  
+**Generated:** 2026-08-17 13:57 UTC  
+**HCP jobs export:** 2026-08-17T13:57:54.853872+00:00  
 **Privacy:** Invoice # and description only — open job in HCP for customer contact.
 
 ## Summary
@@ -10,7 +10,7 @@
 |-------|------:|
 | BLOCK_PARTS (do not order) | 1 |
 | SCHEDULE_UNPAID | 11 |
-| COLLECT_BALANCE | 24 |
+| COLLECT_BALANCE | 23 |
 
 ## BLOCK_PARTS — Jesse priority
 
@@ -49,7 +49,6 @@
 - **#17420** · ***SEE NOTES*** · `needs scheduling` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
 - **#17418** · General - 1.0 - Golf Cart Diagnostic & Inspection · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
 - **#17416** · ***SEE NOTES*** · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
-- **#17411** · ***SEE NOTES*** · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
 - **#17410** · General - 1.0 - Golf Cart Diagnostic & Inspection · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
 - **#17407** · General - 1.0 - Golf Cart Diagnostic & Inspection · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
 - **#17406** · General - 1.0 - Golf Cart Diagnostic & Inspection · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
