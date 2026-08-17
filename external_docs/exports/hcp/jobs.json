@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-08-16T13:49:33.453952+00:00",
+  "synced_at": "2026-08-17T13:57:54.853872+00:00",
   "count": 500,
   "jobs": [
     {
@@ -2825,12 +2825,17 @@
     {
       "id": "job_c77cab2401cb4a3a9e91bd4330139d54",
       "description": "***SEE NOTES***",
-      "notes": [],
-      "work_status": "in progress",
+      "notes": [
+        {
+          "id": "nte_deca548dc6864c75bb3eaaa4d35fe2bd",
+          "content": "48V DC SepEx Motor\nModel: ZQS48-3.8-T\n3.8 kW Golf Cart Traction Motor\nhttps://www.noco-evco.com/product/ZQS48-3.8-T.htm"
+        }
+      ],
+      "work_status": "complete unrated",
       "work_timestamps": {
         "on_my_way_at": "2026-08-14T14:19:03Z",
         "started_at": "2026-08-14T14:19:03Z",
-        "completed_at": null
+        "completed_at": "2026-08-17T13:14:08Z"
       },
       "schedule": {
         "scheduled_start": "2026-08-11T14:30:00Z",
@@ -2838,8 +2843,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 20239,
-      "outstanding_balance": 20239,
+      "total_amount": 170894,
+      "outstanding_balance": 90894,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -2908,12 +2913,14 @@
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
-      "tags": [],
+      "tags": [
+        "Pipeline Automation"
+      ],
       "original_estimate_id": "est_b95278c962f146fbb034ee13f6fd39ca",
       "original_estimate_uuids": [
         "est_b95278c962f146fbb034ee13f6fd39ca"
       ],
-      "subtotal": 18525,
+      "subtotal": 156425,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -2921,7 +2928,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-05T22:16:00Z",
-      "updated_at": "2026-08-14T14:19:03Z",
+      "updated_at": "2026-08-17T13:20:20Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3142,8 +3149,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 31054,
-      "outstanding_balance": 31054,
+      "total_amount": 151120,
+      "outstanding_balance": 151120,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -3212,12 +3219,14 @@
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
-      "tags": [],
+      "tags": [
+        "Pipeline Automation"
+      ],
       "original_estimate_id": "est_941455347b844593934a07d36a5eecba",
       "original_estimate_uuids": [
         "est_941455347b844593934a07d36a5eecba"
       ],
-      "subtotal": 28425,
+      "subtotal": 138325,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -3225,7 +3234,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-03T23:09:45Z",
-      "updated_at": "2026-08-14T19:41:41Z",
+      "updated_at": "2026-08-17T13:31:24Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
