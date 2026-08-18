@@ -6,6 +6,14 @@ knowledge/.generated/
 external_docs/My Drive/Management/Personnel/
 __pycache__/
 
+# Omi second brain local runtime
+omi-second-brain/.env
+omi-second-brain/config/settings.yaml
+omi-second-brain/data/chroma/*
+omi-second-brain/data/state/*
+!omi-second-brain/data/chroma/.gitkeep
+!omi-second-brain/data/state/.gitkeep
+
 # GarageBuddy local secrets / overrides (never commit passwords)
 scripts/garagebuddy/.env
 tools/GarageBuddy/src/Web/GarageBuddy.Web/Configurations/database.Development.json
