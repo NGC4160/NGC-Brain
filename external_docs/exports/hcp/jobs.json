@@ -1,7 +1,424 @@
 {
-  "synced_at": "2026-08-20T14:05:16.814637+00:00",
+  "synced_at": "2026-08-22T13:48:46.736812+00:00",
   "count": 500,
   "jobs": [
+    {
+      "id": "job_2004d13dba22415794568ed882bf7bb4",
+      "description": "Accessories - 2.0-Battery Monitor Installation",
+      "notes": [],
+      "work_status": "needs scheduling",
+      "work_timestamps": {
+        "on_my_way_at": null,
+        "started_at": null,
+        "completed_at": null
+      },
+      "schedule": {
+        "scheduled_start": null,
+        "scheduled_end": null,
+        "time_zone": null,
+        "scheduled_start_local": null,
+        "scheduled_end_local": null,
+        "arrival_window": 0,
+        "appointments": []
+      },
+      "total_amount": 44574,
+      "outstanding_balance": 44574,
+      "assigned_employees": [],
+      "tags": [],
+      "original_estimate_id": "est_44c5c4b72a3c4374b94c2324f0df9895",
+      "original_estimate_uuids": [
+        "est_44c5c4b72a3c4374b94c2324f0df9895"
+      ],
+      "subtotal": 40800,
+      "lead_source": null,
+      "job_fields": {
+        "job_type": null,
+        "business_unit": null
+      },
+      "locked_at": null,
+      "created_at": "2026-08-20T17:48:08Z",
+      "updated_at": "2026-08-20T17:48:10Z",
+      "canceled_at": null,
+      "deleted_at": null,
+      "assigned_route_template_id": null,
+      "company_name": "Neighborhood Golf Carts",
+      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+      "invoice_number": "17447",
+      "customer": {
+        "id": "cus_9b7a2dc9cbe4462eab180a2f5e6333fc",
+        "first_name": "Christopher",
+        "last_name": "Falvey",
+        "email": "chris@uniquenola.com",
+        "mobile_number": "3123716022",
+        "home_number": null,
+        "work_number": null,
+        "company": null,
+        "notifications_enabled": true,
+        "lead_source": null,
+        "notes": null,
+        "kind": "homeowner",
+        "created_at": "2026-08-18T19:30:55Z",
+        "updated_at": "2026-08-20T17:10:26Z",
+        "company_name": "Neighborhood Golf Carts",
+        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+        "tags": [
+          "Club Car",
+          "Precedent",
+          "48 volt",
+          "2010",
+          "lead acid"
+        ]
+      },
+      "address": {
+        "id": "adr_a042096be05f48aca80f61d8b2e92c3c",
+        "type": "billing",
+        "street": "3104 Annunciation St",
+        "street_line_2": null,
+        "city": "New Orleans",
+        "state": "LA",
+        "zip": "70115",
+        "country": "US",
+        "latitude": 29.9218418,
+        "longitude": -90.0836987
+      },
+      "recurrence_number": null,
+      "recurrence_rule": null,
+      "recurrence_status": null,
+      "recurrence_id": null
+    },
+    {
+      "id": "job_957c035e09474732b7bb784322ae67ad",
+      "description": "***SEE NOTES***",
+      "notes": [],
+      "work_status": "pro canceled",
+      "work_timestamps": {
+        "on_my_way_at": null,
+        "started_at": null,
+        "completed_at": null
+      },
+      "schedule": {
+        "scheduled_start": null,
+        "scheduled_end": null,
+        "time_zone": null,
+        "scheduled_start_local": null,
+        "scheduled_end_local": null,
+        "arrival_window": 0,
+        "appointments": []
+      },
+      "total_amount": 20239,
+      "outstanding_balance": 20239,
+      "assigned_employees": [],
+      "tags": [
+        "Pipeline Automation"
+      ],
+      "original_estimate_id": "est_0ccc26cd83c841119d747994fec9f62c",
+      "original_estimate_uuids": [
+        "est_0ccc26cd83c841119d747994fec9f62c"
+      ],
+      "subtotal": 18525,
+      "lead_source": null,
+      "job_fields": {
+        "job_type": null,
+        "business_unit": null
+      },
+      "locked_at": null,
+      "created_at": "2026-08-20T17:27:39Z",
+      "updated_at": "2026-08-20T17:32:44Z",
+      "canceled_at": null,
+      "deleted_at": "2026-08-20T17:32:44Z",
+      "assigned_route_template_id": null,
+      "company_name": "Neighborhood Golf Carts",
+      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+      "invoice_number": "17446",
+      "customer": {
+        "id": "cus_1901472ea4a74ec8bd68e5b272e0d7a9",
+        "first_name": "Jymme",
+        "last_name": "Strander",
+        "email": "jymstra39@msn.com",
+        "mobile_number": "5042145835",
+        "home_number": null,
+        "work_number": null,
+        "company": null,
+        "notifications_enabled": true,
+        "lead_source": "Referral",
+        "notes": null,
+        "kind": "homeowner",
+        "created_at": "2026-08-07T15:33:44Z",
+        "updated_at": "2026-08-07T15:37:54Z",
+        "company_name": "Neighborhood Golf Carts",
+        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+        "tags": [
+          "EZ-GO",
+          "48V",
+          "lithium",
+          "2011",
+          "st sport 2"
+        ]
+      },
+      "address": {
+        "id": "adr_c3bfddcf2a0247238edd2d7854af3246",
+        "type": "service",
+        "street": "18324 La Tung Road",
+        "street_line_2": "",
+        "city": "Covington",
+        "state": "LA",
+        "zip": "70435",
+        "country": "US",
+        "latitude": 30.6646522,
+        "longitude": -90.0998175
+      },
+      "recurrence_number": null,
+      "recurrence_rule": null,
+      "recurrence_status": null,
+      "recurrence_id": null
+    },
+    {
+      "id": "job_72baec053d9b4e308e8c86b9725104de",
+      "description": "General - ***SEE NOTES***",
+      "notes": [],
+      "work_status": "needs scheduling",
+      "work_timestamps": {
+        "on_my_way_at": null,
+        "started_at": null,
+        "completed_at": null
+      },
+      "schedule": {
+        "scheduled_start": null,
+        "scheduled_end": null,
+        "time_zone": null,
+        "scheduled_start_local": null,
+        "scheduled_end_local": null,
+        "arrival_window": 0,
+        "appointments": []
+      },
+      "total_amount": 20239,
+      "outstanding_balance": 20239,
+      "assigned_employees": [],
+      "tags": [],
+      "original_estimate_id": "est_a9bc9822e5a54717a99c889659fb91b1",
+      "original_estimate_uuids": [
+        "est_a9bc9822e5a54717a99c889659fb91b1"
+      ],
+      "subtotal": 18525,
+      "lead_source": null,
+      "job_fields": {
+        "job_type": null,
+        "business_unit": null
+      },
+      "locked_at": null,
+      "created_at": "2026-08-20T17:26:15Z",
+      "updated_at": "2026-08-20T19:11:04Z",
+      "canceled_at": null,
+      "deleted_at": null,
+      "assigned_route_template_id": null,
+      "company_name": "Neighborhood Golf Carts",
+      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+      "invoice_number": "17445",
+      "customer": {
+        "id": "cus_aa2d2afb12de450d8690433cfc760eb0",
+        "first_name": "Clayton",
+        "last_name": "Craft",
+        "email": "claymantrd@gmail.com",
+        "mobile_number": "3182800467",
+        "home_number": null,
+        "work_number": null,
+        "company": null,
+        "notifications_enabled": true,
+        "lead_source": "Google",
+        "notes": "Called customer and left message to get specific symptoms/ issues we are addressing during the diagnostic.",
+        "kind": "homeowner",
+        "created_at": "2026-08-20T17:23:24Z",
+        "updated_at": "2026-08-20T17:23:24Z",
+        "company_name": "Neighborhood Golf Carts",
+        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+        "tags": [
+          "electric",
+          "lead acid",
+          "standard"
+        ]
+      },
+      "address": {
+        "id": "adr_417756cc9b8e4f1fab1381fa3cf1fc5e",
+        "type": "billing",
+        "street": "67 Park Ln",
+        "street_line_2": null,
+        "city": "Folsom",
+        "state": "LA",
+        "zip": "70437",
+        "country": "US",
+        "latitude": 30.6359701,
+        "longitude": -90.24597039999999
+      },
+      "recurrence_number": null,
+      "recurrence_rule": null,
+      "recurrence_status": null,
+      "recurrence_id": null
+    },
+    {
+      "id": "job_64d54e2117d042ceb652925ad0d4b9a5",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+      "notes": [],
+      "work_status": "needs scheduling",
+      "work_timestamps": {
+        "on_my_way_at": null,
+        "started_at": null,
+        "completed_at": null
+      },
+      "schedule": {
+        "scheduled_start": null,
+        "scheduled_end": null,
+        "time_zone": null,
+        "scheduled_start_local": null,
+        "scheduled_end_local": null,
+        "arrival_window": 0,
+        "appointments": []
+      },
+      "total_amount": 20239,
+      "outstanding_balance": 20239,
+      "assigned_employees": [],
+      "tags": [],
+      "original_estimate_id": "est_7b9eb2e821bd4675a4f4ffd8e1961637",
+      "original_estimate_uuids": [
+        "est_7b9eb2e821bd4675a4f4ffd8e1961637"
+      ],
+      "subtotal": 18525,
+      "lead_source": null,
+      "job_fields": {
+        "job_type": null,
+        "business_unit": null
+      },
+      "locked_at": null,
+      "created_at": "2026-08-20T16:30:05Z",
+      "updated_at": "2026-08-20T16:30:07Z",
+      "canceled_at": null,
+      "deleted_at": null,
+      "assigned_route_template_id": null,
+      "company_name": "Neighborhood Golf Carts",
+      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+      "invoice_number": "17444",
+      "customer": {
+        "id": "cus_e23a1e926d474a88bb005abf3d0b5cc5",
+        "first_name": "Steve",
+        "last_name": "Tresch",
+        "email": "stevetresch1@gmail.com",
+        "mobile_number": "9852374980",
+        "home_number": null,
+        "work_number": null,
+        "company": null,
+        "notifications_enabled": true,
+        "lead_source": "Facebook",
+        "notes": null,
+        "kind": "homeowner",
+        "created_at": "2025-05-21T14:27:26Z",
+        "updated_at": "2026-08-19T16:45:51Z",
+        "company_name": "Neighborhood Golf Carts",
+        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+        "tags": [
+          "EZ-GO",
+          "48 volt",
+          "6 batteries"
+        ]
+      },
+      "address": {
+        "id": "adr_c83771f7f2a2446298b6108f7ce9b240",
+        "type": "service",
+        "street": "21487 Maryetta Rd",
+        "street_line_2": "",
+        "city": "Bush",
+        "state": "LA",
+        "zip": "70431",
+        "country": "US",
+        "latitude": 30.6111463,
+        "longitude": -90.0496553
+      },
+      "recurrence_number": null,
+      "recurrence_rule": null,
+      "recurrence_status": null,
+      "recurrence_id": null
+    },
+    {
+      "id": "job_83f9a3cf7ae4414081a6d69006402538",
+      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+      "notes": [],
+      "work_status": "needs scheduling",
+      "work_timestamps": {
+        "on_my_way_at": null,
+        "started_at": null,
+        "completed_at": null
+      },
+      "schedule": {
+        "scheduled_start": null,
+        "scheduled_end": null,
+        "time_zone": null,
+        "scheduled_start_local": null,
+        "scheduled_end_local": null,
+        "arrival_window": 0,
+        "appointments": []
+      },
+      "total_amount": 20239,
+      "outstanding_balance": 20239,
+      "assigned_employees": [],
+      "tags": [],
+      "original_estimate_id": "est_e0f373f024464b0888c4e3d02514fa47",
+      "original_estimate_uuids": [
+        "est_e0f373f024464b0888c4e3d02514fa47"
+      ],
+      "subtotal": 18525,
+      "lead_source": "Website",
+      "job_fields": {
+        "job_type": null,
+        "business_unit": null
+      },
+      "locked_at": null,
+      "created_at": "2026-08-20T16:29:19Z",
+      "updated_at": "2026-08-20T18:42:14Z",
+      "canceled_at": null,
+      "deleted_at": null,
+      "assigned_route_template_id": null,
+      "company_name": "Neighborhood Golf Carts",
+      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+      "invoice_number": "17443",
+      "customer": {
+        "id": "cus_178377c69ab34a9a809d486fdd9dc767",
+        "first_name": "Michael",
+        "last_name": "Roy",
+        "email": "mroy1954@yahoo.com",
+        "mobile_number": "9853221350",
+        "home_number": null,
+        "work_number": null,
+        "company": null,
+        "notifications_enabled": true,
+        "lead_source": null,
+        "notes": null,
+        "kind": "homeowner",
+        "created_at": "2026-08-20T13:55:54Z",
+        "updated_at": "2026-08-20T16:15:30Z",
+        "company_name": "Neighborhood Golf Carts",
+        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+        "tags": [
+          "EZ-GO",
+          "48V",
+          "TXT",
+          "Fleet"
+        ]
+      },
+      "address": {
+        "id": "adr_5cb8dc85a4724e11a876cc28e18a334b",
+        "type": "billing",
+        "street": "36468 Sunny Hill Rd",
+        "street_line_2": null,
+        "city": "Mount Hermon",
+        "state": "LA",
+        "zip": "70450",
+        "country": "US",
+        "latitude": 30.9179266,
+        "longitude": -90.2819292
+      },
+      "recurrence_number": null,
+      "recurrence_rule": null,
+      "recurrence_status": null,
+      "recurrence_id": null
+    },
     {
       "id": "job_caa5e586461e49889c77dfdcac5dfa91",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
@@ -523,10 +940,10 @@
       "id": "job_2776f2ff9c564882b294c45fd1964b7b",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
-      "work_status": "scheduled",
+      "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": null,
-        "started_at": null,
+        "on_my_way_at": "2026-08-20T15:34:28Z",
+        "started_at": "2026-08-20T16:44:44Z",
         "completed_at": null
       },
       "schedule": {
@@ -588,7 +1005,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-14T18:36:31Z",
-      "updated_at": "2026-08-19T21:23:41Z",
+      "updated_at": "2026-08-20T16:44:44Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -644,38 +1061,71 @@
       "work_status": "scheduled",
       "work_timestamps": {
         "on_my_way_at": null,
-        "started_at": null,
+        "started_at": "2026-08-21T16:01:32Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-08-21T13:00:00Z",
-        "scheduled_end": "2026-08-21T13:30:00Z",
+        "scheduled_end": "2026-08-21T18:30:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
-        "arrival_window": 240,
+        "arrival_window": 0,
         "appointments": []
       },
       "total_amount": 20239,
       "outstanding_balance": 20239,
       "assigned_employees": [
         {
-          "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
-          "first_name": "Roy",
-          "last_name": "Gautreaux",
-          "email": "royjgautreaux@gmail.com",
-          "mobile_number": "5044017782",
-          "color_hex": "0a0a0b",
+          "id": "pro_eb8fdaf46f7b4ec68c665a867a14d9ce",
+          "first_name": "Ryan",
+          "last_name": "White",
+          "email": "Neighborhoodgolfcarts985@gmail.com",
+          "mobile_number": "9857789408",
+          "color_hex": "d91b60",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": true,
+            "can_call_and_text_with_customers": true,
+            "can_chat_with_customers": true,
+            "can_delete_and_cancel_job": true,
+            "can_edit_message_on_invoice": true,
+            "can_see_street_view_data": true,
+            "can_take_payment_see_prices": true,
+            "can_see_customers": true,
+            "can_see_marketing_campaigns": true,
+            "can_see_reporting": true,
+            "can_edit_settings": true,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": true
+          },
+          "created_at": "2023-09-14T19:14:36Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_5839102c39c943d0b19373312e405754",
+          "first_name": "Marlon",
+          "last_name": "Gray",
+          "email": "marlogray33@icloud.com",
+          "mobile_number": "9854028381",
+          "color_hex": "e65100",
           "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
           "role": "field tech",
           "tags": [],
           "permissions": {
             "can_add_and_edit_job": false,
-            "can_call_and_text_with_customers": true,
-            "can_chat_with_customers": true,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
             "can_delete_and_cancel_job": false,
             "can_edit_message_on_invoice": false,
-            "can_see_street_view_data": true,
+            "can_see_street_view_data": false,
             "can_take_payment_see_prices": false,
             "can_see_customers": false,
             "can_see_marketing_campaigns": false,
@@ -688,7 +1138,7 @@
             "is_point_of_contact": false,
             "is_admin": false
           },
-          "created_at": "2026-04-23T21:20:02Z",
+          "created_at": "2026-05-01T21:12:20Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
@@ -706,7 +1156,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-14T17:57:12Z",
-      "updated_at": "2026-08-18T17:43:33Z",
+      "updated_at": "2026-08-21T16:05:03Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -761,11 +1211,11 @@
           "content": "Call the tech line 423-806-0080 if you need any assistance.\n(NEVER GIVE THIS NUMBER TO A CUSTOMER)\n\nFor assistance outside of our regular business hours, you may now reach our afterhours support team at 423-251-6936. \nAfterhours support is available Monday through Friday from 5:00 PM to 9:00 PM Eastern Time, and on Saturday from 9:00 AM to 5:00 PM Eastern Time."
         }
       ],
-      "work_status": "in progress",
+      "work_status": "complete unrated",
       "work_timestamps": {
         "on_my_way_at": "2026-08-19T20:04:05Z",
         "started_at": null,
-        "completed_at": null
+        "completed_at": "2026-08-20T19:52:16Z"
       },
       "schedule": {
         "scheduled_start": "2026-08-14T17:00:00Z",
@@ -830,7 +1280,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-14T14:28:33Z",
-      "updated_at": "2026-08-19T20:04:05Z",
+      "updated_at": "2026-08-20T19:52:20Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -1244,12 +1694,12 @@
       "work_status": "scheduled",
       "work_timestamps": {
         "on_my_way_at": null,
-        "started_at": null,
+        "started_at": "2026-08-20T16:04:04Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-08-14T14:30:00Z",
-        "scheduled_end": "2026-08-20T17:00:00Z",
+        "scheduled_end": "2026-08-24T13:30:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
@@ -1342,7 +1792,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-12T00:46:40Z",
-      "updated_at": "2026-08-19T22:12:33Z",
+      "updated_at": "2026-08-21T22:34:54Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -1561,10 +2011,10 @@
       "id": "job_7779ccd6db0b4cd2bb5575d3c4b2269e",
       "description": "Diagnostic Inspection (Minimum Service Charge)",
       "notes": [],
-      "work_status": "scheduled",
+      "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": null,
-        "started_at": null,
+        "on_my_way_at": "2026-08-20T18:48:26Z",
+        "started_at": "2026-08-20T19:33:28Z",
         "completed_at": null
       },
       "schedule": {
@@ -1626,7 +2076,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-11T15:25:09Z",
-      "updated_at": "2026-08-19T21:24:30Z",
+      "updated_at": "2026-08-20T19:33:28Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -1766,7 +2216,7 @@
     },
     {
       "id": "job_ab077d3251c4458f8d9a8032fd952771",
-      "description": "Batteries & Cables - 3.0- NGC Lithium Conversion, 72V 105AH",
+      "description": "General - ***SEE NOTES***",
       "notes": [
         {
           "id": "nte_b63f0d449030484aa91a05d20f29674b",
@@ -1781,15 +2231,15 @@
       },
       "schedule": {
         "scheduled_start": "2026-08-18T17:00:00Z",
-        "scheduled_end": "2026-08-20T15:00:00Z",
+        "scheduled_end": "2026-08-24T14:00:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
         "arrival_window": 0,
         "appointments": []
       },
-      "total_amount": 371122,
-      "outstanding_balance": 191122,
+      "total_amount": 385216,
+      "outstanding_balance": 0,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -1896,7 +2346,7 @@
       "original_estimate_uuids": [
         "est_e4100d1fe1c6411bb83af38923cf4139"
       ],
-      "subtotal": 339700,
+      "subtotal": 352600,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -1904,7 +2354,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-11T13:54:06Z",
-      "updated_at": "2026-08-19T22:04:30Z",
+      "updated_at": "2026-08-22T01:47:15Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -1955,23 +2405,23 @@
       "id": "job_167ffdd93ec5494189b53f7d93026bce",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
-      "work_status": "in progress",
+      "work_status": "scheduled",
       "work_timestamps": {
-        "on_my_way_at": "2026-08-19T21:39:09Z",
-        "started_at": null,
+        "on_my_way_at": null,
+        "started_at": "2026-08-21T19:51:25Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-08-19T19:30:00Z",
-        "scheduled_end": "2026-08-19T20:00:00Z",
+        "scheduled_end": "2026-08-24T18:00:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 20239,
-      "outstanding_balance": 20239,
+      "total_amount": 109847,
+      "outstanding_balance": 109847,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -2005,6 +2455,39 @@
           "created_at": "2026-04-23T21:20:02Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_5839102c39c943d0b19373312e405754",
+          "first_name": "Marlon",
+          "last_name": "Gray",
+          "email": "marlogray33@icloud.com",
+          "mobile_number": "9854028381",
+          "color_hex": "e65100",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-05-01T21:12:20Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [],
@@ -2012,7 +2495,7 @@
       "original_estimate_uuids": [
         "est_afacf0f600b7472f82d6f040941b9d31"
       ],
-      "subtotal": 18525,
+      "subtotal": 100546,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -2020,7 +2503,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-10T21:26:21Z",
-      "updated_at": "2026-08-19T22:52:29Z",
+      "updated_at": "2026-08-21T23:14:27Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2070,11 +2553,16 @@
     {
       "id": "job_5689c13df84145da957853b3aa37b071",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-      "notes": [],
-      "work_status": "scheduled",
+      "notes": [
+        {
+          "id": "nte_e5ce2f90607f4a9697d71b90d1405d42",
+          "content": "Sent 2 battery option estimates, but didn't send the inspection findings estimate. Want to fix the problem first."
+        }
+      ],
+      "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": null,
-        "started_at": null,
+        "on_my_way_at": "2026-08-20T15:59:30Z",
+        "started_at": "2026-08-20T15:59:30Z",
         "completed_at": null
       },
       "schedule": {
@@ -2169,7 +2657,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-10T16:52:10Z",
-      "updated_at": "2026-08-19T22:10:38Z",
+      "updated_at": "2026-08-21T18:45:54Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2190,11 +2678,13 @@
         "notes": null,
         "kind": "homeowner",
         "created_at": "2025-03-25T12:28:23Z",
-        "updated_at": "2026-08-19T15:41:38Z",
+        "updated_at": "2026-08-21T18:45:53Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": [
           "Club Car",
+          "Precedent",
+          "2009",
           "4 seater"
         ]
       },
@@ -2221,13 +2711,13 @@
       "notes": [],
       "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": "2026-08-19T18:02:09Z",
-        "started_at": null,
+        "on_my_way_at": "2026-08-21T16:01:24Z",
+        "started_at": "2026-08-21T16:01:24Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-08-19T15:30:00Z",
-        "scheduled_end": "2026-08-19T16:00:00Z",
+        "scheduled_end": "2026-08-21T16:30:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
@@ -2269,6 +2759,39 @@
           "created_at": "2026-04-23T21:20:02Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_5839102c39c943d0b19373312e405754",
+          "first_name": "Marlon",
+          "last_name": "Gray",
+          "email": "marlogray33@icloud.com",
+          "mobile_number": "9854028381",
+          "color_hex": "e65100",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-05-01T21:12:20Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [],
@@ -2284,7 +2807,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-10T16:51:37Z",
-      "updated_at": "2026-08-19T18:02:09Z",
+      "updated_at": "2026-08-21T16:01:25Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2340,25 +2863,29 @@
         {
           "id": "nte_ed2b4e30284041ff9565be1408d7f304",
           "content": "What can we do for you?: My golf cart has a lag before going.  Not sure if batteries are getting bad."
+        },
+        {
+          "id": "nte_ea72692179814f848f27ef4fdba5e0d9",
+          "content": "Vatrer VD1130"
         }
       ],
       "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": "2026-08-18T22:09:11Z",
-        "started_at": null,
+        "on_my_way_at": "2026-08-21T15:15:16Z",
+        "started_at": "2026-08-21T15:15:16Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-08-18T21:30:00Z",
-        "scheduled_end": "2026-08-18T22:00:00Z",
+        "scheduled_end": "2026-08-21T15:30:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 20239,
-      "outstanding_balance": 20239,
+      "total_amount": 364158,
+      "outstanding_balance": 214158,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -2392,6 +2919,39 @@
           "created_at": "2026-04-23T21:20:02Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_5839102c39c943d0b19373312e405754",
+          "first_name": "Marlon",
+          "last_name": "Gray",
+          "email": "marlogray33@icloud.com",
+          "mobile_number": "9854028381",
+          "color_hex": "e65100",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-05-01T21:12:20Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [],
@@ -2399,7 +2959,7 @@
       "original_estimate_uuids": [
         "est_f759a3e37eb64386bb21a94f4c35a4a8"
       ],
-      "subtotal": 18525,
+      "subtotal": 333325,
       "lead_source": "Lead Form",
       "job_fields": {
         "job_type": null,
@@ -2407,7 +2967,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-10T16:51:22Z",
-      "updated_at": "2026-08-18T22:09:11Z",
+      "updated_at": "2026-08-21T23:16:38Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2428,7 +2988,7 @@
         "notes": null,
         "kind": "homeowner",
         "created_at": "2026-08-08T11:57:51Z",
-        "updated_at": "2026-08-10T15:16:58Z",
+        "updated_at": "2026-08-21T21:39:34Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": [
@@ -2462,13 +3022,13 @@
       "notes": [],
       "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": "2026-08-18T21:21:30Z",
-        "started_at": null,
+        "on_my_way_at": "2026-08-21T13:37:27Z",
+        "started_at": "2026-08-21T13:37:27Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-08-18T21:00:00Z",
-        "scheduled_end": "2026-08-18T21:30:00Z",
+        "scheduled_end": "2026-08-21T14:30:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
@@ -2510,6 +3070,39 @@
           "created_at": "2026-04-23T21:20:02Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_5839102c39c943d0b19373312e405754",
+          "first_name": "Marlon",
+          "last_name": "Gray",
+          "email": "marlogray33@icloud.com",
+          "mobile_number": "9854028381",
+          "color_hex": "e65100",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-05-01T21:12:20Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [
@@ -2527,7 +3120,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-10T14:39:37Z",
-      "updated_at": "2026-08-18T21:21:30Z",
+      "updated_at": "2026-08-22T03:34:51Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2548,11 +3141,12 @@
         "notes": null,
         "kind": "homeowner",
         "created_at": "2024-09-06T18:10:12Z",
-        "updated_at": "2025-07-08T18:21:29Z",
+        "updated_at": "2026-08-22T03:34:51Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": [
-          "alpha"
+          "2021",
+          "alpha ev"
         ]
       },
       "address": {
@@ -2766,7 +3360,7 @@
       "work_status": "scheduled",
       "work_timestamps": {
         "on_my_way_at": null,
-        "started_at": null,
+        "started_at": "2026-08-20T15:07:55Z",
         "completed_at": null
       },
       "schedule": {
@@ -2861,7 +3455,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-08T17:47:12Z",
-      "updated_at": "2026-08-19T22:09:33Z",
+      "updated_at": "2026-08-21T22:34:29Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2921,11 +3515,11 @@
           "content": "Vatrer VD1116"
         }
       ],
-      "work_status": "scheduled",
+      "work_status": "complete unrated",
       "work_timestamps": {
-        "on_my_way_at": null,
+        "on_my_way_at": "2026-08-18T20:09:56Z",
         "started_at": "2026-08-18T20:09:56Z",
-        "completed_at": null
+        "completed_at": "2026-08-20T21:48:29Z"
       },
       "schedule": {
         "scheduled_start": "2026-08-18T17:00:00Z",
@@ -3054,7 +3648,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-07T21:05:53Z",
-      "updated_at": "2026-08-19T21:19:37Z",
+      "updated_at": "2026-08-20T21:48:31Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3108,10 +3702,10 @@
       "id": "job_a650ca69708243938880468bd3b274fe",
       "description": "***SEE NOTES***",
       "notes": [],
-      "work_status": "scheduled",
+      "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": null,
-        "started_at": null,
+        "on_my_way_at": "2026-08-20T14:30:07Z",
+        "started_at": "2026-08-20T14:30:07Z",
         "completed_at": null
       },
       "schedule": {
@@ -3206,7 +3800,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-07T21:05:21Z",
-      "updated_at": "2026-08-19T22:08:52Z",
+      "updated_at": "2026-08-20T14:30:07Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3599,11 +4193,11 @@
           "content": "If this was a customer drop off, then why is the Pickup?Drop Off charge on the ticket?"
         }
       ],
-      "work_status": "scheduled",
+      "work_status": "complete unrated",
       "work_timestamps": {
-        "on_my_way_at": null,
+        "on_my_way_at": "2026-08-20T14:08:22Z",
         "started_at": "2026-08-13T19:26:24Z",
-        "completed_at": null
+        "completed_at": "2026-08-20T18:51:57Z"
       },
       "schedule": {
         "scheduled_start": "2026-08-11T19:30:00Z",
@@ -3730,7 +4324,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-07T21:04:27Z",
-      "updated_at": "2026-08-19T21:20:10Z",
+      "updated_at": "2026-08-20T18:51:59Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4259,23 +4853,23 @@
       "id": "job_be455142afc14bd0a300db296530eac7",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "scheduled",
       "work_timestamps": {
-        "on_my_way_at": "2026-08-13T15:43:46Z",
+        "on_my_way_at": null,
         "started_at": "2026-08-13T15:43:46Z",
-        "completed_at": "2026-08-14T19:41:37Z"
+        "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-08-10T14:30:00Z",
-        "scheduled_end": "2026-08-13T16:45:00Z",
+        "scheduled_end": "2026-08-24T19:30:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 151120,
-      "outstanding_balance": 151120,
+      "total_amount": 178323,
+      "outstanding_balance": 178323,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -4342,6 +4936,39 @@
           "created_at": "2026-05-01T21:12:20Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_65da22ef309f4249b6652274f694397d",
+          "first_name": "Ryan",
+          "last_name": "Gorgoglione",
+          "email": "gorgoglioneryan@gmail.com",
+          "mobile_number": "9854008262",
+          "color_hex": "0089d1",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-08-13T22:32:43Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [
@@ -4351,7 +4978,7 @@
       "original_estimate_uuids": [
         "est_941455347b844593934a07d36a5eecba"
       ],
-      "subtotal": 138325,
+      "subtotal": 163225,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -4359,7 +4986,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-03T23:09:45Z",
-      "updated_at": "2026-08-17T13:31:24Z",
+      "updated_at": "2026-08-21T23:22:52Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4567,23 +5194,23 @@
       "id": "job_e68237c2b45a410ba546c1aa8ccbab1a",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
       "notes": [],
-      "work_status": "in progress",
+      "work_status": "scheduled",
       "work_timestamps": {
-        "on_my_way_at": "2026-08-18T13:21:46Z",
+        "on_my_way_at": null,
         "started_at": "2026-08-18T13:21:46Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-08-14T18:00:00Z",
-        "scheduled_end": "2026-08-18T14:30:00Z",
+        "scheduled_end": "2026-08-21T20:00:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
         "arrival_window": 0,
         "appointments": []
       },
-      "total_amount": 20239,
-      "outstanding_balance": 20239,
+      "total_amount": 118236,
+      "outstanding_balance": 118236,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -4657,7 +5284,7 @@
       "original_estimate_uuids": [
         "est_9fa7a310d81741559138925512d6ff7c"
       ],
-      "subtotal": 18525,
+      "subtotal": 108225,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -4665,7 +5292,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-31T22:31:14Z",
-      "updated_at": "2026-08-18T13:21:46Z",
+      "updated_at": "2026-08-21T13:27:03Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4720,15 +5347,15 @@
           "content": "What can we do for you?: Having an electrical problem with my EZ Go golf cart."
         }
       ],
-      "work_status": "in progress",
+      "work_status": "scheduled",
       "work_timestamps": {
-        "on_my_way_at": "2026-08-14T15:47:43Z",
+        "on_my_way_at": null,
         "started_at": "2026-08-14T15:47:43Z",
         "completed_at": null
       },
       "schedule": {
         "scheduled_start": "2026-08-12T15:00:00Z",
-        "scheduled_end": "2026-08-14T16:00:00Z",
+        "scheduled_end": "2026-08-24T13:30:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
@@ -4818,7 +5445,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-30T17:28:36Z",
-      "updated_at": "2026-08-14T15:47:43Z",
+      "updated_at": "2026-08-21T22:11:28Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -4961,7 +5588,7 @@
       },
       "schedule": {
         "scheduled_start": "2026-08-07T15:30:00Z",
-        "scheduled_end": "2026-08-20T14:30:00Z",
+        "scheduled_end": "2026-08-24T15:00:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
@@ -5117,7 +5744,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-29T17:49:47Z",
-      "updated_at": "2026-08-19T22:15:14Z",
+      "updated_at": "2026-08-21T23:37:59Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -5138,13 +5765,14 @@
         "notes": null,
         "kind": "homeowner",
         "created_at": "2026-07-29T17:18:25Z",
-        "updated_at": "2026-07-29T17:18:25Z",
+        "updated_at": "2026-08-21T22:13:26Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": [
           "Club Car",
           "2021",
-          "gas EFI 2P"
+          "gas EFI 2P",
+          "Kohler"
         ]
       },
       "address": {
@@ -9235,7 +9863,7 @@
     },
     {
       "id": "job_67484ac225c74037a58805e5c4a5aebc",
-      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+      "description": "General - ***SEE NOTES***",
       "notes": [],
       "work_status": "scheduled",
       "work_timestamps": {
@@ -9245,15 +9873,15 @@
       },
       "schedule": {
         "scheduled_start": "2026-08-10T14:00:00Z",
-        "scheduled_end": "2026-08-17T21:00:00Z",
+        "scheduled_end": "2026-08-24T18:30:00Z",
         "time_zone": null,
         "scheduled_start_local": null,
         "scheduled_end_local": null,
-        "arrival_window": 120,
+        "arrival_window": 0,
         "appointments": []
       },
       "total_amount": 67613,
-      "outstanding_balance": 67613,
+      "outstanding_balance": 0,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -9353,6 +9981,39 @@
           "created_at": "2026-08-13T22:32:43Z",
           "company_name": "Neighborhood Golf Carts",
           "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
+        },
+        {
+          "id": "pro_5839102c39c943d0b19373312e405754",
+          "first_name": "Marlon",
+          "last_name": "Gray",
+          "email": "marlogray33@icloud.com",
+          "mobile_number": "9854028381",
+          "color_hex": "e65100",
+          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
+          "role": "field tech",
+          "tags": [],
+          "permissions": {
+            "can_add_and_edit_job": false,
+            "can_call_and_text_with_customers": false,
+            "can_chat_with_customers": false,
+            "can_delete_and_cancel_job": false,
+            "can_edit_message_on_invoice": false,
+            "can_see_street_view_data": false,
+            "can_take_payment_see_prices": false,
+            "can_see_customers": false,
+            "can_see_marketing_campaigns": false,
+            "can_see_reporting": false,
+            "can_edit_settings": false,
+            "can_be_booked_online": false,
+            "can_share_job": false,
+            "can_see_full_schedule": true,
+            "can_see_future_jobs": true,
+            "is_point_of_contact": false,
+            "is_admin": false
+          },
+          "created_at": "2026-05-01T21:12:20Z",
+          "company_name": "Neighborhood Golf Carts",
+          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
         }
       ],
       "tags": [],
@@ -9368,7 +10029,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-21T17:28:24Z",
-      "updated_at": "2026-08-17T19:15:23Z",
+      "updated_at": "2026-08-21T21:44:04Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -9379,7 +10040,7 @@
         "id": "cus_f44be74949c14cdd89c204d2186631d5",
         "first_name": "Kirk",
         "last_name": "Nelson",
-        "email": null,
+        "email": "Tknelson19@gmail.com",
         "mobile_number": "5049520949",
         "home_number": null,
         "work_number": null,
@@ -9389,7 +10050,7 @@
         "notes": null,
         "kind": "homeowner",
         "created_at": "2026-07-19T18:07:32Z",
-        "updated_at": "2026-08-12T20:03:58Z",
+        "updated_at": "2026-08-20T20:54:02Z",
         "company_name": "Neighborhood Golf Carts",
         "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
         "tags": [
@@ -15621,8 +16282,8 @@
         "arrival_window": 0,
         "appointments": []
       },
-      "total_amount": 52454,
-      "outstanding_balance": 52454,
+      "total_amount": 310175,
+      "outstanding_balance": 310175,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -15698,7 +16359,7 @@
       "original_estimate_uuids": [
         "est_3f77024d06da4be0834e5cf7aecf7431"
       ],
-      "subtotal": 48851,
+      "subtotal": 284751,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -15706,7 +16367,7 @@
       },
       "locked_at": null,
       "created_at": "2026-06-29T14:51:17Z",
-      "updated_at": "2026-07-09T17:42:24Z",
+      "updated_at": "2026-08-20T16:25:36Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -68959,561 +69620,6 @@
         "country": "US",
         "latitude": 30.6010316,
         "longitude": -89.96555819999999
-      },
-      "recurrence_number": null,
-      "recurrence_rule": null,
-      "recurrence_status": null,
-      "recurrence_id": null
-    },
-    {
-      "id": "job_9e9149e0c63540fa9feba946d04db0e3",
-      "description": "Steering and Suspension  - On-Site Tire Replacement Service (Vendor Convenience Fee)",
-      "notes": [],
-      "work_status": "pro canceled",
-      "work_timestamps": {
-        "on_my_way_at": null,
-        "started_at": null,
-        "completed_at": null
-      },
-      "schedule": {
-        "scheduled_start": null,
-        "scheduled_end": null,
-        "time_zone": null,
-        "scheduled_start_local": null,
-        "scheduled_end_local": null,
-        "arrival_window": 0,
-        "appointments": []
-      },
-      "total_amount": 19654,
-      "outstanding_balance": 19654,
-      "assigned_employees": [],
-      "tags": [],
-      "original_estimate_id": "est_980c80fba5944a3fa060b31c18029da1",
-      "original_estimate_uuids": [
-        "est_980c80fba5944a3fa060b31c18029da1"
-      ],
-      "subtotal": 17990,
-      "lead_source": null,
-      "job_fields": {
-        "job_type": null,
-        "business_unit": null
-      },
-      "locked_at": null,
-      "created_at": "2025-12-30T16:46:47Z",
-      "updated_at": "2026-07-23T16:17:46Z",
-      "canceled_at": null,
-      "deleted_at": "2025-12-30T16:51:58Z",
-      "assigned_route_template_id": null,
-      "company_name": "Neighborhood Golf Carts",
-      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-      "invoice_number": "1660",
-      "customer": {
-        "id": "cus_04dce6efb5fd460abc3812e38ccba414",
-        "first_name": "Manuel",
-        "last_name": "Broussard",
-        "email": "manuelbroussard@gmail.com",
-        "mobile_number": "2259335630",
-        "home_number": null,
-        "work_number": null,
-        "company": null,
-        "notifications_enabled": true,
-        "lead_source": "Google",
-        "notes": null,
-        "kind": "homeowner",
-        "created_at": "2025-11-20T19:18:44Z",
-        "updated_at": "2026-08-06T22:28:47Z",
-        "company_name": "Neighborhood Golf Carts",
-        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-        "tags": [
-          "EZ-GO",
-          "Gas",
-          "robin engine",
-          "Marathon",
-          "4 seater",
-          "1993"
-        ]
-      },
-      "address": {
-        "id": "adr_f51a16fdab524a149a1187a75392cf64",
-        "type": "service",
-        "street": "26271 Morning Dove Drive",
-        "street_line_2": "",
-        "city": "Bush",
-        "state": "LA",
-        "zip": "70431",
-        "country": "US",
-        "latitude": 30.6010316,
-        "longitude": -89.96555819999999
-      },
-      "recurrence_number": null,
-      "recurrence_rule": null,
-      "recurrence_status": null,
-      "recurrence_id": null
-    },
-    {
-      "id": "job_ecc2effcd2f041b392de2f65cd9d8163",
-      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection [Mobile Service Call]",
-      "notes": [],
-      "work_status": "complete rated",
-      "work_timestamps": {
-        "on_my_way_at": "2026-01-05T16:46:11Z",
-        "started_at": "2026-01-05T17:39:52Z",
-        "completed_at": "2026-01-05T19:30:38Z"
-      },
-      "schedule": {
-        "scheduled_start": "2026-01-05T17:00:00Z",
-        "scheduled_end": "2026-01-05T19:00:00Z",
-        "time_zone": null,
-        "scheduled_start_local": null,
-        "scheduled_end_local": null,
-        "arrival_window": 120,
-        "appointments": []
-      },
-      "total_amount": 28323,
-      "outstanding_balance": 0,
-      "assigned_employees": [
-        {
-          "id": "pro_eb8fdaf46f7b4ec68c665a867a14d9ce",
-          "first_name": "Ryan",
-          "last_name": "White",
-          "email": "Neighborhoodgolfcarts985@gmail.com",
-          "mobile_number": "9857789408",
-          "color_hex": "d91b60",
-          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
-          "role": "field tech",
-          "tags": [],
-          "permissions": {
-            "can_add_and_edit_job": true,
-            "can_call_and_text_with_customers": true,
-            "can_chat_with_customers": true,
-            "can_delete_and_cancel_job": true,
-            "can_edit_message_on_invoice": true,
-            "can_see_street_view_data": true,
-            "can_take_payment_see_prices": true,
-            "can_see_customers": true,
-            "can_see_marketing_campaigns": true,
-            "can_see_reporting": true,
-            "can_edit_settings": true,
-            "can_be_booked_online": false,
-            "can_share_job": false,
-            "can_see_full_schedule": true,
-            "can_see_future_jobs": true,
-            "is_point_of_contact": false,
-            "is_admin": true
-          },
-          "created_at": "2023-09-14T19:14:36Z",
-          "company_name": "Neighborhood Golf Carts",
-          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
-        }
-      ],
-      "tags": [
-        "Campaigns",
-        "Pipeline Automation"
-      ],
-      "original_estimate_id": "est_c2e2aacd58c9498f86892c00891b4a97",
-      "original_estimate_uuids": [
-        "est_c2e2aacd58c9498f86892c00891b4a97"
-      ],
-      "subtotal": 25925,
-      "lead_source": null,
-      "job_fields": {
-        "job_type": null,
-        "business_unit": null
-      },
-      "locked_at": null,
-      "created_at": "2025-12-30T15:12:20Z",
-      "updated_at": "2026-01-27T21:23:29Z",
-      "canceled_at": null,
-      "deleted_at": null,
-      "assigned_route_template_id": null,
-      "company_name": "Neighborhood Golf Carts",
-      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-      "invoice_number": "1659",
-      "customer": {
-        "id": "cus_dd897d244bda4bfb936c5bf3ccfbc299",
-        "first_name": "Brandon",
-        "last_name": "Brady",
-        "email": "bbrady@rivercitysecurity.net",
-        "mobile_number": "5047171221",
-        "home_number": null,
-        "work_number": null,
-        "company": "River City Security",
-        "notifications_enabled": true,
-        "lead_source": "truck sign ",
-        "notes": "North Carolton - 2 electric carts \nYamaha - \n\n1st - not taking charge. / won\u2019t start. Gray and black \n2nd - not taking charge / won\u2019t start gray and black \n\n\n\nDiff location \n5350 tchoupitoulas street. \nNew Orleans \nGas - ez go - starts but then immediately kills not it will not start up at all.",
-        "kind": "business",
-        "created_at": "2025-10-06T19:39:54Z",
-        "updated_at": "2026-01-20T18:49:49Z",
-        "company_name": "Neighborhood Golf Carts",
-        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-        "tags": [
-          "EZ-GO",
-          "Yamaha",
-          "Gas",
-          "electric"
-        ]
-      },
-      "address": {
-        "id": "adr_7516015f435f41249a7db5d61aa09059",
-        "type": "service",
-        "street": "309 North Carrollton Avenue",
-        "street_line_2": "",
-        "city": "New Orleans",
-        "state": "LA",
-        "zip": "70119",
-        "country": "US",
-        "latitude": 29.9770691,
-        "longitude": -90.0991506
-      },
-      "recurrence_number": null,
-      "recurrence_rule": null,
-      "recurrence_status": null,
-      "recurrence_id": null
-    },
-    {
-      "id": "job_2f79772b182f4405892f068c6dcd5c7f",
-      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection [Mobile Service Call]",
-      "notes": [],
-      "work_status": "complete unrated",
-      "work_timestamps": {
-        "on_my_way_at": "2025-12-30T15:37:40Z",
-        "started_at": "2025-12-30T16:04:27Z",
-        "completed_at": "2025-12-30T16:27:39Z"
-      },
-      "schedule": {
-        "scheduled_start": "2025-12-30T16:00:00Z",
-        "scheduled_end": "2025-12-30T18:00:00Z",
-        "time_zone": null,
-        "scheduled_start_local": null,
-        "scheduled_end_local": null,
-        "arrival_window": 120,
-        "appointments": []
-      },
-      "total_amount": 20010,
-      "outstanding_balance": 0,
-      "assigned_employees": [
-        {
-          "id": "pro_eb8fdaf46f7b4ec68c665a867a14d9ce",
-          "first_name": "Ryan",
-          "last_name": "White",
-          "email": "Neighborhoodgolfcarts985@gmail.com",
-          "mobile_number": "9857789408",
-          "color_hex": "d91b60",
-          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
-          "role": "field tech",
-          "tags": [],
-          "permissions": {
-            "can_add_and_edit_job": true,
-            "can_call_and_text_with_customers": true,
-            "can_chat_with_customers": true,
-            "can_delete_and_cancel_job": true,
-            "can_edit_message_on_invoice": true,
-            "can_see_street_view_data": true,
-            "can_take_payment_see_prices": true,
-            "can_see_customers": true,
-            "can_see_marketing_campaigns": true,
-            "can_see_reporting": true,
-            "can_edit_settings": true,
-            "can_be_booked_online": false,
-            "can_share_job": false,
-            "can_see_full_schedule": true,
-            "can_see_future_jobs": true,
-            "is_point_of_contact": false,
-            "is_admin": true
-          },
-          "created_at": "2023-09-14T19:14:36Z",
-          "company_name": "Neighborhood Golf Carts",
-          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
-        }
-      ],
-      "tags": [
-        "Pipeline Automation"
-      ],
-      "original_estimate_id": "est_931c544e5fb541b0bfca080904e1a6f7",
-      "original_estimate_uuids": [
-        "est_931c544e5fb541b0bfca080904e1a6f7"
-      ],
-      "subtotal": 17400,
-      "lead_source": null,
-      "job_fields": {
-        "job_type": null,
-        "business_unit": null
-      },
-      "locked_at": null,
-      "created_at": "2025-12-30T14:09:37Z",
-      "updated_at": "2025-12-30T16:39:52Z",
-      "canceled_at": null,
-      "deleted_at": null,
-      "assigned_route_template_id": null,
-      "company_name": "Neighborhood Golf Carts",
-      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-      "invoice_number": "1658",
-      "customer": {
-        "id": "cus_b09fc86324bd49e9b35f16cf2e10d754",
-        "first_name": "Andrew",
-        "last_name": "Breaux",
-        "email": "andrew.breaux@spectrumbrands.com",
-        "mobile_number": "5049087024",
-        "home_number": null,
-        "work_number": null,
-        "company": null,
-        "notifications_enabled": true,
-        "lead_source": "Facebook",
-        "notes": null,
-        "kind": "homeowner",
-        "created_at": "2025-12-30T14:05:39Z",
-        "updated_at": "2025-12-30T16:28:48Z",
-        "company_name": "Neighborhood Golf Carts",
-        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-        "tags": [
-          "48V",
-          "evolution",
-          "lithium",
-          "D5"
-        ]
-      },
-      "address": {
-        "id": null,
-        "type": "service",
-        "street": "2030 Steven Street",
-        "street_line_2": null,
-        "city": "Mandeville",
-        "state": "LA",
-        "zip": "70448",
-        "country": null,
-        "latitude": 30.3681152,
-        "longitude": -90.0293538
-      },
-      "recurrence_number": null,
-      "recurrence_rule": null,
-      "recurrence_status": null,
-      "recurrence_id": null
-    },
-    {
-      "id": "job_9f370eaa392b4953ad462aef3e1864f0",
-      "description": "General - 1.0 - Golf Cart Diagnostic & Inspection [Mobile Service Call]",
-      "notes": [],
-      "work_status": "complete unrated",
-      "work_timestamps": {
-        "on_my_way_at": "2026-01-07T14:17:30Z",
-        "started_at": "2026-01-07T14:35:16Z",
-        "completed_at": "2026-01-07T15:23:07Z"
-      },
-      "schedule": {
-        "scheduled_start": "2026-01-07T14:30:00Z",
-        "scheduled_end": "2026-01-07T16:30:00Z",
-        "time_zone": null,
-        "scheduled_start_local": null,
-        "scheduled_end_local": null,
-        "arrival_window": 120,
-        "appointments": []
-      },
-      "total_amount": 20911,
-      "outstanding_balance": 0,
-      "assigned_employees": [
-        {
-          "id": "pro_5920a7a4894f48b9b9bcd0d6ce972ae3",
-          "first_name": "Payton",
-          "last_name": "Elkins",
-          "email": "pjelkins04@gmail.com",
-          "mobile_number": "9855108005",
-          "color_hex": "c0370c",
-          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
-          "role": "field tech",
-          "tags": [],
-          "permissions": {
-            "can_add_and_edit_job": false,
-            "can_call_and_text_with_customers": false,
-            "can_chat_with_customers": true,
-            "can_delete_and_cancel_job": false,
-            "can_edit_message_on_invoice": false,
-            "can_see_street_view_data": false,
-            "can_take_payment_see_prices": true,
-            "can_see_customers": false,
-            "can_see_marketing_campaigns": false,
-            "can_see_reporting": false,
-            "can_edit_settings": false,
-            "can_be_booked_online": false,
-            "can_share_job": false,
-            "can_see_full_schedule": true,
-            "can_see_future_jobs": true,
-            "is_point_of_contact": false,
-            "is_admin": false
-          },
-          "created_at": "2025-09-21T16:06:08Z",
-          "company_name": "Neighborhood Golf Carts",
-          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
-        }
-      ],
-      "tags": [
-        "Pipeline Automation"
-      ],
-      "original_estimate_id": "est_90ee3465b1ce494fbdfb9755f8b13116",
-      "original_estimate_uuids": [
-        "est_90ee3465b1ce494fbdfb9755f8b13116"
-      ],
-      "subtotal": 17400,
-      "lead_source": null,
-      "job_fields": {
-        "job_type": null,
-        "business_unit": null
-      },
-      "locked_at": null,
-      "created_at": "2025-12-30T01:00:18Z",
-      "updated_at": "2026-01-09T03:09:50Z",
-      "canceled_at": null,
-      "deleted_at": null,
-      "assigned_route_template_id": null,
-      "company_name": "Neighborhood Golf Carts",
-      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-      "invoice_number": "17020",
-      "customer": {
-        "id": "cus_f350e57fe96246bf881bacd1dc102487",
-        "first_name": "Grant",
-        "last_name": "Waters",
-        "email": "waters.glw@gmail.com",
-        "mobile_number": "5048758119",
-        "home_number": null,
-        "work_number": null,
-        "company": null,
-        "notifications_enabled": true,
-        "lead_source": "Google",
-        "notes": null,
-        "kind": "homeowner",
-        "created_at": "2025-12-29T23:12:14Z",
-        "updated_at": "2026-01-07T15:23:23Z",
-        "company_name": "Neighborhood Golf Carts",
-        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-        "tags": [
-          "Club Car",
-          "Precedent",
-          "48 volt",
-          "2017"
-        ]
-      },
-      "address": {
-        "id": "adr_0ad4c99ff95e4668b6472795b35b0f64",
-        "type": "service",
-        "street": "719S South Jahncke Avenue",
-        "street_line_2": "",
-        "city": "Covington",
-        "state": "LA",
-        "zip": "70433",
-        "country": "US",
-        "latitude": 30.467657,
-        "longitude": -90.101905
-      },
-      "recurrence_number": null,
-      "recurrence_rule": null,
-      "recurrence_status": null,
-      "recurrence_id": null
-    },
-    {
-      "id": "job_ef5d8a6458ab48e3bcd26f6069499525",
-      "description": "WARRANTY",
-      "notes": [],
-      "work_status": "complete unrated",
-      "work_timestamps": {
-        "on_my_way_at": "2025-12-31T14:47:22Z",
-        "started_at": "2025-12-31T15:11:29Z",
-        "completed_at": "2025-12-31T15:52:46Z"
-      },
-      "schedule": {
-        "scheduled_start": "2025-12-31T15:00:00Z",
-        "scheduled_end": "2025-12-31T17:00:00Z",
-        "time_zone": null,
-        "scheduled_start_local": null,
-        "scheduled_end_local": null,
-        "arrival_window": 120,
-        "appointments": []
-      },
-      "total_amount": 0,
-      "outstanding_balance": 0,
-      "assigned_employees": [
-        {
-          "id": "pro_eb8fdaf46f7b4ec68c665a867a14d9ce",
-          "first_name": "Ryan",
-          "last_name": "White",
-          "email": "Neighborhoodgolfcarts985@gmail.com",
-          "mobile_number": "9857789408",
-          "color_hex": "d91b60",
-          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
-          "role": "field tech",
-          "tags": [],
-          "permissions": {
-            "can_add_and_edit_job": true,
-            "can_call_and_text_with_customers": true,
-            "can_chat_with_customers": true,
-            "can_delete_and_cancel_job": true,
-            "can_edit_message_on_invoice": true,
-            "can_see_street_view_data": true,
-            "can_take_payment_see_prices": true,
-            "can_see_customers": true,
-            "can_see_marketing_campaigns": true,
-            "can_see_reporting": true,
-            "can_edit_settings": true,
-            "can_be_booked_online": false,
-            "can_share_job": false,
-            "can_see_full_schedule": true,
-            "can_see_future_jobs": true,
-            "is_point_of_contact": false,
-            "is_admin": true
-          },
-          "created_at": "2023-09-14T19:14:36Z",
-          "company_name": "Neighborhood Golf Carts",
-          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
-        }
-      ],
-      "tags": [],
-      "original_estimate_id": null,
-      "original_estimate_uuids": [],
-      "subtotal": 0,
-      "lead_source": null,
-      "job_fields": {
-        "job_type": null,
-        "business_unit": null
-      },
-      "locked_at": null,
-      "created_at": "2025-12-29T22:57:46Z",
-      "updated_at": "2025-12-31T15:52:46Z",
-      "canceled_at": null,
-      "deleted_at": null,
-      "assigned_route_template_id": null,
-      "company_name": "Neighborhood Golf Carts",
-      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-      "invoice_number": "1050-2",
-      "customer": {
-        "id": "cus_b74d2419eb364e55876fc5ecca3268ea",
-        "first_name": "Lisa",
-        "last_name": "Long",
-        "email": "laudes12@att.net",
-        "mobile_number": "9853356027",
-        "home_number": null,
-        "work_number": null,
-        "company": null,
-        "notifications_enabled": true,
-        "lead_source": "Facebook",
-        "notes": null,
-        "kind": "homeowner",
-        "created_at": "2024-12-27T18:26:36Z",
-        "updated_at": "2025-01-03T21:32:59Z",
-        "company_name": "Neighborhood Golf Carts",
-        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-        "tags": [
-          "Yamaha"
-        ]
-      },
-      "address": {
-        "id": "adr_197726691e6b474fac1449bb4a7e0a9c",
-        "type": "service",
-        "street": "72341 Bullard Street",
-        "street_line_2": "",
-        "city": "Covington",
-        "state": "LA",
-        "zip": "70435",
-        "country": "US",
-        "latitude": 30.4838714,
-        "longitude": -90.07312549999999
       },
       "recurrence_number": null,
       "recurrence_rule": null,
