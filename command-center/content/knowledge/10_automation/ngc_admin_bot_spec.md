@@ -72,7 +72,7 @@ On **approved** work that needs a parts deposit, shop bots follow the existing H
 | Lithium conversion | $1,800 | $1,800 |
 | Lead-acid battery replacement | $800 | $800 |
 | Motor / controller / special order | 50% of job total | 50% of total |
-| Diagnostic only | $179 (full min charge) | N/A — flag if unpaid before scheduling |
+| Diagnostic only | $179 (diagnostic) | N/A — flag if unpaid before scheduling |
 
 **Paid amount** = `total_amount - outstanding_balance` (HCP amounts in cents).
 

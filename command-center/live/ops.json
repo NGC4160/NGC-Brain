@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T16:56:55.732006+00:00",
+  "generated_at": "2026-08-23T21:01:54.654684+00:00",
   "jobs_synced_at": "2026-08-23T13:50:55.117508+00:00",
   "has_live_data": true,
   "metrics": {
@@ -48,7 +48,7 @@
       {
         "invoice": "17383",
         "description": "General - ***SEE NOTES***",
-        "days": 32,
+        "days": 33,
         "lithium": false,
         "status": "in progress"
       },

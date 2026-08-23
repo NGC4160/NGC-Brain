@@ -44,6 +44,6 @@ Include deposit, turnaround, warranty, pickup policy, and optional add-ons.
 ## Quick repair quote (short form)
 
 ```
-Customer has [issue] on [brand/model]. Known issue — does $179 minimum apply?
+Customer has [issue] on [brand/model]. Known issue — bill diagnostic ($179) toward the repair?
 What line items from the pricebook? Deposit needed?
 ```

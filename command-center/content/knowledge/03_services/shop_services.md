@@ -9,20 +9,21 @@
 - **No mobile / on-site service** — no trip charges
 - Customers may use **free or paid pickup & delivery** (see below)
 
-## Diagnostics & minimum charges
+## Diagnostics
 
 | Service | Price | Notes |
 |---------|------:|-------|
-| **Diagnostic & Inspection (shop)** | $179 | Minimum service charge; **not waived** |
-| **Minimum Service Charge — Diagnostic Inspection** | $179 | Same policy |
+| **Diagnostic & Inspection (shop)** | $179 | **Not waived**; applies toward repair on known-issue jobs |
 | **Diagnostic Testing (1 hr)** | $125 | |
 | **Advanced Diagnostics (in-shop)** | $145 | Complex cases escalate to Ryan |
 | **Shop labor (1 hr)** | $125 | |
 | **7-Point Safety Inspection** | $0 | **Free** with every service |
 
-### Minimum service charge ($179) — known-issue jobs
+NGC does **not** use a separate minimum service charge. Work that used to be billed that way is billed as **diagnostic**.
 
-For jobs that **do not require full diagnosis** (e.g. broken suspension, noises), minimum **$179 service charge applies and goes toward the repair**.
+### Known-issue jobs
+
+For jobs that **do not require full diagnosis** (e.g. broken suspension, noises), bill **diagnostic** ($179). That diagnostic fee **applies toward the repair**.
 
 ## Preventive maintenance
 
