@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T13:48:50.087484+00:00",
+  "generated_at": "2026-08-23T04:15:45.974096+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan, Jesse, and Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",
@@ -310,7 +310,7 @@
       "id": "shop-floor-checklist",
       "category": "operations",
       "title": "Shop-floor checklist (mobile steps stripped)",
-      "description": "Printable bay checklist for Taylor / Marlon \u2014 planned",
+      "description": "Printable bay checklist for Marlon / Ryan Gorgoglione \u2014 planned",
       "type": "pdf",
       "audience": "Techs",
       "status": "planned",

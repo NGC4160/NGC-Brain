@@ -1,11 +1,11 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-06-28  
+**Last verified:** 2026-08-22  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
 
-This is not just documentation — it's an **operating system**. Cursor + `knowledge/` acts as:
+This is not just documentation — it's an **operating system**. Cursor + `knowledge/` acts as the source of truth for **Chief** (Ryan's Grok Bot COS) and shop bots as well: they must operate from this brain and write durable facts back here.
 
 - **Service advisor** — quotes, policies, warranty answers
 - **Ops coach** — workflow gaps, SOP reminders, delegation
@@ -31,7 +31,7 @@ Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — see [
 | Customer quote (lithium or repair) | [`prompts/quote_and_customer.md`](../../prompts/quote_and_customer.md) |
 | Draft text/email for Jesse | Same — specify audience |
 | "How do we diagnose X on Club Car?" | AI searches `NGC Document Repository` |
-| Staff instruction for Taylor/Marlon | Ask for shop-floor checklist from SOPs |
+| Staff instruction for Marlon / Ryan Gorgoglione | Ask for shop-floor checklist from SOPs |
 | Price check | AI reads pricebook CSV — never guess |
 
 ### End of day (5 min)
@@ -57,7 +57,7 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | **Ryan** | Morning briefing, diagnostics help, pricing, growth, DMS planning |
 | **Jesse** | Customer replies, deposits, estimates, pricebook, inventory/parts, workflow, Roy routing, reporting |
 | **Christine** | Part-time backup; owner exceptions |
-| **Taylor / Marlon** | Procedure lookup, parts identification (with cart model) |
+| **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model) |
 | **Roy** | Pickup zone questions, route/day planning |
 | **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
 

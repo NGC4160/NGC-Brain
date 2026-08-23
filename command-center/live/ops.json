@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T13:48:50.130693+00:00",
+  "generated_at": "2026-08-23T04:15:46.014467+00:00",
   "jobs_synced_at": "2026-08-22T13:48:46.736812+00:00",
   "has_live_data": true,
   "metrics": {
@@ -7,9 +7,9 @@
     "scheduled": 15,
     "needs_scheduling": 14,
     "active_pipeline": 41,
-    "wip_target": 6,
-    "wip_over": 6,
-    "stale_15_plus": 4,
+    "wip_target": null,
+    "wip_over": 0,
+    "stale_15_plus": 5,
     "lithium_at_risk": 1,
     "deposit_alerts": 0
   },
@@ -18,7 +18,7 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 109,
+        "days": 110,
         "lithium": true,
         "status": "in progress"
       }
@@ -27,28 +27,35 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 109,
+        "days": 110,
         "lithium": true,
         "status": "in progress"
       },
       {
         "invoice": "17260",
         "description": "Accessories - 1.0-Seat belt kit installation",
-        "days": 108,
+        "days": 109,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17109-2",
         "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-        "days": 87,
+        "days": 88,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17383",
         "description": "General - ***SEE NOTES***",
-        "days": 31,
+        "days": 32,
+        "lithium": false,
+        "status": "in progress"
+      },
+      {
+        "invoice": "17416",
+        "description": "***SEE NOTES***",
+        "days": 15,
         "lithium": false,
         "status": "in progress"
       }

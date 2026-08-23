@@ -1,6 +1,6 @@
 # Shop Workflow
 
-**Last verified:** 2026-06-28
+**Last verified:** 2026-08-22
 
 ## Current state
 
@@ -28,9 +28,10 @@ Options:
 
 ### 3. Service execution
 
-- **Ryan** — service manager; oversees jobs and workflow
-- **Taylor** & **Marlon** — golf cart technicians; primary shop work
-- **Peyton** — advanced diagnostics as needed
+- **Ryan White** — service manager; oversees jobs and workflow
+- **Marlon** — golf cart technician; primary shop work
+- **Ryan Gorgoglione** — golf cart technician; primary shop work
+- Complex diagnostics escalate to **Ryan White** (Peyton resigned 2026-08-22)
 
 Every service includes **free 7-point safety inspection**.
 
