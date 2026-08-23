@@ -9,6 +9,7 @@
 ┌─────────────────────────────────────────────────────────────────┐
 │                     Cursor Business Brain                        │
 │  Rules · Skills · Hooks · knowledge/ · prompts/                  │
+│  Chief + shop bots operate from here and write facts back        │
 └────────────┬───────────────────────────────┬────────────────────┘
              │                               │
     ┌────────▼────────┐              ┌───────▼────────┐

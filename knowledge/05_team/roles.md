@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-08-15
+**Last verified:** 2026-08-22
 
 ## Ownership
 
@@ -17,9 +17,17 @@
 | **Jesse** | Administrative assistant / service coordinator | **Primary shop operations coordinator** (she/her) — see scope below |
 | **Christine** | Part-time assistant (co-owner) | Backup coverage when Jesse is out; owner-level exceptions |
 | **Roy** | Driver | Executes pickups and deliveries that Jesse routes |
-| **Taylor** | Golf cart technician | In-shop repair and service |
 | **Marlon** | Golf cart technician | In-shop repair and service |
-| **Peyton** | Diagnostics (part-time) | Advanced diagnostics as needed |
+| **Ryan G.** | Shop team | On the shop team. Role/title and duty split live with **HR (Betty)** — do not invent a job title. |
+
+## Former (do not assign work)
+
+Confirmed **2026-08-22**. Do not schedule, assign, or quote these names as current staff.
+
+| Name | Status | As of |
+|------|--------|-------|
+| **Taylor** | Terminated | 2026-08-22 |
+| **Peyton** | Resigned | 2026-08-22 |
 
 ## External
 
@@ -60,7 +68,7 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Pickup/delivery routing & scheduling | Jesse | Roy (drive) / Christine |
 | Pickup & delivery (drive) | Roy | — |
 | Service management / tech oversight | Ryan | — |
-| Shop repair work | Taylor, Marlon | Peyton (diagnostics) |
+| Shop repair work | Marlon | Shop team (Ryan G. — title with HR/Betty) |
 | Bookkeeping | Jessica (Griffin & Furman) | Christine |
 | Owner exceptions / warranty / discounts | Ryan | Christine |
 

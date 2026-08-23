@@ -116,9 +116,8 @@ def build_board(jobs: list[dict], synced_at: str | None) -> str:
     unassigned = [r for r in ip_rows if r["assigned_count"] == 0]
     lithium_at_risk = [r for r in lithium_ip if (r["days"] or 0) > 3]
 
-    # Capacity heuristic: 2 primary techs, target WIP 6 in-progress max
-    wip_target = 6
-    wip_over = max(0, len(in_progress) - wip_target)
+    # No hard 6-in-progress cap (disregarded 2026-08-22). Report counts only.
+    lithium_over = max(0, len(lithium_ip) - 4)
 
     lines = [
         "# Shop Board (auto-generated)",
@@ -135,10 +134,10 @@ def build_board(jobs: list[dict], synced_at: str | None) -> str:
         f"| Scheduled | {len(scheduled)} |",
         f"| Needs scheduling | {len(needs_sched)} |",
         f"| **Active pipeline** | **{len(active)}** |",
-        f"| WIP over target ({wip_target}) | {wip_over} |",
         f"| Unassigned (in progress) | {len(unassigned)} |",
         f"| Stale in progress (15+ days) | {len(stale)} |",
         f"| Lithium in progress | {len(lithium_ip)} |",
+        f"| Lithium over planning target (4) | {lithium_over} |",
         f"| Lithium at risk (>3d) | {len(lithium_at_risk)} |",
         "",
         "## In progress — age",
@@ -189,10 +188,10 @@ def build_board(jobs: list[dict], synced_at: str | None) -> str:
     lines += [
         "## Ryan — 8:30 actions",
         "",
-        "1. Assign every in-progress cart to Taylor or Marlon (Peyton only if flagged).",
+        "1. Assign every in-progress cart to a shop tech (Marlon or other shop-team tech on the floor).",
         "2. Close or update stale HCP statuses (15+ day jobs).",
         "3. Protect lithium lane: finish or reschedule anything over 3 days.",
-        "4. Hold new intake if WIP stays above 6 until oldest jobs clear.",
+        "4. Do not hold intake just because total WIP is above 6 (hard cap disregarded). Collect deposit before ordering batteries/motors/controllers.",
         "",
         "Regenerate: `./scripts/sync/run_shop_board.sh` (runs after HCP sync).",
         "",

@@ -1,35 +1,36 @@
 # Shop Throughput
 
-**Last verified:** 2026-06-28  
+**Last verified:** 2026-08-22  
 **Owner:** Ryan (service manager)  
 **Live board:** `knowledge/.generated/shop_board.md` (regenerate after HCP sync)
 
 ## Goal
 
-Move carts through the shop predictably — especially **lithium conversions in 2–3 days** — without overloading Taylor and Marlon.
+Move carts through the shop predictably — especially **lithium conversions in 2–3 days** — without overloading the shop team.
 
 ## Current constraints
 
 | Resource | Capacity (planning) |
 |----------|-------------------|
-| Taylor + Marlon | ~2 primary repair lanes, ~6 productive hrs/day each |
-| Peyton | Advanced diagnostics only — timeboxed, by trigger |
+| Marlon + shop team | Primary repair lanes; ~6 productive hrs/day each (Ryan G. is on the shop team — title with HR/Betty) |
 | Roy | Pickup/delivery — batch by zone, not one-off all day |
 | Jesse | Intake, deposits, parts/inventory, workflow, Roy routing (Christine part-time backup) |
 | Shop hours | Mon–Fri 8–5 |
 
-**Planning math:** One Professional lithium kit ≈ **6 hours**. With two techs, plan **at most 2 lithium starts per day** if the shop is lithium-heavy; mix in smaller jobs only when WIP allows.
+**Planning math:** One Professional lithium kit ≈ **6 hours**. Plan **at most 2 lithium starts per day** if the shop is lithium-heavy; mix in smaller jobs around the lithium SLA, not a headcount cap.
 
-## WIP limits (non-negotiable targets)
+**Do not use a hard 6-in-progress cap.** That limit is **disregarded** (2026-08-22). Ryan decides intake from the floor, not an automatic stop at 6.
 
-| Lane | Target max | Why |
-|------|------------|-----|
-| In progress (all jobs) | **6** | ~1 day of work per tech with buffer |
+## Planning targets (not a 6-job booking stop)
+
+| Lane | Target | Why |
+|------|--------|-----|
+| In progress (all jobs) | **No hard cap** | Former 6-job WIP cap is disregarded — do not present 6 as a non-negotiable limit |
 | In progress (lithium) | **4** | Protect 2–3 day promise |
 | Needs scheduling | **5** | Jesse queue; book or decline within 48 hrs |
 | Unassigned in progress | **0** | Every cart has an owner by **8:30 AM** |
 
-When WIP exceeds limits: **stop scheduling new drop-offs** until oldest jobs complete or get a firm parts date.
+When the **lithium** lane is full or the schedule queue is overflowing: finish or date oldest lithium jobs, or book/decline the Jesse queue within 48 hrs. Deposit **before** ordering batteries, motors, or controllers still applies. Do **not** auto-stop all drop-offs just because total in-progress is above 6.
 
 ## Shop lanes (HCP + floor)
 
@@ -44,7 +45,7 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 | Intake / needs scheduling | Jesse | Appointment booked or cart in bay |
 | Diagnose | Assigned tech | Complaint verified, estimate approved |
 | Waiting deposit/parts | Jesse | Deposit collected **before** battery/motor/controller order; Jesse orders and tracks parts |
-| In repair | Taylor / Marlon | Work complete per estimate |
+| In repair | Assigned shop tech (Marlon or other shop-team tech) | Work complete per estimate |
 | QC | Assigned tech | 7-point safety + test drive; fault codes cleared |
 | Ready | Jesse | Customer notified; balance collected or arranged |
 | Pickup/delivery | Roy | Cart off lot |
@@ -61,9 +62,9 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 ### 8:15 — Ryan shop huddle (10 min)
 
 - Read `knowledge/.generated/shop_board.md`
-- Assign every in-progress cart to **Taylor or Marlon**
+- Assign every in-progress cart to a **shop tech** (Marlon or other shop-team tech on the floor)
 - Name **today’s finish list** (max 2 lithium + 2–4 repairs per tech)
-- Flag **Peyton** jobs with one-line symptom (controller, intermittent, data log needed)
+- Flag complex electrical / comeback jobs for **Ryan** with one-line symptom (controller, intermittent, data log needed)
 
 ### End of day — Ryan (5 min)
 
@@ -86,9 +87,9 @@ Copy into HCP job notes or a shared sheet — **no customer name required**, use
 
 **SLA:** Day 3 = escalate to Ryan. Same-day promise only when kit is in stock **and** bay is open.
 
-## Peyton trigger (when to loop in)
+## Complex diagnostics (escalate to Ryan)
 
-Use Peyton when **any** apply — otherwise keep on primary tech:
+Peyton is **no longer on the team** (resigned 2026-08-22). Keep the job on the assigned shop tech unless **any** apply — then escalate to **Ryan**:
 
 - Intermittent driveability after standard diag path
 - Controller/monitor programming beyond handheld reset
@@ -105,13 +106,13 @@ Track in Friday weekly review:
 |--------|--------|
 | Avg days in shop — lithium | ≤ 3 |
 | Avg days in shop — general repair | ≤ 5 |
-| In progress count (Fri AM) | ≤ 6 |
+| In progress count (Fri AM) | Report the count — **no ≤6 target** |
 | Needs scheduling count (Fri AM) | ≤ 5 |
-| Jobs closed per tech per week | Trend up as WIP drops |
+| Jobs closed per tech per week | Trend up as stale WIP drops |
 
 ## Known bottlenecks (from HCP snapshot)
 
-As of last sync, the pipeline showed **heavy stale WIP** (many in-progress jobs 15+ days) and **11 needs scheduling**. Treat that as a **status hygiene + intake** problem first — throughput cannot improve until HCP reflects reality and WIP is capped.
+As of last sync, the pipeline showed **heavy stale WIP** (many in-progress jobs 15+ days) and **11 needs scheduling**. Treat that as a **status hygiene + intake** problem first — throughput cannot improve until HCP reflects reality. Do **not** re-impose a 6-job in-progress cap.
 
 **Immediate actions:**
 

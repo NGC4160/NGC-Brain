@@ -1,7 +1,7 @@
 # Shop Whiteboard Layout
 
-**Last verified:** 2026-06-28  
-**Owner:** Ryan · **Used by:** Ryan, Taylor, Marlon, Jesse, Roy · Christine (part-time backup)  
+**Last verified:** 2026-08-22  
+**Owner:** Ryan · **Used by:** Ryan, Marlon, Jesse, Roy, Ryan G. (shop team) · Christine (part-time backup)  
 **Pairs with:** [shop_throughput.md](shop_throughput.md) · HCP job statuses · `knowledge/.generated/shop_board.md`
 
 ---
@@ -29,10 +29,10 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
-│  NGC SHOP BOARD — Mon ___ / ___ / ___          WIP: __/6    Li: __/4    Updated: _____ AM   │
+│  NGC SHOP BOARD — Mon ___ / ___ / ___          WIP: ___     Li: __/4    Updated: _____ AM   │
 ├──────────┬──────────┬──────────┬─────────────────────┬──────────┬──────────┬──────────────┤
 │ 1 INTAKE │ 2 DIAG   │ 3 PARTS  │ 4 IN REPAIR         │ 5 QC     │ 6 READY  │ 7 OUT TODAY  │
-│  (max 3) │  (max 2) │  (max 4) │  T:___ M:___ P:___  │  (max 2) │  (max 4) │  Roy route   │
+│  (max 3) │  (max 2) │  (max 4) │  M:___ + shop team  │  (max 2) │  (max 4) │  Roy route   │
 ├──────────┴──────────┴──────────┴─────────────────────┴──────────┴──────────┴──────────────┤
 │ TODAY'S FINISH LIST (Ryan sets at huddle — max 4 cards total)                               │
 │  [ ] _____________   [ ] _____________   [ ] _____________   [ ] _____________             │
@@ -46,18 +46,17 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 | 1 | **INTAKE** | 3 | Jesse → Ryan | Needs scheduling / scheduled (not started) |
 | 2 | **DIAG** | 2 | Assigned tech | In progress (diagnostic) |
 | 3 | **PARTS / DEPOSIT** | 4 | Jesse | In progress — note "waiting deposit" or "waiting parts"; Jesse orders/tracks |
-| 4 | **IN REPAIR** | 3 per tech | Taylor / Marlon | In progress |
+| 4 | **IN REPAIR** | 3 per tech | Assigned shop tech | In progress |
 | 5 | **QC** | 2 | Assigned tech | In progress — final test drive |
 | 6 | **READY** | 4 | Jesse | In progress — ready for pickup |
 | 7 | **OUT TODAY** | — | Roy | Scheduled pickup/delivery (today only) |
 
-**IN REPAIR** column is split into three rows on the board (label with tape):
+**IN REPAIR** column is split by assigned shop tech (label with tape). Taylor and Peyton are **not** current staff.
 
 ```
 IN REPAIR
-  T — Taylor
   M — Marlon
-  P — Peyton (diag block only)
+  (other shop-team techs as assigned — Ryan G. title with HR/Betty)
 ```
 
 ---
@@ -82,7 +81,7 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 | **[Li]** | Blue marker if lithium conversion |
 | **Cart** | Voltage + brand (48V Club Car, 36V EZGO, etc.) |
 | **Issue** | 3–5 words max |
-| **Tech** | T / M / P — **blank = not allowed overnight** |
+| **Tech** | Assigned shop tech initial — **blank = not allowed overnight** |
 | **Day dots** | One dot per calendar day in shop; **3+ dots on Li = red flag** |
 | **$ dep / Parts** | Check when cleared; card stays in PARTS until both done |
 
@@ -116,8 +115,8 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 
 ### Ryan — 8:15 AM huddle (10 min)
 
-1. Count WIP in columns 2–5 — if **>6**, no new INTAKE until it drops
-2. Assign **T/M/P** on every card in DIAG, IN REPAIR, QC
+1. Count WIP in columns 2–5 for visibility — **do not stop intake at 6** (hard cap disregarded 2026-08-22)
+2. Assign a shop tech on every card in DIAG, IN REPAIR, QC
 3. Write **TODAY'S FINISH LIST** (2–4 jobs max)
 4. Red-flag lithium with 3+ day dots — those go to finish list first
 5. Sync HCP assignments and notes
@@ -143,15 +142,9 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 
 ---
 
-## WIP stoplight (header)
+## WIP count (header)
 
-Write daily in top-right corner:
-
-| WIP (cols 2–5) | Action |
-|----------------|--------|
-| **0–4** | Green — normal booking |
-| **5–6** | Yellow — lithium OK only if kit in stock |
-| **7+** | Red — **no new drop-offs** until finish list clears |
+Write the current in-progress count (cols 2–5) in the top-right corner for the huddle. **Do not treat 6 in-progress as a booking stop** — that hard cap is disregarded (2026-08-22). Still protect the lithium 2–3 day promise (`Li: __/4`) and collect deposit before ordering batteries/motors/controllers. Ryan decides whether the floor can take another drop-off.
 
 ---
 
@@ -175,7 +168,7 @@ Post this small legend next to the board:
 | Board column | HCP status | Note to add in HCP |
 |--------------|------------|-------------------|
 | INTAKE | Needs scheduling / Scheduled | "On board: INTAKE" |
-| DIAG | In progress | "On board: DIAG — tech T/M/P" |
+| DIAG | In progress | "On board: DIAG — assigned shop tech" |
 | PARTS | In progress | "Waiting deposit" or "Waiting parts — ETA ___" |
 | IN REPAIR | In progress | "On board: REPAIR" |
 | QC | In progress | "On board: QC" |
@@ -189,7 +182,7 @@ When job is done: **Complete** in HCP, **remove card** from board (archive stack
 ## Setup checklist (one-time)
 
 - [ ] Mount board visible from bays
-- [ ] Tape 7 columns + IN REPAIR sub-rows (T / M / P)
+- [ ] Tape 7 columns + IN REPAIR sub-rows (Marlon + other assigned shop techs)
 - [ ] Color tape on headers
 - [ ] Pack of index cards + magnet dots + red clips
 - [ ] Print card template (above) and tape to side of board
@@ -207,12 +200,12 @@ When job is done: **Complete** in HCP, **remove card** from board (archive stack
 | Tue | Zero unassigned cards overnight |
 | Wed | HCP notes match board columns |
 | Thu | Lithium cards all ≤3 day dots or on finish list |
-| Fri | WIP ≤6; review in weekly review |
+| Fri | Honest WIP count; review in weekly review |
 
 ---
 
 ## Related
 
-- [shop_throughput.md](shop_throughput.md) — limits and rhythm
+- [shop_throughput.md](shop_throughput.md) — capacity and rhythm
 - [shop_workflow.md](shop_workflow.md) — customer journey
 - [../05_team/roles.md](../05_team/roles.md) — who owns each lane

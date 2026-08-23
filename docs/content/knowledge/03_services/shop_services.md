@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-07-13  
+**Last verified:** 2026-08-22  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -16,7 +16,7 @@
 | **Diagnostic & Inspection (shop)** | $179 | Minimum service charge; **not waived** |
 | **Minimum Service Charge — Diagnostic Inspection** | $179 | Same policy |
 | **Diagnostic Testing (1 hr)** | $125 | |
-| **Advanced Diagnostics (in-shop)** | $145 | Peyton may assist on complex cases |
+| **Advanced Diagnostics (in-shop)** | $145 | Complex cases escalate to Ryan |
 | **Shop labor (1 hr)** | $125 | |
 | **7-Point Safety Inspection** | $0 | **Free** with every service |
 
