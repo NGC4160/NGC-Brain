@@ -1,6 +1,6 @@
 # Pricebook Reference
 
-**Last verified:** 2026-07-13  
+**Last verified:** 2026-08-23  
 **Source file:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`  
 **Total line items:** 282
 
@@ -47,8 +47,8 @@ The CSV is the **full pricebook**. This file summarizes categories and flags ite
 
 | Name | Price | Status |
 |------|------:|--------|
-| Golf Cart Diagnostic & Inspection | $179 | **Current** (shop) |
-| Minimum Service Charge — Diagnostic Inspection | $179 | **Current** |
+| Golf Cart Diagnostic & Inspection | $179 | **Current** (shop). Use this for work that used to be a minimum service charge. |
+| Minimum Service Charge — Diagnostic Inspection | $179 | HCP name still in the export — **do not quote as a separate charge**; bill as Diagnostic |
 | Diagnostic Testing | $125 | Current |
 | Advanced Diagnostics (In-Shop) | $145 | Current |
 | Shop Labor Hours | $125 | Current |
