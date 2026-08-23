@@ -1,6 +1,6 @@
 # Customers & Marketing
 
-**Last verified:** 2026-07-13
+**Last verified:** 2026-08-23
 
 ## Service area
 
@@ -39,7 +39,7 @@ Confirm current marketing spend mix with Ryan — QBO shows ~$64k advertising/ma
 
 **Differentiators to emphasize:**
 
-- LiFePO4 lithium conversions (Professional Kits, 5-year battery + BMS warranty)
+- LiFePO4 lithium conversions (Professional Kits — battery, charger, monitor; Vatrer packs we inspect, test, and tune; 5-year full replacement battery + BMS). Front Desk copy: [customer_reply_standard.md](customer_reply_standard.md)
 - Advanced diagnostics capability
 - Free 7-point inspection with every service
 - Free local pickup/delivery (Northshore, 40 mi); $99 outside zone / Southshore

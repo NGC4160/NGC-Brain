@@ -20,7 +20,7 @@ NGC is **shop-only**. Legacy mobile diagnostics, trip charges, and discontinued 
 | Group | Count (HCP) | Examples |
 |-------|-------------|----------|
 | Mobile / trip | 13 | Mobile Service Call, Trip Charges, On-Site Diagnostics |
-| NGC Conversion | 7 | `3.0-NGC Lithium Conversion…`, TEST PARTIAL KIT |
+| NGC Conversion | 7 | `3.0-NGC Lithium Conversion…` **kits**, TEST PARTIAL KIT — **keep** `3.0-NGC Lithium Conversion Convenience Package` ($599 + tax) |
 | Future sales | 1 | Golf Cart Sales Deposit |
 | **QBO-only** | 2 | 2011 EZGO TXT, 2022 Club Car Tempo |
 
@@ -30,6 +30,7 @@ NGC is **shop-only**. Legacy mobile diagnostics, trip charges, and discontinued 
 |------|----------|
 | `Shop - 0.5-Inspection Service Call` | Still used for in-shop inspections? |
 | `3.0- NGC Infotainment System Installation` | Still offered? |
+| `3.0-NGC Lithium Conversion Convenience Package` | **Keep — current add-on** ($599 + tax). Do not deactivate with the old 3.0-NGC **kit** SKUs. |
 
 Full row-by-row list with UUIDs → run the audit script.
 

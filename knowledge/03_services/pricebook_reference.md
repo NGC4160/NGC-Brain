@@ -67,6 +67,14 @@ See [archive/legacy_mobile.md](../archive/legacy_mobile.md) for full list. Inclu
 - TEST PARTIAL KIT 48V
 - Mobile On-Site Golf Cart General Service
 
+## Lithium convenience package (current)
+
+| Name | Price | Status |
+|------|------:|--------|
+| `3.0-NGC Lithium Conversion Convenience Package` | $599 + tax | **Current** (live HCP). AC charge port + 15' cord; 20A key-switched 48V-to-12V DC/DC; 6-position 12V fuse box. Not in the in-repo CSV export — refresh pricebook CSV. |
+
+Customer-facing kit vs this add-on: [lithium_conversions.md](../02_products/lithium_conversions.md) · [customer_reply_standard.md](../07_customers_marketing/customer_reply_standard.md).
+
 ## Sample accessory & repair pricing
 
 | Service | Price |
