@@ -1,6 +1,6 @@
 # Improvement & Growth Backlog
 
-**Last reviewed:** 2026-08-22  
+**Last reviewed:** 2026-08-23  
 Ask the AI: **"What's the highest-impact item on the backlog this week?"**
 
 Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
@@ -15,7 +15,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P1 | HCP WIP hygiene — audit stale "in progress" (15+ days), correct statuses | 14 IP jobs, most aged; board can't lie | Ryan | Open |
 | P1 | Lithium job tracker (day 0/1/2, deposit received, parts ordered) | Protect 2–3 day promise; 2 Li jobs 50+ days in HCP | Ryan | In progress |
 | P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open |
-| P2 | Deposit collection checklist for Jesse | Batteries/motors/controllers | Jesse | Open |
+| P2 | Deposit collection checklist for Jesse | Batteries/motors/controllers — HCP pipeline now in `shop_workflow.md` (COPY TO JOB → Awaiting Deposit → Need to Order → Waiting for Materials) | Jesse | **Pipeline rule logged 2026-08-23**; still align Admin Front Office SOP wait-code table |
 | P3 | Everlogic evaluation demo + migration plan | HCP is wrong tool for shop-only | Ryan | Open |
 
 ## Revenue & growth

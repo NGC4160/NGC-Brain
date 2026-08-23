@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-08-22  
+**Last verified:** 2026-08-23  
 **Maintained for:** Cursor AI, Chief (Ryan's Grok Bot COS), NGC Admin Bot / shop bots, staff reference, customer-facing assistance
 
 ## Purpose
@@ -15,13 +15,13 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [02_products/lithium_conversions.md](02_products/lithium_conversions.md) | Professional lithium kits, warranty, deposits, turnaround |
 | [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits |
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
-| [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today |
+| [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP deposit pipeline** (Awaiting Deposit → Need to Order → Waiting for Materials) |
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA, shop board** |
 | [04_operations/shop_whiteboard_layout.md](04_operations/shop_whiteboard_layout.md) | **Physical whiteboard — columns, cards, colors, daily use** |
 | [05_team/roles.md](05_team/roles.md) | Team roster and responsibilities |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [../docs/documents/README.md](../docs/documents/README.md) | **Documents hub** — hiring, HR, ops forms in Command Center |
-| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, future DMS |
+| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro (incl. deposit job pipeline stages), QuickBooks, future DMS |
 | [06_systems/garagebuddy.md](06_systems/garagebuddy.md) | **GarageBuddy** — open-source DMS eval, SQL Server 2019 setup |
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |

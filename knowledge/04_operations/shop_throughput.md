@@ -1,6 +1,6 @@
 # Shop Throughput
 
-**Last verified:** 2026-08-22  
+**Last verified:** 2026-08-23  
 **Owner:** Ryan (service manager)  
 **Live board:** `knowledge/.generated/shop_board.md` (regenerate after HCP sync)
 
@@ -34,17 +34,23 @@ When the **lithium** lane is full or the schedule queue is overflowing: finish o
 
 ## Shop lanes (HCP + floor)
 
-Use these stages in HCP notes/tags and on the physical board:
+Use these **shop-floor** lanes on the physical board (and in HCP notes when useful). They are **not** HCP job pipeline stage names.
 
 ```
 INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE → READY → CLOSED
 ```
 
+For **approved work that needs a parts deposit**, move the HCP **job pipeline** through these existing stages only (Ryan White, 2026-08-23) — do not invent others:
+
+**COPY TO JOB** → **Awaiting Deposit** → (deposit received) **Need to Order** → (parts ordered) **Waiting for Materials**
+
+Ryan said **Need to Order**. The repo had no prior HCP column with that name; the floor lane above stays `WAITING DEPOSIT/PARTS`. Full rule: [shop_workflow.md](shop_workflow.md).
+
 | Lane | Who owns | Exit criteria |
 |------|----------|---------------|
 | Intake / needs scheduling | Jesse | Appointment booked or cart in bay |
 | Diagnose | Assigned tech | Complaint verified, estimate approved |
-| Waiting deposit/parts | Jesse | Deposit collected **before** battery/motor/controller order; Jesse orders and tracks parts |
+| Waiting deposit/parts (floor) | Jesse | HCP pipeline: **Awaiting Deposit** → **Need to Order** → **Waiting for Materials**. Deposit collected **before** battery/motor/controller order; Jesse orders and tracks parts |
 | In repair | Marlon / Ryan Gorgoglione | Work complete per estimate |
 | QC | Assigned tech | 7-point safety + test drive; fault codes cleared |
 | Ready | Jesse | Customer notified; balance collected or arranged |
@@ -55,7 +61,8 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 ### 8:00 — Jesse (10–15 min)
 
 - Clear **needs scheduling** queue: book, callback, or waitlist
-- Confirm deposits; order/track parts on any job waiting material
+- Confirm deposits; move HCP pipeline **Awaiting Deposit** → **Need to Order** when paid; order/track parts, then **Waiting for Materials**
+- After new approvals: **COPY TO JOB**, stage **Awaiting Deposit**, queue pickup or drop-off (do not lock a time / hold a spot / easy yes)
 - Set Roy’s pickup/delivery route (zone batched; free vs $99)
 - Flag WIP / AUTH / PARTS counts for Ryan’s huddle
 

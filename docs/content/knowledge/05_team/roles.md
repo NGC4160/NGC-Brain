@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-08-22
+**Last verified:** 2026-08-23
 
 ## Ownership
 
@@ -46,7 +46,7 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Pricebook | Maintenance in Housecall Pro (add/edit/deactivate lines; Ryan approves new rates) |
 | Inventory | Parts/stock visibility, counts, QBO/HCP alignment |
 | Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order |
-| Shop workflow | Board/HCP hygiene, lane movement, WIP visibility, finish-list support |
+| Shop workflow | Board/HCP hygiene, lane movement, WIP visibility, finish-list support. On approved deposit jobs: **COPY TO JOB** → **Awaiting Deposit** → **Need to Order** → **Waiting for Materials** ([shop_workflow.md](../04_operations/shop_workflow.md)) |
 | Pickup / delivery | Routing and scheduling for Roy (zones, batching, $99 vs free) |
 | Data & reporting | Shop metrics, deposit/parts queues, weekly numbers Ryan needs |
 | And more | Other coordinator work as the shop needs it |

@@ -20,7 +20,7 @@ Here's today's shop status:
 Give me:
 1. Top 3 priorities for today (service manager lens)
 2. Lithium jobs at risk of missing 2–3 day turnaround
-3. Deposit or parts-order follow-ups
+3. Deposit or parts-order follow-ups (HCP: Awaiting Deposit → Need to Order → Waiting for Materials)
 4. One thing from the improvement backlog I should touch today
 5. What info you still need from me to be more useful
 
