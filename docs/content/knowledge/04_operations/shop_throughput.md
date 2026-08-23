@@ -12,7 +12,7 @@ Move carts through the shop predictably — especially **lithium conversions in 
 
 | Resource | Capacity (planning) |
 |----------|-------------------|
-| Marlon + shop team | Primary repair lanes; ~6 productive hrs/day each (Ryan G. is on the shop team — title with HR/Betty) |
+| Marlon + Ryan Gorgoglione | Two golf cart technicians; ~6 productive hrs/day each |
 | Roy | Pickup/delivery — batch by zone, not one-off all day |
 | Jesse | Intake, deposits, parts/inventory, workflow, Roy routing (Christine part-time backup) |
 | Shop hours | Mon–Fri 8–5 |
@@ -45,7 +45,7 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 | Intake / needs scheduling | Jesse | Appointment booked or cart in bay |
 | Diagnose | Assigned tech | Complaint verified, estimate approved |
 | Waiting deposit/parts | Jesse | Deposit collected **before** battery/motor/controller order; Jesse orders and tracks parts |
-| In repair | Assigned shop tech (Marlon or other shop-team tech) | Work complete per estimate |
+| In repair | Marlon / Ryan Gorgoglione | Work complete per estimate |
 | QC | Assigned tech | 7-point safety + test drive; fault codes cleared |
 | Ready | Jesse | Customer notified; balance collected or arranged |
 | Pickup/delivery | Roy | Cart off lot |
@@ -62,7 +62,7 @@ INTAKE → DIAGNOSE → WAITING DEPOSIT/PARTS → IN REPAIR → QC/TEST DRIVE �
 ### 8:15 — Ryan shop huddle (10 min)
 
 - Read `knowledge/.generated/shop_board.md`
-- Assign every in-progress cart to a **shop tech** (Marlon or other shop-team tech on the floor)
+- Assign every in-progress cart to **Marlon or Ryan Gorgoglione**
 - Name **today’s finish list** (max 2 lithium + 2–4 repairs per tech)
 - Flag complex electrical / comeback jobs for **Ryan** with one-line symptom (controller, intermittent, data log needed)
 
@@ -89,7 +89,7 @@ Copy into HCP job notes or a shared sheet — **no customer name required**, use
 
 ## Complex diagnostics (escalate to Ryan)
 
-Peyton is **no longer on the team** (resigned 2026-08-22). Keep the job on the assigned shop tech unless **any** apply — then escalate to **Ryan**:
+Peyton is **no longer on the team** (resigned 2026-08-22). Keep the job on the assigned shop tech unless **any** apply — then escalate to **Ryan White**:
 
 - Intermittent driveability after standard diag path
 - Controller/monitor programming beyond handheld reset

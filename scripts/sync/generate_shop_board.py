@@ -188,7 +188,7 @@ def build_board(jobs: list[dict], synced_at: str | None) -> str:
     lines += [
         "## Ryan — 8:30 actions",
         "",
-        "1. Assign every in-progress cart to a shop tech (Marlon or other shop-team tech on the floor).",
+        "1. Assign every in-progress cart to Marlon or Ryan Gorgoglione.",
         "2. Close or update stale HCP statuses (15+ day jobs).",
         "3. Protect lithium lane: finish or reschedule anything over 3 days.",
         "4. Do not hold intake just because total WIP is above 6 (hard cap disregarded). Collect deposit before ordering batteries/motors/controllers.",

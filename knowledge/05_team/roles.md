@@ -13,12 +13,12 @@
 
 | Name | Role | Responsibilities |
 |------|------|------------------|
-| **Ryan** | Service manager | Technician oversight, diagnostics, training, QC, owner-level pricing/warranty exceptions |
+| **Ryan White** | Service manager | Technician oversight, diagnostics, training, QC, owner-level pricing/warranty exceptions |
 | **Jesse** | Administrative assistant / service coordinator | **Primary shop operations coordinator** (she/her) — see scope below |
 | **Christine** | Part-time assistant (co-owner) | Backup coverage when Jesse is out; owner-level exceptions |
 | **Roy** | Driver | Executes pickups and deliveries that Jesse routes |
 | **Marlon** | Golf cart technician | In-shop repair and service |
-| **Ryan G.** | Shop team | On the shop team. Role/title and duty split live with **HR (Betty)** — do not invent a job title. |
+| **Ryan Gorgoglione** | Golf cart technician | In-shop repair and service (not the owner — that is Ryan White) |
 
 ## Former (do not assign work)
 
@@ -51,26 +51,26 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Data & reporting | Shop metrics, deposit/parts queues, weekly numbers Ryan needs |
 | And more | Other coordinator work as the shop needs it |
 
-**Escalate to Ryan:** wrench work, diagnostic calls, warranty/courtesy write-offs, discounts, angry/fleet fights, ad strategy, payroll/banking. Christine covers when Jesse or Ryan is out.
+**Escalate to Ryan White:** wrench work, diagnostic calls, warranty/courtesy write-offs, discounts, angry/fleet fights, ad strategy, payroll/banking. Christine covers when Jesse or Ryan White is out.
 
 ## RACI summary
 
 | Function | Primary | Backup |
 |----------|---------|--------|
 | Customer phone / scheduling | Jesse | Christine (part-time) |
-| Estimates (standard + advanced) | Jesse | Ryan (exceptions only) |
+| Estimates (standard + advanced) | Jesse | Ryan White (exceptions only) |
 | Deposits & payment collection | Jesse | Christine |
-| Pricebook maintenance | Jesse | Ryan (rate approval) |
-| Inventory | Jesse | Ryan |
-| Parts ordering & tracking | Jesse | Ryan |
-| Shop workflow management | Jesse | Ryan |
-| Data management & reporting | Jesse | Ryan |
+| Pricebook maintenance | Jesse | Ryan White (rate approval) |
+| Inventory | Jesse | Ryan White |
+| Parts ordering & tracking | Jesse | Ryan White |
+| Shop workflow management | Jesse | Ryan White |
+| Data management & reporting | Jesse | Ryan White |
 | Pickup/delivery routing & scheduling | Jesse | Roy (drive) / Christine |
 | Pickup & delivery (drive) | Roy | — |
-| Service management / tech oversight | Ryan | — |
-| Shop repair work | Marlon | Shop team (Ryan G. — title with HR/Betty) |
+| Service management / tech oversight | Ryan White | — |
+| Shop repair work | Marlon, Ryan Gorgoglione | — |
 | Bookkeeping | Jessica (Griffin & Furman) | Christine |
-| Owner exceptions / warranty / discounts | Ryan | Christine |
+| Owner exceptions / warranty / discounts | Ryan White | Christine |
 
 ## Hiring
 

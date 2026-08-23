@@ -28,10 +28,10 @@ Options:
 
 ### 3. Service execution
 
-- **Ryan** — service manager; oversees jobs and workflow
+- **Ryan White** — service manager; oversees jobs and workflow
 - **Marlon** — golf cart technician; primary shop work
-- **Ryan G.** — on the shop team (role/title with HR/Betty — do not invent)
-- Complex diagnostics escalate to **Ryan** (Peyton resigned 2026-08-22)
+- **Ryan Gorgoglione** — golf cart technician; primary shop work
+- Complex diagnostics escalate to **Ryan White** (Peyton resigned 2026-08-22)
 
 Every service includes **free 7-point safety inspection**.
 

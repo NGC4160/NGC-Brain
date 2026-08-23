@@ -1,7 +1,7 @@
 # Shop Whiteboard Layout
 
 **Last verified:** 2026-08-22  
-**Owner:** Ryan · **Used by:** Ryan, Marlon, Jesse, Roy, Ryan G. (shop team) · Christine (part-time backup)  
+**Owner:** Ryan White · **Used by:** Ryan White, Marlon, Ryan Gorgoglione, Jesse, Roy · Christine (part-time backup)  
 **Pairs with:** [shop_throughput.md](shop_throughput.md) · HCP job statuses · `knowledge/.generated/shop_board.md`
 
 ---
@@ -32,7 +32,7 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 │  NGC SHOP BOARD — Mon ___ / ___ / ___          WIP: ___     Li: __/4    Updated: _____ AM   │
 ├──────────┬──────────┬──────────┬─────────────────────┬──────────┬──────────┬──────────────┤
 │ 1 INTAKE │ 2 DIAG   │ 3 PARTS  │ 4 IN REPAIR         │ 5 QC     │ 6 READY  │ 7 OUT TODAY  │
-│  (max 3) │  (max 2) │  (max 4) │  M:___ + shop team  │  (max 2) │  (max 4) │  Roy route   │
+│  (max 3) │  (max 2) │  (max 4) │  M:___ RG:___       │  (max 2) │  (max 4) │  Roy route   │
 ├──────────┴──────────┴──────────┴─────────────────────┴──────────┴──────────┴──────────────┤
 │ TODAY'S FINISH LIST (Ryan sets at huddle — max 4 cards total)                               │
 │  [ ] _____________   [ ] _____________   [ ] _____________   [ ] _____________             │
@@ -46,7 +46,7 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 | 1 | **INTAKE** | 3 | Jesse → Ryan | Needs scheduling / scheduled (not started) |
 | 2 | **DIAG** | 2 | Assigned tech | In progress (diagnostic) |
 | 3 | **PARTS / DEPOSIT** | 4 | Jesse | In progress — note "waiting deposit" or "waiting parts"; Jesse orders/tracks |
-| 4 | **IN REPAIR** | 3 per tech | Assigned shop tech | In progress |
+| 4 | **IN REPAIR** | 3 per tech | Marlon / Ryan Gorgoglione | In progress |
 | 5 | **QC** | 2 | Assigned tech | In progress — final test drive |
 | 6 | **READY** | 4 | Jesse | In progress — ready for pickup |
 | 7 | **OUT TODAY** | — | Roy | Scheduled pickup/delivery (today only) |
@@ -55,8 +55,8 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 
 ```
 IN REPAIR
-  M — Marlon
-  (other shop-team techs as assigned — Ryan G. title with HR/Betty)
+  M  — Marlon
+  RG — Ryan Gorgoglione
 ```
 
 ---
@@ -81,7 +81,7 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 | **[Li]** | Blue marker if lithium conversion |
 | **Cart** | Voltage + brand (48V Club Car, 36V EZGO, etc.) |
 | **Issue** | 3–5 words max |
-| **Tech** | Assigned shop tech initial — **blank = not allowed overnight** |
+| **Tech** | M / RG — **blank = not allowed overnight** |
 | **Day dots** | One dot per calendar day in shop; **3+ dots on Li = red flag** |
 | **$ dep / Parts** | Check when cleared; card stays in PARTS until both done |
 
@@ -116,7 +116,7 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 ### Ryan — 8:15 AM huddle (10 min)
 
 1. Count WIP in columns 2–5 for visibility — **do not stop intake at 6** (hard cap disregarded 2026-08-22)
-2. Assign a shop tech on every card in DIAG, IN REPAIR, QC
+2. Assign **M / RG** on every card in DIAG, IN REPAIR, QC
 3. Write **TODAY'S FINISH LIST** (2–4 jobs max)
 4. Red-flag lithium with 3+ day dots — those go to finish list first
 5. Sync HCP assignments and notes
@@ -168,7 +168,7 @@ Post this small legend next to the board:
 | Board column | HCP status | Note to add in HCP |
 |--------------|------------|-------------------|
 | INTAKE | Needs scheduling / Scheduled | "On board: INTAKE" |
-| DIAG | In progress | "On board: DIAG — assigned shop tech" |
+| DIAG | In progress | "On board: DIAG — tech M/RG" |
 | PARTS | In progress | "Waiting deposit" or "Waiting parts — ETA ___" |
 | IN REPAIR | In progress | "On board: REPAIR" |
 | QC | In progress | "On board: QC" |
@@ -182,7 +182,7 @@ When job is done: **Complete** in HCP, **remove card** from board (archive stack
 ## Setup checklist (one-time)
 
 - [ ] Mount board visible from bays
-- [ ] Tape 7 columns + IN REPAIR sub-rows (Marlon + other assigned shop techs)
+- [ ] Tape 7 columns + IN REPAIR sub-rows (M / RG)
 - [ ] Color tape on headers
 - [ ] Pack of index cards + magnet dots + red clips
 - [ ] Print card template (above) and tape to side of board

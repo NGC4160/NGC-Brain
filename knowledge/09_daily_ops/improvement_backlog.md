@@ -45,7 +45,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 |---|------|-----|-------|--------|
 | P2 | NGC Admin Bot — Phase 1 deposit gate alerts | Spec + script live; Phase 2 review requests next | Ryan | In progress |
 | P1 | Hire Admin / Service Coordinator (Board Jul 2026) | Free Ryan for diagnostics/training/QC | Ryan | **Filled — Jesse** (2026-08-15); Christine part-time backup |
-| P3 | Technician skills matrix (current shop team; Marlon + others) | Better job assignment — Taylor/Peyton are gone | Ryan | Open — refresh names |
+| P3 | Technician skills matrix (Marlon vs Ryan Gorgoglione) | Better job assignment — Taylor/Peyton are gone | Ryan | Open — refresh names |
 
 ---
 
@@ -53,7 +53,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | Date | Item |
 |------|------|
-| 2026-08-22 | Taylor terminated; Peyton resigned; Ryan G. on shop team (title with HR/Betty); 6-job WIP cap disregarded |
+| 2026-08-22 | Taylor terminated; Peyton resigned; Ryan Gorgoglione is a golf cart technician; 6-job WIP cap disregarded |
 | 2026-08-15 | Jesse hired/seated as Admin / Service Coordinator; Christine → part-time assistant |
 | 2026-08-03 | Admin hiring pack drafted (time log, JD, phone+desk eval, SOPs, KPI/30-60-90); Gusto = new-hire packet |
 | 2026-07-13 | Pickup policy finalized — free 40 mi Northshore; $99 flat outside/Southshore |
