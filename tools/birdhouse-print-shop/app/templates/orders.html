@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Orders · {{ shop_name }}{% endblock %}
+{% block content %}
+<section class="split">
+  <div class="panel">
+    <h2>Orders</h2>
+    <table>
+      <thead>
+        <tr><th>Order</th><th>Status</th><th>Due</th><th>Money</th></tr>
+      </thead>
+      <tbody>
+      {% for o in orders %}
+        <tr>
+          <td>
+            <strong>{{ o.order_number }}</strong>
+            <div class="muted">{{ o.channel }} · {{ o.customer_label }}</div>
+            {% if o.notes %}<div class="muted">{{ o.notes }}</div>{% endif %}
+          </td>
+          <td>{{ o.status }}</td>
+          <td>{{ o.due_date or '—' }}</td>
+          <td>
+            {{ o.revenue }}
+            <div class="{% if o.margin < 0 %}warn{% else %}ok{% endif %}">
+              margin ${{ '%.2f'|format(o.margin) }}
+            </div>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>New order</h2>
+    <form method="post" action="/orders" class="stack">
+      <label>Order # <input name="order_number" required placeholder="BH-1002" /></label>
+      <label>Channel
+        <select name="channel">
+          <option>Etsy</option>
+          <option>Facebook</option>
+          <option>Local</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Customer label<input name="customer_label" placeholder="Etsy #88901" /></label>
+      <label>Due date<input name="due_date" type="date" /></label>
+      <label>Variant
+        <select name="variant_id" required>
+          {% for v in variants %}
+            <option value="{{ v.id }}">
+              {{ v.product_name }} · {{ v.sku }} · {{ v.color_name }} (${{ '%.2f'|format(v.sell_price_cents / 100) }})
+            </option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>Qty<input name="qty" type="number" min="1" value="1" /></label>
+      <label>Notes<textarea name="notes" rows="3" placeholder="Color request, gift note..."></textarea></label>
+      <button type="submit">Create order + queue jobs</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

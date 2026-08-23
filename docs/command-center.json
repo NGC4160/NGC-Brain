@@ -609,6 +609,12 @@
           "desc": "App configuration",
           "href": "../settings/",
           "primary": false
+        },
+        {
+          "title": "Blake's Birdhouses",
+          "desc": "3D print shop mission board",
+          "href": "../birdhouse/",
+          "primary": false
         }
       ]
     },
