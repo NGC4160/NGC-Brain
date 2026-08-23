@@ -25,11 +25,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Stage public files
+        run: |
+          mkdir -p /tmp/birdhouse-web/js
+          cp tools/birdhouse-print-shop/web/index.html /tmp/birdhouse-web/
+          cp tools/birdhouse-print-shop/web/styles.css /tmp/birdhouse-web/
+          cp tools/birdhouse-print-shop/web/.nojekyll /tmp/birdhouse-web/
+          cp tools/birdhouse-print-shop/web/js/store.js /tmp/birdhouse-web/js/
+          cp tools/birdhouse-print-shop/web/js/app.js /tmp/birdhouse-web/js/
+
       - name: Deploy birdhouse web
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: tools/birdhouse-print-shop/web
+          folder: /tmp/birdhouse-web
           target-folder: birdhouse
           branch: gh-pages
-          clean: false
+          clean: true
           commit-message: "Deploy Blake's Birdhouses web from ${{ github.sha }}"
