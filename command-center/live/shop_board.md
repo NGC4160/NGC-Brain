@@ -1,7 +1,7 @@
 # Shop Board (auto-generated)
 
-**Generated:** 2026-08-23 04:08 UTC  
-**HCP jobs export:** 2026-08-22T13:48:46.736812+00:00  
+**Generated:** 2026-08-23 13:50 UTC  
+**HCP jobs export:** 2026-08-23T13:50:55.117508+00:00  
 **Privacy:** No customer names or addresses.
 
 ## Snapshot
@@ -42,14 +42,14 @@
 
 - #17429 · General - 1.0 - Golf Cart Diagnostic & Inspection · 11d ($ due, unassigned)
 - #17428 · General - 1.0 - Golf Cart Diagnostic & Inspection · 11d ($ due, unassigned)
+- #17434 · General - ***SEE NOTES*** · 10d ($ due, unassigned)
+- #17433 · General - 1.0 - Golf Cart Diagnostic & Inspection · 10d ($ due, unassigned)
 - #17432 · General - 1.0 - Golf Cart Diagnostic & Inspection · 10d ($ due, unassigned)
-- #17434 · General - ***SEE NOTES*** · 9d ($ due, unassigned)
-- #17433 · General - 1.0 - Golf Cart Diagnostic & Inspection · 9d ($ due, unassigned)
 - #17438 · General - 1.0 - Golf Cart Diagnostic & Inspection · 7d ($ due, unassigned)
+- #17441 · General - 1.0 - Golf Cart Diagnostic & Inspection · 5d ($ due, unassigned)
 - #17440 · General - 1.0 - Golf Cart Diagnostic & Inspection · 5d ($ due, unassigned)
 - #17439 · ***SEE NOTES*** · 5d ($ due, unassigned)
 - #17442 · General - 1.0 - Golf Cart Diagnostic & Inspection · 4d ($ due, unassigned)
-- #17441 · General - 1.0 - Golf Cart Diagnostic & Inspection · 4d ($ due, unassigned)
 - #17447 · Accessories - 2.0-Battery Monitor Installation · 2d ($ due, unassigned)
 - #17445 · General - ***SEE NOTES*** · 2d ($ due, unassigned)
 - #17444 · General - 1.0 - Golf Cart Diagnostic & Inspection · 2d ($ due, unassigned)
