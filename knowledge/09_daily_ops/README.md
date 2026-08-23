@@ -28,7 +28,7 @@ Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — see [
 
 | Need | Prompt / action |
 |------|-----------------|
-| Customer quote (lithium or repair) | [`prompts/quote_and_customer.md`](../../prompts/quote_and_customer.md) |
+| Customer quote (lithium or repair) | [`prompts/quote_and_customer.md`](../../prompts/quote_and_customer.md) — lithium kit/warranty/convenience: [`customer_reply_standard.md`](../07_customers_marketing/customer_reply_standard.md) |
 | Draft text/email for Jesse | Same — specify audience |
 | "How do we diagnose X on Club Car?" | AI searches `NGC Document Repository` |
 | Staff instruction for Marlon / Ryan Gorgoglione | Ask for shop-floor checklist from SOPs |
