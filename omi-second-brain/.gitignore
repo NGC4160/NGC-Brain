@@ -1,0 +1,43 @@
+# Secrets & local config
+.env
+.env.local
+config/settings.yaml
+*.pem
+*.key
+
+# Python
+.venv/
+venv/
+.venv.bak/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# Vector store & runtime state (regenerable)
+data/chroma/*
+!data/chroma/.gitkeep
+data/state/*
+!data/state/.gitkeep
+*.db
+*.sqlite
+
+# Obsidian (keep vault template; ignore personal vault copies)
+vault/
+.obsidian/workspace*
+.obsidian/cache
+.trash/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Logs
+logs/
+*.log

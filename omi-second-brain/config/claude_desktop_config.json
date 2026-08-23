@@ -1,0 +1,45 @@
+{
+  "mcpServers": {
+    "omi": {
+      "_comment": "Official local Docker MCP (recommended by Omi for Claude Desktop). Key: Settings → Developer → MCP (omi_mcp_...).",
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-e",
+        "OMI_API_KEY=omi_mcp_REPLACE_ME",
+        "omiai/mcp-server"
+      ]
+    },
+    "omi-hosted-sse": {
+      "_comment": "Hosted SSE if your Claude Desktop build supports url + headers (MCP 2025+). Replace the key.",
+      "url": "https://api.omi.me/v1/mcp/sse",
+      "headers": {
+        "Authorization": "Bearer omi_mcp_REPLACE_ME"
+      }
+    },
+    "obsidian-vault": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/YOU/Documents/Obsidian/SecondBrain"
+      ]
+    },
+    "second-brain-local": {
+      "_comment": "Custom local MCP: vault RAG + Dev API. Prefer venv python path.",
+      "command": "/Users/YOU/path/to/omi-second-brain/.venv/bin/python",
+      "args": ["servers/second_brain_server/server.py"],
+      "cwd": "/Users/YOU/path/to/omi-second-brain",
+      "env": {
+        "PYTHONPATH": "/Users/YOU/path/to/omi-second-brain/src",
+        "OMI_DEV_API_KEY": "omi_dev_REPLACE_ME",
+        "OBSIDIAN_VAULT_PATH": "/Users/YOU/Documents/Obsidian/SecondBrain",
+        "CHROMA_PERSIST_DIR": "/Users/YOU/path/to/omi-second-brain/data/chroma",
+        "OLLAMA_BASE_URL": "http://localhost:11434",
+        "OLLAMA_EMBED_MODEL": "nomic-embed-text"
+      }
+    }
+  }
+}
