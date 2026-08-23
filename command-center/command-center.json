@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T13:50:59.198055+00:00",
+  "generated_at": "2026-08-23T16:56:55.756189+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-23T13:50:59.161909+00:00",
+    "generated_at": "2026-08-23T16:56:55.732006+00:00",
     "jobs_synced_at": "2026-08-23T13:50:55.117508+00:00",
     "has_live_data": true,
     "metrics": {
@@ -31,7 +31,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 110,
+          "days": 111,
           "lithium": true,
           "status": "in progress"
         }
@@ -40,7 +40,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 110,
+          "days": 111,
           "lithium": true,
           "status": "in progress"
         },
@@ -398,9 +398,9 @@
     {
       "priority": "P2",
       "name": "Deposit collection checklist for Jesse",
-      "why": "Batteries/motors/controllers",
+      "why": "Batteries/motors/controllers \u2014 HCP pipeline now in `shop_workflow.md` (COPY TO JOB \u2192 Awaiting Deposit \u2192 Need to Order \u2192 Waiting for Materials)",
       "owner": "Jesse",
-      "status": "Open",
+      "status": "**Pipeline rule logged 2026-08-23**; still align Admin Front Office SOP wait-code table",
       "category": "Operations (run the shop better)"
     },
     {

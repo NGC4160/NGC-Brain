@@ -1,6 +1,6 @@
 # Shop Whiteboard Layout
 
-**Last verified:** 2026-08-22  
+**Last verified:** 2026-08-23  
 **Owner:** Ryan White · **Used by:** Ryan White, Marlon, Ryan Gorgoglione, Jesse, Roy · Christine (part-time backup)  
 **Pairs with:** [shop_throughput.md](shop_throughput.md) · HCP job statuses · `knowledge/.generated/shop_board.md`
 
@@ -45,7 +45,7 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 |---|------|--------:|-----------------|----------------|
 | 1 | **INTAKE** | 3 | Jesse → Ryan | Needs scheduling / scheduled (not started) |
 | 2 | **DIAG** | 2 | Assigned tech | In progress (diagnostic) |
-| 3 | **PARTS / DEPOSIT** | 4 | Jesse | In progress — note "waiting deposit" or "waiting parts"; Jesse orders/tracks |
+| 3 | **PARTS / DEPOSIT** | 4 | Jesse | HCP pipeline: **Awaiting Deposit** → **Need to Order** → **Waiting for Materials** (approved deposit jobs). Jesse orders/tracks after deposit |
 | 4 | **IN REPAIR** | 3 per tech | Marlon / Ryan Gorgoglione | In progress |
 | 5 | **QC** | 2 | Assigned tech | In progress — final test drive |
 | 6 | **READY** | 4 | Jesse | In progress — ready for pickup |
@@ -108,10 +108,11 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 ### Jesse — 8:00 AM
 
 1. New drop-offs → **INTAKE** card (invoice # from HCP)
-2. Move card to **PARTS** if waiting deposit or parts; mark `$ dep?` / order ETA
-3. Build Roy’s **OUT TODAY** route (zone batch; free vs $99)
-4. **READY** → notify customer; move to **OUT TODAY** if Roy delivering
-5. Erase **OUT TODAY** column at end of day
+2. After approval on deposit jobs: HCP **COPY TO JOB** → **Awaiting Deposit**; queue pickup or drop-off (do not lock a time / hold a spot / easy yes). Move the floor card to **PARTS**
+3. Deposit in → HCP **Need to Order**; parts ordered → HCP **Waiting for Materials**; mark `$ dep?` / order ETA
+4. Build Roy’s **OUT TODAY** route (zone batch; free vs $99)
+5. **READY** → notify customer; move to **OUT TODAY** if Roy delivering
+6. Erase **OUT TODAY** column at end of day
 
 ### Ryan — 8:15 AM huddle (10 min)
 
@@ -169,7 +170,7 @@ Post this small legend next to the board:
 |--------------|------------|-------------------|
 | INTAKE | Needs scheduling / Scheduled | "On board: INTAKE" |
 | DIAG | In progress | "On board: DIAG — tech M/RG" |
-| PARTS | In progress | "Waiting deposit" or "Waiting parts — ETA ___" |
+| PARTS | HCP pipeline (deposit jobs): **Awaiting Deposit** / **Need to Order** / **Waiting for Materials** | Floor card stays in PARTS until deposit + order are done. Ryan said **Need to Order** — that is the HCP stage name (not the old note text) |
 | IN REPAIR | In progress | "On board: REPAIR" |
 | QC | In progress | "On board: QC" |
 | READY | In progress | "Ready for pickup" |

@@ -1,6 +1,6 @@
 # Lithium Conversions (LiFePO4)
 
-**Last verified:** 2026-07-13  
+**Last verified:** 2026-08-23  
 **Product line:** Professional Kit tiers only — **NGC Conversion line is discontinued**
 
 ## Overview
@@ -49,6 +49,8 @@ Deposits cover **material cost plus card processing fees** so NGC can order part
 | Standard lead-acid battery replacement | **$800** |
 
 Deposits required for: batteries, motors, controllers, and any special-order items.
+
+**Deposit is required before ordering** the kit. After the customer approves, follow the HCP job pipeline in [shop_workflow.md](../04_operations/shop_workflow.md): **COPY TO JOB** → **Awaiting Deposit** → (deposit received) **Need to Order** → (parts ordered) **Waiting for Materials**. Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or easy yes.
 
 ## Turnaround
 
