@@ -19,7 +19,7 @@ One machine-local app that answers:
 | Runtime | Python 3.11+ | Already used in this repo |
 | API/UI | FastAPI + Jinja2 | Fast local web UI, no JS framework tax |
 | DB | SQLite file (`data/birdhouse.db`) | Zero ops, single-file backup |
-| Hosting | `localhost` on shop PC | Offline-friendly |
+| Hosting | GitHub Pages static web + optional localhost FastAPI | Shareable URL; desktop still works |
 
 Phase 2 options (not now): Tauri/Electron wrapper, Etsy API, OctoPrint hooks.
 

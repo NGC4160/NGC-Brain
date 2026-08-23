@@ -2,17 +2,25 @@
 
 Military-themed local ops app for a 3D-printed birdhouse side business.
 
-**Status:** MVP + Mac/Windows desktop packaging  
+**Status:** Browser web app + Mac/Windows desktop packaging  
 **Plan:** [BUILD_PLAN.md](BUILD_PLAN.md)  
+**Web app:** [WEB.md](WEB.md)  
 **Desktop handoff:** [DESKTOP.md](DESKTOP.md)  
-**Cloud hosting (optional):** [DEPLOY.md](DEPLOY.md)
+**Cloud hosting (optional FastAPI):** [DEPLOY.md](DEPLOY.md)
+
+## Open in a browser
+
+**https://ngc4160.github.io/NGC-Brain/birdhouse/**
+
+Share that URL. No install. Sample missions: **Kayla**, **Elliot**, **Emmet**. Shop data stays in the visitor's browser.
 
 ## Product form
 
+- **Web:** GitHub Pages link above
 - **Windows:** `BlakesBirdhouses.exe`
 - **Mac:** `BlakesBirdhouses-macOS.zip` → `BlakesBirdhouses.app`
 
-Sample missions: **Kayla**, **Elliot**, **Emmet**. See **[DESKTOP.md](DESKTOP.md)**.
+See **[WEB.md](WEB.md)** and **[DESKTOP.md](DESKTOP.md)**.
 
 ## Run from source (dev)
 

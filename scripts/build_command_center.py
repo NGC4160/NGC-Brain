@@ -263,6 +263,7 @@ def build_app_links() -> list[dict]:
         ("SOPs", "Standard operating procedures", "../sops/"),
         ("Resources", "Docs & reference library", "../resources/"),
         ("Settings", "App configuration", "../settings/"),
+        ("Blake's Birdhouses", "3D print shop mission board", "../birdhouse/"),
     ]
     return [
         {"title": title, "desc": desc, "href": href, "primary": i == 0}
@@ -491,6 +492,7 @@ def validate_zone_links(zones: list[dict]) -> list[str]:
         "../", "../kpi-hub/", "../board/", "../jobs/", "../scheduling/",
         "../intake/", "../qc/", "../inventory/", "../invoicing/",
         "../customers/", "../sops/", "../resources/", "../settings/",
+        "../birdhouse/",
     }
     internal_pages = {
         "dashboard.html", "explore.html", "index.html",
