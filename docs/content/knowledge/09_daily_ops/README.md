@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-08-22  
+**Last verified:** 2026-08-23  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -55,7 +55,7 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | Person | Best uses |
 |--------|-----------|
 | **Ryan** | Morning briefing, diagnostics help, pricing, growth, DMS planning |
-| **Jesse** | Customer replies, deposits, estimates, pricebook, inventory/parts, workflow, Roy routing, reporting |
+| **Jesse** | Customer replies, deposits, estimates, HCP deposit pipeline (Awaiting Deposit → Need to Order → Waiting for Materials), pricebook, inventory/parts, workflow, Roy routing, reporting |
 | **Christine** | Part-time backup; owner exceptions |
 | **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model) |
 | **Roy** | Pickup zone questions, route/day planning |

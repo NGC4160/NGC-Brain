@@ -147,7 +147,7 @@ Store webhook URL in NGC Admin Bot when built.
 | Question | Source |
 |----------|--------|
 | "How many jobs in shop today?" | `jobs.json` or MCP |
-| "Any lithium jobs waiting on parts?" | Jobs + tags/notes |
+| "Any lithium jobs waiting on parts?" | Jobs + HCP pipeline stage (**Awaiting Deposit** / **Need to Order** / **Waiting for Materials**) |
 | "Is pricebook in sync with knowledge?" | `pricebook_services.json` vs manifest |
 | "Morning dispatch briefing" | MCP prompt or `ngc-morning-briefing` skill |
 

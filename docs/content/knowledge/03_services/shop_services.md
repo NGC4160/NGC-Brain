@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-08-22  
+**Last verified:** 2026-08-23  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -57,6 +57,8 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 
 **Driver:** Roy handles pickups and deliveries.
 
+After a customer **approves**, queue pickup or drop-off. Do **not** say a time is locked, a spot is held, or that this is an easy yes. Do not invent booking language.
+
 ## Deposits
 
 Required when ordering:
@@ -72,6 +74,16 @@ Required when ordering:
 |----------|----------------:|
 | Lithium conversion | $1,800 |
 | Standard battery replacement | $800 |
+
+**Deposit is required before ordering** a battery, motor, or controller.
+
+### HCP pipeline after approval (deposit jobs)
+
+When the customer approves work that needs a parts deposit, shop bots follow the existing HCP job pipeline — full rule in [shop_workflow.md](../04_operations/shop_workflow.md). Do not invent other stages.
+
+1. **COPY TO JOB** — copy approved estimate(s) onto the job. Move the job to **Awaiting Deposit**. Queue pickup or drop-off.
+2. Deposit received → move the job to **Need to Order** (Ryan’s wording; no prior HCP column spelling of this stage was in the repo).
+3. Parts ordered → move the job to **Waiting for Materials**.
 
 ## Payment methods
 

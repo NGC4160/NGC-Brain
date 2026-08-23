@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-06-28
+**Last verified:** 2026-08-23
 
 ## Current stack
 
@@ -21,8 +21,17 @@
 
 - Pricebook (282 items) — source of truth for service pricing
 - Job creation and tracking
+- **Job pipeline** for approved work that needs a parts deposit (existing stages only — do not invent others)
 - Invoicing and payment collection
 - Customer notifications
+
+**HCP job pipeline — approved work that needs a parts deposit** (Ryan White, 2026-08-23):
+
+1. **COPY TO JOB** (copy approved estimate(s) onto the job) → move to **Awaiting Deposit**
+2. Deposit received → **Need to Order** (Ryan’s exact name; repo had no prior HCP column spelling of this stage)
+3. Parts ordered → **Waiting for Materials**
+
+Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or easy yes. Deposit is required before ordering a battery, motor, or controller. Full rule: [shop_workflow.md](../04_operations/shop_workflow.md).
 
 **Export location:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`
 

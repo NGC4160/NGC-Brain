@@ -1,6 +1,6 @@
 # NGC Admin Bot — Specification
 
-**Last verified:** 2026-06-28  
+**Last verified:** 2026-08-23  
 **Owner:** Ryan  
 **Status:** Phase 1 MVP (deposit gate alerts) — batch script  
 **Brain:** `knowledge/` — Admin Bot, **Chief** (Ryan's Grok Bot COS), and other shop bots must operate from this brain and write durable facts back here.  
@@ -61,7 +61,9 @@ NGC Admin Bot is the **automation layer** between Housecall Pro, the team, and (
 
 ### Problem
 
-Active HCP pipeline shows **most jobs with balance due**. Large-ticket work (lithium, batteries, motors, controllers) must not proceed to parts order until deposit policy is met ([deposits](../03_services/shop_services.md), [lithium](../02_products/lithium_conversions.md)).
+Active HCP jobs often show **balance due**. Large-ticket work (lithium, batteries, motors, controllers) must not proceed to parts order until deposit policy is met ([deposits](../03_services/shop_services.md), [lithium](../02_products/lithium_conversions.md)).
+
+On **approved** work that needs a parts deposit, shop bots follow the existing HCP job pipeline only ([shop_workflow.md](../04_operations/shop_workflow.md)): **COPY TO JOB** → **Awaiting Deposit** → (deposit received) **Need to Order** → (parts ordered) **Waiting for Materials**. Do not invent other stages. Ryan said **Need to Order** — use that exact name.
 
 ### Rules
 
@@ -92,9 +94,9 @@ Writes: `knowledge/.generated/deposit_alerts.md`
 ### Jesse daily use (2 min)
 
 1. Open deposit alerts file or ask Cursor **"deposit alerts"**
-2. Work `BLOCK_PARTS` first — lithium and battery jobs
-3. Open invoice in HCP → send payment link → add note `Deposit received [date]`
-4. Tell Ryan when parts can be ordered
+2. Work `BLOCK_PARTS` first — lithium and battery jobs still on **Awaiting Deposit**
+3. Open invoice in HCP → send payment link. When paid: note `Deposit received [date]` and move the job to **Need to Order**
+4. Order parts only after that move; then move the job to **Waiting for Materials**
 
 ---
 

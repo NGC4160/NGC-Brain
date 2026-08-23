@@ -24,7 +24,7 @@ description: Run the NGC service manager morning briefing using knowledge/, sync
 4. Output (bullets, actionable by 8:30 AM):
    - Top 3 priorities (service manager lens)
    - Lithium jobs at risk of missing 2–3 day turnaround
-   - Deposit / parts-order follow-ups
+   - Deposit / parts-order follow-ups (HCP: Awaiting Deposit → Need to Order → Waiting for Materials)
    - One item from improvement backlog P1
    - 1–2 proactive offers (pricebook cleanup, quote script, marketing, etc.)
 

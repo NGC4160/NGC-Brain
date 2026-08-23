@@ -28,6 +28,8 @@ Give me:
 
 Do not invent prices — use the pricebook or knowledge files.
 
+After a customer approves work that needs a parts deposit: **COPY TO JOB**, move the job to **Awaiting Deposit**, and queue pickup or drop-off. Do **not** say a time is locked, a spot is held, or that this is an easy yes. Do not invent booking language. Deposit is required before ordering a battery, motor, or controller. Pipeline: [shop_workflow.md](../knowledge/04_operations/shop_workflow.md).
+
 ---
 
 ## Quick lithium quote (short form)
