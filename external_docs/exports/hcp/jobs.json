@@ -1,7 +1,83 @@
 {
-  "synced_at": "2026-08-22T13:48:46.736812+00:00",
+  "synced_at": "2026-08-23T13:50:55.117508+00:00",
   "count": 500,
   "jobs": [
+    {
+      "id": "job_e7298ca33ee5492bba4d8bff8e31166f",
+      "description": "2011 EZGO TXT 48V",
+      "notes": [],
+      "work_status": "complete unrated",
+      "work_timestamps": {
+        "on_my_way_at": null,
+        "started_at": null,
+        "completed_at": "2026-06-22T17:00:00Z"
+      },
+      "schedule": {
+        "scheduled_start": null,
+        "scheduled_end": null,
+        "time_zone": null,
+        "scheduled_start_local": null,
+        "scheduled_end_local": null,
+        "arrival_window": 0,
+        "appointments": []
+      },
+      "total_amount": 340282,
+      "outstanding_balance": 0,
+      "assigned_employees": [],
+      "tags": [],
+      "original_estimate_id": null,
+      "original_estimate_uuids": [],
+      "subtotal": 311471,
+      "lead_source": null,
+      "job_fields": {
+        "job_type": null,
+        "business_unit": null
+      },
+      "locked_at": null,
+      "created_at": "2026-08-22T19:41:40Z",
+      "updated_at": "2026-08-22T19:41:41Z",
+      "canceled_at": null,
+      "deleted_at": null,
+      "assigned_route_template_id": null,
+      "company_name": "Neighborhood Golf Carts",
+      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+      "invoice_number": "173100",
+      "customer": {
+        "id": "cus_0c1cf96d4982457ebb400593a4de9b98",
+        "first_name": "Keith",
+        "last_name": "Fouts",
+        "email": "kfouts@textronsystems.com",
+        "mobile_number": "9857100321",
+        "home_number": "9856414883",
+        "work_number": null,
+        "company": "Textron Systems",
+        "notifications_enabled": true,
+        "lead_source": null,
+        "notes": null,
+        "kind": "homeowner",
+        "created_at": "2026-08-22T19:25:42Z",
+        "updated_at": "2026-08-22T19:25:42Z",
+        "company_name": "Neighborhood Golf Carts",
+        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
+        "tags": []
+      },
+      "address": {
+        "id": null,
+        "type": "service",
+        "street": null,
+        "street_line_2": null,
+        "city": null,
+        "state": null,
+        "zip": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null
+      },
+      "recurrence_number": null,
+      "recurrence_rule": null,
+      "recurrence_status": null,
+      "recurrence_id": null
+    },
     {
       "id": "job_2004d13dba22415794568ed882bf7bb4",
       "description": "Accessories - 2.0-Battery Monitor Installation",
@@ -4868,8 +4944,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 178323,
-      "outstanding_balance": 178323,
+      "total_amount": 195488,
+      "outstanding_balance": 195488,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -4978,7 +5054,7 @@
       "original_estimate_uuids": [
         "est_941455347b844593934a07d36a5eecba"
       ],
-      "subtotal": 163225,
+      "subtotal": 178936,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -4986,7 +5062,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-03T23:09:45Z",
-      "updated_at": "2026-08-21T23:22:52Z",
+      "updated_at": "2026-08-22T14:26:34Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -5595,8 +5671,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 19556,
-      "outstanding_balance": 19556,
+      "total_amount": 47961,
+      "outstanding_balance": 47961,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -5736,7 +5812,7 @@
       "original_estimate_uuids": [
         "est_7e47a44b1f9d44dfb916764a87db6525"
       ],
-      "subtotal": 17900,
+      "subtotal": 43900,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -5744,7 +5820,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-29T17:49:47Z",
-      "updated_at": "2026-08-21T23:37:59Z",
+      "updated_at": "2026-08-22T19:32:08Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -69499,127 +69575,6 @@
         "country": "US",
         "latitude": 30.5805062,
         "longitude": -90.0464475
-      },
-      "recurrence_number": null,
-      "recurrence_rule": null,
-      "recurrence_status": null,
-      "recurrence_id": null
-    },
-    {
-      "id": "job_e1d8e689e85042f3b7d4676a884f8402",
-      "description": "Drivetrain - 2.0-Replace starter generator",
-      "notes": [],
-      "work_status": "complete rated",
-      "work_timestamps": {
-        "on_my_way_at": "2026-01-09T14:39:54Z",
-        "started_at": "2026-01-09T14:39:54Z",
-        "completed_at": "2026-01-09T18:23:19Z"
-      },
-      "schedule": {
-        "scheduled_start": "2026-01-09T15:00:00Z",
-        "scheduled_end": "2026-01-09T19:00:00Z",
-        "time_zone": null,
-        "scheduled_start_local": null,
-        "scheduled_end_local": null,
-        "arrival_window": 120,
-        "appointments": []
-      },
-      "total_amount": 108911,
-      "outstanding_balance": 0,
-      "assigned_employees": [
-        {
-          "id": "pro_5920a7a4894f48b9b9bcd0d6ce972ae3",
-          "first_name": "Payton",
-          "last_name": "Elkins",
-          "email": "pjelkins04@gmail.com",
-          "mobile_number": "9855108005",
-          "color_hex": "c0370c",
-          "avatar_url": "https://pro.housecallpro.com/assets/add_image_thumb_web_round.png",
-          "role": "field tech",
-          "tags": [],
-          "permissions": {
-            "can_add_and_edit_job": false,
-            "can_call_and_text_with_customers": false,
-            "can_chat_with_customers": true,
-            "can_delete_and_cancel_job": false,
-            "can_edit_message_on_invoice": false,
-            "can_see_street_view_data": false,
-            "can_take_payment_see_prices": true,
-            "can_see_customers": false,
-            "can_see_marketing_campaigns": false,
-            "can_see_reporting": false,
-            "can_edit_settings": false,
-            "can_be_booked_online": false,
-            "can_share_job": false,
-            "can_see_full_schedule": true,
-            "can_see_future_jobs": true,
-            "is_point_of_contact": false,
-            "is_admin": false
-          },
-          "created_at": "2025-09-21T16:06:08Z",
-          "company_name": "Neighborhood Golf Carts",
-          "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b"
-        }
-      ],
-      "tags": [
-        "Pipeline Automation"
-      ],
-      "original_estimate_id": "est_8e927071324843cd8479d804a5f8d0e5",
-      "original_estimate_uuids": [
-        "est_8e927071324843cd8479d804a5f8d0e5"
-      ],
-      "subtotal": 99690,
-      "lead_source": null,
-      "job_fields": {
-        "job_type": null,
-        "business_unit": null
-      },
-      "locked_at": null,
-      "created_at": "2025-12-30T16:47:48Z",
-      "updated_at": "2026-08-06T22:28:48Z",
-      "canceled_at": null,
-      "deleted_at": null,
-      "assigned_route_template_id": null,
-      "company_name": "Neighborhood Golf Carts",
-      "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-      "invoice_number": "1661",
-      "customer": {
-        "id": "cus_04dce6efb5fd460abc3812e38ccba414",
-        "first_name": "Manuel",
-        "last_name": "Broussard",
-        "email": "manuelbroussard@gmail.com",
-        "mobile_number": "2259335630",
-        "home_number": null,
-        "work_number": null,
-        "company": null,
-        "notifications_enabled": true,
-        "lead_source": "Google",
-        "notes": null,
-        "kind": "homeowner",
-        "created_at": "2025-11-20T19:18:44Z",
-        "updated_at": "2026-08-06T22:28:47Z",
-        "company_name": "Neighborhood Golf Carts",
-        "company_id": "e7b2039d-9121-494e-9b4a-0c62ad9f508b",
-        "tags": [
-          "EZ-GO",
-          "Gas",
-          "robin engine",
-          "Marathon",
-          "4 seater",
-          "1993"
-        ]
-      },
-      "address": {
-        "id": "adr_f51a16fdab524a149a1187a75392cf64",
-        "type": "service",
-        "street": "26271 Morning Dove Drive",
-        "street_line_2": "",
-        "city": "Bush",
-        "state": "LA",
-        "zip": "70431",
-        "country": "US",
-        "latitude": 30.6010316,
-        "longitude": -89.96555819999999
       },
       "recurrence_number": null,
       "recurrence_rule": null,
