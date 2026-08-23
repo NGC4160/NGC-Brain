@@ -20,8 +20,8 @@
       "scheduled": 15,
       "needs_scheduling": 14,
       "active_pipeline": 41,
-      "wip_target": 6,
-      "wip_over": 6,
+      "wip_target": null,
+      "wip_over": 0,
       "stale_15_plus": 4,
       "lithium_at_risk": 1,
       "deposit_alerts": 0

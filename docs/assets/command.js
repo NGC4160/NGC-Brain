@@ -79,12 +79,12 @@ function renderStatusBar(ops) {
   if (!bar) return;
 
   const syncOk = ops?.has_live_data;
-  const wipWarn = (ops?.metrics?.wip_over || 0) > 0;
+  const wipWarn = (ops?.metrics?.lithium_at_risk || 0) > 0;
 
   bar.innerHTML = `
     <span class="status-pill"><span class="status-dot ${syncOk ? "" : "warn"}"></span> HCP</span>
     <span class="status-pill"><span class="status-dot"></span> QBO</span>
-    <span class="status-pill"><span class="status-dot ${wipWarn ? "warn" : ""}"></span> WIP ${ops?.metrics?.in_progress ?? "—"}/6</span>
+    <span class="status-pill"><span class="status-dot ${wipWarn ? "warn" : ""}"></span> WIP ${ops?.metrics?.in_progress ?? "—"}</span>
   `;
 }
 

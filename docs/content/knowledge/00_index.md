@@ -1,7 +1,7 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-06-28  
-**Maintained for:** Cursor AI, NGC Admin Bot, staff reference, customer-facing assistance
+**Last verified:** 2026-08-22  
+**Maintained for:** Cursor AI, Chief (Ryan's Grok Bot COS), NGC Admin Bot / shop bots, staff reference, customer-facing assistance
 
 ## Purpose
 
@@ -16,7 +16,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits |
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
 | [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today |
-| [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **WIP limits, daily rhythm, lithium SLA, shop board** |
+| [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA, shop board** |
 | [04_operations/shop_whiteboard_layout.md](04_operations/shop_whiteboard_layout.md) | **Physical whiteboard — columns, cards, colors, daily use** |
 | [05_team/roles.md](05_team/roles.md) | Team roster and responsibilities |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
@@ -45,6 +45,10 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | `external_docs/exports/qbo/balance_sheet_current.xlsx` | QBO balance sheet (Jun 28, 2026) |
 | `external_docs/exports/qbo/products_and_services.xlsx` | QBO product/service list |
 | `external_docs/My Drive/NGC Document Repository/` | SOPs, manuals, procedures (Google Drive sync) |
+
+## Bots & Chief
+
+**Chief** (Ryan's Grok Bot chief of staff) and shop bots must **operate from this brain** and **write durable facts back here**. Read `knowledge/` before acting. When a shop-running fact is confirmed (roster, policy, prices, workflow), update the matching file and [`09_daily_ops/decision_log.md`](09_daily_ops/decision_log.md) — do not leave it only in chat.
 
 ## Authority rules
 

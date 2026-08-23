@@ -6,7 +6,7 @@ alwaysApply: true
 
 # Neighborhood Golf Carts — Business Brain
 
-This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before answering business questions, read relevant files in `knowledge/`.
+This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before answering business questions, read relevant files in `knowledge/`. **Chief** (Ryan's Grok Bot COS) and shop bots operate from this brain and write durable facts back here.
 
 ## Start here
 

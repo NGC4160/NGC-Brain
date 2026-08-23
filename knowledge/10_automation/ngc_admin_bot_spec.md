@@ -3,7 +3,8 @@
 **Last verified:** 2026-06-28  
 **Owner:** Ryan  
 **Status:** Phase 1 MVP (deposit gate alerts) — batch script  
-**Brain:** `knowledge/` · **Data:** HCP API · **Future home:** `external_docs/My Drive/NGC Admin Bot/` (empty today)
+**Brain:** `knowledge/` — Admin Bot, **Chief** (Ryan's Grok Bot COS), and other shop bots must operate from this brain and write durable facts back here.  
+**Data:** HCP API · **Future home:** `external_docs/My Drive/NGC Admin Bot/` (empty today)
 
 ---
 

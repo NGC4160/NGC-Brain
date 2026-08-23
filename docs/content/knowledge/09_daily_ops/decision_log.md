@@ -31,6 +31,11 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-08-03 | Admin / Service Coordinator hiring pack drafted (time log, JD, phone+desk eval, front-office SOPs, weekly KPI + 30/60/90); new-hire packet via **Gusto** | Ryan | Templates: `external_docs/templates/hiring/NGC_Admin_*` · Board Jul 2026 scope/KPIs |
 | 2026-08-15 | **Jesse** (she/her) is Administrative Assistant / Service Coordinator. **Christine** is part-time assistant (still 50% co-owner). Jesse owns day-to-day front office **plus** inventory, parts ordering/tracking, data & reporting, pricebook maintenance, advanced estimating, shop workflow, and pickup/delivery routing. | Ryan | See `knowledge/05_team/roles.md` |
 | 2026-08-15 | Bookkeeper is **Jessica at Griffin & Furman** (not Jill Stoltz). | Ryan | QBO / month-end |
+| 2026-08-22 | **Taylor** terminated. **Peyton** resigned. Do not assign work to either. | Ryan | See `knowledge/05_team/roles.md` |
+| 2026-08-22 | **Ryan Gorgoglione** is a golf cart technician (not the owner). Do not invent hire date, pay, or other HR details. | Ryan | Distinguishes from Ryan White. Marlon remains technician; Roy remains driver; Jesse (she/her) remains service coordinator / admin |
+| 2026-08-23 | Full name and title confirmed: **Ryan Gorgoglione**, golf cart technician. | Ryan | Updates the 2026-08-22 roster entry; still no hire date, pay, or other HR details |
+| 2026-08-22 | Hard WIP cap of **6 jobs in progress is disregarded**. Do not present 6-in-progress as a non-negotiable limit. Lithium deposit-before-order and other deposit/lithium rules are unchanged. | Ryan | See `shop_throughput.md` / `shop_whiteboard_layout.md` |
+| 2026-08-22 | **Chief** (Ryan's Grok Bot COS) and shop bots must operate from this brain and write durable facts back to `knowledge/`. | Ryan | See `knowledge/00_index.md` |
 
 ---
 

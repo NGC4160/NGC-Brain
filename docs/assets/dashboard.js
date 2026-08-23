@@ -57,11 +57,11 @@ async function initDashboard() {
 
     const wipEl = document.getElementById("wip-gauge");
     if (wipEl) {
-      const over = m.wip_over > 0;
+      const over = (m.lithium_at_risk ?? 0) > 0;
       wipEl.innerHTML = `
         <div class="wip-ring ${over ? "over" : ""}">
           <span class="num">${m.in_progress ?? 0}</span>
-          <span class="cap">/ ${m.wip_target ?? 6} target</span>
+          <span class="cap">in progress</span>
         </div>`;
     }
 

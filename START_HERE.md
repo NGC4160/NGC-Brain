@@ -48,6 +48,8 @@ Paste or summarize:
 
 ## Keep the brain current
 
+**Chief** (Ryan's Grok Bot COS) and shop bots must operate from this brain and write durable facts back here — roster, policy, and workflow changes belong in `knowledge/`, not only in chat.
+
 When something changes, either:
 
 1. **Tell the AI in chat** — it can update `knowledge/` files for you, or
