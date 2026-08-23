@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T23:28:51.850484+00:00",
+  "generated_at": "2026-08-23T23:39:37.279219+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-23T23:28:51.815391+00:00",
+    "generated_at": "2026-08-23T23:39:37.244557+00:00",
     "jobs_synced_at": "2026-08-23T13:50:55.117508+00:00",
     "has_live_data": true,
     "metrics": {
@@ -448,7 +448,7 @@
       "name": "Standardize \"Professional Kit\" quote template for Jesse",
       "why": "Faster, consistent quotes",
       "owner": "Jesse",
-      "status": "Open",
+      "status": "**Reply standard logged 2026-08-23** \u2014 kit / warranty / convenience SMS in `customer_reply_standard.md`; still align HCP kit descriptions",
       "category": "Revenue & growth"
     },
     {
@@ -456,7 +456,7 @@
       "name": "Accessory upsell script (charger port, reducer, fuse box)",
       "why": "Built into lithium descriptions, not sold consistently",
       "owner": "Ryan",
-      "status": "Open",
+      "status": "**Superseded for customer talk** \u2014 quote `3.0-NGC Lithium Conversion Convenience Package` ($599 + tax) unless those \u00e0-la-carte lines are already on the live estimate. HCP Professional Kit copy still lists them as kit \u201cif applicable\u201d \u2014 Jesse should strip that from HCP descriptions",
       "category": "Revenue & growth"
     },
     {
