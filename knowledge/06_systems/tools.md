@@ -26,7 +26,7 @@
 - Invoicing and payment collection
 - Customer notifications
 
-**HCP pickup / drop-off queue** (Ryan White, 2026-08-24): When NGC gets a call for work, we send an estimate for approval. If the customer approves it, they go in the queue for pickup or customer drop-off. When there is an opening in the slot, we schedule them. In the HCP jobs pipeline, the stages **New job** and **Customer drop off** ARE that queue. Do not say lock a time, hold a spot, or easy yes. In-shop only (no mobile). Distinct from the deposit pipeline below. Full rule: [shop_workflow.md](../04_operations/shop_workflow.md).
+**HCP pickup / drop-off queue** (Ryan White, 2026-08-24): When NGC gets a call for work, we send an estimate for approval. If the customer approves it, they go in the queue for pickup or customer drop-off. When there is an opening in the slot, we schedule them. In the HCP jobs pipeline, the stages **New job** and **Customer drop off** ARE that queue. Queue order: go by job number unless it makes sense to pick up another cart in the same area on the same run. Do not say lock a time, hold a spot, or easy yes. In-shop only (no mobile). Distinct from the deposit pipeline below. Full rule: [shop_workflow.md](../04_operations/shop_workflow.md).
 
 **HCP job pipeline — approved work that needs a parts deposit** (Ryan White, 2026-08-23):
 

@@ -29,7 +29,11 @@ In the HCP jobs pipeline, the stages **New job** and **Customer drop off** ARE t
 
 **Exact HCP stage names** (use these; do not rename): **New job**, **Customer drop off**. Both ARE the queue.
 
+**Queue order:** Go by job number unless it makes sense to pick up another cart in the same area on the same run.
+
 Do **not** say we lock a time, hold a spot, or make it an easy yes.
+
+**Queue snapshot (2026-08-24):** Steve Tresch is in the pickup/drop-off queue (**New job** / **Customer drop off**). HCP job **#17444** (from the existing HCP jobs export — not invented). No other customer details here.
 
 This queue is **distinct** from the parts-deposit pipeline below. The deposit pipeline still applies to approved work that needs a parts deposit.
 
