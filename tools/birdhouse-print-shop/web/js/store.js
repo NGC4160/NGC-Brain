@@ -2,6 +2,8 @@
  * Blake's Birdhouses — client-side shop store.
  * Ports tools/birdhouse-print-shop/app/db.py + main.py workflow.
  * Persistence: this browser's localStorage only (GitHub Pages is static).
+ * Move shops between devices with Settings → Backup / Restore (JSON file).
+ * Never commit live backup files to the repo.
  */
 (function (root, factory) {
   const api = factory();
@@ -11,7 +13,19 @@
   root.BirdhouseStore = api;
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   const STORAGE_KEY = "blakes-birdhouses-v1";
+  const META_KEY = "blakes-birdhouses-meta-v1";
   const SEED_VERSION = "blakes-military-v1";
+  const BACKUP_FORMAT = "blakes-birdhouses-backup";
+  const BACKUP_VERSION = 1;
+  const SHOP_LISTS = [
+    "products",
+    "variants",
+    "materials",
+    "orders",
+    "order_items",
+    "jobs",
+    "material_uses",
+  ];
 
   const ORDER_STATUSES = [
     "Draft",
@@ -144,6 +158,153 @@
     return JSON.parse(JSON.stringify(value));
   }
 
+  function defaultMeta() {
+    return {
+      lastBackupAt: null,
+      dirtySinceBackup: false,
+      deviceNoteSeen: false,
+    };
+  }
+
+  function isPlainObject(value) {
+    return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+  }
+
+  function backupFilename(date) {
+    const when = date instanceof Date ? date : new Date();
+    const pad = (n) => String(n).padStart(2, "0");
+    return [
+      "blakes-birdhouses-backup",
+      when.getFullYear(),
+      pad(when.getMonth() + 1),
+      pad(when.getDate()),
+      pad(when.getHours()),
+      pad(when.getMinutes()),
+    ].join("-") + ".json";
+  }
+
+  function parseBackupInput(raw) {
+    if (typeof raw === "string") {
+      const trimmed = raw.trim();
+      if (!trimmed) {
+        return { ok: false, error: "Backup is empty. Nothing on this device was changed." };
+      }
+      try {
+        return { ok: true, data: JSON.parse(trimmed) };
+      } catch (_err) {
+        return {
+          ok: false,
+          error: "That file is not valid JSON. Nothing on this device was changed.",
+        };
+      }
+    }
+    if (isPlainObject(raw)) {
+      return { ok: true, data: raw };
+    }
+    return {
+      ok: false,
+      error: "That is not a Blake's Birdhouses backup. Nothing on this device was changed.",
+    };
+  }
+
+  function repairNextIds(shop) {
+    const nextIds = isPlainObject(shop.nextIds) ? { ...shop.nextIds } : {};
+    SHOP_LISTS.forEach((key) => {
+      const maxId = (shop[key] || []).reduce((max, row) => {
+        const id = Number(row && row.id);
+        return Number.isFinite(id) ? Math.max(max, id) : max;
+      }, 0);
+      const current = Number(nextIds[key]) || 1;
+      nextIds[key] = Math.max(current, maxId + 1);
+    });
+    return nextIds;
+  }
+
+  function summarizeShop(shop, exportedAt) {
+    return {
+      shop_name: shop.settings && shop.settings.shop_name ? String(shop.settings.shop_name) : "Blake's Birdhouses",
+      exported_at: exportedAt || null,
+      orders: shop.orders.length,
+      products: shop.products.length,
+      materials: shop.materials.length,
+      jobs: shop.jobs.length,
+    };
+  }
+
+  function validateBackup(raw) {
+    const parsed = parseBackupInput(raw);
+    if (!parsed.ok) return parsed;
+
+    const data = parsed.data;
+    let shop = data;
+    let exportedAt = data.exported_at || null;
+
+    if (data.format === BACKUP_FORMAT) {
+      if (data.format_version !== BACKUP_VERSION) {
+        return {
+          ok: false,
+          error: "This backup version is not supported. Nothing on this device was changed.",
+        };
+      }
+      shop = isPlainObject(data.shop) ? data.shop : null;
+      if (!shop) {
+        return {
+          ok: false,
+          error: "Backup is missing shop data. Nothing on this device was changed.",
+        };
+      }
+    } else if (data.seed_version !== SEED_VERSION) {
+      return {
+        ok: false,
+        error: "That is not a Blake's Birdhouses backup. Nothing on this device was changed.",
+      };
+    }
+
+    if (shop.seed_version !== SEED_VERSION) {
+      return {
+        ok: false,
+        error: "This backup is from a different shop version. Nothing on this device was changed.",
+      };
+    }
+
+    if (!isPlainObject(shop.settings)) {
+      return {
+        ok: false,
+        error: "Backup is missing settings. Nothing on this device was changed.",
+      };
+    }
+
+    for (let i = 0; i < SHOP_LISTS.length; i += 1) {
+      const key = SHOP_LISTS[i];
+      if (!Array.isArray(shop[key])) {
+        return {
+          ok: false,
+          error: `Backup is missing ${key.replace("_", " ")}. Nothing on this device was changed.`,
+        };
+      }
+      if (!shop[key].every(isPlainObject)) {
+        return {
+          ok: false,
+          error: `Backup ${key.replace("_", " ")} list is damaged. Nothing on this device was changed.`,
+        };
+      }
+    }
+
+    const normalized = clone(shop);
+    normalized.seed_version = SEED_VERSION;
+    normalized.nextIds = repairNextIds(normalized);
+    if (!normalized.settings.shop_name) {
+      normalized.settings.shop_name = "Blake's Birdhouses";
+    }
+
+    return {
+      ok: true,
+      shop: normalized,
+      exported_at: exportedAt,
+      summary: summarizeShop(normalized, exportedAt),
+    };
+  }
+
   function nextId(state, key) {
     const id = state.nextIds[key] || 1;
     state.nextIds[key] = id + 1;
@@ -154,9 +315,37 @@
     const backend = storage || (typeof localStorage !== "undefined" ? localStorage : null);
     let state = null;
 
-    function persist() {
+    function readMeta() {
+      if (!backend) return defaultMeta();
+      try {
+        const raw = backend.getItem(META_KEY);
+        if (!raw) return defaultMeta();
+        const parsed = JSON.parse(raw);
+        if (!isPlainObject(parsed)) return defaultMeta();
+        return {
+          lastBackupAt: parsed.lastBackupAt || null,
+          dirtySinceBackup: Boolean(parsed.dirtySinceBackup),
+          deviceNoteSeen: Boolean(parsed.deviceNoteSeen),
+        };
+      } catch (_err) {
+        return defaultMeta();
+      }
+    }
+
+    function writeMeta(updates) {
+      const next = { ...readMeta(), ...updates };
+      if (backend) {
+        backend.setItem(META_KEY, JSON.stringify(next));
+      }
+      return next;
+    }
+
+    function persist(opts) {
       if (backend) {
         backend.setItem(STORAGE_KEY, JSON.stringify(state));
+      }
+      if (!opts || opts.dirty !== false) {
+        writeMeta({ dirtySinceBackup: true });
       }
     }
 
@@ -176,7 +365,7 @@
         }
       }
       state = seedState();
-      persist();
+      persist({ dirty: false });
       return getState();
     }
 
@@ -507,9 +696,60 @@
       persist();
     }
 
+    function exportBackup() {
+      if (!state) load();
+      return {
+        format: BACKUP_FORMAT,
+        format_version: BACKUP_VERSION,
+        exported_at: new Date().toISOString(),
+        seed_version: SEED_VERSION,
+        shop: clone(state),
+      };
+    }
+
+    function replaceFromBackup(raw) {
+      const checked = validateBackup(raw);
+      if (!checked.ok) return checked;
+      state = clone(checked.shop);
+      persist({ dirty: false });
+      writeMeta({ lastBackupAt: new Date().toISOString(), dirtySinceBackup: false });
+      return {
+        ok: true,
+        shop: getState(),
+        exported_at: checked.exported_at,
+        summary: checked.summary,
+      };
+    }
+
+    function markBackupSaved() {
+      return writeMeta({
+        lastBackupAt: new Date().toISOString(),
+        dirtySinceBackup: false,
+      });
+    }
+
+    function getLastBackupAt() {
+      return readMeta().lastBackupAt;
+    }
+
+    function isDirtySinceBackup() {
+      return Boolean(readMeta().dirtySinceBackup);
+    }
+
+    function shouldShowDeviceNote() {
+      return !readMeta().deviceNoteSeen;
+    }
+
+    function dismissDeviceNote() {
+      return writeMeta({ deviceNoteSeen: true });
+    }
+
     return {
       STORAGE_KEY,
+      META_KEY,
       SEED_VERSION,
+      BACKUP_FORMAT,
+      BACKUP_VERSION,
       ORDER_STATUSES,
       JOB_STATUSES,
       BOARD_STATUSES,
@@ -531,17 +771,31 @@
       createOrder,
       board,
       moveJob,
+      exportBackup,
+      validateBackup,
+      replaceFromBackup,
+      backupFilename,
+      markBackupSaved,
+      getLastBackupAt,
+      isDirtySinceBackup,
+      shouldShowDeviceNote,
+      dismissDeviceNote,
     };
   }
 
   return {
     STORAGE_KEY,
+    META_KEY,
     SEED_VERSION,
+    BACKUP_FORMAT,
+    BACKUP_VERSION,
     ORDER_STATUSES,
     JOB_STATUSES,
     BOARD_STATUSES,
     money,
     seedState,
+    backupFilename,
+    validateBackup,
     createStore,
   };
 });

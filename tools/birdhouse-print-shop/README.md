@@ -12,7 +12,7 @@ Military-themed local ops app for a 3D-printed birdhouse side business.
 
 **https://ngc4160.github.io/NGC-Brain/birdhouse/**
 
-Share that URL. No install. Sample missions: **Kayla**, **Elliot**, **Emmet**. Shop data stays in the visitor's browser.
+Share that URL. No install. Sample missions: **Kayla**, **Elliot**, **Emmet**. Shop data stays on that device. To use phone and computer, export a backup in **Settings** and restore it on the other device — see [WEB.md](WEB.md).
 
 ## Product form
 
