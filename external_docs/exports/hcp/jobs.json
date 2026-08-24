@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-08-23T13:50:55.117508+00:00",
+  "synced_at": "2026-08-24T14:08:17.064236+00:00",
   "count": 500,
   "jobs": [
     {
@@ -333,7 +333,12 @@
     {
       "id": "job_64d54e2117d042ceb652925ad0d4b9a5",
       "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-      "notes": [],
+      "notes": [
+        {
+          "id": "nte_fbea5aafc066443faf9a6f837b96ec0d",
+          "content": "FLAG: customer asked pickup timing; Ryan told couple weeks out; pickup not on calendar."
+        }
+      ],
       "work_status": "needs scheduling",
       "work_timestamps": {
         "on_my_way_at": null,
@@ -2299,9 +2304,9 @@
           "content": "Vatrer VD1116"
         }
       ],
-      "work_status": "scheduled",
+      "work_status": "in progress",
       "work_timestamps": {
-        "on_my_way_at": null,
+        "on_my_way_at": "2026-08-24T14:05:42Z",
         "started_at": "2026-08-18T19:39:22Z",
         "completed_at": null
       },
@@ -2430,7 +2435,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-11T13:54:06Z",
-      "updated_at": "2026-08-22T01:47:15Z",
+      "updated_at": "2026-08-24T14:05:42Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -2960,8 +2965,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 364158,
-      "outstanding_balance": 214158,
+      "total_amount": 708077,
+      "outstanding_balance": 558077,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -3035,7 +3040,7 @@
       "original_estimate_uuids": [
         "est_f759a3e37eb64386bb21a94f4c35a4a8"
       ],
-      "subtotal": 333325,
+      "subtotal": 648125,
       "lead_source": "Lead Form",
       "job_fields": {
         "job_type": null,
@@ -3043,7 +3048,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-10T16:51:22Z",
-      "updated_at": "2026-08-21T23:16:38Z",
+      "updated_at": "2026-08-24T13:06:21Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -3793,8 +3798,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 20239,
-      "outstanding_balance": 20239,
+      "total_amount": 272060,
+      "outstanding_balance": 272060,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -3868,7 +3873,7 @@
       "original_estimate_uuids": [
         "est_0ccc26cd83c841119d747994fec9f62c"
       ],
-      "subtotal": 18525,
+      "subtotal": 249025,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -3876,7 +3881,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-07T21:05:21Z",
-      "updated_at": "2026-08-20T14:30:07Z",
+      "updated_at": "2026-08-23T16:18:07Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -12194,7 +12199,7 @@
       "id": "job_49ab6d0e3c884c14b7cab543cce8f934",
       "description": "1.5-Complete Battery Replacement, 6V",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-07-15T13:58:34Z",
         "started_at": "2026-07-14T18:49:53Z",
@@ -12259,7 +12264,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-10T20:28:36Z",
-      "updated_at": "2026-07-18T21:39:40Z",
+      "updated_at": "2026-08-23T16:55:08Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -29618,7 +29623,7 @@
       "id": "job_c0d4bbf5ffb245bf9fbf089035f3d858",
       "description": "Lighting - 3.0-Complete Street Legal Kit installation",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-05-22T16:28:41Z",
         "started_at": "2026-05-20T16:45:33Z",
@@ -29749,7 +29754,7 @@
       },
       "locked_at": null,
       "created_at": "2026-05-14T22:44:04Z",
-      "updated_at": "2026-05-24T22:57:07Z",
+      "updated_at": "2026-08-23T16:36:32Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -40519,7 +40524,7 @@
       "id": "job_55739eecedb34ce89f1e1ed73c7a6735",
       "description": "1.0 - Golf Cart Diagnostic & Inspection [Mobile Service Call]",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-04-25T13:03:49Z",
         "started_at": "2026-04-25T14:02:05Z",
@@ -40586,7 +40591,7 @@
       },
       "locked_at": null,
       "created_at": "2026-04-18T17:18:26Z",
-      "updated_at": "2026-04-27T14:43:33Z",
+      "updated_at": "2026-08-23T16:51:55Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -48206,7 +48211,7 @@
       "id": "job_a44ae572f3da406f8e5571291b38bb84",
       "description": "1.5-Complete Battery Replacement, 6V",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-03-26T23:46:33Z",
         "started_at": "2026-03-27T00:26:08Z",
@@ -48307,7 +48312,7 @@
       },
       "locked_at": null,
       "created_at": "2026-03-20T11:59:59Z",
-      "updated_at": "2026-04-03T15:24:39Z",
+      "updated_at": "2026-08-23T16:52:47Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -51035,7 +51040,7 @@
       "id": "job_014d8d8fe59f46eba49c92c1399748b5",
       "description": "***SEE NOTES***",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-03-18T13:29:43Z",
         "started_at": "2026-03-18T13:50:47Z",
@@ -51136,7 +51141,7 @@
       },
       "locked_at": null,
       "created_at": "2026-03-11T18:15:13Z",
-      "updated_at": "2026-03-18T22:31:44Z",
+      "updated_at": "2026-08-23T16:45:03Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -52892,7 +52897,7 @@
           "content": "The Motor Controller was sent of to FSIP for Analysis. FSIP was unable to determine any faults, but agreed to send a different Controller back with Speed Code 4 present on 2/27/26. The Tech is to replace the Controller and install a new OE Main Contactor at the same time prior to test driving the cart. Tech should also record a new Log Report during the initial Test Run and operate through several full stop (solenoid off reset) and goes, also measured throttle and WOT. \n"
         }
       ],
-      "work_status": "complete unrated",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-03-11T13:47:54Z",
         "started_at": "2026-03-10T19:53:27Z",
@@ -52957,7 +52962,7 @@
       },
       "locked_at": null,
       "created_at": "2026-03-06T01:31:13Z",
-      "updated_at": "2026-03-11T15:57:57Z",
+      "updated_at": "2026-08-23T17:01:18Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -57976,7 +57981,7 @@
       "id": "job_2f851fcfe9bc4f069af2f5896d29955c",
       "description": "General - Warranty Service",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-02-20T18:34:27Z",
         "started_at": "2026-02-20T18:34:57Z",
@@ -58039,7 +58044,7 @@
       },
       "locked_at": null,
       "created_at": "2026-02-20T03:06:21Z",
-      "updated_at": "2026-02-20T19:00:09Z",
+      "updated_at": "2026-08-23T16:51:11Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -63342,11 +63347,11 @@
           "content": "The Motor Controller was sent of to FSIP for Analysis. FSIP was unable to determine any faults, but agreed to send a different Controller back with Speed Code 4 present on 2/27/26. The Tech is to replace the Controller and install a new OE Main Contactor at the same time prior to test driving the cart. Tech should also record a new Log Report during the initial Test Run and operate through several full stop (solenoid off reset) and goes, also measured throttle and WOT. \n"
         }
       ],
-      "work_status": "scheduled",
+      "work_status": "complete unrated",
       "work_timestamps": {
-        "on_my_way_at": null,
+        "on_my_way_at": "2026-02-03T19:27:11Z",
         "started_at": "2026-02-03T20:04:03Z",
-        "completed_at": null
+        "completed_at": "2026-08-23T17:01:07Z"
       },
       "schedule": {
         "scheduled_start": "2026-02-03T19:00:00Z",
@@ -63405,7 +63410,7 @@
       },
       "locked_at": null,
       "created_at": "2026-01-29T19:16:45Z",
-      "updated_at": "2026-02-09T19:57:36Z",
+      "updated_at": "2026-08-23T17:01:18Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -66541,7 +66546,7 @@
       "id": "job_a14eb7de58af4002abcef8b65da56f0e",
       "description": "48V Professional Lithium Battery Conversion Kit Installed",
       "notes": [],
-      "work_status": "complete unrated",
+      "work_status": "complete rated",
       "work_timestamps": {
         "on_my_way_at": "2026-01-24T14:05:21Z",
         "started_at": "2026-01-24T14:44:43Z",
@@ -66608,7 +66613,7 @@
       },
       "locked_at": null,
       "created_at": "2026-01-15T12:23:18Z",
-      "updated_at": "2026-01-24T22:11:57Z",
+      "updated_at": "2026-08-23T16:39:04Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,

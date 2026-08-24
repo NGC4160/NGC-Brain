@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T13:50:59.198055+00:00",
+  "generated_at": "2026-08-24T14:08:21.748004+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,14 +12,14 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-23T13:50:59.161909+00:00",
-    "jobs_synced_at": "2026-08-23T13:50:55.117508+00:00",
+    "generated_at": "2026-08-24T14:08:21.731004+00:00",
+    "jobs_synced_at": "2026-08-24T14:08:17.064236+00:00",
     "has_live_data": true,
     "metrics": {
-      "in_progress": 12,
-      "scheduled": 15,
+      "in_progress": 13,
+      "scheduled": 13,
       "needs_scheduling": 14,
-      "active_pipeline": 41,
+      "active_pipeline": 40,
       "wip_target": null,
       "wip_over": 0,
       "stale_15_plus": 5,
@@ -31,7 +31,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 110,
+          "days": 111,
           "lithium": true,
           "status": "in progress"
         }
@@ -40,46 +40,46 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 110,
+          "days": 111,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17260",
           "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 109,
+          "days": 110,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17109-2",
           "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 88,
+          "days": 89,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17383",
           "description": "General - ***SEE NOTES***",
-          "days": 32,
+          "days": 33,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17416",
           "description": "***SEE NOTES***",
-          "days": 15,
+          "days": 16,
           "lithium": false,
           "status": "in progress"
         }
       ]
     },
     "sync": {
-      "synced_at": "2026-08-23T13:50:58.838052+00:00",
+      "synced_at": "2026-08-24T14:08:21.521241+00:00",
       "pricebook": {
         "exists": true,
         "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-        "modified": "2026-08-23T13:50:43.359935+00:00",
+        "modified": "2026-08-24T14:07:57.089017+00:00",
         "total_items": 282,
         "lithium_professional_skus": [
           {
@@ -181,7 +181,7 @@
       "qbo_pl": {
         "exists": true,
         "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-        "modified": "2026-08-23T13:50:43.361935+00:00",
+        "modified": "2026-08-24T14:07:57.090017+00:00",
         "period_note": "See file header for date range",
         "income_highlights": {
           "LFP Conversions Only": 94940.25,
@@ -210,14 +210,14 @@
           ],
           "refresh_token_rotated": true
         },
-        "modified": "2026-08-23T13:50:43.359935+00:00",
+        "modified": "2026-08-24T14:07:57.089017+00:00",
         "account_count": 148,
         "item_count": 521
       },
       "hcp_api": {
         "exists": true,
         "manifest": {
-          "synced_at": "2026-08-23T13:50:58.123383+00:00",
+          "synced_at": "2026-08-24T14:08:20.828981+00:00",
           "source": "housecall_pro_api",
           "paths": [
             "api_sync_manifest.json",
@@ -228,18 +228,18 @@
             "pricebook_services.json"
           ]
         },
-        "modified": "2026-08-23T13:50:58.123841+00:00",
+        "modified": "2026-08-24T14:08:20.829289+00:00",
         "job_count": 500,
         "jobs_by_status": {
-          "complete unrated": 289,
+          "complete unrated": 282,
           "needs scheduling": 14,
           "pro canceled": 36,
-          "in progress": 12,
-          "scheduled": 15,
+          "in progress": 13,
+          "scheduled": 13,
           "user canceled": 34,
-          "complete rated": 100
+          "complete rated": 108
         },
-        "pricebook_service_count": 284,
+        "pricebook_service_count": 283,
         "professional_lithium_skus": [
           "TEST PARTIAL KIT 48V Professional Lithium Battery Conversion Kit Installed",
           "Professional Lithium Battery Conversion",
@@ -253,43 +253,43 @@
       "qbo_files": [
         {
           "name": "api_sync_manifest.json",
-          "modified": "2026-08-23T13:50:43.359935+00:00"
+          "modified": "2026-08-24T14:07:57.089017+00:00"
         },
         {
           "name": "balance_sheet.json",
-          "modified": "2026-08-23T13:50:43.360935+00:00"
+          "modified": "2026-08-24T14:07:57.089818+00:00"
         },
         {
           "name": "balance_sheet_current.xlsx",
-          "modified": "2026-08-23T13:50:43.360935+00:00"
+          "modified": "2026-08-24T14:07:57.089818+00:00"
         },
         {
           "name": "chart_of_accounts.json",
-          "modified": "2026-08-23T13:50:43.360935+00:00"
+          "modified": "2026-08-24T14:07:57.089818+00:00"
         },
         {
           "name": "chart_of_accounts.xlsx",
-          "modified": "2026-08-23T13:50:43.360935+00:00"
+          "modified": "2026-08-24T14:07:57.089818+00:00"
         },
         {
           "name": "company_test.json",
-          "modified": "2026-08-23T13:50:58.798896+00:00"
+          "modified": "2026-08-24T14:08:21.491560+00:00"
         },
         {
           "name": "products_and_services.xlsx",
-          "modified": "2026-08-23T13:50:43.360935+00:00"
+          "modified": "2026-08-24T14:07:57.089818+00:00"
         },
         {
           "name": "products_services.json",
-          "modified": "2026-08-23T13:50:43.361935+00:00"
+          "modified": "2026-08-24T14:07:57.090017+00:00"
         },
         {
           "name": "profit_and_loss_last_12_months.json",
-          "modified": "2026-08-23T13:50:43.361935+00:00"
+          "modified": "2026-08-24T14:07:57.090017+00:00"
         },
         {
           "name": "profit_and_loss_last_12_months.xlsx",
-          "modified": "2026-08-23T13:50:43.361935+00:00"
+          "modified": "2026-08-24T14:07:57.090017+00:00"
         }
       ],
       "alerts": [
@@ -398,9 +398,17 @@
     {
       "priority": "P2",
       "name": "Deposit collection checklist for Jesse",
-      "why": "Batteries/motors/controllers",
+      "why": "Batteries/motors/controllers \u2014 HCP pipeline now in `shop_workflow.md` (COPY TO JOB \u2192 Awaiting Deposit \u2192 Need to Order \u2192 Waiting for Materials)",
       "owner": "Jesse",
-      "status": "Open",
+      "status": "**Pipeline rule logged 2026-08-23**; still align Admin Front Office SOP wait-code table",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P2",
+      "name": "Rename or deactivate HCP \u201cMinimum Service Charge- Diagnostic Inspection\u201d so quotes use Diagnostic",
+      "why": "Prevents staff/bots quoting a retired separate fee",
+      "owner": "Jesse",
+      "status": "Policy logged 2026-08-23 \u2014 bill as diagnostic; HCP name still in export",
       "category": "Operations (run the shop better)"
     },
     {
@@ -440,7 +448,7 @@
       "name": "Standardize \"Professional Kit\" quote template for Jesse",
       "why": "Faster, consistent quotes",
       "owner": "Jesse",
-      "status": "Open",
+      "status": "**Reply standard logged 2026-08-23** \u2014 kit / warranty / convenience SMS in `customer_reply_standard.md`; still align HCP kit descriptions",
       "category": "Revenue & growth"
     },
     {
@@ -448,7 +456,7 @@
       "name": "Accessory upsell script (charger port, reducer, fuse box)",
       "why": "Built into lithium descriptions, not sold consistently",
       "owner": "Ryan",
-      "status": "Open",
+      "status": "**Superseded for customer talk** \u2014 quote `3.0-NGC Lithium Conversion Convenience Package` ($599 + tax) unless those \u00e0-la-carte lines are already on the live estimate. HCP Professional Kit copy still lists them as kit \u201cif applicable\u201d \u2014 Jesse should strip that from HCP descriptions",
       "category": "Revenue & growth"
     },
     {
@@ -629,7 +637,7 @@
           "title": "Operations Dashboard",
           "desc": "WIP, lithium lane, deposit alerts, sync status",
           "href": "dashboard.html",
-          "badge": "12 in shop",
+          "badge": "13 in shop",
           "primary": true
         },
         {
@@ -738,7 +746,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "20 tracked projects \u00b7 P1\u2013P3",
+          "desc": "21 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },
