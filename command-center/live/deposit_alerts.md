@@ -1,7 +1,7 @@
 # Deposit Gate Alerts (NGC Admin Bot)
 
-**Generated:** 2026-08-23 13:50 UTC  
-**HCP jobs export:** 2026-08-23T13:50:55.117508+00:00  
+**Generated:** 2026-08-24 14:08 UTC  
+**HCP jobs export:** 2026-08-24T14:08:17.064236+00:00  
 **Privacy:** Invoice # and description only — open job in HCP for customer contact.
 
 ## Summary
@@ -31,8 +31,9 @@
 
 ## COLLECT_BALANCE — before pickup / more labor
 
+- **#17421** · General - 1.0 - Golf Cart Diagnostic & Inspection · `in progress` · paid $1500.00 / $7080.77 · **gap $5580.77** — Diagnostic balance due
 - **#17343** · General - 1.0 - Golf Cart Diagnostic & Inspection · `scheduled` · paid $0.00 / $3101.75 · **gap $3101.75** — Diagnostic balance due
-- **#17421** · General - 1.0 - Golf Cart Diagnostic & Inspection · `in progress` · paid $1500.00 / $3641.58 · **gap $2141.58** — Diagnostic balance due
+- **#17416** · ***SEE NOTES*** · `in progress` · paid $0.00 / $2720.60 · **gap $2720.60** — Balance due before pickup or additional work
 - **#17409** · General - 1.0 - Golf Cart Diagnostic & Inspection · `scheduled` · paid $0.00 / $1954.88 · **gap $1954.88** — Diagnostic balance due
 - **#17419** · General - 1.0 - Diagnostic Testing · `in progress` · paid $0.00 / $1697.75 · **gap $1697.75** — Diagnostic balance due
 - **#17364** · General - ***SEE NOTES*** · `scheduled` · paid $0.00 / $1456.58 · **gap $1456.58** — Balance due before pickup or additional work
@@ -51,7 +52,6 @@
 - **#17422** · General - 1.0 - Golf Cart Diagnostic & Inspection · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
 - **#17420** · ***SEE NOTES*** · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
 - **#17418** · General - 1.0 - Golf Cart Diagnostic & Inspection · `scheduled` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
-- **#17416** · ***SEE NOTES*** · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
 - **#17406** · General - 1.0 - Golf Cart Diagnostic & Inspection · `scheduled` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
 - **#17427** · Diagnostic Inspection (Minimum Service Charge) · `in progress` · paid $0.00 / $195.56 · **gap $195.56** — Diagnostic balance due
 - **#17312-1** · ***SEE NOTES*** · `scheduled` · paid $729.42 / $887.83 · **gap $158.41** — Balance due before pickup or additional work
