@@ -28,7 +28,8 @@ This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before a
 - **Diagnostic:** $179 — not waived; applies toward repair on known-issue jobs. No separate minimum service charge — bill that work as diagnostic.
 - **Pickup/delivery:** Free within 40 mi Northshore; **$99** flat outside 40 mi or Southshore
 - **No cart sales or rentals** yet
-- **HCP deposit pipeline (approved work needing parts):** COPY TO JOB → **Awaiting Deposit** → (deposit received) **Need to Order** → (parts ordered) **Waiting for Materials**. After approval, queue pickup or drop-off. Do not say lock a time, hold a spot, or easy yes. Deposit before ordering battery/motor/controller. Do not invent other pipeline stages.
+- **HCP pickup/drop-off queue:** Call for work → send estimate for approval. If approved, they go in the queue for pickup or customer drop-off. When there is an opening in the slot, we schedule them. HCP stages **New job** and **Customer drop off** ARE that queue. Queue order: go by job number unless it makes sense to pick up another cart in the same area on the same run. Do not say lock a time, hold a spot, or easy yes. In-shop only (no mobile).
+- **HCP deposit pipeline (approved work needing parts):** COPY TO JOB → **Awaiting Deposit** → (deposit received) **Need to Order** → (parts ordered) **Waiting for Materials**. Distinct from the pickup/drop-off queue. Deposit before ordering battery/motor/controller. Do not invent other deposit-pipeline stages.
 
 ## Authority order
 
