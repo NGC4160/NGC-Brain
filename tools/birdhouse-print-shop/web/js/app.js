@@ -3,8 +3,10 @@
   store.load();
 
   const app = document.getElementById("app");
+  const bannersEl = document.getElementById("banners");
   const shopNameEl = document.getElementById("shop-name");
   const yearEl = document.getElementById("year");
+  const DIRTY_BANNER_DISMISS = "blakes-birdhouses-hide-backup-nudge";
 
   const routes = {
     dashboard: renderDashboard,
@@ -37,6 +39,180 @@
     return store.getSetting("shop_name", "Blake's Birdhouses");
   }
 
+  function isIos() {
+    const ua = navigator.userAgent || "";
+    return /iP(hone|ad|od)/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  }
+
+  function formatWhen(iso) {
+    if (!iso) return "Never on this device";
+    const when = new Date(iso);
+    if (Number.isNaN(when.getTime())) return String(iso);
+    return when.toLocaleString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+    });
+  }
+
+  function hideDirtyBannerThisVisit() {
+    try {
+      sessionStorage.setItem(DIRTY_BANNER_DISMISS, "1");
+    } catch (_err) {
+      // ignore
+    }
+  }
+
+  function dirtyBannerHiddenThisVisit() {
+    try {
+      return sessionStorage.getItem(DIRTY_BANNER_DISMISS) === "1";
+    } catch (_err) {
+      return false;
+    }
+  }
+
+  function readFileText(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result || ""));
+      reader.onerror = () => reject(reader.error || new Error("Could not read that file."));
+      reader.readAsText(file);
+    });
+  }
+
+  async function downloadBackup() {
+    const backup = store.exportBackup();
+    const text = JSON.stringify(backup, null, 2);
+    const filename = store.backupFilename();
+    const blob = new Blob([text], { type: "application/json" });
+    let finished = false;
+
+    if (isIos() && typeof File === "function") {
+      try {
+        const file = new File([blob], filename, { type: "application/json" });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          await navigator.share({
+            files: [file],
+            title: "Blake's Birdhouses backup",
+            text: "Shop backup — restore this file in Settings on your other device.",
+          });
+          finished = true;
+        }
+      } catch (err) {
+        if (err && err.name === "AbortError") return false;
+      }
+    }
+
+    if (!finished) {
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      link.rel = "noopener";
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 2000);
+      finished = true;
+    }
+
+    store.markBackupSaved();
+    try {
+      sessionStorage.removeItem(DIRTY_BANNER_DISMISS);
+    } catch (_err) {
+      // ignore
+    }
+    renderBanners();
+    if (currentRoute() === "settings") renderSettings();
+    return true;
+  }
+
+  async function restoreFromText(raw) {
+    const checked = store.validateBackup(raw);
+    if (!checked.ok) {
+      window.alert(checked.error);
+      return false;
+    }
+    const summary = checked.summary;
+    const when = summary.exported_at ? formatWhen(summary.exported_at) : "unknown date";
+    const ok = window.confirm(
+      [
+        "Replace ALL shop data on this device with this backup?",
+        "",
+        `Backup from: ${when}`,
+        `Shop: ${summary.shop_name}`,
+        `Orders: ${summary.orders} · Products: ${summary.products} · Materials: ${summary.materials}`,
+        "",
+        "This does not merge. Current orders on this device will be replaced. Continue only if you meant to restore.",
+      ].join("\n")
+    );
+    if (!ok) return false;
+    const result = store.replaceFromBackup(raw);
+    if (!result.ok) {
+      window.alert(result.error);
+      return false;
+    }
+    renderBanners();
+    render();
+    return true;
+  }
+
+  function renderBanners() {
+    if (!bannersEl) return;
+    const cards = [];
+    if (store.shouldShowDeviceNote()) {
+      cards.push(`
+        <div class="banner" role="status">
+          <p>Shop data lives on <strong>this device</strong> until you restore a backup. Phone and computer stay separate until you export on one and import on the other.</p>
+          <div class="banner-actions">
+            <a class="btn small" href="#/settings">Open Backup / Restore</a>
+            <button type="button" class="secondary small" id="dismiss-device-note">Got it</button>
+          </div>
+        </div>
+      `);
+    }
+    if (store.isDirtySinceBackup() && !dirtyBannerHiddenThisVisit()) {
+      const last = store.getLastBackupAt();
+      cards.push(`
+        <div class="banner banner-warn" role="status">
+          <p>${
+            last
+              ? `Shop changed since the last backup (${escapeHtml(formatWhen(last))}). Download a backup before you switch devices.`
+              : "Shop changed on this device. Download a backup so you can restore it on your phone or computer."
+          }</p>
+          <div class="banner-actions">
+            <button type="button" class="small" id="banner-download-backup">Download backup</button>
+            <button type="button" class="secondary small" id="banner-dismiss-backup">Later</button>
+          </div>
+        </div>
+      `);
+    }
+    bannersEl.innerHTML = cards.join("");
+    const dismissNote = document.getElementById("dismiss-device-note");
+    if (dismissNote) {
+      dismissNote.addEventListener("click", () => {
+        store.dismissDeviceNote();
+        renderBanners();
+      });
+    }
+    const downloadBtn = document.getElementById("banner-download-backup");
+    if (downloadBtn) {
+      downloadBtn.addEventListener("click", () => {
+        downloadBackup();
+      });
+    }
+    const laterBtn = document.getElementById("banner-dismiss-backup");
+    if (laterBtn) {
+      laterBtn.addEventListener("click", () => {
+        hideDirtyBannerThisVisit();
+        renderBanners();
+      });
+    }
+  }
+
   function setActiveNav() {
     const route = currentRoute();
     document.querySelectorAll("nav a[data-route]").forEach((link) => {
@@ -48,6 +224,7 @@
 
   function render() {
     setActiveNav();
+    renderBanners();
     routes[currentRoute()]();
   }
 
@@ -410,6 +587,18 @@
   }
 
   function renderSettings() {
+    const lastBackup = store.getLastBackupAt();
+    const backupHint = isIos()
+      ? "On iPhone this opens Share so you can Save to Files, AirDrop, or email the backup."
+      : "Saves a JSON file you can AirDrop, email, or copy to Files.";
+    const restoreStatus = store.isDirtySinceBackup()
+      ? lastBackup
+        ? "Shop has changed since that backup."
+        : "No backup yet on this device."
+      : lastBackup
+        ? "This device matches the last backup."
+        : "No backup yet on this device.";
+
     app.innerHTML = `
       <section class="panel settings-panel">
         <h2>Shop settings</h2>
@@ -423,8 +612,39 @@
           </label>
           <button type="submit">Save settings</button>
         </form>
+      </section>
+      <section class="panel settings-panel" id="backup-restore">
+        <h2>Backup / Restore</h2>
+        <p>Phone and computer do <strong>not</strong> share this shop. Export on one device, send the file (AirDrop, Files, or email), then restore on the other.</p>
+        <p class="backup-meta">
+          <strong>Last backup:</strong> ${escapeHtml(formatWhen(lastBackup))}
+          <span class="muted"> · ${escapeHtml(restoreStatus)}</span>
+        </p>
+        <div class="backup-actions">
+          <button type="button" id="download-backup">Download backup</button>
+          <p class="muted">${escapeHtml(backupHint)}</p>
+        </div>
         <hr />
-        <p class="muted">This browser keeps shop data locally. Reset restores sample missions for Kayla, Elliot, and Emmet.</p>
+        <h3>Restore</h3>
+        <p class="muted">Restore <strong>replaces</strong> everything on this device. It will not merge, so you will not get duplicate orders. A bad file is rejected and this device is left as-is.</p>
+        <label>Choose backup file
+          <input id="restore-file" type="file" accept=".json,application/json,text/json" />
+        </label>
+        <p class="muted">On iPhone: tap Choose backup file, then Browse and pick it from Files.</p>
+        <details class="paste-backup">
+          <summary>Or paste backup JSON</summary>
+          <form id="paste-backup-form" class="stack">
+            <label>Backup JSON
+              <textarea name="backup_json" rows="6" placeholder='{"format":"blakes-birdhouses-backup",...}'></textarea>
+            </label>
+            <button type="submit" class="secondary">Check and restore</button>
+          </form>
+        </details>
+        <p id="restore-feedback" class="muted" hidden></p>
+      </section>
+      <section class="panel settings-panel">
+        <h2>Sample missions</h2>
+        <p class="muted">Reset restores sample missions for Kayla, Elliot, and Emmet. This only changes this device.</p>
         <button type="button" class="secondary" id="reset-demo">Reset sample missions</button>
       </section>
     `;
@@ -438,6 +658,43 @@
         waste_factor: String(form.waste_factor.value),
       });
       render();
+    });
+
+    document.getElementById("download-backup").addEventListener("click", () => {
+      downloadBackup();
+    });
+
+    const restoreFile = document.getElementById("restore-file");
+    restoreFile.addEventListener("change", async () => {
+      const file = restoreFile.files && restoreFile.files[0];
+      restoreFile.value = "";
+      if (!file) return;
+      try {
+        const text = await readFileText(file);
+        const ok = await restoreFromText(text);
+        const feedback = document.getElementById("restore-feedback");
+        if (feedback && ok) {
+          feedback.hidden = false;
+          feedback.className = "ok";
+          feedback.textContent = "Backup restored on this device.";
+        }
+      } catch (_err) {
+        window.alert("Could not read that file. Nothing on this device was changed.");
+      }
+    });
+
+    document.getElementById("paste-backup-form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const raw = event.target.backup_json.value;
+      const ok = await restoreFromText(raw);
+      if (ok) {
+        const feedback = document.getElementById("restore-feedback");
+        if (feedback) {
+          feedback.hidden = false;
+          feedback.className = "ok";
+          feedback.textContent = "Backup restored on this device.";
+        }
+      }
     });
 
     document.getElementById("reset-demo").addEventListener("click", () => {

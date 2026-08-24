@@ -8,7 +8,18 @@ Browser version of the print-shop MVP. Same workflow as the desktop app: dashboa
 
 Open that link on a phone or computer. No install. Sample missions: **Kayla**, **Elliot**, **Emmet**.
 
-Data stays in **this browser** (localStorage). It is not synced to the desktop SQLite file. Reset sample missions from **Settings**.
+Data stays on **this device** (localStorage). Phone and computer do not share a shop unless you move a backup file.
+
+**Move the shop between phone and computer**
+
+1. On the device that has the current shop: **Settings → Backup / Restore → Download backup**
+2. Send that JSON file to the other device (AirDrop, Files, or email)
+3. On the other device: **Settings → Backup / Restore → Choose backup file** (iPhone: Browse → Files)
+4. Confirm replace — restore overwrites this device so orders are not duplicated
+
+A bad file is rejected and the current device is left as-is. Live shop backups are **not** stored in the GitHub repo.
+
+Reset sample missions (Kayla, Elliot, Emmet) from **Settings**. The desktop SQLite app is a separate data file.
 
 ## How it deploys
 

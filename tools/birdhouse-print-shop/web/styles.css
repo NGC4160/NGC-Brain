@@ -145,11 +145,56 @@ button.small { padding: 0.25rem 0.5rem; font-size: 0.85rem; }
 
 .stack { display: grid; gap: 1rem; }
 .split { display: grid; gap: 1rem; margin-top: 1rem; }
-.settings-panel { max-width: 480px; }
+.settings-panel { max-width: 560px; }
+.settings-panel + .settings-panel { margin-top: 1rem; }
 .settings-panel hr {
   border: 0;
   border-top: 1px solid var(--line);
   margin: 1.25rem 0;
+}
+.settings-panel h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--tan);
+}
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.85rem 1rem;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--tan);
+  border-radius: 2px;
+  box-shadow: var(--shadow);
+}
+.banner p { margin: 0; flex: 1 1 16rem; }
+.banner-warn { border-color: var(--warn); }
+.banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.backup-meta { margin: 0.35rem 0 0.85rem; }
+.backup-actions { display: grid; gap: 0.45rem; }
+.backup-actions button,
+#download-backup,
+#restore-file {
+  min-height: 2.75rem;
+  width: 100%;
+  max-width: 22rem;
+}
+.paste-backup { margin-top: 1rem; }
+.paste-backup summary {
+  cursor: pointer;
+  color: var(--tan);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
 }
 .footnote {
   margin-top: 2rem;
