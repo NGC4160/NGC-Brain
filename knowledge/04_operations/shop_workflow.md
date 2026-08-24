@@ -1,24 +1,37 @@
 # Shop Workflow
 
-**Last verified:** 2026-08-23
+**Last verified:** 2026-08-24
 
 ## Current state
 
-NGC operates as a **shop-first** business. All repair, diagnostic, and lithium conversion work happens at the Covington location. Mobile service has been discontinued.
+NGC operates as a **shop-first** business. All repair, diagnostic, and lithium conversion work happens at the Covington location. Mobile service has been discontinued. **In-shop only — no mobile.**
 
 ## Customer journey (typical)
 
 ```
-Customer contact → Intake/scheduling → Drop-off OR pickup →
-Shop diagnosis/repair → Payment → Pickup/delivery OR customer pickup
+Call for work → Estimate for approval → (if approved) queue for pickup or customer drop-off →
+When there is an opening in the slot, schedule → In-shop work → Payment → Pickup/delivery OR customer pickup
 ```
 
-### 1. Customer contact & scheduling
+### 1. Customer contact & estimate
 
 - **Jesse** (administrative assistant / service coordinator) owns intake, estimating, workflow, parts/inventory, and Roy’s routing; **Christine** covers part-time as backup
-- Scheduling via **Housecall Pro**
 - Hours: Mon–Fri 8 AM – 5 PM
-- After a customer **approves**, queue pickup or drop-off. Do **not** say a time is locked, a spot is held, or that this is an easy yes. Do not invent booking language.
+- Shop is **in-shop only** (no mobile)
+
+### HCP job pipeline — pickup / drop-off queue
+
+**Confirmed 2026-08-24 by Ryan White.** Use Ryan’s wording. Do not expand this into a scheduling product. Do not invent booking language.
+
+When NGC gets a call for work, we send an estimate for approval. If the customer approves it, they go in the queue for pickup or customer drop-off. When there is an opening in the slot, we schedule them.
+
+In the HCP jobs pipeline, the stages **New job** and **Customer drop off** ARE that queue.
+
+**Exact HCP stage names** (use these; do not rename): **New job**, **Customer drop off**. Both ARE the queue.
+
+Do **not** say we lock a time, hold a spot, or make it an easy yes.
+
+This queue is **distinct** from the parts-deposit pipeline below. The deposit pipeline still applies to approved work that needs a parts deposit.
 
 ### 2. Vehicle arrival
 
@@ -57,7 +70,7 @@ Key diagnostic sequence:
 
 ### HCP job pipeline — approved work that needs a parts deposit
 
-**Confirmed 2026-08-23 by Ryan White.** Shop bots and staff use these **existing HCP pipeline stages only**. Do not invent other stages.
+**Confirmed 2026-08-23 by Ryan White.** Distinct from the pickup / drop-off queue above. Shop bots and staff use these **existing HCP deposit-pipeline stages**. Do not invent other deposit stages.
 
 Applies when the customer has approved estimate(s) and the job needs a parts deposit (battery, motor, controller, lithium kit, or other special-order parts).
 
@@ -80,8 +93,8 @@ Applies when the customer has approved estimate(s) and the job needs a parts dep
 **Hard rules:**
 
 - Deposit is required **before** ordering a battery, motor, or controller
-- After approval, queue pickup or drop-off only — do not say lock a time, hold a spot, or easy yes
-- Do not invent other HCP pipeline stages beyond the three above
+- After approval, queue pickup or drop-off — do not say lock a time, hold a spot, or easy yes. That queue is **New job** / **Customer drop off** (above). This deposit pipeline is separate.
+- Do not invent other deposit-pipeline stages. Deposit stages are **Awaiting Deposit**, **Need to Order**, and **Waiting for Materials**.
 
 ### 5. Lithium conversions
 

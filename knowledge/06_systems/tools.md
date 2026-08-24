@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-08-23
+**Last verified:** 2026-08-24
 
 ## Current stack
 
@@ -21,9 +21,12 @@
 
 - Pricebook (282 items) — source of truth for service pricing
 - Job creation and tracking
-- **Job pipeline** for approved work that needs a parts deposit (existing stages only — do not invent others)
+- **Pickup / drop-off queue** — HCP stages **New job** and **Customer drop off** ARE that queue after estimate approval (distinct from the deposit pipeline)
+- **Job pipeline** for approved work that needs a parts deposit (existing deposit stages only — do not invent others)
 - Invoicing and payment collection
 - Customer notifications
+
+**HCP pickup / drop-off queue** (Ryan White, 2026-08-24): When NGC gets a call for work, we send an estimate for approval. If the customer approves it, they go in the queue for pickup or customer drop-off. When there is an opening in the slot, we schedule them. In the HCP jobs pipeline, the stages **New job** and **Customer drop off** ARE that queue. Do not say lock a time, hold a spot, or easy yes. In-shop only (no mobile). Distinct from the deposit pipeline below. Full rule: [shop_workflow.md](../04_operations/shop_workflow.md).
 
 **HCP job pipeline — approved work that needs a parts deposit** (Ryan White, 2026-08-23):
 
@@ -31,7 +34,7 @@
 2. Deposit received → **Need to Order** (Ryan’s exact name; repo had no prior HCP column spelling of this stage)
 3. Parts ordered → **Waiting for Materials**
 
-Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or easy yes. Deposit is required before ordering a battery, motor, or controller. Full rule: [shop_workflow.md](../04_operations/shop_workflow.md).
+Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or easy yes. Deposit is required before ordering a battery, motor, or controller. This deposit pipeline is **distinct** from the **New job** / **Customer drop off** queue. Full rule: [shop_workflow.md](../04_operations/shop_workflow.md).
 
 **Export location:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`
 
