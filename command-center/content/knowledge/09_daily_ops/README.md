@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-08-23  
+**Last verified:** 2026-08-26  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -24,12 +24,16 @@ This is not just documentation — it's an **operating system**. Cursor + `knowl
 
 Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — see [shop throughput playbook](../04_operations/shop_throughput.md).
 
+### Weekdays 11:00 AM America/Chicago
+
+**Chief** collects website / Google Ads lead forms, then **asks Ryan and waits for a yes** before any Slack to Jesse. See [Bot Slack to Jesse](#bot-slack-to-jesse) below.
+
 ### During the day (as needed)
 
 | Need | Prompt / action |
 |------|-----------------|
 | Customer quote (lithium or repair) | [`prompts/quote_and_customer.md`](../../prompts/quote_and_customer.md) — lithium kit/warranty/convenience: [`customer_reply_standard.md`](../07_customers_marketing/customer_reply_standard.md) |
-| Draft text/email for Jesse | Same — specify audience |
+| Draft text/email for Jesse | Draft for Ryan. Do **not** Slack Jesse without Ryan’s yes. |
 | "How do we diagnose X on Club Car?" | AI searches `NGC Document Repository` |
 | Staff instruction for Marlon / Ryan Gorgoglione | Ask for shop-floor checklist from SOPs |
 | Price check | AI reads pricebook CSV — never guess |
@@ -60,6 +64,18 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model) |
 | **Roy** | Pickup zone questions, route/day planning |
 | **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
+
+## Bot Slack to Jesse
+
+**Confirmed 2026-08-26 by Ryan White.** Applies to **every** NGC bot (Chief, Admin Bot, Inbox, shop bots).
+
+Ask Ryan and **wait for a yes** before sending any Slack to **Jesse Killian**. No DMs, channel posts, or messages-as-Ryan without that approval.
+
+**Not exceptions:** lithium jobs, BMS recordings, website leads, estimates, HCP updates.
+
+**Leads:** Chief still collects website / Google Ads lead forms weekdays at **11:00 AM America/Chicago**, then asks Ryan before any Slack to Jesse.
+
+**Inbox:** must not auto-Slack Jesse because lithium “stays with Jesse.”
 
 ## Data to feed the AI for best results
 

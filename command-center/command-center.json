@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T14:09:24.551450+00:00",
+  "generated_at": "2026-08-26T23:40:54.895422+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-26T14:09:24.511847+00:00",
+    "generated_at": "2026-08-26T23:40:54.860064+00:00",
     "jobs_synced_at": "2026-08-26T14:09:19.869024+00:00",
     "has_live_data": true,
     "metrics": {
@@ -22,7 +22,7 @@
       "active_pipeline": 36,
       "wip_target": null,
       "wip_over": 0,
-      "stale_15_plus": 8,
+      "stale_15_plus": 10,
       "lithium_at_risk": 2,
       "deposit_alerts": 0
     },
@@ -31,14 +31,14 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 113,
+          "days": 114,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17401",
           "description": "Batteries & Cables - 3.0- NGC Lithium Conversion, 72V 105AH",
-          "days": 28,
+          "days": 29,
           "lithium": true,
           "status": "in progress"
         }
@@ -47,56 +47,56 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 113,
+          "days": 114,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17260",
           "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 112,
+          "days": 113,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17109-2",
           "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 91,
+          "days": 92,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17401",
           "description": "Batteries & Cables - 3.0- NGC Lithium Conversion, 72V 105AH",
-          "days": 28,
+          "days": 29,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17416",
           "description": "***SEE NOTES***",
-          "days": 18,
+          "days": 19,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17423",
           "description": "General - ***SEE NOTES***",
-          "days": 15,
+          "days": 16,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17420",
           "description": "***SEE NOTES***",
-          "days": 15,
+          "days": 16,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17419",
           "description": "General - 1.0 - Diagnostic Testing",
-          "days": 15,
+          "days": 16,
           "lithium": false,
           "status": "in progress"
         }
