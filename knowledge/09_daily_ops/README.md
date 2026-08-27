@@ -65,6 +65,20 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | **Roy** | Pickup zone questions, route/day planning |
 | **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
 
+## Chief routing
+
+**Confirmed 2026-08-26 by Ryan White.**
+
+- Ryan's only point of contact is **Chief**. He does not message the other bots.
+- Before starting any task, Chief checks whether another bot already owns the job.
+- If one does, Chief hands it over and tells Ryan who took it.
+- If none does, Chief does it, or tells Ryan a new bot is worth creating and why.
+- Always bring results back to Chief's thread. Ryan should never have to find an answer in another bot's chat.
+- Other bots that need Ryan go through Chief. They do not wait for Ryan in their own chats.
+- Chief still asks Ryan before looping in another bot unless Ryan already named them.
+
+Slack to Jesse still needs Ryan's yes — [Bot Slack to Jesse](#bot-slack-to-jesse).
+
 ## Bot Slack to Jesse
 
 **Confirmed 2026-08-26 by Ryan White.** Applies to **every** NGC bot (Chief, Admin Bot, Inbox, shop bots).
