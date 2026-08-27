@@ -41,6 +41,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-08-24 | Pickup/drop-off queue order: go by job number unless it makes sense to pick up another cart in the same area on the same run. As of 2026-08-24, **Steve Tresch** is in that queue (**New job** / **Customer drop off**); HCP job **#17444** from the existing jobs export (not invented). Estimate-approval → queue → schedule when there is an opening in the slot. Do not say lock a time, hold a spot, or easy yes. | Ryan | See `shop_workflow.md`. Snapshot will go stale — update when the queue changes. No other customer details. |
 | 2026-08-22 | Hard WIP cap of **6 jobs in progress is disregarded**. Do not present 6-in-progress as a non-negotiable limit. Lithium deposit-before-order and other deposit/lithium rules are unchanged. | Ryan | See `shop_throughput.md` / `shop_whiteboard_layout.md` |
 | 2026-08-22 | **Chief** (Ryan's Grok Bot COS) and shop bots must operate from this brain and write durable facts back to `knowledge/`. | Ryan | See `knowledge/00_index.md` |
+| 2026-08-26 | Every NGC bot must ask Ryan and wait for a yes before any Slack to **Jesse Killian** (DMs, channel posts, or messages-as-Ryan). Not exceptions: lithium jobs, BMS recordings, website leads, estimates, HCP updates. Chief still collects website/Google Ads lead forms weekdays at 11:00 AM America/Chicago, then asks Ryan before Slack to Jesse. Inbox must not auto-Slack Jesse because lithium “stays with Jesse.” | Ryan White | See `knowledge/09_daily_ops/README.md` |
 
 ---
 

@@ -27,7 +27,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, convenience package, SMS templates (no PII) |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |
 | [archive/legacy_mobile.md](archive/legacy_mobile.md) | Discontinued mobile service items — do not quote |
-| [09_daily_ops/README.md](09_daily_ops/README.md) | **Daily operating guide** — rhythms, roles, data to feed AI |
+| [09_daily_ops/README.md](09_daily_ops/README.md) | **Daily operating guide** — rhythms, roles, **bot Slack to Jesse (Ryan yes first)**, data to feed AI |
 | [09_daily_ops/improvement_backlog.md](09_daily_ops/improvement_backlog.md) | Growth & ops projects (prioritized) |
 | [09_daily_ops/decision_log.md](09_daily_ops/decision_log.md) | Policy decisions with dates |
 | [10_automation/README.md](10_automation/README.md) | **Connectors, MCP, hooks, automation roadmap** |
@@ -49,7 +49,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 
 ## Bots & Chief
 
-**Chief** (Ryan's Grok Bot chief of staff) and shop bots must **operate from this brain** and **write durable facts back here**. Read `knowledge/` before acting. When a shop-running fact is confirmed (roster, policy, prices, workflow), update the matching file and [`09_daily_ops/decision_log.md`](09_daily_ops/decision_log.md) — do not leave it only in chat.
+**Chief** (Ryan's Grok Bot chief of staff) and shop bots must **operate from this brain** and **write durable facts back here**. Read `knowledge/` before acting. When a shop-running fact is confirmed (roster, policy, prices, workflow), update the matching file and [`09_daily_ops/decision_log.md`](09_daily_ops/decision_log.md) — do not leave it only in chat. **Slack to Jesse Killian:** ask Ryan and wait for a yes — [daily ops](09_daily_ops/README.md#bot-slack-to-jesse).
 
 ## Authority rules
 
