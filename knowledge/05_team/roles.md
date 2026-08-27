@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-08-23
+**Last verified:** 2026-08-26
 
 ## Ownership
 
@@ -19,6 +19,10 @@
 | **Roy** | Driver | Executes pickups and deliveries that Jesse routes |
 | **Marlon** | Golf cart technician | In-shop repair and service |
 | **Ryan Gorgoglione** | Golf cart technician | In-shop repair and service (not the owner — that is Ryan White) |
+
+## Chief (bot routing)
+
+**Confirmed 2026-08-26 by Ryan White.** Ryan's only bot point of contact is **Chief**. Other shop bots that need Ryan go through Chief — they do not wait in their own chats. Full rule: [daily ops — Chief routing](../09_daily_ops/README.md#chief-routing).
 
 ## Former (do not assign work)
 

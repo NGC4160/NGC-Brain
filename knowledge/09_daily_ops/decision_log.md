@@ -42,6 +42,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-08-22 | Hard WIP cap of **6 jobs in progress is disregarded**. Do not present 6-in-progress as a non-negotiable limit. Lithium deposit-before-order and other deposit/lithium rules are unchanged. | Ryan | See `shop_throughput.md` / `shop_whiteboard_layout.md` |
 | 2026-08-22 | **Chief** (Ryan's Grok Bot COS) and shop bots must operate from this brain and write durable facts back to `knowledge/`. | Ryan | See `knowledge/00_index.md` |
 | 2026-08-26 | Every NGC bot must ask Ryan and wait for a yes before any Slack to **Jesse Killian** (DMs, channel posts, or messages-as-Ryan). Not exceptions: lithium jobs, BMS recordings, website leads, estimates, HCP updates. Chief still collects website/Google Ads lead forms weekdays at 11:00 AM America/Chicago, then asks Ryan before Slack to Jesse. Inbox must not auto-Slack Jesse because lithium “stays with Jesse.” | Ryan White | See `knowledge/09_daily_ops/README.md` |
+| 2026-08-26 | Ryan's only bot point of contact is **Chief**. Before any task, Chief checks if another bot already owns the job — if yes, hand over and tell Ryan who took it; if no, Chief does it or recommends creating a new bot. Always bring results back to Chief's thread. Other bots that need Ryan go through Chief (they do not wait in their own chats). Chief asks Ryan before looping in another bot unless Ryan already named them. | Ryan White | See `knowledge/09_daily_ops/README.md` |
 
 ---
 
