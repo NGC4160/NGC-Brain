@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-08-26  
+**Last verified:** 2026-08-28  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -76,6 +76,14 @@ Ask Ryan and **wait for a yes** before sending any Slack to **Jesse Killian**. N
 **Leads:** Chief still collects website / Google Ads lead forms weekdays at **11:00 AM America/Chicago**, then asks Ryan before any Slack to Jesse.
 
 **Inbox:** must not auto-Slack Jesse because lithium “stays with Jesse.”
+
+## Bot updates
+
+**Confirmed 2026-08-28 by Ryan White.** Applies to **every** shop bot, including Chief.
+
+Send updates as a **clean bullet list**. No dense paragraph dumps.
+
+This applies when reporting to Ryan or to Chief.
 
 ## Data to feed the AI for best results
 
