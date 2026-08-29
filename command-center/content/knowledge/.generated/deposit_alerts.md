@@ -1,7 +1,7 @@
 # Deposit Gate Alerts (NGC Admin Bot)
 
-**Generated:** 2026-08-28 23:05 UTC  
-**HCP jobs export:** 2026-08-28T23:05:54.864493+00:00  
+**Generated:** 2026-08-29 17:15 UTC  
+**HCP jobs export:** 2026-08-29T17:15:10.321235+00:00  
 **Privacy:** Invoice # and description only — open job in HCP for customer contact.
 
 ## Summary
@@ -10,7 +10,7 @@
 |-------|------:|
 | BLOCK_PARTS (do not order) | 1 |
 | SCHEDULE_UNPAID | 7 |
-| COLLECT_BALANCE | 20 |
+| COLLECT_BALANCE | 19 |
 
 ## BLOCK_PARTS — Jesse priority
 
@@ -37,7 +37,6 @@
 - **#17447** · Accessories - 2.0-Battery Monitor Installation · `needs scheduling` · paid $0.00 / $445.74 · **gap $445.74** — Balance due before pickup or additional work
 - **#173103** · 0.75-Heim Joint Replacement (1 Side) · `scheduled` · paid $0.00 / $369.27 · **gap $369.27** — Balance due before pickup or additional work
 - **#17439** · ***SEE NOTES*** · `scheduled` · paid $0.00 / $303.72 · **gap $303.72** — Balance due before pickup or additional work
-- **#17423** · General - ***SEE NOTES*** · `in progress` · paid $0.00 / $257.01 · **gap $257.01** — Balance due before pickup or additional work
 - **#173105** · General - ***SEE NOTES*** · `needs scheduling` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
 - **#17445** · General - ***SEE NOTES*** · `needs scheduling` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
 - **#17441** · ***SEE NOTES*** · `in progress` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
