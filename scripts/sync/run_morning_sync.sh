@@ -20,9 +20,10 @@ write_status() {
   local overall="$1"
   local hcp="$2"
   local qbo="$3"
-  local ingest="$4"
-  local build="$5"
-  local detail="${6:-}"
+  local drive="$4"
+  local ingest="$5"
+  local build="$6"
+  local detail="${7:-}"
   "$PY" - <<PYEOF
 import json
 from pathlib import Path
@@ -33,6 +34,7 @@ status = {
     "steps": {
         "hcp": "$hcp",
         "qbo": "$qbo",
+        "drive": "$drive",
         "ingest": "$ingest",
         "command_center": "$build",
     },
@@ -74,6 +76,16 @@ else
   DETAIL+="Ingest failed (rc=$INGEST_RC). "
 fi
 
+echo "--- Google Drive catalog ---"
+DRIVE_RC=0
+if "$PY" "$ROOT/scripts/sync/run_drive_sync.py"; then
+  DRIVE_RC=0
+else
+  DRIVE_RC=$?
+  DETAIL+="Drive catalog skipped or failed (rc=$DRIVE_RC). "
+  DRIVE_RC=0
+fi
+
 echo "--- Shop board + deposit alerts ---"
 "$PY" "$ROOT/scripts/sync/generate_shop_board.py" || true
 "$PY" "$ROOT/scripts/admin_bot/deposit_gate_alerts.py" || true
@@ -88,23 +100,25 @@ fi
 
 HCP_STEP="$( [[ $HCP_RC -eq 0 ]] && echo ok || echo fail )"
 QBO_STEP="$( [[ $QBO_RC -eq 0 ]] && echo ok || echo fail )"
+DRIVE_STEP="ok"
 INGEST_STEP="$( [[ $INGEST_RC -eq 0 ]] && echo ok || echo fail )"
 BUILD_STEP="$( [[ $BUILD_RC -eq 0 ]] && echo ok || echo fail )"
 
 if [[ $HCP_RC -eq 0 && $QBO_RC -eq 0 && $INGEST_RC -eq 0 && $BUILD_RC -eq 0 ]]; then
-  write_status "success" "$HCP_STEP" "$QBO_STEP" "$INGEST_STEP" "$BUILD_STEP" "$DETAIL"
+  write_status "success" "$HCP_STEP" "$QBO_STEP" "$DRIVE_STEP" "$INGEST_STEP" "$BUILD_STEP" "$DETAIL"
   echo "=== Morning sync complete ==="
   exit 0
 fi
 
 # Partial success: still exit 0 if HCP + Command Center succeeded so Actions
 # commits/deploys live ops even when QBO credentials need a fix.
+# Drive catalog never fails the job (missing secret = skip).
 if [[ $HCP_RC -eq 0 && $BUILD_RC -eq 0 ]]; then
-  write_status "partial" "$HCP_STEP" "$QBO_STEP" "$INGEST_STEP" "$BUILD_STEP" "$DETAIL"
+  write_status "partial" "$HCP_STEP" "$QBO_STEP" "$DRIVE_STEP" "$INGEST_STEP" "$BUILD_STEP" "$DETAIL"
   echo "=== Morning sync partial (HCP OK) — check QBO secrets if qbo=fail ===" >&2
   exit 0
 fi
 
-write_status "failed" "$HCP_STEP" "$QBO_STEP" "$INGEST_STEP" "$BUILD_STEP" "$DETAIL"
+write_status "failed" "$HCP_STEP" "$QBO_STEP" "$DRIVE_STEP" "$INGEST_STEP" "$BUILD_STEP" "$DETAIL"
 echo "=== Morning sync failed ===" >&2
 exit 1

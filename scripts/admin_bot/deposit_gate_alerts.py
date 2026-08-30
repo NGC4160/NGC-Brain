@@ -176,6 +176,7 @@ def build_report(alerts: list[Alert], synced_at: str | None) -> str:
         "",
         f"**Generated:** {now.strftime('%Y-%m-%d %H:%M UTC')}  ",
         f"**HCP jobs export:** {synced_at or 'unknown'}  ",
+        "**Not policy.** Generated snapshot from local `jobs.json` (gitignored).",
         "**Privacy:** Invoice # and description only — open job in HCP for customer contact.",
         "",
         "## Summary",

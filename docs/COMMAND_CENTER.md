@@ -43,17 +43,20 @@ Send each:
 
 Browse all working docs at **Documents → Documents Hub** (`documents/index.html`).
 
-To add a present or future document: edit [`scripts/documents_catalog.py`](../scripts/documents_catalog.py), place the file under `external_docs/templates/<category>/`, run `python3 scripts/build_command_center.py`. See [`docs/documents/README.md`](documents/README.md).
+To add a present or future document: edit [`scripts/documents_catalog.py`](../scripts/documents_catalog.py), place the file under `external_docs/templates/<category>/` (**canonical** — not `docs/documents/`), run `python3 scripts/build_command_center.py`. See [`docs/documents/README.md`](documents/README.md).
+
+`docs/content/` is a **generated** copy of `knowledge/`, `prompts/`, and related markdown for the in-browser viewer. Do not treat it as a second knowledge tree.
 
 ## Refresh live data
 
-**Automatic:** GitHub Actions runs **Morning Sync** every day at **7:30 AM CST** — pulls HCP + QBO, updates Command Center, deploys to gh-pages.
+**Automatic:** GitHub Actions runs **Morning Sync** every day at **7:30 AM CST** — pulls HCP + QBO, optional Drive catalog, updates Command Center, deploys to gh-pages. Drive file content stays in Drive (connector). Catalog only if `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` is set.
 
 **Manual** from your machine:
 
 ```bash
 ./scripts/sync/run_morning_sync.sh
 git add external_docs/exports/ knowledge/.generated/ docs/
+# jobs.json is gitignored (customer PII) — do not force-add it
 git commit -m "Refresh Command Center live ops data"
 git push
 ```

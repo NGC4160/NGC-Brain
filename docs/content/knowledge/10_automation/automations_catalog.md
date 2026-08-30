@@ -28,7 +28,7 @@ Concrete automations to build — ordered by impact vs effort.
 | 10 | **GBP review request** | Zapier | HCP job paid | Review link SMS template |
 | 11 | **Lithium pipeline dashboard** | Sheet + Automation | Daily | Conversions in progress |
 | 12 | **Everlogic sync** | API/CSV | Post-migration | Single system of record |
-| 13 | **NGC Admin Bot** | Custom app | HCP sync + webhooks | Phase 1: deposit gate alerts — see [ngc_admin_bot_spec.md](ngc_admin_bot_spec.md) |
+| 13 | **Deposit-alert script** (not a Grok Bot) | Batch script | HCP sync | Phase 1: deposit gate alerts — see [ngc_admin_bot_spec.md](ngc_admin_bot_spec.md). COS is Chief. |
 
 ## Cursor Automations — copy prompts
 

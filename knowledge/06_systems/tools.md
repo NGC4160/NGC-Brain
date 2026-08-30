@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-08-24
+**Last verified:** 2026-08-30
 
 ## Current stack
 
@@ -8,10 +8,10 @@
 |--------|---------|--------|
 | **Housecall Pro** | Scheduling, pricebook, jobs, invoicing, customer comms | Active |
 | **QuickBooks Online** | Accounting, inventory, sales tax, P&L | Active — books clean |
-| **Google Drive** | SOPs, document repository, internal docs | Active (`external_docs/My Drive/`) |
+| **Google Drive** | Staff SOPs, Procedures, manuals | **Live content** = Drive connector (NGC985). Brain catalog = `knowledge/.generated/drive_catalog.md` |
 | **Website** | [NGCGolfCarts.com](https://www.NGCGolfCarts.com) | Active |
 | **Google Business Profile** | Local presence, reviews | Active |
-| **GarageBuddy** | Open-source garage DMS (eval sandbox) | Eval — see [garagebuddy.md](garagebuddy.md) |
+| **GarageBuddy** | Open-source garage DMS (**future/eval** sandbox) | Not current shop process — see [garagebuddy.md](garagebuddy.md) |
 
 ## Housecall Pro
 
@@ -88,29 +88,38 @@ Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or
 4. Train Jesse + Ryan on new scheduling/invoicing flow
 5. Parallel-run period before cutting HCP
 
-## Document repository
+## Document repository (Google Drive)
 
-`external_docs/My Drive/NGC Document Repository /`
+| Layer | Truth |
+|-------|--------|
+| **Live file content** | Google Drive connector (NGC985). Bots read SOPs there. |
+| **Brain catalog** | [`knowledge/.generated/drive_catalog.md`](../.generated/drive_catalog.md) — GENERATED, not policy. Names, ids, mime, modifiedTime, parent, view URL. |
+| **Actions refresh** | `scripts/sync/run_drive_sync.py` if secret `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` is set. Missing secret = skip; does **not** fail HCP/QBO. |
+| **`external_docs/My Drive/`** | **Not** a live sync. Do not treat it as a Drive clone. |
+| **Never commit** | File_000 zip (`1JABSf3vzt4W0PLjTSEPsZdX06dKJLP-j`) or any Drive binary/PDF. |
 
-| Subfolder | Contents |
-|-----------|----------|
-| Procedures | Shop/mobile SOPs, diagnostic workflows |
-| Checklists | Service procedure checklists |
-| Manuals | OEM manuals by brand (Club Car, EZGO, Yamaha, etc.) |
+| Folder | Drive ID | Open |
+|--------|----------|------|
+| **NGC Document Repository** | `1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r` | [folder](https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r) |
+| **Procedures** | `1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh` | [folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) |
+| **Checklists** | `1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp` | [folder](https://drive.google.com/drive/folders/1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp) |
+| **Manuals** | `1-1QqJQh4UojQEERawwpfEjKYOor2VMuR` | [folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) |
 
-## NGC Admin Bot
+**NGC-QC-1** and **NGC-IR-1** were **not** found in Drive Procedures by those titles (2026-08-30). Keep the short rules in [shop_workflow.md](../04_operations/shop_workflow.md). Lithium sales PDF is in Procedures: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md).
 
-Folder: `external_docs/My Drive/NGC Admin Bot/` — automation/AI backend (empty; code lives in repo).
+## Deposit-alert script (not a Grok Bot)
+
+Batch automation after HCP sync. **Not** the COS. Live Grok roster: [roles.md](../05_team/roles.md).
 
 | Resource | Purpose |
 |----------|---------|
-| [10_automation/ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md) | Full spec + roadmap |
+| [10_automation/ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md) | Planned/batch spec — deposit alerts, review requests |
 | `scripts/admin_bot/deposit_gate_alerts.py` | Phase 1 — Jesse deposit queue |
-| `knowledge/.generated/deposit_alerts.md` | Daily output (no PII) |
+| `knowledge/.generated/deposit_alerts.md` | Generated snapshot (invoice # + description only) — **not policy** |
 
 Run: `./scripts/admin_bot/run_deposit_alerts.sh` (auto-runs after HCP sync)
 
-This knowledge base (`knowledge/`) serves as the bot's structured policy layer.
+This knowledge base (`knowledge/`) is the policy layer for **Chief** and shop bots.
 
 ## Integrations & fees
 

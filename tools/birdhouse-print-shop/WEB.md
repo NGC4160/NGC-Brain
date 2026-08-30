@@ -23,10 +23,7 @@ Reset sample missions (Kayla, Elliot, Emmet) from **Settings**. The desktop SQLi
 
 ## How it deploys
 
-GitHub Actions copies `tools/birdhouse-print-shop/web/` to the `gh-pages` branch at `/birdhouse`.
-
-- Workflow: [`.github/workflows/birdhouse-pages.yml`](../../.github/workflows/birdhouse-pages.yml)
-- Trigger: push to `main` (or this feature branch) when web files change, or **Actions → Deploy Birdhouse Web → Run workflow**
+NGC-Brain **no longer runs** a Birdhouse Pages workflow (removed 2026-08-30 — unused by Command Center / shop). An older `/birdhouse/` tree may still exist on `gh-pages`. To publish again, copy `tools/birdhouse-print-shop/web/` to `gh-pages` `/birdhouse` from this folder (this is the only copy of the app).
 
 ## Local preview
 

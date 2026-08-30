@@ -91,7 +91,7 @@ Internal planning only:
 
 ## Customer care
 
-Post-install care guide on file: `external_docs/My Drive/NGC Document Repository /Lithium Battery Conversion Care Guide.docx`
+Post-install care guide: [Lithium Battery Conversion Care Guide.docx](https://drive.google.com/file/d/12SnpFGFxB9nBxLStImaaWCRDHZuxUhWB/view) (`12SnpFGFxB9nBxLStImaaWCRDHZuxUhWB`) in the Document Repository root — read via Drive connector.
 
 Key customer points:
 

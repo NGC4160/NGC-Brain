@@ -2,6 +2,7 @@
 
 **Generated:** 2026-08-30 17:38 UTC  
 **HCP jobs export:** 2026-08-30T17:38:39.427655+00:00  
+**Not policy.** Generated snapshot from local `jobs.json` (gitignored). Invoice # + description only.  
 **Privacy:** No customer names or addresses.
 
 ## Snapshot

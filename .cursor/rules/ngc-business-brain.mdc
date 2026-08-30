@@ -32,7 +32,8 @@ This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before a
 - **HCP pickup/drop-off queue:** Call for work → send estimate for approval. If approved, they go in the queue for pickup or customer drop-off. When there is an opening in the slot, we schedule them. HCP stages **New job** and **Customer drop off** ARE that queue. Queue order: go by job number unless it makes sense to pick up another cart in the same area on the same run. Do not say lock a time, hold a spot, or easy yes. In-shop only (no mobile).
 - **HCP deposit pipeline (approved work needing parts):** COPY TO JOB → **Awaiting Deposit** → (deposit received) **Need to Order** → (parts ordered) **Waiting for Materials**. Distinct from the pickup/drop-off queue. Deposit before ordering battery/motor/controller. Do not invent other deposit-pipeline stages.
 - **Credit card surcharge (shop-wide):** On every estimate. Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do not invent a % or $. See `knowledge/03_services/shop_services.md`.
-- **Slack to Jesse Killian:** Every NGC bot must ask Ryan and wait for a yes before any Slack (DMs, channel posts, messages-as-Ryan). Not exceptions: lithium jobs, BMS recordings, website leads, estimates, HCP updates. Chief collects website/Google Ads lead forms weekdays at 11am America/Chicago, then asks Ryan. Inbox must not auto-Slack Jesse because lithium "stays with Jesse." See `knowledge/09_daily_ops/README.md`.
+- **Chief** (COS, id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1`) is Ryan’s only Grok Bot POC. All other bots report to Chief. Live roster: Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager — `knowledge/05_team/roles.md`. Do not invent extra bots.
+- **Slack to Jesse Killian:** Every NGC bot must ask Ryan and wait for a yes before any Slack (DMs, channel posts, messages-as-Ryan). Not exceptions: lithium jobs, BMS recordings, website leads, estimates, HCP updates. Chief collects website/Google Ads lead forms weekdays at 11am America/Chicago, then asks Ryan. Inbox must not auto-Slack Jesse because lithium "stays with Jesse." Lead forms only from NGC985 / ryan@ / contact@. No HCP customer-message watching. See `knowledge/09_daily_ops/README.md`.
 - **Bot updates:** Every shop bot, including Chief, must send updates as a clean bullet list. No dense paragraph dumps. Applies when reporting to Ryan or to Chief. See `knowledge/09_daily_ops/README.md`.
 
 ## Authority order
@@ -40,7 +41,7 @@ This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before a
 1. Owner/staff statements in conversation (most recent)
 2. `knowledge/` files
 3. `external_docs/exports/` (pricebook CSV, QBO exports)
-4. `external_docs/My Drive/` documents — check `knowledge/archive/legacy_mobile.md` for outdated items
+4. Google Drive (live content via connector; catalog `knowledge/.generated/drive_catalog.md`). Check `knowledge/archive/legacy_mobile.md` for outdated mobile items
 
 ## Never do
 
@@ -58,4 +59,6 @@ This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before a
 
 - Pricebook: `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`
 - QBO: `external_docs/exports/qbo/`
-- SOPs/manuals: `external_docs/My Drive/NGC Document Repository/`
+- HCP aggregates: `external_docs/exports/hcp/` — **never commit `jobs.json`** (customer PII)
+- Staff SOPs: Google Drive connector (NGC985). Catalog: `knowledge/.generated/drive_catalog.md`. `external_docs/My Drive/` is not a live sync.
+- Canonical shop rules: `knowledge/` only. `docs/content/` is generated publish output.

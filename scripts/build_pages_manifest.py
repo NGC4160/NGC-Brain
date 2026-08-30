@@ -90,7 +90,7 @@ def build_sections() -> list[dict]:
         ("10_automation/integration_playbook.md", "Integration Playbook", "Step-by-step MCP and connector setup."),
         ("10_automation/automations_catalog.md", "Automations Catalog", "Ideas and automation inventory."),
         ("10_automation/hcp_api_setup.md", "HCP API Setup", "Housecall Pro MAX API sync guide."),
-        ("10_automation/ngc_admin_bot_spec.md", "Admin Bot Spec", "Deposit alerts, review requests, webhooks."),
+        ("10_automation/ngc_admin_bot_spec.md", "Deposit-alert script spec", "Batch automation — not a Grok Bot / not COS."),
         ("10_automation/legacy_pricebook_cleanup.md", "Legacy Pricebook Cleanup", "Deactivate mobile and NGC Conversion items."),
         ("archive/legacy_mobile.md", "Legacy Mobile (Archive)", "Discontinued mobile items — do not quote."),
     ]
@@ -226,7 +226,7 @@ def build_sections() -> list[dict]:
         ("sync/generate_shop_board.py", "Shop Board Generator", "Auto-generate shop board from HCP jobs.", "python"),
         ("sync/run_shop_board.sh", "Run Shop Board", "Shell wrapper for shop board generation.", "shell"),
         ("connectors/hcp_client.py", "HCP Client", "Housecall Pro API connector module.", "python"),
-        ("admin_bot/deposit_gate_alerts.py", "Deposit Gate Alerts", "Admin Bot Phase 1 — deposit notifications.", "python"),
+        ("admin_bot/deposit_gate_alerts.py", "Deposit Gate Alerts", "Batch script Phase 1 — deposit notifications (not a Grok Bot).", "python"),
         ("admin_bot/legacy_pricebook_audit.py", "Legacy Pricebook Audit", "Find active mobile/NGC Conversion items.", "python"),
         ("admin_bot/run_deposit_alerts.sh", "Run Deposit Alerts", "Shell wrapper for deposit alerts.", "shell"),
         ("admin_bot/run_legacy_audit.sh", "Run Legacy Audit", "Shell wrapper for pricebook audit.", "shell"),

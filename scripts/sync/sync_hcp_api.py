@@ -50,7 +50,7 @@ def main() -> int:
     try:
         jobs = client.list_all_jobs(max_pages=10)
         write_json("jobs.json", {"synced_at": _now(), "count": len(jobs), "jobs": jobs})
-        print(f"  Saved jobs.json ({len(jobs)} jobs)")
+        print(f"  Saved jobs.json ({len(jobs)} jobs) — local only, gitignored (customer PII)")
     except Exception as e:
         print(f"  jobs.json skipped: {e}")
 

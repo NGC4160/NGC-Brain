@@ -51,7 +51,7 @@ Historical SOPs request 5-star reviews after completed jobs. Platform: likely Go
 
 ## Visual content
 
-Marketing assets in Drive: `external_docs/My Drive/Visual Content/` — includes lithium conversion photos, before/afters, video content.
+Marketing assets live in Google Drive (Visual Content). That folder is **not** live-synced into this repo — open Drive; do not treat `external_docs/My Drive/` as a working connector.
 
 ## What we do not store
 

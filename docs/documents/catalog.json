@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T18:01:50.027413+00:00",
+  "generated_at": "2026-08-30T18:47:00.718576+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan, Jesse, and Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",
@@ -277,10 +277,40 @@
       "notes": ""
     },
     {
+      "id": "ngc-qc-1",
+      "category": "operations",
+      "title": "NGC-QC-1 Pre-delivery QC (Drive)",
+      "description": "Official 2-page form (Rev. 2026-08-24) \u2014 print single-sided, complete in ink. Pass/Flag/Fail. Staff file in Drive Procedures.",
+      "type": "link",
+      "audience": "Techs / Jesse",
+      "status": "active",
+      "featured": true,
+      "href": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+      "source": null,
+      "deploy_path": null,
+      "external": true,
+      "notes": ""
+    },
+    {
+      "id": "ngc-ir-1",
+      "category": "operations",
+      "title": "NGC-IR-1 Incident report (Drive)",
+      "description": "Official 4-page shop record (Rev. 2026-08-24) \u2014 not workers\u2019 comp. Print single-sided; ink with the employee. Stated facts only.",
+      "type": "link",
+      "audience": "Ryan",
+      "status": "active",
+      "featured": false,
+      "href": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+      "source": null,
+      "deploy_path": null,
+      "external": true,
+      "notes": ""
+    },
+    {
       "id": "golf-cart-inspection-report",
       "category": "operations",
       "title": "7-Point Golf Cart Inspection Report",
-      "description": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10",
+      "description": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10 \u2014 not NGC-QC-1",
       "type": "pdf",
       "audience": "Techs / Jesse",
       "status": "active",
@@ -340,7 +370,7 @@
       "id": "professional-kit-quote",
       "category": "operations",
       "title": "Lithium Conversion Sales Guide (office quoting)",
-      "description": "Essential / Ready-to-Run / Accessory-Ready \u2014 internal only; do not hand to the customer",
+      "description": "Essential / Ready-to-Run / Accessory-Ready \u2014 internal only; do not hand to the customer. Drive PDF in Procedures.",
       "type": "markdown",
       "audience": "Jesse / Ryan",
       "status": "active",
@@ -349,6 +379,21 @@
       "source": "knowledge/02_products/lithium_sales_guide.md",
       "deploy_path": null,
       "external": false,
+      "notes": ""
+    },
+    {
+      "id": "lithium-sales-guide-pdf",
+      "category": "operations",
+      "title": "Lithium Conversion Sales Guide (Drive PDF)",
+      "description": "Staff PDF in Drive Procedures \u2014 internal only; do not hand to customers",
+      "type": "link",
+      "audience": "Jesse / Ryan",
+      "status": "active",
+      "featured": false,
+      "href": "https://drive.google.com/file/d/1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC/view",
+      "source": null,
+      "deploy_path": null,
+      "external": true,
       "notes": ""
     },
     {
@@ -369,12 +414,12 @@
     {
       "id": "rental-insurance-rating",
       "category": "finance_admin",
-      "title": "Golf-cart rental insurance rating",
-      "description": "Planning catalog + quote calculator for a future rental fleet (not offered today)",
+      "title": "Golf-cart rental insurance rating (future / eval)",
+      "description": "Planning catalog \u2014 not current shop process; not offered today",
       "type": "markdown",
       "audience": "Ryan",
       "status": "active",
-      "featured": true,
+      "featured": false,
       "href": "view.html?path=knowledge/11_future_lines/golf_cart_rental_insurance_rating.md",
       "source": "knowledge/11_future_lines/golf_cart_rental_insurance_rating.md",
       "deploy_path": null,
@@ -398,8 +443,8 @@
     }
   ],
   "counts": {
-    "total": 24,
-    "active": 21,
+    "total": 27,
+    "active": 24,
     "planned": 3
   }
 }

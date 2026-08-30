@@ -1,12 +1,14 @@
-# GarageBuddy — Open Source Garage DMS (Eval)
+# GarageBuddy — Open Source Garage DMS (future / eval)
 
-**Last verified:** 2026-07-26  
+**Last verified:** 2026-08-30  
 **Upstream:** [dimitar-grigorov/GarageBuddy](https://github.com/dimitar-grigorov/GarageBuddy)  
 **Local path:** `tools/GarageBuddy` (git submodule)
 
+**Not current shop process.** HCP + QBO remain the live systems. Keep the submodule for evaluation. Do not treat this as today’s scheduling, invoicing, or SOP.
+
 ## Why it is here
 
-Open-source ASP.NET Core garage management system under evaluation as a shop DMS alternative while HCP remains the live system of record. Not customer-facing. Not a replacement for HCP/QBO yet.
+Open-source ASP.NET Core garage management system under evaluation as a **future** shop DMS alternative. Not customer-facing. Not a replacement for HCP/QBO.
 
 ## Stack
 

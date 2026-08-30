@@ -6,6 +6,11 @@ knowledge/.generated/
 external_docs/My Drive/Management/Personnel/
 __pycache__/
 
+# Live HCP job dump — customer PII (names, phones, addresses). Never version.
+# Morning sync / ingest still write it locally for shop_board + deposit alerts.
+# Aggregates (counts, pipeline stages, pricebook, company.json) are OK to commit.
+external_docs/exports/hcp/jobs.json
+
 # GarageBuddy local secrets / overrides (never commit passwords)
 scripts/garagebuddy/.env
 tools/GarageBuddy/src/Web/GarageBuddy.Web/Configurations/database.Development.json

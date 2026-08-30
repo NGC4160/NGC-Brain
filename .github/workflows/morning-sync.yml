@@ -62,19 +62,22 @@ jobs:
           QBO_REFRESH_TOKEN: ${{ secrets.QBO_REFRESH_TOKEN }}
           QBO_ENVIRONMENT: production
           NGC_COMMAND_CENTER_PASSWORD: ${{ secrets.NGC_COMMAND_CENTER_PASSWORD }}
+          GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON }}
         run: ./scripts/sync/run_morning_sync.sh
 
       - name: Commit and push updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # knowledge/.generated is gitignored — force-add so sync artifacts are versioned
+          # knowledge/.generated is gitignored — force-add generated snapshots (counts / invoice # only).
+          # jobs.json is gitignored (customer PII) — do not force-add it.
           git add -f knowledge/.generated/
           git add external_docs/exports/ docs/live/ docs/command-center.json docs/content/ docs/assets/auth-config.js || true
+          git restore --staged -- "external_docs/exports/hcp/jobs.json" 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Morning sync: HCP + QBO → Command Center [skip ci]"
+            git commit -m "Morning sync: HCP + QBO + Drive catalog → Command Center [skip ci]"
             git push
           fi
 

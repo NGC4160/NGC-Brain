@@ -1,9 +1,12 @@
 # NGC Documents (Command Center)
 
-Structured home for **printable forms, scorecards, and working documents** in the Command Center.
+**Publish output — do not edit files in this folder as a second copy.**
+
+Structured home for **printable forms, scorecards, and working documents** in the Command Center. Copies here are generated from [`external_docs/templates/`](../../external_docs/templates/) (canonical hiring / ops / counseling forms) and selected `knowledge/` guides.
 
 **Hub (after deploy):** `documents/index.html`  
-**Catalog source of truth:** [`scripts/documents_catalog.py`](../../scripts/documents_catalog.py)
+**Catalog (what gets copied):** [`scripts/documents_catalog.py`](../../scripts/documents_catalog.py)  
+**Canonical templates:** `external_docs/templates/` — edit those, then rebuild.
 
 ## Categories
 

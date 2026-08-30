@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T18:01:50.152799+00:00",
+  "generated_at": "2026-08-30T18:47:00.869134+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-30T18:01:50.126481+00:00",
+    "generated_at": "2026-08-30T18:47:00.824705+00:00",
     "jobs_synced_at": "2026-08-30T17:38:39.427655+00:00",
     "has_live_data": true,
     "metrics": {
@@ -353,9 +353,9 @@
     },
     {
       "id": "drive",
-      "name": "Google Drive",
-      "role": "SOPs \u00b7 Document repository",
-      "url": "https://drive.google.com/",
+      "name": "Google Drive Procedures",
+      "role": "Staff SOPs \u00b7 Drive catalog in Brain (not a My Drive clone)",
+      "url": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
       "status": "online",
       "icon": "\ud83d\udcc1"
     },
@@ -370,7 +370,7 @@
     {
       "id": "garagebuddy",
       "name": "Garage Buddy",
-      "role": "Open-source garage DMS (eval)",
+      "role": "Future/eval DMS \u2014 not current shop process",
       "url": "https://github.com/dimitar-grigorov/GarageBuddy",
       "status": "online",
       "icon": "\ud83d\udd27"
@@ -531,8 +531,8 @@
     },
     {
       "priority": "P2",
-      "name": "NGC Admin Bot \u2014 Phase 1 deposit gate alerts",
-      "why": "Spec + script live; Phase 2 review requests next",
+      "name": "Deposit-alert batch script (not a Grok Bot)",
+      "why": "Spec + script live; Phase 2 review requests next. COS is Chief.",
       "owner": "Ryan",
       "status": "In progress",
       "category": "Team & systems"
@@ -642,7 +642,7 @@
         },
         {
           "title": "Blake's Birdhouses",
-          "desc": "3D print shop mission board",
+          "desc": "Print / Blake \u2014 not NGC shop process",
           "href": "../birdhouse/",
           "primary": false
         }
@@ -706,9 +706,9 @@
           "external": true
         },
         {
-          "title": "Google Drive",
-          "desc": "SOPs \u00b7 Document repository",
-          "href": "https://drive.google.com/",
+          "title": "Google Drive Procedures",
+          "desc": "Staff SOPs \u00b7 Drive catalog in Brain (not a My Drive clone)",
+          "href": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
           "external": true
         },
         {
@@ -719,7 +719,7 @@
         },
         {
           "title": "Garage Buddy",
-          "desc": "Open-source garage DMS (eval)",
+          "desc": "Future/eval DMS \u2014 not current shop process",
           "href": "https://github.com/dimitar-grigorov/GarageBuddy",
           "external": true
         }
@@ -773,8 +773,8 @@
           "primary": true
         },
         {
-          "title": "Admin Bot Spec",
-          "desc": "Deposit alerts \u00b7 review requests \u00b7 webhooks",
+          "title": "Deposit-alert script spec",
+          "desc": "Batch automation \u2014 not a Grok Bot / not COS",
           "href": "view.html?path=knowledge/10_automation/ngc_admin_bot_spec.md"
         },
         {
@@ -798,7 +798,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "130 indexed deliverables",
+          "desc": "133 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -843,10 +843,10 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "21 active \u00b7 3 planned \u2014 all categories",
+          "desc": "24 active \u00b7 3 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "21 docs"
+          "badge": "24 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
@@ -903,21 +903,21 @@
           "external": false
         },
         {
+          "title": "NGC-QC-1 Pre-delivery QC (Drive)",
+          "desc": "Official 2-page form (Rev. 2026-08-24) \u2014 print single-sided, complete in ink. Pass/Flag/Fail. Staff file in Drive Procedures.",
+          "href": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+          "external": true
+        },
+        {
           "title": "7-Point Golf Cart Inspection Report",
-          "desc": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10",
+          "desc": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10 \u2014 not NGC-QC-1",
           "href": "documents/operations/NGC_Golf_Cart_Inspection_Report.pdf",
           "external": false
         },
         {
           "title": "Lithium Conversion Sales Guide (office quoting)",
-          "desc": "Essential / Ready-to-Run / Accessory-Ready \u2014 internal only; do not hand to the customer",
+          "desc": "Essential / Ready-to-Run / Accessory-Ready \u2014 internal only; do not hand to the customer. Drive PDF in Procedures.",
           "href": "view.html?path=knowledge/02_products/lithium_sales_guide.md",
-          "external": false
-        },
-        {
-          "title": "Golf-cart rental insurance rating",
-          "desc": "Planning catalog + quote calculator for a future rental fleet (not offered today)",
-          "href": "view.html?path=knowledge/11_future_lines/golf_cart_rental_insurance_rating.md",
           "external": false
         }
       ]
@@ -961,7 +961,7 @@
       "title": "Technician Training",
       "icon": "\u25a3",
       "color": "#f472b6",
-      "description": "Golf Cart Diagnostic Technician \u2014 10 weeks \u00b7 40 hours",
+      "description": "10-week diagnostic pack \u2014 not Jesse\u2019s tech binder",
       "cards": [
         {
           "title": "Training Hub",
@@ -988,9 +988,9 @@
     }
   ],
   "documents": {
-    "active": 21,
+    "active": 24,
     "planned": 3,
     "categories": 5
   },
-  "manifest_total": 130
+  "manifest_total": 133
 }

@@ -79,19 +79,21 @@ Keep CSV export to `external_docs/exports/pricebook/` — hooks still sync.
 
 ## Google Drive
 
-### Current (no API)
+### Live today
 
-Google Drive for Desktop syncs to `external_docs/My Drive/`
+| Layer | How |
+|-------|-----|
+| **File content** | Google Drive connector (NGC985) — shop bots read SOPs here |
+| **Brain catalog** | `knowledge/.generated/drive_catalog.md` (+ `.json`) — GENERATED, not policy |
+| **Morning-sync** | `scripts/sync/run_drive_sync.py` — catalog only if `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` is set |
 
-**Limitation:** `.gsheet` / `.gdoc` files are stubs — export to xlsx/pdf for AI reading.
+`external_docs/My Drive/` is **not** a live Drive sync. Do not git-add File_000 or Drive binaries.
 
-### Upgrade: Google Drive MCP
+Scope: NGC Document Repository `1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r`. Recurse Procedures, Checklists, Manuals. Skip files >10MB and File_000 (`1JABSf3vzt4W0PLjTSEPsZdX06dKJLP-j`).
 
-1. Google Cloud Console → enable Drive API
-2. OAuth credentials → install a Drive MCP server from Cursor MCP directory
-3. Scope: `drive.readonly` on NGC shared drive folder
+### Actions secret (optional)
 
-**Automate:** Nightly export of key sheets (Tech Performance, HOA, Outreach) to `external_docs/exports/drive/`
+GitHub Actions **cannot** use MCP. To refresh the catalog on morning-sync, add repo secret `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` (service account JSON, Drive readonly, shared on the Document Repository folder). If the secret is missing, Drive is skipped and HCP/QBO still run.
 
 ---
 

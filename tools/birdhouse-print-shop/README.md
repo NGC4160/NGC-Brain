@@ -2,6 +2,8 @@
 
 Military-themed local ops app for a 3D-printed birdhouse side business.
 
+**Not NGC shop process.** This folder stays in NGC-Brain as the only copy of Blake’s Print project. NGC-Brain **no longer runs** Birdhouse GitHub Actions (`birdhouse-desktop.yml` / `birdhouse-pages.yml` were unused by Command Center / shop morning-sync). Build or deploy from this folder if Blake needs a new package.
+
 **Status:** Browser web app + Mac/Windows desktop packaging  
 **Plan:** [BUILD_PLAN.md](BUILD_PLAN.md)  
 **Web app:** [WEB.md](WEB.md)  

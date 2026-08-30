@@ -1,0 +1,273 @@
+{
+  "source": "NGC985 Google Drive connector",
+  "listed_at": "2026-08-30",
+  "root_folder_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+  "notes": [
+    "NGC-QC-1 and NGC-IR-1 were NOT found in Drive Procedures by those titles. Keep knowledge pointers. Not yet in Drive Procedures.",
+    "File_000 zip (1JABSf3vzt4W0PLjTSEPsZdX06dKJLP-j, ~319MB) is SKIPPED — do not download or git-add.",
+    "Staff SOPs stay in Drive. Bots read file content via the Google Drive connector. This catalog is names/ids only."
+  ],
+  "folders": [
+    {
+      "name": "NGC Document Repository",
+      "id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_id": null,
+      "parent_name": "",
+      "mime": "application/vnd.google-apps.folder",
+      "modifiedTime": "2024-08-07",
+      "view_url": "https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r"
+    },
+    {
+      "name": "Procedures",
+      "id": "1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "mime": "application/vnd.google-apps.folder",
+      "modifiedTime": "2025-01-06",
+      "view_url": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh"
+    },
+    {
+      "name": "Checklists",
+      "id": "1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "mime": "application/vnd.google-apps.folder",
+      "modifiedTime": "2025-04-07",
+      "view_url": "https://drive.google.com/drive/folders/1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp"
+    },
+    {
+      "name": "Manuals",
+      "id": "1-1QqJQh4UojQEERawwpfEjKYOor2VMuR",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "mime": "application/vnd.google-apps.folder",
+      "modifiedTime": "2024-08-07",
+      "view_url": "https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR"
+    }
+  ],
+  "items": [
+    {
+      "name": "NGC_Golf_Cart_Motor_Test_Procedure_Complete.pdf",
+      "id": "1Tf8XDbm0vGX4sqZeoHcD1Dl8kWqJqNnM",
+      "mime": "application/pdf",
+      "modifiedTime": "2026-08-24",
+      "parent_id": "1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+      "parent_name": "Procedures",
+      "view_url": "https://drive.google.com/file/d/1Tf8XDbm0vGX4sqZeoHcD1Dl8kWqJqNnM/view",
+      "size_bytes": 426624
+    },
+    {
+      "name": "NGC_Shop_Workflow_Scheduling_SOP_Final_Reviewed.pdf",
+      "id": "1EklQFfsuB6XURvFi3v2ukHUVGxvHm7ij",
+      "mime": "application/pdf",
+      "modifiedTime": "2026-08-24",
+      "parent_id": "1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+      "parent_name": "Procedures",
+      "view_url": "https://drive.google.com/file/d/1EklQFfsuB6XURvFi3v2ukHUVGxvHm7ij/view",
+      "size_bytes": 8385
+    },
+    {
+      "name": "NGC_Technician_Standard_Diagnosing_Test_Process_and_Procedure.docx",
+      "id": "1gfkVp3OrMwa2KdL066m9PvYinp4JflVN",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "modifiedTime": "2026-08-24",
+      "parent_id": "1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+      "parent_name": "Procedures",
+      "view_url": "https://drive.google.com/file/d/1gfkVp3OrMwa2KdL066m9PvYinp4JflVN/view",
+      "size_bytes": 183261
+    },
+    {
+      "name": "Mobile Golf Cart Repair and Safety Protocol.docx",
+      "id": "1kGiGKrUFxoDlZb6ndckPIAIPBMFk3h3V",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "modifiedTime": "2025-01-06",
+      "parent_id": "1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+      "parent_name": "Procedures",
+      "view_url": "https://drive.google.com/file/d/1kGiGKrUFxoDlZb6ndckPIAIPBMFk3h3V/view",
+      "size_bytes": 15799
+    },
+    {
+      "name": "NGC Policies & Procedures",
+      "id": "144NinyTAq93p8s6ZkqYJSDSseu0fA1ZdRuLIq-4bPvA",
+      "mime": "application/vnd.google-apps.document",
+      "modifiedTime": "2025-07-08",
+      "parent_id": "1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+      "parent_name": "Procedures",
+      "view_url": "https://docs.google.com/document/d/144NinyTAq93p8s6ZkqYJSDSseu0fA1ZdRuLIq-4bPvA/edit"
+    },
+    {
+      "name": "NGC Lithium Conversion Sales Guide.pdf",
+      "id": "1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC",
+      "mime": "application/pdf",
+      "modifiedTime": "2026-08-30",
+      "parent_id": "1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+      "parent_name": "Procedures",
+      "view_url": "https://drive.google.com/file/d/1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC/view",
+      "size_bytes": 10908
+    },
+    {
+      "name": "NGC Cart Pickup - Delivery Visual Inspection Form.pdf",
+      "id": "1toZ7uJIpH0tXtPkqdCnTwDy-yonQEsgu",
+      "mime": "application/pdf",
+      "modifiedTime": "2026-07-20",
+      "parent_id": "1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp",
+      "parent_name": "Checklists",
+      "view_url": "https://drive.google.com/file/d/1toZ7uJIpH0tXtPkqdCnTwDy-yonQEsgu/view",
+      "size_bytes": 97547
+    },
+    {
+      "name": "NGC Mobile Golf Cart Repair Services Procedure Checklist.docx",
+      "id": "17zQDOXA-5pnmxLDxPYZv-hZnrM1vB4gZ",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "modifiedTime": "2025-04-07",
+      "parent_id": "1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp",
+      "parent_name": "Checklists",
+      "view_url": "https://drive.google.com/file/d/17zQDOXA-5pnmxLDxPYZv-hZnrM1vB4gZ/view",
+      "size_bytes": 180550
+    },
+    {
+      "name": "Tech_Performance_Tracker",
+      "id": "1E1dk1GDp7AN9flTGC4Y36iXqsNPDQVCX",
+      "mime": "application/vnd.google-apps.shortcut",
+      "modifiedTime": "2026-06-16",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "view_url": "https://drive.google.com/file/d/1E1dk1GDp7AN9flTGC4Y36iXqsNPDQVCX/view"
+    },
+    {
+      "name": "Lithium Battery Conversion Care Guide.docx",
+      "id": "12SnpFGFxB9nBxLStImaaWCRDHZuxUhWB",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "modifiedTime": "2026-03-13",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "view_url": "https://drive.google.com/file/d/12SnpFGFxB9nBxLStImaaWCRDHZuxUhWB/view",
+      "size_bytes": 184384
+    },
+    {
+      "name": "Golf Cart Tuneup Info",
+      "id": "1A8EtjiAxdcVDWTOsfsxHkg4jMzFUu85_RoV8mJdgPIE",
+      "mime": "application/vnd.google-apps.spreadsheet",
+      "modifiedTime": "2025-11-23",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "view_url": "https://docs.google.com/spreadsheets/d/1A8EtjiAxdcVDWTOsfsxHkg4jMzFUu85_RoV8mJdgPIE/edit"
+    },
+    {
+      "name": "Battery Testing Policy",
+      "id": "13RJPOCZxQ2DbmGKeLt7Nr84Kbur7zH0lysEozZQqlSQ",
+      "mime": "application/vnd.google-apps.document",
+      "modifiedTime": "2025-03-06",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "view_url": "https://docs.google.com/document/d/13RJPOCZxQ2DbmGKeLt7Nr84Kbur7zH0lysEozZQqlSQ/edit"
+    },
+    {
+      "name": "NGC Add-On Menu.docx",
+      "id": "1PJAVgbRVDAOazL0Dqu_rzxcLyGl1o0yu",
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "modifiedTime": "2024-11-01",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "view_url": "https://drive.google.com/file/d/1PJAVgbRVDAOazL0Dqu_rzxcLyGl1o0yu/view",
+      "size_bytes": 189866
+    },
+    {
+      "name": "Tools & Materials Inventory",
+      "id": "1-D_4N1fD_79BvRQyMd-RNfI8fuaSkbvNtnMH5vyCf4c",
+      "mime": "application/vnd.google-apps.document",
+      "modifiedTime": "2025-06-05",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "view_url": "https://docs.google.com/document/d/1-D_4N1fD_79BvRQyMd-RNfI8fuaSkbvNtnMH5vyCf4c/edit"
+    },
+    {
+      "name": "File_000",
+      "id": "1JABSf3vzt4W0PLjTSEPsZdX06dKJLP-j",
+      "mime": "application/x-zip",
+      "modifiedTime": "2025-01-27",
+      "parent_id": "1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r",
+      "parent_name": "NGC Document Repository",
+      "view_url": "https://drive.google.com/file/d/1JABSf3vzt4W0PLjTSEPsZdX06dKJLP-j/view",
+      "size_bytes": 319162075,
+      "skipped": true,
+      "skip_reason": "File_000 zip (~319MB) — do not download or git-add"
+    },
+    {
+      "name": "Club Car",
+      "id": "1xXeGwuymjre8YZt9QdMRgMYmGmLGCbAd",
+      "mime": "application/vnd.google-apps.folder",
+      "modifiedTime": "2026-05-18",
+      "parent_id": "1-1QqJQh4UojQEERawwpfEjKYOor2VMuR",
+      "parent_name": "Manuals",
+      "view_url": "https://drive.google.com/drive/folders/1xXeGwuymjre8YZt9QdMRgMYmGmLGCbAd"
+    },
+    {
+      "name": "EZGO",
+      "id": "1sQXPs4-k6VaOb-yy_nZCF-APO9L4jALW",
+      "mime": "application/vnd.google-apps.folder",
+      "modifiedTime": "2026-05-18",
+      "parent_id": "1-1QqJQh4UojQEERawwpfEjKYOor2VMuR",
+      "parent_name": "Manuals",
+      "view_url": "https://drive.google.com/drive/folders/1sQXPs4-k6VaOb-yy_nZCF-APO9L4jALW"
+    },
+    {
+      "name": "Yamaha",
+      "id": "1TcL_1FcplBuYYd6UEUwk3FvBqJZ5gk4z",
+      "mime": "application/vnd.google-apps.folder",
+      "modifiedTime": "2026-05-18",
+      "parent_id": "1-1QqJQh4UojQEERawwpfEjKYOor2VMuR",
+      "parent_name": "Manuals",
+      "view_url": "https://drive.google.com/drive/folders/1TcL_1FcplBuYYd6UEUwk3FvBqJZ5gk4z"
+    },
+    {
+      "name": "Other",
+      "id": "16fZpYQkZKOv-pmMV0KguFLOC2udefmHQ",
+      "mime": "application/vnd.google-apps.folder",
+      "modifiedTime": "2026-05-18",
+      "parent_id": "1-1QqJQh4UojQEERawwpfEjKYOor2VMuR",
+      "parent_name": "Manuals",
+      "view_url": "https://drive.google.com/drive/folders/16fZpYQkZKOv-pmMV0KguFLOC2udefmHQ"
+    },
+    {
+      "name": "Improve golf cart spec.pdf",
+      "id": "1B5b-ckA0cPKCaTUOu3GtRUiMqCC2Ut1P",
+      "mime": "application/pdf",
+      "modifiedTime": "2025-06-16",
+      "parent_id": "1-1QqJQh4UojQEERawwpfEjKYOor2VMuR",
+      "parent_name": "Manuals",
+      "view_url": "https://drive.google.com/file/d/1B5b-ckA0cPKCaTUOu3GtRUiMqCC2Ut1P/view",
+      "size_bytes": 8222718
+    },
+    {
+      "name": "Improve Battery golf cart battery user manual.pdf",
+      "id": "1k2o6ysHUQepzC1uYjcCUuAwqn2QctXKT",
+      "mime": "application/pdf",
+      "modifiedTime": "2025-06-16",
+      "parent_id": "1-1QqJQh4UojQEERawwpfEjKYOor2VMuR",
+      "parent_name": "Manuals",
+      "view_url": "https://drive.google.com/file/d/1k2o6ysHUQepzC1uYjcCUuAwqn2QctXKT/view",
+      "size_bytes": 1083621
+    },
+    {
+      "name": "BMS_SOC Paper.pdf",
+      "id": "1dWM-FLgY8nuB8F-CMxCMmodbX2xQtvkH",
+      "mime": "application/pdf",
+      "modifiedTime": "2025-01-26",
+      "parent_id": "1-1QqJQh4UojQEERawwpfEjKYOor2VMuR",
+      "parent_name": "Manuals",
+      "view_url": "https://drive.google.com/file/d/1dWM-FLgY8nuB8F-CMxCMmodbX2xQtvkH/view",
+      "size_bytes": 77556
+    },
+    {
+      "name": "Delta-Q SC-48 Charger Manual.pdf",
+      "id": "18fejeupmTFXgkROXOTwW3OWHvUjm0wZf",
+      "mime": "application/pdf",
+      "modifiedTime": "2024-04-29",
+      "parent_id": "1-1QqJQh4UojQEERawwpfEjKYOor2VMuR",
+      "parent_name": "Manuals",
+      "view_url": "https://drive.google.com/file/d/18fejeupmTFXgkROXOTwW3OWHvUjm0wZf/view",
+      "size_bytes": 1592639
+    }
+  ]
+}
