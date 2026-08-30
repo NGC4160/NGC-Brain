@@ -2,7 +2,7 @@
 
 **Neighborhood Golf Carts**  
 **Audience:** Jesse (Administrative Assistant / Service Coordinator — she/her), Christine (part-time backup), Ryan (escalations)  
-**Last updated:** 2026-08-15  
+**Last updated:** 2026-08-30  
 **Related:** Job description · KPI scorecard · `knowledge/03_services/shop_services.md` · `knowledge/05_team/roles.md` · pricebook export
 
 Jesse owns front office **plus** inventory, parts ordering/tracking, pricebook maintenance, advanced estimating, shop workflow, pickup/delivery routing, and data/reporting.
@@ -19,6 +19,7 @@ Jesse owns front office **plus** inventory, parts ordering/tracking, pricebook m
 | Lithium | **Professional Kits only** — do not quote discontinued NGC Conversion line |
 | Deposits | Required before ordering batteries, motors, controllers, special-order parts |
 | Pricing | Use Housecall Pro / pricebook — **never invent** a price |
+| Credit card surcharge | **On every estimate** (shop-wide). Before invoice or taking payment, update the amount so it matches the **final total**. Do not invent a % or $ — Ryan has not locked the rate |
 | Escalation | Unusual scope, discounts, warranty exceptions, angry customers → Ryan (Christine if Ryan is out) |
 
 ---
@@ -99,11 +100,14 @@ Same business day when technician findings and pricebook pricing are complete. J
 1. Confirm customer + cart on the correct HCP job.
 2. Enter pricebook lines only (labor hours per tech note).
 3. Include diagnostic already charged / how it applies when relevant.
-4. Write a plain-language summary the customer will understand (what + why + total).
-5. Set job/estimate status so it appears on the **open estimates** list.
-6. Set wait code **AUTH**.
-7. Send estimate (HCP text/email) and note date/time sent.
-8. Add to **same-day or next-morning follow-up list**.
+4. **Put the credit card surcharge on every estimate** (shop-wide — not lithium-only). Ryan White, 2026-08-30. Do not invent a % or $. Use the live HCP surcharge / payment-processing line.
+5. Write a plain-language summary the customer will understand (what + why + total).
+6. Set job/estimate status so it appears on the **open estimates** list.
+7. Set wait code **AUTH**.
+8. Send estimate (HCP text/email) and note date/time sent.
+9. Add to **same-day or next-morning follow-up list**.
+
+**Before invoice or payment:** update the surcharge amount so it matches the **final total**. Recalc if lines changed. Policy: `knowledge/03_services/shop_services.md`.
 
 ### Deposit jobs (batteries, motors, controllers, lithium, special order)
 - Estimate may go out for approval, but **do not place the vendor order** until deposit is collected (amount: material + card fees — confirm with Ryan if unclear).

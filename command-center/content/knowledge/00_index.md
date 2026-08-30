@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-08-24  
+**Last verified:** 2026-08-30  
 **Maintained for:** Cursor AI, Chief (Ryan's Grok Bot COS), NGC Admin Bot / shop bots, staff reference, customer-facing assistance
 
 ## Purpose
@@ -12,8 +12,9 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | File | Contents |
 |------|----------|
 | [01_company/profile.md](01_company/profile.md) | Identity, contact, location, positioning, legal |
-| [02_products/lithium_conversions.md](02_products/lithium_conversions.md) | Professional lithium kits, short kit list, convenience package, warranty, deposits |
-| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits |
+| [02_products/lithium_conversions.md](02_products/lithium_conversions.md) | Professional lithium kits, short kit list, warranty, deposits |
+| [02_products/lithium_sales_guide.md](02_products/lithium_sales_guide.md) | **Office quoting** — Essential / Ready-to-Run / Accessory-Ready (internal; not a customer handout) |
+| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits, **credit card surcharge on every estimate** |
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
 | [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP pickup/drop-off queue** (New job / Customer drop off) and **HCP deposit pipeline** (Awaiting Deposit → Need to Order → Waiting for Materials) |
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA, shop board** |
@@ -24,7 +25,7 @@ Single source of truth for Neighborhood Golf Carts (NGC) business operations. Us
 | [06_systems/tools.md](06_systems/tools.md) | Housecall Pro (pickup/drop-off queue + deposit job pipeline stages), QuickBooks, future DMS |
 | [06_systems/garagebuddy.md](06_systems/garagebuddy.md) | **GarageBuddy** — open-source DMS eval, SQL Server 2019 setup |
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
-| [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, convenience package, SMS templates (no PII) |
+| [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, meter/speedometer, SMS templates (no PII) |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |
 | [archive/legacy_mobile.md](archive/legacy_mobile.md) | Discontinued mobile service items — do not quote |
 | [09_daily_ops/README.md](09_daily_ops/README.md) | **Daily operating guide** — rhythms, roles, **bot Slack to Jesse (Ryan yes first)**, **bot updates as bullets**, data to feed AI |

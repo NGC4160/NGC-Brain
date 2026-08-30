@@ -1,6 +1,6 @@
 # Pricebook Reference
 
-**Last verified:** 2026-08-23  
+**Last verified:** 2026-08-30  
 **Source file:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`  
 **Total line items:** 282
 
@@ -55,6 +55,7 @@ The CSV is the **full pricebook**. This file summarizes categories and flags ite
 | Standard Pick-up/Drop-off Service | $99 | **Current** — paid zone (outside 40 mi Northshore or Southshore) |
 | 7-Point Golf Cart Safety Inspection | $0 | Current |
 | WORK PERFORMED AT SHOP | $0 | Internal flag line |
+| Payment processing / credit card surcharge lines | *(live HCP)* | **Put a surcharge on every estimate** (2026-08-30). CSV export has processing-fee items with $0 listed. **Do not invent a % or $** — Ryan did not lock the rate. Recalc the line to the final total before invoice or payment. |
 
 ## Legacy — deactivate / do not quote
 
@@ -67,13 +68,13 @@ See [archive/legacy_mobile.md](../archive/legacy_mobile.md) for full list. Inclu
 - TEST PARTIAL KIT 48V
 - Mobile On-Site Golf Cart General Service
 
-## Lithium convenience package (current)
+## Lithium extras (current HCP line)
 
 | Name | Price | Status |
 |------|------:|--------|
-| `3.0-NGC Lithium Conversion Convenience Package` | $599 + tax | **Current** (live HCP). AC charge port + 15' cord; 20A key-switched 48V-to-12V DC/DC; 6-position 12V fuse box. Not in the in-repo CSV export — refresh pricebook CSV. |
+| `3.0-NGC Lithium Conversion Convenience Package` | $599 + tax | **Still in live HCP.** AC charge port + 15' cord; 20A key-switched 48V-to-12V DC/DC; 6-position 12V fuse box. That is **all three extras** — closest to Accessory-Ready extras, **not** Ready-to-Run. Not in the in-repo CSV export — refresh pricebook CSV. |
 
-Customer-facing kit vs this add-on: [lithium_conversions.md](../02_products/lithium_conversions.md) · [customer_reply_standard.md](../07_customers_marketing/customer_reply_standard.md).
+**Office quoting (2026-08-30):** [lithium_sales_guide.md](../02_products/lithium_sales_guide.md) — Essential / Ready-to-Run / Accessory-Ready. Do not auto-add this $599 SKU as the default quote. Do not invent package prices. Customer-facing kit: [lithium_conversions.md](../02_products/lithium_conversions.md) · [customer_reply_standard.md](../07_customers_marketing/customer_reply_standard.md).
 
 ## Sample accessory & repair pricing
 

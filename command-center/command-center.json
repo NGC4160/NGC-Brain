@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T17:38:44.122499+00:00",
+  "generated_at": "2026-08-30T18:08:08.016130+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-30T17:38:44.087806+00:00",
+    "generated_at": "2026-08-30T18:08:07.996585+00:00",
     "jobs_synced_at": "2026-08-30T17:38:39.427655+00:00",
     "has_live_data": true,
     "metrics": {
@@ -426,6 +426,14 @@
       "category": "Operations (run the shop better)"
     },
     {
+      "priority": "P2",
+      "name": "Lock the live HCP credit-card surcharge line Jesse uses on every estimate",
+      "why": "Policy is on; rate not specified \u2014 do not invent a %",
+      "owner": "Ryan / Jesse",
+      "status": "Rule logged 2026-08-30 \u2014 surcharge on every estimate; recalc to final total before invoice/payment",
+      "category": "Operations (run the shop better)"
+    },
+    {
       "priority": "P3",
       "name": "Everlogic evaluation demo + migration plan",
       "why": "HCP is wrong tool for shop-only",
@@ -462,7 +470,7 @@
       "name": "Standardize \"Professional Kit\" quote template for Jesse",
       "why": "Faster, consistent quotes",
       "owner": "Jesse",
-      "status": "**Reply standard logged 2026-08-23** \u2014 kit / warranty / convenience SMS in `customer_reply_standard.md`; still align HCP kit descriptions",
+      "status": "**Office quoting logged 2026-08-30** \u2014 Essential / Ready-to-Run / Accessory-Ready in `lithium_sales_guide.md`; kit/warranty SMS in `customer_reply_standard.md`; still align HCP kit descriptions and estimate checkboxes",
       "category": "Revenue & growth"
     },
     {
@@ -470,7 +478,7 @@
       "name": "Accessory upsell script (charger port, reducer, fuse box)",
       "why": "Built into lithium descriptions, not sold consistently",
       "owner": "Ryan",
-      "status": "**Superseded for customer talk** \u2014 quote `3.0-NGC Lithium Conversion Convenience Package` ($599 + tax) unless those \u00e0-la-carte lines are already on the live estimate. HCP Professional Kit copy still lists them as kit \u201cif applicable\u201d \u2014 Jesse should strip that from HCP descriptions",
+      "status": "**Superseded 2026-08-30** \u2014 office quoting is Essential / Ready-to-Run / Accessory-Ready (`lithium_sales_guide.md`). Do not default-pitch the $599 convenience package (all three extras \u2260 Ready-to-Run). HCP Professional Kit copy still lists extras as kit \u201cif applicable\u201d \u2014 Jesse should strip that from HCP descriptions",
       "category": "Revenue & growth"
     },
     {
@@ -760,7 +768,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "21 tracked projects \u00b7 P1\u2013P3",
+          "desc": "22 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },
@@ -790,7 +798,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "127 indexed deliverables",
+          "desc": "130 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -798,6 +806,11 @@
           "title": "Lithium Conversions",
           "desc": "Professional Kits, warranty, deposits",
           "href": "view.html?path=knowledge/02_products/lithium_conversions.md"
+        },
+        {
+          "title": "Lithium Sales Guide",
+          "desc": "Office quoting \u2014 Essential / Ready-to-Run / Accessory-Ready",
+          "href": "view.html?path=knowledge/02_products/lithium_sales_guide.md"
         },
         {
           "title": "Shop Services",
@@ -830,10 +843,10 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "20 active \u00b7 4 planned \u2014 all categories",
+          "desc": "21 active \u00b7 3 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "20 docs"
+          "badge": "21 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
@@ -893,6 +906,12 @@
           "title": "7-Point Golf Cart Inspection Report",
           "desc": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10",
           "href": "documents/operations/NGC_Golf_Cart_Inspection_Report.pdf",
+          "external": false
+        },
+        {
+          "title": "Lithium Conversion Sales Guide (office quoting)",
+          "desc": "Essential / Ready-to-Run / Accessory-Ready \u2014 internal only; do not hand to the customer",
+          "href": "view.html?path=knowledge/02_products/lithium_sales_guide.md",
           "external": false
         },
         {
@@ -969,9 +988,9 @@
     }
   ],
   "documents": {
-    "active": 20,
-    "planned": 4,
+    "active": 21,
+    "planned": 3,
     "categories": 5
   },
-  "manifest_total": 127
+  "manifest_total": 130
 }

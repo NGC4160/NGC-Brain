@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-30T17:38:44Z",
+  "generated_at": "2026-08-30T18:08:07Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 127,
+  "total_items": 130,
   "sections": [
     {
       "id": "start",
@@ -76,6 +76,18 @@
           "view": "view.html?path=knowledge/02_products/lithium_conversions.md",
           "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/02_products/lithium_conversions.md",
           "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/02_products/lithium_conversions.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Lithium Sales Guide",
+          "description": "Office quoting \u2014 Essential / Ready-to-Run / Accessory-Ready (internal).",
+          "path": "knowledge/02_products/lithium_sales_guide.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/02_products/lithium_sales_guide.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/02_products/lithium_sales_guide.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/02_products/lithium_sales_guide.md",
           "tags": [
             "knowledge"
           ]
@@ -184,6 +196,18 @@
           "view": "view.html?path=knowledge/07_customers_marketing/market.md",
           "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/07_customers_marketing/market.md",
           "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/07_customers_marketing/market.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Lithium Customer Replies",
+          "description": "Front Desk / bot kit, warranty, and extras SMS (no PII).",
+          "path": "knowledge/07_customers_marketing/customer_reply_standard.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/07_customers_marketing/customer_reply_standard.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/07_customers_marketing/customer_reply_standard.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/07_customers_marketing/customer_reply_standard.md",
           "tags": [
             "knowledge"
           ]
@@ -648,6 +672,18 @@
           "path": "external_docs/templates/operations/README.md",
           "type": "markdown",
           "view": "view.html?path=documents/operations/README.md",
+          "tags": [
+            "document",
+            "operations",
+            "markdown"
+          ]
+        },
+        {
+          "title": "Lithium Conversion Sales Guide (office quoting)",
+          "description": "Essential / Ready-to-Run / Accessory-Ready \u2014 internal only; do not hand to the customer",
+          "path": "knowledge/02_products/lithium_sales_guide.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/02_products/lithium_sales_guide.md",
           "tags": [
             "document",
             "operations",
