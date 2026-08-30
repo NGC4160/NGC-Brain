@@ -43,6 +43,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-08-22 | **Chief** (Ryan's Grok Bot COS) and shop bots must operate from this brain and write durable facts back to `knowledge/`. | Ryan | See `knowledge/00_index.md` |
 | 2026-08-26 | Every NGC bot must ask Ryan and wait for a yes before any Slack to **Jesse Killian** (DMs, channel posts, or messages-as-Ryan). Not exceptions: lithium jobs, BMS recordings, website leads, estimates, HCP updates. Chief still collects website/Google Ads lead forms weekdays at 11:00 AM America/Chicago, then asks Ryan before Slack to Jesse. Inbox must not auto-Slack Jesse because lithium “stays with Jesse.” | Ryan White | See `knowledge/09_daily_ops/README.md` |
 | 2026-08-28 | Every shop bot, including Chief, must send updates as a clean bullet list. No dense paragraph dumps. Applies when reporting to Ryan or to Chief. | Ryan White | See `knowledge/09_daily_ops/README.md` |
+| 2026-08-30 | Ryan made the Lithium Conversion Sales Guide the office quoting process (Essential / Ready-to-Run / Accessory-Ready). | Ryan White | Internal quoting only — do not hand the sheet to the customer. Inspect first. Lead with Essential; default talk to Ready-to-Run; Accessory-Ready only when accessories exist or are planned. Do not invent package prices. Do not default-pitch the $599 convenience package (that SKU is all three extras). See `lithium_sales_guide.md`. |
 
 ---
 

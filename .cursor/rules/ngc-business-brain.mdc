@@ -13,6 +13,7 @@ This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before a
 - Index: `knowledge/00_index.md`
 - Company: `knowledge/01_company/profile.md`
 - Lithium products: `knowledge/02_products/lithium_conversions.md`
+- Lithium office quoting (Essential / Ready-to-Run / Accessory-Ready): `knowledge/02_products/lithium_sales_guide.md` — internal only; do not send to customers
 - Lithium customer replies (Front Desk / bots): `knowledge/07_customers_marketing/customer_reply_standard.md`
 - Services & policies: `knowledge/03_services/shop_services.md`
 - Legacy/discontinued: `knowledge/archive/legacy_mobile.md`
@@ -23,8 +24,8 @@ This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before a
 - **Address:** 71363 Thelma Ln, Suite E, Covington, LA 70433
 - **Phone:** 985-402-1206 | **Email:** contact@ngcgolfcarts.com
 - **Hours:** Mon–Fri 8 AM – 5 PM
-- **Lithium:** Professional Kits only (36V/48V/MINI/72V/150AH) — NGC Conversion line discontinued. Customer-facing kit = LiFePO4 battery, charger, monitor. Vatrer packs; inspect, test, and tune every install. Convenience package `3.0-NGC Lithium Conversion Convenience Package` = $599 + tax. No EcoBoost unless that exact line is on the live estimate.
-- **Warranty:** 5-year full replacement battery + BMS. Lithium kit/warranty/convenience replies: no shop phone; close Thanks / Neighborhood Golf Carts team. Do not invent turnaround unless asked.
+- **Lithium:** Professional Kits only (36V/48V/MINI/72V/150AH) — NGC Conversion line discontinued. Customer-facing kit = LiFePO4 battery, charger, monitor. Vatrer packs; inspect, test, and tune every install. After conversion: factory battery meter is no longer accurate; speedometer still works. Office quoting: Essential / Ready-to-Run (default talk) / Accessory-Ready — `lithium_sales_guide.md` (internal; inspect first; do not invent package prices; do not default-pitch the $599 convenience package). No EcoBoost unless that exact line is on the live estimate.
+- **Warranty:** 5-year full replacement battery + BMS. Lithium kit/warranty replies: no shop phone; close Thanks / Neighborhood Golf Carts team. Do not invent turnaround unless asked.
 - **Diagnostic:** $179 — not waived; applies toward repair on known-issue jobs. No separate minimum service charge — bill that work as diagnostic.
 - **Pickup/delivery:** Free within 40 mi Northshore; **$99** flat outside 40 mi or Southshore
 - **No cart sales or rentals** yet

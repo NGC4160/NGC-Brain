@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T04:47:52.798911+00:00",
+  "generated_at": "2026-08-30T17:59:23.664120+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan, Jesse, and Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",
@@ -310,7 +310,7 @@
       "id": "shop-floor-checklist",
       "category": "operations",
       "title": "Shop-floor checklist (mobile steps stripped)",
-      "description": "Printable bay checklist for Taylor / Marlon \u2014 planned",
+      "description": "Printable bay checklist for Marlon / Ryan Gorgoglione \u2014 planned",
       "type": "pdf",
       "audience": "Techs",
       "status": "planned",
@@ -338,15 +338,15 @@
     },
     {
       "id": "professional-kit-quote",
-      "category": "customer",
-      "title": "Professional Kit quote template",
-      "description": "Jesse-ready lithium quote script/template \u2014 planned",
+      "category": "operations",
+      "title": "Lithium Conversion Sales Guide (office quoting)",
+      "description": "Essential / Ready-to-Run / Accessory-Ready \u2014 internal only; do not hand to the customer",
       "type": "markdown",
-      "audience": "Jesse",
-      "status": "planned",
-      "featured": false,
-      "href": "documents/index.html",
-      "source": null,
+      "audience": "Jesse / Ryan",
+      "status": "active",
+      "featured": true,
+      "href": "view.html?path=knowledge/02_products/lithium_sales_guide.md",
+      "source": "knowledge/02_products/lithium_sales_guide.md",
       "deploy_path": null,
       "external": false,
       "notes": ""
@@ -399,7 +399,7 @@
   ],
   "counts": {
     "total": 24,
-    "active": 20,
-    "planned": 4
+    "active": 21,
+    "planned": 3
   }
 }
