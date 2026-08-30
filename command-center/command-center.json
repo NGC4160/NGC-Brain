@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T18:49:02.150931+00:00",
+  "generated_at": "2026-08-30T19:26:20.725907+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-30T18:49:02.130558+00:00",
+    "generated_at": "2026-08-30T19:26:20.705328+00:00",
     "jobs_synced_at": null,
     "has_live_data": false,
     "metrics": {
@@ -585,7 +585,7 @@
         {
           "title": "Blake's Birdhouses",
           "desc": "Print / Blake \u2014 not NGC shop process",
-          "href": "../birdhouse/",
+          "href": "https://github.com/NGC4160/PersonalProjects",
           "primary": false
         }
       ]
