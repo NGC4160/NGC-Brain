@@ -24,7 +24,8 @@ Give me:
 3. Turnaround **only if they asked** — do not invent one
 4. Draft message from [customer_reply_standard.md](../knowledge/07_customers_marketing/customer_reply_standard.md) when they ask kit / quality / warranty / what still works after conversion
 5. Lithium quoting: follow [lithium_sales_guide.md](../knowledge/02_products/lithium_sales_guide.md) — inspect first; put Essential / Ready-to-Run / Accessory-Ready on the estimate; lead with Essential; default talk to Ready-to-Run; Accessory-Ready only if accessories exist or are planned. **Internal only — do not send the sales guide to the customer.** Do not invent package prices. Do not default-pitch the $599 convenience package (that SKU is all three extras, not Ready-to-Run).
-6. Anything I should **not** promise
+6. **Shop-wide:** credit card surcharge on **every** estimate (not lithium-only). Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do **not** invent a surcharge % or $. Policy: [shop_services.md](../knowledge/03_services/shop_services.md).
+7. Anything I should **not** promise
 
 Do not invent prices — use the pricebook or knowledge files. For lithium kit/warranty replies: no shop phone; close Thanks / Neighborhood Golf Carts team. Do not mention EcoBoost unless that exact line is on the live estimate.
 

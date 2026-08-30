@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T17:59:23.797930+00:00",
+  "generated_at": "2026-08-30T18:01:50.152799+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-30T17:59:23.768351+00:00",
+    "generated_at": "2026-08-30T18:01:50.126481+00:00",
     "jobs_synced_at": "2026-08-30T17:38:39.427655+00:00",
     "has_live_data": true,
     "metrics": {
@@ -426,6 +426,14 @@
       "category": "Operations (run the shop better)"
     },
     {
+      "priority": "P2",
+      "name": "Lock the live HCP credit-card surcharge line Jesse uses on every estimate",
+      "why": "Policy is on; rate not specified \u2014 do not invent a %",
+      "owner": "Ryan / Jesse",
+      "status": "Rule logged 2026-08-30 \u2014 surcharge on every estimate; recalc to final total before invoice/payment",
+      "category": "Operations (run the shop better)"
+    },
+    {
       "priority": "P3",
       "name": "Everlogic evaluation demo + migration plan",
       "why": "HCP is wrong tool for shop-only",
@@ -760,7 +768,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "21 tracked projects \u00b7 P1\u2013P3",
+          "desc": "22 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },

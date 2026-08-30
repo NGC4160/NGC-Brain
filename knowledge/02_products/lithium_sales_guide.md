@@ -118,3 +118,7 @@ These are still true. They are **not** a reason to send this sales guide to the 
 - The **speedometer still works**.
 
 Do not mention EcoBoost unless that exact line is on the live estimate.
+
+## Shop-wide (not lithium-only)
+
+**Credit card surcharge** goes on every estimate, including lithium. Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do not invent a % or $. Policy: [shop_services.md](../03_services/shop_services.md#credit-card-surcharge-shop-wide-office-rule).

@@ -55,6 +55,7 @@ The CSV is the **full pricebook**. This file summarizes categories and flags ite
 | Standard Pick-up/Drop-off Service | $99 | **Current** — paid zone (outside 40 mi Northshore or Southshore) |
 | 7-Point Golf Cart Safety Inspection | $0 | Current |
 | WORK PERFORMED AT SHOP | $0 | Internal flag line |
+| Payment processing / credit card surcharge lines | *(live HCP)* | **Put a surcharge on every estimate** (2026-08-30). CSV export has processing-fee items with $0 listed. **Do not invent a % or $** — Ryan did not lock the rate. Recalc the line to the final total before invoice or payment. |
 
 ## Legacy — deactivate / do not quote
 

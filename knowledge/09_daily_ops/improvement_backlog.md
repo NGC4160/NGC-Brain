@@ -17,6 +17,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open |
 | P2 | Deposit collection checklist for Jesse | Batteries/motors/controllers — HCP pipeline now in `shop_workflow.md` (COPY TO JOB → Awaiting Deposit → Need to Order → Waiting for Materials) | Jesse | **Pipeline rule logged 2026-08-23**; still align Admin Front Office SOP wait-code table |
 | P2 | Rename or deactivate HCP “Minimum Service Charge- Diagnostic Inspection” so quotes use Diagnostic | Prevents staff/bots quoting a retired separate fee | Jesse | Policy logged 2026-08-23 — bill as diagnostic; HCP name still in export |
+| P2 | Lock the live HCP credit-card surcharge line Jesse uses on every estimate | Policy is on; rate not specified — do not invent a % | Ryan / Jesse | Rule logged 2026-08-30 — surcharge on every estimate; recalc to final total before invoice/payment |
 | P3 | Everlogic evaluation demo + migration plan | HCP is wrong tool for shop-only | Ryan | Open |
 
 ## Revenue & growth
