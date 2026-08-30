@@ -14,9 +14,3 @@ external_docs/exports/hcp/jobs.json
 # GarageBuddy local secrets / overrides (never commit passwords)
 scripts/garagebuddy/.env
 tools/GarageBuddy/src/Web/GarageBuddy.Web/Configurations/database.Development.json
-
-# Birdhouse Print Shop local runtime
-tools/birdhouse-print-shop/.venv/
-tools/birdhouse-print-shop/data/*.db
-tools/birdhouse-print-shop/data/*.db-*
-blakes-birdhouses-backup*.json

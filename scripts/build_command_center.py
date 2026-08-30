@@ -263,7 +263,7 @@ def build_app_links() -> list[dict]:
         ("SOPs", "Standard operating procedures", "../sops/"),
         ("Resources", "Docs & reference library", "../resources/"),
         ("Settings", "App configuration", "../settings/"),
-        ("Blake's Birdhouses", "Print / Blake — not NGC shop process", "../birdhouse/"),
+        ("Blake's Birdhouses", "Print / Blake — not NGC shop process", "https://github.com/NGC4160/PersonalProjects"),
     ]
     return [
         {"title": title, "desc": desc, "href": href, "primary": i == 0}
@@ -504,7 +504,6 @@ def validate_zone_links(zones: list[dict]) -> list[str]:
         "../", "../kpi-hub/", "../board/", "../jobs/", "../scheduling/",
         "../intake/", "../qc/", "../inventory/", "../invoicing/",
         "../customers/", "../sops/", "../resources/", "../settings/",
-        "../birdhouse/",
     }
     internal_pages = {
         "dashboard.html", "explore.html", "index.html",
