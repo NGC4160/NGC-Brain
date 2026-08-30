@@ -86,7 +86,7 @@ Regenerate the Word/Google Docs file after template changes:
 
 ## Policy reference
 
-Primary source: **`NGC Document Repository / Procedures / NGC Policies & Procedures`** (Google Drive)
+Primary source: **NGC Policies & Procedures** in Google Drive Procedures ([folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)) — not auto-synced.
 
 | Policy area | Also see |
 |-------------|----------|
@@ -153,4 +153,4 @@ Keep the HTML template in this repo as the master for updates.
 
 - [roles.md](roles.md) — team roster
 - [01_company/profile.md](../01_company/profile.md) — legal entity, contact
-- `external_docs/My Drive/Management/NGC Accident Report.gdoc` — incident documentation (separate from counseling)
+- **NGC-IR-1** incident form — Drive Procedures ([folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)); shop record only. See [shop_workflow.md](../04_operations/shop_workflow.md).

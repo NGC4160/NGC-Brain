@@ -6,3 +6,5 @@ Making my business AI friendly.
 Setup: [`docs/COMMAND_CENTER.md`](docs/COMMAND_CENTER.md)
 
 Open in Cursor → see [`START_HERE.md`](START_HERE.md).
+
+Personal / non-shop projects live in [NGC4160/personal-projects](https://github.com/NGC4160/personal-projects), not here.

@@ -22,7 +22,7 @@ This is not just documentation — it's an **operating system**. Cursor + `knowl
 
 **Output you want:** Top 3 priorities, deposit follow-ups, pickup/delivery schedule for Roy, lithium jobs at risk of missing 2–3 day promise.
 
-Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — see [shop throughput playbook](../04_operations/shop_throughput.md).
+Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — **generated snapshot, not policy**. See [shop throughput playbook](../04_operations/shop_throughput.md).
 
 ### Weekdays 11:00 AM America/Chicago
 
@@ -34,7 +34,7 @@ Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — see [
 |------|-----------------|
 | Customer quote (lithium or repair) | [`prompts/quote_and_customer.md`](../../prompts/quote_and_customer.md) — office quoting: [`lithium_sales_guide.md`](../02_products/lithium_sales_guide.md) (internal); kit/warranty SMS: [`customer_reply_standard.md`](../07_customers_marketing/customer_reply_standard.md); surcharge on every estimate: [`shop_services.md`](../03_services/shop_services.md) |
 | Draft text/email for Jesse | Draft for Ryan. Do **not** Slack Jesse without Ryan’s yes. |
-| "How do we diagnose X on Club Car?" | AI searches `NGC Document Repository` |
+| "How do we diagnose X on Club Car?" | Point at Drive Procedures (not auto-synced). Do not invent SOP text from stub paths. |
 | Staff instruction for Marlon / Ryan Gorgoglione | Ask for shop-floor checklist from SOPs |
 | Price check | AI reads pricebook CSV — never guess |
 
@@ -67,15 +67,19 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 
 ## Bot Slack to Jesse
 
-**Confirmed 2026-08-26 by Ryan White.** Applies to **every** NGC bot (Chief, Admin Bot, Inbox, shop bots).
+**Confirmed 2026-08-26 by Ryan White.** Applies to **every** NGC bot.
 
-Ask Ryan and **wait for a yes** before sending any Slack to **Jesse Killian**. No DMs, channel posts, or messages-as-Ryan without that approval.
+Ask Ryan and **wait for a yes** before sending any Slack to **Jesse Killian**. No DMs, channel posts, or messages-as-Ryan without that approval. Approvals go through **Chief**, who asks Ryan.
 
 **Not exceptions:** lithium jobs, BMS recordings, website leads, estimates, HCP updates.
 
-**Leads:** Chief still collects website / Google Ads lead forms weekdays at **11:00 AM America/Chicago**, then asks Ryan before any Slack to Jesse.
+**Leads:** Chief still collects website / Google Ads lead forms weekdays at **11:00 AM America/Chicago**, then asks Ryan before any Slack to Jesse. Lead forms only from **NGC985 / ryan@ / contact@**.
 
 **Inbox:** must not auto-Slack Jesse because lithium “stays with Jesse.”
+
+**No HCP customer-message watching.**
+
+Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager — [roles.md](../05_team/roles.md).
 
 ## Bot updates
 

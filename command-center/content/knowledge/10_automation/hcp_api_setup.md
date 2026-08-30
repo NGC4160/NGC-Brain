@@ -36,11 +36,11 @@ Expected output:
 Testing HCP connection...
   OK — company endpoint reachable
   Saved company.json
-  Saved jobs.json (N jobs)
+  Saved jobs.json (N jobs)   # local only — gitignored (customer PII)
   Saved pricebook_services.json (N services)
 ```
 
-Files land in `external_docs/exports/hcp/`.
+Files land in `external_docs/exports/hcp/`. **`jobs.json` is never committed.** Aggregates (company.json, pricebook, manifests, status counts) are OK. Shop board and deposit alerts use the local dump, then write invoice # + description only.
 
 If auth fails:
 
@@ -75,8 +75,9 @@ Prompt:
 
 ```
 Run ./scripts/sync/run_hcp_sync.sh in the NGC Business Brain repo.
-Read external_docs/exports/hcp/jobs.json and summarize open shop jobs
-(no customer names). Compare pricebook_services count to knowledge/.
+Summarize open shop jobs from the local (gitignored) jobs dump or
+knowledge/.generated/shop_board.md — no customer names. Compare
+pricebook_services count to knowledge/.
 Alert if legacy mobile items appear in live pricebook.
 ```
 

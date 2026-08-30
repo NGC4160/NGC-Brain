@@ -5,6 +5,8 @@
 **Delivery mix:** ≥60% hands-on lab · Classroom theory + shop practice  
 **Audience:** Golf courses, resorts, fleet operators, independent technicians
 
+**Keep this pack in `docs/training/`.** Do **not** copy it into `knowledge/`. It is **not** Jesse’s shop tech binder and must **not** be sent to Jesse as the daily procedure set. Shop rules stay in `knowledge/`; official QC/IR forms live in Drive Procedures.
+
 ---
 
 ## Package Contents

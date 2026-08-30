@@ -2,7 +2,7 @@
 
 **Last verified:** 2026-08-23  
 **Owner:** Ryan (service manager)  
-**Live board:** `knowledge/.generated/shop_board.md` (regenerate after HCP sync)
+**Live board:** `knowledge/.generated/shop_board.md` — **generated snapshot, not policy** (invoice # + description only; regenerate after HCP sync). Do not treat it as shop rules.
 
 ## Goal
 
@@ -52,7 +52,7 @@ Ryan said **Need to Order**. The repo had no prior HCP column with that name; th
 | Diagnose | Assigned tech | Complaint verified, estimate approved |
 | Waiting deposit/parts (floor) | Jesse | HCP pipeline: **Awaiting Deposit** → **Need to Order** → **Waiting for Materials**. Deposit collected **before** battery/motor/controller order; Jesse orders and tracks parts |
 | In repair | Marlon / Ryan Gorgoglione | Work complete per estimate |
-| QC | Assigned tech | 7-point safety + test drive; fault codes cleared |
+| QC | Assigned tech | Official **NGC-QC-1** (Pass/Flag/Fail; Flag = N/A or unable to test) + test drive; fault codes cleared. Form: Drive Procedures — [shop_workflow.md](shop_workflow.md) |
 | Ready | Jesse | Customer notified; balance collected or arranged |
 | Pickup/delivery | Roy | Cart off lot |
 

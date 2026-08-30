@@ -1,5 +1,7 @@
 # NGC Technician Hiring Templates
 
+**Canonical copy.** Edit files in this folder. Command Center `docs/documents/hiring/` is publish output — do not maintain a second edited copy there.
+
 ## 1. Phone interview scorecard
 
 **Printable HTML (use this):** [NGC_Technician_Phone_Interview_Scorecard.html](NGC_Technician_Phone_Interview_Scorecard.html) — open in browser → **Print / Save PDF** (fits **2 letter pages**)
