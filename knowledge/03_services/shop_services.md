@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-08-23  
+**Last verified:** 2026-08-30  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -89,6 +89,17 @@ When the customer approves work that needs a parts deposit, shop bots follow the
 ## Payment methods
 
 Cash, card, check, Venmo, Zelle (per historical SOPs; confirm current preferred methods with Jesse).
+
+### Credit card surcharge (shop-wide office rule)
+
+**Confirmed 2026-08-30 by Ryan White.** This is **not lithium-only**. It applies to **every estimate** — repair, diagnostic, lithium, pickup, deposits, everything.
+
+1. **Put the credit card surcharge on every estimate** before it goes out.
+2. **Before sending the invoice for payment, or before taking payment from the customer,** update the surcharge amount so it matches the **final total**.
+
+Do **not** invent a surcharge percentage or dollar amount. Ryan did not specify the rate. Use the live Housecall Pro surcharge / payment-processing line Jesse is actually adding. Recalc that line when the job total changes (added work, removed lines, deposit vs remaining balance).
+
+HCP pricebook export lists payment-processing-fee items (some names include a printed %). Those names are **not** a locked office rate. Do not quote a % or $ unless it is on the live estimate / live HCP line.
 
 ## Cart brands serviced
 

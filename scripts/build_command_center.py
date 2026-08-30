@@ -371,6 +371,7 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict], documents_catal
             "cards": [
                 {"title": "Browse All Docs", "desc": f"{manifest.get('total_items', 0)} indexed deliverables", "href": "explore.html", "primary": True},
                 {"title": "Lithium Conversions", "desc": "Professional Kits, warranty, deposits", "href": "view.html?path=knowledge/02_products/lithium_conversions.md"},
+                {"title": "Lithium Sales Guide", "desc": "Office quoting — Essential / Ready-to-Run / Accessory-Ready", "href": "view.html?path=knowledge/02_products/lithium_sales_guide.md"},
                 {"title": "Shop Services", "desc": "Diagnostics, pickup, fees", "href": "view.html?path=knowledge/03_services/shop_services.md"},
                 {"title": "Pricebook Reference", "desc": "Key HCP line items", "href": "view.html?path=knowledge/03_services/pricebook_reference.md"},
                 {"title": "Team Roles", "desc": "Jesse coordinates shop ops · Christine part-time", "href": "view.html?path=knowledge/05_team/roles.md"},

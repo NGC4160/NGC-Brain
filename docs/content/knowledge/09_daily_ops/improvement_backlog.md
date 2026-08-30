@@ -1,6 +1,6 @@
 # Improvement & Growth Backlog
 
-**Last reviewed:** 2026-08-23  
+**Last reviewed:** 2026-08-30  
 Ask the AI: **"What's the highest-impact item on the backlog this week?"**
 
 Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
@@ -17,6 +17,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open |
 | P2 | Deposit collection checklist for Jesse | Batteries/motors/controllers — HCP pipeline now in `shop_workflow.md` (COPY TO JOB → Awaiting Deposit → Need to Order → Waiting for Materials) | Jesse | **Pipeline rule logged 2026-08-23**; still align Admin Front Office SOP wait-code table |
 | P2 | Rename or deactivate HCP “Minimum Service Charge- Diagnostic Inspection” so quotes use Diagnostic | Prevents staff/bots quoting a retired separate fee | Jesse | Policy logged 2026-08-23 — bill as diagnostic; HCP name still in export |
+| P2 | Lock the live HCP credit-card surcharge line Jesse uses on every estimate | Policy is on; rate not specified — do not invent a % | Ryan / Jesse | Rule logged 2026-08-30 — surcharge on every estimate; recalc to final total before invoice/payment |
 | P3 | Everlogic evaluation demo + migration plan | HCP is wrong tool for shop-only | Ryan | Open |
 
 ## Revenue & growth
@@ -26,8 +27,8 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P1 | Lithium conversion funnel — landing page / GBP posts / before-afters | ~$81k/yr dedicated line + more in Services | Ryan | Open |
 | P2 | Review $64k marketing spend ROI (QBO) | Largest expense after payroll | Ryan | Open |
 | P2 | HOA outreach — revive or kill the tracker | Sheet in Drive, status unknown | Ryan | Open |
-| P2 | Standardize "Professional Kit" quote template for Jesse | Faster, consistent quotes | Jesse | **Reply standard logged 2026-08-23** — kit / warranty / convenience SMS in `customer_reply_standard.md`; still align HCP kit descriptions |
-| P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | **Superseded for customer talk** — quote `3.0-NGC Lithium Conversion Convenience Package` ($599 + tax) unless those à-la-carte lines are already on the live estimate. HCP Professional Kit copy still lists them as kit “if applicable” — Jesse should strip that from HCP descriptions |
+| P2 | Standardize "Professional Kit" quote template for Jesse | Faster, consistent quotes | Jesse | **Office quoting logged 2026-08-30** — Essential / Ready-to-Run / Accessory-Ready in `lithium_sales_guide.md`; kit/warranty SMS in `customer_reply_standard.md`; still align HCP kit descriptions and estimate checkboxes |
+| P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | **Superseded 2026-08-30** — office quoting is Essential / Ready-to-Run / Accessory-Ready (`lithium_sales_guide.md`). Do not default-pitch the $599 convenience package (all three extras ≠ Ready-to-Run). HCP Professional Kit copy still lists extras as kit “if applicable” — Jesse should strip that from HCP descriptions |
 | P3 | Fleet maintenance program — package for HOAs/commercial | Doc exists in Drive | Ryan | Open |
 | P3 | Prep cart sales playbook (bill of sale, deposits) for future launch | Strategic defer, but prep now | Ryan | Open |
 | P3 | Rental insurance RFP when rentals are greenlit — use rating catalog + 3 specialty quotes | Know CAT/GL cost before launch; 70433 wind/flood is material | Ryan | Catalog drafted — `knowledge/11_future_lines/` |
@@ -54,7 +55,8 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | Date | Item |
 |------|------|
-| 2026-08-23 | Lithium Front Desk reply standard — short kit list, Vatrer QC, 5-year full replacement, $599 convenience package SMS (no PII) |
+| 2026-08-30 | Lithium Conversion Sales Guide is the office quoting process (Essential / Ready-to-Run / Accessory-Ready) |
+| 2026-08-23 | Lithium Front Desk reply standard — short kit list, Vatrer QC, 5-year full replacement, SMS (no PII) |
 | 2026-08-22 | Taylor terminated; Peyton resigned; Ryan Gorgoglione is a golf cart technician; 6-job WIP cap disregarded |
 | 2026-08-15 | Jesse hired/seated as Admin / Service Coordinator; Christine → part-time assistant |
 | 2026-08-03 | Admin hiring pack drafted (time log, JD, phone+desk eval, SOPs, KPI/30-60-90); Gusto = new-hire packet |

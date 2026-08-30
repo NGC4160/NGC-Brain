@@ -305,13 +305,15 @@ DOCUMENTS: list[dict] = [
     },
     {
         "id": "professional-kit-quote",
-        "category": "customer",
-        "title": "Professional Kit quote template",
-        "description": "Jesse-ready lithium quote script/template — planned",
+        "category": "operations",
+        "title": "Lithium Conversion Sales Guide (office quoting)",
+        "description": "Essential / Ready-to-Run / Accessory-Ready — internal only; do not hand to the customer",
+        "source": "knowledge/02_products/lithium_sales_guide.md",
         "type": "markdown",
-        "audience": "Jesse",
-        "status": "planned",
-        "featured": False,
+        "audience": "Jesse / Ryan",
+        "status": "active",
+        "featured": True,
+        "view_path": "knowledge/02_products/lithium_sales_guide.md",
     },
     # --- Finance & admin ---
     {

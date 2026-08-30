@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-08-23
+**Last verified:** 2026-08-30
 
 ## Ownership
 
@@ -42,7 +42,7 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Area | What she owns |
 |------|----------------|
 | Front office | Phones, intake, deposits, customer updates, HCP wait codes |
-| Estimating | Standard **and advanced** estimates in HCP from tech findings + pricebook |
+| Estimating | Standard **and advanced** estimates in HCP from tech findings + pricebook. **Credit card surcharge on every estimate**; recalc to the final total before invoice or payment (do not invent a %) |
 | Pricebook | Maintenance in Housecall Pro (add/edit/deactivate lines; Ryan approves new rates) |
 | Inventory | Parts/stock visibility, counts, QBO/HCP alignment |
 | Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order |
