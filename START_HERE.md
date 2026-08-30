@@ -32,7 +32,7 @@ The AI reads `knowledge/` automatically via `.cursor/rules/`.
 
 Morning sync is **HCP + QBO**, plus an optional **Drive catalog** (`knowledge/.generated/drive_catalog.md`) when `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` is set. Live file **content** is the Google Drive connector (NGC985). Staff SOPs stay in Drive. `external_docs/My Drive/` is **not** a live sync.
 
-Personal / non-shop projects (Blake’s birdhouses) belong in [NGC4160/personal-projects](https://github.com/NGC4160/personal-projects), not this repo.
+Personal / non-shop projects (Blake’s birdhouses) belong in [NGC4160/PersonalProjects](https://github.com/NGC4160/PersonalProjects), not this repo.
 
 ---
 
