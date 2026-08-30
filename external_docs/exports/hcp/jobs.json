@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-08-29T17:15:10.321235+00:00",
+  "synced_at": "2026-08-30T17:38:39.427655+00:00",
   "count": 500,
   "jobs": [
     {
@@ -3870,8 +3870,8 @@
         "arrival_window": 120,
         "appointments": []
       },
-      "total_amount": 25701,
-      "outstanding_balance": 25701,
+      "total_amount": 31164,
+      "outstanding_balance": 31164,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -3945,7 +3945,7 @@
       "original_estimate_uuids": [
         "est_454a7fe50bb34f5aa9ccaa750a728ef0"
       ],
-      "subtotal": 23525,
+      "subtotal": 28525,
       "lead_source": null,
       "job_fields": {
         "job_type": null,
@@ -3953,7 +3953,7 @@
       },
       "locked_at": null,
       "created_at": "2026-08-10T16:52:10Z",
-      "updated_at": "2026-08-28T23:15:39Z",
+      "updated_at": "2026-08-30T13:21:15Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -6770,7 +6770,7 @@
         "appointments": []
       },
       "total_amount": 68090,
-      "outstanding_balance": 68090,
+      "outstanding_balance": 0,
       "assigned_employees": [
         {
           "id": "pro_9a4f269a87ac4d4ab78bbe08dbcce4b7",
@@ -6885,7 +6885,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-30T17:28:36Z",
-      "updated_at": "2026-08-28T22:44:00Z",
+      "updated_at": "2026-08-30T13:19:15Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
@@ -7521,11 +7521,11 @@
           "content": "Vatrer VD1101"
         }
       ],
-      "work_status": "in progress",
+      "work_status": "complete unrated",
       "work_timestamps": {
         "on_my_way_at": "2026-08-25T19:10:30Z",
         "started_at": "2026-08-05T13:17:59Z",
-        "completed_at": null
+        "completed_at": "2026-08-30T14:21:24Z"
       },
       "schedule": {
         "scheduled_start": "2026-08-04T13:00:00Z",
@@ -7687,7 +7687,7 @@
       },
       "locked_at": null,
       "created_at": "2026-07-28T14:38:44Z",
-      "updated_at": "2026-08-25T19:10:36Z",
+      "updated_at": "2026-08-30T14:21:25Z",
       "canceled_at": null,
       "deleted_at": null,
       "assigned_route_template_id": null,
