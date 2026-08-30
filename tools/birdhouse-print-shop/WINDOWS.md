@@ -16,17 +16,9 @@ No Render account. No Python install. Data stays on their PC.
 
 ## How you get the exe (once)
 
-### Option A — GitHub builds it for you (recommended)
+### Option A — GitHub Actions (removed from NGC-Brain)
 
-1. Open the repo on GitHub → **Actions**
-2. Select workflow **Build Birdhouse Windows App**
-3. Click **Run workflow** (branch `cursor/birdhouse-print-shop-mvp-838f` or `main`)
-4. When it finishes → open the run → download artifact **BirdhousePrintShop-Windows**
-5. Unzip → you’ll have `BirdhousePrintShop.exe`
-6. Also creates a GitHub Release download link you can text
-
-Direct Actions page after push:  
-https://github.com/NGC4160/NGC-Brain/actions/workflows/birdhouse-windows.yml
+Birdhouse desktop CI was dropped from this repo (unused by Command Center / shop). Build on a Windows PC (below) or add a workflow in a Blake-owned repo.
 
 ### Option B — Build on a Windows PC
 

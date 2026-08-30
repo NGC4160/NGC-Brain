@@ -45,7 +45,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | P | Item | Why | Owner | Status |
 |---|------|-----|-------|--------|
-| P2 | NGC Admin Bot — Phase 1 deposit gate alerts | Spec + script live; Phase 2 review requests next | Ryan | In progress |
+| P2 | Deposit-alert batch script (not a Grok Bot) | Spec + script live; Phase 2 review requests next. COS is Chief. | Ryan | In progress |
 | P1 | Hire Admin / Service Coordinator (Board Jul 2026) | Free Ryan for diagnostics/training/QC | Ryan | **Filled — Jesse** (2026-08-15); Christine part-time backup |
 | P3 | Technician skills matrix (Marlon vs Ryan Gorgoglione) | Better job assignment — Taylor/Peyton are gone | Ryan | Open — refresh names |
 

@@ -79,19 +79,18 @@ Keep CSV export to `external_docs/exports/pricebook/` — hooks still sync.
 
 ## Google Drive
 
-### Current (no API)
+### Current (no API — not live-synced)
 
-Google Drive for Desktop syncs to `external_docs/My Drive/`
+Staff SOPs live in Drive Procedures. Brain **points at** them. Morning sync does **not** pull Drive. `.gitmodules` is only GarageBuddy.
 
-**Limitation:** `.gsheet` / `.gdoc` files are stubs — export to xlsx/pdf for AI reading.
+- [NGC Document Repository](https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r)
+- [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)
 
-### Upgrade: Google Drive MCP
+`external_docs/My Drive/` is a mention/symlink, not a working connector. `.gsheet` / `.gdoc` stubs are not readable content.
 
-1. Google Cloud Console → enable Drive API
-2. OAuth credentials → install a Drive MCP server from Cursor MCP directory
-3. Scope: `drive.readonly` on NGC shared drive folder
+### Upgrade: Google Drive MCP (backlog only — do not invent this as live)
 
-**Automate:** Nightly export of key sheets (Tech Performance, HOA, Outreach) to `external_docs/exports/drive/`
+A Drive API MCP is **not** built. Do not document it as current. If Ryan later asks: Cloud Console → Drive API → `drive.readonly` on the Procedures folder. Until then, open the Drive links above.
 
 ---
 

@@ -222,9 +222,9 @@ def build_systems() -> list[dict]:
         },
         {
             "id": "drive",
-            "name": "Google Drive",
-            "role": "SOPs · Document repository",
-            "url": "https://drive.google.com/",
+            "name": "Google Drive Procedures",
+            "role": "Staff SOPs · QC / IR forms (not synced into git)",
+            "url": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
             "status": "online",
             "icon": "📁",
         },
@@ -239,7 +239,7 @@ def build_systems() -> list[dict]:
         {
             "id": "garagebuddy",
             "name": "Garage Buddy",
-            "role": "Open-source garage DMS (eval)",
+            "role": "Future/eval DMS — not current shop process",
             "url": "https://github.com/dimitar-grigorov/GarageBuddy",
             "status": "online",
             "icon": "🔧",
@@ -263,7 +263,7 @@ def build_app_links() -> list[dict]:
         ("SOPs", "Standard operating procedures", "../sops/"),
         ("Resources", "Docs & reference library", "../resources/"),
         ("Settings", "App configuration", "../settings/"),
-        ("Blake's Birdhouses", "3D print shop mission board", "../birdhouse/"),
+        ("Blake's Birdhouses", "Print / Blake — not NGC shop process", "../birdhouse/"),
     ]
     return [
         {"title": title, "desc": desc, "href": href, "primary": i == 0}
@@ -346,8 +346,8 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict], documents_catal
                     "primary": True,
                 },
                 {
-                    "title": "Admin Bot Spec",
-                    "desc": "Deposit alerts · review requests · webhooks",
+                    "title": "Deposit-alert script spec",
+                    "desc": "Batch automation — not a Grok Bot / not COS",
                     "href": "view.html?path=knowledge/10_automation/ngc_admin_bot_spec.md",
                 },
                 {
@@ -405,7 +405,7 @@ def build_zones(manifest: dict, ops: dict, pipeline: list[dict], documents_catal
             "title": "Technician Training",
             "icon": "▣",
             "color": "#f472b6",
-            "description": "Golf Cart Diagnostic Technician — 10 weeks · 40 hours",
+            "description": "10-week diagnostic pack — not Jesse’s tech binder",
             "cards": [
                 {
                     "title": "Training Hub",
@@ -483,6 +483,15 @@ def bundle_static_content(manifest: dict) -> int:
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(md, dst)
             copied += 1
+
+    notice = content / "GENERATED.md"
+    notice.write_text(
+        "# Generated publish copy — do not edit\n\n"
+        "`docs/content/` is built by `scripts/build_command_center.py` "
+        "(morning-sync and Pages deploy). Edit `knowledge/`, `prompts/`, "
+        "and `external_docs/templates/` instead. This is not a second knowledge tree.\n"
+    )
+    copied += 1
 
     print(f"Bundled {copied} files into docs/content/")
     return copied

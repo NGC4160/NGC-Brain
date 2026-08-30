@@ -6,6 +6,8 @@
 
 **Do not hand this sheet to the customer.** Inspect the cart first. Recommend only what that cart needs.
 
+**Official PDF (Drive Procedures):** [Lithium Conversion Sales Guide](https://drive.google.com/file/d/1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC/view) (file id `1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC`). Staff file lives in Drive; this brain does **not** auto-pull Drive.
+
 Product SKUs, kit prices, warranty, and deposits: [lithium_conversions.md](lithium_conversions.md).  
 Customer SMS (kit / warranty / quality): [customer_reply_standard.md](../07_customers_marketing/customer_reply_standard.md).
 

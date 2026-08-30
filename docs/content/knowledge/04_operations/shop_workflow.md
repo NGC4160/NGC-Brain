@@ -34,7 +34,7 @@ In the HCP jobs pipeline, the stages **New job** and **Customer drop off** ARE t
 
 Do **not** say we lock a time, hold a spot, or make it an easy yes.
 
-**Queue snapshot (2026-08-24):** Steve Tresch is in the pickup/drop-off queue (**New job** / **Customer drop off**). HCP job **#17444** (from the existing HCP jobs export — not invented). No other customer details here.
+Do **not** store a named customer snapshot in this file. Open HCP for who is in **New job** / **Customer drop off**.
 
 This queue is **distinct** from the parts-deposit pipeline below. The deposit pipeline still applies to approved work that needs a parts deposit.
 
@@ -107,13 +107,28 @@ Applies when the customer has approved estimate(s) and the job needs a parts dep
 - Professional Kit install ~6 hours
 - Provide lithium care guide at pickup
 
-### 6. Job completion & payment
+### 6. Pre-delivery QC — NGC-QC-1 (Rev. 2026-08-24)
+
+Official **pre-delivery QC** form. Staff file lives in **Google Drive → Procedures** ([folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)). Brain points at it; Drive is not auto-pulled.
+
+| Rule | Detail |
+|------|--------|
+| Pages | **2** letter pages |
+| Print | **Single-sided** |
+| Complete | **In ink** |
+| Marks | **Pass / Flag / Fail** |
+| **Flag** | N/A or unable to test — not a pass and not a fail |
+| Extra QC-only block | Keys, charger, belongings, lithium meter note, payment, and **Ready / Hold** |
+
+Do not invent a substitute form. Do not treat the complimentary 7-point inspection PDF in `external_docs/templates/operations/` as NGC-QC-1 — that sheet is the campground / INSPECT10 inspection.
+
+### 7. Job completion & payment
 
 - Collect payment at pickup or invoice via HCP (text/email)
 - **Before sending the invoice for payment, or before taking payment:** update the credit card surcharge so it matches the **final total**. The line must already be on the estimate (every estimate). Do not invent a rate.
 - **Roy** delivers cart if customer used pickup service
 
-### 7. Documentation
+### 8. Documentation
 
 Historical mobile SOPs referenced Housecall Pro photos, checklists, and NGC stickers on carts. Shop workflow should maintain:
 
@@ -122,15 +137,31 @@ Historical mobile SOPs referenced Housecall Pro photos, checklists, and NGC stic
 - Parts used / ordered
 - Customer-facing summary of work performed
 
+## Incident report — NGC-IR-1 (Rev. 2026-08-24)
+
+Official **4-page** incident form. Staff file lives in **Google Drive → Procedures** ([folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)).
+
+| Rule | Detail |
+|------|--------|
+| Print | **Single-sided** |
+| Complete | **In ink, with the employee** |
+| What it is | **Shop record only** — not workers’ comp |
+| Facts | Fill **only stated facts** |
+| Do not invent | Medical details, EMS, witnesses, or loss of consciousness (LOC) |
+
 ## Internal reference documents
+
+Staff SOPs live in Drive. Brain points at them. Drive is **not** live-synced into git.
 
 | Document | Location |
 |----------|----------|
-| 7-point inspection report (print) | `external_docs/templates/operations/NGC_Golf_Cart_Inspection_Report.pdf` |
-| Mobile repair SOP (legacy) | `NGC Document Repository /Procedures/Mobile Golf Cart Repair and Safety Protocol.docx` |
-| Procedure checklist (legacy HCP flow) | `NGC Document Repository /Checklists/NGC Mobile Golf Cart Repair Services Procedure Checklist.docx` |
-| Technician hiring test | `My Drive/Hiring quiz evaluation - Technician.docx` |
-| Bill of sale form | `Management/NGC Golf Cart Bill of Sale Form (2).pdf` (for future sales) |
+| **NGC-QC-1** pre-delivery QC | Drive Procedures — [folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) |
+| **NGC-IR-1** incident form | Drive Procedures — same folder |
+| Lithium Conversion Sales Guide (PDF) | [Drive file](https://drive.google.com/file/d/1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC/view) — internal; do not hand to customers. Brain: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md) |
+| NGC Document Repository | [Drive folder](https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r) |
+| 7-point inspection report (print, INSPECT10) | `external_docs/templates/operations/NGC_Golf_Cart_Inspection_Report.pdf` |
+| Mobile repair SOP (legacy) | Drive Procedures — do not quote as current |
+| Bill of sale form | Drive Management (future sales — not offered today) |
 
 ## Future: DMS migration
 

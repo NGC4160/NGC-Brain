@@ -1,10 +1,11 @@
-# NGC Admin Bot — Specification
+# NGC Admin Bot — Specification (planned batch automation)
 
-**Last verified:** 2026-08-23  
+**Last verified:** 2026-08-30  
 **Owner:** Ryan  
-**Status:** Phase 1 MVP (deposit gate alerts) — batch script  
-**Brain:** `knowledge/` — Admin Bot, **Chief** (Ryan's Grok Bot COS), and other shop bots must operate from this brain and write durable facts back here.  
-**Data:** HCP API · **Future home:** `external_docs/My Drive/NGC Admin Bot/` (empty today)
+**Status:** Phase 1 MVP (deposit gate alerts) — **batch script**, still a real planned tool  
+**Not a Grok Bot. Not the COS.** Live Grok roster (Chief + shop bots) is in [`05_team/roles.md`](../05_team/roles.md). Do not treat this spec as a second chief of staff.  
+**Brain:** `knowledge/` — **Chief** and shop bots operate from this brain. This script reads HCP aggregates and writes `knowledge/.generated/deposit_alerts.md` (invoice # + description only).  
+**Data:** HCP API (`jobs.json` is **local / gitignored** — customer PII). There is no Drive folder sync for this tool.
 
 ---
 

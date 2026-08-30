@@ -1,5 +1,7 @@
 # NGC Operations Templates
 
+**Canonical copy** for printable ops forms that live in this repo. Command Center `docs/documents/operations/` is publish output. Official pre-delivery QC (**NGC-QC-1**) and incident (**NGC-IR-1**) forms are staff files in Google Drive Procedures — see `knowledge/04_operations/shop_workflow.md`. Do not duplicate those PDFs here unless Ryan adds them.
+
 ## 7-Point Golf Cart Inspection Report
 
 **PDF:** [NGC_Golf_Cart_Inspection_Report.pdf](NGC_Golf_Cart_Inspection_Report.pdf)

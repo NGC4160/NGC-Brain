@@ -18,18 +18,18 @@ description: Sync live data from Housecall Pro API (MAX plan), test connection, 
 
 Writes to `external_docs/exports/hcp/`:
 
-- `company.json`
-- `jobs.json`
-- `pricebook_services.json`
-- `api_sync_manifest.json`
+- `company.json` (OK to commit)
+- `jobs.json` (**local only / gitignored** — customer PII; do not `git add`)
+- `pricebook_services.json` (OK to commit)
+- `api_sync_manifest.json` (OK to commit)
 
-Then runs `run_ingest.sh` to update `knowledge/.generated/sync_manifest.json`.
+Then runs `run_ingest.sh` to update `knowledge/.generated/sync_manifest.json` (counts / status — no names).
 
 ## Morning briefing with live jobs
 
 1. Run sync if `api_sync_manifest.json` is older than 4 hours
-2. Read `external_docs/exports/hcp/jobs.json`
-3. Summarize by **status** (scheduled, in_progress, completed) — **no customer names**
+2. Read local `external_docs/exports/hcp/jobs.json` if present, or `knowledge/.generated/shop_board.md`
+3. Summarize by **status** (scheduled, in_progress, completed) — **no customer names**. Do not copy names into `knowledge/` or commit `jobs.json`.
 4. Flag lithium jobs, deposit-pending, overdue turnaround
 5. Combine with user's shop status and `knowledge/09_daily_ops/improvement_backlog.md`
 
@@ -40,4 +40,4 @@ If `housecall-pro` MCP is configured in `.cursor/mcp.json`, prefer MCP tools for
 ## Never
 
 - Store customer PII in `knowledge/` files
-- Commit API keys to git
+- Commit API keys or `external_docs/exports/hcp/jobs.json` to git

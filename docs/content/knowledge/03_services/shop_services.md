@@ -110,7 +110,7 @@ All major makes and models, including:
 - Yamaha
 - Tomberlin, GEM, Columbia Par Car, Bad Boy Buggy, Star Classic, and others
 
-Service manuals and procedures: `external_docs/My Drive/NGC Document Repository /`
+Service manuals and procedures: Google Drive Procedures ([folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)) — not live-synced into this repo.
 
 ## What's not offered
 

@@ -1,7 +1,8 @@
 # NGC Automation Architecture
 
-**Last verified:** 2026-07-13  
-**Goal:** Replace manual exports and copy-paste prompts with connectors, scheduled jobs, and live data where APIs allow.
+**Last verified:** 2026-08-30  
+**Goal:** Replace manual exports and copy-paste prompts with connectors, scheduled jobs, and live data where APIs allow.  
+**COS:** **Chief** (Grok Bot) is Ryan’s only point of contact. This folder is connectors + scripts — not a second COS. Live roster: [`05_team/roles.md`](../05_team/roles.md).
 
 ## Automation stack (target state)
 
@@ -9,17 +10,17 @@
 ┌─────────────────────────────────────────────────────────────────┐
 │                     Cursor Business Brain                        │
 │  Rules · Skills · Hooks · knowledge/ · prompts/                  │
-│  Chief + shop bots operate from here and write facts back        │
+│  Chief (COS) + shop bots operate from here and write facts back  │
 └────────────┬───────────────────────────────┬────────────────────┘
              │                               │
     ┌────────▼────────┐              ┌───────▼────────┐
     │  Local sync     │              │  Live MCP/API  │
     │  (today)        │              │  (connect)     │
     ├─────────────────┤              ├────────────────┤
-    │ HCP CSV export  │              │ QuickBooks MCP │
-    │ QBO xlsx export │              │ HCP API (MAX)  │
-    │ Google Drive    │              │ Zapier/Make    │
-    │   Desktop sync  │              │ Everlogic API  │
+    │ HCP CSV / API   │              │ QuickBooks MCP │
+    │ QBO xlsx / API  │              │ HCP API (MAX)  │
+    │ (Drive not      │              │ Zapier/Make    │
+    │  auto-synced)   │              │ Everlogic API  │
     └─────────────────┘              └────────────────┘
 ```
 
@@ -33,7 +34,7 @@
 | **3** | **HCP API sync** (MAX plan) | Medium | ✅ Scripts + daily GitHub Action |
 | **3b** | **QBO API sync** (morning pull) | Medium | ✅ Live — daily GitHub Action |
 | **4** | Cursor Automations (scheduled weekly review) | Low | 🔲 Agents Window |
-| **5** | Custom NGC Admin Bot + webhooks | High | 🟡 Phase 1 live — deposit alerts |
+| **5** | Deposit-alert **batch script** + future webhooks | High | 🟡 Phase 1 live — **not** a Grok Bot / not COS |
 
 ## What runs automatically today
 
@@ -61,10 +62,14 @@ Run manually anytime:
 
 **Template:** [`../../.cursor/mcp.json.example`](../../.cursor/mcp.json.example)
 
-### 2. Google Drive — **already partial**
+### 2. Google Drive — **not live-synced (do not invent a Drive API in this brain)**
 
-**Current:** Google Drive for Desktop → `external_docs/My Drive/`  
-**Upgrade:** Google Drive API MCP for reading `.gsheet`/`.gdoc` content without manual export
+Staff SOPs live in Drive Procedures. This brain **points at** folder IDs — it does **not** auto-pull Drive. Morning sync is HCP + QBO only. `.gitmodules` is only GarageBuddy.
+
+- Repository: [1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r](https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r)
+- Procedures: [1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)
+
+A future Drive MCP is backlog only. Do not treat `external_docs/My Drive/` as a working connector.
 
 ### 3. Housecall Pro
 
@@ -108,7 +113,7 @@ When selected: API or export sync for inventory, ROs, customers. Plan migration 
 | [hcp_api_setup.md](hcp_api_setup.md) | HCP API key + sync scripts |
 | [qbo_api_setup.md](qbo_api_setup.md) | QBO OAuth + morning sync secrets |
 | [automations_catalog.md](automations_catalog.md) | Recommended Cursor Automations + Zapier recipes |
-| [ngc_admin_bot_spec.md](ngc_admin_bot_spec.md) | **Admin Bot** — deposit alerts, review requests, webhooks |
+| [ngc_admin_bot_spec.md](ngc_admin_bot_spec.md) | Planned **batch** deposit alerts — not a Grok Bot / not COS |
 
 ## Success metrics
 

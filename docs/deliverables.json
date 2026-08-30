@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-30T18:01:50Z",
+  "generated_at": "2026-08-30T18:24:04Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 130,
+  "total_items": 133,
   "sections": [
     {
       "id": "start",
@@ -321,8 +321,8 @@
           ]
         },
         {
-          "title": "Admin Bot Spec",
-          "description": "Deposit alerts, review requests, webhooks.",
+          "title": "Deposit-alert script spec",
+          "description": "Batch automation \u2014 not a Grok Bot / not COS.",
           "path": "knowledge/10_automation/ngc_admin_bot_spec.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/10_automation/ngc_admin_bot_spec.md",
@@ -655,8 +655,32 @@
           ]
         },
         {
+          "title": "NGC-QC-1 Pre-delivery QC (Drive)",
+          "description": "Official 2-page form (Rev. 2026-08-24) \u2014 print single-sided, complete in ink. Pass/Flag/Fail. Staff file in Drive Procedures.",
+          "path": "docs/documents/catalog.json",
+          "type": "link",
+          "view": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+          "tags": [
+            "document",
+            "operations",
+            "link"
+          ]
+        },
+        {
+          "title": "NGC-IR-1 Incident report (Drive)",
+          "description": "Official 4-page shop record (Rev. 2026-08-24) \u2014 not workers\u2019 comp. Print single-sided; ink with the employee. Stated facts only.",
+          "path": "docs/documents/catalog.json",
+          "type": "link",
+          "view": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
+          "tags": [
+            "document",
+            "operations",
+            "link"
+          ]
+        },
+        {
           "title": "7-Point Golf Cart Inspection Report",
-          "description": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10",
+          "description": "Printable battery test + 7-point safety form \u00b7 campground / event \u00b7 CODE INSPECT10 \u2014 not NGC-QC-1",
           "path": "external_docs/templates/operations/NGC_Golf_Cart_Inspection_Report.pdf",
           "type": "pdf",
           "view": "documents/operations/NGC_Golf_Cart_Inspection_Report.pdf",
@@ -680,7 +704,7 @@
         },
         {
           "title": "Lithium Conversion Sales Guide (office quoting)",
-          "description": "Essential / Ready-to-Run / Accessory-Ready \u2014 internal only; do not hand to the customer",
+          "description": "Essential / Ready-to-Run / Accessory-Ready \u2014 internal only; do not hand to the customer. Drive PDF in Procedures.",
           "path": "knowledge/02_products/lithium_sales_guide.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/02_products/lithium_sales_guide.md",
@@ -691,8 +715,20 @@
           ]
         },
         {
-          "title": "Golf-cart rental insurance rating",
-          "description": "Planning catalog + quote calculator for a future rental fleet (not offered today)",
+          "title": "Lithium Conversion Sales Guide (Drive PDF)",
+          "description": "Staff PDF in Drive Procedures \u2014 internal only; do not hand to customers",
+          "path": "docs/documents/catalog.json",
+          "type": "link",
+          "view": "https://drive.google.com/file/d/1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC/view",
+          "tags": [
+            "document",
+            "operations",
+            "link"
+          ]
+        },
+        {
+          "title": "Golf-cart rental insurance rating (future / eval)",
+          "description": "Planning catalog \u2014 not current shop process; not offered today",
           "path": "knowledge/11_future_lines/golf_cart_rental_insurance_rating.md",
           "type": "markdown",
           "view": "view.html?path=knowledge/11_future_lines/golf_cart_rental_insurance_rating.md",
@@ -881,7 +917,7 @@
         },
         {
           "title": "Deposit Gate Alerts",
-          "description": "Admin Bot Phase 1 \u2014 deposit notifications.",
+          "description": "Batch script Phase 1 \u2014 deposit notifications (not a Grok Bot).",
           "path": "scripts/admin_bot/deposit_gate_alerts.py",
           "type": "python",
           "view": "scripts/admin_bot/deposit_gate_alerts.py",

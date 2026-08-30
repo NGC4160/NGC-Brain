@@ -124,6 +124,7 @@ def build_board(jobs: list[dict], synced_at: str | None) -> str:
         "",
         f"**Generated:** {now.strftime('%Y-%m-%d %H:%M UTC')}  ",
         f"**HCP jobs export:** {synced_at or 'unknown'}  ",
+        "**Not policy.** Generated snapshot from local `jobs.json` (gitignored). Invoice # + description only.",
         "**Privacy:** No customer names or addresses.",
         "",
         "## Snapshot",

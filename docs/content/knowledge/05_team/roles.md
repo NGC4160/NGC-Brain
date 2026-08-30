@@ -35,6 +35,30 @@ Confirmed **2026-08-22**. Do not schedule, assign, or quote these names as curre
 |------|------|------|
 | **Jessica** | Bookkeeper (QBO) | Griffin & Furman |
 
+## Grok Bot roster (live)
+
+**Do not invent extra bots.** Chief is Ryan’s **only** point of contact. All other bots report to Chief. Approvals go through Chief, who asks Ryan: Slack to Jesse, money, payroll submit, sign-in, delete a bot, orders.
+
+| Bot | Role |
+|-----|------|
+| **Chief** (COS) | id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1` — Ryan’s only POC. Collects weekday 11am America/Chicago lead forms, then asks Ryan before Slack to Jesse. |
+| **Inbox** | Intake / mail. Must **not** auto-Slack Jesse because lithium “stays with Jesse.” Lead forms only from **NGC985 / ryan@ / contact@**. |
+| **Shop** | Shop-floor ops |
+| **Front Desk** | Customer replies (lithium kit/warranty from `customer_reply_standard.md`) |
+| **Parts** | Parts / deposit-before-order |
+| **Books** | Books coordination |
+| **Betty** | HR |
+| **CFO** | Finance |
+| **Marketing** | Marketing |
+| **IT** | IT |
+| **Call Coach** | Call coaching |
+| **Print** | Blake birdhouses — **not** NGC shop process. Source stays in `tools/birdhouse-print-shop/` |
+| **Bot Manager** | Create / manage bots only. **Never delete a bot** without Ryan (via Chief). |
+
+**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
+
+The deposit-alert **batch script** in `scripts/admin_bot/` is planned/live automation — **not** a Grok Bot and **not** the COS. Spec: [ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md).
+
 ## Jesse — scope (current)
 
 Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, and QC. She handles the majority of work Christine previously did **plus**:

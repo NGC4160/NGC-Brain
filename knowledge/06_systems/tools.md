@@ -8,10 +8,10 @@
 |--------|---------|--------|
 | **Housecall Pro** | Scheduling, pricebook, jobs, invoicing, customer comms | Active |
 | **QuickBooks Online** | Accounting, inventory, sales tax, P&L | Active — books clean |
-| **Google Drive** | SOPs, document repository, internal docs | Active (`external_docs/My Drive/`) |
+| **Google Drive** | Staff SOPs, Procedures, manuals | **Active in Drive** — Brain **points at** it; **not** live-synced into git |
 | **Website** | [NGCGolfCarts.com](https://www.NGCGolfCarts.com) | Active |
 | **Google Business Profile** | Local presence, reviews | Active |
-| **GarageBuddy** | Open-source garage DMS (eval sandbox) | Eval — see [garagebuddy.md](garagebuddy.md) |
+| **GarageBuddy** | Open-source garage DMS (**future/eval** sandbox) | Not current shop process — see [garagebuddy.md](garagebuddy.md) |
 
 ## Housecall Pro
 
@@ -88,29 +88,30 @@ Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or
 4. Train Jesse + Ryan on new scheduling/invoicing flow
 5. Parallel-run period before cutting HCP
 
-## Document repository
+## Document repository (Google Drive — not synced)
 
-`external_docs/My Drive/NGC Document Repository /`
+Staff SOPs live in Google Drive. This brain **points at** them. Morning sync is **HCP + QBO only**. There is **no** Drive API connector. `.gitmodules` is only GarageBuddy. The path `external_docs/My Drive/NGC Document Repository/` is a mention/symlink, not a working sync.
 
-| Subfolder | Contents |
-|-----------|----------|
-| Procedures | Shop/mobile SOPs, diagnostic workflows |
-| Checklists | Service procedure checklists |
-| Manuals | OEM manuals by brand (Club Car, EZGO, Yamaha, etc.) |
+| Folder | Drive ID | Open |
+|--------|----------|------|
+| **NGC Document Repository** | `1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r` | [folder](https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r) |
+| **Procedures** | `1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh` | [folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) |
 
-## NGC Admin Bot
+Procedures holds official **NGC-QC-1**, **NGC-IR-1**, the Lithium Conversion Sales Guide PDF, and other shop SOPs. Short rules: [shop_workflow.md](../04_operations/shop_workflow.md), [lithium_sales_guide.md](../02_products/lithium_sales_guide.md).
 
-Folder: `external_docs/My Drive/NGC Admin Bot/` — automation/AI backend (empty; code lives in repo).
+## Deposit-alert script (not a Grok Bot)
+
+Batch automation after HCP sync. **Not** the COS. Live Grok roster: [roles.md](../05_team/roles.md).
 
 | Resource | Purpose |
 |----------|---------|
-| [10_automation/ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md) | Full spec + roadmap |
+| [10_automation/ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md) | Planned/batch spec — deposit alerts, review requests |
 | `scripts/admin_bot/deposit_gate_alerts.py` | Phase 1 — Jesse deposit queue |
-| `knowledge/.generated/deposit_alerts.md` | Daily output (no PII) |
+| `knowledge/.generated/deposit_alerts.md` | Generated snapshot (invoice # + description only) — **not policy** |
 
 Run: `./scripts/admin_bot/run_deposit_alerts.sh` (auto-runs after HCP sync)
 
-This knowledge base (`knowledge/`) serves as the bot's structured policy layer.
+This knowledge base (`knowledge/`) is the policy layer for **Chief** and shop bots.
 
 ## Integrations & fees
 

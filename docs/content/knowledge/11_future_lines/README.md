@@ -1,6 +1,6 @@
-# Future lines (not offered today)
+# Future lines (eval only — not current shop process)
 
-Planning files for businesses NGC has **explicitly deferred** (cart sales, rentals). Do not use these in customer quotes.
+Planning files for businesses NGC has **explicitly deferred** (cart sales, rentals). **Do not use these in customer quotes, morning briefings, or Jesse’s daily workflow.** Keep them here for later; they are not today’s shop process.
 
 | File | What it is |
 |------|------------|
