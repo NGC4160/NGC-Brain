@@ -223,7 +223,7 @@ def build_systems() -> list[dict]:
         {
             "id": "drive",
             "name": "Google Drive Procedures",
-            "role": "Staff SOPs · QC / IR forms (not synced into git)",
+            "role": "Staff SOPs · Drive catalog in Brain (not a My Drive clone)",
             "url": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
             "status": "online",
             "icon": "📁",

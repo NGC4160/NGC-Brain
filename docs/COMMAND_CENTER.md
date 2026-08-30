@@ -49,7 +49,7 @@ To add a present or future document: edit [`scripts/documents_catalog.py`](../sc
 
 ## Refresh live data
 
-**Automatic:** GitHub Actions runs **Morning Sync** every day at **7:30 AM CST** — pulls HCP + QBO, updates Command Center, deploys to gh-pages.
+**Automatic:** GitHub Actions runs **Morning Sync** every day at **7:30 AM CST** — pulls HCP + QBO, optional Drive catalog, updates Command Center, deploys to gh-pages. Drive file content stays in Drive (connector). Catalog only if `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` is set.
 
 **Manual** from your machine:
 

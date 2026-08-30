@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T18:24:04.887342+00:00",
+  "generated_at": "2026-08-30T18:47:00.869134+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-08-30T18:24:04.851034+00:00",
+    "generated_at": "2026-08-30T18:47:00.824705+00:00",
     "jobs_synced_at": "2026-08-30T17:38:39.427655+00:00",
     "has_live_data": true,
     "metrics": {
@@ -354,7 +354,7 @@
     {
       "id": "drive",
       "name": "Google Drive Procedures",
-      "role": "Staff SOPs \u00b7 QC / IR forms (not synced into git)",
+      "role": "Staff SOPs \u00b7 Drive catalog in Brain (not a My Drive clone)",
       "url": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
       "status": "online",
       "icon": "\ud83d\udcc1"
@@ -707,7 +707,7 @@
         },
         {
           "title": "Google Drive Procedures",
-          "desc": "Staff SOPs \u00b7 QC / IR forms (not synced into git)",
+          "desc": "Staff SOPs \u00b7 Drive catalog in Brain (not a My Drive clone)",
           "href": "https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh",
           "external": true
         },

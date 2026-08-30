@@ -18,7 +18,7 @@ Do **not** edit Command Center copies as a second knowledge tree:
 | `docs/live/` and `knowledge/.generated/` | Generated snapshots (counts, invoice #) — **not policy** |
 | `docs/training/` | 10-week diagnostic training pack — keep there; not shop policy; not Jesse’s tech binder |
 
-Morning sync is **HCP + QBO only** (last run 2026-08-30: HCP ok, QBO fail). Google Drive is **not** live-synced.
+Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO run 2026-08-30: HCP ok, QBO fail). Live Drive **content** = Google Drive connector (NGC985).
 
 ## Document map
 
@@ -35,7 +35,7 @@ Morning sync is **HCP + QBO only** (last run 2026-08-30: HCP ok, QBO fail). Goog
 | [05_team/roles.md](05_team/roles.md) | Human roster + **live Grok Bot roster** (Chief is COS) |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [../docs/documents/README.md](../docs/documents/README.md) | Command Center Documents hub (**publish output** — edit `external_docs/templates/`) |
-| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, Drive (pointer only — not synced), future DMS |
+| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, Drive catalog + connector, future DMS |
 | [06_systems/garagebuddy.md](06_systems/garagebuddy.md) | **GarageBuddy** — **future/eval** DMS sandbox, not current shop process |
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
 | [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, meter/speedometer, SMS templates (no PII) |
@@ -58,15 +58,24 @@ Morning sync is **HCP + QBO only** (last run 2026-08-30: HCP ok, QBO fail). Goog
 | `external_docs/exports/qbo/` | QBO exports (API JSON and/or xlsx) |
 | `external_docs/exports/hcp/` | HCP aggregates (company, pricebook, manifests). **`jobs.json` is local-only / gitignored** — customer PII |
 | `knowledge/.generated/` · `docs/live/` | Generated snapshots after morning sync — **not policy** |
+| `knowledge/.generated/drive_catalog.md` | **GENERATED Drive catalog** (names, ids, mime, modifiedTime, parent, view URL) — not policy |
 
-### Google Drive (staff SOPs — not synced into git)
+### Google Drive (truth)
 
-Brain **points at** Drive. Morning sync does **not** pull Drive. `.gitmodules` is only GarageBuddy. The path `external_docs/My Drive/NGC Document Repository/` is a mention/symlink, **not** a working Drive connector.
+| Layer | What it is |
+|-------|------------|
+| **Live file content** | Google Drive connector (NGC985) — shop bots read SOPs here |
+| **Brain catalog** | [`knowledge/.generated/drive_catalog.md`](.generated/drive_catalog.md) — generated list only |
+| **Staff SOPs** | Stay in Drive Procedures. **NGC-QC-1 / NGC-IR-1 not yet in Drive Procedures** (2026-08-30) |
+| **`external_docs/My Drive/`** | **Not** a live sync. Mention/symlink only. `.gitmodules` is GarageBuddy. |
+| **Actions** | Optional `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` refreshes the catalog. Missing secret = skip, do not fail HCP/QBO. Never commits File_000 or binaries. |
 
 | Folder | Open |
 |--------|------|
 | **NGC Document Repository** | [Drive folder](https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r) (`1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r`) |
-| **Procedures** (QC, IR, lithium sales PDF, shop SOPs) | [Drive folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) (`1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh`) |
+| **Procedures** | [Drive folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) (`1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh`) |
+| **Checklists** | [Drive folder](https://drive.google.com/drive/folders/1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp) (`1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp`) |
+| **Manuals** | [Drive folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) (`1-1QqJQh4UojQEERawwpfEjKYOor2VMuR`) |
 
 ## Bots & Chief
 
@@ -81,7 +90,7 @@ When information conflicts, use this order:
 1. **Owner/staff verbal confirmation** (most recent)
 2. **`knowledge/` files** (this folder)
 3. **Raw exports** in `external_docs/exports/`
-4. **Google Drive Procedures** (staff SOPs this brain points at — Drive is **not** auto-pulled). Check `archive/legacy_mobile.md` for outdated mobile SOPs
+4. **Google Drive** (live content via connector; catalog in `knowledge/.generated/drive_catalog.md`). Check `archive/legacy_mobile.md` for outdated mobile SOPs
 5. **Never use** discontinued NGC Conversion products or mobile-only pricebook lines for current quotes
 6. **Never treat** `docs/content/`, `docs/live/`, or `knowledge/.generated/` as policy
 

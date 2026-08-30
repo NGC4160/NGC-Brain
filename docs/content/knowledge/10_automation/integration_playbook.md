@@ -79,18 +79,21 @@ Keep CSV export to `external_docs/exports/pricebook/` — hooks still sync.
 
 ## Google Drive
 
-### Current (no API — not live-synced)
+### Live today
 
-Staff SOPs live in Drive Procedures. Brain **points at** them. Morning sync does **not** pull Drive. `.gitmodules` is only GarageBuddy.
+| Layer | How |
+|-------|-----|
+| **File content** | Google Drive connector (NGC985) — shop bots read SOPs here |
+| **Brain catalog** | `knowledge/.generated/drive_catalog.md` (+ `.json`) — GENERATED, not policy |
+| **Morning-sync** | `scripts/sync/run_drive_sync.py` — catalog only if `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` is set |
 
-- [NGC Document Repository](https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r)
-- [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)
+`external_docs/My Drive/` is **not** a live Drive sync. Do not git-add File_000 or Drive binaries.
 
-`external_docs/My Drive/` is a mention/symlink, not a working connector. `.gsheet` / `.gdoc` stubs are not readable content.
+Scope: NGC Document Repository `1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r`. Recurse Procedures, Checklists, Manuals. Skip files >10MB and File_000 (`1JABSf3vzt4W0PLjTSEPsZdX06dKJLP-j`).
 
-### Upgrade: Google Drive MCP (backlog only — do not invent this as live)
+### Actions secret (optional)
 
-A Drive API MCP is **not** built. Do not document it as current. If Ryan later asks: Cloud Console → Drive API → `drive.readonly` on the Procedures folder. Until then, open the Drive links above.
+GitHub Actions **cannot** use MCP. To refresh the catalog on morning-sync, add repo secret `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` (service account JSON, Drive readonly, shared on the Document Repository folder). If the secret is missing, Drive is skipped and HCP/QBO still run.
 
 ---
 

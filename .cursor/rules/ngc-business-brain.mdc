@@ -41,7 +41,7 @@ This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before a
 1. Owner/staff statements in conversation (most recent)
 2. `knowledge/` files
 3. `external_docs/exports/` (pricebook CSV, QBO exports)
-4. Google Drive Procedures (staff SOPs this brain points at — Drive is **not** auto-pulled). Check `knowledge/archive/legacy_mobile.md` for outdated mobile items
+4. Google Drive (live content via connector; catalog `knowledge/.generated/drive_catalog.md`). Check `knowledge/archive/legacy_mobile.md` for outdated mobile items
 
 ## Never do
 
@@ -60,5 +60,5 @@ This workspace is the **Neighborhood Golf Carts (NGC) Business Brain**. Before a
 - Pricebook: `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`
 - QBO: `external_docs/exports/qbo/`
 - HCP aggregates: `external_docs/exports/hcp/` — **never commit `jobs.json`** (customer PII)
-- Staff SOPs: Google Drive Procedures (folder `1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh`) — Brain points at them; no live Drive sync
+- Staff SOPs: Google Drive connector (NGC985). Catalog: `knowledge/.generated/drive_catalog.md`. `external_docs/My Drive/` is not a live sync.
 - Canonical shop rules: `knowledge/` only. `docs/content/` is generated publish output.

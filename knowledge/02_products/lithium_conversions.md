@@ -91,7 +91,7 @@ Internal planning only:
 
 ## Customer care
 
-Post-install care guide: staff file in Google Drive Procedures ([folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)) — not auto-synced into this repo.
+Post-install care guide: [Lithium Battery Conversion Care Guide.docx](https://drive.google.com/file/d/12SnpFGFxB9nBxLStImaaWCRDHZuxUhWB/view) (`12SnpFGFxB9nBxLStImaaWCRDHZuxUhWB`) in the Document Repository root — read via Drive connector.
 
 Key customer points:
 

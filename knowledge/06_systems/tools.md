@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-08-24
+**Last verified:** 2026-08-30
 
 ## Current stack
 
@@ -8,7 +8,7 @@
 |--------|---------|--------|
 | **Housecall Pro** | Scheduling, pricebook, jobs, invoicing, customer comms | Active |
 | **QuickBooks Online** | Accounting, inventory, sales tax, P&L | Active — books clean |
-| **Google Drive** | Staff SOPs, Procedures, manuals | **Active in Drive** — Brain **points at** it; **not** live-synced into git |
+| **Google Drive** | Staff SOPs, Procedures, manuals | **Live content** = Drive connector (NGC985). Brain catalog = `knowledge/.generated/drive_catalog.md` |
 | **Website** | [NGCGolfCarts.com](https://www.NGCGolfCarts.com) | Active |
 | **Google Business Profile** | Local presence, reviews | Active |
 | **GarageBuddy** | Open-source garage DMS (**future/eval** sandbox) | Not current shop process — see [garagebuddy.md](garagebuddy.md) |
@@ -88,16 +88,24 @@ Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or
 4. Train Jesse + Ryan on new scheduling/invoicing flow
 5. Parallel-run period before cutting HCP
 
-## Document repository (Google Drive — not synced)
+## Document repository (Google Drive)
 
-Staff SOPs live in Google Drive. This brain **points at** them. Morning sync is **HCP + QBO only**. There is **no** Drive API connector. `.gitmodules` is only GarageBuddy. The path `external_docs/My Drive/NGC Document Repository/` is a mention/symlink, not a working sync.
+| Layer | Truth |
+|-------|--------|
+| **Live file content** | Google Drive connector (NGC985). Bots read SOPs there. |
+| **Brain catalog** | [`knowledge/.generated/drive_catalog.md`](../.generated/drive_catalog.md) — GENERATED, not policy. Names, ids, mime, modifiedTime, parent, view URL. |
+| **Actions refresh** | `scripts/sync/run_drive_sync.py` if secret `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` is set. Missing secret = skip; does **not** fail HCP/QBO. |
+| **`external_docs/My Drive/`** | **Not** a live sync. Do not treat it as a Drive clone. |
+| **Never commit** | File_000 zip (`1JABSf3vzt4W0PLjTSEPsZdX06dKJLP-j`) or any Drive binary/PDF. |
 
 | Folder | Drive ID | Open |
 |--------|----------|------|
 | **NGC Document Repository** | `1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r` | [folder](https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r) |
 | **Procedures** | `1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh` | [folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) |
+| **Checklists** | `1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp` | [folder](https://drive.google.com/drive/folders/1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp) |
+| **Manuals** | `1-1QqJQh4UojQEERawwpfEjKYOor2VMuR` | [folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) |
 
-Procedures holds official **NGC-QC-1**, **NGC-IR-1**, the Lithium Conversion Sales Guide PDF, and other shop SOPs. Short rules: [shop_workflow.md](../04_operations/shop_workflow.md), [lithium_sales_guide.md](../02_products/lithium_sales_guide.md).
+**NGC-QC-1** and **NGC-IR-1** were **not** found in Drive Procedures by those titles (2026-08-30). Keep the short rules in [shop_workflow.md](../04_operations/shop_workflow.md). Lithium sales PDF is in Procedures: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md).
 
 ## Deposit-alert script (not a Grok Bot)
 

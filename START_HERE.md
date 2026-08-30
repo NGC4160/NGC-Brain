@@ -30,7 +30,9 @@ The AI reads `knowledge/` automatically via `.cursor/rules/`.
 | `docs/live/` and `knowledge/.generated/` | Generated ops snapshots (counts, invoice #) | **No** — not policy |
 | `docs/training/` | 10-week diagnostic training pack | Yes, but **not** shop policy and **not** Jesse’s tech binder |
 
-Morning sync is **HCP + QBO only**. Google Drive is **not** live-synced into this repo. Staff SOPs live in Drive Procedures; this brain **points at them**.
+Morning sync is **HCP + QBO**, plus an optional **Drive catalog** (`knowledge/.generated/drive_catalog.md`) when `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` is set. Live file **content** is the Google Drive connector (NGC985). Staff SOPs stay in Drive. `external_docs/My Drive/` is **not** a live sync.
+
+Personal / non-shop projects (Blake’s birdhouses) belong in [NGC4160/personal-projects](https://github.com/NGC4160/personal-projects), not this repo.
 
 ---
 

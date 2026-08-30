@@ -52,7 +52,7 @@ Confirmed **2026-08-22**. Do not schedule, assign, or quote these names as curre
 | **Marketing** | Marketing |
 | **IT** | IT |
 | **Call Coach** | Call coaching |
-| **Print** | Blake birdhouses — **not** NGC shop process. Source stays in `tools/birdhouse-print-shop/` |
+| **Print** | Blake birdhouses — **not** NGC shop process. Intended repo: NGC4160/personal-projects (`gh repo create` denied 2026-08-30). Source still in `tools/birdhouse-print-shop/` until Ryan creates that repo. |
 | **Bot Manager** | Create / manage bots only. **Never delete a bot** without Ryan (via Chief). |
 
 **Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).

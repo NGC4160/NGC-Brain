@@ -109,7 +109,7 @@ Applies when the customer has approved estimate(s) and the job needs a parts dep
 
 ### 6. Pre-delivery QC — NGC-QC-1 (Rev. 2026-08-24)
 
-Official **pre-delivery QC** form. Staff file lives in **Google Drive → Procedures** ([folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)). Brain points at it; Drive is not auto-pulled.
+Official **pre-delivery QC** form. **Not yet in Drive Procedures** (2026-08-30 NGC985 listing — no file titled NGC-QC-1). Keep these rules. When Ryan uploads it, it belongs in [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh). Catalog: `knowledge/.generated/drive_catalog.md`.
 
 | Rule | Detail |
 |------|--------|
@@ -139,7 +139,7 @@ Historical mobile SOPs referenced Housecall Pro photos, checklists, and NGC stic
 
 ## Incident report — NGC-IR-1 (Rev. 2026-08-24)
 
-Official **4-page** incident form. Staff file lives in **Google Drive → Procedures** ([folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh)).
+Official **4-page** incident form. **Not yet in Drive Procedures** (2026-08-30 NGC985 listing — no file titled NGC-IR-1). Keep these rules. When Ryan uploads it, it belongs in [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh).
 
 | Rule | Detail |
 |------|--------|
@@ -151,12 +151,12 @@ Official **4-page** incident form. Staff file lives in **Google Drive → Proced
 
 ## Internal reference documents
 
-Staff SOPs live in Drive. Brain points at them. Drive is **not** live-synced into git.
+Staff SOPs live in Drive. Live content = Drive connector. Brain catalog = `knowledge/.generated/drive_catalog.md`. `external_docs/My Drive/` is not a live sync.
 
 | Document | Location |
 |----------|----------|
-| **NGC-QC-1** pre-delivery QC | Drive Procedures — [folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) |
-| **NGC-IR-1** incident form | Drive Procedures — same folder |
+| **NGC-QC-1** pre-delivery QC | Knowledge rules above — **not yet in Drive Procedures** |
+| **NGC-IR-1** incident form | Knowledge rules above — **not yet in Drive Procedures** |
 | Lithium Conversion Sales Guide (PDF) | [Drive file](https://drive.google.com/file/d/1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC/view) — internal; do not hand to customers. Brain: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md) |
 | NGC Document Repository | [Drive folder](https://drive.google.com/drive/folders/1koI6xu03NfGzr7AMKaAnCHiguZOU7L6r) |
 | 7-point inspection report (print, INSPECT10) | `external_docs/templates/operations/NGC_Golf_Cart_Inspection_Report.pdf` |
