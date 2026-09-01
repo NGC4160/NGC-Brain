@@ -1,10 +1,11 @@
 {
-  "started_at": "2026-08-30T17:38:26Z",
-  "finished_at": "2026-08-30T17:38:44.158575+00:00",
+  "started_at": "2026-08-31T19:32:24Z",
+  "finished_at": "2026-08-31T19:32:42.025511+00:00",
   "overall": "partial",
   "steps": {
     "hcp": "ok",
     "qbo": "fail",
+    "drive": "ok",
     "ingest": "ok",
     "command_center": "ok"
   },
