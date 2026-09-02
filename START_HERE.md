@@ -65,7 +65,7 @@ Paste or summarize:
 
 ## Keep the brain current
 
-**Chief** (Ryan's Grok Bot COS) and shop bots must operate from this brain and write durable facts back here — roster, policy, and workflow changes belong in `knowledge/`, not only in chat.
+**Chief** (Ryan's Grok Bot COS) and shop bots must operate from this brain and write durable facts back here the **same day** Ryan corrects them — roster, policy, and workflow changes belong in `knowledge/`, not only in chat. Ryan talks **ONLY** to Chief; Chief routes every task and brings results back in Chief’s thread ([roles.md](knowledge/05_team/roles.md#chief-routing-standing)).
 
 When something changes, either:
 

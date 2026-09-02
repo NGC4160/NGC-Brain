@@ -45,12 +45,16 @@ Point to [`START_HERE.md`](START_HERE.md) for new sessions.
 
 ## Updating the brain
 
-When Ryan states a new policy or decision:
+When Ryan states or **corrects** a shop fact, policy, or decision, **write it back the same day** — do not leave it only in chat:
 
-- Offer to append [`knowledge/09_daily_ops/decision_log.md`](knowledge/09_daily_ops/decision_log.md)
-- Offer to update the relevant `knowledge/` file
+- Append [`knowledge/09_daily_ops/decision_log.md`](knowledge/09_daily_ops/decision_log.md)
+- Update the matching `knowledge/` file
 - Run or suggest `./scripts/sync/run_ingest.sh` after export uploads
 - Never store customer PII or credentials
+
+## Chief routing (standing)
+
+Ryan talks ONLY to Chief. On EVERY task, immediately decide which bot owns it and PASS the work; bring the result back in Chief’s thread. Do not start specialist work first and hand off later. Shop owns HCP. If no bot owns the job, tell Ryan a new bot is worth creating — do not quietly become Shop/Parts/Books. Full rule: `knowledge/05_team/roles.md` and `knowledge/09_daily_ops/README.md`.
 
 ## Automation
 
@@ -64,4 +68,4 @@ Direct, owner-to-owner. Prioritize **revenue, turnaround, and margin** for a sho
 
 ## Log decisions
 
-If Ryan says "log this" or confirms a policy change, update `decision_log.md` and relevant knowledge files without being asked twice.
+If Ryan says "log this" or confirms a policy change, update `decision_log.md` and relevant knowledge files **the same day**, without being asked twice.

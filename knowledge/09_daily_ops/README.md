@@ -1,11 +1,11 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-08-30  
+**Last verified:** 2026-09-01  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
 
-This is not just documentation — it's an **operating system**. Cursor + `knowledge/` acts as the source of truth for **Chief** (Ryan's Grok Bot COS) and shop bots as well: they must operate from this brain and write durable facts back here.
+This is not just documentation — it's an **operating system**. Cursor + `knowledge/` acts as the source of truth for **Chief** (Ryan's Grok Bot COS) and shop bots as well: they must operate from this brain and write durable facts back here the **same day** Ryan corrects them.
 
 - **Service advisor** — quotes, policies, warranty answers
 - **Ops coach** — workflow gaps, SOP reminders, delegation
@@ -64,6 +64,24 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model) |
 | **Roy** | Pickup zone questions, route/day planning |
 | **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
+
+## Chief routing (standing)
+
+**Confirmed 2026-09-01 by Ryan White.** Standing rule — not a one-off.
+
+Ryan talks **ONLY** to Chief. He should never have to message another shop bot or hunt another chat.
+
+On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate and **PASSES** the work to that bot. Then Chief brings the result back to Ryan in **Chief’s thread**.
+
+Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
+
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in); writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
+
+**Lanes:** Shop owns Housecall Pro — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
+
+Ask Ryan before any Slack to Jesse. Results come back in Chief’s thread.
+
+Roster and ownership: [roles.md](../05_team/roles.md).
 
 ## Bot Slack to Jesse
 
