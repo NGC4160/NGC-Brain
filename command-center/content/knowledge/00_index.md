@@ -27,7 +27,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [01_company/profile.md](01_company/profile.md) | Identity, contact, location, positioning, legal |
 | [02_products/lithium_conversions.md](02_products/lithium_conversions.md) | Professional lithium kits, short kit list, warranty, deposits |
 | [02_products/lithium_sales_guide.md](02_products/lithium_sales_guide.md) | **Office quoting** — Essential / Ready-to-Run / Accessory-Ready (internal; not a customer handout) |
-| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits, **credit card surcharge on every estimate** |
+| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits, **credit card surcharge on every estimate**, **estimate GP check on free P/D** |
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
 | [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP pickup/drop-off queue**, **HCP deposit pipeline**, **NGC-QC-1** pre-delivery QC, **NGC-IR-1** incident form |
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA** — live board is a generated snapshot, not policy |

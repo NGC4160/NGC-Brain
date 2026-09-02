@@ -1,6 +1,6 @@
 # Shop Workflow
 
-**Last verified:** 2026-08-30
+**Last verified:** 2026-09-01
 
 ## Current state
 
@@ -19,6 +19,7 @@ When there is an opening in the slot, schedule → In-shop work → Payment → 
 - Hours: Mon–Fri 8 AM – 5 PM
 - Shop is **in-shop only** (no mobile)
 - **Credit card surcharge on every estimate** (shop-wide, 2026-08-30). Not lithium-only. Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do not invent a % or $. Policy: [shop_services.md](../03_services/shop_services.md#credit-card-surcharge-shop-wide-office-rule).
+- **Estimate GP (standing, 2026-09-01):** Price book services = **sell >= cost / 0.46** on that item only (no $90). Materials = HCP markup matrix only (no $90). Free P/D estimate: add **$90 once** to total job cost, then **sell >= (sum of line costs + 90) / 0.46**. Hide the trip from the customer. Not per SKU / line. [shop_services.md](../03_services/shop_services.md#estimate-gp-check-standing).
 
 ### HCP job pipeline — pickup / drop-off queue
 
