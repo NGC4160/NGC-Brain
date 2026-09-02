@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-08-30  
+**Last verified:** 2026-09-01  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -27,7 +27,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [01_company/profile.md](01_company/profile.md) | Identity, contact, location, positioning, legal |
 | [02_products/lithium_conversions.md](02_products/lithium_conversions.md) | Professional lithium kits, short kit list, warranty, deposits |
 | [02_products/lithium_sales_guide.md](02_products/lithium_sales_guide.md) | **Office quoting** — Essential / Ready-to-Run / Accessory-Ready (internal; not a customer handout) |
-| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits, **credit card surcharge on every estimate** |
+| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits, **credit card surcharge on every estimate**, **estimate GP check on free P/D** |
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
 | [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP pickup/drop-off queue**, **HCP deposit pipeline**, **NGC-QC-1** pre-delivery QC, **NGC-IR-1** incident form |
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA** — live board is a generated snapshot, not policy |
@@ -79,9 +79,11 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 
 ## Bots & Chief
 
-**Chief** (id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1`) is Ryan’s **only** Grok Bot point of contact. All other bots report to Chief. Approvals (Slack Jesse, money, payroll submit, sign-in, delete a bot, orders) go through Chief, who asks Ryan. Live roster: [`05_team/roles.md`](05_team/roles.md).
+**Chief** (id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1`) is Ryan’s **only** Grok Bot point of contact. Ryan talks **ONLY** to Chief — he should never have to message another shop bot or hunt another chat. All other bots report to Chief. Approvals (Slack Jesse, money, payroll submit, sign-in, delete a bot, orders) go through Chief, who asks Ryan. Live roster: [`05_team/roles.md`](05_team/roles.md).
 
-Shop bots must **operate from this brain** and **write durable facts back here**. When a shop-running fact is confirmed (roster, policy, prices, workflow), update the matching file and [`09_daily_ops/decision_log.md`](09_daily_ops/decision_log.md) — do not leave it only in chat. **Slack to Jesse Killian:** ask Ryan and wait for a yes — [daily ops](09_daily_ops/README.md#bot-slack-to-jesse). **Bot updates:** clean bullet list — [daily ops](09_daily_ops/README.md#bot-updates). **Leads:** only from NGC985 / ryan@ / contact@; weekday 11am dump still asks Ryan before Slack. **No** HCP customer-message watching.
+**Chief routing (standing, 2026-09-01):** On EVERY task Ryan asks, Chief immediately decides which bot owns it and **PASSES** the work, then brings the result back in Chief’s thread. Do not start specialist work first and hand off later. Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). Other bots keep their lanes. If no bot owns the job, tell Ryan a new bot is worth creating and why — do not quietly become Shop/Parts/Books. Chief’s own work: talking to Ryan, those approvals, writing facts back, routing. Full rule: [daily ops](09_daily_ops/README.md#chief-routing-standing) · [roles.md](05_team/roles.md#chief-routing-standing).
+
+Shop bots must **operate from this brain** and **write durable facts back here the same day Ryan corrects them**. When a shop-running fact is confirmed (roster, policy, prices, workflow), update the matching file and [`09_daily_ops/decision_log.md`](09_daily_ops/decision_log.md) — do not leave it only in chat. **Slack to Jesse Killian:** ask Ryan and wait for a yes — [daily ops](09_daily_ops/README.md#bot-slack-to-jesse). **Bot updates:** clean bullet list — [daily ops](09_daily_ops/README.md#bot-updates). **Leads:** only from NGC985 / ryan@ / contact@; weekday 11am dump still asks Ryan before Slack. **No** HCP customer-message watching.
 
 ## Authority rules
 

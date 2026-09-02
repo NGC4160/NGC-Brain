@@ -1,12 +1,55 @@
 # Pricebook Reference
 
-**Last verified:** 2026-08-30  
+**Last verified:** 2026-09-02  
 **Source file:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`  
 **Total line items:** 282
 
 ## How to use this document
 
 The CSV is the **full pricebook**. This file summarizes categories and flags items that are **current vs legacy**. For exact prices on repairs, always check the CSV or Housecall Pro.
+
+## Material markup matrix (HCP, not Drive)
+
+**Confirmed 2026-09-01 by Ryan White.** Table quoted from the live HCP screenshot **2026-09-02** (Settings › Price Book › Materials › Materials Markup). The NGC material markup matrix lives **inside Housecall Pro**. It is **not** in Google Drive.
+
+Do **not** treat Drive files **“Parts list Matrix”** (sheet) or **“Price Markup”** (HEIC) as the source of truth.
+
+Quoted from the live HCP screenshot (do not invent other bands or a target-sell column):
+
+- **Path:** Price book settings gear → Materials tab → Materials Markup
+- **URL:** https://pro.housecallpro.com/app/settings/price_book/materials
+- **Toggle:** On
+- **HCP help text:** Apply markups by cost range. Set ranges and a % markup, and we'll apply it to all matching materials in your Price Book.
+- **Columns:** Markups | Cost from | Cost to | Markup % | Profit % (no target-sell column)
+
+| Markups | Cost from | Cost to | Markup % | Profit % |
+|---------|----------:|--------:|---------:|---------:|
+| Markup 1 | $0.01 | $9.99 | 307.00% | 75.43% |
+| Markup 2 | $10.00 | $39.99 | 185.71% | 65.00% |
+| Markup 3 | $40.00 | $99.99 | 104.00% | 50.98% |
+| Markup 4 | $100.00 | $399.99 | 81.82% | 45.00% |
+| Markup 5 | $400.00 | $999.99 | 60.00% | 37.50% |
+| Markup 6 | $1,000.00 | $1,999.99 | 42.86% | 30.00% |
+| Markup 7 | $2,000.00 | $4,999.99 | 37.93% | 27.50% |
+| Markup 8 | $5,000.00 | $ — | 33.33% | 25.00% |
+
+Systems note: [tools.md](../06_systems/tools.md).
+
+## Estimate GP check (standing)
+
+**Confirmed 2026-09-01 by Ryan White.** Same-day correction: the **$90** free pickup/delivery trip cost is **once per job**, not added to every price book line or SKU.
+
+| Layer | GP rule | $90? |
+|-------|---------|------|
+| **Price book services** | 50% GP after 4% CC **on that item only**: **sell >= cost / 0.46** | **No** — do not add $90 |
+| **Materials** | HCP markup matrix only | **No** |
+| **Estimate (free P/D)** | Add **$90 once** to total job cost, then **sell >= (sum of line costs + 90) / 0.46** | **Once per job** |
+
+Hide the trip from the customer. Do not add a trip charge or P/D fee on free-zone jobs. Paid zone remains the **$99** Standard Pick-up/Drop-off line.
+
+Equivalently **~$196 extra sell once per free-P/D job**, typically padded into **labor/diagnostic**, not a trip line. Apply **per job / estimate**, not as a weekly average, and **not per line / SKU**.
+
+The **4%** is only for this GP check — not a locked customer-facing surcharge rate. Do not invent other numbers. Policy home: [shop_services.md](shop_services.md#estimate-gp-check-standing).
 
 ## Categories (item counts)
 
