@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-08-30
+**Last verified:** 2026-09-01
 
 ## Current stack
 
@@ -19,7 +19,8 @@
 
 **Current use (shop model):**
 
-- Pricebook (282 items) — source of truth for service pricing
+- Pricebook (282 items) — source of truth for service **line-item** pricing
+- **Material markup matrix** — lives **inside Housecall Pro** (see below)
 - Job creation and tracking
 - **Pickup / drop-off queue** — HCP stages **New job** and **Customer drop off** ARE that queue after estimate approval (distinct from the deposit pipeline)
 - **Job pipeline** for approved work that needs a parts deposit (existing deposit stages only — do not invent others)
@@ -35,6 +36,8 @@
 3. Parts ordered → **Waiting for Materials**
 
 Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or easy yes. Deposit is required before ordering a battery, motor, or controller. This deposit pipeline is **distinct** from the **New job** / **Customer drop off** queue. Full rule: [shop_workflow.md](../04_operations/shop_workflow.md).
+
+**Material markup matrix (Ryan White, 2026-09-01):** The NGC material markup matrix is **inside Housecall Pro**, not Google Drive. Do **not** treat Drive files **“Parts list Matrix”** (sheet) or **“Price Markup”** (HEIC) as the source of truth. Do **not** invent cost bands, percents, or sell prices — Shop is pulling the live HCP matrix. Exact HCP menu path and bands: fill in from the live HCP UI (do not guess). Shop owns this check. See [pricebook_reference.md](../03_services/pricebook_reference.md).
 
 **Export location:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`
 
