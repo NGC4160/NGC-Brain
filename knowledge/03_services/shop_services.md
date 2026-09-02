@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-08-30  
+**Last verified:** 2026-09-01  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -59,6 +59,22 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 **Driver:** Roy handles pickups and deliveries.
 
 After a customer **approves**, queue pickup or drop-off. Do **not** say a time is locked, a spot is held, or that this is an easy yes. Do not invent booking language.
+
+### Estimate GP check — free pickup/delivery (standing)
+
+**Confirmed 2026-09-01 by Ryan White.** Internal estimate math. Shop owns this check. Do **not** show this to the customer.
+
+Free pickup/delivery has a **$90 trip cost**. That $90 must **NOT** appear as a customer-facing estimate line (not a trip charge, not a P/D fee on free-zone jobs). Paid-zone jobs still show the **$99** Standard Pick-up/Drop-off line.
+
+When checking **50% gross profit after 4% credit card fees**, include that $90 in cost:
+
+**sell >= (parts + labor cost + 90) / 0.46**
+
+Equivalently **~$196 extra sell** on free P/D jobs. Typically padded into **labor/diagnostic**, not a trip line.
+
+Apply **per estimate**, not as a weekly average.
+
+The **4%** is only the fee used in this GP check. The customer-facing surcharge line still follows the live HCP line (do not invent that line’s % or $). Do not invent other GP targets. Same rule: [pricebook_reference.md](pricebook_reference.md#estimate-gp-check--free-pickupdelivery-standing).
 
 ## Deposits
 
