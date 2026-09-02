@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-08-30
+**Last verified:** 2026-09-01
 
 ## Ownership
 
@@ -41,9 +41,9 @@ Confirmed **2026-08-22**. Do not schedule, assign, or quote these names as curre
 
 | Bot | Role |
 |-----|------|
-| **Chief** (COS) | id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1` — Ryan’s only POC. Collects weekday 11am America/Chicago lead forms, then asks Ryan before Slack to Jesse. |
+| **Chief** (COS) | id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1` — Ryan’s only POC. Routes every task (see below). Collects weekday 11am America/Chicago lead forms, then asks Ryan before Slack to Jesse. |
 | **Inbox** | Intake / mail. Must **not** auto-Slack Jesse because lithium “stays with Jesse.” Lead forms only from **NGC985 / ryan@ / contact@**. |
-| **Shop** | Shop-floor ops |
+| **Shop** | **Housecall Pro owner** — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. |
 | **Front Desk** | Customer replies (lithium kit/warranty from `customer_reply_standard.md`) |
 | **Parts** | Parts / deposit-before-order |
 | **Books** | Books coordination |
@@ -55,7 +55,23 @@ Confirmed **2026-08-22**. Do not schedule, assign, or quote these names as curre
 | **Print** | Blake birdhouses — **not** NGC shop process. Live repo: [NGC4160/PersonalProjects](https://github.com/NGC4160/PersonalProjects). |
 | **Bot Manager** | Create / manage bots only. **Never delete a bot** without Ryan (via Chief). |
 
-**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
+### Chief routing (standing)
+
+**Confirmed 2026-09-01 by Ryan White.** This is standing, not a one-off.
+
+Ryan talks **ONLY** to Chief. He should never have to message another shop bot or hunt another chat.
+
+On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate and **PASSES** the work to that bot. Then Chief brings the result back to Ryan in **Chief’s thread**.
+
+Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
+
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in); writing facts back to Brain the **same day** Ryan corrects them; routing.
+
+**Lanes (already true):** Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
+
+Ask Ryan before any Slack to Jesse. Results stay in Chief’s thread.
+
+**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back the same day Ryan corrects them. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
 
 The deposit-alert **batch script** in `scripts/admin_bot/` is planned/live automation — **not** a Grok Bot and **not** the COS. Spec: [ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md).
 

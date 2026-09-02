@@ -1,12 +1,20 @@
 # Pricebook Reference
 
-**Last verified:** 2026-08-30  
+**Last verified:** 2026-09-01  
 **Source file:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`  
 **Total line items:** 282
 
 ## How to use this document
 
 The CSV is the **full pricebook**. This file summarizes categories and flags items that are **current vs legacy**. For exact prices on repairs, always check the CSV or Housecall Pro.
+
+## Material markup matrix (HCP, not Drive)
+
+**Confirmed 2026-09-01 by Ryan White.** The NGC material markup matrix lives **inside Housecall Pro**. It is **not** in Google Drive.
+
+Do **not** treat Drive files **“Parts list Matrix”** (sheet) or **“Price Markup”** (HEIC) as the source of truth.
+
+Do **not** invent cost bands, percents, or sell prices. Shop owns HCP pricing/margin checks and is pulling the live HCP matrix. Exact HCP menu path and bands: fill in from the live HCP UI (do not guess). Systems note: [tools.md](../06_systems/tools.md).
 
 ## Categories (item counts)
 
