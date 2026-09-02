@@ -1,6 +1,6 @@
 # Pricebook Reference
 
-**Last verified:** 2026-09-01  
+**Last verified:** 2026-09-02  
 **Source file:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`  
 **Total line items:** 282
 
@@ -10,11 +10,29 @@ The CSV is the **full pricebook**. This file summarizes categories and flags ite
 
 ## Material markup matrix (HCP, not Drive)
 
-**Confirmed 2026-09-01 by Ryan White.** The NGC material markup matrix lives **inside Housecall Pro**. It is **not** in Google Drive.
+**Confirmed 2026-09-01 by Ryan White.** Bands quoted from the live HCP UI **2026-09-02** (Shop). The NGC material markup matrix lives **inside Housecall Pro**. It is **not** in Google Drive.
 
 Do **not** treat Drive files **“Parts list Matrix”** (sheet) or **“Price Markup”** (HEIC) as the source of truth.
 
-Do **not** invent cost bands, percents, or sell prices. Shop owns HCP pricing/margin checks and is pulling the live HCP matrix. Exact HCP menu path and bands: fill in from the live HCP UI (do not guess). Systems note: [tools.md](../06_systems/tools.md).
+Quoted from the live HCP UI (do not invent other bands or a target-sell column):
+
+- **Path:** Price book → Price book settings (gear) → Settings › Price Book → Materials tab → Materials Markup
+- **URL:** https://pro.housecallpro.com/app/settings/price_book/materials
+- **Toggle:** On
+- **Columns:** Markups | Cost from | Cost to | Markup % | Profit % (no target-sell column)
+
+| Markups | Cost from | Cost to | Markup % | Profit % |
+|---------|----------:|--------:|---------:|---------:|
+| Markup 1 | $0.01 | $9.99 | 307.00% | 75.43% |
+| Markup 2 | $10.00 | $39.99 | 185.71% | 65.00% |
+| Markup 3 | $40.00 | $99.99 | 104.00% | 50.98% |
+| Markup 4 | $100.00 | $399.99 | 81.82% | 45.00% |
+| Markup 5 | $400.00 | $999.99 | 60.00% | 37.50% |
+| Markup 6 | $1,000.00 | $1,999.99 | 42.86% | 30.00% |
+| Markup 7 | $2,000.00 | $4,999.99 | 37.93% | 27.50% |
+| Markup 8 | $5,000.00 | (open) | 33.33% | 25.00% |
+
+Systems note: [tools.md](../06_systems/tools.md).
 
 ## Categories (item counts)
 
