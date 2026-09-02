@@ -10,15 +10,16 @@ The CSV is the **full pricebook**. This file summarizes categories and flags ite
 
 ## Material markup matrix (HCP, not Drive)
 
-**Confirmed 2026-09-01 by Ryan White.** Bands quoted from the live HCP UI **2026-09-02** (Shop). The NGC material markup matrix lives **inside Housecall Pro**. It is **not** in Google Drive.
+**Confirmed 2026-09-01 by Ryan White.** Table quoted from the live HCP screenshot **2026-09-02** (Settings › Price Book › Materials › Materials Markup). The NGC material markup matrix lives **inside Housecall Pro**. It is **not** in Google Drive.
 
 Do **not** treat Drive files **“Parts list Matrix”** (sheet) or **“Price Markup”** (HEIC) as the source of truth.
 
-Quoted from the live HCP UI (do not invent other bands or a target-sell column):
+Quoted from the live HCP screenshot (do not invent other bands or a target-sell column):
 
-- **Path:** Price book → Price book settings (gear) → Settings › Price Book → Materials tab → Materials Markup
+- **Path:** Price book settings gear → Materials tab → Materials Markup
 - **URL:** https://pro.housecallpro.com/app/settings/price_book/materials
 - **Toggle:** On
+- **HCP help text:** Apply markups by cost range. Set ranges and a % markup, and we'll apply it to all matching materials in your Price Book.
 - **Columns:** Markups | Cost from | Cost to | Markup % | Profit % (no target-sell column)
 
 | Markups | Cost from | Cost to | Markup % | Profit % |
@@ -30,7 +31,7 @@ Quoted from the live HCP UI (do not invent other bands or a target-sell column):
 | Markup 5 | $400.00 | $999.99 | 60.00% | 37.50% |
 | Markup 6 | $1,000.00 | $1,999.99 | 42.86% | 30.00% |
 | Markup 7 | $2,000.00 | $4,999.99 | 37.93% | 27.50% |
-| Markup 8 | $5,000.00 | (open) | 33.33% | 25.00% |
+| Markup 8 | $5,000.00 | $ — | 33.33% | 25.00% |
 
 Systems note: [tools.md](../06_systems/tools.md).
 
