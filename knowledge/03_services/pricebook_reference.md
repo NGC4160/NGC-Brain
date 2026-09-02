@@ -35,21 +35,21 @@ Quoted from the live HCP screenshot (do not invent other bands or a target-sell 
 
 Systems note: [tools.md](../06_systems/tools.md).
 
-## Estimate GP check — free pickup/delivery (standing)
+## Estimate GP check (standing)
 
-**Confirmed 2026-09-01 by Ryan White.** Internal estimate math. Shop owns this check.
+**Confirmed 2026-09-01 by Ryan White.** Same-day correction: the **$90** free pickup/delivery trip cost is **once per job**, not added to every price book line or SKU.
 
-Free pickup/delivery has a **$90 trip cost**. That $90 must **NOT** appear as a customer-facing estimate line. Do not add a trip charge or P/D fee on free-zone jobs. Paid zone remains the **$99** Standard Pick-up/Drop-off line.
+| Layer | GP rule | $90? |
+|-------|---------|------|
+| **Price book services** | 50% GP after 4% CC **on that item only**: **sell >= cost / 0.46** | **No** — do not add $90 |
+| **Materials** | HCP markup matrix only | **No** |
+| **Estimate (free P/D)** | Add **$90 once** to total job cost, then **sell >= (sum of line costs + 90) / 0.46** | **Once per job** |
 
-When checking **50% gross profit after 4% credit card fees**, include that $90 in cost:
+Hide the trip from the customer. Do not add a trip charge or P/D fee on free-zone jobs. Paid zone remains the **$99** Standard Pick-up/Drop-off line.
 
-**sell >= (parts + labor cost + 90) / 0.46**
+Equivalently **~$196 extra sell once per free-P/D job**, typically padded into **labor/diagnostic**, not a trip line. Apply **per job / estimate**, not as a weekly average, and **not per line / SKU**.
 
-Equivalently **~$196 extra sell** on free P/D jobs, typically padded into **labor/diagnostic**, not a trip line.
-
-Apply **per estimate**, not as a weekly average.
-
-The **4%** is only for this GP check — not a locked customer-facing surcharge rate. Do not invent other numbers. Policy home: [shop_services.md](shop_services.md#estimate-gp-check--free-pickupdelivery-standing).
+The **4%** is only for this GP check — not a locked customer-facing surcharge rate. Do not invent other numbers. Policy home: [shop_services.md](shop_services.md#estimate-gp-check-standing).
 
 ## Categories (item counts)
 
