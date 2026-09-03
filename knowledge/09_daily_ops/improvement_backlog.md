@@ -55,6 +55,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | Date | Item |
 |------|------|
+| 2026-09-03 | Roster: Roy Gautreaux no longer on staff; Hayden Silva is driver/shop tech (P/D primary; assist only when transport allows; not independent diag) |
 | 2026-08-30 | Lithium Conversion Sales Guide is the office quoting process (Essential / Ready-to-Run / Accessory-Ready) |
 | 2026-08-23 | Lithium Front Desk reply standard — short kit list, Vatrer QC, 5-year full replacement, SMS (no PII) |
 | 2026-08-22 | Taylor terminated; Peyton resigned; Ryan Gorgoglione is a golf cart technician; 6-job WIP cap disregarded |

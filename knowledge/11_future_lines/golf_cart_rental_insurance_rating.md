@@ -132,7 +132,7 @@ Relative to **$1M occurrence / $2M aggregate** = **1.00**:
 | G14 | **Speed capability** | Governor setting; stock vs lifted/performance | ≤15 mph: **0.85–1.00**; 15–20: **1.00–1.15**; 20–25 LSV: **1.20–1.50**; de-governed / 25+ off-spec: **1.50–2.50** or **decline** | Faster **raises** | Spec sheets, tech inspection |
 | G15 | **Night / 24-hour rental** | Overnight allowed? | Daylight only: **0.90–1.00**; overnight: **1.10–1.30**; 24/7 unmanned: **1.25–1.60** | Overnight **raises** | Hours policy |
 | G16 | **Unattended / key drop / lockbox** | Staffed checkout vs honor system | Staffed: **1.00**; lockbox/app unlock: **1.15–1.40** | Less control **raises** | Ops description |
-| G17 | **Delivery / pickup of rental carts** | You deliver to customer or HOA | No delivery: **1.00**; staffed delivery: **1.10–1.25** + HNOA/auto; roadside drop on public street: **1.25–1.50** | Delivery **raises** | Ops, Roy’s truck exposure |
+| G17 | **Delivery / pickup of rental carts** | You deliver to customer or HOA | No delivery: **1.00**; staffed delivery: **1.10–1.25** + HNOA/auto; roadside drop on public street: **1.25–1.50** | Delivery **raises** | Ops, shop delivery-vehicle exposure |
 | G18 | **Sub-rental / third-party operators** | HOA or resort re-rents your carts | None: **1.00**; allowed: **1.25–1.75** + AI | Sub-rental **raises** | Contracts |
 | G19 | **Products / completed ops** | You also convert/repair (NGC does) | Dual shop+rental: **1.10–1.30** on GL or **two policies**; lithium work: **refer** for products | Combining ops **raises** | ACORD 126, lithium SOP |
 | G20 | **Abuse / molestation / event** | Kids’ camps, weddings, festivals | Standard rental: n/a; youth/event: separate **+$500–$2,000** or exclusion | Events **raise** | Event applications |
@@ -207,7 +207,7 @@ If NGC **delivers rental carts on a company truck**, that truck needs **owned au
 | H7 | **HNOA limit** | $1M typical | ILF similar to auto liability | Higher **raises** | Quote |
 | H8 | **State auto environment** | LA liability / UM | LA **1.15–1.40** vs a quiet Midwest state | LA **raises** | ISO auto territory |
 
-**NGC planning:** keep **owned auto** on Roy’s truck; add HNOA **$250–$600** for incidental employee errands. Do **not** try to insure cart delivery on HNOA.
+**NGC planning:** keep **owned auto** on the shop delivery vehicle; add HNOA **$250–$600** for incidental employee errands. Do **not** try to insure cart delivery on HNOA.
 
 ---
 
@@ -260,7 +260,7 @@ Class codes are **assigned by the carrier/NCCI**, not by you. Split payroll corr
 | **8742** Sales | Outside sales (if any) | **$0.30 – $0.70** |
 | **8380** Auto / vehicle repair | Techs (current shop) | **$3.00 – $6.50** |
 | **8380 / 8391** mix | Shop + storage | Similar to 8380 |
-| **7380** Drivers / chauffeurs | Roy / delivery | **$6.00 – $12.00** |
+| **7380** Drivers / chauffeurs | Hayden / delivery | **$6.00 – $12.00** |
 | **8017 / 8018** Store / rental counter | If a distinct rental desk | **$1.50 – $3.50** |
 | **9102 / 9015** | Lot / building ops (sometimes) | **$3.00 – $7.00** |
 
@@ -275,7 +275,7 @@ Class codes are **assigned by the carrier/NCCI**, not by you. Split payroll corr
 | W5 | **Loss history** | Frequency of strains, lifts, battery acid, road accidents | Frequency **raises** e-mod with a lag | More injuries **raise** | OSHA 300, loss runs |
 | W6 | **Owner inclusion / exclusion** | LA officer election | Including officers **raises** premium, **adds** coverage | Including owners **raises** | Policy elections |
 | W7 | **1099 / leased labor** | If “contractors” are employees | Misclass: audit + **1.00–1.50** debit | More misclass risk **raises** | 1099s, contracts |
-| W8 | **Delivery / road exposure** | Techs or Roy on public roads | Moves $ to **7380** | More road work **raises** | Roles.md (Roy is driver) |
+| W8 | **Delivery / road exposure** | Techs or Hayden on public roads | Moves $ to **7380** | More road work **raises** | Roles.md (Hayden Silva is driver / shop tech) |
 | W9 | **Lithium / battery handling** | Chemical, lift, thermal | Usually still 8380; poor practices → injuries → future e-mod | Worse safety **raises** later | SOP, OSHA |
 | W10 | **Go-forward rental duties** | Counter staff, lot attendants, after-hours | New class split; small $ if existing staff absorb it | New rental labor **raises** | Org plan |
 

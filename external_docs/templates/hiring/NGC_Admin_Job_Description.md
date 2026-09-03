@@ -30,7 +30,7 @@ Ryan’s time is highest-value on advanced diagnostics, technician training, QC,
 5. **Inventory** — Stock visibility, counts, HCP/QBO alignment.
 6. **Parts ordering & tracking** — Order after deposit; vendor/ETA follow-up; wait code PARTS.
 7. **Shop workflow** — Board/HCP hygiene, wait codes, WIP visibility for the 8:15 huddle.
-8. **Pickup/delivery routing** — Schedule and zone-batch Roy (free 40 mi Northshore; $99 otherwise).
+8. **Pickup/delivery routing** — Schedule and zone-batch Hayden (free 40 mi Northshore; $99 otherwise).
 9. **Data & reporting** — Deposit/parts queues, weekly shop numbers (no PII in Cursor).
 10. **Marketing admin** — Under Ryan/consultant direction, verify ad URLs; do **not** change strategy without approval.
 11. **Front-office support** — Deposits language, shop-only policy answers; escalate exceptions to Ryan (Christine if Ryan is out).

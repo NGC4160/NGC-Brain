@@ -41,7 +41,7 @@ Answer or acknowledge same business day. Pull Ryan/techs only when the call is t
 ### Scripts (short)
 
 **Dead cart / wants mobile:**  
-“We’re an in-shop service center in Covington — we don’t do mobile repairs. We can schedule a diagnostic here, and Roy can pick up the cart if that helps. Diagnostic is $179 and goes toward the repair when it’s a known issue.”
+“We’re an in-shop service center in Covington — we don’t do mobile repairs. We can schedule a diagnostic here, and Hayden can pick up the cart if that helps. Diagnostic is $179 and goes toward the repair when it’s a known issue.”
 
 **Pickup quote:**  
 “Pickup and delivery are free within 40 miles on the Northshore. Outside that, or Southshore, it’s a flat $99.”
@@ -60,7 +60,7 @@ Every waiting cart has **one primary wait reason** so Ryan can see real technici
 | **AUTH** | Waiting on customer authorization / estimate decision | Estimate sent; no yes/no yet |
 | **PARTS** | Waiting on parts / vendor / special order | Solenoid ordered; ETA Friday |
 | **TECH** | Repair-ready — waiting on technician labor | Approved + parts here; needs bay time |
-| **PICKUP** | Waiting on pickup or redelivery logistics | Roy scheduled Thursday |
+| **PICKUP** | Waiting on pickup or redelivery logistics | Hayden scheduled Thursday |
 | **OTHER** | Anything else — **must write reason** | Waiting on Ryan for lithium scope; customer traveling |
 
 ### Rules
@@ -147,10 +147,10 @@ Helpful and direct. Ask for a decision. Never argue. Never invent a lower price.
 
 ## 5. Scheduling & pickup / redelivery routing
 
-Jesse **routes and schedules**; Roy **drives**.
+Jesse **routes and schedules**; Hayden **drives**.
 
 1. Confirm date/time windows with customer and shop capacity (Ryan if bay load is the constraint).
-2. Build Roy’s daily route: zone-batch Northshore free (40 mi) vs **$99** Southshore / outside 40 mi. Confirm zone before promising free.
+2. Build Hayden’s daily route: zone-batch Northshore free (40 mi) vs **$99** Southshore / outside 40 mi. Confirm zone before promising free.
 3. Code **PICKUP** until cart is in shop or returned; then update.
 4. Status texts: only facts (received, waiting approval, parts ordered ETA, ready for pickup).
 

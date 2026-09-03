@@ -19,7 +19,7 @@ description: Run the NGC service manager morning briefing using knowledge/, sync
 3. Use user's shop status if provided; otherwise ask for:
    - Carts in shop (make/model/issue/tech/day — no customer names)
    - Staff availability
-   - Roy pickups/deliveries
+   - Hayden pickups/deliveries
 
 4. Output (bullets, actionable by 8:30 AM):
    - Top 3 priorities (service manager lens)

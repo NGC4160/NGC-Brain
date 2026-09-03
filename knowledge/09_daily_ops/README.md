@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-09-01  
+**Last verified:** 2026-09-03  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -20,7 +20,7 @@ This is not just documentation — it's an **operating system**. Cursor + `knowl
 2. Run [`prompts/morning_briefing.md`](../../prompts/morning_briefing.md)
 3. Tell the AI: carts in shop, tech availability, any fires
 
-**Output you want:** Top 3 priorities, deposit follow-ups, pickup/delivery schedule for Roy, lithium jobs at risk of missing 2–3 day promise.
+**Output you want:** Top 3 priorities, deposit follow-ups, pickup/delivery schedule for Hayden, lithium jobs at risk of missing 2–3 day promise.
 
 Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — **generated snapshot, not policy**. See [shop throughput playbook](../04_operations/shop_throughput.md).
 
@@ -59,10 +59,10 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | Person | Best uses |
 |--------|-----------|
 | **Ryan** | Morning briefing, diagnostics help, pricing, growth, DMS planning |
-| **Jesse** | Customer replies, deposits, estimates, HCP deposit pipeline (Awaiting Deposit → Need to Order → Waiting for Materials), pricebook, inventory/parts, workflow, Roy routing, reporting |
+| **Jesse** | Customer replies, deposits, estimates, HCP deposit pipeline (Awaiting Deposit → Need to Order → Waiting for Materials), pricebook, inventory/parts, workflow, Hayden routing, reporting |
 | **Christine** | Part-time backup; owner exceptions |
 | **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model) |
-| **Roy** | Pickup zone questions, route/day planning |
+| **Hayden Silva** | Pickup/delivery (primary). Shop/tech assist only when transport allows. Not independent diagnostic. |
 | **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
 
 ## Chief routing (standing)

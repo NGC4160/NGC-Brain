@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-09-01
+**Last verified:** 2026-09-03
 
 ## Ownership
 
@@ -16,18 +16,19 @@
 | **Ryan White** | Service manager | Technician oversight, diagnostics, training, QC, owner-level pricing/warranty exceptions |
 | **Jesse** | Administrative assistant / service coordinator | **Primary shop operations coordinator** (she/her) — see scope below |
 | **Christine** | Part-time assistant (co-owner) | Backup coverage when Jesse is out; owner-level exceptions |
-| **Roy** | Driver | Executes pickups and deliveries that Jesse routes |
+| **Hayden Silva** | Driver / shop technician | **Primary duty is pickup/delivery.** Shop/tech assist only when transport allows. **Not** an independent diagnostic tech. Previously appeared on HCP dispatch as a technician; current role is driver/shop tech. |
 | **Marlon** | Golf cart technician | In-shop repair and service |
 | **Ryan Gorgoglione** | Golf cart technician | In-shop repair and service (not the owner — that is Ryan White) |
 
 ## Former (do not assign work)
 
-Confirmed **2026-08-22**. Do not schedule, assign, or quote these names as current staff.
+Do not schedule, assign, or quote these names as current staff. Historical incident/job mentions (e.g. NGC-IR-1 Gautreaux 17428) stay as history, not current roster.
 
 | Name | Status | As of |
 |------|--------|-------|
 | **Taylor** | Terminated | 2026-08-22 |
 | **Peyton** | Resigned | 2026-08-22 |
+| **Roy Gautreaux** | No longer works at Neighborhood Golf Carts | 2026-09-03 |
 
 ## External
 
@@ -87,7 +88,7 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Inventory | Parts/stock visibility, counts, QBO/HCP alignment |
 | Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order |
 | Shop workflow | Board/HCP hygiene, lane movement, WIP visibility, finish-list support. On approved deposit jobs: **COPY TO JOB** → **Awaiting Deposit** → **Need to Order** → **Waiting for Materials** ([shop_workflow.md](../04_operations/shop_workflow.md)) |
-| Pickup / delivery | Routing and scheduling for Roy (zones, batching, $99 vs free) |
+| Pickup / delivery | Routing and scheduling for Hayden (zones, batching, $99 vs free) |
 | Data & reporting | Shop metrics, deposit/parts queues, weekly numbers Ryan needs |
 | And more | Other coordinator work as the shop needs it |
 
@@ -105,10 +106,10 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Parts ordering & tracking | Jesse | Ryan White |
 | Shop workflow management | Jesse | Ryan White |
 | Data management & reporting | Jesse | Ryan White |
-| Pickup/delivery routing & scheduling | Jesse | Roy (drive) / Christine |
-| Pickup & delivery (drive) | Roy | — |
+| Pickup/delivery routing & scheduling | Jesse | Hayden (drive) / Christine |
+| Pickup & delivery (drive) | Hayden Silva | — |
 | Service management / tech oversight | Ryan White | — |
-| Shop repair work | Marlon, Ryan Gorgoglione | — |
+| Shop repair work | Marlon, Ryan Gorgoglione | Hayden Silva (assist only when transport allows; not independent diag) |
 | Bookkeeping | Jessica (Griffin & Furman) | Christine |
 | Owner exceptions / warranty / discounts | Ryan White | Christine |
 
