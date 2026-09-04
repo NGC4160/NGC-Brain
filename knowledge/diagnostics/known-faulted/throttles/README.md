@@ -1,0 +1,3 @@
+# Throttles — known-faulted
+
+File only throttle captures where a fault was **proven by test** (no supply, dead/noisy signal, no sweep with pedal, drop-out, HPD/sequence fail — named from the measurement). Each file must record year/make/model, throttle type, the proven failure mode, test points, pedal position for each trace, and meter/scope settings, plus which known-good criteria failed: **voltage, timing, shape, stability, frequency, load response**, and how the signal disagreed with pedal travel or controller throttle input. Prefer a pointer to a matching known-good when one exists. No customer PII, job numbers, or invented waveforms.

@@ -1,0 +1,3 @@
+# Solenoids — known-faulted
+
+File only solenoid captures where a fault was **proven by test** (coil open/short, no pull-in, contact drop, welded contacts, chatter — named from the measurement). Each file must record year/make/model, solenoid role, the proven failure mode, test points, and meter/scope settings, plus which known-good criteria failed: **voltage, timing, shape, stability, frequency, load response**, and how coil vs contact disagreed with key/F-N-R, throttle, or controller enable. Prefer a pointer to a matching known-good when one exists. No customer PII, job numbers, or invented waveforms.

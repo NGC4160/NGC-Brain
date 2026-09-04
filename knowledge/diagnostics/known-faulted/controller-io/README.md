@@ -1,0 +1,3 @@
+# Controller I/O — known-faulted
+
+File only controller I/O captures where a fault was **proven by test** (missing KSI, dead solenoid drive, no motor output with good inputs, noisy throttle input, etc. — named from the measurement). Each file must record year/make/model, controller family/model if known, pin or test-point names from the OEM manual, the proven failure mode, and meter/scope settings, plus which known-good criteria failed: **voltage, timing, shape, stability, frequency, load response**, and which inputs vs outputs disagreed. Pinouts come from Drive manuals / NGC Manuals board. No customer PII, job numbers, or invented waveforms.
