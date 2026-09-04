@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-09-01  
+**Last verified:** 2026-09-03  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -56,7 +56,7 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 
 **Policy (final — 2026-07-13):** 40-mile Northshore free zone is firm. Outside that zone or Southshore = **$99** flat. No trip charges / mobile service.
 
-**Driver:** Roy handles pickups and deliveries.
+**Driver:** Hayden Silva handles pickups and deliveries (primary duty). Shop/tech assist only when transport allows; not an independent diagnostic tech.
 
 After a customer **approves**, queue pickup or drop-off. Do **not** say a time is locked, a spot is held, or that this is an easy yes. Do not invent booking language.
 

@@ -14,7 +14,7 @@ Read:
 Here's today's shop status:
 - Carts in shop: [list make/model/issue/tech/day-in-shop — no customer names]
 - Staff today: [who's in, who's out]
-- Pickups/deliveries for Roy: [list or "none yet"]
+- Pickups/deliveries for Hayden: [list or "none yet"]
 - Urgent: [anything]
 
 Give me:

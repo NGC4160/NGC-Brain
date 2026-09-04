@@ -10,7 +10,7 @@ NGC discontinued mobile/on-site service. All work is **in-shop** at Covington. T
 | Was | Now |
 |-----|-----|
 | Mobile/on-site repair | In-shop only |
-| "On My Way" dispatch | Customer drop-off or Roy pickup/delivery |
+| "On My Way" dispatch | Customer drop-off or Hayden pickup/delivery |
 | Trip charges | None |
 | Neighborhood-specific diagnostic fees | None — standard shop diagnostic $179 |
 

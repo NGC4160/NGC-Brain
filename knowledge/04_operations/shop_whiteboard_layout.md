@@ -1,7 +1,7 @@
 # Shop Whiteboard Layout
 
-**Last verified:** 2026-08-23  
-**Owner:** Ryan White · **Used by:** Ryan White, Marlon, Ryan Gorgoglione, Jesse, Roy · Christine (part-time backup)  
+**Last verified:** 2026-09-03  
+**Owner:** Ryan White · **Used by:** Ryan White, Marlon, Ryan Gorgoglione, Jesse, Hayden Silva · Christine (part-time backup)  
 **Pairs with:** [shop_throughput.md](shop_throughput.md) · HCP job statuses · `knowledge/.generated/shop_board.md`
 
 ---
@@ -32,7 +32,7 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 │  NGC SHOP BOARD — Mon ___ / ___ / ___          WIP: ___     Li: __/4    Updated: _____ AM   │
 ├──────────┬──────────┬──────────┬─────────────────────┬──────────┬──────────┬──────────────┤
 │ 1 INTAKE │ 2 DIAG   │ 3 PARTS  │ 4 IN REPAIR         │ 5 QC     │ 6 READY  │ 7 OUT TODAY  │
-│  (max 3) │  (max 2) │  (max 4) │  M:___ RG:___       │  (max 2) │  (max 4) │  Roy route   │
+│  (max 3) │  (max 2) │  (max 4) │  M:___ RG:___       │  (max 2) │  (max 4) │  Hayden route│
 ├──────────┴──────────┴──────────┴─────────────────────┴──────────┴──────────┴──────────────┤
 │ TODAY'S FINISH LIST (Ryan sets at huddle — max 4 cards total)                               │
 │  [ ] _____________   [ ] _____________   [ ] _____________   [ ] _____________             │
@@ -49,7 +49,7 @@ One wall board the whole team reads at 8:15. **Physical board = truth on the flo
 | 4 | **IN REPAIR** | 3 per tech | Marlon / Ryan Gorgoglione | In progress |
 | 5 | **QC** | 2 | Assigned tech | In progress — final test drive |
 | 6 | **READY** | 4 | Jesse | In progress — ready for pickup |
-| 7 | **OUT TODAY** | — | Roy | Scheduled pickup/delivery (today only) |
+| 7 | **OUT TODAY** | — | Hayden Silva | Scheduled pickup/delivery (today only) |
 
 **IN REPAIR** column is split by assigned shop tech (label with tape). Taylor and Peyton are **not** current staff.
 
@@ -99,7 +99,7 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 | Blue | 4 IN REPAIR | Active wrench time |
 | Purple | 5 QC | Test drive / 7-point / CPF |
 | Green | 6 READY | Call customer / collect balance |
-| Black | 7 OUT TODAY | Roy’s manifest only |
+| Black | 7 OUT TODAY | Hayden’s manifest only |
 
 ---
 
@@ -110,8 +110,8 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 1. New drop-offs → **INTAKE** card (invoice # from HCP)
 2. After approval on deposit jobs: HCP **COPY TO JOB** → **Awaiting Deposit**; queue pickup or drop-off (do not lock a time / hold a spot / easy yes). Move the floor card to **PARTS**
 3. Deposit in → HCP **Need to Order**; parts ordered → HCP **Waiting for Materials**; mark `$ dep?` / order ETA
-4. Build Roy’s **OUT TODAY** route (zone batch; free vs $99)
-5. **READY** → notify customer; move to **OUT TODAY** if Roy delivering
+4. Build Hayden’s **OUT TODAY** route (zone batch; free vs $99)
+5. **READY** → notify customer; move to **OUT TODAY** if Hayden delivering
 6. Erase **OUT TODAY** column at end of day
 
 ### Ryan — 8:15 AM huddle (10 min)
@@ -130,7 +130,7 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 - Done but not road-tested → **QC**
 - Road test pass → **READY**; tell Jesse
 
-### Roy — after huddle
+### Hayden — after huddle
 
 - Copy **OUT TODAY** to clipboard or phone list (invoice # + address zone N/S/40+)
 - Pick up from **READY** when customer paid or approved
@@ -174,7 +174,7 @@ Post this small legend next to the board:
 | IN REPAIR | In progress | "On board: REPAIR" |
 | QC | In progress | "On board: QC" |
 | READY | In progress | "Ready for pickup" |
-| OUT TODAY | Scheduled | "Roy delivery/pickup [date]" |
+| OUT TODAY | Scheduled | "Hayden delivery/pickup [date]" |
 
 When job is done: **Complete** in HCP, **remove card** from board (archive stack by week for audit).
 

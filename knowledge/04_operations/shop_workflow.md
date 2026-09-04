@@ -1,6 +1,6 @@
 # Shop Workflow
 
-**Last verified:** 2026-09-01
+**Last verified:** 2026-09-03
 
 ## Current state
 
@@ -15,7 +15,7 @@ When there is an opening in the slot, schedule → In-shop work → Payment → 
 
 ### 1. Customer contact & estimate
 
-- **Jesse** (administrative assistant / service coordinator) owns intake, estimating, workflow, parts/inventory, and Roy’s routing; **Christine** covers part-time as backup
+- **Jesse** (administrative assistant / service coordinator) owns intake, estimating, workflow, parts/inventory, and Hayden’s routing; **Christine** covers part-time as backup
 - Hours: Mon–Fri 8 AM – 5 PM
 - Shop is **in-shop only** (no mobile)
 - **Credit card surcharge on every estimate** (shop-wide, 2026-08-30). Not lithium-only. Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do not invent a % or $. Policy: [shop_services.md](../03_services/shop_services.md#credit-card-surcharge-shop-wide-office-rule).
@@ -44,13 +44,14 @@ This queue is **distinct** from the parts-deposit pipeline below. The deposit pi
 Options:
 
 - Customer drops cart at shop
-- **Roy** picks up cart (free within 40 mi Northshore; **$99** flat outside zone / Southshore)
+- **Hayden Silva** picks up cart (free within 40 mi Northshore; **$99** flat outside zone / Southshore)
 
 ### 3. Service execution
 
 - **Ryan White** — service manager; oversees jobs and workflow
 - **Marlon** — golf cart technician; primary shop work
 - **Ryan Gorgoglione** — golf cart technician; primary shop work
+- **Hayden Silva** — driver / shop technician; pickup/delivery first. Shop/tech assist only when transport allows. **Not** an independent diagnostic tech.
 - Complex diagnostics escalate to **Ryan White** (Peyton resigned 2026-08-22)
 
 Every service includes **free 7-point safety inspection**.
@@ -127,7 +128,7 @@ Do not invent a substitute form. Do not treat the complimentary 7-point inspecti
 
 - Collect payment at pickup or invoice via HCP (text/email)
 - **Before sending the invoice for payment, or before taking payment:** update the credit card surcharge so it matches the **final total**. The line must already be on the estimate (every estimate). Do not invent a rate.
-- **Roy** delivers cart if customer used pickup service
+- **Hayden Silva** delivers cart if customer used pickup service
 
 ### 8. Documentation
 
