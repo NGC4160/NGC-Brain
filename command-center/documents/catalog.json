@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T16:54:24.089792+00:00",
+  "generated_at": "2026-09-04T17:34:32.136158+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan, Jesse, and Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",

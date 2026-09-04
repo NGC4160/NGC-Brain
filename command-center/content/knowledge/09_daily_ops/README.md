@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-09-01  
+**Last verified:** 2026-09-04  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -96,6 +96,18 @@ Ask Ryan and **wait for a yes** before sending any Slack to **Jesse Killian**. N
 **Inbox:** must not auto-Slack Jesse because lithium “stays with Jesse.”
 
 **No HCP customer-message watching.**
+
+**Parts updates (Chief → Jesse Slack):** Confirmed **2026-09-04 by Ryan White.** When Chief Slacks Jesse a parts update, the message may contain **ONLY** these fields:
+
+1. Customer name
+2. Part
+3. Shipping company
+4. Tracking number
+5. Estimated arrival date
+
+Nothing else: no job numbers, vendor order IDs, corrections, other leads, commentary, or extra sentences. If a field is unknown, **omit it**. Do **not** invent tracking or ETA. Ryan must still approve **that specific Slack** to Jesse before it is sent.
+
+Website lead dump, lithium list, and other Slack-to-Jesse types are unchanged except that parts updates use this five-field format.
 
 Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager — [roles.md](../05_team/roles.md).
 
