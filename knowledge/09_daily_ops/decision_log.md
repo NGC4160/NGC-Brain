@@ -59,6 +59,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-09-04 | **Diagnostics** bot created; library scaffold added under `knowledge/diagnostics/` (README + known-good / known-faulted / cases placeholders). | Ryan White | Empty scaffold — no case data, waveforms, or customer PII. See `knowledge/diagnostics/README.md`. |
 | 2026-09-04 | Chief → Jesse Slack **parts updates** = five fields only (customer name, part, shipping company, tracking number, estimated arrival date). Omit unknown. Do not invent tracking/ETA. Ryan still approves that Slack before send. | Ryan White | See `09_daily_ops/README.md`. Website lead dump / lithium list unchanged. Do not store customer names or tracking here. |
 | 2026-09-05 | **NGC-OPS-DRIVER-09032026R0** adopted as Driver/Shop Tech Assistant SOP | Ryan White | Full PDF in Drive Procedures: [file](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (`13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`). Brain holds summary + pointer only. Current person in role: **Hayden Silva**. **Roy Gautreaux** off roster 2026-09-03. See `driver_sop.md` / `roles.md`. |
+| 2026-09-05 | CartScope repo NGC4160/CartScope created (public); Brain pointer added | Ryan White | Live app https://giant-apex-light-wave.grok.me. Built in Grok Build; long-term code in that GitHub repo once connected. Diagnostics bot owns the evidence library; CartScope is the tech checklist UI. See `06_systems/cartscope.md`. |
 
 ---
 

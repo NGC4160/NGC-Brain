@@ -1,9 +1,9 @@
 # Diagnostics library
 
-**Last verified:** 2026-09-04  
+**Last verified:** 2026-09-05  
 **Owner:** **Diagnostics** bot (reports to Chief). Techs file evidence here. Shop still owns Housecall Pro jobs.
 
-This folder is the shop’s **evidence library** for Neighborhood Golf Carts diagnostics. It starts empty on purpose. Do **not** invent case data, waveforms, customer PII, secrets, or “typical” traces to fill it.
+This folder is the shop’s **evidence library** for Neighborhood Golf Carts diagnostics. It starts empty on purpose. Do **not** invent case data, waveforms, customer PII, secrets, or “typical” traces to fill it. **CartScope** is the tech-facing checklist UI (not this library, not this bot) — [`../06_systems/cartscope.md`](../06_systems/cartscope.md).
 
 ## Standing rules
 
