@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-09-01
+**Last verified:** 2026-09-05
 
 ## Ownership
 
@@ -16,16 +16,17 @@
 | **Ryan White** | Service manager | Technician oversight, diagnostics, training, QC, owner-level pricing/warranty exceptions |
 | **Jesse** | Administrative assistant / service coordinator | **Primary shop operations coordinator** (she/her) — see scope below |
 | **Christine** | Part-time assistant (co-owner) | Backup coverage when Jesse is out; owner-level exceptions |
-| **Roy** | Driver | Executes pickups and deliveries that Jesse routes |
+| **Hayden Silva** | Driver / Shop Technician Assistant | **Primary driver** — pickups and deliveries Jesse routes. **Secondary** shop / mechanical / tech-assist / errands only when transport and management priorities allow. Official SOP: **NGC-OPS-DRIVER-09032026R0** in Drive [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) — [driver_sop.md](../04_operations/driver_sop.md). **Not** an independent diagnostic tech. |
 | **Marlon** | Golf cart technician | In-shop repair and service |
 | **Ryan Gorgoglione** | Golf cart technician | In-shop repair and service (not the owner — that is Ryan White) |
 
 ## Former (do not assign work)
 
-Confirmed **2026-08-22**. Do not schedule, assign, or quote these names as current staff.
+Do not schedule, assign, or quote these names as current staff.
 
 | Name | Status | As of |
 |------|--------|-------|
+| **Roy Gautreaux** | Off roster | 2026-09-03 |
 | **Taylor** | Terminated | 2026-08-22 |
 | **Peyton** | Resigned | 2026-08-22 |
 
@@ -88,11 +89,24 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Inventory | Parts/stock visibility, counts, QBO/HCP alignment |
 | Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order |
 | Shop workflow | Board/HCP hygiene, lane movement, WIP visibility, finish-list support. On approved deposit jobs: **COPY TO JOB** → **Awaiting Deposit** → **Need to Order** → **Waiting for Materials** ([shop_workflow.md](../04_operations/shop_workflow.md)) |
-| Pickup / delivery | Routing and scheduling for Roy (zones, batching, $99 vs free) |
+| Pickup / delivery | Routing and scheduling for Hayden Silva (zones, batching, $99 vs free) |
 | Data & reporting | Shop metrics, deposit/parts queues, weekly numbers Ryan needs |
 | And more | Other coordinator work as the shop needs it |
 
 **Escalate to Ryan White:** wrench work, diagnostic calls, warranty/courtesy write-offs, discounts, angry/fleet fights, ad strategy, payroll/banking. Christine covers when Jesse or Ryan White is out.
+
+## Driver / Shop Technician Assistant — scope (current)
+
+**Filled: Hayden Silva.** Official package: **NGC-OPS-DRIVER-09032026R0** (effective 2026-09-03, Rev. R0). Full text is the staff master PDF in Drive [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) — **PDF in Drive Procedures**; do not invent a file id. Brain summary: [driver_sop.md](../04_operations/driver_sop.md).
+
+| Priority | What this role owns |
+|----------|---------------------|
+| **1 — Driver** | Pickup, loading/securement, transport, delivery that Jesse routes |
+| **2 — Shop assist** | Mechanical / tech-assist / errands **only** when transport and management priorities allow |
+
+**Not this role:** independent diagnostics, diagnostic calls, or unsupervised tech work. Those stay with Ryan White / Marlon / Ryan Gorgoglione.
+
+**Roy Gautreaux** is off roster as of 2026-09-03.
 
 ## RACI summary
 
@@ -106,10 +120,10 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Parts ordering & tracking | Jesse | Ryan White |
 | Shop workflow management | Jesse | Ryan White |
 | Data management & reporting | Jesse | Ryan White |
-| Pickup/delivery routing & scheduling | Jesse | Roy (drive) / Christine |
-| Pickup & delivery (drive) | Roy | — |
+| Pickup/delivery routing & scheduling | Jesse | Hayden Silva (drive) / Christine |
+| Pickup & delivery (drive) | Hayden Silva | — |
 | Service management / tech oversight | Ryan White | — |
-| Shop repair work | Marlon, Ryan Gorgoglione | — |
+| Shop repair work | Marlon, Ryan Gorgoglione | Hayden Silva (tech-assist only when transport/management allow; **not** independent diag) |
 | Bookkeeping | Jessica (Griffin & Furman) | Christine |
 | Owner exceptions / warranty / discounts | Ryan White | Christine |
 

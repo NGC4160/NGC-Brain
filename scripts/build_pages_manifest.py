@@ -74,6 +74,7 @@ def build_sections() -> list[dict]:
         ("03_services/shop_services.md", "Shop Services", "Diagnostics, fees, pickup/delivery, deposits."),
         ("03_services/pricebook_reference.md", "Pricebook Reference", "Key HCP line items and categories."),
         ("04_operations/shop_workflow.md", "Shop Workflow", "How work flows through the shop."),
+        ("04_operations/driver_sop.md", "Driver SOP", "NGC-OPS-DRIVER-09032026R0 summary + Drive Procedures pointer."),
         ("04_operations/shop_throughput.md", "Shop Throughput", "WIP limits, daily rhythm, lithium SLA."),
         ("04_operations/shop_whiteboard_layout.md", "Shop Whiteboard", "Physical board columns, cards, colors."),
         ("05_team/roles.md", "Team Roles", "Roster and responsibilities."),

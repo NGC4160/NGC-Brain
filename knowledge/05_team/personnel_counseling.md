@@ -1,6 +1,6 @@
 # Personnel Counseling
 
-**Last verified:** 2026-08-22  
+**Last verified:** 2026-09-05  
 **Primary user:** Ryan (service manager) · Jesse (front-office witness) · Christine (co-owner / HR)  
 **Template:** [`external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html`](../../external_docs/templates/personnel_counseling/NGC_Personnel_Counseling_Form.html)
 
@@ -105,7 +105,7 @@ Primary source: **NGC Policies & Procedures** in Google Drive Procedures ([folde
 | Employee | Primary counselor | Backup |
 |----------|-------------------|--------|
 | Marlon; Ryan Gorgoglione | Ryan White | Jesse (witness if needed) |
-| Roy | Ryan | Jesse |
+| Hayden Silva | Ryan | Jesse |
 | Jesse | Ryan | Christine (co-owner, witness if needed) |
 | Christine | Ryan or Christine (co-owner) | — |
 | Ryan | Christine (co-owner) | — |
