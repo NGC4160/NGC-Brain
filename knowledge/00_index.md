@@ -37,7 +37,8 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [05_team/roles.md](05_team/roles.md) | Human roster + **live Grok Bot roster** (Chief is COS) |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [../docs/documents/README.md](../docs/documents/README.md) | Command Center Documents hub (**publish output** — edit `external_docs/templates/`) |
-| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, Drive catalog + connector, future DMS |
+| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, Drive catalog + connector, CartScope, future DMS |
+| [06_systems/cartscope.md](06_systems/cartscope.md) | **CartScope** — tech-facing diagnostic checklist web app (Grok Build; repo NGC4160/CartScope) |
 | [06_systems/garagebuddy.md](06_systems/garagebuddy.md) | **GarageBuddy** — **future/eval** DMS sandbox, not current shop process |
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
 | [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, meter/speedometer, SMS templates (no PII) |
