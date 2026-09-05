@@ -17,7 +17,7 @@ Copy this template each Friday. Fill in numbers you have; leave blank what you d
 
 ## Team
 
-- Roy pickups/deliveries issues: 
+- Hayden Silva pickups/deliveries issues: 
 - Tech bottlenecks (Marlon / Ryan Gorgoglione): 
 - Jesse / phones, parts, inventory, routing, reporting notes: 
 

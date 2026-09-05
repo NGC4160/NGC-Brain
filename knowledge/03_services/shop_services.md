@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-09-01  
+**Last verified:** 2026-09-05  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -56,7 +56,7 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 
 **Policy (final — 2026-07-13):** 40-mile Northshore free zone is firm. Outside that zone or Southshore = **$99** flat. No trip charges / mobile service.
 
-**Driver:** Roy handles pickups and deliveries.
+**Driver:** Hayden Silva (Driver / Shop Technician Assistant) handles pickups and deliveries. Driver first; shop assist only when transport and management priorities allow. Official SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures — [driver_sop.md](../04_operations/driver_sop.md). **Roy Gautreaux** is off roster (2026-09-03).
 
 After a customer **approves**, queue pickup or drop-off. Do **not** say a time is locked, a spot is held, or that this is an easy yes. Do not invent booking language.
 
