@@ -127,7 +127,7 @@ Quoted from the live HCP screenshot (Settings › Price Book › Materials › M
 | **Checklists** | `1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp` | [folder](https://drive.google.com/drive/folders/1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp) |
 | **Manuals** | `1-1QqJQh4UojQEERawwpfEjKYOor2VMuR` | [folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) |
 
-**NGC-OPS-DRIVER-09032026R0** (Driver / Shop Technician Assistant SOP) lives in Drive Procedures — **PDF in Drive Procedures**; do not invent a file id. Brain summary: [driver_sop.md](../04_operations/driver_sop.md). **NGC-QC-1** and **NGC-IR-1** were **not** found in Drive Procedures by those titles (2026-08-30). Keep the short rules in [shop_workflow.md](../04_operations/shop_workflow.md). Lithium sales PDF is in Procedures: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md).
+**NGC-OPS-DRIVER-09032026R0** (Driver / Shop Technician Assistant SOP) lives in Drive Procedures: [NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (file id `13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`). Brain summary: [driver_sop.md](../04_operations/driver_sop.md). **NGC-QC-1** and **NGC-IR-1** were **not** found in Drive Procedures by those titles (2026-08-30). Keep the short rules in [shop_workflow.md](../04_operations/shop_workflow.md). Lithium sales PDF is in Procedures: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md).
 
 ## Deposit-alert script (not a Grok Bot)
 

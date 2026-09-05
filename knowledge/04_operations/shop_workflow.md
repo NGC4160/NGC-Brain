@@ -156,7 +156,7 @@ Staff SOPs live in Drive. Live content = Drive connector. Brain catalog = `knowl
 
 | Document | Location |
 |----------|----------|
-| **NGC-OPS-DRIVER-09032026R0** Driver / Shop Technician Assistant SOP | Drive [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) — **PDF in Drive Procedures** (filename pattern `NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf`; do not invent a file id). Brain summary: [driver_sop.md](driver_sop.md) |
+| **NGC-OPS-DRIVER-09032026R0** Driver / Shop Technician Assistant SOP | [NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (file id `13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`) in Drive [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh). Brain summary: [driver_sop.md](driver_sop.md) |
 | **NGC-QC-1** pre-delivery QC | Knowledge rules above — **not yet in Drive Procedures** |
 | **NGC-IR-1** incident form | Knowledge rules above — **not yet in Drive Procedures** |
 | Lithium Conversion Sales Guide (PDF) | [Drive file](https://drive.google.com/file/d/1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC/view) — internal; do not hand to customers. Brain: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md) |

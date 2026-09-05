@@ -68,7 +68,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 |-------|------------|
 | **Live file content** | Google Drive connector (NGC985) — shop bots read SOPs here |
 | **Brain catalog** | [`knowledge/.generated/drive_catalog.md`](.generated/drive_catalog.md) — generated list only |
-| **Staff SOPs** | Stay in Drive Procedures. **NGC-OPS-DRIVER-09032026R0** master PDF is in Procedures (file id not yet recorded — do not invent). **NGC-QC-1 / NGC-IR-1 not yet in Drive Procedures** (2026-08-30) |
+| **Staff SOPs** | Stay in Drive Procedures. **NGC-OPS-DRIVER-09032026R0** master PDF: [Drive file](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (`13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`) in Procedures. **NGC-QC-1 / NGC-IR-1 not yet in Drive Procedures** (2026-08-30) |
 | **`external_docs/My Drive/`** | **Not** a live sync. Mention/symlink only. `.gitmodules` is GarageBuddy. |
 | **Actions** | Optional `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` refreshes the catalog. Missing secret = skip, do not fail HCP/QBO. Never commits File_000 or binaries. |
 

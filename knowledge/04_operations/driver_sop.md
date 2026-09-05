@@ -13,8 +13,8 @@ The **full official SOP is the staff master PDF** in Google Drive **Procedures**
 | Item | Value |
 |------|--------|
 | Folder | [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) (`1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh`) |
-| Filename pattern | `NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf` |
-| File id | **PDF in Drive Procedures** — Chief is uploading; do not invent a file id |
+| Filename | `NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf` |
+| File | [NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (file id `13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`) |
 
 Open the Drive PDF for the complete position description, SOPs, workflows, checklists, and competency controls. Live Drive content = Google Drive connector (NGC985). Brain catalog = `knowledge/.generated/drive_catalog.md`.
 

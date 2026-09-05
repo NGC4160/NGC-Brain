@@ -97,7 +97,7 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 
 ## Driver / Shop Technician Assistant — scope (current)
 
-**Filled: Hayden Silva.** Official package: **NGC-OPS-DRIVER-09032026R0** (effective 2026-09-03, Rev. R0). Full text is the staff master PDF in Drive [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) — **PDF in Drive Procedures**; do not invent a file id. Brain summary: [driver_sop.md](../04_operations/driver_sop.md).
+**Filled: Hayden Silva.** Official package: **NGC-OPS-DRIVER-09032026R0** (effective 2026-09-03, Rev. R0). Full text is the staff master PDF in Drive [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh): [NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (file id `13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`). Brain summary: [driver_sop.md](../04_operations/driver_sop.md).
 
 | Priority | What this role owns |
 |----------|---------------------|
