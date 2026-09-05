@@ -48,7 +48,7 @@ Each component subfolder has a one-paragraph README. Do not drop unlabeled scree
 
 ## OEM manuals (read these; do not guess pinouts)
 
-Use OEM diagrams and service manuals **before** interpreting a waveform or calling a pin.
+Use OEM diagrams and service manuals **before** interpreting a waveform or calling a pin. **CartScope** AI uses service manuals on file first, then legitimate reliable online sources. If no manual is on file for a cart, source a candidate and add it to the shop library **only with approval** — [cartscope.md](../06_systems/cartscope.md).
 
 | Source | What it is |
 |--------|------------|

@@ -75,11 +75,13 @@ On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate 
 
 Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
 
-**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in); writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **CartScope Tester change plans**); writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
 
 **Lanes:** Shop owns Housecall Pro — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](../diagnostics/README.md)) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
 Ask Ryan before any Slack to Jesse. Results come back in Chief’s thread.
+
+**CartScope app changes (2026-09-05):** CartScope Tester presents a change plan and gets Ryan’s yes through Chief before implementing any CartScope app change. Pointer: [cartscope.md](../06_systems/cartscope.md).
 
 Roster and ownership: [roles.md](../05_team/roles.md).
 
