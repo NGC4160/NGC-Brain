@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-05T16:08:31Z",
+  "generated_at": "2026-09-05T17:24:25Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 133,
+  "total_items": 134,
   "sections": [
     {
       "id": "start",
@@ -124,6 +124,18 @@
           "view": "view.html?path=knowledge/04_operations/shop_workflow.md",
           "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/04_operations/shop_workflow.md",
           "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/04_operations/shop_workflow.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "Driver SOP",
+          "description": "NGC-OPS-DRIVER-09032026R0 summary + Drive Procedures pointer.",
+          "path": "knowledge/04_operations/driver_sop.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/04_operations/driver_sop.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/04_operations/driver_sop.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/04_operations/driver_sop.md",
           "tags": [
             "knowledge"
           ]

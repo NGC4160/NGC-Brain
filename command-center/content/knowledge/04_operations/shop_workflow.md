@@ -1,6 +1,6 @@
 # Shop Workflow
 
-**Last verified:** 2026-09-01
+**Last verified:** 2026-09-05
 
 ## Current state
 
@@ -15,7 +15,7 @@ When there is an opening in the slot, schedule → In-shop work → Payment → 
 
 ### 1. Customer contact & estimate
 
-- **Jesse** (administrative assistant / service coordinator) owns intake, estimating, workflow, parts/inventory, and Roy’s routing; **Christine** covers part-time as backup
+- **Jesse** (administrative assistant / service coordinator) owns intake, estimating, workflow, parts/inventory, and Hayden Silva’s routing; **Christine** covers part-time as backup
 - Hours: Mon–Fri 8 AM – 5 PM
 - Shop is **in-shop only** (no mobile)
 - **Credit card surcharge on every estimate** (shop-wide, 2026-08-30). Not lithium-only. Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do not invent a % or $. Policy: [shop_services.md](../03_services/shop_services.md#credit-card-surcharge-shop-wide-office-rule).
@@ -44,7 +44,7 @@ This queue is **distinct** from the parts-deposit pipeline below. The deposit pi
 Options:
 
 - Customer drops cart at shop
-- **Roy** picks up cart (free within 40 mi Northshore; **$99** flat outside zone / Southshore)
+- **Hayden Silva** (Driver / Shop Technician Assistant) picks up cart (free within 40 mi Northshore; **$99** flat outside zone / Southshore). Driver first — [driver_sop.md](driver_sop.md). Full SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures.
 
 ### 3. Service execution
 
@@ -127,7 +127,7 @@ Do not invent a substitute form. Do not treat the complimentary 7-point inspecti
 
 - Collect payment at pickup or invoice via HCP (text/email)
 - **Before sending the invoice for payment, or before taking payment:** update the credit card surcharge so it matches the **final total**. The line must already be on the estimate (every estimate). Do not invent a rate.
-- **Roy** delivers cart if customer used pickup service
+- **Hayden Silva** delivers cart if customer used pickup service (driver first; shop assist only when transport/management allow)
 
 ### 8. Documentation
 
@@ -156,6 +156,7 @@ Staff SOPs live in Drive. Live content = Drive connector. Brain catalog = `knowl
 
 | Document | Location |
 |----------|----------|
+| **NGC-OPS-DRIVER-09032026R0** Driver / Shop Technician Assistant SOP | [NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (file id `13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`) in Drive [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh). Brain summary: [driver_sop.md](driver_sop.md) |
 | **NGC-QC-1** pre-delivery QC | Knowledge rules above — **not yet in Drive Procedures** |
 | **NGC-IR-1** incident form | Knowledge rules above — **not yet in Drive Procedures** |
 | Lithium Conversion Sales Guide (PDF) | [Drive file](https://drive.google.com/file/d/1G-5am7Of4SOzAp0tsAM8tMRqWEvcLQiC/view) — internal; do not hand to customers. Brain: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md) |

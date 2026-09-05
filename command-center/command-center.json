@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T16:08:31.507492+00:00",
+  "generated_at": "2026-09-05T17:24:25.285894+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,74 +12,23 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-09-05T16:08:31.466335+00:00",
-    "jobs_synced_at": "2026-09-05T16:08:27.752634+00:00",
-    "has_live_data": true,
+    "generated_at": "2026-09-05T17:24:25.261424+00:00",
+    "jobs_synced_at": null,
+    "has_live_data": false,
     "metrics": {
-      "in_progress": 7,
-      "scheduled": 19,
-      "needs_scheduling": 6,
-      "active_pipeline": 32,
+      "in_progress": 0,
+      "scheduled": 0,
+      "needs_scheduling": 0,
+      "active_pipeline": 0,
       "wip_target": null,
       "wip_over": 0,
-      "stale_15_plus": 6,
-      "lithium_at_risk": 1,
+      "stale_15_plus": 0,
+      "lithium_at_risk": 0,
       "deposit_alerts": 0
     },
     "alerts": {
-      "lithium_at_risk": [
-        {
-          "invoice": "17248",
-          "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 123,
-          "lithium": true,
-          "status": "in progress"
-        }
-      ],
-      "stale_wip": [
-        {
-          "invoice": "17248",
-          "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 123,
-          "lithium": true,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17260",
-          "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 122,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17109-2",
-          "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 101,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17411",
-          "description": "***SEE NOTES***",
-          "days": 30,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17420",
-          "description": "General - ***SEE NOTES***",
-          "days": 26,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17443",
-          "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-          "days": 15,
-          "lithium": false,
-          "status": "in progress"
-        }
-      ]
+      "lithium_at_risk": [],
+      "stale_wip": []
     },
     "sync": {
       "synced_at": "2026-09-05T16:08:31.067137+00:00",
@@ -652,7 +601,7 @@
           "title": "Operations Dashboard",
           "desc": "WIP, lithium lane, deposit alerts, sync status",
           "href": "dashboard.html",
-          "badge": "7 in shop",
+          "badge": "Sync needed",
           "primary": true
         },
         {
@@ -791,7 +740,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "133 indexed deliverables",
+          "desc": "134 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -985,5 +934,5 @@
     "planned": 3,
     "categories": 5
   },
-  "manifest_total": 133
+  "manifest_total": 134
 }
