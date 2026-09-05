@@ -1,0 +1,3 @@
+# Control circuits — known-good
+
+File only confirmed-good control-circuit captures (key switch, F-N-R, TOS/run-enable, charger interlock, tow/run, limit switches, and related logic — labeled) after the cart was proven healthy. Each file must record year/make/model, circuit name, test points from the OEM diagram, and meter/scope settings, plus the known-good criteria used: **voltage, timing, shape, stability, frequency, load response**, and how that circuit relates to solenoid coil, controller KSI/enable, and throttle. Do not store a trace here until those criteria were met. No customer PII, job numbers, or invented waveforms.

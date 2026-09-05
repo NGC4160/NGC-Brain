@@ -77,7 +77,7 @@ Do **not** start specialist work first and hand off later. If no bot owns the jo
 
 **Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in); writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
 
-**Lanes:** Shop owns Housecall Pro — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
+**Lanes:** Shop owns Housecall Pro — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](../diagnostics/README.md)) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
 Ask Ryan before any Slack to Jesse. Results come back in Chief’s thread.
 
@@ -109,7 +109,7 @@ Nothing else: no job numbers, vendor order IDs, corrections, other leads, commen
 
 Website lead dump, lithium list, and other Slack-to-Jesse types are unchanged except that parts updates use this five-field format.
 
-Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager — [roles.md](../05_team/roles.md).
+Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics** — [roles.md](../05_team/roles.md). Diagnostic case library: [diagnostics/README.md](../diagnostics/README.md).
 
 ## Bot updates
 

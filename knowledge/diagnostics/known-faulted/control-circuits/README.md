@@ -1,0 +1,3 @@
+# Control circuits — known-faulted
+
+File only control-circuit captures where a fault was **proven by test** (open key, dead F-N-R, stuck charger interlock, TOS/run-enable missing, etc. — named from the measurement). Each file must record year/make/model, circuit name, the proven failure mode, test points from the OEM diagram, and meter/scope settings, plus which known-good criteria failed: **voltage, timing, shape, stability, frequency, load response**, and how that circuit disagreed with solenoid coil, controller KSI/enable, or throttle. Prefer a pointer to a matching known-good when one exists. No customer PII, job numbers, or invented waveforms.
