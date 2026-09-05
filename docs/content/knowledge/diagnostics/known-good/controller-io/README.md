@@ -1,0 +1,3 @@
+# Controller I/O — known-good
+
+File only confirmed-good controller input/output captures (pack, B+, B−, KSI, reverse, solenoid drive, throttle input, motor output — labeled) after the cart was proven healthy. Each file must record year/make/model, controller family/model if known, pin or test-point names from the OEM manual, and meter/scope settings, plus the known-good criteria used: **voltage, timing, shape, stability, frequency, load response**, and how inputs and outputs move together. Pinouts come from Drive manuals / NGC Manuals board — do not guess. No customer PII, job numbers, or invented waveforms.

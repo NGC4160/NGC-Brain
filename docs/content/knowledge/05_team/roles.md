@@ -44,6 +44,7 @@ Confirmed **2026-08-22**. Do not schedule, assign, or quote these names as curre
 | **Chief** (COS) | id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1` — Ryan’s only POC. Routes every task (see below). Collects weekday 11am America/Chicago lead forms, then asks Ryan before Slack to Jesse. |
 | **Inbox** | Intake / mail. Must **not** auto-Slack Jesse because lithium “stays with Jesse.” Lead forms only from **NGC985 / ryan@ / contact@**. |
 | **Shop** | **Housecall Pro owner** — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. |
+| **Diagnostics** | Evidence-first diagnostic support — known-good / known-faulted library and case write-ups in [`../diagnostics/README.md`](../diagnostics/README.md). Supports techs (**TEST BEFORE REPLACEMENT**); does **not** replace hands-on tests. Does **not** own HCP jobs (Shop owns HCP). |
 | **Front Desk** | Customer replies (lithium kit/warranty from `customer_reply_standard.md`) |
 | **Parts** | Parts / deposit-before-order |
 | **Books** | Books coordination |
@@ -67,11 +68,11 @@ Do **not** start specialist work first and hand off later. If no bot owns the jo
 
 **Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in); writing facts back to Brain the **same day** Ryan corrects them; routing.
 
-**Lanes (already true):** Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
+**Lanes (already true):** Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). **Diagnostics** owns the diagnostic evidence library (known-good / known-faulted / cases) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
 Ask Ryan before any Slack to Jesse. Results stay in Chief’s thread.
 
-**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back the same day Ryan corrects them. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
+**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back the same day Ryan corrects them. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **Parts updates** (Chief → Jesse Slack): five fields only — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse). **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
 
 The deposit-alert **batch script** in `scripts/admin_bot/` is planned/live automation — **not** a Grok Bot and **not** the COS. Spec: [ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md).
 
