@@ -38,7 +38,7 @@ Do not schedule, assign, or quote these names as current staff.
 
 ## Grok Bot roster (live)
 
-**Do not invent extra bots.** Chief is Ryan’s **only** point of contact. All other bots report to Chief. Approvals go through Chief, who asks Ryan: Slack to Jesse, money, payroll submit, sign-in, delete a bot, orders.
+**Do not invent extra bots.** Chief is Ryan’s **only** point of contact. All other bots report to Chief. Approvals go through Chief, who asks Ryan: Slack to Jesse, money, payroll submit, sign-in, delete a bot, orders, **CartScope app changes**.
 
 | Bot | Role |
 |-----|------|
@@ -67,13 +67,13 @@ On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate 
 
 Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
 
-**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in); writing facts back to Brain the **same day** Ryan corrects them; routing.
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **CartScope Tester change plans**); writing facts back to Brain the **same day** Ryan corrects them; routing.
 
 **Lanes (already true):** Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). **Diagnostics** owns the diagnostic evidence library (known-good / known-faulted / cases) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
 Ask Ryan before any Slack to Jesse. Results stay in Chief’s thread.
 
-**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back the same day Ryan corrects them. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **Parts updates** (Chief → Jesse Slack): five fields only — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse). **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
+**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back the same day Ryan corrects them. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **Parts updates** (Chief → Jesse Slack): five fields only — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse). **CartScope app changes:** CartScope Tester presents a change plan and gets Ryan’s yes through Chief before implementing — [cartscope.md](../06_systems/cartscope.md). **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
 
 The deposit-alert **batch script** in `scripts/admin_bot/` is planned/live automation — **not** a Grok Bot and **not** the COS. Spec: [ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md).
 

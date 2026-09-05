@@ -16,6 +16,16 @@ Built in **Grok Build**. Long-term code access is the GitHub repo once it is con
 
 Brief standing rules so bots and staff do not invent a different product. This is **not** a rebuild prompt.
 
+**Confirmed 2026-09-05 by Ryan White.**
+
+- **Change plan first.** CartScope Tester must present a change plan and get Ryan’s yes **through Chief** before implementing any CartScope app change.
+- **Goal.** A technician can diagnose any issue on any golf cart (any brand / edge cases).
+- **Tech observations redirect the path.** The tech’s free-text observations redirect the diagnostic path. AI uses service manuals on file first, then legitimate reliable online sources.
+- **AI is integral.** AI is part of the app flow — not merely a secondary bottom window.
+- **No manual on file.** If there is no service manual on file for a cart: source a candidate and add it to the shop library **only with approval**.
+
+Also standing (do not invent other features):
+
 - **Any cart / any condition** — not TXT-only.
 - **Job header:** customer last name + Housecall Pro job number (and battery type if electric).
 - **Terms:** controller (not “speed box”); solenoid (not “big clicker”).
