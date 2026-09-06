@@ -56,6 +56,9 @@ Do not schedule, assign, or quote these names as current staff.
 | **Call Coach** | Call coaching |
 | **Print** | Blake birdhouses — **not** NGC shop process. Live repo: [NGC4160/PersonalProjects](https://github.com/NGC4160/PersonalProjects). |
 | **Bot Manager** | Create / manage bots only. **Never delete a bot** without Ryan (via Chief). |
+| **Bot Coach** | Daily instruction coach. Propose-only improvements to Chief; Bot Manager applies after Ryan yes via Chief. 7:30 AM America/Chicago daily including weekends. |
+| **CartScope Tester** | Iterative QA for https://cart-scope.vercel.app. Reports to Chief only. On-demand. No app code without a change plan and Ryan yes via Chief. |
+| **Not My Tempo** | Audits assistant routines for bad cadence; turns expensive computer-use loops into scripts/connectors. Reports via Chief. |
 
 ### Chief routing (standing)
 

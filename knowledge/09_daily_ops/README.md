@@ -111,7 +111,7 @@ Nothing else: no job numbers, vendor order IDs, corrections, other leads, commen
 
 Website lead dump, lithium list, and other Slack-to-Jesse types are unchanged except that parts updates use this five-field format.
 
-Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics** — [roles.md](../05_team/roles.md). Diagnostic case library: [diagnostics/README.md](../diagnostics/README.md).
+Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics**, Bot Coach, CartScope Tester, Not My Tempo — [roles.md](../05_team/roles.md). Diagnostic case library: [diagnostics/README.md](../diagnostics/README.md).
 
 ## Bot updates
 
