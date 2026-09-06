@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-09-04  
+**Last verified:** 2026-09-06  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -20,7 +20,7 @@ This is not just documentation — it's an **operating system**. Cursor + `knowl
 2. Run [`prompts/morning_briefing.md`](../../prompts/morning_briefing.md)
 3. Tell the AI: carts in shop, tech availability, any fires
 
-**Output you want:** Top 3 priorities, deposit follow-ups, pickup/delivery schedule for Roy, lithium jobs at risk of missing 2–3 day promise.
+**Output you want:** Top 3 priorities, deposit follow-ups, pickup/delivery schedule for Hayden Silva, lithium jobs at risk of missing 2–3 day promise.
 
 Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — **generated snapshot, not policy**. See [shop throughput playbook](../04_operations/shop_throughput.md).
 
@@ -59,10 +59,10 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | Person | Best uses |
 |--------|-----------|
 | **Ryan** | Morning briefing, diagnostics help, pricing, growth, DMS planning |
-| **Jesse** | Customer replies, deposits, estimates, HCP deposit pipeline (Awaiting Deposit → Need to Order → Waiting for Materials), pricebook, inventory/parts, workflow, Roy routing, reporting |
+| **Jesse** | Customer replies, deposits, estimates, HCP deposit pipeline (Awaiting Deposit → Need to Order → Waiting for Materials), pricebook, inventory/parts, workflow, Hayden routing, reporting |
 | **Christine** | Part-time backup; owner exceptions |
-| **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model) |
-| **Roy** | Pickup zone questions, route/day planning |
+| **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model). Official SOP: [technician SOP Sep 2026](../04_operations/technician_sop_sep2026.md) |
+| **Hayden Silva** | Pickup zone questions, route/day planning. Driver first — [driver SOP](../04_operations/driver_sop.md) |
 | **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
 
 ## Chief routing (standing)
@@ -75,11 +75,13 @@ On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate 
 
 Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
 
-**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in); writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **CartScope Tester change plans**); writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
 
 **Lanes:** Shop owns Housecall Pro — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](../diagnostics/README.md)) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
 Ask Ryan before any Slack to Jesse. Results come back in Chief’s thread.
+
+**CartScope app changes (2026-09-05):** CartScope Tester presents a change plan and gets Ryan’s yes through Chief before implementing any CartScope app change. Pointer: [cartscope.md](../06_systems/cartscope.md).
 
 Roster and ownership: [roles.md](../05_team/roles.md).
 
@@ -109,7 +111,7 @@ Nothing else: no job numbers, vendor order IDs, corrections, other leads, commen
 
 Website lead dump, lithium list, and other Slack-to-Jesse types are unchanged except that parts updates use this five-field format.
 
-Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics** — [roles.md](../05_team/roles.md). Diagnostic case library: [diagnostics/README.md](../diagnostics/README.md).
+Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics**, Bot Coach, CartScope Tester, Not My Tempo — [roles.md](../05_team/roles.md). Diagnostic case library: [diagnostics/README.md](../diagnostics/README.md).
 
 ## Bot updates
 

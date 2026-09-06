@@ -1,6 +1,6 @@
 # Shop Throughput
 
-**Last verified:** 2026-08-23  
+**Last verified:** 2026-09-06  
 **Owner:** Ryan (service manager)  
 **Live board:** `knowledge/.generated/shop_board.md` — **generated snapshot, not policy** (invoice # + description only; regenerate after HCP sync). Do not treat it as shop rules.
 
@@ -13,8 +13,8 @@ Move carts through the shop predictably — especially **lithium conversions in 
 | Resource | Capacity (planning) |
 |----------|-------------------|
 | Marlon + Ryan Gorgoglione | Two golf cart technicians; ~6 productive hrs/day each |
-| Roy | Pickup/delivery — batch by zone, not one-off all day |
-| Jesse | Intake, deposits, parts/inventory, workflow, Roy routing (Christine part-time backup) |
+| Hayden Silva | Pickup/delivery — batch by zone, not one-off all day. Driver first; shop assist only when transport/management allow. SOP: [driver_sop.md](driver_sop.md) |
+| Jesse | Intake, deposits, parts/inventory, workflow, Hayden routing (Christine part-time backup) |
 | Shop hours | Mon–Fri 8–5 |
 
 **Planning math:** One Professional lithium kit ≈ **6 hours**. Plan **at most 2 lithium starts per day** if the shop is lithium-heavy; mix in smaller jobs around the lithium SLA, not a headcount cap.
@@ -54,7 +54,7 @@ Ryan said **Need to Order**. The repo had no prior HCP column with that name; th
 | In repair | Marlon / Ryan Gorgoglione | Work complete per estimate |
 | QC | Assigned tech | Official **NGC-QC-1** (Pass/Flag/Fail; Flag = N/A or unable to test) + test drive; fault codes cleared. Form: Drive Procedures — [shop_workflow.md](shop_workflow.md) |
 | Ready | Jesse | Customer notified; balance collected or arranged |
-| Pickup/delivery | Roy | Cart off lot |
+| Pickup/delivery | Hayden Silva | Cart off lot |
 
 ## Daily rhythm
 
@@ -63,7 +63,7 @@ Ryan said **Need to Order**. The repo had no prior HCP column with that name; th
 - Clear **needs scheduling** queue: book, callback, or waitlist
 - Confirm deposits; move HCP pipeline **Awaiting Deposit** → **Need to Order** when paid; order/track parts, then **Waiting for Materials**
 - After new approvals: **COPY TO JOB**, stage **Awaiting Deposit**, queue pickup or drop-off (do not lock a time / hold a spot / easy yes)
-- Set Roy’s pickup/delivery route (zone batched; free vs $99)
+- Set Hayden Silva’s pickup/delivery route (zone batched; free vs $99)
 - Flag WIP / AUTH / PARTS counts for Ryan’s huddle
 
 ### 8:15 — Ryan shop huddle (10 min)
@@ -135,6 +135,8 @@ See [shop_whiteboard_layout.md](shop_whiteboard_layout.md) — 7-column layout, 
 ## Related docs
 
 - [shop_workflow.md](shop_workflow.md) — customer journey
+- [driver_sop.md](driver_sop.md) — NGC-OPS-DRIVER-09032026R0 summary + Drive Procedures pointer
+- [technician_sop_sep2026.md](technician_sop_sep2026.md) — NGC-OPS-TECH-092026R0 summary + Drive Procedures / NGC-EST-1 Checklists pointers
 - [../02_products/lithium_conversions.md](../02_products/lithium_conversions.md) — SLA and deposits
 - [../05_team/roles.md](../05_team/roles.md) — RACI
 - [../09_daily_ops/improvement_backlog.md](../09_daily_ops/improvement_backlog.md) — backlog

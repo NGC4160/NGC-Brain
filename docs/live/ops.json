@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-05T16:08:31.466335+00:00",
-  "jobs_synced_at": "2026-09-05T16:08:27.752634+00:00",
+  "generated_at": "2026-09-06T16:20:49.112391+00:00",
+  "jobs_synced_at": "2026-09-06T16:20:44.340895+00:00",
   "has_live_data": true,
   "metrics": {
     "in_progress": 7,
@@ -18,7 +18,7 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 123,
+        "days": 124,
         "lithium": true,
         "status": "in progress"
       }
@@ -27,53 +27,53 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 123,
+        "days": 124,
         "lithium": true,
         "status": "in progress"
       },
       {
         "invoice": "17260",
         "description": "Accessories - 1.0-Seat belt kit installation",
-        "days": 122,
+        "days": 123,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17109-2",
         "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-        "days": 101,
+        "days": 102,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17411",
         "description": "***SEE NOTES***",
-        "days": 30,
+        "days": 31,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17420",
         "description": "General - ***SEE NOTES***",
-        "days": 26,
+        "days": 27,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17443",
         "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-        "days": 15,
+        "days": 16,
         "lithium": false,
         "status": "in progress"
       }
     ]
   },
   "sync": {
-    "synced_at": "2026-09-05T16:08:31.067137+00:00",
+    "synced_at": "2026-09-06T16:20:48.727412+00:00",
     "pricebook": {
       "exists": true,
       "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-      "modified": "2026-09-05T16:08:15.253567+00:00",
+      "modified": "2026-09-06T16:20:29.199411+00:00",
       "total_items": 282,
       "lithium_professional_skus": [
         {
@@ -175,7 +175,7 @@
     "qbo_pl": {
       "exists": true,
       "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-      "modified": "2026-09-05T16:08:15.254567+00:00",
+      "modified": "2026-09-06T16:20:29.201207+00:00",
       "period_note": "See file header for date range",
       "income_highlights": {
         "LFP Conversions Only": 94940.25,
@@ -204,14 +204,14 @@
         ],
         "refresh_token_rotated": true
       },
-      "modified": "2026-09-05T16:08:15.253567+00:00",
+      "modified": "2026-09-06T16:20:29.200207+00:00",
       "account_count": 148,
       "item_count": 521
     },
     "hcp_api": {
       "exists": true,
       "manifest": {
-        "synced_at": "2026-09-05T16:08:30.423699+00:00",
+        "synced_at": "2026-09-06T16:20:47.851628+00:00",
         "source": "housecall_pro_api",
         "paths": [
           "api_sync_manifest.json",
@@ -222,7 +222,7 @@
           "pricebook_services.json"
         ]
       },
-      "modified": "2026-09-05T16:08:30.424189+00:00",
+      "modified": "2026-09-06T16:20:47.852099+00:00",
       "job_count": 500,
       "jobs_by_status": {
         "needs scheduling": 6,
@@ -247,43 +247,43 @@
     "qbo_files": [
       {
         "name": "api_sync_manifest.json",
-        "modified": "2026-09-05T16:08:15.253567+00:00"
+        "modified": "2026-09-06T16:20:29.200207+00:00"
       },
       {
         "name": "balance_sheet.json",
-        "modified": "2026-09-05T16:08:15.254510+00:00"
+        "modified": "2026-09-06T16:20:29.201166+00:00"
       },
       {
         "name": "balance_sheet_current.xlsx",
-        "modified": "2026-09-05T16:08:15.254510+00:00"
+        "modified": "2026-09-06T16:20:29.201166+00:00"
       },
       {
         "name": "chart_of_accounts.json",
-        "modified": "2026-09-05T16:08:15.254510+00:00"
+        "modified": "2026-09-06T16:20:29.201166+00:00"
       },
       {
         "name": "chart_of_accounts.xlsx",
-        "modified": "2026-09-05T16:08:15.254510+00:00"
+        "modified": "2026-09-06T16:20:29.201166+00:00"
       },
       {
         "name": "company_test.json",
-        "modified": "2026-09-05T16:08:31.026344+00:00"
+        "modified": "2026-09-06T16:20:48.689542+00:00"
       },
       {
         "name": "products_and_services.xlsx",
-        "modified": "2026-09-05T16:08:15.254510+00:00"
+        "modified": "2026-09-06T16:20:29.201166+00:00"
       },
       {
         "name": "products_services.json",
-        "modified": "2026-09-05T16:08:15.254567+00:00"
+        "modified": "2026-09-06T16:20:29.201207+00:00"
       },
       {
         "name": "profit_and_loss_last_12_months.json",
-        "modified": "2026-09-05T16:08:15.254567+00:00"
+        "modified": "2026-09-06T16:20:29.201207+00:00"
       },
       {
         "name": "profit_and_loss_last_12_months.xlsx",
-        "modified": "2026-09-05T16:08:15.254567+00:00"
+        "modified": "2026-09-06T16:20:29.201207+00:00"
       }
     ],
     "alerts": [

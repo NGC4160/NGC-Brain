@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-01  
+**Last verified:** 2026-09-06  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -29,14 +29,17 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [02_products/lithium_sales_guide.md](02_products/lithium_sales_guide.md) | **Office quoting** — Essential / Ready-to-Run / Accessory-Ready (internal; not a customer handout) |
 | [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits, **credit card surcharge on every estimate**, **estimate GP check on free P/D** |
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
-| [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP pickup/drop-off queue**, **HCP deposit pipeline**, **NGC-QC-1** pre-delivery QC, **NGC-IR-1** incident form |
+| [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP pickup/drop-off queue**, **HCP deposit pipeline**, **NGC-QC-1** pre-delivery QC, **NGC-IR-1** incident form, pointer to driver SOP |
+| [04_operations/driver_sop.md](04_operations/driver_sop.md) | **NGC-OPS-DRIVER-09032026R0** — Driver / Shop Technician Assistant summary + Drive Procedures pointer (full PDF is the official SOP) |
+| [04_operations/technician_sop_sep2026.md](04_operations/technician_sop_sep2026.md) | **NGC-OPS-TECH-092026R0** — Technician SOP (Sep 2026) summary + Drive Procedures / **NGC-EST-1** Checklists pointers (full package is the official SOP) |
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA** — live board is a generated snapshot, not policy |
 | [04_operations/shop_whiteboard_layout.md](04_operations/shop_whiteboard_layout.md) | **Physical whiteboard — columns, cards, colors, daily use** |
 | [diagnostics/README.md](diagnostics/README.md) | **Diagnostics library** — Diagnostics bot + techs file cases (vehicle, symptoms, tests, waveforms, conflicting evidence, verification); known-good / known-faulted scaffold; TEST BEFORE REPLACEMENT |
 | [05_team/roles.md](05_team/roles.md) | Human roster + **live Grok Bot roster** (Chief is COS) |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [../docs/documents/README.md](../docs/documents/README.md) | Command Center Documents hub (**publish output** — edit `external_docs/templates/`) |
-| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, Drive catalog + connector, future DMS |
+| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, Drive catalog + connector, CartScope, future DMS |
+| [06_systems/cartscope.md](06_systems/cartscope.md) | **CartScope** — tech-facing diagnostic checklist web app (Grok Build; repo NGC4160/CartScope) |
 | [06_systems/garagebuddy.md](06_systems/garagebuddy.md) | **GarageBuddy** — **future/eval** DMS sandbox, not current shop process |
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
 | [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, meter/speedometer, SMS templates (no PII) |
@@ -67,7 +70,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 |-------|------------|
 | **Live file content** | Google Drive connector (NGC985) — shop bots read SOPs here |
 | **Brain catalog** | [`knowledge/.generated/drive_catalog.md`](.generated/drive_catalog.md) — generated list only |
-| **Staff SOPs** | Stay in Drive Procedures. **NGC-QC-1 / NGC-IR-1 not yet in Drive Procedures** (2026-08-30) |
+| **Staff SOPs** | Stay in Drive Procedures. **NGC-OPS-DRIVER-09032026R0** master PDF: [Drive file](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (`13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`) in Procedures. **NGC-OPS-TECH-092026R0** Technician SOP (Sep 2026): [PDF](https://drive.google.com/file/d/1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT/view) (`1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT`) in Procedures; **NGC-EST-1** blank checklist: [PDF](https://drive.google.com/file/d/1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS/view) (`1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS`) in Checklists. Brain: [technician_sop_sep2026.md](04_operations/technician_sop_sep2026.md). **NGC-QC-1 / NGC-IR-1 not yet in Drive Procedures** (2026-08-30) |
 | **`external_docs/My Drive/`** | **Not** a live sync. Mention/symlink only. `.gitmodules` is GarageBuddy. |
 | **Actions** | Optional `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` refreshes the catalog. Missing secret = skip, do not fail HCP/QBO. Never commits File_000 or binaries. |
 
@@ -80,7 +83,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 
 ## Bots & Chief
 
-**Chief** (id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1`) is Ryan’s **only** Grok Bot point of contact. Ryan talks **ONLY** to Chief — he should never have to message another shop bot or hunt another chat. All other bots report to Chief. Approvals (Slack Jesse, money, payroll submit, sign-in, delete a bot, orders) go through Chief, who asks Ryan. Live roster: Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics** — [`05_team/roles.md`](05_team/roles.md).
+**Chief** (id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1`) is Ryan’s **only** Grok Bot point of contact. Ryan talks **ONLY** to Chief — he should never have to message another shop bot or hunt another chat. All other bots report to Chief. Approvals (Slack Jesse, money, payroll submit, sign-in, delete a bot, orders, **CartScope app changes**) go through Chief, who asks Ryan. Live roster: Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics**, Bot Coach, CartScope Tester, Not My Tempo — [`05_team/roles.md`](05_team/roles.md).
 
 **Chief routing (standing, 2026-09-01):** On EVERY task Ryan asks, Chief immediately decides which bot owns it and **PASSES** the work, then brings the result back in Chief’s thread. Do not start specialist work first and hand off later. Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](diagnostics/README.md)). Other bots keep their lanes. If no bot owns the job, tell Ryan a new bot is worth creating and why — do not quietly become Shop/Parts/Books. Chief’s own work: talking to Ryan, those approvals, writing facts back, routing. Full rule: [daily ops](09_daily_ops/README.md#chief-routing-standing) · [roles.md](05_team/roles.md#chief-routing-standing).
 

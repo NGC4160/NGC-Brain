@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-09-02
+**Last verified:** 2026-09-06
 
 ## Current stack
 
@@ -12,6 +12,7 @@
 | **Website** | [NGCGolfCarts.com](https://www.NGCGolfCarts.com) | Active |
 | **Google Business Profile** | Local presence, reviews | Active |
 | **GarageBuddy** | Open-source garage DMS (**future/eval** sandbox) | Not current shop process — see [garagebuddy.md](garagebuddy.md) |
+| **CartScope** | Tech-facing step-by-step golf cart diagnostic checklist (web app) | Active — see [cartscope.md](cartscope.md) |
 
 ## Housecall Pro
 
@@ -127,7 +128,7 @@ Quoted from the live HCP screenshot (Settings › Price Book › Materials › M
 | **Checklists** | `1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp` | [folder](https://drive.google.com/drive/folders/1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp) |
 | **Manuals** | `1-1QqJQh4UojQEERawwpfEjKYOor2VMuR` | [folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) |
 
-**NGC-QC-1** and **NGC-IR-1** were **not** found in Drive Procedures by those titles (2026-08-30). Keep the short rules in [shop_workflow.md](../04_operations/shop_workflow.md). Lithium sales PDF is in Procedures: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md).
+**NGC-OPS-DRIVER-09032026R0** (Driver / Shop Technician Assistant SOP) lives in Drive Procedures: [NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (file id `13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`). Brain summary: [driver_sop.md](../04_operations/driver_sop.md). **NGC-OPS-TECH-092026R0** (Technician SOP, Sep 2026) lives in Drive Procedures: [NGC-OPS-TECH-092026R0_Technician_SOP.pdf](https://drive.google.com/file/d/1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT/view) (file id `1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT`). **NGC-EST-1** blank estimate-support checklist is in Checklists: [NGC-EST-1_Job_Report_Checklist_Estimating_blank.pdf](https://drive.google.com/file/d/1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS/view) (file id `1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS`). Brain summary: [technician_sop_sep2026.md](../04_operations/technician_sop_sep2026.md). **NGC-QC-1** and **NGC-IR-1** were **not** found in Drive Procedures by those titles (2026-08-30). Keep the short rules in [shop_workflow.md](../04_operations/shop_workflow.md). Lithium sales PDF is in Procedures: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md).
 
 ## Deposit-alert script (not a Grok Bot)
 

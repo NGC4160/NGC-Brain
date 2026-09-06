@@ -1,9 +1,9 @@
 # Diagnostics library
 
-**Last verified:** 2026-09-04  
+**Last verified:** 2026-09-05  
 **Owner:** **Diagnostics** bot (reports to Chief). Techs file evidence here. Shop still owns Housecall Pro jobs.
 
-This folder is the shop’s **evidence library** for Neighborhood Golf Carts diagnostics. It starts empty on purpose. Do **not** invent case data, waveforms, customer PII, secrets, or “typical” traces to fill it.
+This folder is the shop’s **evidence library** for Neighborhood Golf Carts diagnostics. It starts empty on purpose. Do **not** invent case data, waveforms, customer PII, secrets, or “typical” traces to fill it. **CartScope** is the tech-facing checklist UI (not this library, not this bot) — [`../06_systems/cartscope.md`](../06_systems/cartscope.md).
 
 ## Standing rules
 
@@ -48,7 +48,7 @@ Each component subfolder has a one-paragraph README. Do not drop unlabeled scree
 
 ## OEM manuals (read these; do not guess pinouts)
 
-Use OEM diagrams and service manuals **before** interpreting a waveform or calling a pin.
+Use OEM diagrams and service manuals **before** interpreting a waveform or calling a pin. **CartScope** AI uses service manuals on file first, then legitimate reliable online sources. If no manual is on file for a cart, source a candidate and add it to the shop library **only with approval** — [cartscope.md](../06_systems/cartscope.md).
 
 | Source | What it is |
 |--------|------------|
