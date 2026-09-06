@@ -43,15 +43,15 @@ Chief routes diagnostic-library work to **Diagnostics**. Diagnostics brings the 
 | [`known-good/`](known-good/README.md) | Confirmed-healthy captures (motors, solenoids, controller I/O, throttles, control circuits) |
 | [`known-faulted/`](known-faulted/README.md) | Confirmed-fault captures in the same subfolders |
 | [`cases/`](cases/README.md) | Dated case write-ups (template only until real jobs are filed) |
-| [`service_manuals_sop.md`](service_manuals_sop.md) | One-page SOP: search → Ryan yes via Chief → add to Drive Manuals |
+| [`service_manuals_sop.md`](service_manuals_sop.md) | One-page SOP for the shop **Library** (service + parts manuals + diagrams): search → Ryan yes via Chief → add to Drive Manuals |
 
 Each component subfolder has a one-paragraph README. Do not drop unlabeled screenshots into the folder root.
 
-## OEM manuals (read these; do not guess pinouts)
+## OEM Library (read these; do not guess pinouts)
 
-Use OEM diagrams and service manuals **before** interpreting a waveform or calling a pin. **How to search, get Ryan’s yes, and add a new manual:** [`service_manuals_sop.md`](service_manuals_sop.md).
+The shop **Library** is **service manuals + parts manuals + diagrams**. Use OEM diagrams and manuals **before** interpreting a waveform or calling a pin. **How to search, get Ryan’s yes, and add a new item:** [`service_manuals_sop.md`](service_manuals_sop.md).
 
-**CartScope** AI uses service manuals on file first, then legitimate reliable online sources. If no manual is on file for a cart, source a candidate and add it to the shop library **only with approval** — [cartscope.md](../06_systems/cartscope.md).
+**CartScope** AI uses the Library on file first, then legitimate reliable online sources. If nothing is on file for a cart, source a candidate and add it to the Library **only with approval** — [cartscope.md](../06_systems/cartscope.md).
 
 | Source | What it is |
 |--------|------------|
