@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-09-05
+**Last verified:** 2026-09-06
 
 ## Ownership
 
@@ -17,8 +17,8 @@
 | **Jesse** | Administrative assistant / service coordinator | **Primary shop operations coordinator** (she/her) — see scope below |
 | **Christine** | Part-time assistant (co-owner) | Backup coverage when Jesse is out; owner-level exceptions |
 | **Hayden Silva** | Driver / Shop Technician Assistant | **Primary driver** — pickups and deliveries Jesse routes. **Secondary** shop / mechanical / tech-assist / errands only when transport and management priorities allow. Official SOP: **NGC-OPS-DRIVER-09032026R0** in Drive [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) — [driver_sop.md](../04_operations/driver_sop.md). **Not** an independent diagnostic tech. |
-| **Marlon** | Golf cart technician | In-shop repair and service |
-| **Ryan Gorgoglione** | Golf cart technician | In-shop repair and service (not the owner — that is Ryan White) |
+| **Marlon** | Golf cart technician | In-shop repair and service. Official SOP: **NGC-OPS-TECH-092026R0** (Sep 2026) in Drive [Procedures](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) — [technician_sop_sep2026.md](../04_operations/technician_sop_sep2026.md). |
+| **Ryan Gorgoglione** | Golf cart technician | In-shop repair and service (not the owner — that is Ryan White). Official SOP: **NGC-OPS-TECH-092026R0** — [technician_sop_sep2026.md](../04_operations/technician_sop_sep2026.md). |
 
 ## Former (do not assign work)
 

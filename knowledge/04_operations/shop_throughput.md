@@ -1,6 +1,6 @@
 # Shop Throughput
 
-**Last verified:** 2026-09-05  
+**Last verified:** 2026-09-06  
 **Owner:** Ryan (service manager)  
 **Live board:** `knowledge/.generated/shop_board.md` — **generated snapshot, not policy** (invoice # + description only; regenerate after HCP sync). Do not treat it as shop rules.
 
@@ -136,6 +136,7 @@ See [shop_whiteboard_layout.md](shop_whiteboard_layout.md) — 7-column layout, 
 
 - [shop_workflow.md](shop_workflow.md) — customer journey
 - [driver_sop.md](driver_sop.md) — NGC-OPS-DRIVER-09032026R0 summary + Drive Procedures pointer
+- [technician_sop_sep2026.md](technician_sop_sep2026.md) — NGC-OPS-TECH-092026R0 summary + Drive Procedures / NGC-EST-1 Checklists pointers
 - [../02_products/lithium_conversions.md](../02_products/lithium_conversions.md) — SLA and deposits
 - [../05_team/roles.md](../05_team/roles.md) — RACI
 - [../09_daily_ops/improvement_backlog.md](../09_daily_ops/improvement_backlog.md) — backlog
