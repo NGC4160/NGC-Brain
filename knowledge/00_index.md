@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-05  
+**Last verified:** 2026-09-06  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -31,6 +31,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
 | [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP pickup/drop-off queue**, **HCP deposit pipeline**, **NGC-QC-1** pre-delivery QC, **NGC-IR-1** incident form, pointer to driver SOP |
 | [04_operations/driver_sop.md](04_operations/driver_sop.md) | **NGC-OPS-DRIVER-09032026R0** — Driver / Shop Technician Assistant summary + Drive Procedures pointer (full PDF is the official SOP) |
+| [04_operations/technician_sop_sep2026.md](04_operations/technician_sop_sep2026.md) | **NGC-OPS-TECH-092026R0** — Technician SOP (Sep 2026) summary + Drive Procedures / **NGC-EST-1** Checklists pointers (full package is the official SOP) |
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA** — live board is a generated snapshot, not policy |
 | [04_operations/shop_whiteboard_layout.md](04_operations/shop_whiteboard_layout.md) | **Physical whiteboard — columns, cards, colors, daily use** |
 | [diagnostics/README.md](diagnostics/README.md) | **Diagnostics library** — Diagnostics bot + techs file cases (vehicle, symptoms, tests, waveforms, conflicting evidence, verification); known-good / known-faulted scaffold; TEST BEFORE REPLACEMENT |
@@ -69,7 +70,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 |-------|------------|
 | **Live file content** | Google Drive connector (NGC985) — shop bots read SOPs here |
 | **Brain catalog** | [`knowledge/.generated/drive_catalog.md`](.generated/drive_catalog.md) — generated list only |
-| **Staff SOPs** | Stay in Drive Procedures. **NGC-OPS-DRIVER-09032026R0** master PDF: [Drive file](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (`13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`) in Procedures. **NGC-QC-1 / NGC-IR-1 not yet in Drive Procedures** (2026-08-30) |
+| **Staff SOPs** | Stay in Drive Procedures. **NGC-OPS-DRIVER-09032026R0** master PDF: [Drive file](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (`13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`) in Procedures. **NGC-OPS-TECH-092026R0** Technician SOP (Sep 2026): [PDF](https://drive.google.com/file/d/1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT/view) (`1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT`) in Procedures; **NGC-EST-1** blank checklist: [PDF](https://drive.google.com/file/d/1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS/view) (`1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS`) in Checklists. Brain: [technician_sop_sep2026.md](04_operations/technician_sop_sep2026.md). **NGC-QC-1 / NGC-IR-1 not yet in Drive Procedures** (2026-08-30) |
 | **`external_docs/My Drive/`** | **Not** a live sync. Mention/symlink only. `.gitmodules` is GarageBuddy. |
 | **Actions** | Optional `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` refreshes the catalog. Missing secret = skip, do not fail HCP/QBO. Never commits File_000 or binaries. |
 
