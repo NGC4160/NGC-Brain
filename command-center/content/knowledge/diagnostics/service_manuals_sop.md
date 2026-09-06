@@ -1,19 +1,19 @@
-# Service manuals — search, approve, and add
+# Library — service manuals, parts manuals, and diagrams
 
 **Last verified:** 2026-09-06  
-**Owner:** Diagnostics (reports to Chief). Ryan approves every new manual before it enters the shop library.
+**Owner:** Diagnostics (reports to Chief). Ryan approves every new item before it enters the Library.
 
-One page. This is how Neighborhood Golf Carts finds a service manual while diagnosing, gets Ryan’s yes, and files it so the next job can use it.
+One page. The **Library** is Neighborhood Golf Carts’ collection of **service manuals + parts manuals + diagrams**. This is how we find one while diagnosing, get Ryan’s yes, and file it so the next job can use it.
 
 ## Source of truth
 
 - **Live files:** NGC985 Google Drive → **Manuals** folder ([open in Drive](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR)), brand folders EZGO / Club Car / Yamaha / Other.
 - **Catalog / board:** NGC Manuals board (same brand split). Use with Drive — do not treat this brain as a substitute for the original manufacturer PDF.
-- **Local catalog snapshot:** `/workspace/ngc-manuals/` (refresh when Drive Manuals change). Snapshot is a lookup aid only; Drive is still the live library.
+- **Local catalog snapshot:** `/workspace/ngc-manuals/` (refresh when Drive Manuals change). Snapshot is a lookup aid only; Drive is still the live Library.
 
 ## 1. Search while diagnosing (in this order)
 
-1. **On file first** — Drive Manuals, NGC Manuals board/catalog, and CartScope wire pictures / checklists already in the shop.
+1. **On file first** — Drive Manuals (Library), NGC Manuals board/catalog, and CartScope wire pictures / checklists already in the shop.
 2. **Then legitimate online sources** — original equipment manufacturer manuals or other reputable technical publishers. Forums, random blogs, and unverified uploads are **not** shop truth.
 3. **If still missing** — say so clearly. Offer to source a candidate. **Never invent a manual**, pinout, or procedure.
 
@@ -21,15 +21,15 @@ CartScope and Diagnostics follow the same order: shop files first, then legitima
 
 ## 2. Approval (hard gate)
 
-Nothing new enters the shop library without **Ryan’s yes through Chief**.
+Nothing new enters the Library without **Ryan’s yes through Chief**.
 
 The ask must name:
 
-- **Title** of the manual
+- **Title** of the manual or diagram
 - **Source** (where it came from)
 - **Year / make / model coverage**
 
-Other bots do **not** add manuals on their own. Diagnostics may draft the ask and the candidate path; Chief brings it to Ryan.
+Other bots do **not** add Library items on their own. Diagnostics may draft the ask and the candidate path; Chief brings it to Ryan.
 
 ## 3. After Ryan says yes
 
@@ -40,7 +40,7 @@ Other bots do **not** add manuals on their own. Diagnostics may draft the ask an
 
 ## 4. Hard rule — no auto-publish
 
-Do **not** auto-publish unverified web PDFs as shop standard operating procedure. A downloaded file is a **candidate** until Ryan approves it into Drive Manuals.
+Do **not** auto-publish unverified web PDFs as shop standard operating procedure. A downloaded file is a **candidate** until Ryan approves it into Drive Manuals (the Library).
 
 ## Related
 
