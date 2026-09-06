@@ -20,9 +20,9 @@ Brief standing rules so bots and staff do not invent a different product. This i
 
 - **Change plan first.** CartScope Tester must present a change plan and get Ryan’s yes **through Chief** before implementing any CartScope app change.
 - **Goal.** A technician can diagnose any issue on any golf cart (any brand / edge cases).
-- **Tech observations redirect the path.** The tech’s free-text observations redirect the diagnostic path. AI uses service manuals on file first, then legitimate reliable online sources.
+- **Tech observations redirect the path.** The tech’s free-text observations redirect the diagnostic path. AI uses the Library (service manuals + parts manuals + diagrams) on file first, then legitimate reliable online sources.
 - **AI is integral.** AI is part of the app flow — not merely a secondary bottom window.
-- **No manual on file.** If there is no service manual on file for a cart: source a candidate and add it to the shop library **only with approval**.
+- **No manual on file.** If there is no Library item on file for a cart: source a candidate and add it to the Library **only with approval**.
 
 Also standing (do not invent other features):
 
