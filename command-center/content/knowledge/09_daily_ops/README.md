@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-09-05  
+**Last verified:** 2026-09-06  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -61,7 +61,7 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | **Ryan** | Morning briefing, diagnostics help, pricing, growth, DMS planning |
 | **Jesse** | Customer replies, deposits, estimates, HCP deposit pipeline (Awaiting Deposit → Need to Order → Waiting for Materials), pricebook, inventory/parts, workflow, Hayden routing, reporting |
 | **Christine** | Part-time backup; owner exceptions |
-| **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model) |
+| **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model). Official SOP: [technician SOP Sep 2026](../04_operations/technician_sop_sep2026.md) |
 | **Hayden Silva** | Pickup zone questions, route/day planning. Driver first — [driver SOP](../04_operations/driver_sop.md) |
 | **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
 
