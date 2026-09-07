@@ -1,6 +1,6 @@
 # Diagnostics library
 
-**Last verified:** 2026-09-05  
+**Last verified:** 2026-09-06  
 **Owner:** **Diagnostics** bot (reports to Chief). Techs file evidence here. Shop still owns Housecall Pro jobs.
 
 This folder is the shop’s **evidence library** for Neighborhood Golf Carts diagnostics. It starts empty on purpose. Do **not** invent case data, waveforms, customer PII, secrets, or “typical” traces to fill it. **CartScope** is the tech-facing checklist UI (not this library, not this bot) — [`../06_systems/cartscope.md`](../06_systems/cartscope.md).
@@ -43,17 +43,21 @@ Chief routes diagnostic-library work to **Diagnostics**. Diagnostics brings the 
 | [`known-good/`](known-good/README.md) | Confirmed-healthy captures (motors, solenoids, controller I/O, throttles, control circuits) |
 | [`known-faulted/`](known-faulted/README.md) | Confirmed-fault captures in the same subfolders |
 | [`cases/`](cases/README.md) | Dated case write-ups (template only until real jobs are filed) |
+| [`service_manuals_sop.md`](service_manuals_sop.md) | One-page SOP for the shop **Library** (service + parts manuals + diagrams): search → Ryan yes via Chief → add to Drive Manuals |
 
 Each component subfolder has a one-paragraph README. Do not drop unlabeled screenshots into the folder root.
 
-## OEM manuals (read these; do not guess pinouts)
+## OEM Library (read these; do not guess pinouts)
 
-Use OEM diagrams and service manuals **before** interpreting a waveform or calling a pin. **CartScope** AI uses service manuals on file first, then legitimate reliable online sources. If no manual is on file for a cart, source a candidate and add it to the shop library **only with approval** — [cartscope.md](../06_systems/cartscope.md).
+The shop **Library** is **service manuals + parts manuals + diagrams**. Use OEM diagrams and manuals **before** interpreting a waveform or calling a pin. **How to search, get Ryan’s yes, and add a new item:** [`service_manuals_sop.md`](service_manuals_sop.md).
+
+**CartScope** AI uses the Library on file first, then legitimate reliable online sources. If nothing is on file for a cart, source a candidate and add it to the Library **only with approval** — [cartscope.md](../06_systems/cartscope.md).
 
 | Source | What it is |
 |--------|------------|
 | **Drive — Manuals** | [Google Drive folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) (`1-1QqJQh4UojQEERawwpfEjKYOor2VMuR`) — brand folders **EZGO**, **Club Car**, **Yamaha**, **Other** |
 | **NGC Manuals board** | Shop manuals board (same brand split). Use it with Drive; do not treat this brain as a substitute for the OEM PDF. |
+| **Local catalog snapshot** | `/workspace/ngc-manuals/` — refresh when Drive Manuals change |
 | **Drive — Procedures** | [Procedures folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) — includes `NGC_Technician_Standard_Diagnosing_Test_Process_and_Procedure` |
 
 Live Drive **content** is the Google Drive connector (NGC985). This repo does not clone manuals. Catalog only: [`../.generated/drive_catalog.md`](../.generated/drive_catalog.md).

@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-09-06
+**Last verified:** 2026-09-07
 
 ## Current stack
 
@@ -12,7 +12,7 @@
 | **Website** | [NGCGolfCarts.com](https://www.NGCGolfCarts.com) | Active |
 | **Google Business Profile** | Local presence, reviews | Active |
 | **GarageBuddy** | Open-source garage DMS (**future/eval** sandbox) | Not current shop process — see [garagebuddy.md](garagebuddy.md) |
-| **CartScope** | Tech-facing step-by-step golf cart diagnostic checklist (web app) | Active — see [cartscope.md](cartscope.md) |
+| **CartScope** | Tech-facing step-by-step golf cart diagnostic checklist (web app) | Active — live https://cart-scope.vercel.app; code [NGC4160/CartScope](https://github.com/NGC4160/CartScope) — see [cartscope.md](cartscope.md) |
 
 ## Housecall Pro
 

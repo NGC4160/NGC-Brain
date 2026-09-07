@@ -1,7 +1,7 @@
 # Deposit Gate Alerts (NGC Admin Bot)
 
-**Generated:** 2026-09-06 16:20 UTC  
-**HCP jobs export:** 2026-09-06T16:20:44.340895+00:00  
+**Generated:** 2026-09-07 18:17 UTC  
+**HCP jobs export:** 2026-09-07T18:17:44.574115+00:00  
 **Not policy.** Generated snapshot from local `jobs.json` (gitignored).
 **Privacy:** Invoice # and description only — open job in HCP for customer contact.
 
@@ -9,18 +9,21 @@
 
 | Alert | Count |
 |-------|------:|
-| BLOCK_PARTS (do not order) | 2 |
-| SCHEDULE_UNPAID | 4 |
+| BLOCK_PARTS (do not order) | 3 |
+| SCHEDULE_UNPAID | 6 |
 | COLLECT_BALANCE | 20 |
 
 ## BLOCK_PARTS — Jesse priority
 
 - **#17182-2** · Accessories - 1.0-Replace Charger Port, Lithium upgrade · `scheduled` · paid $326.66 / $326.66 · **gap $1473.34** — Do not order parts — collect deposit first
+- **#173116** · 3.0-NGC Lithium Conversion, 48v 105ah · `needs scheduling` · paid $1500.00 / $2402.41 · **gap $300.00** — Do not order parts — collect deposit first
 - **#173111** · 3.0-NGC MINI Lithium Conversion, 48v 105ah · `needs scheduling` · paid $1500.00 / $4278.30 · **gap $300.00** — Do not order parts — collect deposit first
 
 ## SCHEDULE_UNPAID — collect before booking
 
 - **#173115** · General - 1.0 - Golf Cart Diagnostic & Inspection · `needs scheduling` · paid $0.00 / $319.86 · **gap $319.86** — Collect $179 diagnostic before booking bay time
+- **#173118** · General - 1.0 - Golf Cart Diagnostic & Inspection · `needs scheduling` · paid $0.00 / $208.46 · **gap $208.46** — Collect $179 diagnostic before booking bay time
+- **#173117** · General - 1.0 - Golf Cart Diagnostic & Inspection · `needs scheduling` · paid $0.00 / $208.46 · **gap $208.46** — Collect $179 diagnostic before booking bay time
 - **#173114** · General - 1.0 - Golf Cart Diagnostic & Inspection · `needs scheduling` · paid $0.00 / $208.46 · **gap $208.46** — Collect $179 diagnostic before booking bay time
 - **#173112** · General - 1.0 - Golf Cart Diagnostic & Inspection · `needs scheduling` · paid $0.00 / $208.46 · **gap $208.46** — Collect $179 diagnostic before booking bay time
 - **#17438** · General - 1.0 - Golf Cart Diagnostic & Inspection · `needs scheduling` · paid $0.00 / $202.39 · **gap $202.39** — Collect $179 diagnostic before booking bay time
