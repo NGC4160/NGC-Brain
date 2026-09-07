@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-09-06  
+**Last verified:** 2026-09-07  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -81,7 +81,7 @@ Do **not** start specialist work first and hand off later. If no bot owns the jo
 
 Ask Ryan before any Slack to Jesse. Results come back in Chief’s thread.
 
-**CartScope app changes (2026-09-05):** CartScope Tester presents a change plan and gets Ryan’s yes through Chief before implementing any CartScope app change. Pointer: [cartscope.md](../06_systems/cartscope.md).
+**CartScope app changes (2026-09-05; live URL 2026-09-07):** CartScope Tester owns iterative bay QA against https://cart-scope.vercel.app and reports to Chief only. Change plan + Ryan’s yes through Chief before any app change. Code changes go through GitHub PRs on `NGC4160/CartScope`; Chief can merge. Pointer: [cartscope.md](../06_systems/cartscope.md).
 
 Roster and ownership: [roles.md](../05_team/roles.md).
 
