@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-09-07  
+**Last verified:** 2026-09-10  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -75,13 +75,15 @@ On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate 
 
 Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
 
-**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **CartScope Tester change plans**); writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **CartScope Tester change plans**, **Shop Board Tester change plans**, **SOP publish**, **loops merge**); writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
 
 **Lanes:** Shop owns Housecall Pro — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](../diagnostics/README.md)) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
 Ask Ryan before any Slack to Jesse. Results come back in Chief’s thread.
 
 **CartScope app changes (2026-09-05; live URL 2026-09-07):** CartScope Tester owns iterative bay QA against https://cart-scope.vercel.app and reports to Chief only. Change plan + Ryan’s yes through Chief before any app change. Code changes go through GitHub PRs on `NGC4160/CartScope`; Chief can merge. Pointer: [cartscope.md](../06_systems/cartscope.md).
+
+**Shop Board / SOP / loops (2026-09-10):** Shop Board Tester owns iterative QA against https://ngc-shop-board.vercel.app (`NGC4160/shop-board`); same change-plan gate as CartScope (plan + Ryan yes via Chief before app code). SOP is Saturday propose-only; publish only after Ryan yes via Chief; driver binder Monday Slack stays with Jesse flow. **loops** is the engineering outer loop (gather → prompt → launch → review); reports via Chief only; name the repo each job; never merge without Ryan yes via Chief.
 
 Roster and ownership: [roles.md](../05_team/roles.md).
 
@@ -111,7 +113,7 @@ Nothing else: no job numbers, vendor order IDs, corrections, other leads, commen
 
 Website lead dump, lithium list, and other Slack-to-Jesse types are unchanged except that parts updates use this five-field format.
 
-Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics**, Bot Coach, CartScope Tester, Not My Tempo — [roles.md](../05_team/roles.md). Diagnostic case library: [diagnostics/README.md](../diagnostics/README.md).
+Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics**, Bot Coach, CartScope Tester, Not My Tempo, SOP, Shop Board Tester, loops — [roles.md](../05_team/roles.md). Diagnostic case library: [diagnostics/README.md](../diagnostics/README.md).
 
 ## Bot updates
 
