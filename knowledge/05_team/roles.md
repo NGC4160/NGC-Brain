@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-09-06
+**Last verified:** 2026-09-10
 
 ## Ownership
 
@@ -38,7 +38,7 @@ Do not schedule, assign, or quote these names as current staff.
 
 ## Grok Bot roster (live)
 
-**Do not invent extra bots.** Chief is Ryan’s **only** point of contact. All other bots report to Chief. Approvals go through Chief, who asks Ryan: Slack to Jesse, money, payroll submit, sign-in, delete a bot, orders, **CartScope app changes**.
+**Do not invent extra bots.** Chief is Ryan’s **only** point of contact. All other bots report to Chief. Approvals go through Chief, who asks Ryan: Slack to Jesse, money, payroll submit, sign-in, delete a bot, orders, **CartScope app changes**, **Shop Board app changes**, **SOP publish**, **loops merge**.
 
 | Bot | Role |
 |-----|------|
@@ -59,6 +59,9 @@ Do not schedule, assign, or quote these names as current staff.
 | **Bot Coach** | Daily instruction coach. Propose-only improvements to Chief; Bot Manager applies after Ryan yes via Chief. 7:30 AM America/Chicago daily including weekends. |
 | **CartScope Tester** | Iterative QA for https://cart-scope.vercel.app. Reports to Chief only. On-demand. No app code without a change plan and Ryan yes via Chief. |
 | **Not My Tempo** | Audits assistant routines for bad cadence; turns expensive computer-use loops into scripts/connectors. Reports via Chief. |
+| **SOP** | Shop procedures bot. Saturday propose-only revise/create SOPs. Publish only after Ryan yes via Chief. Driver binder Monday Slack stays with Jesse flow. |
+| **Shop Board Tester** | Iterative QA for https://ngc-shop-board.vercel.app / [NGC4160/shop-board](https://github.com/NGC4160/shop-board). On-demand. Same change-plan gate as CartScope: plan + Ryan yes via Chief before app code. |
+| **loops** | Engineering outer loop: gather → prompt → launch → review. Reports via Chief only. Name the repo each job. Never merge without Ryan yes via Chief. |
 
 ### Chief routing (standing)
 
@@ -70,13 +73,13 @@ On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate 
 
 Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
 
-**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **CartScope Tester change plans**); writing facts back to Brain the **same day** Ryan corrects them; routing.
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **CartScope Tester change plans**, **Shop Board Tester change plans**, **SOP publish**, **loops merge**); writing facts back to Brain the **same day** Ryan corrects them; routing.
 
 **Lanes (already true):** Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). **Diagnostics** owns the diagnostic evidence library (known-good / known-faulted / cases) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
 Ask Ryan before any Slack to Jesse. Results stay in Chief’s thread.
 
-**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back the same day Ryan corrects them. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **Parts updates** (Chief → Jesse Slack): five fields only — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse). **CartScope app changes:** CartScope Tester presents a change plan and gets Ryan’s yes through Chief before implementing — [cartscope.md](../06_systems/cartscope.md). **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
+**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back the same day Ryan corrects them. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. **Parts updates** (Chief → Jesse Slack): five fields only — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse). **CartScope app changes:** CartScope Tester presents a change plan and gets Ryan’s yes through Chief before implementing — [cartscope.md](../06_systems/cartscope.md). **Shop Board app changes:** Shop Board Tester presents a change plan and gets Ryan’s yes through Chief before implementing (same gate as CartScope). **SOP publish:** Saturday propose-only; publish only after Ryan yes via Chief. Driver binder Monday Slack stays with Jesse flow. **loops:** name the repo each job; never merge without Ryan yes via Chief. **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
 
 The deposit-alert **batch script** in `scripts/admin_bot/` is planned/live automation — **not** a Grok Bot and **not** the COS. Spec: [ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md).
 
