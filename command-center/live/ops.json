@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-11T17:03:37.285916+00:00",
-  "jobs_synced_at": "2026-09-11T17:03:33.034523+00:00",
+  "generated_at": "2026-09-12T16:24:01.910131+00:00",
+  "jobs_synced_at": "2026-09-12T16:23:57.063896+00:00",
   "has_live_data": true,
   "metrics": {
-    "in_progress": 7,
+    "in_progress": 6,
     "scheduled": 21,
-    "needs_scheduling": 12,
-    "active_pipeline": 40,
+    "needs_scheduling": 9,
+    "active_pipeline": 36,
     "wip_target": null,
     "wip_over": 0,
-    "stale_15_plus": 5,
+    "stale_15_plus": 4,
     "lithium_at_risk": 1,
     "deposit_alerts": 0
   },
@@ -34,39 +34,32 @@
       {
         "invoice": "17260",
         "description": "Accessories - 1.0-Seat belt kit installation",
-        "days": 128,
+        "days": 129,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17109-2",
         "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-        "days": 107,
-        "lithium": false,
-        "status": "in progress"
-      },
-      {
-        "invoice": "17422",
-        "description": "General - ***SEE NOTES***",
-        "days": 32,
+        "days": 108,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17442",
         "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-        "days": 23,
+        "days": 24,
         "lithium": false,
         "status": "in progress"
       }
     ]
   },
   "sync": {
-    "synced_at": "2026-09-11T17:03:36.886674+00:00",
+    "synced_at": "2026-09-12T16:24:01.491741+00:00",
     "pricebook": {
       "exists": true,
       "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-      "modified": "2026-09-11T17:03:16.377021+00:00",
+      "modified": "2026-09-12T16:23:39.336145+00:00",
       "total_items": 282,
       "lithium_professional_skus": [
         {
@@ -168,7 +161,7 @@
     "qbo_pl": {
       "exists": true,
       "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-      "modified": "2026-09-11T17:03:16.379021+00:00",
+      "modified": "2026-09-12T16:23:39.337473+00:00",
       "period_note": "See file header for date range",
       "income_highlights": {
         "LFP Conversions Only": 94940.25,
@@ -197,14 +190,14 @@
         ],
         "refresh_token_rotated": true
       },
-      "modified": "2026-09-11T17:03:16.377021+00:00",
+      "modified": "2026-09-12T16:23:39.336145+00:00",
       "account_count": 148,
       "item_count": 521
     },
     "hcp_api": {
       "exists": true,
       "manifest": {
-        "synced_at": "2026-09-11T17:03:36.059291+00:00",
+        "synced_at": "2026-09-12T16:24:00.624731+00:00",
         "source": "housecall_pro_api",
         "paths": [
           "api_sync_manifest.json",
@@ -215,15 +208,15 @@
           "pricebook_services.json"
         ]
       },
-      "modified": "2026-09-11T17:03:36.059748+00:00",
+      "modified": "2026-09-12T16:24:00.625223+00:00",
       "job_count": 500,
       "jobs_by_status": {
-        "needs scheduling": 12,
+        "needs scheduling": 9,
         "user canceled": 40,
         "scheduled": 21,
-        "in progress": 7,
+        "in progress": 6,
         "pro canceled": 35,
-        "complete unrated": 283,
+        "complete unrated": 287,
         "complete rated": 102
       },
       "pricebook_service_count": 283,
@@ -240,43 +233,43 @@
     "qbo_files": [
       {
         "name": "api_sync_manifest.json",
-        "modified": "2026-09-11T17:03:16.377021+00:00"
+        "modified": "2026-09-12T16:23:39.336145+00:00"
       },
       {
         "name": "balance_sheet.json",
-        "modified": "2026-09-11T17:03:16.378021+00:00"
+        "modified": "2026-09-12T16:23:39.337473+00:00"
       },
       {
         "name": "balance_sheet_current.xlsx",
-        "modified": "2026-09-11T17:03:16.378021+00:00"
+        "modified": "2026-09-12T16:23:39.337473+00:00"
       },
       {
         "name": "chart_of_accounts.json",
-        "modified": "2026-09-11T17:03:16.378021+00:00"
+        "modified": "2026-09-12T16:23:39.337473+00:00"
       },
       {
         "name": "chart_of_accounts.xlsx",
-        "modified": "2026-09-11T17:03:16.378021+00:00"
+        "modified": "2026-09-12T16:23:39.337473+00:00"
       },
       {
         "name": "company_test.json",
-        "modified": "2026-09-11T17:03:36.845284+00:00"
+        "modified": "2026-09-12T16:24:01.447299+00:00"
       },
       {
         "name": "products_and_services.xlsx",
-        "modified": "2026-09-11T17:03:16.378021+00:00"
+        "modified": "2026-09-12T16:23:39.337473+00:00"
       },
       {
         "name": "products_services.json",
-        "modified": "2026-09-11T17:03:16.379021+00:00"
+        "modified": "2026-09-12T16:23:39.337473+00:00"
       },
       {
         "name": "profit_and_loss_last_12_months.json",
-        "modified": "2026-09-11T17:03:16.379021+00:00"
+        "modified": "2026-09-12T16:23:39.337473+00:00"
       },
       {
         "name": "profit_and_loss_last_12_months.xlsx",
-        "modified": "2026-09-11T17:03:16.379021+00:00"
+        "modified": "2026-09-12T16:23:39.337473+00:00"
       }
     ],
     "alerts": [
