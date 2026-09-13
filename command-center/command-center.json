@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T22:20:32.984620+00:00",
+  "generated_at": "2026-09-13T22:23:30.797746+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-09-13T22:20:32.958352+00:00",
+    "generated_at": "2026-09-13T22:23:30.772911+00:00",
     "jobs_synced_at": null,
     "has_live_data": false,
     "metrics": {
@@ -344,6 +344,14 @@
       "category": "Operations (run the shop better)"
     },
     {
+      "priority": "P1",
+      "name": "Align live HCP P/D line to **NGC-OPS-FIN-2026-09** (name **Pickup & Return Delivery Transportation Charge**; $129 at 31\u201340; do not quote export **$99**)",
+      "why": "Export still shows Standard Pick-up/Drop-off $99",
+      "owner": "Jesse",
+      "status": "**Policy live 2026-09-13** \u2014 HCP SKU not confirmed updated",
+      "category": "Operations (run the shop better)"
+    },
+    {
       "priority": "P2",
       "name": "Shop-floor SOP refresh \u2014 strip mobile steps from active checklists",
       "why": "Techs get wrong instructions today",
@@ -461,14 +469,6 @@
       "why": "QBO flags from exports",
       "owner": "Jessica (Griffin & Furman)",
       "status": "Open",
-      "category": "Finance & admin"
-    },
-    {
-      "priority": "P2",
-      "name": "Decide **NGC-OPS-FIN-2026-09** (P/D cost: $160 internal / 30-mi included / $129 at 31\u201340)",
-      "why": "Recommendation only \u2014 live practice is still $90 hidden free-P/D cost",
-      "owner": "Ryan",
-      "status": "**Pending approval** \u2014 [bulletin](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md)",
       "category": "Finance & admin"
     },
     {

@@ -14,7 +14,7 @@ Read `knowledge/02_products/lithium_conversions.md`, `knowledge/02_products/lith
 
 **Issue or request:** [describe]
 
-**Location:** [Northshore city or Southshore — for pickup/delivery policy]
+**Location:** [city + one-way road miles from 71363 Thelma Ln Suite E — P/D is mileage bands, not Northshore/Southshore]
 
 **Audience:** [customer text Jesse sends / my internal notes / talking points for phone]
 

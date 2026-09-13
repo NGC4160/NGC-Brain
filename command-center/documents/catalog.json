@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T22:20:32.914029+00:00",
+  "generated_at": "2026-09-13T22:23:30.731256+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan, Jesse, and Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",
@@ -400,7 +400,7 @@
       "id": "pd-cost-allocation-ops-fin-2026-09",
       "category": "finance_admin",
       "title": "NGC-OPS-FIN-2026-09 Pickup/Delivery Cost Allocation",
-      "description": "Revised recommendation only \u2014 not live policy. Live practice remains $90 hidden free P/D cost / 40 mi Northshore / $99 paid zone",
+      "description": "APPROVED / live 2026-09-13 \u2014 $160 internal; 0\u201330 mi included; $129 at 31\u201340; >40 quoted + Ryan approval",
       "type": "markdown",
       "audience": "Ryan / Chief / CFO / Books / Shop",
       "status": "active",
