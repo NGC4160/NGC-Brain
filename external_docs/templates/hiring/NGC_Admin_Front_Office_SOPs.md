@@ -15,7 +15,7 @@ Jesse owns front office **plus** inventory, parts ordering/tracking, pricebook m
 |-------|--------|
 | Service model | **Shop-only** — no mobile / on-site repair, no trip charges |
 | Diagnostic | **$179** minimum — not waived; applies toward repair on known-issue jobs |
-| Pickup / delivery | **Free** within 40 mi Northshore; **$99** flat outside 40 mi or Southshore |
+| Pickup / delivery | **$0** at 0–30 one-way road miles; **$129** at 31–40 (Pickup & Return Delivery Transportation Charge); **>40** quoted + Ryan approval. Driving miles from Covington shop. Same bands on Southshore |
 | Lithium | **Professional Kits only** — do not quote discontinued NGC Conversion line |
 | Deposits | Required before ordering batteries, motors, controllers, special-order parts |
 | Pricing | Use Housecall Pro / pricebook — **never invent** a price |
@@ -44,7 +44,7 @@ Answer or acknowledge same business day. Pull Ryan/techs only when the call is t
 “We’re an in-shop service center in Covington — we don’t do mobile repairs. We can schedule a diagnostic here, and Roy can pick up the cart if that helps. Diagnostic is $179 and goes toward the repair when it’s a known issue.”
 
 **Pickup quote:**  
-“Pickup and delivery are free within 40 miles on the Northshore. Outside that, or Southshore, it’s a flat $99.”
+“Pickup and return delivery are included within 30 one-way driving miles of the shop. Thirty-one to forty miles is $129. Over forty miles we quote it and it needs approval. We use road miles, not a straight line.”
 
 ---
 
@@ -150,7 +150,7 @@ Helpful and direct. Ask for a decision. Never argue. Never invent a lower price.
 Jesse **routes and schedules**; Roy **drives**.
 
 1. Confirm date/time windows with customer and shop capacity (Ryan if bay load is the constraint).
-2. Build Roy’s daily route: zone-batch Northshore free (40 mi) vs **$99** Southshore / outside 40 mi. Confirm zone before promising free.
+2. Build Hayden’s daily route: zone-batch by one-way road miles (0–30 included / 31–40 **$129** / >40 quoted + Ryan). Confirm miles before promising included.
 3. Code **PICKUP** until cart is in shop or returned; then update.
 4. Status texts: only facts (received, waiting approval, parts ordered ETA, ready for pickup).
 

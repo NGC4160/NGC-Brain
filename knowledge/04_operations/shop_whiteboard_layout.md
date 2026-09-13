@@ -110,7 +110,7 @@ Write **one card per cart**. Shop floor uses invoice # and cart — not required
 1. New drop-offs → **INTAKE** card (invoice # from HCP)
 2. After approval on deposit jobs: HCP **COPY TO JOB** → **Awaiting Deposit**; queue pickup or drop-off (do not lock a time / hold a spot / easy yes). Move the floor card to **PARTS**
 3. Deposit in → HCP **Need to Order**; parts ordered → HCP **Waiting for Materials**; mark `$ dep?` / order ETA
-4. Build Hayden Silva’s **OUT TODAY** route (zone batch; free vs $99)
+4. Build Hayden Silva’s **OUT TODAY** route (zone batch; road-mile bands; route stacking)
 5. **READY** → notify customer; move to **OUT TODAY** if Hayden delivering
 6. Erase **OUT TODAY** column at end of day
 

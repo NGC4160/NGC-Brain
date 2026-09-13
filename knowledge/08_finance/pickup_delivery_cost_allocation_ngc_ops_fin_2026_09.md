@@ -2,49 +2,55 @@
 bulletin: NGC-OPS-FIN-2026-09
 date: 2026-09-11
 filed: 2026-09-13
-status: recommendation
-approved: false
-live_policy: false
+approved: 2026-09-13
+status: approved
+live_policy: true
+approved_by: Ryan White via Chief
 ---
 
 # NGC-OPS-FIN-2026-09 — Pickup/Delivery Cost Assignment
 
-**STATUS = recommendation pending Ryan approval. NOT live policy yet.**
+**STATUS = APPROVED / live shop policy as of 2026-09-13 (Chief / Ryan).**
 
-Do **not** quote, estimate, or book as if **$160**, a **30-mile** included radius, or a **$129** 31–40 mile charge is in effect.
+This bulletin is **live**. It supersedes the 2026-07-13 40-mile Northshore / **$99** Southshore-or-outside-40 rule and the 2026-09-01 **$90** hidden free-P/D internal cost.
 
-**Live practice until Ryan approves** remains:
-
-- Customer: free within **40 mi Northshore**; **$99** flat outside 40 mi or Southshore
-- Internal: **$90** free P/D trip cost, once per job, hidden on the estimate
-
-See [shop_services.md](../03_services/shop_services.md#pickup--delivery).
+Do **not** quote the old **$90**, **40-mile included**, or **$99** outside-40 / Southshore fees.
 
 | Field | Value |
 |-------|-------|
 | **Bulletin No.** | NGC-OPS-FIN-2026-09 |
-| **Date** | September 11, 2026 |
-| **Status (on the bulletin)** | Revised Recommendation — Management Approval and Prospective Implementation |
+| **Date (bulletin)** | September 11, 2026 |
+| **Approved** | 2026-09-13 by Ryan White via Chief |
 | **Subject** | Pickup/Delivery Cost Assignment, Included Service Radius, and Outer-Zone Pricing |
-| **Filed in Brain** | 2026-09-13 (source PDF provided by Ryan White) |
-| **Source PDF** | `NGC-OPS-FIN-2026-09_Pickup_Delivery_Cost_Allocation.pdf` — **not committed** (this repo stores official SOP PDFs in Drive Procedures; it does not keep ops-bulletin binaries) |
+| **Shop origin for miles** | 71363 Thelma Ln, Suite E, Covington, LA 70433 |
+| **Source PDF** | `NGC-OPS-FIN-2026-09_Pickup_Delivery_Cost_Allocation.pdf` — provided by Ryan 2026-09-13; **not committed** (this repo stores official SOP PDFs in Drive Procedures; it does not keep ops-bulletin binaries) |
+
+## Live rules (use these)
+
+Applies **only** to tickets that actually need **NGC pickup AND return delivery**. Customer drop-off / customer pickup with no NGC transport does **not** get the internal **$160**.
+
+Measure **actual one-way driving (road) miles** from the Covington shop. Do **not** use straight-line / as-the-crow-flies miles.
+
+| One-way road miles | Customer charge | Internal assignment | Treatment |
+|--------------------|----------------:|--------------------:|-----------|
+| 0–30 | $0 | $160 | Included |
+| 31–40 | $129 | $160 | Outer-zone charge |
+| >40 | Individually quoted | Actual review | **Ryan / management approval required** |
+
+- Internal transportation cost is **$160** per transported repair ticket (pickup **and** return).
+- Do **not** post the **$160** in QuickBooks as a second vehicle or payroll expense.
+- Customer-facing line name: **Pickup & Return Delivery Transportation Charge** (replaces “Round Trip”).
+- Southshore is **not** a separate fee band. Use the same mileage bands. Do not invent a Southshore exception.
+
+Customer policy home: [shop_services.md](../03_services/shop_services.md#pickup--delivery).
 
 ## Who this is for
 
-- **Chief / CFO / Books** — find the recommendation and the cited inputs
-- **Shop** — keep using live HCP rules until Ryan says this is policy
-- **Front Desk** — do **not** change customer language or zone fees from this file
+- **Shop / Front Desk / Jesse** — quote and book from the live table above
+- **Books / CFO** — **$160** is internal job-cost assignment only; do not duplicate it as a QBO vehicle/payroll expense
+- **Hayden / driver routing** — one-way road miles; route stacking still applies
 
-The bulletin is silent on a Northshore / Southshore split. Do **not** invent a Southshore change. Live Southshore remains the **$99** paid zone until Ryan says otherwise.
-
-## Executive recommendation (proposed — not approved)
-
-- Revise **internal** transportation cost assignment from **$90 → $160** per transported repair ticket
-- Reduce the included pickup / return delivery area from **40 → 30** one-way road miles from the Covington shop
-- Charge **$129** for customers **31–40** one-way road miles
-- Trips **beyond 40** road miles: individually quoted and management-approved
-
-## Key inputs cited
+## Key inputs cited (from the bulletin)
 
 Do not invent extra rates or a formula breakdown beyond what the bulletin states.
 
@@ -61,7 +67,7 @@ Do not invent extra rates or a formula breakdown beyond what the bulletin states
 
 ## Distance table (estimated total cost)
 
-One-way road miles → estimated total cost. Figures copied from the bulletin.
+One-way road miles → estimated total cost. Figures copied from the bulletin. This is **cost support**, not the customer price list.
 
 | One-way miles | Estimated total cost |
 |--------------:|---------------------:|
@@ -73,25 +79,25 @@ One-way road miles → estimated total cost. Figures copied from the bulletin.
 | 35 | $267.19 |
 | 40 | $303.55 |
 
-## Proposed customer pricing table
+## Estimate GP check (standing, updated 2026-09-13)
 
-| One-way miles | Customer charge | Internal assignment | Treatment |
-|---------------|----------------:|--------------------:|-----------|
-| 0–30 | $0 | $160 | Included |
-| 31–40 | $129 | $160 | Outer-zone charge |
-| >40 | Quoted | Actual review | Management approval |
+Shop owns this check. Once per job, not every SKU or line.
 
-## Customer-facing terminology (proposed)
+| Layer | GP rule | $160? |
+|-------|---------|-------|
+| **Price book services** | 50% GP after 4% CC **on that item only**: **sell >= cost / 0.46** | **No** — do not add $160 |
+| **Materials** | HCP markup matrix only | **No** |
+| **Estimate (NGC P&D, 0–30 mi included)** | Add **$160 once** to total job cost, then **sell >= (sum of line costs + 160) / 0.46** | **Once per job** — hide the trip from the customer |
 
-Replace **“Round Trip”** with **“Pickup & Return Delivery Transportation Charge”**.
+On **31–40** mi jobs, the customer line is **$129** (Pickup & Return Delivery Transportation Charge). Internal assignment is still **$160**. Do not invent a second GP padding rule for the difference. **>40** mi is quoted and needs Ryan approval before it is sold.
 
-Do **not** change HCP line names or customer copy until Ryan approves.
+The 2026-09-01 **~$196** extra-sell shorthand was for the old **$90** trip cost. Do **not** keep using **$90** or **~$196**.
 
-## Implementation controls (proposed)
+The **4%** is only the fee used in this GP check — not a locked customer surcharge rate.
 
-These are controls on the recommendation, not live SOP steps.
+## Implementation controls (live)
 
-- Apply only to tickets that need NGC pickup & delivery
+- Apply only to tickets that need NGC pickup **and** return delivery
 - Do **not** duplicate the **$160** in QBO as a second vehicle / payroll expense
 - Measure by **one-way driving miles**
 - Record mileage for **60–90 days**
@@ -99,15 +105,16 @@ These are controls on the recommendation, not live SOP steps.
 - Quarterly review
 - Route stacking
 
-## Live vs proposed (bots)
+## What this supersedes
 
-| Topic | Live now | This bulletin |
-|-------|----------|---------------|
-| Status | Policy (2026-07-13 / 2026-09-01) | Recommendation only |
-| Internal free-P/D cost | **$90** once per job, hidden | Proposes **$160** |
-| Included radius | **40** mi Northshore | Proposes **30** one-way road miles |
-| 31–40 mi customer | Still inside free Northshore (if Northshore) | Proposes **$129** |
-| Outside 40 mi / Southshore | **$99** flat | >40 mi individually quoted + management-approved |
-| Estimate GP check | Add **$90** once, then sell >= (line costs + 90) / 0.46 | Do **not** swap in $160 unless Ryan approves |
+| Topic | Before (do not use) | Live as of 2026-09-13 |
+|-------|---------------------|------------------------|
+| Internal P/D cost | **$90** once per free-P/D job, hidden | **$160** per NGC pickup **and** return ticket |
+| Included radius | **40** mi Northshore | **0–30** one-way **road** miles from Covington shop |
+| 31–40 mi customer | Inside old free Northshore (if Northshore) | **$129** Pickup & Return Delivery Transportation Charge |
+| Outside 40 mi / Southshore | **$99** flat | **>40** individually quoted + Ryan / management approval. Southshore uses the same mileage bands |
+| Customer line name | “Round Trip” / Standard Pick-up/Drop-off | **Pickup & Return Delivery Transportation Charge** |
 
-If Ryan approves, write it to [decision_log.md](../09_daily_ops/decision_log.md) and update [shop_services.md](../03_services/shop_services.md) the same day. Until then, this file is the findable copy of the recommendation only.
+HCP pricebook export may still list **Standard Pick-up/Drop-off Service** at **$99**. That export line is **stale vs this policy**. Do not quote **$99**. Shop should align the live HCP line name and amount to this bulletin — do not invent that the HCP SKU is already updated.
+
+If Ryan changes this again, write it to [decision_log.md](../09_daily_ops/decision_log.md) the same day.

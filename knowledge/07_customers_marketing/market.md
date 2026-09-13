@@ -1,18 +1,19 @@
 # Customers & Marketing
 
-**Last verified:** 2026-08-30
+**Last verified:** 2026-09-13
 
 ## Service area
 
 | Zone | Coverage |
 |------|----------|
-| **Core (free pickup/delivery)** | Within **40 miles** of shop on the **Northshore** |
-| **Extended ($99 flat)** | Outside 40 miles or **Southshore** |
+| **Included pickup/return** | **0–30** one-way **road** miles from shop — **$0** customer |
+| **Outer zone** | **31–40** one-way road miles — **$129** Pickup & Return Delivery Transportation Charge |
+| **Beyond** | **>40** one-way road miles — individually quoted + Ryan / management approval |
 | **Market positioning** | **Greater New Orleans metro** |
 
 Shop address: 71363 Thelma Ln, Suite E, Covington, LA 70433
 
-**Policy (final — 2026-07-13):** Free within 40 mi Northshore; **$99** flat outside that zone or Southshore.
+**Policy (live — 2026-09-13, NGC-OPS-FIN-2026-09):** Measure driving miles, not straight-line. Southshore uses the same mileage bands — no separate Southshore fee. Internal **$160** only when NGC does pickup **and** return. [Bulletin](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 ## Customer segments
 
 | Segment | Status |
@@ -42,7 +43,7 @@ Confirm current marketing spend mix with Ryan — QBO shows ~$64k advertising/ma
 - LiFePO4 lithium conversions (Professional Kits — battery, charger, monitor; Vatrer packs we inspect, test, and tune; 5-year full replacement battery + BMS). Front Desk copy: [customer_reply_standard.md](customer_reply_standard.md). Office quoting (internal): [lithium_sales_guide.md](../02_products/lithium_sales_guide.md)
 - Advanced diagnostics capability
 - Free 7-point inspection with every service
-- Free local pickup/delivery (Northshore, 40 mi); $99 outside zone / Southshore
+- Pickup & return delivery included 0–30 one-way road miles; $129 at 31–40; >40 quoted + Ryan approval
 - All makes and models
 
 ## Reviews

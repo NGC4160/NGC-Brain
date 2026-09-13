@@ -14,6 +14,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P1 | Deactivate legacy HCP/QBO items (mobile, NGC Conversion, trip charges) | Prevents wrong quotes & booking | Ryan / Jesse | **Checklist ready** — see legacy_pricebook_cleanup.md |
 | P1 | HCP WIP hygiene — audit stale "in progress" (15+ days), correct statuses | 14 IP jobs, most aged; board can't lie | Ryan | Open |
 | P1 | Lithium job tracker (day 0/1/2, deposit received, parts ordered) | Protect 2–3 day promise; 2 Li jobs 50+ days in HCP | Ryan | In progress |
+| P1 | Align live HCP P/D line to **NGC-OPS-FIN-2026-09** (name **Pickup & Return Delivery Transportation Charge**; $129 at 31–40; do not quote export **$99**) | Export still shows Standard Pick-up/Drop-off $99 | Jesse | **Policy live 2026-09-13** — HCP SKU not confirmed updated |
 | P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open |
 | P2 | Deposit collection checklist for Jesse | Batteries/motors/controllers — HCP pipeline now in `shop_workflow.md` (COPY TO JOB → Awaiting Deposit → Need to Order → Waiting for Materials) | Jesse | **Pipeline rule logged 2026-08-23**; still align Admin Front Office SOP wait-code table |
 | P2 | Rename or deactivate HCP “Minimum Service Charge- Diagnostic Inspection” so quotes use Diagnostic | Prevents staff/bots quoting a retired separate fee | Jesse | Policy logged 2026-08-23 — bill as diagnostic; HCP name still in export |
@@ -39,7 +40,6 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 |---|------|-----|-------|--------|
 | P2 | Wind down `Mobile Trip Income` in QBO to $0 | Legacy revenue still posting | Jessica (Griffin & Furman) | Open |
 | P2 | Review Unapplied Cash / Undeposited Funds monthly | QBO flags from exports | Jessica (Griffin & Furman) | Open |
-| P2 | Decide **NGC-OPS-FIN-2026-09** (P/D cost: $160 internal / 30-mi included / $129 at 31–40) | Recommendation only — live practice is still $90 hidden free-P/D cost | Ryan | **Pending approval** — [bulletin](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) |
 | P3 | Monthly knowledge finance refresh from morning sync P&L | Numbers auto-pull; still verify `08_finance/` after big chart changes | Ryan | Open |
 
 ## Team & systems
@@ -56,6 +56,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | Date | Item |
 |------|------|
+| 2026-09-13 | **NGC-OPS-FIN-2026-09** approved live — $160 internal / 0–30 mi included / $129 at 31–40 / >40 quoted |
 | 2026-08-30 | Lithium Conversion Sales Guide is the office quoting process (Essential / Ready-to-Run / Accessory-Ready) |
 | 2026-08-23 | Lithium Front Desk reply standard — short kit list, Vatrer QC, 5-year full replacement, SMS (no PII) |
 | 2026-08-22 | Taylor terminated; Peyton resigned; Ryan Gorgoglione is a golf cart technician; 6-job WIP cap disregarded |

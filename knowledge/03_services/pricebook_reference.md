@@ -37,21 +37,17 @@ Systems note: [tools.md](../06_systems/tools.md).
 
 ## Estimate GP check (standing)
 
-**Confirmed 2026-09-01 by Ryan White.** Same-day correction: the **$90** free pickup/delivery trip cost is **once per job**, not added to every price book line or SKU.
+**Updated 2026-09-13 by Ryan White via Chief** (NGC-OPS-FIN-2026-09). Supersedes the 2026-09-01 **$90** trip-cost layer. The **$160** internal assignment is **once per NGC pickup-and-return job**, not added to every price book line or SKU.
 
-| Layer | GP rule | $90? |
-|-------|---------|------|
-| **Price book services** | 50% GP after 4% CC **on that item only**: **sell >= cost / 0.46** | **No** — do not add $90 |
+| Layer | GP rule | $160? |
+|-------|---------|-------|
+| **Price book services** | 50% GP after 4% CC **on that item only**: **sell >= cost / 0.46** | **No** — do not add $160 |
 | **Materials** | HCP markup matrix only | **No** |
-| **Estimate (free P/D)** | Add **$90 once** to total job cost, then **sell >= (sum of line costs + 90) / 0.46** | **Once per job** |
+| **Estimate (NGC P&D, 0–30 mi included)** | Add **$160 once** to total job cost, then **sell >= (sum of line costs + 160) / 0.46** | **Once per job** |
 
-Hide the trip from the customer. Do not add a trip charge or P/D fee on free-zone jobs. Paid zone remains the **$99** Standard Pick-up/Drop-off line.
+On **0–30** one-way road miles, hide the trip from the customer. On **31–40**, show **$129** as **Pickup & Return Delivery Transportation Charge**; internal is still **$160**. **>40** is quoted + Ryan approval. Do not invent extra GP padding. The old **~$196** extra-sell shorthand was for **$90** — do not keep using it.
 
-Equivalently **~$196 extra sell once per free-P/D job**, typically padded into **labor/diagnostic**, not a trip line. Apply **per job / estimate**, not as a weekly average, and **not per line / SKU**.
-
-The **4%** is only for this GP check — not a locked customer-facing surcharge rate. Do not invent other numbers. Policy home: [shop_services.md](shop_services.md#estimate-gp-check-standing).
-
-A pending bulletin ([NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md)) recommends replacing the **$90** internal assignment with **$160**. That is **not** approved. Keep using **$90** in this GP check until Ryan says otherwise.
+The **4%** is only for this GP check — not a locked customer-facing surcharge rate. Do not invent other numbers. Policy home: [shop_services.md](shop_services.md#estimate-gp-check-standing). Bulletin: [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
 ## Categories (item counts)
 
@@ -97,7 +93,7 @@ A pending bulletin ([NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_all
 | Diagnostic Testing | $125 | Current |
 | Advanced Diagnostics (In-Shop) | $145 | Current |
 | Shop Labor Hours | $125 | Current |
-| Standard Pick-up/Drop-off Service | $99 | **Current** — paid zone (outside 40 mi Northshore or Southshore) |
+| Standard Pick-up/Drop-off Service | $99 | **Stale vs live policy** — HCP export still has this line. Do **not** quote **$99**. Live: 0–30 mi **$0** / 31–40 mi **$129** **Pickup & Return Delivery Transportation Charge** / >40 quoted + Ryan approval. [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) |
 | 7-Point Golf Cart Safety Inspection | $0 | Current |
 | WORK PERFORMED AT SHOP | $0 | Internal flag line |
 | Payment processing / credit card surcharge lines | *(live HCP)* | **Put a surcharge on every estimate** (2026-08-30). CSV export has processing-fee items with $0 listed. **Do not invent a % or $** — Ryan did not lock the rate. Recalc the line to the final total before invoice or payment. |

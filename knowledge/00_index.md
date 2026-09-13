@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-10  
+**Last verified:** 2026-09-13  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -27,7 +27,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [01_company/profile.md](01_company/profile.md) | Identity, contact, location, positioning, legal |
 | [02_products/lithium_conversions.md](02_products/lithium_conversions.md) | Professional lithium kits, short kit list, warranty, deposits |
 | [02_products/lithium_sales_guide.md](02_products/lithium_sales_guide.md) | **Office quoting** — Essential / Ready-to-Run / Accessory-Ready (internal; not a customer handout) |
-| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery, deposits, **credit card surcharge on every estimate**, **estimate GP check on free P/D** |
+| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery (**NGC-OPS-FIN-2026-09** live), deposits, **credit card surcharge on every estimate**, **estimate GP check on NGC P&D** |
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
 | [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP pickup/drop-off queue**, **HCP deposit pipeline**, **NGC-QC-1** pre-delivery QC, **NGC-IR-1** incident form, pointer to driver SOP |
 | [04_operations/driver_sop.md](04_operations/driver_sop.md) | **NGC-OPS-DRIVER-09032026R0** — Driver / Shop Technician Assistant summary + Drive Procedures pointer (full PDF is the official SOP) |
@@ -44,7 +44,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
 | [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, meter/speedometer, SMS templates (no PII) |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |
-| [08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) | **NGC-OPS-FIN-2026-09** — P/D cost recommendation (**not live**). Live practice stays **$90** hidden free-P/D cost / 40 mi Northshore / **$99** paid zone until Ryan approves |
+| [08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) | **NGC-OPS-FIN-2026-09** — **APPROVED / live 2026-09-13**. Internal **$160**; included **0–30** one-way road miles; **$129** at 31–40; >40 quoted + Ryan approval |
 | [archive/legacy_mobile.md](archive/legacy_mobile.md) | Discontinued mobile service items — do not quote |
 | [09_daily_ops/README.md](09_daily_ops/README.md) | **Daily operating guide** — rhythms, roles, **bot Slack to Jesse (Ryan yes first)**, **bot updates as bullets**, data to feed AI |
 | [09_daily_ops/improvement_backlog.md](09_daily_ops/improvement_backlog.md) | Growth & ops projects (prioritized) |

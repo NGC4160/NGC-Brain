@@ -1,6 +1,6 @@
 # Shop Workflow
 
-**Last verified:** 2026-09-06
+**Last verified:** 2026-09-13
 
 ## Current state
 
@@ -19,7 +19,7 @@ When there is an opening in the slot, schedule → In-shop work → Payment → 
 - Hours: Mon–Fri 8 AM – 5 PM
 - Shop is **in-shop only** (no mobile)
 - **Credit card surcharge on every estimate** (shop-wide, 2026-08-30). Not lithium-only. Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do not invent a % or $. Policy: [shop_services.md](../03_services/shop_services.md#credit-card-surcharge-shop-wide-office-rule).
-- **Estimate GP (standing, 2026-09-01):** Price book services = **sell >= cost / 0.46** on that item only (no $90). Materials = HCP markup matrix only (no $90). Free P/D estimate: add **$90 once** to total job cost, then **sell >= (sum of line costs + 90) / 0.46**. Hide the trip from the customer. Not per SKU / line. [shop_services.md](../03_services/shop_services.md#estimate-gp-check-standing). A pending bulletin ([NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md)) recommends **$160** / 30 miles — **not live**; do not swap $90 for $160 until Ryan approves.
+- **Estimate GP (standing, updated 2026-09-13):** Price book services = **sell >= cost / 0.46** on that item only (no $160). Materials = HCP markup matrix only (no $160). NGC pickup-and-return estimate at **0–30** one-way road miles: add **$160 once** to total job cost, then **sell >= (sum of line costs + 160) / 0.46**. Hide the included trip from the customer. Not per SKU / line. [shop_services.md](../03_services/shop_services.md#estimate-gp-check-standing). Live bulletin: [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
 ### HCP job pipeline — pickup / drop-off queue
 
@@ -44,7 +44,7 @@ This queue is **distinct** from the parts-deposit pipeline below. The deposit pi
 Options:
 
 - Customer drops cart at shop
-- **Hayden Silva** (Driver / Shop Technician Assistant) picks up cart (free within 40 mi Northshore; **$99** flat outside zone / Southshore). Driver first — [driver_sop.md](driver_sop.md). Full SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures.
+- **Hayden Silva** (Driver / Shop Technician Assistant) picks up cart when NGC transport is needed. Customer: **$0** at 0–30 one-way road miles; **$129** at 31–40; **>40** quoted + Ryan approval. Internal **$160** only on pickup **and** return tickets. Driver first — [driver_sop.md](driver_sop.md). Full SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures. Live P/D: [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
 ### 3. Service execution
 

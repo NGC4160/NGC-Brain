@@ -353,7 +353,7 @@ DOCUMENTS: list[dict] = [
         "id": "pd-cost-allocation-ops-fin-2026-09",
         "category": "finance_admin",
         "title": "NGC-OPS-FIN-2026-09 Pickup/Delivery Cost Allocation",
-        "description": "Revised recommendation only — not live policy. Live practice remains $90 hidden free P/D cost / 40 mi Northshore / $99 paid zone",
+        "description": "APPROVED / live 2026-09-13 — $160 internal; 0–30 mi included; $129 at 31–40; >40 quoted + Ryan approval",
         "source": "knowledge/08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md",
         "type": "markdown",
         "audience": "Ryan / Chief / CFO / Books / Shop",

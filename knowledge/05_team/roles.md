@@ -95,7 +95,7 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Inventory | Parts/stock visibility, counts, QBO/HCP alignment |
 | Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order |
 | Shop workflow | Board/HCP hygiene, lane movement, WIP visibility, finish-list support. On approved deposit jobs: **COPY TO JOB** → **Awaiting Deposit** → **Need to Order** → **Waiting for Materials** ([shop_workflow.md](../04_operations/shop_workflow.md)) |
-| Pickup / delivery | Routing and scheduling for Hayden Silva (zones, batching, $99 vs free) |
+| Pickup / delivery | Routing and scheduling for Hayden Silva (road-mile bands, batching, included vs $129 vs quoted) |
 | Data & reporting | Shop metrics, deposit/parts queues, weekly numbers Ryan needs |
 | And more | Other coordinator work as the shop needs it |
 
