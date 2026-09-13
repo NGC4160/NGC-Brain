@@ -83,6 +83,7 @@ def build_sections() -> list[dict]:
         ("07_customers_marketing/market.md", "Market & Marketing", "Service area, customer types, channels."),
         ("07_customers_marketing/customer_reply_standard.md", "Lithium Customer Replies", "Front Desk / bot kit, warranty, and extras SMS (no PII)."),
         ("08_finance/overview.md", "Finance Overview", "Income categories, COA, sales tax."),
+        ("08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md", "P/D Cost Bulletin (recommendation)", "NGC-OPS-FIN-2026-09 — not live; $90 / 40 mi / $99 remain policy."),
         ("09_daily_ops/README.md", "Daily Ops Guide", "Operating rhythms and data to feed AI."),
         ("09_daily_ops/improvement_backlog.md", "Improvement Backlog", "Prioritized growth and ops projects."),
         ("09_daily_ops/decision_log.md", "Decision Log", "Policy decisions with dates."),
