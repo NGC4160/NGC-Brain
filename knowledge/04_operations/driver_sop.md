@@ -50,7 +50,7 @@ Shop policy that still applies (already in the brain — not a substitute for th
 
 - HCP **New job** / **Customer drop off** ARE the pickup/drop-off queue
 - Queue order: job number unless another cart is on the same run / same area
-- Free within 40 mi Northshore; **$99** flat outside 40 mi or Southshore
+- P/D fees (live **NGC-OPS-FIN-2026-09**): **$0** at 0–30 one-way road miles; **$129** at 31–40; **>40** quoted + Ryan approval. Internal **$160** only on NGC pickup **and** return. Measure driving miles. Southshore uses the same bands. [Bulletin](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md)
 - In-shop only — no mobile service, no trip charges
 - Do not say lock a time, hold a spot, or easy yes
 

@@ -135,19 +135,16 @@ As of Jul 2026: books sync daily via morning sync (HCP + QBO API → Command Cen
 
 Owner assignments for each flow — confirm with Ryan / Jesse / Jessica at Griffin & Furman (Christine part-time backup).
 
-## Pickup/delivery cost recommendation (not live)
+## Pickup/delivery cost (live — NGC-OPS-FIN-2026-09)
 
-**NGC-OPS-FIN-2026-09** (dated September 11, 2026; filed 2026-09-13) is a **revised recommendation** pending Ryan approval. It is **not** shop policy.
+**Approved 2026-09-13 by Ryan White via Chief.** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
-Summary pointer only — do not quote these as live fees:
+- Internal assignment **$160** per ticket that needs NGC **pickup AND return delivery**
+- Do **not** post **$160** in QBO as a second vehicle or payroll expense
+- Customer: **$0** at 0–30 one-way road miles; **$129** at 31–40 (line name **Pickup & Return Delivery Transportation Charge**); **>40** individually quoted + Ryan / management approval
+- Measure driving miles from the Covington shop. Southshore uses the same bands.
 
-- Internal assignment proposed **$90 → $160** per transported repair ticket
-- Included radius proposed **40 → 30** one-way road miles
-- Proposed **$129** customer charge at **31–40** one-way miles; **>40** individually quoted + management-approved
-
-**Live practice** is still the **$90** hidden free-P/D internal cost (once per job) and the 40 mi Northshore / **$99** paid-zone customer rules in [shop_services.md](../03_services/shop_services.md#pickup--delivery).
-
-Full tables and cited inputs: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+Customer / GP rules: [shop_services.md](../03_services/shop_services.md#pickup--delivery).
 
 ## Automation
 
