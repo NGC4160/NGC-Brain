@@ -72,4 +72,4 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 
 | Topic | Options | Target date |
 |-------|---------|-------------|
-| *(none)* | — | — |
+| **NGC-OPS-FIN-2026-09** pickup/delivery cost assignment (filed 2026-09-13) | Approve / revise / reject the recommendation: internal **$90 → $160**; included radius **40 → 30** one-way miles; **$129** at 31–40 mi; >40 mi quoted + management-approved. Until decided, live practice stays **$90** hidden free-P/D cost / 40 mi Northshore / **$99** paid zone. Full copy: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md). | Ryan approval — not scheduled |

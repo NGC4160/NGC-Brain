@@ -56,6 +56,8 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 
 **Policy (final — 2026-07-13):** 40-mile Northshore free zone is firm. Outside that zone or Southshore = **$99** flat. No trip charges / mobile service.
 
+**Pending recommendation — not live:** [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) proposes **$160** internal / **30**-mile included radius / **$129** for 31–40 one-way miles. Do **not** quote or apply those numbers until Ryan approves. Live practice remains this section: 40 mi Northshore free, **$99** paid zone, **$90** hidden internal trip cost on free P/D estimates.
+
 **Driver:** Hayden Silva (Driver / Shop Technician Assistant) handles pickups and deliveries. Driver first; shop assist only when transport and management priorities allow. Official SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures — [driver_sop.md](../04_operations/driver_sop.md). **Roy Gautreaux** is off roster (2026-09-03).
 
 After a customer **approves**, queue pickup or drop-off. Do **not** say a time is locked, a spot is held, or that this is an easy yes. Do not invent booking language.

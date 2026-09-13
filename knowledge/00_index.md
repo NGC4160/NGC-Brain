@@ -44,6 +44,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
 | [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, meter/speedometer, SMS templates (no PII) |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |
+| [08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) | **NGC-OPS-FIN-2026-09** — P/D cost recommendation (**not live**). Live practice stays **$90** hidden free-P/D cost / 40 mi Northshore / **$99** paid zone until Ryan approves |
 | [archive/legacy_mobile.md](archive/legacy_mobile.md) | Discontinued mobile service items — do not quote |
 | [09_daily_ops/README.md](09_daily_ops/README.md) | **Daily operating guide** — rhythms, roles, **bot Slack to Jesse (Ryan yes first)**, **bot updates as bullets**, data to feed AI |
 | [09_daily_ops/improvement_backlog.md](09_daily_ops/improvement_backlog.md) | Growth & ops projects (prioritized) |
