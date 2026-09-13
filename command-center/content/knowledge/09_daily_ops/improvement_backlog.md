@@ -39,6 +39,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 |---|------|-----|-------|--------|
 | P2 | Wind down `Mobile Trip Income` in QBO to $0 | Legacy revenue still posting | Jessica (Griffin & Furman) | Open |
 | P2 | Review Unapplied Cash / Undeposited Funds monthly | QBO flags from exports | Jessica (Griffin & Furman) | Open |
+| P2 | Decide **NGC-OPS-FIN-2026-09** (P/D cost: $160 internal / 30-mi included / $129 at 31–40) | Recommendation only — live practice is still $90 hidden free-P/D cost | Ryan | **Pending approval** — [bulletin](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) |
 | P3 | Monthly knowledge finance refresh from morning sync P&L | Numbers auto-pull; still verify `08_finance/` after big chart changes | Ryan | Open |
 
 ## Team & systems

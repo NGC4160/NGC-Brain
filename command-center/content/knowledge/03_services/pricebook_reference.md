@@ -51,6 +51,8 @@ Equivalently **~$196 extra sell once per free-P/D job**, typically padded into *
 
 The **4%** is only for this GP check — not a locked customer-facing surcharge rate. Do not invent other numbers. Policy home: [shop_services.md](shop_services.md#estimate-gp-check-standing).
 
+A pending bulletin ([NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md)) recommends replacing the **$90** internal assignment with **$160**. That is **not** approved. Keep using **$90** in this GP check until Ryan says otherwise.
+
 ## Categories (item counts)
 
 | Category | Items | Price range (approx.) |

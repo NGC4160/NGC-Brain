@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-13T16:59:47Z",
+  "generated_at": "2026-09-13T22:20:32Z",
   "repo": "NGC4160/NGC-Brain",
   "branch": "main",
   "site_url": "https://NGC4160.github.io/NGC-Brain/",
-  "total_items": 134,
+  "total_items": 136,
   "sections": [
     {
       "id": "start",
@@ -232,6 +232,18 @@
           "view": "view.html?path=knowledge/08_finance/overview.md",
           "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/08_finance/overview.md",
           "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/08_finance/overview.md",
+          "tags": [
+            "knowledge"
+          ]
+        },
+        {
+          "title": "P/D Cost Bulletin (recommendation)",
+          "description": "NGC-OPS-FIN-2026-09 \u2014 not live; $90 / 40 mi / $99 remain policy.",
+          "path": "knowledge/08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md",
+          "github": "https://github.com/NGC4160/NGC-Brain/blob/main/knowledge/08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md",
+          "raw": "https://raw.githubusercontent.com/NGC4160/NGC-Brain/main/knowledge/08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md",
           "tags": [
             "knowledge"
           ]
@@ -736,6 +748,18 @@
             "document",
             "operations",
             "link"
+          ]
+        },
+        {
+          "title": "NGC-OPS-FIN-2026-09 Pickup/Delivery Cost Allocation",
+          "description": "Revised recommendation only \u2014 not live policy. Live practice remains $90 hidden free P/D cost / 40 mi Northshore / $99 paid zone",
+          "path": "knowledge/08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md",
+          "type": "markdown",
+          "view": "view.html?path=knowledge/08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md",
+          "tags": [
+            "document",
+            "finance_admin",
+            "markdown"
           ]
         },
         {

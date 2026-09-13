@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T16:59:47.003486+00:00",
+  "generated_at": "2026-09-13T22:20:32.914029+00:00",
   "title": "NGC Documents",
   "description": "Structured forms, scorecards, and working documents for Ryan, Jesse, and Christine",
   "how_to_add": "Append an entry to DOCUMENTS in scripts/documents_catalog.py, place the file under external_docs/templates/<category>/, then run python3 scripts/build_command_center.py",
@@ -397,6 +397,21 @@
       "notes": ""
     },
     {
+      "id": "pd-cost-allocation-ops-fin-2026-09",
+      "category": "finance_admin",
+      "title": "NGC-OPS-FIN-2026-09 Pickup/Delivery Cost Allocation",
+      "description": "Revised recommendation only \u2014 not live policy. Live practice remains $90 hidden free P/D cost / 40 mi Northshore / $99 paid zone",
+      "type": "markdown",
+      "audience": "Ryan / Chief / CFO / Books / Shop",
+      "status": "active",
+      "featured": false,
+      "href": "view.html?path=knowledge/08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md",
+      "source": "knowledge/08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md",
+      "deploy_path": null,
+      "external": false,
+      "notes": ""
+    },
+    {
       "id": "deposit-checklist",
       "category": "finance_admin",
       "title": "Deposit collection checklist",
@@ -443,8 +458,8 @@
     }
   ],
   "counts": {
-    "total": 27,
-    "active": 24,
+    "total": 28,
+    "active": 25,
     "planned": 3
   }
 }
