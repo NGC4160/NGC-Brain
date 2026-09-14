@@ -66,7 +66,7 @@ Quoted from the live HCP screenshot (Settings › Price Book › Materials › M
 - Deactivate legacy mobile/on-site line items
 - Remove discontinued NGC Conversion products
 - Remove TEST PARTIAL KIT and cart sales placeholders
-- Update pickup/delivery descriptions to match **NGC-OPS-FIN-2026-09** (0–30 included / $129 at 31–40 / >40 quoted; line name Pickup & Return Delivery Transportation Charge). HCP export still lists Standard Pick-up/Drop-off at $99 — do not quote $99.
+- Update pickup/delivery descriptions to match **NGC-OPS-FIN-2026-09** (Northshore 0–30 included / $129 / $149 / $179 / no service >60; Southshore $179; line name Pickup & Return Delivery Transportation Charge). HCP export still lists Standard Pick-up/Drop-off at $99 — do not quote $99.
 
 ## QuickBooks Online
 

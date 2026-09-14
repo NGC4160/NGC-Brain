@@ -63,7 +63,7 @@ Ryan said **Need to Order**. The repo had no prior HCP column with that name; th
 - Clear **needs scheduling** queue: book, callback, or waitlist
 - Confirm deposits; move HCP pipeline **Awaiting Deposit** → **Need to Order** when paid; order/track parts, then **Waiting for Materials**
 - After new approvals: **COPY TO JOB**, stage **Awaiting Deposit**, queue pickup or drop-off (do not lock a time / hold a spot / easy yes)
-- Set Hayden Silva’s pickup/delivery route (zone batched; 0–30 included / 31–40 $129 / >40 quoted)
+- Set Hayden Silva’s pickup/delivery route (zone batched; Northshore 0–30 included / $129 / $149 / $179 / no service >60; Southshore $179)
 - Flag WIP / AUTH / PARTS counts for Ryan’s huddle
 
 ### 8:15 — Ryan shop huddle (10 min)

@@ -14,7 +14,7 @@ Read `knowledge/02_products/lithium_conversions.md`, `knowledge/02_products/lith
 
 **Issue or request:** [describe]
 
-**Location:** [city + one-way road miles from 71363 Thelma Ln Suite E — P/D is mileage bands, not Northshore/Southshore]
+**Location:** [city + Northshore or Southshore + one-way road miles from 71363 Thelma Ln Suite E — Northshore uses mile bands; Southshore is $179 flat]
 
 **Audience:** [customer text Jesse sends / my internal notes / talking points for phone]
 
