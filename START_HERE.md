@@ -56,7 +56,7 @@ Paste or summarize:
 
 - Jobs in the shop today (cart make/model, issue, tech assigned)
 - Any numbers you want analyzed (export fresh QBO/HCP first)
-- Decisions you made ("we're setting 31–40 one-way road miles at $129")
+- Decisions you made ("we're setting Northshore (30, 40] one-way road miles at $129")
 - Questions for staff (Jesse, Hayden Silva, techs) or Jessica at Griffin & Furman (books)
 
 **Do not paste** customer phone numbers or addresses unless necessary — look those up in HCP.

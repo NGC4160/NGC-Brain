@@ -44,7 +44,7 @@ This queue is **distinct** from the parts-deposit pipeline below. The deposit pi
 Options:
 
 - Customer drops cart at shop
-- **Hayden Silva** (Driver / Shop Technician Assistant) picks up cart when NGC transport is needed. Customer: **$0** at 0–30 one-way road miles; **$129** at 31–40; **>40** quoted + Ryan approval. Internal **$160** only on pickup **and** return tickets. Driver first — [driver_sop.md](driver_sop.md). Full SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures. Live P/D: [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+- **Hayden Silva** (Driver / Shop Technician Assistant) picks up cart when NGC transport is needed. **Northshore:** **$0** at 0–30 inclusive; **$129** (30, 40]; **$149** (40, 50]; **$179** (50, 60]; **>60 no service**. **Southshore:** **$179** flat. Internal **$160** only on pickup **and** return tickets. Driver first — [driver_sop.md](driver_sop.md). Full SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures. Live P/D: [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
 ### 3. Service execution
 
