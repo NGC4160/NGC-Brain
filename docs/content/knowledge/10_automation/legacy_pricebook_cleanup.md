@@ -41,7 +41,7 @@ Full row-by-row list with UUIDs → run the audit script.
 | Legacy | Current substitute |
 |--------|-------------------|
 | Mobile diagnostic ($174–$229) | **`1.0 - Golf Cart Diagnostic & Inspection`** — $179 in-shop |
-| Trip charges | **None** — free Northshore pickup/delivery (40 mi); **$99** flat outside zone / Southshore |
+| Trip charges | **None** as mobile trip charges. Live NGC P&D: **$0** at 0–30 one-way road miles; **$129** at 31–40 (Pickup & Return Delivery Transportation Charge); **>40** quoted + Ryan approval. Internal **$160** on pickup-and-return tickets only. [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) |
 | `3.0-NGC Lithium Conversion, 48v…` | **`6.0- 48V Professional Lithium Battery Conversion Kit Installed`** — $2,799 |
 | `3.0-NGC Lithium Conversion, 36v…` | **`6.0- 36V Professional…`** — $2,599 |
 | `3.0-NGC MINI…` | **`6.0- 48V MINI Professional…`** — $2,799 |

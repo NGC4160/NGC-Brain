@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T16:59:47.089207+00:00",
+  "generated_at": "2026-09-14T18:45:01.116796+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,13 +12,13 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-09-13T16:59:47.046216+00:00",
-    "jobs_synced_at": "2026-09-13T16:59:43.421278+00:00",
+    "generated_at": "2026-09-14T18:45:01.088295+00:00",
+    "jobs_synced_at": "2026-09-14T18:44:57.256665+00:00",
     "has_live_data": true,
     "metrics": {
-      "in_progress": 6,
-      "scheduled": 22,
-      "needs_scheduling": 9,
+      "in_progress": 5,
+      "scheduled": 21,
+      "needs_scheduling": 11,
       "active_pipeline": 37,
       "wip_target": null,
       "wip_over": 0,
@@ -31,7 +31,7 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 132,
+          "days": 133,
           "lithium": true,
           "status": "in progress"
         }
@@ -40,39 +40,39 @@
         {
           "invoice": "17248",
           "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 132,
+          "days": 133,
           "lithium": true,
           "status": "in progress"
         },
         {
           "invoice": "17260",
           "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 130,
+          "days": 131,
           "lithium": false,
           "status": "in progress"
         },
         {
           "invoice": "17109-2",
           "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 109,
+          "days": 110,
           "lithium": false,
           "status": "in progress"
         },
         {
-          "invoice": "17442",
-          "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-          "days": 25,
+          "invoice": "173107",
+          "description": "General - ***SEE NOTES***",
+          "days": 16,
           "lithium": false,
           "status": "in progress"
         }
       ]
     },
     "sync": {
-      "synced_at": "2026-09-13T16:59:46.656095+00:00",
+      "synced_at": "2026-09-14T18:45:00.836540+00:00",
       "pricebook": {
         "exists": true,
         "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-        "modified": "2026-09-13T16:59:28.162629+00:00",
+        "modified": "2026-09-14T18:44:41.441999+00:00",
         "total_items": 282,
         "lithium_professional_skus": [
           {
@@ -174,7 +174,7 @@
       "qbo_pl": {
         "exists": true,
         "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-        "modified": "2026-09-13T16:59:28.164458+00:00",
+        "modified": "2026-09-14T18:44:41.443094+00:00",
         "period_note": "See file header for date range",
         "income_highlights": {
           "LFP Conversions Only": 94940.25,
@@ -203,14 +203,14 @@
           ],
           "refresh_token_rotated": true
         },
-        "modified": "2026-09-13T16:59:28.162629+00:00",
+        "modified": "2026-09-14T18:44:41.441999+00:00",
         "account_count": 148,
         "item_count": 521
       },
       "hcp_api": {
         "exists": true,
         "manifest": {
-          "synced_at": "2026-09-13T16:59:45.976698+00:00",
+          "synced_at": "2026-09-14T18:45:00.274371+00:00",
           "source": "housecall_pro_api",
           "paths": [
             "api_sync_manifest.json",
@@ -221,16 +221,16 @@
             "pricebook_services.json"
           ]
         },
-        "modified": "2026-09-13T16:59:45.977083+00:00",
+        "modified": "2026-09-14T18:45:00.274758+00:00",
         "job_count": 500,
         "jobs_by_status": {
-          "needs scheduling": 9,
+          "needs scheduling": 11,
           "user canceled": 40,
-          "scheduled": 22,
-          "in progress": 6,
-          "pro canceled": 35,
+          "scheduled": 21,
+          "in progress": 5,
+          "pro canceled": 34,
           "complete unrated": 286,
-          "complete rated": 102
+          "complete rated": 103
         },
         "pricebook_service_count": 283,
         "professional_lithium_skus": [
@@ -246,43 +246,43 @@
       "qbo_files": [
         {
           "name": "api_sync_manifest.json",
-          "modified": "2026-09-13T16:59:28.162629+00:00"
+          "modified": "2026-09-14T18:44:41.441999+00:00"
         },
         {
           "name": "balance_sheet.json",
-          "modified": "2026-09-13T16:59:28.163458+00:00"
+          "modified": "2026-09-14T18:44:41.443094+00:00"
         },
         {
           "name": "balance_sheet_current.xlsx",
-          "modified": "2026-09-13T16:59:28.163458+00:00"
+          "modified": "2026-09-14T18:44:41.443094+00:00"
         },
         {
           "name": "chart_of_accounts.json",
-          "modified": "2026-09-13T16:59:28.163458+00:00"
+          "modified": "2026-09-14T18:44:41.443094+00:00"
         },
         {
           "name": "chart_of_accounts.xlsx",
-          "modified": "2026-09-13T16:59:28.163458+00:00"
+          "modified": "2026-09-14T18:44:41.443094+00:00"
         },
         {
           "name": "company_test.json",
-          "modified": "2026-09-13T16:59:46.615356+00:00"
+          "modified": "2026-09-14T18:45:00.807688+00:00"
         },
         {
           "name": "products_and_services.xlsx",
-          "modified": "2026-09-13T16:59:28.163458+00:00"
+          "modified": "2026-09-14T18:44:41.443094+00:00"
         },
         {
           "name": "products_services.json",
-          "modified": "2026-09-13T16:59:28.164458+00:00"
+          "modified": "2026-09-14T18:44:41.443094+00:00"
         },
         {
           "name": "profit_and_loss_last_12_months.json",
-          "modified": "2026-09-13T16:59:28.164458+00:00"
+          "modified": "2026-09-14T18:44:41.443094+00:00"
         },
         {
           "name": "profit_and_loss_last_12_months.xlsx",
-          "modified": "2026-09-13T16:59:28.164458+00:00"
+          "modified": "2026-09-14T18:44:41.443094+00:00"
         }
       ],
       "alerts": [
@@ -378,6 +378,14 @@
       "why": "Protect 2\u20133 day promise; 2 Li jobs 50+ days in HCP",
       "owner": "Ryan",
       "status": "In progress",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P1",
+      "name": "Align live HCP P/D line to **NGC-OPS-FIN-2026-09** (name **Pickup & Return Delivery Transportation Charge**; $129 at 31\u201340; do not quote export **$99**)",
+      "why": "Export still shows Standard Pick-up/Drop-off $99",
+      "owner": "Jesse",
+      "status": "**Policy live 2026-09-13** \u2014 HCP SKU not confirmed updated",
       "category": "Operations (run the shop better)"
     },
     {
@@ -638,7 +646,7 @@
           "title": "Operations Dashboard",
           "desc": "WIP, lithium lane, deposit alerts, sync status",
           "href": "dashboard.html",
-          "badge": "6 in shop",
+          "badge": "5 in shop",
           "primary": true
         },
         {
@@ -747,7 +755,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "22 tracked projects \u00b7 P1\u2013P3",
+          "desc": "23 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },
@@ -777,7 +785,7 @@
       "cards": [
         {
           "title": "Browse All Docs",
-          "desc": "134 indexed deliverables",
+          "desc": "136 indexed deliverables",
           "href": "explore.html",
           "primary": true
         },
@@ -822,10 +830,10 @@
       "cards": [
         {
           "title": "Documents Hub",
-          "desc": "24 active \u00b7 3 planned \u2014 all categories",
+          "desc": "25 active \u00b7 3 planned \u2014 all categories",
           "href": "documents/index.html",
           "primary": true,
-          "badge": "24 docs"
+          "badge": "25 docs"
         },
         {
           "title": "Technician Phone Interview Scorecard",
@@ -967,9 +975,9 @@
     }
   ],
   "documents": {
-    "active": 24,
+    "active": 25,
     "planned": 3,
     "categories": 5
   },
-  "manifest_total": 134
+  "manifest_total": 136
 }

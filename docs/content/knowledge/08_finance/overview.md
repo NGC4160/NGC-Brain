@@ -135,6 +135,17 @@ As of Jul 2026: books sync daily via morning sync (HCP + QBO API → Command Cen
 
 Owner assignments for each flow — confirm with Ryan / Jesse / Jessica at Griffin & Furman (Christine part-time backup).
 
+## Pickup/delivery cost (live — NGC-OPS-FIN-2026-09)
+
+**Approved 2026-09-13 by Ryan White via Chief.** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+
+- Internal assignment **$160** per ticket that needs NGC **pickup AND return delivery**
+- Do **not** post **$160** in QBO as a second vehicle or payroll expense
+- Customer: **$0** at 0–30 one-way road miles; **$129** at 31–40 (line name **Pickup & Return Delivery Transportation Charge**); **>40** individually quoted + Ryan / management approval
+- Measure driving miles from the Covington shop. Southshore uses the same bands.
+
+Customer / GP rules: [shop_services.md](../03_services/shop_services.md#pickup--delivery).
+
 ## Automation
 
 Daily P&L / balance sheet / COA refresh: GitHub Action **Morning Sync** (7:30 AM CST). Manual export ritual for routine finance Qs is **no longer required** — still refresh `knowledge/08_finance/` after material chart changes or when AI answers look stale.

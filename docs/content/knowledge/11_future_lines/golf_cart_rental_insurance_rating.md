@@ -312,7 +312,7 @@ Class codes are **assigned by the carrier/NCCI**, not by you. Split payroll corr
 | Address | 71363 Thelma Ln, Suite E, Covington, LA 70433 | Tenant in a commercial suite (lessor’s risk is landlord’s) |
 | Parish | St. Tammany | Hurricane / tropical storm, hail, tornado secondary; flood by lot elevation |
 | Metro | Northshore / GNO | Jury/venue better than Orleans for many carriers, still **LA** |
-| Pickup policy | Free 40 mi Northshore; $99 Southshore / >40 mi | If rentals follow the same radius, **Southshore and multi-parish** widen auto + GL |
+| Pickup policy | Live shop P/D (2026-09-13): 0–30 mi included / $129 at 31–40 / >40 quoted — not a rental offer | If rentals copy shop radius, **wider road miles** widen auto + GL |
 
 | # | Factor | How measured | Typical multiplier (vs inland US base 1.00) | Direction | Data sources |
 |---|--------|--------------|---------------------------------------------|-----------|--------------|

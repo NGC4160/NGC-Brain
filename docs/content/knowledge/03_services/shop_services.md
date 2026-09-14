@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-09-05  
+**Last verified:** 2026-09-13  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -49,12 +49,17 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 
 ## Pickup & delivery
 
-| Zone | Fee |
-|------|-----|
-| **Within 40 miles of shop on the Northshore** | **Free** |
-| **Outside 40 miles OR Southshore** | **$99** flat (Standard Pick-up/Drop-off) |
+**Live policy (approved 2026-09-13 — NGC-OPS-FIN-2026-09).** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
-**Policy (final — 2026-07-13):** 40-mile Northshore free zone is firm. Outside that zone or Southshore = **$99** flat. No trip charges / mobile service.
+Applies **only** when NGC does **pickup AND return delivery**. Customer drop-off / customer pickup with no NGC transport does **not** get the internal **$160**. Measure **one-way road (driving) miles** from **71363 Thelma Ln, Suite E, Covington**. Not straight-line. Southshore uses these same bands — no separate Southshore fee.
+
+| One-way road miles | Customer charge | Internal assignment |
+|--------------------|----------------:|--------------------:|
+| **0–30** | **$0** (included) | **$160** |
+| **31–40** | **$129** — line name **Pickup & Return Delivery Transportation Charge** (replaces “Round Trip”) | **$160** |
+| **>40** | Individually quoted | Actual review — **Ryan / management approval required** |
+
+Do **not** quote the old **$90** internal cost, **40-mile included** radius, or **$99** outside-40 / Southshore flat. Do **not** post **$160** in QBO as a second vehicle or payroll expense.
 
 **Driver:** Hayden Silva (Driver / Shop Technician Assistant) handles pickups and deliveries. Driver first; shop assist only when transport and management priorities allow. Official SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures — [driver_sop.md](../04_operations/driver_sop.md). **Roy Gautreaux** is off roster (2026-09-03).
 
@@ -62,17 +67,17 @@ After a customer **approves**, queue pickup or drop-off. Do **not** say a time i
 
 ### Estimate GP check (standing)
 
-**Confirmed 2026-09-01 by Ryan White.** Same-day correction: the **$90** free pickup/delivery trip cost is **once per job**, not added to every price book line or SKU. Internal math. Shop owns this check. Hide the trip from the customer.
+**Updated 2026-09-13 by Ryan White via Chief** (supersedes the 2026-09-01 **$90** trip-cost layer). Internal math. Shop owns this check. **$160** is once per NGC pickup-and-return job, not added to every price book line or SKU.
 
-| Layer | GP rule | $90? |
-|-------|---------|------|
-| **Price book services** | 50% GP after 4% CC **on that item only**: **sell >= cost / 0.46** | **No** — do not add $90 |
+| Layer | GP rule | $160? |
+|-------|---------|-------|
+| **Price book services** | 50% GP after 4% CC **on that item only**: **sell >= cost / 0.46** | **No** — do not add $160 |
 | **Materials** | HCP markup matrix only | **No** |
-| **Estimate (free P/D)** | Add **$90 once** to total job cost, then **sell >= (sum of line costs + 90) / 0.46** | **Once per job** |
+| **Estimate (NGC P&D, 0–30 mi included)** | Add **$160 once** to total job cost, then **sell >= (sum of line costs + 160) / 0.46** | **Once per job** |
 
-Do **not** put the $90 on the customer estimate (not a trip charge, not a P/D fee on free-zone jobs). Paid-zone jobs still show the **$99** Standard Pick-up/Drop-off line.
+On **0–30** mi included jobs, hide the **$160** from the customer (not a trip charge on the estimate). On **31–40** mi jobs, show **$129** as **Pickup & Return Delivery Transportation Charge**; internal assignment is still **$160**. Do not invent extra GP padding for that difference. **>40** mi is quoted and needs Ryan approval.
 
-Equivalently **~$196 extra sell once per free-P/D job**, typically padded into **labor/diagnostic**, not a trip line. Apply **per job / estimate**, not as a weekly average, and **not per line / SKU**.
+The old **~$196** extra-sell shorthand was for **$90**. Do **not** keep using **$90** or **~$196**.
 
 The **4%** is only the fee used in this GP check. The customer-facing surcharge line still follows the live HCP line (do not invent that line’s % or $). Do not invent other GP targets. Same rule: [pricebook_reference.md](pricebook_reference.md#estimate-gp-check-standing).
 
