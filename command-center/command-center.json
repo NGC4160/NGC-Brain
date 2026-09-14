@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T18:45:01.116796+00:00",
+  "generated_at": "2026-09-14T19:58:23.399465+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,60 +12,23 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-09-14T18:45:01.088295+00:00",
-    "jobs_synced_at": "2026-09-14T18:44:57.256665+00:00",
-    "has_live_data": true,
+    "generated_at": "2026-09-14T19:58:23.381448+00:00",
+    "jobs_synced_at": null,
+    "has_live_data": false,
     "metrics": {
-      "in_progress": 5,
-      "scheduled": 21,
-      "needs_scheduling": 11,
-      "active_pipeline": 37,
+      "in_progress": 0,
+      "scheduled": 0,
+      "needs_scheduling": 0,
+      "active_pipeline": 0,
       "wip_target": null,
       "wip_over": 0,
-      "stale_15_plus": 4,
-      "lithium_at_risk": 1,
+      "stale_15_plus": 0,
+      "lithium_at_risk": 0,
       "deposit_alerts": 0
     },
     "alerts": {
-      "lithium_at_risk": [
-        {
-          "invoice": "17248",
-          "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 133,
-          "lithium": true,
-          "status": "in progress"
-        }
-      ],
-      "stale_wip": [
-        {
-          "invoice": "17248",
-          "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 133,
-          "lithium": true,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17260",
-          "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 131,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17109-2",
-          "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 110,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "173107",
-          "description": "General - ***SEE NOTES***",
-          "days": 16,
-          "lithium": false,
-          "status": "in progress"
-        }
-      ]
+      "lithium_at_risk": [],
+      "stale_wip": []
     },
     "sync": {
       "synced_at": "2026-09-14T18:45:00.836540+00:00",
@@ -382,10 +345,18 @@
     },
     {
       "priority": "P1",
-      "name": "Align live HCP P/D line to **NGC-OPS-FIN-2026-09** (name **Pickup & Return Delivery Transportation Charge**; $129 at 31\u201340; do not quote export **$99**)",
+      "name": "Align live HCP P/D line to **NGC-OPS-FIN-2026-09** (name **Pickup & Return Delivery Transportation Charge**; Northshore $129 / $149 / $179; Southshore $179; do not quote export **$99**; do not offer Northshore >60)",
       "why": "Export still shows Standard Pick-up/Drop-off $99",
       "owner": "Jesse",
-      "status": "**Policy live 2026-09-13** \u2014 HCP SKU not confirmed updated",
+      "status": "**Customer bands live 2026-09-14** \u2014 HCP SKU not confirmed updated",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P1",
+      "name": "Update website / Meta / GBP copy that still says **free pickup within 40 miles**",
+      "why": "Stale vs 2026-09-14 P/D (Northshore free only 0\u201330; Southshore $179)",
+      "owner": "Marketing / Chief",
+      "status": "Open \u2014 shop policy updated; public copy not rewritten in this Brain pass",
       "category": "Operations (run the shop better)"
     },
     {
@@ -646,7 +617,7 @@
           "title": "Operations Dashboard",
           "desc": "WIP, lithium lane, deposit alerts, sync status",
           "href": "dashboard.html",
-          "badge": "5 in shop",
+          "badge": "Sync needed",
           "primary": true
         },
         {
@@ -755,7 +726,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "23 tracked projects \u00b7 P1\u2013P3",
+          "desc": "24 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },

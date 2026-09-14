@@ -137,12 +137,13 @@ Owner assignments for each flow — confirm with Ryan / Jesse / Jessica at Griff
 
 ## Pickup/delivery cost (live — NGC-OPS-FIN-2026-09)
 
-**Approved 2026-09-13 by Ryan White via Chief.** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+**Internal $160 approved 2026-09-13. Customer bands amended 2026-09-14 by Ryan White via Chief.** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
 - Internal assignment **$160** per ticket that needs NGC **pickup AND return delivery**
 - Do **not** post **$160** in QBO as a second vehicle or payroll expense
-- Customer: **$0** at 0–30 one-way road miles; **$129** at 31–40 (line name **Pickup & Return Delivery Transportation Charge**); **>40** individually quoted + Ryan / management approval
-- Measure driving miles from the Covington shop. Southshore uses the same bands.
+- **Northshore** customer: **$0** at 0–30 inclusive; **$129** at (30, 40]; **$149** at (40, 50]; **$179** at (50, 60]; **>60 no service** (do not quote). Line name **Pickup & Return Delivery Transportation Charge**
+- **Southshore:** **$179** flat, same line name. Do not apply Northshore free / $129 / $149
+- Measure driving miles from the Covington shop. Lake split for Northshore vs Southshore.
 
 Customer / GP rules: [shop_services.md](../03_services/shop_services.md#pickup--delivery).
 

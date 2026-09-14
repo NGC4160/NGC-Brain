@@ -37,7 +37,7 @@ Systems note: [tools.md](../06_systems/tools.md).
 
 ## Estimate GP check (standing)
 
-**Updated 2026-09-13 by Ryan White via Chief** (NGC-OPS-FIN-2026-09). Supersedes the 2026-09-01 **$90** trip-cost layer. The **$160** internal assignment is **once per NGC pickup-and-return job**, not added to every price book line or SKU.
+**Updated 2026-09-14 by Ryan White via Chief** (NGC-OPS-FIN-2026-09 customer bands amended). Supersedes the 2026-09-01 **$90** trip-cost layer. The **$160** internal assignment is **once per NGC pickup-and-return job**, not added to every price book line or SKU.
 
 | Layer | GP rule | $160? |
 |-------|---------|-------|
@@ -45,7 +45,7 @@ Systems note: [tools.md](../06_systems/tools.md).
 | **Materials** | HCP markup matrix only | **No** |
 | **Estimate (NGC P&D, 0–30 mi included)** | Add **$160 once** to total job cost, then **sell >= (sum of line costs + 160) / 0.46** | **Once per job** |
 
-On **0–30** one-way road miles, hide the trip from the customer. On **31–40**, show **$129** as **Pickup & Return Delivery Transportation Charge**; internal is still **$160**. **>40** is quoted + Ryan approval. Do not invent extra GP padding. The old **~$196** extra-sell shorthand was for **$90** — do not keep using it.
+On **0–30** inclusive Northshore, hide the trip from the customer. On **paid** P/D (Northshore **$129 / $149 / $179**, Southshore **$179**), show **Pickup & Return Delivery Transportation Charge** at the live amount; internal is still **$160**. Northshore **>60** is not sold. Do not invent extra GP padding. The old **~$196** extra-sell shorthand was for **$90** — do not keep using it.
 
 The **4%** is only for this GP check — not a locked customer-facing surcharge rate. Do not invent other numbers. Policy home: [shop_services.md](shop_services.md#estimate-gp-check-standing). Bulletin: [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
@@ -93,7 +93,7 @@ The **4%** is only for this GP check — not a locked customer-facing surcharge 
 | Diagnostic Testing | $125 | Current |
 | Advanced Diagnostics (In-Shop) | $145 | Current |
 | Shop Labor Hours | $125 | Current |
-| Standard Pick-up/Drop-off Service | $99 | **Stale vs live policy** — HCP export still has this line. Do **not** quote **$99**. Live: 0–30 mi **$0** / 31–40 mi **$129** **Pickup & Return Delivery Transportation Charge** / >40 quoted + Ryan approval. [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) |
+| Standard Pick-up/Drop-off Service | $99 | **Stale vs live policy** — HCP export still has this line. Do **not** quote **$99**. Live Northshore: 0–30 **$0** / (30,40] **$129** / (40,50] **$149** / (50,60] **$179** / >60 no service. Southshore **$179** flat. Line name **Pickup & Return Delivery Transportation Charge**. [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) |
 | 7-Point Golf Cart Safety Inspection | $0 | Current |
 | WORK PERFORMED AT SHOP | $0 | Internal flag line |
 | Payment processing / credit card surcharge lines | *(live HCP)* | **Put a surcharge on every estimate** (2026-08-30). CSV export has processing-fee items with $0 listed. **Do not invent a % or $** — Ryan did not lock the rate. Recalc the line to the final total before invoice or payment. |

@@ -2,7 +2,7 @@
 
 **Neighborhood Golf Carts**  
 **Audience:** Jesse (Administrative Assistant / Service Coordinator — she/her), Christine (part-time backup), Ryan (escalations)  
-**Last updated:** 2026-08-30  
+**Last updated:** 2026-09-14  
 **Related:** Job description · KPI scorecard · `knowledge/03_services/shop_services.md` · `knowledge/05_team/roles.md` · pricebook export
 
 Jesse owns front office **plus** inventory, parts ordering/tracking, pricebook maintenance, advanced estimating, shop workflow, pickup/delivery routing, and data/reporting.
@@ -15,7 +15,7 @@ Jesse owns front office **plus** inventory, parts ordering/tracking, pricebook m
 |-------|--------|
 | Service model | **Shop-only** — no mobile / on-site repair, no trip charges |
 | Diagnostic | **$179** minimum — not waived; applies toward repair on known-issue jobs |
-| Pickup / delivery | **$0** at 0–30 one-way road miles; **$129** at 31–40 (Pickup & Return Delivery Transportation Charge); **>40** quoted + Ryan approval. Driving miles from Covington shop. Same bands on Southshore |
+| Pickup / delivery | **Northshore:** **$0** at 0–30 inclusive; **$129** (30, 40]; **$149** (40, 50]; **$179** (50, 60]; **>60 no service**. **Southshore $179** flat. Line name Pickup & Return Delivery Transportation Charge. Driving miles from Covington shop. |
 | Lithium | **Professional Kits only** — do not quote discontinued NGC Conversion line |
 | Deposits | Required before ordering batteries, motors, controllers, special-order parts |
 | Pricing | Use Housecall Pro / pricebook — **never invent** a price |
@@ -44,7 +44,7 @@ Answer or acknowledge same business day. Pull Ryan/techs only when the call is t
 “We’re an in-shop service center in Covington — we don’t do mobile repairs. We can schedule a diagnostic here, and Roy can pick up the cart if that helps. Diagnostic is $179 and goes toward the repair when it’s a known issue.”
 
 **Pickup quote:**  
-“Pickup and return delivery are included within 30 one-way driving miles of the shop. Thirty-one to forty miles is $129. Over forty miles we quote it and it needs approval. We use road miles, not a straight line.”
+“Pickup and return delivery on the Northshore are included within 30 one-way driving miles of the shop. After that it’s $129 up to 40, $149 up to 50, and $179 up to 60. Over 60 miles on the Northshore we don’t offer pickup. Southshore is $179. We use road miles, not a straight line.”
 
 ---
 
@@ -150,7 +150,7 @@ Helpful and direct. Ask for a decision. Never argue. Never invent a lower price.
 Jesse **routes and schedules**; Roy **drives**.
 
 1. Confirm date/time windows with customer and shop capacity (Ryan if bay load is the constraint).
-2. Build Hayden’s daily route: zone-batch by one-way road miles (0–30 included / 31–40 **$129** / >40 quoted + Ryan). Confirm miles before promising included.
+2. Build Hayden’s daily route: zone-batch by one-way road miles and lake side (Northshore 0–30 included / **$129** / **$149** / **$179** / no service >60; Southshore **$179**). Confirm miles and Northshore vs Southshore before promising included.
 3. Code **PICKUP** until cart is in shop or returned; then update.
 4. Status texts: only facts (received, waiting approval, parts ordered ETA, ready for pickup).
 
