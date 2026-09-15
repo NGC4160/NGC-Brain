@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-13  
+**Last verified:** 2026-09-14  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -44,7 +44,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
 | [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, meter/speedometer, SMS templates (no PII) |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |
-| [08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) | **NGC-OPS-FIN-2026-09** — **APPROVED / live 2026-09-13**. Internal **$160**; included **0–30** one-way road miles; **$129** at 31–40; >40 quoted + Ryan approval |
+| [08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) | **NGC-OPS-FIN-2026-09** — **APPROVED**. Internal **$160** (2026-09-13). Customer bands **amended 2026-09-14**: Northshore 0–30 free / (30,40] $129 / (40,50] $149 / (50,60] $179 / >60 no service; Southshore **$179** flat |
 | [archive/legacy_mobile.md](archive/legacy_mobile.md) | Discontinued mobile service items — do not quote |
 | [09_daily_ops/README.md](09_daily_ops/README.md) | **Daily operating guide** — rhythms, roles, **bot Slack to Jesse (Ryan yes first)**, **bot updates as bullets**, data to feed AI |
 | [09_daily_ops/improvement_backlog.md](09_daily_ops/improvement_backlog.md) | Growth & ops projects (prioritized) |

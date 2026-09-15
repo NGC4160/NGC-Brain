@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-09-13  
+**Last verified:** 2026-09-14  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -49,17 +49,27 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 
 ## Pickup & delivery
 
-**Live policy (approved 2026-09-13 — NGC-OPS-FIN-2026-09).** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+**Live policy (customer bands amended 2026-09-14 — NGC-OPS-FIN-2026-09).** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
-Applies **only** when NGC does **pickup AND return delivery**. Customer drop-off / customer pickup with no NGC transport does **not** get the internal **$160**. Measure **one-way road (driving) miles** from **71363 Thelma Ln, Suite E, Covington**. Not straight-line. Southshore uses these same bands — no separate Southshore fee.
+Applies **only** when NGC does **pickup AND return delivery**. Customer drop-off / customer pickup with no NGC transport does **not** get the internal **$160**. Measure **one-way road (driving) miles** from **71363 Thelma Ln, Suite E, Covington**. Not straight-line.
+
+**Northshore vs Southshore:** lake split (north of Lake Pontchartrain vs south). Do not invent a parish list. If unsure, ask Jesse / Ryan — do not guess a cheaper Northshore band.
+
+**0–30 inclusive remains $0** on Northshore (Ryan did not restate on 2026-09-14; preserves the live included zone). Edges are **half-open** so 40.0 / 50.0 / 60.0 do not double: Ryan’s spoken 30–40 / 40–50 / 50–60 = the table below.
+
+**Northshore**
 
 | One-way road miles | Customer charge | Internal assignment |
 |--------------------|----------------:|--------------------:|
-| **0–30** | **$0** (included) | **$160** |
-| **31–40** | **$129** — line name **Pickup & Return Delivery Transportation Charge** (replaces “Round Trip”) | **$160** |
-| **>40** | Individually quoted | Actual review — **Ryan / management approval required** |
+| **0–30 inclusive** | **$0** (included) | **$160** |
+| **(30, 40]** | **$129** — **Pickup & Return Delivery Transportation Charge** | **$160** |
+| **(40, 50]** | **$149** — same line name | **$160** |
+| **(50, 60]** | **$179** — same line name | **$160** |
+| **>60** | **No service** — do not quote / do not offer | — |
 
-Do **not** quote the old **$90** internal cost, **40-mile included** radius, or **$99** outside-40 / Southshore flat. Do **not** post **$160** in QBO as a second vehicle or payroll expense.
+**Southshore:** **$179** flat, same line name. Do **not** apply Northshore free / $129 / $149. Ryan did not restate a Southshore mileage cap — do not invent one.
+
+Do **not** quote the old **$90** internal cost, **40-mile included** radius, **$99** outside-40 / Southshore flat, **>40 individually quoted**, or **free within 40 miles**. Do **not** post **$160** in QBO as a second vehicle or payroll expense.
 
 **Driver:** Hayden Silva (Driver / Shop Technician Assistant) handles pickups and deliveries. Driver first; shop assist only when transport and management priorities allow. Official SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures — [driver_sop.md](../04_operations/driver_sop.md). **Roy Gautreaux** is off roster (2026-09-03).
 
@@ -67,7 +77,7 @@ After a customer **approves**, queue pickup or drop-off. Do **not** say a time i
 
 ### Estimate GP check (standing)
 
-**Updated 2026-09-13 by Ryan White via Chief** (supersedes the 2026-09-01 **$90** trip-cost layer). Internal math. Shop owns this check. **$160** is once per NGC pickup-and-return job, not added to every price book line or SKU.
+**Updated 2026-09-14 by Ryan White via Chief** (supersedes the 2026-09-01 **$90** trip-cost layer; **$160** internal unchanged from 2026-09-13). Internal math. Shop owns this check. **$160** is once per NGC pickup-and-return job, not added to every price book line or SKU.
 
 | Layer | GP rule | $160? |
 |-------|---------|-------|
@@ -75,7 +85,7 @@ After a customer **approves**, queue pickup or drop-off. Do **not** say a time i
 | **Materials** | HCP markup matrix only | **No** |
 | **Estimate (NGC P&D, 0–30 mi included)** | Add **$160 once** to total job cost, then **sell >= (sum of line costs + 160) / 0.46** | **Once per job** |
 
-On **0–30** mi included jobs, hide the **$160** from the customer (not a trip charge on the estimate). On **31–40** mi jobs, show **$129** as **Pickup & Return Delivery Transportation Charge**; internal assignment is still **$160**. Do not invent extra GP padding for that difference. **>40** mi is quoted and needs Ryan approval.
+On **0–30** mi included Northshore jobs, hide the **$160** from the customer (not a trip charge on the estimate). On **paid** P/D (Northshore **$129 / $149 / $179**, Southshore **$179**), show **Pickup & Return Delivery Transportation Charge** at the live amount; internal assignment is still **$160**. Do not invent extra GP padding for that difference. Northshore **>60** is not sold.
 
 The old **~$196** extra-sell shorthand was for **$90**. Do **not** keep using **$90** or **~$196**.
 

@@ -1,19 +1,24 @@
 # Customers & Marketing
 
-**Last verified:** 2026-09-13
+**Last verified:** 2026-09-14
 
 ## Service area
 
 | Zone | Coverage |
 |------|----------|
-| **Included pickup/return** | **0–30** one-way **road** miles from shop — **$0** customer |
-| **Outer zone** | **31–40** one-way road miles — **$129** Pickup & Return Delivery Transportation Charge |
-| **Beyond** | **>40** one-way road miles — individually quoted + Ryan / management approval |
+| **Northshore included** | **0–30 inclusive** one-way **road** miles from shop — **$0** customer |
+| **Northshore (30, 40]** | **$129** Pickup & Return Delivery Transportation Charge |
+| **Northshore (40, 50]** | **$149** same line name |
+| **Northshore (50, 60]** | **$179** same line name |
+| **Northshore >60** | **No service** — do not quote / do not offer |
+| **Southshore** | **$179** flat, same line name |
 | **Market positioning** | **Greater New Orleans metro** |
 
 Shop address: 71363 Thelma Ln, Suite E, Covington, LA 70433
 
-**Policy (live — 2026-09-13, NGC-OPS-FIN-2026-09):** Measure driving miles, not straight-line. Southshore uses the same mileage bands — no separate Southshore fee. Internal **$160** only when NGC does pickup **and** return. [Bulletin](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+**Policy (live — customer bands 2026-09-14, NGC-OPS-FIN-2026-09):** Measure driving miles, not straight-line. Lake split for Northshore vs Southshore. Internal **$160** only when NGC does pickup **and** return. [Bulletin](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+
+Website / Meta / GBP copy that still says **free pickup within 40 miles** is **stale vs this policy**. Do not quote that line. Chief / Marketing should update public copy — this file is shop policy, not a rewrite of live ads.
 ## Customer segments
 
 | Segment | Status |
@@ -43,7 +48,7 @@ Confirm current marketing spend mix with Ryan — QBO shows ~$64k advertising/ma
 - LiFePO4 lithium conversions (Professional Kits — battery, charger, monitor; Vatrer packs we inspect, test, and tune; 5-year full replacement battery + BMS). Front Desk copy: [customer_reply_standard.md](customer_reply_standard.md). Office quoting (internal): [lithium_sales_guide.md](../02_products/lithium_sales_guide.md)
 - Advanced diagnostics capability
 - Free 7-point inspection with every service
-- Pickup & return delivery included 0–30 one-way road miles; $129 at 31–40; >40 quoted + Ryan approval
+- Pickup & return: Northshore 0–30 included / then $129 / $149 / $179 by 10-mile band / no service over 60; Southshore $179 flat
 - All makes and models
 
 ## Reviews
