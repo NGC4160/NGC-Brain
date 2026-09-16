@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-14  
+**Last verified:** 2026-09-16  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -35,6 +35,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA** — live board is a generated snapshot, not policy |
 | [04_operations/shop_whiteboard_layout.md](04_operations/shop_whiteboard_layout.md) | **Physical whiteboard — columns, cards, colors, daily use** |
 | [diagnostics/README.md](diagnostics/README.md) | **Diagnostics library** — Diagnostics bot + techs file cases (vehicle, symptoms, tests, waveforms, conflicting evidence, verification); known-good / known-faulted scaffold; TEST BEFORE REPLACEMENT |
+| [diagnostics/library_catalog.md](diagnostics/library_catalog.md) | **Library catalog (redacted)** — QC-passed Drive manuals (titles, ids, sources, wiring/fault flags). No customer names. No HCP job numbers. |
 | [05_team/roles.md](05_team/roles.md) | Human roster + **live Grok Bot roster** (Chief is COS) |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [../docs/documents/README.md](../docs/documents/README.md) | Command Center Documents hub (**publish output** — edit `external_docs/templates/`) |
@@ -71,6 +72,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 |-------|------------|
 | **Live file content** | Google Drive connector (NGC985) — shop bots read SOPs here |
 | **Brain catalog** | [`knowledge/.generated/drive_catalog.md`](.generated/drive_catalog.md) — generated list only |
+| **Library catalog (redacted)** | [`diagnostics/library_catalog.md`](diagnostics/library_catalog.md) — QC-passed Drive manuals (titles, ids, sources, wiring/fault flags). No customer names. No HCP job numbers. |
 | **Staff SOPs** | Stay in Drive Procedures. **NGC-OPS-DRIVER-09032026R0** master PDF: [Drive file](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (`13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`) in Procedures. **NGC-OPS-TECH-092026R0** Technician SOP (Sep 2026): [PDF](https://drive.google.com/file/d/1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT/view) (`1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT`) in Procedures; **NGC-EST-1** blank checklist: [PDF](https://drive.google.com/file/d/1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS/view) (`1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS`) in Checklists. Brain: [technician_sop_sep2026.md](04_operations/technician_sop_sep2026.md). **NGC-QC-1 / NGC-IR-1 not yet in Drive Procedures** (2026-08-30) |
 | **`external_docs/My Drive/`** | **Not** a live sync. Mention/symlink only. `.gitmodules` is GarageBuddy. |
 | **Actions** | Optional `GOOGLE_DRIVE_SERVICE_ACCOUNT_JSON` refreshes the catalog. Missing secret = skip, do not fail HCP/QBO. Never commits File_000 or binaries. |
@@ -81,6 +83,8 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | **Procedures** | [Drive folder](https://drive.google.com/drive/folders/1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh) (`1-NjzSQxTsbXqlOhbK7ptZzg1H5G2ntdh`) |
 | **Checklists** | [Drive folder](https://drive.google.com/drive/folders/1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp) (`1aNp0s5gGqq6B_SjxpAyCU3O-IkzUFPkp`) |
 | **Manuals** | [Drive folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) (`1-1QqJQh4UojQEERawwpfEjKYOor2VMuR`) |
+| **Manuals / Evolution** | [Drive folder](https://drive.google.com/drive/folders/1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB) (`1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB`) |
+| **Manuals / Tracker** | [Drive folder](https://drive.google.com/drive/folders/1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn) (`1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn`) |
 
 ## Bots & Chief
 
