@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T17:39:36.488353+00:00",
+  "generated_at": "2026-09-16T23:44:45.693135+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,67 +12,23 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-09-16T17:39:36.455877+00:00",
-    "jobs_synced_at": "2026-09-16T17:39:32.556353+00:00",
-    "has_live_data": true,
+    "generated_at": "2026-09-16T23:44:45.675100+00:00",
+    "jobs_synced_at": null,
+    "has_live_data": false,
     "metrics": {
-      "in_progress": 6,
-      "scheduled": 23,
-      "needs_scheduling": 15,
-      "active_pipeline": 44,
+      "in_progress": 0,
+      "scheduled": 0,
+      "needs_scheduling": 0,
+      "active_pipeline": 0,
       "wip_target": null,
       "wip_over": 0,
-      "stale_15_plus": 3,
-      "lithium_at_risk": 3,
+      "stale_15_plus": 0,
+      "lithium_at_risk": 0,
       "deposit_alerts": 0
     },
     "alerts": {
-      "lithium_at_risk": [
-        {
-          "invoice": "17248",
-          "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 135,
-          "lithium": true,
-          "status": "in progress"
-        },
-        {
-          "invoice": "173111",
-          "description": "3.0-NGC MINI Lithium Conversion, 48v 105ah",
-          "days": 14,
-          "lithium": true,
-          "status": "in progress"
-        },
-        {
-          "invoice": "173116",
-          "description": "3.0-NGC Lithium Conversion, 48v 105ah",
-          "days": 9,
-          "lithium": true,
-          "status": "in progress"
-        }
-      ],
-      "stale_wip": [
-        {
-          "invoice": "17248",
-          "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 135,
-          "lithium": true,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17260",
-          "description": "Accessories - 1.0-Seat belt kit installation",
-          "days": 133,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17109-2",
-          "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 112,
-          "lithium": false,
-          "status": "in progress"
-        }
-      ]
+      "lithium_at_risk": [],
+      "stale_wip": []
     },
     "sync": {
       "synced_at": "2026-09-16T17:39:36.123343+00:00",
@@ -661,7 +617,7 @@
           "title": "Operations Dashboard",
           "desc": "WIP, lithium lane, deposit alerts, sync status",
           "href": "dashboard.html",
-          "badge": "6 in shop",
+          "badge": "Sync needed",
           "primary": true
         },
         {
