@@ -4,6 +4,20 @@
 **Core rule:** Test before replacement · Document before assumption · Verify before completion  
 **Sequence:** REVIEW → INSPECT → DIAGNOSE → REPORT → REPAIR → VERIFY → QC → DOCUMENT → COMPLETE
 
+## Bay cheat sheet
+
+Do these nine steps in order on every job. Printable copy: [technician_9_steps_cheat_sheet.pdf](assets/technician_9_steps_cheat_sheet.pdf) (`knowledge/04_operations/assets/technician_9_steps_cheat_sheet.pdf`). Drive copy file id `1nrIWVY3khb_3-AXBV0ufqkv_KF5qzP0h`.
+
+1. **REVIEW** — Read the HCP job, customer complaint, and history before you touch the cart.
+2. **INSPECT** — Walk the cart; photo as needed; keep Main Job separate from courtesy findings.
+3. **DIAGNOSE** — Test before replacement. Find root cause with measurements — not parts guessing.
+4. **REPORT** — Hand Admin complete estimate support (NGC-EST-1): cause, correction, parts, labor, safety.
+5. **REPAIR** — Do only authorized Main Job / associated operations. Stop for additional work (§12).
+6. **VERIFY** — Confirm the complaint is gone (functional + road test as applicable) before calling it done.
+7. **QC** — Tech QC in the bay. Catch misses before the cart leaves your stall.
+8. **DOCUMENT** — Write tests, findings, parts, and verification in HCP notes. Document before assumption.
+9. **COMPLETE** — Notes in, tools/parts accounted, ready for Admin / delivery QC.
+
 ## Where the full documents live (staff source of truth)
 
 Staff SOPs stay in Google Drive. Bots use this summary + Drive pointers; do **not** paste the full controlled PDF into chat.
