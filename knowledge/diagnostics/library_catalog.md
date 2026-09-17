@@ -1,6 +1,6 @@
 # Library catalog (redacted)
 
-**Last verified:** 2026-09-16  
+**Last verified:** 2026-09-17  
 **Owner:** Diagnostics (reports to Chief). Ryan approves every new item before it enters the Library.
 
 Redacted lookup of **QC-passed** Drive Manuals in the shop **Library** (service manuals + parts manuals + diagrams). Live PDFs stay in Drive. This file is names, Drive ids, sources, and QC facts only.
@@ -20,8 +20,9 @@ Redacted lookup of **QC-passed** Drive Manuals in the shop **Library** (service 
 | Other | `16fZpYQkZKOv-pmMV0KguFLOC2udefmHQ` | [open](https://drive.google.com/drive/folders/16fZpYQkZKOv-pmMV0KguFLOC2udefmHQ) |
 | Evolution | `1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB` | [open](https://drive.google.com/drive/folders/1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB) |
 | Tracker | `1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn` | [open](https://drive.google.com/drive/folders/1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn) |
+| Tomberlin | `1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5` | [open](https://drive.google.com/drive/folders/1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5) |
 
-Club Car / EZGO / Yamaha / Other ids are from the 2026-08-30 generated Drive listing. Evolution / Tracker ids confirmed on live Drive 2026-09-16.
+Club Car / EZGO / Yamaha / Other ids are from the 2026-08-30 generated Drive listing. Evolution / Tracker ids confirmed on live Drive 2026-09-16. Tomberlin id confirmed on live Drive 2026-09-17.
 
 ## On file (QC PASS)
 
@@ -33,8 +34,10 @@ This catalog lists **only** the manuals below. Other PDFs may exist in Drive Man
 | Curtis Model 1268 Controller Manual.pdf | `1oBXBSYMDDVqNDaOaWkUqRXTlyS2xDgIg` | Manuals/Evolution | 66 | https://cdn.curtisinstruments.com/products/manuals/1268_manual_en.pdf | — | — | PASS — OEM controller manual (not vehicle SM) |
 | 2020_Service_Manual_TRACKER_EViS_72V_10002660-B.pdf | `1E1CRawt8S3FFpkLEezD-38i1tqdU8z3l` | Manuals/Tracker | 154 | Already on Drive | YES | YES | PASS — full SM |
 | 2021 Tracker EViS Repair and Service Manual 10002660-C.pdf | `1qZB3_B3yjBDYM1jxALJ2VvbHcKTgT1jT` | Manuals/Tracker | 154 | New on Drive 2026-09-16 | YES | YES | PASS — full SM |
+| Tomberlin E-Merge Service Manual 2010-2011.pdf | `1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56` | Manuals/Tomberlin | 150 | EVTS free digital ($0) — Tomberlin Emerge Manual Service 2010 through 2011 | YES (Ch9 control/lighting circuit; wiring diagram refs p9-7) | YES (Ch10 Check Procedures + Part 2; Ch11 battery troubleshooting) | PASS — full dealer maintenance/service manual (DC E-MERGE through 2011) |
+| Tomberlin E-Merge Wiring Diagram Curtis 1268 2009-2014.pdf | `1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA` | Manuals/Tomberlin | 1 | EVTS free digital ($0) — Wiring Diagram 2009–2014 Curtis 1268 Tomberlin Emerge | YES | — | PASS — 1-page wiring schematic (J1 pinout, motor/controller, 48V pack, DC-DC, lighting) |
 
-Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwXDAhMNQEKnJdM/view) · [Curtis 1268](https://drive.google.com/file/d/1oBXBSYMDDVqNDaOaWkUqRXTlyS2xDgIg/view) · [Tracker EViS 2020 10002660-B](https://drive.google.com/file/d/1E1CRawt8S3FFpkLEezD-38i1tqdU8z3l/view) · [Tracker EViS 2021 10002660-C](https://drive.google.com/file/d/1qZB3_B3yjBDYM1jxALJ2VvbHcKTgT1jT/view)
+Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwXDAhMNQEKnJdM/view) · [Curtis 1268](https://drive.google.com/file/d/1oBXBSYMDDVqNDaOaWkUqRXTlyS2xDgIg/view) · [Tracker EViS 2020 10002660-B](https://drive.google.com/file/d/1E1CRawt8S3FFpkLEezD-38i1tqdU8z3l/view) · [Tracker EViS 2021 10002660-C](https://drive.google.com/file/d/1qZB3_B3yjBDYM1jxALJ2VvbHcKTgT1jT/view) · [Tomberlin E-Merge SM 2010-2011](https://drive.google.com/file/d/1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56/view) · [Tomberlin E-Merge Curtis 1268 wiring 2009-2014](https://drive.google.com/file/d/1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA/view)
 
 ### Evolution
 
@@ -75,6 +78,29 @@ Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwX
 - Wiring: YES
 - Fault testing: YES
 - QC: PASS full SM
+
+### Tomberlin
+
+**Tomberlin E-Merge Service Manual 2010-2011.pdf** — [view](https://drive.google.com/file/d/1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56/view) (`1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56`)
+
+- Folder: Manuals/Tomberlin
+- Pages: 150
+- Source: EVTS free digital ($0) — Tomberlin Emerge Manual Service 2010 through 2011
+- Product: https://evtechnicalservices.com/online-store/ols/products/manual-service-tomberlin-emerge-2010-2011
+- Wiring: YES (Ch9 control/lighting circuit; wiring diagram refs p9-7)
+- Fault testing: YES (Ch10 Check Procedures + Part 2; Ch11 battery troubleshooting)
+- QC: PASS full dealer maintenance/service manual (DC E-MERGE through 2011)
+
+**Tomberlin E-Merge Wiring Diagram Curtis 1268 2009-2014.pdf** — [view](https://drive.google.com/file/d/1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA/view) (`1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA`)
+
+- Folder: Manuals/Tomberlin
+- Pages: 1
+- Size: ~42 KB
+- Source: EVTS free digital ($0) — Wiring Diagram 2009–2014 Curtis 1268 Tomberlin Emerge
+- Product: https://evtechnicalservices.com/online-store/ols/products/wiring-diagram-2009-2010-2011-2012-2013-2014-curtis-controller-1268-tomberlin-emerge
+- Wiring: YES
+- Fault-testing flag: not stated — do not invent
+- QC: PASS 1-page wiring schematic (J1 pinout, motor/controller, 48V pack, DC-DC, lighting)
 
 ## Related
 

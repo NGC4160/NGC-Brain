@@ -1,6 +1,6 @@
 # Diagnostics library
 
-**Last verified:** 2026-09-16  
+**Last verified:** 2026-09-17  
 **Owner:** **Diagnostics** bot (reports to Chief). Techs file evidence here. Shop still owns Housecall Pro jobs.
 
 This folder is the shop’s **evidence library** for Neighborhood Golf Carts diagnostics. It starts empty on purpose. Do **not** invent case data, waveforms, customer PII, secrets, or “typical” traces to fill it. **CartScope** is the tech-facing checklist UI (not this library, not this bot) — [`../06_systems/cartscope.md`](../06_systems/cartscope.md).
@@ -56,7 +56,7 @@ The shop **Library** is **service manuals + parts manuals + diagrams**. Use OEM 
 
 | Source | What it is |
 |--------|------------|
-| **Drive — Manuals** | [Google Drive folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) (`1-1QqJQh4UojQEERawwpfEjKYOor2VMuR`) — brand folders **EZGO**, **Club Car**, **Yamaha**, **Other**, **Evolution**, **Tracker** |
+| **Drive — Manuals** | [Google Drive folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) (`1-1QqJQh4UojQEERawwpfEjKYOor2VMuR`) — brand folders **EZGO**, **Club Car**, **Yamaha**, **Other**, **Evolution**, **Tracker**, **Tomberlin** |
 | **Redacted Brain catalog** | [`library_catalog.md`](library_catalog.md) — QC-passed titles, Drive ids, sources, wiring/fault flags. Not a substitute for the OEM PDF. |
 | **NGC Manuals board** | Shop manuals board (same brand split). Use it with Drive; do not treat this brain as a substitute for the OEM PDF. |
 | **Local catalog snapshot** | `/workspace/ngc-manuals/` — refresh when Drive Manuals change |

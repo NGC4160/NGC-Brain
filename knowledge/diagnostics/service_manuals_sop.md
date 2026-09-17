@@ -1,13 +1,13 @@
 # Library — service manuals, parts manuals, and diagrams
 
-**Last verified:** 2026-09-16  
+**Last verified:** 2026-09-17  
 **Owner:** Diagnostics (reports to Chief). Ryan approves every new item before it enters the Library.
 
 One page. The **Library** is Neighborhood Golf Carts’ collection of **service manuals + parts manuals + diagrams**. This is how we find one while diagnosing, get Ryan’s yes, and file it so the next job can use it.
 
 ## Source of truth
 
-- **Live files:** NGC985 Google Drive → **Manuals** folder ([open in Drive](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR)), brand folders EZGO / Club Car / Yamaha / Other / Evolution / Tracker.
+- **Live files:** NGC985 Google Drive → **Manuals** folder ([open in Drive](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR)), brand folders EZGO / Club Car / Yamaha / Other / Evolution / Tracker / Tomberlin.
 - **Redacted Brain catalog:** [`library_catalog.md`](library_catalog.md) — QC-passed titles, Drive ids, sources, wiring/fault flags. No customer names. No HCP job numbers.
 - **Catalog / board:** NGC Manuals board (same brand split). Use with Drive — do not treat this brain as a substitute for the original manufacturer PDF.
 - **Local catalog snapshot:** `/workspace/ngc-manuals/` (refresh when Drive Manuals change). Snapshot is a lookup aid only; Drive is still the live Library.
