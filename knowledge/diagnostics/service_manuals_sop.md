@@ -7,7 +7,7 @@ One page. The **Library** is Neighborhood Golf Carts’ collection of **service 
 
 ## Source of truth
 
-- **Live files:** NGC985 Google Drive → **Manuals** folder ([open in Drive](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR)), brand folders EZGO / Club Car / Yamaha / Other / Evolution / Tracker / Tomberlin.
+- **Live files:** NGC985 Google Drive → **Manuals** folder ([open in Drive](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR)), brand folders EZGO / Club Car / Yamaha / Other / Evolution / Tracker / Tomberlin / GEM.
 - **Redacted Brain catalog:** [`library_catalog.md`](library_catalog.md) — QC-passed titles, Drive ids, sources, wiring/fault flags. No customer names. No HCP job numbers.
 - **Catalog / board:** NGC Manuals board (same brand split). Use with Drive — do not treat this brain as a substitute for the original manufacturer PDF.
 - **Local catalog snapshot:** `/workspace/ngc-manuals/` (refresh when Drive Manuals change). Snapshot is a lookup aid only; Drive is still the live Library.

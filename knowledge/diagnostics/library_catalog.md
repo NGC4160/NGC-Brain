@@ -21,8 +21,9 @@ Redacted lookup of **QC-passed** Drive Manuals in the shop **Library** (service 
 | Evolution | `1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB` | [open](https://drive.google.com/drive/folders/1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB) |
 | Tracker | `1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn` | [open](https://drive.google.com/drive/folders/1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn) |
 | Tomberlin | `1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5` | [open](https://drive.google.com/drive/folders/1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5) |
+| GEM | `13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy` | [open](https://drive.google.com/drive/folders/13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy) |
 
-Club Car / EZGO / Yamaha / Other ids are from the 2026-08-30 generated Drive listing. Evolution / Tracker ids confirmed on live Drive 2026-09-16. Tomberlin id confirmed on live Drive 2026-09-17.
+Club Car / EZGO / Yamaha / Other ids are from the 2026-08-30 generated Drive listing. Evolution / Tracker ids confirmed on live Drive 2026-09-16. Tomberlin / GEM ids confirmed on live Drive 2026-09-17.
 
 ## On file (QC PASS)
 
@@ -36,8 +37,10 @@ This catalog lists **only** the manuals below. Other PDFs may exist in Drive Man
 | 2021 Tracker EViS Repair and Service Manual 10002660-C.pdf | `1qZB3_B3yjBDYM1jxALJ2VvbHcKTgT1jT` | Manuals/Tracker | 154 | New on Drive 2026-09-16 | YES | YES | PASS — full SM |
 | Tomberlin E-Merge Service Manual 2010-2011.pdf | `1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56` | Manuals/Tomberlin | 150 | EVTS free digital ($0) — Tomberlin Emerge Manual Service 2010 through 2011 | YES (Ch9 control/lighting circuit; wiring diagram refs p9-7) | YES (Ch10 Check Procedures + Part 2; Ch11 battery troubleshooting) | PASS — full dealer maintenance/service manual (DC E-MERGE through 2011) |
 | Tomberlin E-Merge Wiring Diagram Curtis 1268 2009-2014.pdf | `1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA` | Manuals/Tomberlin | 1 | EVTS free digital ($0) — Wiring Diagram 2009–2014 Curtis 1268 Tomberlin Emerge | YES | — | PASS — 1-page wiring schematic (J1 pinout, motor/controller, 48V pack, DC-DC, lighting) |
+| 2013 GEM e2 e4 e6 eS eL eLXD Service Manual PN9924112.pdf | `1nW8SQo6ngjvcP43MCjL0LkzQx6qH5yus` | Manuals/GEM | ~204 | free NEV Accessories mirror (PDF title 2013 GEM Service Manual); Ryan yes 2026-09-17 via Chief | YES (electrical chapter; shop also filed extract) | — | PASS — technician service manual (2013 GEM e2, e4, e6, eS, eL, eLXD · PN 9924112) |
+| 2013 GEM e-series Wiring Diagrams and Harness Drawings from SM PN9924112.pdf | `19CCDE46ntrcN9czc-tkaACxelzMTTt6d` | Manuals/GEM | — | extract from SM PN9924112 electrical chapter; Ryan yes 2026-09-17 via Chief | YES | — | PASS — wiring diagrams / harness drawings extract; not a separate OEM wiring-only pub |
 
-Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwXDAhMNQEKnJdM/view) · [Curtis 1268](https://drive.google.com/file/d/1oBXBSYMDDVqNDaOaWkUqRXTlyS2xDgIg/view) · [Tracker EViS 2020 10002660-B](https://drive.google.com/file/d/1E1CRawt8S3FFpkLEezD-38i1tqdU8z3l/view) · [Tracker EViS 2021 10002660-C](https://drive.google.com/file/d/1qZB3_B3yjBDYM1jxALJ2VvbHcKTgT1jT/view) · [Tomberlin E-Merge SM 2010-2011](https://drive.google.com/file/d/1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56/view) · [Tomberlin E-Merge Curtis 1268 wiring 2009-2014](https://drive.google.com/file/d/1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA/view)
+Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwXDAhMNQEKnJdM/view) · [Curtis 1268](https://drive.google.com/file/d/1oBXBSYMDDVqNDaOaWkUqRXTlyS2xDgIg/view) · [Tracker EViS 2020 10002660-B](https://drive.google.com/file/d/1E1CRawt8S3FFpkLEezD-38i1tqdU8z3l/view) · [Tracker EViS 2021 10002660-C](https://drive.google.com/file/d/1qZB3_B3yjBDYM1jxALJ2VvbHcKTgT1jT/view) · [Tomberlin E-Merge SM 2010-2011](https://drive.google.com/file/d/1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56/view) · [Tomberlin E-Merge Curtis 1268 wiring 2009-2014](https://drive.google.com/file/d/1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA/view) · [2013 GEM e-series SM PN9924112](https://drive.google.com/file/d/1nW8SQo6ngjvcP43MCjL0LkzQx6qH5yus/view) · [2013 GEM e-series wiring/harness extract](https://drive.google.com/file/d/19CCDE46ntrcN9czc-tkaACxelzMTTt6d/view)
 
 ### Evolution
 
@@ -101,6 +104,31 @@ Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwX
 - Wiring: YES
 - Fault-testing flag: not stated — do not invent
 - QC: PASS 1-page wiring schematic (J1 pinout, motor/controller, 48V pack, DC-DC, lighting)
+
+### GEM
+
+**2013 GEM e2 e4 e6 eS eL eLXD Service Manual PN9924112.pdf** — [view](https://drive.google.com/file/d/1nW8SQo6ngjvcP43MCjL0LkzQx6qH5yus/view) (`1nW8SQo6ngjvcP43MCjL0LkzQx6qH5yus`)
+
+- Folder: Manuals/GEM
+- Pages: ~204
+- Coverage: 2013 GEM e2, e4, e6, eS, eL, eLXD · PN 9924112
+- Type: technician service manual
+- Source: free NEV Accessories mirror (PDF title 2013 GEM Service Manual); Ryan yes 2026-09-17 via Chief
+- Wiring: YES (electrical chapter; shop also filed extract)
+- Fault-testing flag: not stated — do not invent
+- QC: PASS technician service manual (2013 GEM e-series · PN 9924112)
+
+**2013 GEM e-series Wiring Diagrams and Harness Drawings from SM PN9924112.pdf** — [view](https://drive.google.com/file/d/19CCDE46ntrcN9czc-tkaACxelzMTTt6d/view) (`19CCDE46ntrcN9czc-tkaACxelzMTTt6d`)
+
+- Folder: Manuals/GEM
+- Type: wiring diagrams / harness drawings (extract from SM electrical chapter)
+- Coverage: same 2013 GEM e-series models · not a separate OEM wiring-only pub
+- Source: extract from 2013 GEM SM PN9924112 electrical chapter; Ryan yes 2026-09-17 via Chief
+- Wiring: YES
+- Fault-testing flag: not stated — do not invent
+- QC: PASS wiring/harness extract from SM electrical chapter — not a separate OEM wiring-only publication
+
+Also on Drive (not newly catalogued this pass): **GEM-Service-Manual-2000-2004-e825_.pdf** (`1mHUzdJlb823L0rZSMBIE6byjdr_vdTZT`) remains on file in Manuals/GEM for pre-e6 carts.
 
 ## Related
 

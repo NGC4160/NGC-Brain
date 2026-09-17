@@ -56,7 +56,7 @@ The shop **Library** is **service manuals + parts manuals + diagrams**. Use OEM 
 
 | Source | What it is |
 |--------|------------|
-| **Drive — Manuals** | [Google Drive folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) (`1-1QqJQh4UojQEERawwpfEjKYOor2VMuR`) — brand folders **EZGO**, **Club Car**, **Yamaha**, **Other**, **Evolution**, **Tracker**, **Tomberlin** |
+| **Drive — Manuals** | [Google Drive folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) (`1-1QqJQh4UojQEERawwpfEjKYOor2VMuR`) — brand folders **EZGO**, **Club Car**, **Yamaha**, **Other**, **Evolution**, **Tracker**, **Tomberlin**, **GEM** |
 | **Redacted Brain catalog** | [`library_catalog.md`](library_catalog.md) — QC-passed titles, Drive ids, sources, wiring/fault flags. Not a substitute for the OEM PDF. |
 | **NGC Manuals board** | Shop manuals board (same brand split). Use it with Drive; do not treat this brain as a substitute for the OEM PDF. |
 | **Local catalog snapshot** | `/workspace/ngc-manuals/` — refresh when Drive Manuals change |
