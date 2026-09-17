@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T17:37:39.344936+00:00",
+  "generated_at": "2026-09-17T17:40:25.860531+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,30 +12,67 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-09-17T17:37:39.335897+00:00",
-    "jobs_synced_at": null,
-    "has_live_data": false,
+    "generated_at": "2026-09-17T17:40:25.835760+00:00",
+    "jobs_synced_at": "2026-09-17T17:40:21.173256+00:00",
+    "has_live_data": true,
     "metrics": {
-      "in_progress": 0,
-      "scheduled": 0,
-      "needs_scheduling": 0,
-      "active_pipeline": 0,
+      "in_progress": 7,
+      "scheduled": 23,
+      "needs_scheduling": 10,
+      "active_pipeline": 40,
       "wip_target": null,
       "wip_over": 0,
-      "stale_15_plus": 0,
-      "lithium_at_risk": 0,
+      "stale_15_plus": 3,
+      "lithium_at_risk": 2,
       "deposit_alerts": 0
     },
     "alerts": {
-      "lithium_at_risk": [],
-      "stale_wip": []
+      "lithium_at_risk": [
+        {
+          "invoice": "17248",
+          "description": "48V Professional Lithium Battery Conversion Kit Installed",
+          "days": 136,
+          "lithium": true,
+          "status": "in progress"
+        },
+        {
+          "invoice": "173127",
+          "description": "3.0-NGC Lithium Conversion, 36v 105ah",
+          "days": 9,
+          "lithium": true,
+          "status": "in progress"
+        }
+      ],
+      "stale_wip": [
+        {
+          "invoice": "17248",
+          "description": "48V Professional Lithium Battery Conversion Kit Installed",
+          "days": 136,
+          "lithium": true,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17260",
+          "description": "Accessories - 1.0-Seat belt kit installation",
+          "days": 134,
+          "lithium": false,
+          "status": "in progress"
+        },
+        {
+          "invoice": "17109-2",
+          "description": "Brakes - 1.0-Brake Inspection & Adjustment",
+          "days": 113,
+          "lithium": false,
+          "status": "in progress"
+        }
+      ]
     },
     "sync": {
-      "synced_at": "2026-09-16T17:39:36.123343+00:00",
+      "synced_at": "2026-09-17T17:40:25.598387+00:00",
       "pricebook": {
         "exists": true,
         "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-        "modified": "2026-09-16T17:39:16.077297+00:00",
+        "modified": "2026-09-17T17:40:04.091898+00:00",
         "total_items": 282,
         "lithium_professional_skus": [
           {
@@ -137,7 +174,7 @@
       "qbo_pl": {
         "exists": true,
         "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-        "modified": "2026-09-16T17:39:16.078764+00:00",
+        "modified": "2026-09-17T17:40:04.093220+00:00",
         "period_note": "See file header for date range",
         "income_highlights": {
           "LFP Conversions Only": 94940.25,
@@ -166,14 +203,14 @@
           ],
           "refresh_token_rotated": true
         },
-        "modified": "2026-09-16T17:39:16.077741+00:00",
+        "modified": "2026-09-17T17:40:04.091898+00:00",
         "account_count": 148,
         "item_count": 521
       },
       "hcp_api": {
         "exists": true,
         "manifest": {
-          "synced_at": "2026-09-16T17:39:35.291382+00:00",
+          "synced_at": "2026-09-17T17:40:24.987790+00:00",
           "source": "housecall_pro_api",
           "paths": [
             "api_sync_manifest.json",
@@ -184,15 +221,15 @@
             "pricebook_services.json"
           ]
         },
-        "modified": "2026-09-16T17:39:35.291791+00:00",
+        "modified": "2026-09-17T17:40:24.988148+00:00",
         "job_count": 500,
         "jobs_by_status": {
-          "needs scheduling": 15,
+          "pro canceled": 35,
+          "needs scheduling": 10,
           "user canceled": 40,
+          "in progress": 7,
           "scheduled": 23,
-          "in progress": 6,
-          "pro canceled": 34,
-          "complete unrated": 285,
+          "complete unrated": 288,
           "complete rated": 97
         },
         "pricebook_service_count": 283,
@@ -209,43 +246,43 @@
       "qbo_files": [
         {
           "name": "api_sync_manifest.json",
-          "modified": "2026-09-16T17:39:16.077741+00:00"
+          "modified": "2026-09-17T17:40:04.091898+00:00"
         },
         {
           "name": "balance_sheet.json",
-          "modified": "2026-09-16T17:39:16.078764+00:00"
+          "modified": "2026-09-17T17:40:04.093220+00:00"
         },
         {
           "name": "balance_sheet_current.xlsx",
-          "modified": "2026-09-16T17:39:16.078764+00:00"
+          "modified": "2026-09-17T17:40:04.093220+00:00"
         },
         {
           "name": "chart_of_accounts.json",
-          "modified": "2026-09-16T17:39:16.078764+00:00"
+          "modified": "2026-09-17T17:40:04.093220+00:00"
         },
         {
           "name": "chart_of_accounts.xlsx",
-          "modified": "2026-09-16T17:39:16.078764+00:00"
+          "modified": "2026-09-17T17:40:04.093220+00:00"
         },
         {
           "name": "company_test.json",
-          "modified": "2026-09-16T17:39:36.087991+00:00"
+          "modified": "2026-09-17T17:40:25.571844+00:00"
         },
         {
           "name": "products_and_services.xlsx",
-          "modified": "2026-09-16T17:39:16.078764+00:00"
+          "modified": "2026-09-17T17:40:04.093220+00:00"
         },
         {
           "name": "products_services.json",
-          "modified": "2026-09-16T17:39:16.078764+00:00"
+          "modified": "2026-09-17T17:40:04.093220+00:00"
         },
         {
           "name": "profit_and_loss_last_12_months.json",
-          "modified": "2026-09-16T17:39:16.078764+00:00"
+          "modified": "2026-09-17T17:40:04.093220+00:00"
         },
         {
           "name": "profit_and_loss_last_12_months.xlsx",
-          "modified": "2026-09-16T17:39:16.078764+00:00"
+          "modified": "2026-09-17T17:40:04.093220+00:00"
         }
       ],
       "alerts": [
@@ -617,7 +654,7 @@
           "title": "Operations Dashboard",
           "desc": "WIP, lithium lane, deposit alerts, sync status",
           "href": "dashboard.html",
-          "badge": "Sync needed",
+          "badge": "7 in shop",
           "primary": true
         },
         {
