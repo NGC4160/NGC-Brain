@@ -86,6 +86,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | **Manuals / Evolution** | [Drive folder](https://drive.google.com/drive/folders/1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB) (`1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB`) |
 | **Manuals / Tracker** | [Drive folder](https://drive.google.com/drive/folders/1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn) (`1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn`) |
 | **Manuals / Tomberlin** | [Drive folder](https://drive.google.com/drive/folders/1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5) (`1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5`) |
+| **Manuals / GEM** | [Drive folder](https://drive.google.com/drive/folders/13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy) (`13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy`) |
 
 ## Bots & Chief
 
