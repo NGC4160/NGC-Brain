@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-16  
+**Last verified:** 2026-09-17  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -85,6 +85,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | **Manuals** | [Drive folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) (`1-1QqJQh4UojQEERawwpfEjKYOor2VMuR`) |
 | **Manuals / Evolution** | [Drive folder](https://drive.google.com/drive/folders/1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB) (`1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB`) |
 | **Manuals / Tracker** | [Drive folder](https://drive.google.com/drive/folders/1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn) (`1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn`) |
+| **Manuals / Tomberlin** | [Drive folder](https://drive.google.com/drive/folders/1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5) (`1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5`) |
 
 ## Bots & Chief
 
