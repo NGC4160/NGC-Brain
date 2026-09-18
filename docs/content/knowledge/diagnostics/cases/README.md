@@ -13,7 +13,7 @@ Dated write-ups for real NGC diagnostic jobs. This folder starts with a template
 5. If you saved a capture, put it in [`../known-good/`](../known-good/README.md) or [`../known-faulted/`](../known-faulted/README.md) and link the path from the case. Judge traces on **voltage, timing, shape, stability, frequency, load response, and signal relationships**.
 6. Re-test after the repair. A cart that runs is not verification by itself — same tests, then a road test when safe. On lithium conversions, running still does **not** mean the conversion is complete (inspect, test, and tune).
 
-OEM pinouts and procedures: Drive Manuals (EZGO / Club Car / Yamaha / Other / Evolution / Tracker), the redacted [`../library_catalog.md`](../library_catalog.md), and the **NGC Manuals board** — see [`../README.md`](../README.md).
+OEM pinouts and procedures: Drive Manuals (EZGO / Club Car / Yamaha / Other / Evolution / Tracker / Tomberlin / GEM), the redacted [`../library_catalog.md`](../library_catalog.md), and the **NGC Manuals board** — see [`../README.md`](../README.md).
 
 ## Privacy
 

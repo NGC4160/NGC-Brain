@@ -1,6 +1,6 @@
 # Customers & Marketing
 
-**Last verified:** 2026-09-14
+**Last verified:** 2026-09-17
 
 ## Service area
 
@@ -26,7 +26,13 @@ Website / Meta / GBP copy that still says **free pickup within 40 miles** is **s
 | **Residential** | Active — primary customer base |
 | **Commercial** | Active — referenced in brand messaging |
 | **HOA / communities** | Outreach tracked (HOA sheet in Drive); confirm active accounts with Ryan |
-| **Fleet maintenance** | Program documented in Drive; confirm active contracts |
+| **Fleet maintenance** | Active offer: **$60/cart inspection** credited toward same-cart work. Confirm contracts with Ryan. Rule: [shop_services.md](../03_services/shop_services.md#fleet-inspections-standing) |
+
+### Fleet winter push (standing)
+
+**Confirmed 2026-09-17 by Ryan White via Chief.** Plan outreach ahead of winter for fleet maintenance accounts — HOAs, clubs, property managers, and other multi-cart customers. The push window is **December–February**.
+
+Quote only the live inspection rule: typically **$60 per cart**, credited toward any repair or other work on **that same cart**. Do **not** invent fleet package prices, retainers, or seasonal discounts.
 
 ## How customers find NGC
 

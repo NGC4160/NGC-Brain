@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-09-14  
+**Last verified:** 2026-09-17  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -32,6 +32,16 @@ For jobs that **do not require full diagnosis** (e.g. broken suspension, noises)
 | Deluxe Electric PM Service | $179 |
 | Deluxe Gas PM Service | $199 |
 | Fleet Inspection (0.5 hr) | $60 |
+
+### Fleet inspections (standing)
+
+**Confirmed 2026-09-17 by Ryan White via Chief.** Fleet inspections are typically **$60 per cart**. That **$60 is credited toward any repair or other work done on that same cart**.
+
+Do **not** invent other fleet package prices, retainers, or seasonal discounts beyond this $60 inspection-credit rule.
+
+**Winter offseason push:** December–February for fleet maintenance accounts (HOAs, clubs, property managers, multi-cart customers). Outreach is planned ahead of winter. Do not invent winter package rates.
+
+In-shop only — no mobile / on-site fleet service. Marketing context: [market.md](../07_customers_marketing/market.md).
 
 ## Lead-acid battery replacement
 

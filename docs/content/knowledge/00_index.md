@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-16  
+**Last verified:** 2026-09-18  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -27,7 +27,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [01_company/profile.md](01_company/profile.md) | Identity, contact, location, positioning, legal |
 | [02_products/lithium_conversions.md](02_products/lithium_conversions.md) | Professional lithium kits, short kit list, warranty, deposits |
 | [02_products/lithium_sales_guide.md](02_products/lithium_sales_guide.md) | **Office quoting** — Essential / Ready-to-Run / Accessory-Ready (internal; not a customer handout) |
-| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery (**NGC-OPS-FIN-2026-09** live), deposits, **credit card surcharge on every estimate**, **estimate GP check on NGC P&D** |
+| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery (**NGC-OPS-FIN-2026-09** live), deposits, **credit card surcharge on every estimate**, **estimate GP check on NGC P&D**, **fleet inspection $60 credited toward same-cart work** |
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
 | [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP pickup/drop-off queue**, **HCP deposit pipeline**, **NGC-QC-1** pre-delivery QC, **NGC-IR-1** incident form, pointer to driver SOP |
 | [04_operations/driver_sop.md](04_operations/driver_sop.md) | **NGC-OPS-DRIVER-09032026R0** — Driver / Shop Technician Assistant summary + Drive Procedures pointer (full PDF is the official SOP) |
@@ -35,6 +35,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA** — live board is a generated snapshot, not policy |
 | [04_operations/shop_whiteboard_layout.md](04_operations/shop_whiteboard_layout.md) | **Physical whiteboard — columns, cards, colors, daily use** |
 | [diagnostics/README.md](diagnostics/README.md) | **Diagnostics library** — Diagnostics bot + techs file cases (vehicle, symptoms, tests, waveforms, conflicting evidence, verification); known-good / known-faulted scaffold; TEST BEFORE REPLACEMENT |
+| [diagnostics/lfp_recovery.md](diagnostics/lfp_recovery.md) | **LFP pack recovery** — suitcase charger only just below 2.500 V with a live battery management system; not recoverable below 1.50 V with the battery management system offline; 1.00–1.50 V record and test; below 1.00 V not recoverable in the field |
 | [diagnostics/library_catalog.md](diagnostics/library_catalog.md) | **Library catalog (redacted)** — QC-passed Drive manuals (titles, ids, sources, wiring/fault flags). No customer names. No HCP job numbers. |
 | [05_team/roles.md](05_team/roles.md) | Human roster + **live Grok Bot roster** (Chief is COS) |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
@@ -42,7 +43,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, Drive catalog + connector, CartScope, future DMS |
 | [06_systems/cartscope.md](06_systems/cartscope.md) | **CartScope** — tech-facing diagnostic checklist web app (live: cart-scope.vercel.app; repo NGC4160/CartScope) |
 | [06_systems/garagebuddy.md](06_systems/garagebuddy.md) | **GarageBuddy** — **future/eval** DMS sandbox, not current shop process |
-| [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels |
+| [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels, **fleet winter push Dec–Feb** (no invented package prices) |
 | [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, meter/speedometer, SMS templates (no PII) |
 | [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |
 | [08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) | **NGC-OPS-FIN-2026-09** — **APPROVED**. Internal **$160** (2026-09-13). Customer bands **amended 2026-09-14**: Northshore 0–30 free / (30,40] $129 / (40,50] $149 / (50,60] $179 / >60 no service; Southshore **$179** flat |
@@ -85,6 +86,8 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | **Manuals** | [Drive folder](https://drive.google.com/drive/folders/1-1QqJQh4UojQEERawwpfEjKYOor2VMuR) (`1-1QqJQh4UojQEERawwpfEjKYOor2VMuR`) |
 | **Manuals / Evolution** | [Drive folder](https://drive.google.com/drive/folders/1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB) (`1nGnADJf7gQVVippGkwoLTRPmNn0HfXXB`) |
 | **Manuals / Tracker** | [Drive folder](https://drive.google.com/drive/folders/1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn) (`1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn`) |
+| **Manuals / Tomberlin** | [Drive folder](https://drive.google.com/drive/folders/1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5) (`1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5`) |
+| **Manuals / GEM** | [Drive folder](https://drive.google.com/drive/folders/13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy) (`13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy`) |
 
 ## Bots & Chief
 
