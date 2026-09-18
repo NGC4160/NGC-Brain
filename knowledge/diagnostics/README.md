@@ -1,6 +1,6 @@
 # Diagnostics library
 
-**Last verified:** 2026-09-17  
+**Last verified:** 2026-09-18  
 **Owner:** **Diagnostics** bot (reports to Chief). Techs file evidence here. Shop still owns Housecall Pro jobs.
 
 This folder is the shop’s **evidence library** for Neighborhood Golf Carts diagnostics. It starts empty on purpose. Do **not** invent case data, waveforms, customer PII, secrets, or “typical” traces to fill it. **CartScope** is the tech-facing checklist UI (not this library, not this bot) — [`../06_systems/cartscope.md`](../06_systems/cartscope.md).
@@ -20,6 +20,8 @@ Fee and billing rules for diagnostic work stay in [`../03_services/shop_services
 A cart that **runs is not a finished lithium conversion.** Inspect, test, and tune still have to happen. Do not close the conversion on “it moved.”
 
 **Customer warranty language stays 5-year full replacement on battery + BMS only.** Do not claim UL listing, 10-year coverage, or any extra warranty in case notes, bot replies, or customer copy. Facts: [`../02_products/lithium_conversions.md`](../02_products/lithium_conversions.md) · [`../07_customers_marketing/customer_reply_standard.md`](../07_customers_marketing/customer_reply_standard.md).
+
+**LFP pack recovery (Ryan yes 2026-09-18 via Chief):** [`lfp_recovery.md`](lfp_recovery.md). Do not invent other cell voltages.
 
 ## How Diagnostics bot + techs file a case
 
@@ -45,6 +47,7 @@ Chief routes diagnostic-library work to **Diagnostics**. Diagnostics brings the 
 | [`cases/`](cases/README.md) | Dated case write-ups (template only until real jobs are filed) |
 | [`service_manuals_sop.md`](service_manuals_sop.md) | One-page SOP for the shop **Library** (service + parts manuals + diagrams): search → Ryan yes via Chief → add to Drive Manuals |
 | [`library_catalog.md`](library_catalog.md) | **Redacted Library catalog** — QC-passed Drive manuals (titles, ids, sources, wiring/fault flags). No customer names. No HCP job numbers. |
+| [`lfp_recovery.md`](lfp_recovery.md) | **LFP pack recovery** — Vatrer suitcase charger and cell-voltage recoverability (shop procedure) |
 
 Each component subfolder has a one-paragraph README. Do not drop unlabeled screenshots into the folder root.
 

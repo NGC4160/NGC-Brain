@@ -114,6 +114,7 @@ Core charge applies on conversion: **$20 per 6V or 8V battery**, **$30 per 12V b
 
 - Diagnostic workflow: `NGC Document Repository /Procedures/NGC_Technician_Standard_Diagnosing_Test_Process_and_Procedure.docx`
 - Care guide: `Lithium Battery Conversion Care Guide.docx`
+- **LFP pack recovery (shop procedure, 2026-09-18):** [lfp_recovery.md](../diagnostics/lfp_recovery.md) — Vatrer suitcase charger limits and cell-voltage recoverability. Do not invent other voltages or warranty claims.
 
 ## Discontinued — do not sell
 
