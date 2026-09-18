@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T00:21:36.885418+00:00",
+  "generated_at": "2026-09-18T02:15:11.210534+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-09-18T00:21:36.873596+00:00",
+    "generated_at": "2026-09-18T02:15:11.185051+00:00",
     "jobs_synced_at": null,
     "has_live_data": false,
     "metrics": {
@@ -442,9 +442,9 @@
     {
       "priority": "P3",
       "name": "Fleet maintenance program \u2014 package for HOAs/commercial",
-      "why": "Doc exists in Drive",
+      "why": "**$60/cart inspection credited toward same-cart work** logged 2026-09-17. Winter push Dec\u2013Feb. Do not invent other package prices. Fuller program still open.",
       "owner": "Ryan",
-      "status": "Open",
+      "status": "Open \u2014 inspection credit rule live",
       "category": "Revenue & growth"
     },
     {

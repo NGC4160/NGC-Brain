@@ -1,6 +1,6 @@
 # Improvement & Growth Backlog
 
-**Last reviewed:** 2026-09-14  
+**Last reviewed:** 2026-09-17  
 Ask the AI: **"What's the highest-impact item on the backlog this week?"**
 
 Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
@@ -31,7 +31,7 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P2 | HOA outreach — revive or kill the tracker | Sheet in Drive, status unknown | Ryan | Open |
 | P2 | Standardize "Professional Kit" quote template for Jesse | Faster, consistent quotes | Jesse | **Office quoting logged 2026-08-30** — Essential / Ready-to-Run / Accessory-Ready in `lithium_sales_guide.md`; kit/warranty SMS in `customer_reply_standard.md`; still align HCP kit descriptions and estimate checkboxes |
 | P3 | Accessory upsell script (charger port, reducer, fuse box) | Built into lithium descriptions, not sold consistently | Ryan | **Superseded 2026-08-30** — office quoting is Essential / Ready-to-Run / Accessory-Ready (`lithium_sales_guide.md`). Do not default-pitch the $599 convenience package (all three extras ≠ Ready-to-Run). HCP Professional Kit copy still lists extras as kit “if applicable” — Jesse should strip that from HCP descriptions |
-| P3 | Fleet maintenance program — package for HOAs/commercial | Doc exists in Drive | Ryan | Open |
+| P3 | Fleet maintenance program — package for HOAs/commercial | **$60/cart inspection credited toward same-cart work** logged 2026-09-17. Winter push Dec–Feb. Do not invent other package prices. Fuller program still open. | Ryan | Open — inspection credit rule live |
 | P3 | Prep cart sales playbook (bill of sale, deposits) for future launch | Strategic defer, but prep now | Ryan | Open |
 | P3 | Rental insurance RFP when rentals are greenlit — use rating catalog + 3 specialty quotes | Know CAT/GL cost before launch; 70433 wind/flood is material | Ryan | Catalog drafted — `knowledge/11_future_lines/` |
 
