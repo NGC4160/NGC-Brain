@@ -32,15 +32,19 @@ This catalog lists **only** the manuals below. Other PDFs may exist in Drive Man
 | Title (Drive filename) | Drive id | Folder | Pages | Source | Wiring | Fault testing | QC |
 |------------------------|----------|--------|------:|--------|--------|---------------|-----|
 | HDK DEL3022G Operation and Maintenance Manual.pdf | `1zNYcdPmZsc4kGvpdIWwXDAhMNQEKnJdM` | Manuals/Evolution | 51 | Archive.org manualzilla-id-6016637 | Weak/absent in OCR | Electrical TS tables YES | PASS — O&M / mid-depth service-level (Curtis 1243/1268 era); not Big-3 dealer SM |
-| Curtis Model 1268 Controller Manual.pdf | `1oBXBSYMDDVqNDaOaWkUqRXTlyS2xDgIg` | Manuals/Evolution | 66 | https://cdn.curtisinstruments.com/products/manuals/1268_manual_en.pdf | — | — | PASS — OEM controller manual (not vehicle SM) |
+| Curtis Model 1268 Controller Manual.pdf | `1oBXBSYMDDVqNDaOaWkUqRXTlyS2xDgIg` | Manuals/Evolution | 66 | https://cdn.curtisinstruments.com/products/manuals/1268_manual_en.pdf | YES (pp 14–19; shop also filed extract) | — | PASS — OEM controller manual (not vehicle SM) |
 | 2020_Service_Manual_TRACKER_EViS_72V_10002660-B.pdf | `1E1CRawt8S3FFpkLEezD-38i1tqdU8z3l` | Manuals/Tracker | 154 | Already on Drive | YES | YES | PASS — full SM |
 | 2021 Tracker EViS Repair and Service Manual 10002660-C.pdf | `1qZB3_B3yjBDYM1jxALJ2VvbHcKTgT1jT` | Manuals/Tracker | 154 | New on Drive 2026-09-16 | YES | YES | PASS — full SM |
 | Tomberlin E-Merge Service Manual 2010-2011.pdf | `1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56` | Manuals/Tomberlin | 150 | EVTS free digital ($0) — Tomberlin Emerge Manual Service 2010 through 2011 | YES (Ch9 control/lighting circuit; wiring diagram refs p9-7) | YES (Ch10 Check Procedures + Part 2; Ch11 battery troubleshooting) | PASS — full dealer maintenance/service manual (DC E-MERGE through 2011) |
 | Tomberlin E-Merge Wiring Diagram Curtis 1268 2009-2014.pdf | `1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA` | Manuals/Tomberlin | 1 | EVTS free digital ($0) — Wiring Diagram 2009–2014 Curtis 1268 Tomberlin Emerge | YES | — | PASS — 1-page wiring schematic (J1 pinout, motor/controller, 48V pack, DC-DC, lighting) |
 | 2013 GEM e2 e4 e6 eS eL eLXD Service Manual PN9924112.pdf | `1nW8SQo6ngjvcP43MCjL0LkzQx6qH5yus` | Manuals/GEM | ~204 | free NEV Accessories mirror (PDF title 2013 GEM Service Manual); Ryan yes 2026-09-17 via Chief | YES (electrical chapter; shop also filed extract) | — | PASS — technician service manual (2013 GEM e2, e4, e6, eS, eL, eLXD · PN 9924112) |
 | 2013 GEM e-series Wiring Diagrams and Harness Drawings from SM PN9924112.pdf | `19CCDE46ntrcN9czc-tkaACxelzMTTt6d` | Manuals/GEM | — | extract from SM PN9924112 electrical chapter; Ryan yes 2026-09-17 via Chief | YES | — | PASS — wiring diagrams / harness drawings extract; not a separate OEM wiring-only pub |
+| Club Car Precedent Wiring Diagrams from 06-07 SM.pdf | `1jTTkkA3GXOIcXL-0_zNb0YXhi8oehK-5` | Manuals/Club Car | — | extract from 06-07 Club Car Precedent Service Manual (PDF pp 93–98); Ryan yes 2026-09-17 via Chief | YES | — | PASS — wiring diagrams extract; not a separate OEM wiring-only pub |
+| EZGO RXV Wiring Diagrams from Service Manual.pdf | `18uco8AcGLGSGHzxD_DxKJkbx5ATd1wgG` | Manuals/EZGO | — | extract from EZGO RXV Service Manual (PDF pp 123–126 / K-11–K-14); Ryan yes 2026-09-17 via Chief | YES | — | PASS — wiring diagrams extract; not a separate OEM wiring-only pub |
+| Curtis 1268 Wiring Diagrams from Controller Manual.pdf | `1YV-v-QHWvp_3V2AeKzS9ADHiVBL27evV` | Manuals/Evolution | — | controller wiring extract from Curtis Model 1268 Controller Manual (PDF pp 14–19); Ryan yes 2026-09-17 via Chief | YES | — | PASS — controller wiring extract; not a separate OEM wiring-only pub |
+| Yamaha YDRA YDRE Wiring Diagrams from Service Manual.pdf | `1muU6BIlhGr9_WDklRtz6J-oces5Ciych` | Manuals/Yamaha | — | extract from YDRA/YDRE SM part 2 (not Drive2); Ryan yes 2026-09-17 via Chief | YES | — | PASS — wiring diagrams extract; not a separate OEM wiring-only pub |
 
-Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwXDAhMNQEKnJdM/view) · [Curtis 1268](https://drive.google.com/file/d/1oBXBSYMDDVqNDaOaWkUqRXTlyS2xDgIg/view) · [Tracker EViS 2020 10002660-B](https://drive.google.com/file/d/1E1CRawt8S3FFpkLEezD-38i1tqdU8z3l/view) · [Tracker EViS 2021 10002660-C](https://drive.google.com/file/d/1qZB3_B3yjBDYM1jxALJ2VvbHcKTgT1jT/view) · [Tomberlin E-Merge SM 2010-2011](https://drive.google.com/file/d/1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56/view) · [Tomberlin E-Merge Curtis 1268 wiring 2009-2014](https://drive.google.com/file/d/1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA/view) · [2013 GEM e-series SM PN9924112](https://drive.google.com/file/d/1nW8SQo6ngjvcP43MCjL0LkzQx6qH5yus/view) · [2013 GEM e-series wiring/harness extract](https://drive.google.com/file/d/19CCDE46ntrcN9czc-tkaACxelzMTTt6d/view)
+Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwXDAhMNQEKnJdM/view) · [Curtis 1268](https://drive.google.com/file/d/1oBXBSYMDDVqNDaOaWkUqRXTlyS2xDgIg/view) · [Tracker EViS 2020 10002660-B](https://drive.google.com/file/d/1E1CRawt8S3FFpkLEezD-38i1tqdU8z3l/view) · [Tracker EViS 2021 10002660-C](https://drive.google.com/file/d/1qZB3_B3yjBDYM1jxALJ2VvbHcKTgT1jT/view) · [Tomberlin E-Merge SM 2010-2011](https://drive.google.com/file/d/1tniDhnxXaXoTQt1GndG_p8L2B2oeXG56/view) · [Tomberlin E-Merge Curtis 1268 wiring 2009-2014](https://drive.google.com/file/d/1yJZ117F23wRIgduKVxKQEpXB3WQxwgtA/view) · [2013 GEM e-series SM PN9924112](https://drive.google.com/file/d/1nW8SQo6ngjvcP43MCjL0LkzQx6qH5yus/view) · [2013 GEM e-series wiring/harness extract](https://drive.google.com/file/d/19CCDE46ntrcN9czc-tkaACxelzMTTt6d/view) · [Club Car Precedent 06-07 wiring extract](https://drive.google.com/file/d/1jTTkkA3GXOIcXL-0_zNb0YXhi8oehK-5/view) · [EZGO RXV wiring extract](https://drive.google.com/file/d/18uco8AcGLGSGHzxD_DxKJkbx5ATd1wgG/view) · [Curtis 1268 wiring extract](https://drive.google.com/file/d/1YV-v-QHWvp_3V2AeKzS9ADHiVBL27evV/view) · [Yamaha YDRA/YDRE wiring extract](https://drive.google.com/file/d/1muU6BIlhGr9_WDklRtz6J-oces5Ciych/view)
 
 ### Evolution
 
@@ -60,7 +64,18 @@ Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwX
 - Source: https://cdn.curtisinstruments.com/products/manuals/1268_manual_en.pdf
 - Scope: Library only; supporting OEM controller doc
 - QC: PASS OEM controller manual (not vehicle SM)
-- Wiring / fault-testing flags: not stated — do not invent
+- Wiring: YES (pp 14–19; shop also filed extract)
+- Fault-testing flag: not stated — do not invent
+
+**Curtis 1268 Wiring Diagrams from Controller Manual.pdf** — [view](https://drive.google.com/file/d/1YV-v-QHWvp_3V2AeKzS9ADHiVBL27evV/view) (`1YV-v-QHWvp_3V2AeKzS9ADHiVBL27evV`)
+
+- Folder: Manuals/Evolution
+- Type: controller wiring (extract from Curtis Model 1268 Controller Manual)
+- Coverage: Curtis 1268 controller wiring · not a separate OEM wiring-only pub
+- Source: extract from Curtis Model 1268 Controller Manual (PDF pp 14–19); Ryan yes 2026-09-17 via Chief
+- Wiring: YES
+- Fault-testing flag: not stated — do not invent
+- QC: PASS controller wiring extract from OEM controller manual — not a separate OEM wiring-only publication
 
 ### Tracker
 
@@ -129,6 +144,48 @@ Open links: [HDK DEL3022G](https://drive.google.com/file/d/1zNYcdPmZsc4kGvpdIWwX
 - QC: PASS wiring/harness extract from SM electrical chapter — not a separate OEM wiring-only publication
 
 Also on Drive (not newly catalogued this pass): **GEM-Service-Manual-2000-2004-e825_.pdf** (`1mHUzdJlb823L0rZSMBIE6byjdr_vdTZT`) remains on file in Manuals/GEM for pre-e6 carts.
+
+### Club Car
+
+**Club Car Precedent Wiring Diagrams from 06-07 SM.pdf** — [view](https://drive.google.com/file/d/1jTTkkA3GXOIcXL-0_zNb0YXhi8oehK-5/view) (`1jTTkkA3GXOIcXL-0_zNb0YXhi8oehK-5`)
+
+- Folder: Manuals/Club Car
+- Type: wiring diagrams (extract from 06-07 Club Car Precedent Service Manual)
+- Coverage: 2006–2007 Club Car Precedent · not a separate OEM wiring-only pub
+- Source: extract from 06-07 Club Car Precedent Service Manual (PDF pp 93–98); Ryan yes 2026-09-17 via Chief
+- Wiring: YES
+- Fault-testing flag: not stated — do not invent
+- QC: PASS wiring diagrams extract from SM — not a separate OEM wiring-only publication
+
+Also on Drive (not newly catalogued this pass): **06-07 Club Car Precedent Service Manual.pdf** (`1JWBHviLLBD9tvbyZ6LgOiigZg3GpKjGb`) remains on file in Manuals/Club Car as the parent SM.
+
+### EZGO
+
+**EZGO RXV Wiring Diagrams from Service Manual.pdf** — [view](https://drive.google.com/file/d/18uco8AcGLGSGHzxD_DxKJkbx5ATd1wgG/view) (`18uco8AcGLGSGHzxD_DxKJkbx5ATd1wgG`)
+
+- Folder: Manuals/EZGO
+- Type: wiring diagrams (extract from EZGO RXV Service Manual)
+- Coverage: EZGO RXV · not a separate OEM wiring-only pub
+- Source: extract from EZGO RXV Service Manual (PDF pp 123–126 / K-11–K-14); Ryan yes 2026-09-17 via Chief
+- Wiring: YES
+- Fault-testing flag: not stated — do not invent
+- QC: PASS wiring diagrams extract from SM — not a separate OEM wiring-only publication
+
+Also on Drive (not newly catalogued this pass): **EZGO RXV Service Manual.pdf** (`1uv5A36tc-c-ixijU1gVF4hIj0lGfUGlF`) remains on file in Manuals/EZGO as the parent SM.
+
+### Yamaha
+
+**Yamaha YDRA YDRE Wiring Diagrams from Service Manual.pdf** — [view](https://drive.google.com/file/d/1muU6BIlhGr9_WDklRtz6J-oces5Ciych/view) (`1muU6BIlhGr9_WDklRtz6J-oces5Ciych`)
+
+- Folder: Manuals/Yamaha
+- Type: wiring diagrams (extract from YDRA/YDRE SM part 2)
+- Coverage: Yamaha YDRA / YDRE · not a separate OEM wiring-only pub
+- Source: extract from YDRA/YDRE SM part 2 (`Yamaha YDRA/YDRE service manual (2:2).pdf`) — not Drive2; Ryan yes 2026-09-17 via Chief
+- Wiring: YES
+- Fault-testing flag: not stated — do not invent
+- QC: PASS wiring diagrams extract from SM part 2 — not a separate OEM wiring-only publication
+
+Also on Drive (not newly catalogued this pass): **Yamaha YDRA/YDRE service manual (2:2).pdf** (`1iRbc1w19niJdRG8Q61deg8QuqthtueFH`) remains on file in Manuals/Yamaha as the parent SM part 2.
 
 ## Related
 

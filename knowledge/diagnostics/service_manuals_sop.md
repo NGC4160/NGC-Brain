@@ -39,6 +39,10 @@ Other bots do **not** add Library items on their own. Diagnostics may draft the 
 3. Refresh `/workspace/ngc-manuals/` when the Drive Manuals set changes.
 4. Link it for CartScope and Diagnostics on future jobs (wire pictures, checklists, case notes — no customer private data in this brain).
 
+**Wiring extracts (standing, Ryan yes 2026-09-17 via Chief):** When no separate OEM wiring-only PDF exists, extract the wiring diagrams from the service manual (or OEM controller manual) and file that extract in the brand Drive folder. Catalog it as an extract — not a separate OEM wiring-only publication.
+
+Do not invent pinouts from the extract. Use the OEM PDF.
+
 ## 4. Hard rule — no auto-publish
 
 Do **not** auto-publish unverified web PDFs as shop standard operating procedure. A downloaded file is a **candidate** until Ryan approves it into Drive Manuals (the Library).
