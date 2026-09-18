@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-17  
+**Last verified:** 2026-09-18  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -35,6 +35,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA** — live board is a generated snapshot, not policy |
 | [04_operations/shop_whiteboard_layout.md](04_operations/shop_whiteboard_layout.md) | **Physical whiteboard — columns, cards, colors, daily use** |
 | [diagnostics/README.md](diagnostics/README.md) | **Diagnostics library** — Diagnostics bot + techs file cases (vehicle, symptoms, tests, waveforms, conflicting evidence, verification); known-good / known-faulted scaffold; TEST BEFORE REPLACEMENT |
+| [diagnostics/lfp_recovery.md](diagnostics/lfp_recovery.md) | **LFP pack recovery** — suitcase charger only just below 2.500 V with a live battery management system; not recoverable below 1.50 V with the battery management system offline; 1.00–1.50 V record and test; below 1.00 V not recoverable in the field |
 | [diagnostics/library_catalog.md](diagnostics/library_catalog.md) | **Library catalog (redacted)** — QC-passed Drive manuals (titles, ids, sources, wiring/fault flags). No customer names. No HCP job numbers. |
 | [05_team/roles.md](05_team/roles.md) | Human roster + **live Grok Bot roster** (Chief is COS) |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
