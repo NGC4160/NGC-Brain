@@ -1,6 +1,6 @@
 # Library — service manuals, parts manuals, and diagrams
 
-**Last verified:** 2026-09-17  
+**Last verified:** 2026-09-18  
 **Owner:** Diagnostics (reports to Chief). Ryan approves every new item before it enters the Library.
 
 One page. The **Library** is Neighborhood Golf Carts’ collection of **service manuals + parts manuals + diagrams**. This is how we find one while diagnosing, get Ryan’s yes, and file it so the next job can use it.
@@ -41,7 +41,7 @@ Other bots do **not** add Library items on their own. Diagnostics may draft the 
 
 **Wiring extracts (standing, Ryan yes 2026-09-17 via Chief):** When no separate OEM wiring-only PDF exists, extract the wiring diagrams from the service manual (or OEM controller manual) and file that extract in the brand Drive folder. Catalog it as an extract — not a separate OEM wiring-only publication.
 
-Do not invent pinouts from the extract. Use the OEM PDF.
+Do not invent pinouts from the extract. Use the OEM PDF. An extract covers only the model on the parent SM. **YDRA/YDRE wiring does NOT cover Yamaha Drive2.**
 
 ## 4. Hard rule — no auto-publish
 
