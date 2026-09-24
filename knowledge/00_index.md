@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-18  
+**Last verified:** 2026-09-24  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
