@@ -1,72 +1,21 @@
 {
-  "generated_at": "2026-09-25T17:59:52.444251+00:00",
-  "jobs_synced_at": "2026-09-25T17:59:48.009512+00:00",
-  "has_live_data": true,
+  "generated_at": "2026-09-26T14:29:36.210706+00:00",
+  "jobs_synced_at": null,
+  "has_live_data": false,
   "metrics": {
-    "in_progress": 6,
-    "scheduled": 25,
-    "needs_scheduling": 8,
-    "active_pipeline": 39,
+    "in_progress": 0,
+    "scheduled": 0,
+    "needs_scheduling": 0,
+    "active_pipeline": 0,
     "wip_target": null,
     "wip_over": 0,
-    "stale_15_plus": 5,
-    "lithium_at_risk": 2,
+    "stale_15_plus": 0,
+    "lithium_at_risk": 0,
     "deposit_alerts": 0
   },
   "alerts": {
-    "lithium_at_risk": [
-      {
-        "invoice": "17248",
-        "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 144,
-        "lithium": true,
-        "status": "in progress"
-      },
-      {
-        "invoice": "173143",
-        "description": "3.0-NGC MINI Lithium Conversion, 48v 105ah",
-        "days": 4,
-        "lithium": true,
-        "status": "in progress"
-      }
-    ],
-    "stale_wip": [
-      {
-        "invoice": "17248",
-        "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 144,
-        "lithium": true,
-        "status": "in progress"
-      },
-      {
-        "invoice": "17260",
-        "description": "Accessories - 1.0-Seat belt kit installation",
-        "days": 142,
-        "lithium": false,
-        "status": "in progress"
-      },
-      {
-        "invoice": "17109-2",
-        "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-        "days": 121,
-        "lithium": false,
-        "status": "in progress"
-      },
-      {
-        "invoice": "17420",
-        "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-        "days": 46,
-        "lithium": false,
-        "status": "in progress"
-      },
-      {
-        "invoice": "17443",
-        "description": "General - ***SEE NOTES***",
-        "days": 36,
-        "lithium": false,
-        "status": "in progress"
-      }
-    ]
+    "lithium_at_risk": [],
+    "stale_wip": []
   },
   "sync": {
     "synced_at": "2026-09-25T17:59:52.185389+00:00",
