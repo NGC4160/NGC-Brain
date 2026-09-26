@@ -1,6 +1,6 @@
 # CartScope — Tech diagnostic checklist UI
 
-**Last verified:** 2026-09-07  
+**Last verified:** 2026-09-26  
 **Live shop / test URL:** https://cart-scope.vercel.app  
 **Source of truth (app code):** [NGC4160/CartScope](https://github.com/NGC4160/CartScope)
 
@@ -54,6 +54,10 @@ Also standing (do not invent other features):
 - **Final report:** plain language. Repair recommendation only after proof.
 - **PII split:** full case stays on the device. Auto brain copy redacts last name and job number. No GitHub secrets in the web app.
 - **Public repo:** do not commit customer last names, job numbers, or real case PII into CartScope git.
+
+## New-job manuals (2026-09-21)
+
+Every new Housecall Pro job also adds the matching service manual and wiring diagrams into CartScope. Full practice: [New-job manuals practice (Ryan, 2026-09-21)](../diagnostics/service_manuals_sop.md#new-job-manuals-practice-ryan-2026-09-21). CartScope is a public repo — **never add customer names or job numbers.**
 
 ## Do not store here
 
