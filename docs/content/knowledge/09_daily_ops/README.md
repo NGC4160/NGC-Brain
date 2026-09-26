@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-09-10  
+**Last verified:** 2026-09-26  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -79,7 +79,7 @@ Do **not** start specialist work first and hand off later. If no bot owns the jo
 
 **Lanes:** Shop owns Housecall Pro — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](../diagnostics/README.md)) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
-Ask Ryan before any Slack to Jesse. Results come back in Chief’s thread.
+Ask Ryan before any Slack to Jesse, except the binder-print Slack. Results come back in Chief’s thread.
 
 **CartScope app changes (2026-09-05; live URL 2026-09-07):** CartScope Tester owns iterative bay QA against https://cart-scope.vercel.app and reports to Chief only. Change plan + Ryan’s yes through Chief before any app change. Code changes go through GitHub PRs on `NGC4160/CartScope`; Chief can merge. Pointer: [cartscope.md](../06_systems/cartscope.md).
 
@@ -91,7 +91,9 @@ Roster and ownership: [roles.md](../05_team/roles.md).
 
 **Confirmed 2026-08-26 by Ryan White.** Applies to **every** NGC bot.
 
-Ask Ryan and **wait for a yes** before sending any Slack to **Jesse Killian**. No DMs, channel posts, or messages-as-Ryan without that approval. Approvals go through **Chief**, who asks Ryan.
+Ask Ryan and **wait for a yes** before sending any Slack to **Jesse Killian**, except the binder-print Slack. No DMs, channel posts, or messages-as-Ryan without that approval, except the binder-print Slack. Approvals go through **Chief**, who asks Ryan.
+
+**Standing exception (2026-09-21):** The binder-print Slack to Jesse (manual and wiring PDFs only, titled make/model/year, for the tech binders) needs **no per-send approval**. This is the only exception. Every other Slack to Jesse still needs Ryan’s yes via Chief first.
 
 **Not exceptions:** lithium jobs, BMS recordings, website leads, estimates, HCP updates.
 
