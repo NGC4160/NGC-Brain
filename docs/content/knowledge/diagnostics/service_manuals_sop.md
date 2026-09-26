@@ -1,6 +1,6 @@
 # Library — service manuals, parts manuals, and diagrams
 
-**Last verified:** 2026-09-18  
+**Last verified:** 2026-09-26  
 **Owner:** Diagnostics (reports to Chief). Ryan approves every new item before it enters the Library.
 
 One page. The **Library** is Neighborhood Golf Carts’ collection of **service manuals + parts manuals + diagrams**. This is how we find one while diagnosing, get Ryan’s yes, and file it so the next job can use it.
@@ -46,6 +46,24 @@ Do not invent pinouts from the extract. Use the OEM PDF. An extract covers only 
 ## 4. Hard rule — no auto-publish
 
 Do **not** auto-publish unverified web PDFs as shop standard operating procedure. A downloaded file is a **candidate** until Ryan approves it into Drive Manuals (the Library).
+
+## New-job manuals practice (Ryan, 2026-09-21)
+
+**Confirmed 2026-09-21 by Ryan White via Chief.** A job counts as new as soon as it is created in Housecall Pro.
+
+For **every** new job:
+
+1. Attach the matching service manual and wiring diagrams to the Housecall Pro job.
+2. Slack **Jesse Killian** (she/her) the print PDFs for the tech binders, titled **make/model/year**.
+3. Add those manuals into CartScope. CartScope is a **public** repo — never add customer names or job numbers.
+
+**Check-off** (private HCP job note): manuals attached, Jesse has binder prints, CartScope covered.
+
+**Which copy:** When Drive has a manual saved more than once, use the copy on Diagnostics’ checked manual list. Prefer Library matches.
+
+**Do not invent** a manual or substitute one for a different model or year. Tell Ryan via Chief when year/make/model is missing or the Library has no match.
+
+**Standing yes (2026-09-21):** this binder-print Slack to Jesse (manual and wiring PDFs only) needs no per-send approval. Every other Slack to Jesse still needs Ryan’s yes via Chief first.
 
 ## Related
 
