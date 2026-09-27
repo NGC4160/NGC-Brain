@@ -1,7 +1,7 @@
 # Deposit Gate Alerts (NGC Admin Bot)
 
-**Generated:** 2026-09-26 17:17 UTC  
-**HCP jobs export:** 2026-09-26T17:17:45.486179+00:00  
+**Generated:** 2026-09-27 17:50 UTC  
+**HCP jobs export:** 2026-09-27T17:50:47.126487+00:00  
 **Not policy.** Generated snapshot from local `jobs.json` (gitignored).
 **Privacy:** Invoice # and description only — open job in HCP for customer contact.
 
@@ -11,7 +11,7 @@
 |-------|------:|
 | BLOCK_PARTS (do not order) | 4 |
 | SCHEDULE_UNPAID | 4 |
-| COLLECT_BALANCE | 23 |
+| COLLECT_BALANCE | 22 |
 
 ## BLOCK_PARTS — Jesse priority
 
@@ -49,7 +49,6 @@
 - **#173144** · General - 1.0 - Golf Cart Diagnostic & Inspection · `scheduled` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
 - **#173138** · General - 1.0 - Golf Cart Diagnostic & Inspection · `scheduled` · paid $0.00 / $202.39 · **gap $202.39** — Diagnostic balance due
 - **#17428** · General - ***SEE NOTES*** · `scheduled` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
-- **#17418** · General - ***SEE NOTES*** · `scheduled` · paid $0.00 / $202.39 · **gap $202.39** — Balance due before pickup or additional work
 - **#173150** · 1.5-Perform wheel alignment · `scheduled` · paid $0.00 / $195.56 · **gap $195.56** — Balance due before pickup or additional work
 - **#173113-2** · 1.5- Master Cylinder Replacement · `scheduled` · paid $0.00 / $175.00 · **gap $175.00** — Balance due before pickup or additional work
 
