@@ -1,7 +1,7 @@
 # Shop Board (auto-generated)
 
-**Generated:** 2026-09-26 17:17 UTC  
-**HCP jobs export:** 2026-09-26T17:17:45.486179+00:00  
+**Generated:** 2026-09-27 17:50 UTC  
+**HCP jobs export:** 2026-09-27T17:50:47.126487+00:00  
 **Not policy.** Generated snapshot from local `jobs.json` (gitignored). Invoice # + description only.
 **Privacy:** No customer names or addresses.
 
@@ -10,9 +10,9 @@
 | Metric | Count |
 |--------|------:|
 | In progress | 4 |
-| Scheduled | 28 |
+| Scheduled | 27 |
 | Needs scheduling | 6 |
-| **Active pipeline** | **38** |
+| **Active pipeline** | **37** |
 | Unassigned (in progress) | 0 |
 | Stale in progress (15+ days) | 4 |
 | Lithium in progress | 1 |
@@ -29,42 +29,42 @@
 
 ## Lithium at risk (>3 days in shop)
 
-- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 145d (Li)
+- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 146d (Li)
 
 ## Stale WIP (15+ days) — close out or escalate today
 
-- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 145d (Li)
-- #17260 · Accessories - 1.0-Seat belt kit installation · 143d
-- #17109-2 · Brakes - 1.0-Brake Inspection & Adjustment · 122d
-- #17420 · General - 1.0 - Golf Cart Diagnostic & Inspection · 47d
+- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 146d (Li)
+- #17260 · Accessories - 1.0-Seat belt kit installation · 144d
+- #17109-2 · Brakes - 1.0-Brake Inspection & Adjustment · 123d
+- #17420 · General - 1.0 - Golf Cart Diagnostic & Inspection · 48d
 
 ## Needs scheduling (Jesse queue)
 
-- #17438 · General - 1.0 - Golf Cart Diagnostic & Inspection · 41d ($ due, unassigned)
-- #173142 · Batteries & Cables - 3.0-NGC Lithium Conversion, 48v 150ah · 6d (Li, $ due, unassigned)
-- #173146 · General - 1.0 - Golf Cart Diagnostic & Inspection · 4d ($ due, unassigned)
-- #173149 · PM Services - 1.0 - Deluxe Electric Golf Cart PM Service · 3d ($ due, unassigned)
-- #173154 · General - 1.0 - Golf Cart Diagnostic & Inspection · 2d ($ due, unassigned)
-- #173153 · General - 1.0 - Golf Cart Diagnostic & Inspection · 2d ($ due, unassigned)
+- #17438 · General - 1.0 - Golf Cart Diagnostic & Inspection · 42d ($ due, unassigned)
+- #173142 · Batteries & Cables - 3.0-NGC Lithium Conversion, 48v 150ah · 7d (Li, $ due, unassigned)
+- #173146 · General - 1.0 - Golf Cart Diagnostic & Inspection · 5d ($ due, unassigned)
+- #173149 · PM Services - 1.0 - Deluxe Electric Golf Cart PM Service · 4d ($ due, unassigned)
+- #173154 · General - 1.0 - Golf Cart Diagnostic & Inspection · 3d ($ due, unassigned)
+- #173153 · General - 1.0 - Golf Cart Diagnostic & Inspection · 3d ($ due, unassigned)
 
 ## Scheduled (incoming)
 
-- #173150 · 1.5-Perform wheel alignment · 3d ($ due)
-- #173147 · 3.0-NGC Lithium Conversion, 48v 105ah · 3d (Li, $ due)
-- #173145 · General - 1.0 - Golf Cart Diagnostic & Inspection · 4d ($ due)
-- #173144 · General - 1.0 - Golf Cart Diagnostic & Inspection · 5d ($ due)
-- #173143 · 3.0-NGC MINI Lithium Conversion, 48v 105ah · 5d (Li, $ due)
-- #173113-2 · 1.5- Master Cylinder Replacement · 7d ($ due)
-- #173141 · General - ***SEE NOTES*** · 8d (Li, $ due)
-- #173138 · General - 1.0 - Golf Cart Diagnostic & Inspection · 10d ($ due)
-- #173137 · General - 1.0 - Golf Cart Diagnostic & Inspection · 10d ($ due)
-- #173136 · General - ***SEE NOTES*** · 10d ($ due)
-- #173133 · General - 1.0 - Golf Cart Diagnostic & Inspection · 11d ($ due)
-- #173132 · General - 1.0 - Golf Cart Diagnostic & Inspection · 11d ($ due)
-- #173130 · General - 1.0 - Golf Cart Diagnostic & Inspection · 12d ($ due)
-- #173129 · General - ***SEE NOTES*** · 16d ($ due)
-- #173128 · General - 1.0 - Golf Cart Diagnostic & Inspection · 16d ($ due)
-- … and 13 more
+- #173150 · 1.5-Perform wheel alignment · 4d ($ due)
+- #173147 · 3.0-NGC Lithium Conversion, 48v 105ah · 4d (Li, $ due)
+- #173145 · General - 1.0 - Golf Cart Diagnostic & Inspection · 5d ($ due)
+- #173144 · General - 1.0 - Golf Cart Diagnostic & Inspection · 6d ($ due)
+- #173143 · 3.0-NGC MINI Lithium Conversion, 48v 105ah · 6d (Li, $ due)
+- #173113-2 · 1.5- Master Cylinder Replacement · 9d ($ due)
+- #173141 · General - ***SEE NOTES*** · 9d (Li, $ due)
+- #173138 · General - 1.0 - Golf Cart Diagnostic & Inspection · 11d ($ due)
+- #173137 · General - 1.0 - Golf Cart Diagnostic & Inspection · 11d ($ due)
+- #173136 · General - ***SEE NOTES*** · 11d ($ due)
+- #173133 · General - 1.0 - Golf Cart Diagnostic & Inspection · 12d ($ due)
+- #173132 · General - 1.0 - Golf Cart Diagnostic & Inspection · 12d ($ due)
+- #173130 · General - 1.0 - Golf Cart Diagnostic & Inspection · 13d ($ due)
+- #173129 · General - ***SEE NOTES*** · 17d ($ due)
+- #173128 · General - 1.0 - Golf Cart Diagnostic & Inspection · 17d ($ due)
+- … and 12 more
 
 ## Ryan — 8:30 actions
 
