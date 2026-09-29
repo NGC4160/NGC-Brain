@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T14:15:59.673417+00:00",
+  "generated_at": "2026-09-29T14:20:40.507376+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,7 +12,7 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-09-29T14:15:59.647671+00:00",
+    "generated_at": "2026-09-29T14:20:40.488790+00:00",
     "jobs_synced_at": null,
     "has_live_data": false,
     "metrics": {
@@ -353,10 +353,10 @@
     },
     {
       "priority": "P1",
-      "name": "Update website / Meta / GBP copy that still says **free pickup within 40 miles**",
-      "why": "Stale vs 2026-09-14 P/D (Northshore free only 0\u201330; Southshore $179)",
+      "name": "Website / Meta / GBP: lead with **free pickup and delivery within 30 miles** (not 40)",
+      "why": "Aligns advertise language with live Northshore 0\u201330 free band; Southshore still $179",
       "owner": "Marketing / Chief",
-      "status": "Open \u2014 shop policy updated; public copy not rewritten in this Brain pass",
+      "status": "Open \u2014 Brain rule logged 2026-09-29; public surfaces still need the 30-mile lead line",
       "category": "Operations (run the shop better)"
     },
     {

@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-09-17  
+**Last verified:** 2026-09-29  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -59,7 +59,12 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 
 ## Pickup & delivery
 
-**Live policy (customer bands amended 2026-09-14 — NGC-OPS-FIN-2026-09).** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+**Live policy (customer bands amended 2026-09-14 — NGC-OPS-FIN-2026-09; advertise language 2026-09-29).** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+
+**In short:**
+- **Northshore:** **free under 30** one-way road miles (0–30 inclusive **$0**). Paid bands beyond that. No service over 60.
+- **Southshore:** **always paid at $179**. Do not apply the Northshore free band.
+- **Public marketing:** Lead with **free pickup and delivery within 30 miles**. Do **not** advertise a 40-mile free zone.
 
 Applies **only** when NGC does **pickup AND return delivery**. Customer drop-off / customer pickup with no NGC transport does **not** get the internal **$160**. Measure **one-way road (driving) miles** from **71363 Thelma Ln, Suite E, Covington**. Not straight-line.
 
@@ -77,7 +82,7 @@ Applies **only** when NGC does **pickup AND return delivery**. Customer drop-off
 | **(50, 60]** | **$179** — same line name | **$160** |
 | **>60** | **No service** — do not quote / do not offer | — |
 
-**Southshore:** **$179** flat, same line name. Do **not** apply Northshore free / $129 / $149. Ryan did not restate a Southshore mileage cap — do not invent one.
+**Southshore:** **always $179** flat, same line name. Do **not** apply Northshore free / $129 / $149. Ryan did not restate a Southshore mileage cap — do not invent one.
 
 Do **not** quote the old **$90** internal cost, **40-mile included** radius, **$99** outside-40 / Southshore flat, **>40 individually quoted**, or **free within 40 miles**. Do **not** post **$160** in QBO as a second vehicle or payroll expense.
 
