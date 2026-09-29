@@ -15,6 +15,8 @@ approved_by: Ryan White via Chief
 
 This bulletin is **live**. It supersedes the 2026-07-13 40-mile Northshore / **$99** Southshore-or-outside-40 rule, the 2026-09-01 **$90** hidden free-P/D internal cost, and the **2026-09-13 customer bands** (free 0–30 / **$129** at 31–40 / **>40** individually quoted; Southshore same as Northshore).
 
+**Public marketing (2026-09-29):** Advertise **free pickup and drop-off within 30 miles** (not 40). Lead with that line. Live customer prices in the tables below are **unchanged**.
+
 Do **not** quote the old **$90**, **40-mile included**, **$99** outside-40 / Southshore flat, **>40 individually quoted**, or **free within 40 miles**.
 
 | Field | Value |
@@ -142,6 +144,6 @@ The **4%** is only the fee used in this GP check — not a locked customer surch
 
 HCP pricebook export may still list **Standard Pick-up/Drop-off Service** at **$99**. That export line is **stale vs this policy**. Do not quote **$99**. Shop should align the live HCP line name and amounts (**$129 / $149 / $179**) to this bulletin — do not invent that the HCP SKU is already updated.
 
-Website / Meta / GBP copy that still says **free pickup within 40 miles** is **stale**. Do not treat that copy as shop policy. Chief / Marketing follow-up — this bulletin does not rewrite ad copy.
+Website / Meta / GBP must advertise **free pickup and drop-off within 30 miles**. Any remaining **40-mile** free-zone copy is stale. Chief / Marketing update public surfaces to this line.
 
 If Ryan changes this again, write it to [decision_log.md](../09_daily_ops/decision_log.md) the same day.
