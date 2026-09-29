@@ -64,7 +64,7 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 **In short:**
 - **Northshore:** **free under 30** one-way road miles (0–30 inclusive **$0**). Paid bands beyond that. No service over 60.
 - **Southshore:** **always paid at $179**. Do not apply the Northshore free band.
-- **Public marketing:** Lead with **free pickup and drop-off within 30 miles**. Do **not** advertise a 40-mile free zone.
+- **Public marketing:** Lead with **free pickup and delivery within 30 miles**. Do **not** advertise a 40-mile free zone.
 
 Applies **only** when NGC does **pickup AND return delivery**. Customer drop-off / customer pickup with no NGC transport does **not** get the internal **$160**. Measure **one-way road (driving) miles** from **71363 Thelma Ln, Suite E, Covington**. Not straight-line.
 
