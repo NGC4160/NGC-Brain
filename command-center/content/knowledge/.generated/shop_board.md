@@ -1,7 +1,7 @@
 # Shop Board (auto-generated)
 
-**Generated:** 2026-10-03 17:27 UTC  
-**HCP jobs export:** 2026-10-03T17:27:34.723281+00:00  
+**Generated:** 2026-10-04 17:42 UTC  
+**HCP jobs export:** 2026-10-04T17:42:06.901223+00:00  
 **Not policy.** Generated snapshot from local `jobs.json` (gitignored). Invoice # + description only.
 **Privacy:** No customer names or addresses.
 
@@ -29,48 +29,48 @@
 
 ## Lithium at risk (>3 days in shop)
 
-- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 152d (Li)
+- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 153d (Li)
 
 ## Stale WIP (15+ days) — close out or escalate today
 
-- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 152d (Li)
-- #17109-2 · Brakes - 1.0-Brake Inspection & Adjustment · 129d
-- #17420 · General - 1.0 - Golf Cart Diagnostic & Inspection · 54d
+- #17248 · 48V Professional Lithium Battery Conversion Kit Installed · 153d (Li)
+- #17109-2 · Brakes - 1.0-Brake Inspection & Adjustment · 130d
+- #17420 · General - 1.0 - Golf Cart Diagnostic & Inspection · 55d
 
 ## Needs scheduling (Jesse queue)
 
-- #173158 · General - ***SEE NOTES*** · 5d ($ due, unassigned)
-- #173161 · General - ***SEE NOTES*** · 4d ($ due, unassigned)
-- #173160 · General - 1.0 - Golf Cart Diagnostic & Inspection · 4d ($ due, unassigned)
-- #173159 · General - 1.0 - Golf Cart Diagnostic & Inspection · 4d ($ due, unassigned)
-- #173164 · 3.0-NGC Lithium Conversion, 36v 105ah · 3d (Li, $ due, unassigned)
-- #173163 · General - 1.0 - Golf Cart Diagnostic & Inspection · 3d ($ due, unassigned)
-- #173162 · General - 1.0 - Golf Cart Diagnostic & Inspection · 3d ($ due, unassigned)
-- #173167 · General - 1.0 - Golf Cart Diagnostic & Inspection · 2d ($ due, unassigned)
-- #173166 · ***SEE NOTES*** · 2d ($ due, unassigned)
-- #173165 · General - 1.0 - Golf Cart Diagnostic & Inspection · 2d ($ due, unassigned)
-- #173170 · General - ***SEE NOTES*** · 1d ($ due, unassigned)
-- #173169 · FORM 36/48 Volt Golf Cart Battery Charger - Lithium - PRO VERSION · 1d (Li, unassigned)
-- #173168 · General - 1.0 - Golf Cart Diagnostic & Inspection · 1d ($ due, unassigned)
-- #173171 · General - 1.0 - Golf Cart Diagnostic & Inspection · 0d ($ due, unassigned)
+- #173158 · General - ***SEE NOTES*** · 6d ($ due, unassigned)
+- #173162 · General - 1.0 - Golf Cart Diagnostic & Inspection · 5d ($ due, unassigned)
+- #173161 · General - ***SEE NOTES*** · 5d ($ due, unassigned)
+- #173160 · General - 1.0 - Golf Cart Diagnostic & Inspection · 5d ($ due, unassigned)
+- #173159 · General - 1.0 - Golf Cart Diagnostic & Inspection · 5d ($ due, unassigned)
+- #173164 · 3.0-NGC Lithium Conversion, 36v 105ah · 4d (Li, $ due, unassigned)
+- #173163 · General - 1.0 - Golf Cart Diagnostic & Inspection · 4d ($ due, unassigned)
+- #173167 · General - 1.0 - Golf Cart Diagnostic & Inspection · 3d ($ due, unassigned)
+- #173166 · ***SEE NOTES*** · 3d ($ due, unassigned)
+- #173165 · General - 1.0 - Golf Cart Diagnostic & Inspection · 3d ($ due, unassigned)
+- #173170 · General - ***SEE NOTES*** · 2d ($ due, unassigned)
+- #173169 · FORM 36/48 Volt Golf Cart Battery Charger - Lithium - PRO VERSION · 2d (Li, unassigned)
+- #173168 · General - 1.0 - Golf Cart Diagnostic & Inspection · 2d ($ due, unassigned)
+- #173171 · General - 1.0 - Golf Cart Diagnostic & Inspection · 1d ($ due, unassigned)
 
 ## Scheduled (incoming)
 
-- #173157 · General - ***SEE NOTES*** · 5d ($ due)
-- #173156 · General - ***SEE NOTES*** · 5d ($ due)
-- #173155 · 3.0-NGC Lithium Conversion, 36v 105ah · 5d (Li, $ due)
-- #173154 · General - 1.0 - Golf Cart Diagnostic & Inspection · 9d ($ due)
-- #173153 · General - 1.0 - Golf Cart Diagnostic & Inspection · 9d ($ due)
-- #173150 · 1.5-Steering gear replacement, EZGO TXT 01+ · 10d ($ due)
-- #173149 · General - ***SEE NOTES*** · 10d ($ due)
-- #173146 · ***SEE NOTES*** · 11d ($ due)
-- #173144 · General - 1.0 - Golf Cart Diagnostic & Inspection · 12d ($ due)
-- #173142 · Batteries & Cables - 3.0-NGC Lithium Conversion, 48v 150ah · 13d (Li)
-- #173113-2 · 1.5- Master Cylinder Replacement · 15d ($ due)
-- #173136 · General - ***SEE NOTES*** · 17d ($ due)
-- #173132 · General - 1.0 - Golf Cart Diagnostic & Inspection · 18d
-- #173130 · General - 1.0 - Golf Cart Diagnostic & Inspection · 19d ($ due)
-- #173129 · General - 1.0 - Golf Cart Diagnostic & Inspection · 23d ($ due)
+- #173157 · General - ***SEE NOTES*** · 6d ($ due)
+- #173156 · General - ***SEE NOTES*** · 6d ($ due)
+- #173155 · 3.0-NGC Lithium Conversion, 36v 105ah · 6d (Li, $ due)
+- #173154 · General - 1.0 - Golf Cart Diagnostic & Inspection · 10d ($ due)
+- #173153 · General - 1.0 - Golf Cart Diagnostic & Inspection · 10d ($ due)
+- #173150 · 1.5-Steering gear replacement, EZGO TXT 01+ · 11d ($ due)
+- #173149 · General - ***SEE NOTES*** · 11d ($ due)
+- #173146 · ***SEE NOTES*** · 12d ($ due)
+- #173144 · General - 1.0 - Golf Cart Diagnostic & Inspection · 13d ($ due)
+- #173142 · Batteries & Cables - 3.0-NGC Lithium Conversion, 48v 150ah · 14d (Li)
+- #173113-2 · 1.5- Master Cylinder Replacement · 16d ($ due)
+- #173136 · General - ***SEE NOTES*** · 18d ($ due)
+- #173132 · General - 1.0 - Golf Cart Diagnostic & Inspection · 19d
+- #173130 · General - 1.0 - Golf Cart Diagnostic & Inspection · 20d ($ due)
+- #173129 · General - 1.0 - Golf Cart Diagnostic & Inspection · 24d ($ due)
 - … and 9 more
 
 ## Ryan — 8:30 actions

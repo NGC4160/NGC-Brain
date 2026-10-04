@@ -1,7 +1,7 @@
 # Deposit Gate Alerts (NGC Admin Bot)
 
-**Generated:** 2026-10-03 17:27 UTC  
-**HCP jobs export:** 2026-10-03T17:27:34.723281+00:00  
+**Generated:** 2026-10-04 17:42 UTC  
+**HCP jobs export:** 2026-10-04T17:42:06.901223+00:00  
 **Not policy.** Generated snapshot from local `jobs.json` (gitignored).
 **Privacy:** Invoice # and description only — open job in HCP for customer contact.
 
