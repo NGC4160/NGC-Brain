@@ -32,7 +32,7 @@ Auto shop board (after HCP sync): `knowledge/.generated/shop_board.md` — **gen
 
 | Need | Prompt / action |
 |------|-----------------|
-| Customer quote (lithium or repair) | [`prompts/quote_and_customer.md`](../../prompts/quote_and_customer.md) — office quoting: [`lithium_sales_guide.md`](../02_products/lithium_sales_guide.md) (internal); kit/warranty SMS: [`customer_reply_standard.md`](../07_customers_marketing/customer_reply_standard.md); surcharge on every estimate: [`shop_services.md`](../03_services/shop_services.md) |
+| Customer quote (lithium or repair) | [`prompts/quote_and_customer.md`](../../prompts/quote_and_customer.md) — office quoting: [`lithium_sales_guide.md`](../02_products/lithium_sales_guide.md) (internal); kit/warranty SMS: [`customer_reply_standard.md`](../07_customers_marketing/customer_reply_standard.md); surcharge on every estimate and **no payment in full until the job is complete**: [`shop_services.md`](../03_services/shop_services.md) |
 | Draft text/email for Jesse | Draft for Ryan. Do **not** Slack Jesse without Ryan’s yes. |
 | "How do we diagnose X on Club Car?" | Point at Drive Procedures (not auto-synced). Do not invent SOP text from stub paths. |
 | Staff instruction for Marlon / Ryan Gorgoglione | Ask for shop-floor checklist from SOPs |
