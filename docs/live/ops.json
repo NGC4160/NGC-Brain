@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-04T17:42:11.111395+00:00",
-  "jobs_synced_at": "2026-10-04T17:42:06.901223+00:00",
+  "generated_at": "2026-10-06T18:57:24.570882+00:00",
+  "jobs_synced_at": "2026-10-06T18:57:20.467918+00:00",
   "has_live_data": true,
   "metrics": {
-    "in_progress": 4,
-    "scheduled": 24,
-    "needs_scheduling": 14,
-    "active_pipeline": 42,
+    "in_progress": 7,
+    "scheduled": 26,
+    "needs_scheduling": 13,
+    "active_pipeline": 46,
     "wip_target": null,
     "wip_over": 0,
-    "stale_15_plus": 3,
-    "lithium_at_risk": 1,
+    "stale_15_plus": 5,
+    "lithium_at_risk": 3,
     "deposit_alerts": 0
   },
   "alerts": {
@@ -18,7 +18,21 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 153,
+        "days": 155,
+        "lithium": true,
+        "status": "in progress"
+      },
+      {
+        "invoice": "173142",
+        "description": "Batteries & Cables - 3.0-NGC Lithium Conversion, 48v 150ah",
+        "days": 16,
+        "lithium": true,
+        "status": "in progress"
+      },
+      {
+        "invoice": "173155",
+        "description": "3.0-NGC Lithium Conversion, 36v 105ah",
+        "days": 8,
         "lithium": true,
         "status": "in progress"
       }
@@ -27,32 +41,46 @@
       {
         "invoice": "17248",
         "description": "48V Professional Lithium Battery Conversion Kit Installed",
-        "days": 153,
+        "days": 155,
         "lithium": true,
         "status": "in progress"
       },
       {
         "invoice": "17109-2",
         "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-        "days": 130,
+        "days": 132,
         "lithium": false,
         "status": "in progress"
       },
       {
         "invoice": "17420",
         "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-        "days": 55,
+        "days": 57,
+        "lithium": false,
+        "status": "in progress"
+      },
+      {
+        "invoice": "173142",
+        "description": "Batteries & Cables - 3.0-NGC Lithium Conversion, 48v 150ah",
+        "days": 16,
+        "lithium": true,
+        "status": "in progress"
+      },
+      {
+        "invoice": "173145",
+        "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
+        "days": 15,
         "lithium": false,
         "status": "in progress"
       }
     ]
   },
   "sync": {
-    "synced_at": "2026-10-04T17:42:10.506859+00:00",
+    "synced_at": "2026-10-06T18:57:24.250794+00:00",
     "pricebook": {
       "exists": true,
       "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv",
-      "modified": "2026-10-04T17:41:50.186388+00:00",
+      "modified": "2026-10-06T18:57:03.270722+00:00",
       "total_items": 282,
       "lithium_professional_skus": [
         {
@@ -154,7 +182,7 @@
     "qbo_pl": {
       "exists": true,
       "path": "/home/runner/work/NGC-Brain/NGC-Brain/external_docs/exports/qbo/profit_and_loss_last_12_months.xlsx",
-      "modified": "2026-10-04T17:41:50.187567+00:00",
+      "modified": "2026-10-06T18:57:03.272005+00:00",
       "period_note": "See file header for date range",
       "income_highlights": {
         "LFP Conversions Only": 94940.25,
@@ -183,14 +211,14 @@
         ],
         "refresh_token_rotated": true
       },
-      "modified": "2026-10-04T17:41:50.186388+00:00",
+      "modified": "2026-10-06T18:57:03.270722+00:00",
       "account_count": 148,
       "item_count": 521
     },
     "hcp_api": {
       "exists": true,
       "manifest": {
-        "synced_at": "2026-10-04T17:42:09.696855+00:00",
+        "synced_at": "2026-10-06T18:57:23.636269+00:00",
         "source": "housecall_pro_api",
         "paths": [
           "api_sync_manifest.json",
@@ -201,16 +229,16 @@
           "pricebook_services.json"
         ]
       },
-      "modified": "2026-10-04T17:42:09.697429+00:00",
+      "modified": "2026-10-06T18:57:23.636672+00:00",
       "job_count": 500,
       "jobs_by_status": {
-        "needs scheduling": 14,
-        "scheduled": 24,
-        "user canceled": 42,
+        "needs scheduling": 13,
+        "scheduled": 26,
+        "user canceled": 43,
+        "in progress": 7,
         "pro canceled": 36,
-        "complete unrated": 291,
-        "in progress": 4,
-        "complete rated": 89
+        "complete unrated": 287,
+        "complete rated": 88
       },
       "pricebook_service_count": 284,
       "professional_lithium_skus": [
@@ -226,43 +254,43 @@
     "qbo_files": [
       {
         "name": "api_sync_manifest.json",
-        "modified": "2026-10-04T17:41:50.186388+00:00"
+        "modified": "2026-10-06T18:57:03.270722+00:00"
       },
       {
         "name": "balance_sheet.json",
-        "modified": "2026-10-04T17:41:50.187567+00:00"
+        "modified": "2026-10-06T18:57:03.272005+00:00"
       },
       {
         "name": "balance_sheet_current.xlsx",
-        "modified": "2026-10-04T17:41:50.187567+00:00"
+        "modified": "2026-10-06T18:57:03.272005+00:00"
       },
       {
         "name": "chart_of_accounts.json",
-        "modified": "2026-10-04T17:41:50.187567+00:00"
+        "modified": "2026-10-06T18:57:03.272005+00:00"
       },
       {
         "name": "chart_of_accounts.xlsx",
-        "modified": "2026-10-04T17:41:50.187567+00:00"
+        "modified": "2026-10-06T18:57:03.272005+00:00"
       },
       {
         "name": "company_test.json",
-        "modified": "2026-10-04T17:42:10.388259+00:00"
+        "modified": "2026-10-06T18:57:24.215962+00:00"
       },
       {
         "name": "products_and_services.xlsx",
-        "modified": "2026-10-04T17:41:50.187567+00:00"
+        "modified": "2026-10-06T18:57:03.272005+00:00"
       },
       {
         "name": "products_services.json",
-        "modified": "2026-10-04T17:41:50.187567+00:00"
+        "modified": "2026-10-06T18:57:03.272005+00:00"
       },
       {
         "name": "profit_and_loss_last_12_months.json",
-        "modified": "2026-10-04T17:41:50.187567+00:00"
+        "modified": "2026-10-06T18:57:03.272005+00:00"
       },
       {
         "name": "profit_and_loss_last_12_months.xlsx",
-        "modified": "2026-10-04T17:41:50.187567+00:00"
+        "modified": "2026-10-06T18:57:03.272005+00:00"
       }
     ],
     "alerts": [
