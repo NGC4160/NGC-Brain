@@ -33,6 +33,8 @@ Typical install labor: **6.0 hours** (Lithium Battery Conversion Technician Rate
 
 We use **Vatrer** packs. We **inspect, test, and tune** every lithium we install.
 
+**Lithium Rhino** is the **soundbar** vendor, **not** a lithium battery vendor. Do not treat Lithium Rhino as a battery source. Vendors: [vendors.md](../03_services/vendors.md).
+
 After conversion:
 
 - The **factory battery meter is no longer accurate**. The kit includes a **battery monitor** for state of charge.

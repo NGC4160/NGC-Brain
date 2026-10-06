@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-09-26  
+**Last verified:** 2026-10-03  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -63,7 +63,8 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | **Christine** | Part-time backup; owner exceptions |
 | **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model). Official SOP: [technician SOP Sep 2026](../04_operations/technician_sop_sep2026.md) |
 | **Hayden Silva** | Pickup zone questions, route/day planning. Driver first — [driver SOP](../04_operations/driver_sop.md) |
-| **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first) |
+| **Jessica (Griffin & Furman)** | Month-end checklist, QBO category questions (export fresh P&L first). **No QBO write** without Ryan’s confirmation first. |
+| **Betty (HR)** | Paid holidays / no PTO — [`holidays_and_time_off.md`](../05_team/holidays_and_time_off.md) |
 
 ## Chief routing (standing)
 
@@ -79,7 +80,7 @@ Do **not** start specialist work first and hand off later. If no bot owns the jo
 
 **Lanes:** Shop owns Housecall Pro — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](../diagnostics/README.md)) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
-Ask Ryan before any Slack to Jesse, except the binder-print Slack. Results come back in Chief’s thread.
+Ask Ryan before any Slack to Jesse. The 2026-09-21 binder-print Slack standing yes is **revoked**. Results come back in Chief’s thread.
 
 **CartScope app changes (2026-09-05; live URL 2026-09-07):** CartScope Tester owns iterative bay QA against https://cart-scope.vercel.app and reports to Chief only. Change plan + Ryan’s yes through Chief before any app change. Code changes go through GitHub PRs on `NGC4160/CartScope`; Chief can merge. Pointer: [cartscope.md](../06_systems/cartscope.md).
 
@@ -91,11 +92,13 @@ Roster and ownership: [roles.md](../05_team/roles.md).
 
 **Confirmed 2026-08-26 by Ryan White.** Applies to **every** NGC bot.
 
-Ask Ryan and **wait for a yes** before sending any Slack to **Jesse Killian**, except the binder-print Slack. No DMs, channel posts, or messages-as-Ryan without that approval, except the binder-print Slack. Approvals go through **Chief**, who asks Ryan.
+Ask Ryan and **wait for a yes** before sending any Slack to **Jesse Killian**. No DMs, channel posts, or messages-as-Ryan without that approval. Approvals go through **Chief**, who asks Ryan.
 
-**Standing exception (2026-09-21):** The binder-print Slack to Jesse (manual and wiring PDFs only, titled make/model/year, for the tech binders) needs **no per-send approval**. This is the only exception. Every other Slack to Jesse still needs Ryan’s yes via Chief first.
+**Binder-print Slack revoked (2026-09-29, Ryan White):** Do **not** Slack Jesse Killian binder-print manuals for new jobs. The 2026-09-21 standing yes is **revoked**. Instead add manuals that need printing to the binder print list (`/workspace/ngc-ops/binder-print-list.md` on the shared box). Ryan gets a weekly print update. Still attach matching manuals to the Housecall Pro job and CartScope. Full rule: [service_manuals_sop.md](../diagnostics/service_manuals_sop.md#new-job-manuals-practice).
 
-**Not exceptions:** lithium jobs, BMS recordings, website leads, estimates, HCP updates.
+**Not exceptions:** lithium jobs, BMS recordings, website leads, estimates, HCP updates. Those still need Ryan’s yes before Slack to Jesse.
+
+**BMS recordings (filed in Drive):** Battery / BMS recording files emailed in are filed in Drive under **BMS Recordings**. That is a Drive filing rule — it is **not** a Slack-to-Jesse exception.
 
 **Leads:** Chief still collects website / Google Ads lead forms weekdays at **11:00 AM America/Chicago**, then asks Ryan before any Slack to Jesse. Lead forms only from **NGC985 / ryan@ / contact@**.
 

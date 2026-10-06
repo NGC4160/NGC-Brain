@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-09-07
+**Last verified:** 2026-10-02
 
 ## Current stack
 
@@ -72,6 +72,8 @@ Quoted from the live HCP screenshot (Settings › Price Book › Materials › M
 
 **Bookkeeper:** Jessica (Griffin & Furman)
 
+**Writes (2026-10-02, Ryan White):** No QuickBooks Online entry (expenses, purchases, any write) without Ryan’s confirmation first. Policy: [overview.md](../08_finance/overview.md#quickbooks-online-writes).
+
 **Key bank accounts (names only):**
 
 | Account | Purpose |
@@ -132,6 +134,7 @@ Quoted from the live HCP screenshot (Settings › Price Book › Materials › M
 | **Manuals / Tracker** | `1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn` | [folder](https://drive.google.com/drive/folders/1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn) |
 | **Manuals / Tomberlin** | `1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5` | [folder](https://drive.google.com/drive/folders/1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5) |
 | **Manuals / GEM** | `13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy` | [folder](https://drive.google.com/drive/folders/13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy) |
+| **BMS Recordings** | *(Drive folder id not stated — do not invent)* | File emailed-in battery / BMS recording files here. Folder name: **BMS Recordings**. |
 
 **NGC-OPS-DRIVER-09032026R0** (Driver / Shop Technician Assistant SOP) lives in Drive Procedures: [NGC-OPS-DRIVER-09032026R0 Driver Shop Technician Assistant SOP.pdf](https://drive.google.com/file/d/13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2/view) (file id `13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`). Brain summary: [driver_sop.md](../04_operations/driver_sop.md). **NGC-OPS-TECH-092026R0** (Technician SOP, Sep 2026) lives in Drive Procedures: [NGC-OPS-TECH-092026R0_Technician_SOP.pdf](https://drive.google.com/file/d/1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT/view) (file id `1d40prlzJFo-hGzw8tlUJMU3icxgmc0sT`). **NGC-EST-1** blank estimate-support checklist is in Checklists: [NGC-EST-1_Job_Report_Checklist_Estimating_blank.pdf](https://drive.google.com/file/d/1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS/view) (file id `1DjHCgKhh86CCwdzMf5bbcjYnOO-Y4faS`). Brain summary: [technician_sop_sep2026.md](../04_operations/technician_sop_sep2026.md). **NGC-QC-1** and **NGC-IR-1** were **not** found in Drive Procedures by those titles (2026-08-30). Keep the short rules in [shop_workflow.md](../04_operations/shop_workflow.md). Lithium sales PDF is in Procedures: [lithium_sales_guide.md](../02_products/lithium_sales_guide.md).
 

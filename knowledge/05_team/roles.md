@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-09-26
+**Last verified:** 2026-10-03
 
 ## Ownership
 
@@ -38,7 +38,7 @@ Do not schedule, assign, or quote these names as current staff.
 
 ## Grok Bot roster (live)
 
-**Do not invent extra bots.** Chief is Ryan’s **only** point of contact. All other bots report to Chief. Approvals go through Chief, who asks Ryan: Slack to Jesse (except the binder-print Slack), money, payroll submit, sign-in, delete a bot, orders, **CartScope app changes**, **Shop Board app changes**, **SOP publish**, **loops merge**.
+**Do not invent extra bots.** Chief is Ryan’s **only** point of contact. All other bots report to Chief. Approvals go through Chief, who asks Ryan: Slack to Jesse, money, payroll submit, sign-in, delete a bot, orders, **CartScope app changes**, **Shop Board app changes**, **SOP publish**, **loops merge**. The 2026-09-21 binder-print Slack standing yes is **revoked** (2026-09-29) — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse).
 
 | Bot | Role |
 |-----|------|
@@ -47,10 +47,10 @@ Do not schedule, assign, or quote these names as current staff.
 | **Shop** | **Housecall Pro owner** — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. |
 | **Diagnostics** | Evidence-first diagnostic support — known-good / known-faulted library and case write-ups in [`../diagnostics/README.md`](../diagnostics/README.md). Supports techs (**TEST BEFORE REPLACEMENT**); does **not** replace hands-on tests. Does **not** own HCP jobs (Shop owns HCP). |
 | **Front Desk** | Customer replies (lithium kit/warranty from `customer_reply_standard.md`) |
-| **Parts** | Parts / deposit-before-order |
-| **Books** | Books coordination |
-| **Betty** | HR |
-| **CFO** | Finance |
+| **Parts** | Parts / deposit-before-order. Preferred vendors: [vendors.md](../03_services/vendors.md). Parts board: [parts.md](../04_operations/parts.md). |
+| **Books** | Books coordination. **No QBO write** (expenses, purchases, any write) without Ryan’s confirmation first — [overview.md](../08_finance/overview.md#quickbooks-online-writes). |
+| **Betty** | HR — paid holidays and **no PTO**: [holidays_and_time_off.md](holidays_and_time_off.md). |
+| **CFO** | Finance. **No QBO write** without Ryan’s confirmation first — [overview.md](../08_finance/overview.md#quickbooks-online-writes). |
 | **Marketing** | Marketing |
 | **IT** | IT |
 | **Call Coach** | Call coaching |
@@ -73,13 +73,13 @@ On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate 
 
 Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
 
-**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **CartScope Tester change plans**, **Shop Board Tester change plans**, **SOP publish**, **loops merge**); writing facts back to Brain the **same day** Ryan corrects them; routing.
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse — no binder-print exception, money, payroll, sign-in, **CartScope Tester change plans**, **Shop Board Tester change plans**, **SOP publish**, **loops merge**, **any QBO write**); writing facts back to Brain the **same day** Ryan corrects them; routing.
 
 **Lanes (already true):** Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). **Diagnostics** owns the diagnostic evidence library (known-good / known-faulted / cases) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
-Ask Ryan before any Slack to Jesse, except the binder-print Slack. Results stay in Chief’s thread.
+Ask Ryan before any Slack to Jesse. The 2026-09-21 binder-print Slack standing yes is **revoked**. Results stay in Chief’s thread.
 
-**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back the same day Ryan corrects them. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian, except the binder-print Slack. **Parts updates** (Chief → Jesse Slack): five fields only — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse). **CartScope app changes:** CartScope Tester presents a change plan and gets Ryan’s yes through Chief before implementing — [cartscope.md](../06_systems/cartscope.md). **Shop Board app changes:** Shop Board Tester presents a change plan and gets Ryan’s yes through Chief before implementing (same gate as CartScope). **SOP publish:** Saturday propose-only; publish only after Ryan yes via Chief. Driver binder Monday Slack stays with Jesse flow. **loops:** name the repo each job; never merge without Ryan yes via Chief. **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
+**Standing rules:** NGC-Brain (`knowledge/`) is source of truth; write durable facts back the same day Ryan corrects them. Updates to Ryan or Chief = **bullet lists**. Ask Ryan before any Slack to Jesse Killian. Do **not** Slack Jesse binder-print manuals for new jobs — add manuals that need printing to the binder print list (`/workspace/ngc-ops/binder-print-list.md` on the shared box); Ryan gets a weekly print update. Still attach matching manuals to the Housecall Pro job and CartScope. **Parts updates** (Chief → Jesse Slack): five fields only — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse). **CartScope app changes:** CartScope Tester presents a change plan and gets Ryan’s yes through Chief before implementing — [cartscope.md](../06_systems/cartscope.md). **Shop Board app changes:** Shop Board Tester presents a change plan and gets Ryan’s yes through Chief before implementing (same gate as CartScope). **SOP publish:** Saturday propose-only; publish only after Ryan yes via Chief. Driver binder Monday Slack stays with Jesse flow. **loops:** name the repo each job; never merge without Ryan yes via Chief. **No** HCP customer-message watching. See [daily ops](../09_daily_ops/README.md).
 
 The deposit-alert **batch script** in `scripts/admin_bot/` is planned/live automation — **not** a Grok Bot and **not** the COS. Spec: [ngc_admin_bot_spec.md](../10_automation/ngc_admin_bot_spec.md).
 
@@ -92,8 +92,8 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Front office | Phones, intake, deposits, customer updates, HCP wait codes |
 | Estimating | Standard **and advanced** estimates in HCP from tech findings + pricebook. **Credit card surcharge on every estimate**; recalc to the final total before invoice or payment (do not invent a %) |
 | Pricebook | Maintenance in Housecall Pro (add/edit/deactivate lines; Ryan approves new rates) |
-| Inventory | Parts/stock visibility, counts, QBO/HCP alignment |
-| Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order |
+| Inventory | Parts/stock visibility, counts, QBO/HCP alignment. Do **not** label a parts order as inventory unless Ryan **explicitly** says it is inventory — [parts.md](../04_operations/parts.md). |
+| Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order. Preferred Club Car OEM: uSource Parts. Parts board: attribute every order to one or more customers — [parts.md](../04_operations/parts.md) / [vendors.md](../03_services/vendors.md). |
 | Shop workflow | Board/HCP hygiene, lane movement, WIP visibility, finish-list support. On approved deposit jobs: **COPY TO JOB** → **Awaiting Deposit** → **Need to Order** → **Waiting for Materials** ([shop_workflow.md](../04_operations/shop_workflow.md)) |
 | Pickup / delivery | Routing and scheduling for Hayden Silva (Northshore 0–30 included / $129 / $149 / $179 / no service >60; Southshore $179; batching). Policy: [shop_services.md](../03_services/shop_services.md#pickup--delivery) |
 | Data & reporting | Shop metrics, deposit/parts queues, weekly numbers Ryan needs |
@@ -130,7 +130,7 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Pickup & delivery (drive) | Hayden Silva | — |
 | Service management / tech oversight | Ryan White | — |
 | Shop repair work | Marlon, Ryan Gorgoglione | Hayden Silva (tech-assist only when transport/management allow; **not** independent diag) |
-| Bookkeeping | Jessica (Griffin & Furman) | Christine |
+| Bookkeeping | Jessica (Griffin & Furman). **No QBO write** without Ryan’s confirmation first. | Christine |
 | Owner exceptions / warranty / discounts | Ryan White | Christine |
 
 ## Hiring

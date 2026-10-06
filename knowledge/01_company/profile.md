@@ -1,6 +1,6 @@
 # Company Profile
 
-**Last verified:** 2026-06-28
+**Last verified:** 2026-10-03
 
 ## Legal & structure
 
@@ -20,6 +20,8 @@
 | **Website** | [www.NGCGolfCarts.com](https://www.NGCGolfCarts.com) |
 | **Google Business Profile** | [Google Maps listing](https://www.google.com/maps/place/Neighborhood+Golf+Carts/@30.4693929,-90.0870885,17z/data=!3m1!4b1!4m6!3m5!1s0x8e5ae72a7f0c58ab:0xa136fa51658a6a59!8m2!3d30.4693929!4d-90.0870885!16s%2Fg%2F11whnfm2fb) |
 | **Hours** | Monday–Friday, 8:00 AM – 5:00 PM |
+| **Paid time off** | **No PTO.** Paid time off is only the paid holidays. Holiday-pay wording must not say “approved PTO”. Policy: [holidays_and_time_off.md](../05_team/holidays_and_time_off.md) |
+| **Paid holidays** | Thanksgiving and Christmas Day (shop closed), plus one floating paid day each person picks from Day After Thanksgiving, Christmas Eve, or New Year’s Day (3 paid total). Memorial Day, Independence Day, Labor Day, Veterans Day remain unpaid closed days. Nobody works a paid holiday. |
 
 ## Positioning
 
@@ -47,3 +49,4 @@ Neighborhood Golf Carts is a trusted golf cart repair service specializing in **
 - **Bookkeeper:** Jessica (Griffin & Furman)
 - **Accounting system:** QuickBooks Online
 - **Status (as of Jun 2026):** Books clean and current
+- **QBO writes (2026-10-02, Ryan White):** No QuickBooks Online entry (expenses, purchases, any write) without Ryan’s confirmation first. Policy: [overview.md](../08_finance/overview.md#quickbooks-online-writes)

@@ -1,6 +1,6 @@
 # Neighborhood Golf Carts — Knowledge Base Index
 
-**Last verified:** 2026-09-29  
+**Last verified:** 2026-10-03  
 **Maintained for:** Cursor AI, **Chief** (Ryan's Grok Bot COS), shop bots that report to Chief, staff reference
 
 ## Purpose
@@ -24,12 +24,14 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 
 | File | Contents |
 |------|----------|
-| [01_company/profile.md](01_company/profile.md) | Identity, contact, location, positioning, legal |
-| [02_products/lithium_conversions.md](02_products/lithium_conversions.md) | Professional lithium kits, short kit list, warranty, deposits |
+| [01_company/profile.md](01_company/profile.md) | Identity, contact, location, positioning, legal, **no PTO / paid holidays pointer** |
+| [02_products/lithium_conversions.md](02_products/lithium_conversions.md) | Professional lithium kits, short kit list, warranty, deposits. **Lithium Rhino is a soundbar vendor, not a battery vendor** |
 | [02_products/lithium_sales_guide.md](02_products/lithium_sales_guide.md) | **Office quoting** — Essential / Ready-to-Run / Accessory-Ready (internal; not a customer handout) |
-| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery (**NGC-OPS-FIN-2026-09** live; **advertise free pickup and delivery within 30 miles**), deposits, **credit card surcharge on every estimate**, **estimate GP check on NGC P&D**, **fleet inspection $60 credited toward same-cart work** |
+| [03_services/shop_services.md](03_services/shop_services.md) | Diagnostics, fees, pickup/delivery (**NGC-OPS-FIN-2026-09** live; **advertise free pickup and delivery within 30 miles**; say **delivery**, not drop-off; **no mobile**), deposits, **credit card surcharge on every estimate**, **estimate GP check on NGC P&D**, **fleet inspection $60 credited toward same-cart work** |
+| [03_services/vendors.md](03_services/vendors.md) | **Preferred vendors** — Club Car OEM: uSource Parts (`usource.parts`); Blackwell’s Outdoor not preferred for Club Car; Lithium Rhino = soundbar, not lithium battery |
 | [03_services/pricebook_reference.md](03_services/pricebook_reference.md) | Pricebook categories and key line items |
 | [04_operations/shop_workflow.md](04_operations/shop_workflow.md) | How work flows through the shop today — **HCP pickup/drop-off queue**, **HCP deposit pipeline**, **NGC-QC-1** pre-delivery QC, **NGC-IR-1** incident form, pointer to driver SOP |
+| [04_operations/parts.md](04_operations/parts.md) | **Parts board** — every order attributed to one or more customers; ask Ryan if unknown; do not guess or label inventory unless Ryan says so; delete the board line when received |
 | [04_operations/driver_sop.md](04_operations/driver_sop.md) | **NGC-OPS-DRIVER-09032026R0** — Driver / Shop Technician Assistant summary + Drive Procedures pointer (full PDF is the official SOP) |
 | [04_operations/technician_sop_sep2026.md](04_operations/technician_sop_sep2026.md) | **NGC-OPS-TECH-092026R0** — Technician SOP (Sep 2026) summary + Drive Procedures / **NGC-EST-1** Checklists pointers (full package is the official SOP) |
 | [04_operations/shop_throughput.md](04_operations/shop_throughput.md) | **Shop capacity, daily rhythm, lithium SLA** — live board is a generated snapshot, not policy |
@@ -38,14 +40,15 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | [diagnostics/lfp_recovery.md](diagnostics/lfp_recovery.md) | **LFP pack recovery** — suitcase charger only just below 2.500 V with a live battery management system; not recoverable below 1.50 V with the battery management system offline; 1.00–1.50 V record and test; below 1.00 V not recoverable in the field |
 | [diagnostics/library_catalog.md](diagnostics/library_catalog.md) | **Library catalog (redacted)** — QC-passed Drive manuals (titles, ids, sources, wiring/fault flags). No customer names. No HCP job numbers. |
 | [05_team/roles.md](05_team/roles.md) | Human roster + **live Grok Bot roster** (Chief is COS) |
+| [05_team/holidays_and_time_off.md](05_team/holidays_and_time_off.md) | **Betty / HR** — paid holidays (3 per person) + **no PTO** (holiday-pay wording must not say “approved PTO”) |
 | [05_team/personnel_counseling.md](05_team/personnel_counseling.md) | **Personnel counseling form** — branded template & procedure |
 | [../docs/documents/README.md](../docs/documents/README.md) | Command Center Documents hub (**publish output** — edit `external_docs/templates/`) |
-| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks, Drive catalog + connector, CartScope, future DMS |
+| [06_systems/tools.md](06_systems/tools.md) | Housecall Pro, QuickBooks (**no QBO write without Ryan’s confirmation**), Drive catalog + connector, **BMS Recordings** folder, CartScope, future DMS |
 | [06_systems/cartscope.md](06_systems/cartscope.md) | **CartScope** — tech-facing diagnostic checklist web app (live: cart-scope.vercel.app; repo NGC4160/CartScope) |
 | [06_systems/garagebuddy.md](06_systems/garagebuddy.md) | **GarageBuddy** — **future/eval** DMS sandbox, not current shop process |
 | [07_customers_marketing/market.md](07_customers_marketing/market.md) | Service area, customer types, channels, **advertise free pickup and delivery within 30 miles**, **fleet winter push Dec–Feb** (no invented package prices) |
 | [07_customers_marketing/customer_reply_standard.md](07_customers_marketing/customer_reply_standard.md) | **Front Desk / bot lithium replies** — kit, Vatrer QC, warranty, meter/speedometer, SMS templates (no PII) |
-| [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax |
+| [08_finance/overview.md](08_finance/overview.md) | Income categories, COA structure, sales tax, **no QBO write without Ryan’s confirmation first** |
 | [08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md) | **NGC-OPS-FIN-2026-09** — **APPROVED**. Internal **$160** (2026-09-13). Customer bands **amended 2026-09-14**: Northshore 0–30 free / (30,40] $129 / (40,50] $149 / (50,60] $179 / >60 no service; Southshore **$179** flat. **Advertise (2026-09-29):** free pickup and delivery within 30 miles (not 40) |
 | [archive/legacy_mobile.md](archive/legacy_mobile.md) | Discontinued mobile service items — do not quote |
 | [09_daily_ops/README.md](09_daily_ops/README.md) | **Daily operating guide** — rhythms, roles, **bot Slack to Jesse (Ryan yes first)**, **bot updates as bullets**, data to feed AI |
@@ -88,6 +91,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 | **Manuals / Tracker** | [Drive folder](https://drive.google.com/drive/folders/1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn) (`1cWuv-JVbo9WKjF1biNJuwfOCyfcLYYqn`) |
 | **Manuals / Tomberlin** | [Drive folder](https://drive.google.com/drive/folders/1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5) (`1oLHYZsww0l4AHMpSPhw67VSCHnuUY9G5`) |
 | **Manuals / GEM** | [Drive folder](https://drive.google.com/drive/folders/13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy) (`13sAIA_m4Rjj2cqWEq6S8vf4cge-OZIEy`) |
+| **BMS Recordings** | Emailed-in battery / BMS recording files. Folder name **BMS Recordings**. Drive folder id not stated — do not invent. |
 
 ## Bots & Chief
 
@@ -95,7 +99,7 @@ Morning sync is **HCP + QBO**, plus an optional Drive **catalog** (last HCP/QBO 
 
 **Chief routing (standing, 2026-09-01):** On EVERY task Ryan asks, Chief immediately decides which bot owns it and **PASSES** the work, then brings the result back in Chief’s thread. Do not start specialist work first and hand off later. Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](diagnostics/README.md)). Other bots keep their lanes. If no bot owns the job, tell Ryan a new bot is worth creating and why — do not quietly become Shop/Parts/Books. Chief’s own work: talking to Ryan, those approvals, writing facts back, routing. Full rule: [daily ops](09_daily_ops/README.md#chief-routing-standing) · [roles.md](05_team/roles.md#chief-routing-standing).
 
-Shop bots must **operate from this brain** and **write durable facts back here the same day Ryan corrects them**. When a shop-running fact is confirmed (roster, policy, prices, workflow), update the matching file and [`09_daily_ops/decision_log.md`](09_daily_ops/decision_log.md) — do not leave it only in chat. **Slack to Jesse Killian:** ask Ryan and wait for a yes — [daily ops](09_daily_ops/README.md#bot-slack-to-jesse). **Parts updates** (Chief → Jesse Slack): five fields only (customer name, part, shipping company, tracking number, estimated arrival date) — omit unknown; do not invent tracking/ETA; Ryan still approves that Slack. Website lead dump / lithium list unchanged. **Bot updates:** clean bullet list — [daily ops](09_daily_ops/README.md#bot-updates). **Leads:** only from NGC985 / ryan@ / contact@; weekday 11am dump still asks Ryan before Slack. **No** HCP customer-message watching.
+Shop bots must **operate from this brain** and **write durable facts back here the same day Ryan corrects them**. When a shop-running fact is confirmed (roster, policy, prices, workflow), update the matching file and [`09_daily_ops/decision_log.md`](09_daily_ops/decision_log.md) — do not leave it only in chat. **Slack to Jesse Killian:** ask Ryan and wait for a yes — [daily ops](09_daily_ops/README.md#bot-slack-to-jesse). The 2026-09-21 binder-print Slack standing yes is **revoked** (2026-09-29): do **not** Slack Jesse binder-print manuals for new jobs. Add manuals that need printing to the binder print list (`/workspace/ngc-ops/binder-print-list.md` on the shared box); Ryan gets a weekly print update. Still attach matching manuals to the Housecall Pro job and CartScope. **Parts updates** (Chief → Jesse Slack): five fields only (customer name, part, shipping company, tracking number, estimated arrival date) — omit unknown; do not invent tracking/ETA; Ryan still approves that Slack. Website lead dump / lithium list unchanged. **Bot updates:** clean bullet list — [daily ops](09_daily_ops/README.md#bot-updates). **Leads:** only from NGC985 / ryan@ / contact@; weekday 11am dump still asks Ryan before Slack. **No** HCP customer-message watching.
 
 ## Authority rules
 

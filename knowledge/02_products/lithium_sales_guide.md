@@ -113,7 +113,7 @@ HCP still has `3.0-NGC Lithium Conversion Convenience Package` at **$599 plus ta
 
 These are still true. They are **not** a reason to send this sales guide to the customer.
 
-- Kit = LiFePO4 battery, charger, and battery monitor. We use **Vatrer** packs. We **inspect, test, and tune** every lithium we install.
+- Kit = LiFePO4 battery, charger, and battery monitor. We use **Vatrer** packs. We **inspect, test, and tune** every lithium we install. **Lithium Rhino** is a soundbar vendor, not a lithium battery vendor.
 - Warranty: **5-year full replacement** battery + BMS.
 - Typical install: **2–3 business days** (sometimes same day). Do not invent or volunteer a timeline in customer replies unless they asked.
 - After conversion, the **factory battery meter is no longer accurate**. The kit includes a **battery monitor** for state of charge.

@@ -1,6 +1,6 @@
 # Finance Overview
 
-**Last verified:** 2026-07-13  
+**Last verified:** 2026-10-02  
 **Source:** QBO API morning sync → `external_docs/exports/qbo/`  
 **Reporting basis:** Accrual (as pulled by morning sync)  
 **Period referenced:** July 13, 2025 – July 13, 2026
@@ -111,6 +111,14 @@ QBO tracks parish-level sales tax payables. Parishes with activity include:
 - Tax Reserves (0031)
 - Amazon Credit
 - Housecall Pro Balance
+
+## QuickBooks Online writes
+
+**Confirmed 2026-10-02 by Ryan White.**
+
+No QuickBooks Online entry — expenses, purchases, or any write — without Ryan’s confirmation first.
+
+Books / CFO / bots do **not** create, edit, or post QBO transactions on their own. Read/sync (morning sync, P&L pulls) is unchanged. Do not invent other QBO approval steps.
 
 ## Bookkeeping status
 
