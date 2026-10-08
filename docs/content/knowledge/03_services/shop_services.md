@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-09-29  
+**Last verified:** 2026-10-05  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -64,7 +64,7 @@ Crown batteries referenced in pricebook; 18-month free replacement warranty on s
 **In short:**
 - **Northshore:** **free under 30** one-way road miles (0–30 inclusive **$0**). Paid bands beyond that. No service over 60.
 - **Southshore:** **always paid at $179**. Do not apply the Northshore free band.
-- **Public marketing:** Lead with **free pickup and delivery within 30 miles**. Do **not** advertise a 40-mile free zone.
+- **Public marketing / customer-facing wording (2026-09-29, Ryan White):** Lead with **free pickup and delivery within 30 miles**. Do **not** advertise a 40-mile free zone. Say **delivery**, not **drop-off**. **No mobile repairs** — in-shop only. HCP pipeline stage names stay **New job** and **Customer drop off** (do not rename those stages).
 
 Applies **only** when NGC does **pickup AND return delivery**. Customer drop-off / customer pickup with no NGC transport does **not** get the internal **$160**. Measure **one-way road (driving) miles** from **71363 Thelma Ln, Suite E, Covington**. Not straight-line.
 
@@ -135,6 +135,14 @@ When the customer approves work that needs a parts deposit, shop bots follow the
 ## Payment methods
 
 Cash, card, check, Venmo, Zelle (per historical SOPs; confirm current preferred methods with Jesse).
+
+### Payment in full (standing)
+
+**Confirmed 2026-10-05 by Ryan White** (America/Chicago).
+
+Neighborhood Golf Carts does **not** take payment in full until the job is complete. Things can change while the job is being performed.
+
+Do **not** invent deposit amounts or other payment-timing rules from this entry. Existing deposit-before-order rules (above) are unchanged. This rule is only: no payment in full until the job is complete.
 
 ### Credit card surcharge (shop-wide office rule)
 

@@ -1,6 +1,6 @@
 # Shop Workflow
 
-**Last verified:** 2026-09-26
+**Last verified:** 2026-10-05
 
 ## Current state
 
@@ -40,6 +40,8 @@ Do **not** store a named customer snapshot in this file. Open HCP for who is in 
 
 This queue is **distinct** from the parts-deposit pipeline below. The deposit pipeline still applies to approved work that needs a parts deposit.
 
+**Customer-facing wording (2026-09-29, Ryan White):** Say **delivery**, not **drop-off**. Advertise **free pickup and delivery within 30 miles** (not 40). **No mobile repairs.** Do **not** rename the HCP stages **New job** / **Customer drop off**.
+
 ### 2. Vehicle arrival
 
 Options:
@@ -74,6 +76,7 @@ Key diagnostic sequence:
 - Large-ticket items (batteries, motors, controllers, special orders) require **deposit before ordering**
 - Inventory tracked in QBO (~$19.7k inventory asset as of Jun 2026)
 - Approved work that needs a parts deposit follows the **HCP job pipeline** below — not a combined “waiting deposit/parts” column
+- **Parts board (2026-10-02, Ryan White):** Every parts order must be attributed to one or more customers. If unknown, ask Ryan — do not guess or label inventory unless Ryan explicitly says it is inventory. Delete the board line once that part is received. Full rule: [parts.md](parts.md). Preferred Club Car OEM: uSource Parts — [vendors.md](../03_services/vendors.md).
 
 ### HCP job pipeline — approved work that needs a parts deposit
 
@@ -126,6 +129,7 @@ Do not invent a substitute form. Do not treat the complimentary 7-point inspecti
 
 ### 7. Job completion & payment
 
+- **Payment in full (standing, 2026-10-05, Ryan White):** Do **not** take payment in full until the job is complete. Things can change while the job is being performed. Do not invent deposit amounts or other payment rules from this entry. Policy: [shop_services.md](../03_services/shop_services.md#payment-in-full-standing).
 - Collect payment at pickup or invoice via HCP (text/email)
 - **Before sending the invoice for payment, or before taking payment:** update the credit card surcharge so it matches the **final total**. The line must already be on the estimate (every estimate). Do not invent a rate.
 - **Hayden Silva** delivers cart if customer used pickup service (driver first; shop assist only when transport/management allow)

@@ -4,7 +4,7 @@
 
 ## Service area
 
-**Advertise (public copy, 2026-09-29):** Lead with **free pickup and delivery within 30 miles**. Do **not** advertise a 40-mile free zone. That line matches the live Northshore included band.
+**Advertise (public copy, 2026-09-29):** Lead with **free pickup and delivery within 30 miles**. Do **not** advertise a 40-mile free zone. That line matches the live Northshore included band. Say **delivery**, not **drop-off**. **No mobile repairs.**
 
 **Customer pricing (live, 2026-09-14 — unchanged):** **Northshore** is **free under 30** one-way road miles (0–30 inclusive **$0**); paid bands beyond that; no service over 60. **Southshore** is **always paid at $179**. Do not apply the Northshore free band to Southshore.
 

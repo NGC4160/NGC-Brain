@@ -21,7 +21,8 @@ Use this when a customer asks **what is in the lithium kit**, **battery quality 
 - **EcoBoost:** Do not mention EcoBoost unless that **exact line** is on the live estimate.
 - **No shop phone** on these replies. Close with **Thanks / Neighborhood Golf Carts team**.
 - **Turnaround:** Typical is 2–3 business days. Do not invent or volunteer a timeline unless the customer asked.
-- After approval on deposit jobs: queue pickup or drop-off. Do **not** say lock a time, hold a spot, or easy yes. Deposit before ordering battery / motor / controller.
+- After approval on deposit jobs: queue pickup or delivery. Customer-facing wording: say **delivery**, not drop-off. Do **not** say lock a time, hold a spot, or easy yes. Deposit before ordering battery / motor / controller. **No mobile repairs.** Advertise free pickup and delivery within 30 miles (not 40).
+- **Payment in full:** Do **not** take or ask for payment in full until the job is complete. Things can change while the job is being performed. Do not invent deposit amounts. Policy: [shop_services.md](../03_services/shop_services.md#payment-in-full-standing).
 
 ## SMS / template — kit, quality, warranty
 

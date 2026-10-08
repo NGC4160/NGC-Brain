@@ -33,6 +33,8 @@ Typical install labor: **6.0 hours** (Lithium Battery Conversion Technician Rate
 
 We use **Vatrer** packs. We **inspect, test, and tune** every lithium we install.
 
+**Lithium Rhino** is the **soundbar** vendor, **not** a lithium battery vendor. Do not treat Lithium Rhino as a battery source. Vendors: [vendors.md](../03_services/vendors.md).
+
 After conversion:
 
 - The **factory battery meter is no longer accurate**. The kit includes a **battery monitor** for state of charge.
@@ -79,6 +81,8 @@ Deposits cover **material cost plus card processing fees** so NGC can order part
 Deposits required for: batteries, motors, controllers, and any special-order items.
 
 **Deposit is required before ordering** the kit. After the customer approves, follow the HCP job pipeline in [shop_workflow.md](../04_operations/shop_workflow.md): **COPY TO JOB** → **Awaiting Deposit** → (deposit received) **Need to Order** → (parts ordered) **Waiting for Materials**. Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or easy yes.
+
+**Payment in full** is not taken until the job is complete (things can change during the job). That does not change deposit-before-order. Do not invent other payment rules. Policy: [shop_services.md](../03_services/shop_services.md#payment-in-full-standing).
 
 ## Turnaround
 

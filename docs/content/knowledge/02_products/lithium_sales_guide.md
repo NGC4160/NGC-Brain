@@ -113,7 +113,7 @@ HCP still has `3.0-NGC Lithium Conversion Convenience Package` at **$599 plus ta
 
 These are still true. They are **not** a reason to send this sales guide to the customer.
 
-- Kit = LiFePO4 battery, charger, and battery monitor. We use **Vatrer** packs. We **inspect, test, and tune** every lithium we install.
+- Kit = LiFePO4 battery, charger, and battery monitor. We use **Vatrer** packs. We **inspect, test, and tune** every lithium we install. **Lithium Rhino** is a soundbar vendor, not a lithium battery vendor.
 - Warranty: **5-year full replacement** battery + BMS.
 - Typical install: **2–3 business days** (sometimes same day). Do not invent or volunteer a timeline in customer replies unless they asked.
 - After conversion, the **factory battery meter is no longer accurate**. The kit includes a **battery monitor** for state of charge.
@@ -122,5 +122,7 @@ These are still true. They are **not** a reason to send this sales guide to the 
 Do not mention EcoBoost unless that exact line is on the live estimate.
 
 ## Shop-wide (not lithium-only)
+
+**Payment in full** is not taken until the job is complete. Things can change while the job is being performed. Do not invent deposit amounts or other payment-timing rules. Policy: [shop_services.md](../03_services/shop_services.md#payment-in-full-standing).
 
 **Credit card surcharge** goes on every estimate, including lithium. Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do not invent a % or $. Policy: [shop_services.md](../03_services/shop_services.md#credit-card-surcharge-shop-wide-office-rule).

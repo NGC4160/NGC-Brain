@@ -96,6 +96,7 @@ Primary source: **NGC Policies & Procedures** in Google Drive Procedures ([folde
 | Deposits / parts | [shop_services.md](../03_services/shop_services.md) |
 | Job documentation | [shop_workflow.md](../04_operations/shop_workflow.md) |
 | Roles & expectations | [roles.md](roles.md) |
+| Paid holidays / no PTO | [holidays_and_time_off.md](holidays_and_time_off.md) — Betty (HR). Holiday-pay wording must not say “approved PTO”. |
 | Shop throughput / assignments | [shop_throughput.md](../04_operations/shop_throughput.md) |
 
 ---
