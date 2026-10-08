@@ -57,7 +57,7 @@ Also standing (do not invent other features):
 
 ## New-job manuals (2026-09-21)
 
-Every new Housecall Pro job also adds the matching service manual and wiring diagrams into CartScope. Full practice: [New-job manuals practice (Ryan, 2026-09-21)](../diagnostics/service_manuals_sop.md#new-job-manuals-practice-ryan-2026-09-21). CartScope is a public repo — **never add customer names or job numbers.**
+Every new Housecall Pro job also adds the matching service manual and wiring diagrams into CartScope. Do **not** Slack Jesse binder-print manuals for new jobs (standing yes revoked 2026-09-29) — use the binder print list. Full practice: [New-job manuals practice](../diagnostics/service_manuals_sop.md#new-job-manuals-practice-ryan-2026-09-21). CartScope is a public repo — **never add customer names or job numbers.**
 
 ## Do not store here
 
