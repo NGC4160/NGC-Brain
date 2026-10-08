@@ -1,6 +1,6 @@
 # Shop Workflow
 
-**Last verified:** 2026-09-26
+**Last verified:** 2026-10-05
 
 ## Current state
 
@@ -126,6 +126,7 @@ Do not invent a substitute form. Do not treat the complimentary 7-point inspecti
 
 ### 7. Job completion & payment
 
+- **Payment in full (standing, 2026-10-05, Ryan White):** Do **not** take payment in full until the job is complete. Things can change while the job is being performed. Do not invent deposit amounts or other payment rules from this entry. Policy: [shop_services.md](../03_services/shop_services.md#payment-in-full-standing).
 - Collect payment at pickup or invoice via HCP (text/email)
 - **Before sending the invoice for payment, or before taking payment:** update the credit card surcharge so it matches the **final total**. The line must already be on the estimate (every estimate). Do not invent a rate.
 - **Hayden Silva** delivers cart if customer used pickup service (driver first; shop assist only when transport/management allow)
