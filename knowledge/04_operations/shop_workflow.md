@@ -40,6 +40,8 @@ Do **not** store a named customer snapshot in this file. Open HCP for who is in 
 
 This queue is **distinct** from the parts-deposit pipeline below. The deposit pipeline still applies to approved work that needs a parts deposit.
 
+**Customer-facing wording (2026-09-29, Ryan White):** Say **delivery**, not **drop-off**. Advertise **free pickup and delivery within 30 miles** (not 40). **No mobile repairs.** Do **not** rename the HCP stages **New job** / **Customer drop off**.
+
 ### 2. Vehicle arrival
 
 Options:
@@ -74,6 +76,7 @@ Key diagnostic sequence:
 - Large-ticket items (batteries, motors, controllers, special orders) require **deposit before ordering**
 - Inventory tracked in QBO (~$19.7k inventory asset as of Jun 2026)
 - Approved work that needs a parts deposit follows the **HCP job pipeline** below — not a combined “waiting deposit/parts” column
+- **Parts board (2026-10-02, Ryan White):** Every parts order must be attributed to one or more customers. If unknown, ask Ryan — do not guess or label inventory unless Ryan explicitly says it is inventory. Delete the board line once that part is received. Full rule: [parts.md](parts.md). Preferred Club Car OEM: uSource Parts — [vendors.md](../03_services/vendors.md).
 
 ### HCP job pipeline — approved work that needs a parts deposit
 
