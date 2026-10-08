@@ -1,6 +1,6 @@
 # Shop Services & Policies
 
-**Last verified:** 2026-10-03  
+**Last verified:** 2026-10-05  
 **Pricing source:** Housecall Pro pricebook export (282 items) — see [pricebook_reference.md](pricebook_reference.md)
 
 ## Service model
@@ -135,6 +135,14 @@ When the customer approves work that needs a parts deposit, shop bots follow the
 ## Payment methods
 
 Cash, card, check, Venmo, Zelle (per historical SOPs; confirm current preferred methods with Jesse).
+
+### Payment in full (standing)
+
+**Confirmed 2026-10-05 by Ryan White** (America/Chicago).
+
+Neighborhood Golf Carts does **not** take payment in full until the job is complete. Things can change while the job is being performed.
+
+Do **not** invent deposit amounts or other payment-timing rules from this entry. Existing deposit-before-order rules (above) are unchanged. This rule is only: no payment in full until the job is complete.
 
 ### Credit card surcharge (shop-wide office rule)
 

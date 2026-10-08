@@ -123,4 +123,6 @@ Do not mention EcoBoost unless that exact line is on the live estimate.
 
 ## Shop-wide (not lithium-only)
 
+**Payment in full** is not taken until the job is complete. Things can change while the job is being performed. Do not invent deposit amounts or other payment-timing rules. Policy: [shop_services.md](../03_services/shop_services.md#payment-in-full-standing).
+
 **Credit card surcharge** goes on every estimate, including lithium. Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do not invent a % or $. Policy: [shop_services.md](../03_services/shop_services.md#credit-card-surcharge-shop-wide-office-rule).

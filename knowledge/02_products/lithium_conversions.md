@@ -82,6 +82,8 @@ Deposits required for: batteries, motors, controllers, and any special-order ite
 
 **Deposit is required before ordering** the kit. After the customer approves, follow the HCP job pipeline in [shop_workflow.md](../04_operations/shop_workflow.md): **COPY TO JOB** → **Awaiting Deposit** → (deposit received) **Need to Order** → (parts ordered) **Waiting for Materials**. Queue pickup or drop-off after approval. Do not say lock a time, hold a spot, or easy yes.
 
+**Payment in full** is not taken until the job is complete (things can change during the job). That does not change deposit-before-order. Do not invent other payment rules. Policy: [shop_services.md](../03_services/shop_services.md#payment-in-full-standing).
+
 ## Turnaround
 
 Internal planning only:

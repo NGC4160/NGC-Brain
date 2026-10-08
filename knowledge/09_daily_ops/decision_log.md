@@ -88,6 +88,7 @@ Format: `YYYY-MM-DD | Decision | Owner | Notes`
 | 2026-10-02 | **Parts board.** Every parts order must be attributed to one or more customers. If unknown, ask Ryan; do not guess or label inventory unless Ryan explicitly says it is inventory. Delete a board line once that part is received. | Ryan White | See `parts.md`. |
 | 2026-10-02 | **QuickBooks Online writes.** No QuickBooks Online entry (expenses, purchases, any write) without Ryan’s confirmation first. | Ryan White | See `08_finance/overview.md` / `06_systems/tools.md`. |
 | 2026-10-03 | **No PTO.** Neighborhood Golf Carts has no PTO. Paid time off is only the paid holidays. Holiday-pay wording must not say “approved PTO”. | Ryan White | See `holidays_and_time_off.md`. Complements the 2026-09-29 paid-holiday rule. |
+| 2026-10-05 | Neighborhood Golf Carts does not take payment in full until the job is complete, because things can change while the job is being performed. | Ryan White | America/Chicago. Do not invent deposit amounts or other payment rules. See `shop_services.md` / `shop_workflow.md`. |
 | 2026-10-06 | Battery / BMS recording files emailed in are filed in Drive under **BMS Recordings**. | Ryan White | Confirmation date not stated beyond this write-back. Not a Slack-to-Jesse exception. See `06_systems/tools.md`. |
 
 ---
