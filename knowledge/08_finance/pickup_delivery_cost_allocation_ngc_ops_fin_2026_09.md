@@ -4,6 +4,7 @@ date: 2026-09-11
 filed: 2026-09-13
 approved: 2026-09-13
 customer_pricing_amended: 2026-09-14
+customer_pricing_restated: 2026-10-10
 status: approved
 live_policy: true
 approved_by: Ryan White via Chief
@@ -11,13 +12,13 @@ approved_by: Ryan White via Chief
 
 # NGC-OPS-FIN-2026-09 — Pickup/Delivery Cost Assignment
 
-**STATUS = APPROVED / live shop policy.** Internal **$160** assignment approved **2026-09-13**. **Customer mile bands amended 2026-09-14** by Ryan White via Chief.
+**STATUS = APPROVED / live shop policy.** Internal **$160** assignment approved **2026-09-13**. **Customer mile bands amended 2026-09-14** by Ryan White via Chief. **Ryan restated the same live bands on 2026-10-10** and said this **supersedes any per-mile-beyond-30 idea**.
 
 This bulletin is **live**. It supersedes the 2026-07-13 40-mile Northshore / **$99** Southshore-or-outside-40 rule, the 2026-09-01 **$90** hidden free-P/D internal cost, and the **2026-09-13 customer bands** (free 0–30 / **$129** at 31–40 / **>40** individually quoted; Southshore same as Northshore).
 
 **Public marketing (2026-09-29):** Advertise **free pickup and delivery within 30 miles** (not 40). Lead with that line. Say **delivery**, not **drop-off**. **No mobile repairs.** Live customer prices in the tables below are **unchanged**. HCP stage names stay **New job** / **Customer drop off** (do not rename).
 
-Do **not** quote the old **$90**, **40-mile included**, **$99** outside-40 / Southshore flat, **>40 individually quoted**, or **free within 40 miles**.
+Do **not** quote the old **$90**, **40-mile included**, **$99** outside-40 / Southshore flat, **>40 individually quoted**, **free within 40 miles**, or any **per-mile-beyond-30** add-on.
 
 | Field | Value |
 |-------|-------|
@@ -25,6 +26,7 @@ Do **not** quote the old **$90**, **40-mile included**, **$99** outside-40 / Sou
 | **Date (bulletin)** | September 11, 2026 |
 | **Approved** | 2026-09-13 by Ryan White via Chief (**$160** internal assignment) |
 | **Customer pricing amended** | 2026-09-14 by Ryan White via Chief |
+| **Customer pricing restated** | 2026-10-10 by Ryan White — same bands; kills per-mile-beyond-30 |
 | **Subject** | Pickup/Delivery Cost Assignment, Included Service Radius, and Customer Transportation Pricing |
 | **Shop origin for miles** | 71363 Thelma Ln, Suite E, Covington, LA 70433 |
 | **Source PDF** | `NGC-OPS-FIN-2026-09_Pickup_Delivery_Cost_Allocation.pdf` — provided by Ryan 2026-09-13; **not committed** (this repo stores official SOP PDFs in Drive Procedures; it does not keep ops-bulletin binaries). Sep 14 customer bands are Ryan verbal / Chief — no new PDF. |
@@ -55,9 +57,9 @@ Mile-band edges are **half-open** so an exact mile (40.0, 50.0, 60.0) is not dou
 
 | Geography | Customer charge | Internal assignment | Treatment |
 |-----------|----------------:|--------------------:|-----------|
-| **All Southshore** | **$179** | **$160** | Pickup & Return Delivery Transportation Charge. Do **not** apply Northshore free / $129 / $149 bands. |
+| **All Southshore (any distance)** | **$179** | **$160** | Pickup & Return Delivery Transportation Charge. Do **not** apply Northshore free / $129 / $149 bands. |
 
-Ryan did **not** restate a Southshore mileage cap. Do not invent a Southshore “no service over 60” rule. Extreme / non-GNO addresses still escalate to Ryan — do not invent a quote.
+Ryan restated **2026-10-10** that Southshore is **$179 any distance**. Do not invent a Southshore “no service over 60” rule. Extreme / non-GNO addresses still escalate to Ryan — do not invent a quote.
 
 - Internal transportation cost is **$160** per transported repair ticket (pickup **and** return). Unchanged 2026-09-14.
 - Do **not** post the **$160** in QuickBooks as a second vehicle or payroll expense.
@@ -141,6 +143,7 @@ The **4%** is only the fee used in this GP check — not a locked customer surch
 | Northshore **>60** | 2026-09-13: individually quoted + Ryan approval | **No service** — do not quote / do not offer |
 | Southshore | 2026-07-13 **$99** flat, then 2026-09-13 same mileage bands as Northshore | **$179** flat (same line name). Do not use Northshore free / $129 / $149 |
 | Customer line name | “Round Trip” / Standard Pick-up/Drop-off | **Pickup & Return Delivery Transportation Charge** |
+| Per-mile after 30 | Any per-mile-beyond-30 add-on | **Killed 2026-10-10** — use the band table only |
 
 HCP pricebook export may still list **Standard Pick-up/Drop-off Service** at **$99**. That export line is **stale vs this policy**. Do not quote **$99**. Shop should align the live HCP line name and amounts (**$129 / $149 / $179**) to this bulletin — do not invent that the HCP SKU is already updated.
 

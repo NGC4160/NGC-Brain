@@ -1,6 +1,6 @@
 # Daily Operations Guide
 
-**Last verified:** 2026-10-03  
+**Last verified:** 2026-10-10  
 **Primary user:** Ryan (service manager) — Jesse (shop coordinator) and leads can use the same prompts
 
 ## How this workspace helps you run NGC
@@ -59,7 +59,7 @@ Run [`prompts/monthly_refresh.md`](../../prompts/monthly_refresh.md):
 | Person | Best uses |
 |--------|-----------|
 | **Ryan** | Morning briefing, diagnostics help, pricing, growth, DMS planning |
-| **Jesse** | Customer replies, deposits, estimates, HCP deposit pipeline (Awaiting Deposit → Need to Order → Waiting for Materials), pricebook, inventory/parts, workflow, Hayden routing, reporting |
+| **Jesse** | Customer replies, deposits, estimates (unsent drafts until Ryan reviews), HCP deposit pipeline (Awaiting Deposit → Need to Order → Waiting for Materials), pricebook clicks after Ryan-approved Pricebook lists, inventory/parts (live board confirm), workflow, Hayden routing, reporting |
 | **Christine** | Part-time backup; owner exceptions |
 | **Marlon / Ryan Gorgoglione** | Procedure lookup, parts identification (with cart model). Official SOP: [technician SOP Sep 2026](../04_operations/technician_sop_sep2026.md) |
 | **Hayden Silva** | Pickup zone questions, route/day planning. Driver first — [driver SOP](../04_operations/driver_sop.md) |
@@ -76,9 +76,9 @@ On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate 
 
 Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
 
-**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **CartScope Tester change plans**, **Shop Board Tester change plans**, **SOP publish**, **loops merge**); writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse, money, payroll, sign-in, **sending any email**, **Pricebook lists**, **CartScope Tester change plans**, **Shop Board Tester change plans**, **SOP publish**, **loops merge**); working emails toward resolution then asking Ryan before send; writing facts back to Brain the **same day** Ryan corrects a shop fact; routing.
 
-**Lanes:** Shop owns Housecall Pro — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](../diagnostics/README.md)) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
+**Lanes:** Shop owns Housecall Pro **jobs and estimates** — jobs, estimates, line items, taxable flags, pricing/margin checks, dispatch/WIP. **Pricebook** owns the price-book catalog and Approved Vendor Register (revamp: duplicates, unused items, pricing to tier, labor, cost tracking) — changes only after Ryan approves a specific list. **Diagnostics** owns the diagnostic evidence library ([diagnostics/README.md](../diagnostics/README.md)) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
 Ask Ryan before any Slack to Jesse. The 2026-09-21 binder-print Slack standing yes is **revoked**. Results come back in Chief’s thread.
 
@@ -118,7 +118,15 @@ Nothing else: no job numbers, vendor order IDs, corrections, other leads, commen
 
 Website lead dump, lithium list, and other Slack-to-Jesse types are unchanged except that parts updates use this five-field format.
 
-Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics**, Bot Coach, CartScope Tester, Not My Tempo, SOP, Shop Board Tester, loops — [roles.md](../05_team/roles.md). Diagnostic case library: [diagnostics/README.md](../diagnostics/README.md).
+Live roster (do not invent extras): Chief (COS), Inbox, Shop, Front Desk, Parts, **Pricebook**, Books, Betty (HR), CFO, Marketing, IT, Call Coach, Print (Blake), Bot Manager, **Diagnostics**, Bot Coach, CartScope Tester, Not My Tempo, SOP, Shop Board Tester, loops — [roles.md](../05_team/roles.md). Diagnostic case library: [diagnostics/README.md](../diagnostics/README.md).
+
+## Email
+
+**Confirmed 2026-10-09 by Ryan White.**
+
+**Chief** works emails toward resolution. **Ryan approves before anything is sent.**
+
+Do **not** send, reply, or forward customer / vendor / shop email without that yes. Inbox may intake and draft; send still goes through Chief → Ryan. Same gate as Slack to Jesse: ask Ryan, wait for yes.
 
 ## Bot updates
 

@@ -1,6 +1,6 @@
 # Shop Workflow
 
-**Last verified:** 2026-10-05
+**Last verified:** 2026-10-10
 
 ## Current state
 
@@ -18,6 +18,7 @@ When there is an opening in the slot, schedule → In-shop work → Payment → 
 - **Jesse** (administrative assistant / service coordinator) owns intake, estimating, workflow, parts/inventory, and Hayden Silva’s routing; **Christine** covers part-time as backup
 - Hours: Mon–Fri 8 AM – 5 PM
 - Shop is **in-shop only** (no mobile)
+- **HCP estimate rules (2026-10-09, Ryan White):** Estimates stay **unsent drafts** until Ryan reviews them. Estimate tax is **always automated**. Parts not in the price book: Approved Vendor Register → part + tax + shipping → HCP markup tier, with full ordering notes; if no register vendor, best source preferring dealer-account vendors and ask Ryan to add the vendor. Battery core: **$20** per 6V/8V, **$30** per 12V, **only if NGC does not get the old battery as a core**. Lithium: check photos for a DC-DC converter with a key-switch trigger wire; if none, add one and note why. Brake inspection & adjustment line must say NGC will adjust what can be adjusted and inspect the system to determine if anything else is needed. Full rule: [shop_services.md](../03_services/shop_services.md#hcp-estimate-rules-standing).
 - **Credit card surcharge on every estimate** (shop-wide, 2026-08-30). Not lithium-only. Before sending the invoice for payment, or before taking payment, update the surcharge so it matches the final total. Do not invent a % or $. Policy: [shop_services.md](../03_services/shop_services.md#credit-card-surcharge-shop-wide-office-rule).
 - **Estimate GP (standing, updated 2026-09-13):** Price book services = **sell >= cost / 0.46** on that item only (no $160). Materials = HCP markup matrix only (no $160). NGC pickup-and-return estimate at **0–30** one-way road miles: add **$160 once** to total job cost, then **sell >= (sum of line costs + 160) / 0.46**. Hide the included trip from the customer. Not per SKU / line. [shop_services.md](../03_services/shop_services.md#estimate-gp-check-standing). Live bulletin: [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 - **Intake: cart size and gate access (Ryan, 2026-09-25):** Intake asks the cart size (standard 4-seater or extended, meaning 6-seater or stretch) so the shop can plan trailer space. Staff record it on the job during the call without waiting for photos. When photos arrive, confirm the size and correct the job if needed. If the size is unknown, schedule it as extended until photos confirm. If the cart is in a gated community, note the gate code or guest-list name. These are ordinary intake questions — they do not block scheduling. Published procedure: **[Administrative Operations SOP - Section 5 Customer Intake and Scheduling, Revision 3](https://docs.google.com/document/d/1LDAxanMHCCcQQULnfmuArIXYKEDHaP7BtgbOUOaZ4iw/edit)** (effective 2026-09-26) in Drive Procedures (doc id `1LDAxanMHCCcQQULnfmuArIXYKEDHaP7BtgbOUOaZ4iw`).
@@ -47,7 +48,7 @@ This queue is **distinct** from the parts-deposit pipeline below. The deposit pi
 Options:
 
 - Customer drops cart at shop
-- **Hayden Silva** (Driver / Shop Technician Assistant) picks up cart when NGC transport is needed. **Northshore:** **$0** at 0–30 inclusive; **$129** (30, 40]; **$149** (40, 50]; **$179** (50, 60]; **>60 no service**. **Southshore:** **$179** flat. Internal **$160** only on pickup **and** return tickets. Driver first — [driver_sop.md](driver_sop.md). Full SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures. Live P/D: [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+- **Hayden Silva** (Driver / Shop Technician Assistant) picks up cart when NGC transport is needed. **Northshore:** **$0** at 0–30 inclusive; **$129** (30, 40]; **$149** (40, 50]; **$179** (50, 60]; **>60 no service**. **Southshore:** **$179** any distance. Internal **$160** only on pickup **and** return tickets. **No per-mile-beyond-30** add-on (Ryan, 2026-10-10). Line name **Pickup & Return Delivery Transportation Charge**. Say **delivery**, not drop-off. Driver first — [driver_sop.md](driver_sop.md). Full SOP: **NGC-OPS-DRIVER-09032026R0** in Drive Procedures. Live P/D: [NGC-OPS-FIN-2026-09](../08_finance/pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
 ### 3. Service execution
 
@@ -76,7 +77,7 @@ Key diagnostic sequence:
 - Large-ticket items (batteries, motors, controllers, special orders) require **deposit before ordering**
 - Inventory tracked in QBO (~$19.7k inventory asset as of Jun 2026)
 - Approved work that needs a parts deposit follows the **HCP job pipeline** below — not a combined “waiting deposit/parts” column
-- **Parts board (2026-10-02, Ryan White):** Every parts order must be attributed to one or more customers. If unknown, ask Ryan — do not guess or label inventory unless Ryan explicitly says it is inventory. Delete the board line once that part is received. Full rule: [parts.md](parts.md). Preferred Club Car OEM: uSource Parts — [vendors.md](../03_services/vendors.md).
+- **Parts board (2026-10-02 / 2026-10-09, Ryan White):** Every parts order must be attributed to one or more customers. If unknown, ask Ryan — do not guess or label inventory unless Ryan explicitly says it is inventory. **Whenever a parts check runs or Ryan says who a part is for, add it to the live parts board.** Confirm it is on the **live board** before anyone reports that add done. Delete the board line once that part is received. Full rule: [parts.md](parts.md). Preferred Club Car OEM: uSource Parts. Approved Vendor Register: [vendors.md](../03_services/vendors.md).
 
 ### HCP job pipeline — approved work that needs a parts deposit
 
