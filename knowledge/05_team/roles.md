@@ -1,6 +1,6 @@
 # Team & Roles
 
-**Last verified:** 2026-10-03
+**Last verified:** 2026-10-10
 
 ## Ownership
 
@@ -38,16 +38,17 @@ Do not schedule, assign, or quote these names as current staff.
 
 ## Grok Bot roster (live)
 
-**Do not invent extra bots.** Chief is Ryan’s **only** point of contact. All other bots report to Chief. Approvals go through Chief, who asks Ryan: Slack to Jesse, money, payroll submit, sign-in, delete a bot, orders, **CartScope app changes**, **Shop Board app changes**, **SOP publish**, **loops merge**. The 2026-09-21 binder-print Slack standing yes is **revoked** (2026-09-29) — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse).
+**Do not invent extra bots.** Chief is Ryan’s **only** point of contact. All other bots report to Chief. Approvals go through Chief, who asks Ryan: Slack to Jesse, money, payroll submit, sign-in, delete a bot, orders, **sending any email**, **Pricebook lists**, **CartScope app changes**, **Shop Board app changes**, **SOP publish**, **loops merge**. The 2026-09-21 binder-print Slack standing yes is **revoked** (2026-09-29) — see [daily ops](../09_daily_ops/README.md#bot-slack-to-jesse). **Pricebook** was added 2026-10-09 by Ryan — do not invent a bot id.
 
 | Bot | Role |
 |-----|------|
 | **Chief** (COS) | id `4bfa99c8-c29c-4149-a4ea-1a404d61f5a1` — Ryan’s only POC. Routes every task (see below). Collects weekday 11am America/Chicago lead forms, then asks Ryan before Slack to Jesse. |
-| **Inbox** | Intake / mail. Must **not** auto-Slack Jesse because lithium “stays with Jesse.” Lead forms only from **NGC985 / ryan@ / contact@**. |
-| **Shop** | **Housecall Pro owner** — jobs, estimates, price book, line items, taxable flags, pricing/margin checks, dispatch/WIP. |
-| **Diagnostics** | Evidence-first diagnostic support — known-good / known-faulted library and case write-ups in [`../diagnostics/README.md`](../diagnostics/README.md). Supports techs (**TEST BEFORE REPLACEMENT**); does **not** replace hands-on tests. Does **not** own HCP jobs (Shop owns HCP). |
+| **Inbox** | Intake / mail. Must **not** auto-Slack Jesse because lithium “stays with Jesse.” Lead forms only from **NGC985 / ryan@ / contact@**. **Do not send email** — Chief works emails toward resolution; Ryan approves before anything is sent. |
+| **Shop** | **Housecall Pro job/estimate owner** — jobs, estimates, line items, taxable flags, pricing/margin checks, dispatch/WIP. Does **not** own the price-book catalog / Approved Vendor Register (that is **Pricebook**). Estimates stay unsent drafts until Ryan reviews them. |
+| **Diagnostics** | Evidence-first diagnostic support — known-good / known-faulted library and case write-ups in [`../diagnostics/README.md`](../diagnostics/README.md). Supports techs (**TEST BEFORE REPLACEMENT**); does **not** replace hands-on tests. Does **not** own HCP jobs (Shop owns HCP jobs/estimates; Pricebook owns the catalog). |
 | **Front Desk** | Customer replies (lithium kit/warranty from `customer_reply_standard.md`) |
-| **Parts** | Parts / deposit-before-order. Preferred vendors: [vendors.md](../03_services/vendors.md). Parts board: [parts.md](../04_operations/parts.md). |
+| **Parts** | Parts / deposit-before-order. Preferred vendors + Approved Vendor Register: [vendors.md](../03_services/vendors.md). Parts board: add on parts check or when Ryan says who a part is for; confirm live before reporting done — [parts.md](../04_operations/parts.md). |
+| **Pricebook** | **Price book / Approved Vendor Register.** Owns the revamp (duplicates, unused items, pricing to tier, labor, cost tracking). Every price-book item must come from a register vendor. **Changes only with Ryan’s approval of specific lists.** No bot id invented. |
 | **Books** | Books coordination. **No QBO write** (expenses, purchases, any write) without Ryan’s confirmation first — [overview.md](../08_finance/overview.md#quickbooks-online-writes). |
 | **Betty** | HR — paid holidays and **no PTO**: [holidays_and_time_off.md](holidays_and_time_off.md). |
 | **CFO** | Finance. **No QBO write** without Ryan’s confirmation first — [overview.md](../08_finance/overview.md#quickbooks-online-writes). |
@@ -73,9 +74,9 @@ On **EVERY** task Ryan asks: Chief immediately decides which bot is appropriate 
 
 Do **not** start specialist work first and hand off later. If no bot owns the job, tell Ryan a new bot is worth creating and why. Do **not** quietly become Shop / Parts / Books.
 
-**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse — no binder-print exception, money, payroll, sign-in, **CartScope Tester change plans**, **Shop Board Tester change plans**, **SOP publish**, **loops merge**, **any QBO write**); writing facts back to Brain the **same day** Ryan corrects them; routing.
+**Chief’s own work only:** talking to Ryan; yes/no approvals (Slack Jesse — no binder-print exception, money, payroll, sign-in, **CartScope Tester change plans**, **Shop Board Tester change plans**, **SOP publish**, **loops merge**, **any QBO write**, **sending any email**, **Pricebook lists**); working emails toward resolution then asking Ryan before send; writing facts back to Brain the **same day** Ryan corrects them; routing.
 
-**Lanes (already true):** Shop owns HCP (jobs, estimates, price book, line items, taxable flags, pricing/margin, dispatch/WIP). **Diagnostics** owns the diagnostic evidence library (known-good / known-faulted / cases) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
+**Lanes (already true):** Shop owns HCP **jobs and estimates** (jobs, estimates, line items, taxable flags, pricing/margin, dispatch/WIP). **Pricebook** owns the price-book catalog and Approved Vendor Register (revamp: duplicates, unused items, pricing to tier, labor, cost tracking) — changes only after Ryan approves a specific list. **Diagnostics** owns the diagnostic evidence library (known-good / known-faulted / cases) and supports techs on test-before-replacement. Parts, Books, Betty, Inbox, Front Desk, CFO, IT, Marketing, and the rest keep their lanes.
 
 Ask Ryan before any Slack to Jesse. The 2026-09-21 binder-print Slack standing yes is **revoked**. Results stay in Chief’s thread.
 
@@ -90,10 +91,10 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Area | What she owns |
 |------|----------------|
 | Front office | Phones, intake, deposits, customer updates, HCP wait codes |
-| Estimating | Standard **and advanced** estimates in HCP from tech findings + pricebook. **Credit card surcharge on every estimate**; recalc to the final total before invoice or payment (do not invent a %) |
-| Pricebook | Maintenance in Housecall Pro (add/edit/deactivate lines; Ryan approves new rates) |
+| Estimating | Standard **and advanced** estimates in HCP from tech findings + pricebook. Follow [HCP estimate rules](../03_services/shop_services.md#hcp-estimate-rules-standing) (unsent drafts until Ryan reviews; tax automated; register vendors for non-book parts). **Credit card surcharge on every estimate**; recalc to the final total before invoice or payment (do not invent a %) |
+| Pricebook | Day-to-day HCP clicks **after** the **Pricebook** bot proposes a list and **Ryan approves that specific list**. Every item must come from the Approved Vendor Register — [pricebook_reference.md](../03_services/pricebook_reference.md#price-book-policy-standing) |
 | Inventory | Parts/stock visibility, counts, QBO/HCP alignment. Do **not** label a parts order as inventory unless Ryan **explicitly** says it is inventory — [parts.md](../04_operations/parts.md). |
-| Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order. Preferred Club Car OEM: uSource Parts. Parts board: attribute every order to one or more customers — [parts.md](../04_operations/parts.md) / [vendors.md](../03_services/vendors.md). |
+| Parts | Ordering, vendor follow-up, ETA tracking, deposit gate before order. Preferred Club Car OEM: uSource Parts. Parts board: attribute every order; add on parts check or when Ryan says who a part is for; confirm live before reporting done — [parts.md](../04_operations/parts.md) / [vendors.md](../03_services/vendors.md). |
 | Shop workflow | Board/HCP hygiene, lane movement, WIP visibility, finish-list support. On approved deposit jobs: **COPY TO JOB** → **Awaiting Deposit** → **Need to Order** → **Waiting for Materials** ([shop_workflow.md](../04_operations/shop_workflow.md)) |
 | Pickup / delivery | Routing and scheduling for Hayden Silva (Northshore 0–30 included / $129 / $149 / $179 / no service >60; Southshore $179; batching). Policy: [shop_services.md](../03_services/shop_services.md#pickup--delivery) |
 | Data & reporting | Shop metrics, deposit/parts queues, weekly numbers Ryan needs |
@@ -121,7 +122,7 @@ Jesse owns day-to-day coordination so Ryan can stay on diagnostics, training, an
 | Customer phone / scheduling | Jesse | Christine (part-time) |
 | Estimates (standard + advanced) | Jesse | Ryan White (exceptions only) |
 | Deposits & payment collection | Jesse | Christine |
-| Pricebook maintenance | Jesse | Ryan White (rate approval) |
+| Pricebook / vendor register | **Pricebook** bot (propose lists) | Ryan White (approve **specific lists**); Jesse applies approved lists in HCP |
 | Inventory | Jesse | Ryan White |
 | Parts ordering & tracking | Jesse | Ryan White |
 | Shop workflow management | Jesse | Ryan White |

@@ -1,12 +1,25 @@
 # Pricebook Reference
 
-**Last verified:** 2026-09-02  
+**Last verified:** 2026-10-09  
 **Source file:** `external_docs/exports/pricebook/NeighborhoodGolfCarts_pricebook_export.csv`  
-**Total line items:** 282
+**Total line items:** 282  
+**Owner:** **Pricebook** bot (catalog / Approved Vendor Register revamp) via Chief — Shop still builds job estimates
 
 ## How to use this document
 
 The CSV is the **full pricebook**. This file summarizes categories and flags items that are **current vs legacy**. For exact prices on repairs, always check the CSV or Housecall Pro.
+
+## Price book policy (standing)
+
+**Confirmed 2026-10-09 by Ryan White.**
+
+Every **price-book item** must come from an approved vendor on the **Approved Vendor Register** — [vendors.md](vendors.md).
+
+The **Pricebook** bot owns the price book / vendor register revamp: duplicates, unused items, pricing to tier, labor, and cost tracking. **Changes happen only with Ryan’s approval of specific lists.** Do not edit the live book or register from a guessed list.
+
+Parts **not** in the price book follow the estimate sourcing rule (register vendor → part + tax + shipping → HCP markup tier; else best source, prefer dealer-account, ask Ryan to add the vendor): [shop_services.md](shop_services.md#hcp-estimate-rules-standing).
+
+Estimates stay **unsent drafts** until Ryan reviews them. Estimate tax is **always automated**.
 
 ## Material markup matrix (HCP, not Drive)
 
@@ -133,6 +146,8 @@ See [archive/legacy_mobile.md](../archive/legacy_mobile.md) for full list. Inclu
 | Battery Monitor Installation | $299 |
 | Install Windshield | $299 |
 | Governor adjustment (gas) | $149 |
+
+**Brake inspection & adjustment line (2026-10-09, Ryan White):** The line must say NGC will **adjust what can be adjusted** and **inspect the system to determine if anything else is needed**. Do not invent a promise to replace brakes from that line. Full estimate rules: [shop_services.md](shop_services.md#hcp-estimate-rules-standing).
 
 ## Online booking
 

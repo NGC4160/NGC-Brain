@@ -1,6 +1,6 @@
 # Improvement & Growth Backlog
 
-**Last reviewed:** 2026-09-29  
+**Last reviewed:** 2026-10-10  
 Ask the AI: **"What's the highest-impact item on the backlog this week?"**
 
 Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
@@ -14,7 +14,8 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 | P1 | Deactivate legacy HCP/QBO items (mobile, NGC Conversion, trip charges) | Prevents wrong quotes & booking | Ryan / Jesse | **Checklist ready** — see legacy_pricebook_cleanup.md |
 | P1 | HCP WIP hygiene — audit stale "in progress" (15+ days), correct statuses | 14 IP jobs, most aged; board can't lie | Ryan | Open |
 | P1 | Lithium job tracker (day 0/1/2, deposit received, parts ordered) | Protect 2–3 day promise; 2 Li jobs 50+ days in HCP | Ryan | In progress |
-| P1 | Align live HCP P/D line to **NGC-OPS-FIN-2026-09** (name **Pickup & Return Delivery Transportation Charge**; Northshore $129 / $149 / $179; Southshore $179; do not quote export **$99**; do not offer Northshore >60) | Export still shows Standard Pick-up/Drop-off $99 | Jesse | **Customer bands live 2026-09-14** — HCP SKU not confirmed updated |
+| P1 | Align live HCP P/D line to **NGC-OPS-FIN-2026-09** (name **Pickup & Return Delivery Transportation Charge**; Northshore $129 / $149 / $179; Southshore $179; do not quote export **$99**; do not offer Northshore >60; **no per-mile-beyond-30**) | Export still shows Standard Pick-up/Drop-off $99 | Jesse | **Customer bands live 2026-09-14; Ryan restated 2026-10-10** — HCP SKU not confirmed updated |
+| P1 | Price book / Approved Vendor Register revamp (duplicates, unused items, pricing to tier, labor, cost tracking) | Every price-book item must come from a register vendor | **Pricebook** bot via Chief | **Owner assigned 2026-10-09** — changes only after Ryan approves a specific list |
 | P1 | Website / Meta / GBP: lead with **free pickup and delivery within 30 miles** (not 40) | Aligns advertise language with live Northshore 0–30 free band; Southshore still $179 | Marketing / Chief | Open — Brain rule logged 2026-09-29; public surfaces still need the 30-mile lead line |
 | P2 | Shop-floor SOP refresh — strip mobile steps from active checklists | Techs get wrong instructions today | Ryan | Open |
 | P2 | Deposit collection checklist for Jesse | Batteries/motors/controllers — HCP pipeline now in `shop_workflow.md` (COPY TO JOB → Awaiting Deposit → Need to Order → Waiting for Materials) | Jesse | **Pipeline rule logged 2026-08-23**; still align Admin Front Office SOP wait-code table |
@@ -57,6 +58,8 @@ Priority: **P1** = do now · **P2** = this month · **P3** = this quarter
 
 | Date | Item |
 |------|------|
+| 2026-10-10 | Brain: trip-fee bands restated (kills per-mile-beyond-30); American Battery Supply charges NGC no sales tax |
+| 2026-10-09 | Brain: HCP estimate rules, Pricebook bot + vendor-register source rule, parts-board live confirm, Chief email gate |
 | 2026-09-29 | Brain: advertise P/D as **free pickup and delivery within 30 miles** (not 40); live customer bands unchanged |
 | 2026-09-14 | Live P/D customer bands amended — Northshore tiers $129/$149/$179 + no service >60; Southshore $179; $160 internal kept |
 | 2026-09-13 | **NGC-OPS-FIN-2026-09** approved live — $160 internal / 0–30 mi included / $129 at 31–40 / >40 quoted (**customer bands superseded 2026-09-14**) |

@@ -1,6 +1,6 @@
 # Finance Overview
 
-**Last verified:** 2026-10-02  
+**Last verified:** 2026-10-10  
 **Source:** QBO API morning sync → `external_docs/exports/qbo/`  
 **Reporting basis:** Accrual (as pulled by morning sync)  
 **Period referenced:** July 13, 2025 – July 13, 2026
@@ -102,6 +102,8 @@ QBO tracks parish-level sales tax payables. Parishes with activity include:
 
 **Rule of thumb:** Tax jurisdiction follows **where the service is performed** or customer location — confirm specific rules with Jessica (Griffin & Furman) for shop vs pickup/delivery scenarios.
 
+**Vendor tax (2026-10-10, Ryan White):** **American Battery Supply** does **not** charge NGC sales tax. Do not invent other vendor tax treatment. Customer-facing HCP estimate tax is still **always automated** — [shop_services.md](../03_services/shop_services.md#hcp-estimate-rules-standing). Vendors: [vendors.md](../03_services/vendors.md).
+
 ## Bank accounts (names only)
 
 - Chase Checking (7928) — OPEX
@@ -145,13 +147,14 @@ Owner assignments for each flow — confirm with Ryan / Jesse / Jessica at Griff
 
 ## Pickup/delivery cost (live — NGC-OPS-FIN-2026-09)
 
-**Internal $160 approved 2026-09-13. Customer bands amended 2026-09-14 by Ryan White via Chief.** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
+**Internal $160 approved 2026-09-13. Customer bands amended 2026-09-14; Ryan restated 2026-10-10.** Full bulletin: [pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md](pickup_delivery_cost_allocation_ngc_ops_fin_2026_09.md).
 
-- Internal assignment **$160** per ticket that needs NGC **pickup AND return delivery**
+- Internal assignment **about $160** per ticket that needs NGC **pickup AND return delivery**
 - Do **not** post **$160** in QBO as a second vehicle or payroll expense
 - **Northshore** customer: **$0** at 0–30 inclusive; **$129** at (30, 40]; **$149** at (40, 50]; **$179** at (50, 60]; **>60 no service** (do not quote). Line name **Pickup & Return Delivery Transportation Charge**
-- **Southshore:** **$179** flat, same line name. Do not apply Northshore free / $129 / $149
-- Measure driving miles from the Covington shop. Lake split for Northshore vs Southshore.
+- **Southshore:** **$179** any distance, same line name. Do not apply Northshore free / $129 / $149
+- **This supersedes any per-mile-beyond-30 idea.** Do not quote a per-mile add-on after 30 miles.
+- Measure driving miles from the Covington shop. Lake split for Northshore vs Southshore. Say **delivery**, not drop-off.
 
 Customer / GP rules: [shop_services.md](../03_services/shop_services.md#pickup--delivery).
 

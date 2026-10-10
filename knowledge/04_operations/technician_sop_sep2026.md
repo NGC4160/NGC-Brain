@@ -63,7 +63,8 @@ Minimum to Admin: (1) condition, (2) added parts, (3) safety YES/NO, (4) added l
 - Driver / Shop Tech Assistant SOP `NGC-OPS-DRIVER-09032026R0` (`13ZJ9FxUQFD_d9yvVRfr6Ae2xE9P6hsk2`) — transport role; not this full technician SOP
 ## Bot routing notes
 
-- Shop / Front Desk / Parts operate under this role split for estimates and parts handoff.
+- Shop / Front Desk / Parts operate under this role split for estimates and parts handoff. **Pricebook** owns the catalog / Approved Vendor Register — do not silently edit the book.
+- Admin / Shop estimates stay **unsent drafts until Ryan reviews them**. Tax is **always automated**. Non-book parts come from the Approved Vendor Register (part + tax + shipping, then HCP markup) — [shop_services.md](../03_services/shop_services.md#hcp-estimate-rules-standing).
 - Diagnostics / CartScope stay evidence-first; labor quotes and customer authorization still go through Admin after tech report (NGC-EST-1 or equivalent HCP notes).
 - Do not invent parts prices or promise customer authorization from tech findings alone.
 
