@@ -1,6 +1,6 @@
 # Lithium Conversions (LiFePO4)
 
-**Last verified:** 2026-08-30  
+**Last verified:** 2026-10-09  
 **Product line:** Professional Kit tiers only — **NGC Conversion line is discontinued**
 
 ## Overview
@@ -8,6 +8,8 @@
 NGC installs **in-house LiFePO4 (lithium iron phosphate)** battery conversions at the Covington shop. Fixed kit pricing by voltage. All voltage tiers below are actively sold.
 
 **Office quoting (Ryan White, 2026-08-30):** [lithium_sales_guide.md](lithium_sales_guide.md) — Essential / Ready-to-Run / Accessory-Ready. Internal only. Do not hand that sheet to the customer. Inspect first. Do not invent package prices.
+
+**Lithium estimate photo check (2026-10-09, Ryan White):** Check the photos for a **DC-DC converter with a key-switch trigger wire**. If none, add one and note why. Estimates stay unsent drafts until Ryan reviews them. [shop_services.md](../03_services/shop_services.md#hcp-estimate-rules-standing).
 
 ## Active SKUs — Professional Lithium Battery Conversion Kits
 

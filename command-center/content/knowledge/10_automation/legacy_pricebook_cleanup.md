@@ -1,7 +1,7 @@
 # Legacy Pricebook Cleanup
 
-**Last verified:** 2026-06-28  
-**Owners:** Ryan (approve rates) · Jesse (HCP pricebook) · Jessica / Christine (QBO clicks)  
+**Last verified:** 2026-10-09  
+**Owners:** **Pricebook** bot (propose lists) · Ryan (approve **specific lists**) · Jesse (HCP clicks after approval) · Jessica / Christine (QBO clicks, still need Ryan yes on any QBO write)  
 **Time:** ~45 min one-time  
 **Audit checklist:** `knowledge/.generated/legacy_pricebook_audit.md` (regenerate with `./scripts/admin_bot/run_legacy_audit.sh`)
 

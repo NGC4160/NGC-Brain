@@ -1,6 +1,6 @@
 # Systems & Tools
 
-**Last verified:** 2026-10-02
+**Last verified:** 2026-10-10
 
 ## Current stack
 
@@ -20,7 +20,8 @@
 
 **Current use (shop model):**
 
-- Pricebook (282 items) — source of truth for service **line-item** pricing
+- Pricebook (282 items) — source of truth for service **line-item** pricing. **Pricebook** bot owns the catalog / Approved Vendor Register revamp; every item must come from a register vendor; changes only after Ryan approves a specific list — [pricebook_reference.md](../03_services/pricebook_reference.md#price-book-policy-standing)
+- **Estimates (2026-10-09):** stay **unsent drafts** until Ryan reviews them. Tax is **always automated**. Non-book parts: register vendor → part + tax + shipping → HCP markup tier, full ordering notes — [shop_services.md](../03_services/shop_services.md#hcp-estimate-rules-standing)
 - **Material markup matrix** — lives **inside Housecall Pro** (see below)
 - Job creation and tracking
 - **Pickup / drop-off queue** — HCP stages **New job** and **Customer drop off** ARE that queue after estimate approval (distinct from the deposit pipeline)

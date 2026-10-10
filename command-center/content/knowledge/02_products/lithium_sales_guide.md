@@ -1,7 +1,7 @@
 # Lithium Conversion Sales Guide (office quoting)
 
-**Last verified:** 2026-08-30  
-**Source of truth:** Ryan White, 2026-08-30  
+**Last verified:** 2026-10-09  
+**Source of truth:** Ryan White, 2026-08-30 (packages); 2026-10-09 (estimate photo check)  
 **Audience:** Office / Front Desk / Chief / shop bots — **internal quoting only**
 
 **Do not hand this sheet to the customer.** Inspect the cart first. Recommend only what that cart needs.
@@ -50,6 +50,8 @@ Skip the converter if they already have a compatible one — that builds trust.
 - Is the factory charge port still in place, and will the customer want to plug in like a normal cart?
 - Are accessory wires already spliced / messy? That is a fuse-box conversation.
 - Street / neighborhood use vs bare course cart? Charge-port value is higher on street carts.
+
+**Lithium estimate photo check (2026-10-09, Ryan White):** Check the photos for a **DC-DC converter with a key-switch trigger wire**. If none, **add one** and **note why** on the estimate. Do not send the estimate until Ryan reviews it. Full estimate rules: [shop_services.md](../03_services/shop_services.md#hcp-estimate-rules-standing).
 
 Do not lock a package until that inspect is done.
 

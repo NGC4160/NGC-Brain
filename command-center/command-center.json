@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T18:53:07.718909+00:00",
+  "generated_at": "2026-10-10T15:37:14.349118+00:00",
   "site_name": "NGC Command Center",
   "site_url": "https://ngc4160.github.io/NGC-Brain/command-center/",
   "repo": "NGC4160/NGC-Brain",
@@ -12,53 +12,23 @@
     "Jesse"
   ],
   "ops": {
-    "generated_at": "2026-10-09T18:53:07.671673+00:00",
-    "jobs_synced_at": "2026-10-09T18:53:02.693685+00:00",
-    "has_live_data": true,
+    "generated_at": "2026-10-10T15:37:14.329934+00:00",
+    "jobs_synced_at": null,
+    "has_live_data": false,
     "metrics": {
-      "in_progress": 8,
-      "scheduled": 24,
-      "needs_scheduling": 10,
-      "active_pipeline": 42,
+      "in_progress": 0,
+      "scheduled": 0,
+      "needs_scheduling": 0,
+      "active_pipeline": 0,
       "wip_target": null,
       "wip_over": 0,
-      "stale_15_plus": 3,
-      "lithium_at_risk": 1,
+      "stale_15_plus": 0,
+      "lithium_at_risk": 0,
       "deposit_alerts": 0
     },
     "alerts": {
-      "lithium_at_risk": [
-        {
-          "invoice": "17248",
-          "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 158,
-          "lithium": true,
-          "status": "in progress"
-        }
-      ],
-      "stale_wip": [
-        {
-          "invoice": "17248",
-          "description": "48V Professional Lithium Battery Conversion Kit Installed",
-          "days": 158,
-          "lithium": true,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17109-2",
-          "description": "Brakes - 1.0-Brake Inspection & Adjustment",
-          "days": 135,
-          "lithium": false,
-          "status": "in progress"
-        },
-        {
-          "invoice": "17420",
-          "description": "General - 1.0 - Golf Cart Diagnostic & Inspection",
-          "days": 60,
-          "lithium": false,
-          "status": "in progress"
-        }
-      ]
+      "lithium_at_risk": [],
+      "stale_wip": []
     },
     "sync": {
       "synced_at": "2026-10-09T18:53:07.234436+00:00",
@@ -375,10 +345,18 @@
     },
     {
       "priority": "P1",
-      "name": "Align live HCP P/D line to **NGC-OPS-FIN-2026-09** (name **Pickup & Return Delivery Transportation Charge**; Northshore $129 / $149 / $179; Southshore $179; do not quote export **$99**; do not offer Northshore >60)",
+      "name": "Align live HCP P/D line to **NGC-OPS-FIN-2026-09** (name **Pickup & Return Delivery Transportation Charge**; Northshore $129 / $149 / $179; Southshore $179; do not quote export **$99**; do not offer Northshore >60; **no per-mile-beyond-30**)",
       "why": "Export still shows Standard Pick-up/Drop-off $99",
       "owner": "Jesse",
-      "status": "**Customer bands live 2026-09-14** \u2014 HCP SKU not confirmed updated",
+      "status": "**Customer bands live 2026-09-14; Ryan restated 2026-10-10** \u2014 HCP SKU not confirmed updated",
+      "category": "Operations (run the shop better)"
+    },
+    {
+      "priority": "P1",
+      "name": "Price book / Approved Vendor Register revamp (duplicates, unused items, pricing to tier, labor, cost tracking)",
+      "why": "Every price-book item must come from a register vendor",
+      "owner": "**Pricebook** bot via Chief",
+      "status": "**Owner assigned 2026-10-09** \u2014 changes only after Ryan approves a specific list",
       "category": "Operations (run the shop better)"
     },
     {
@@ -647,7 +625,7 @@
           "title": "Operations Dashboard",
           "desc": "WIP, lithium lane, deposit alerts, sync status",
           "href": "dashboard.html",
-          "badge": "8 in shop",
+          "badge": "Sync needed",
           "primary": true
         },
         {
@@ -756,7 +734,7 @@
       "cards": [
         {
           "title": "Improvement Backlog",
-          "desc": "24 tracked projects \u00b7 P1\u2013P3",
+          "desc": "25 tracked projects \u00b7 P1\u2013P3",
           "href": "view.html?path=knowledge/09_daily_ops/improvement_backlog.md",
           "primary": true
         },
